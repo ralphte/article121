@@ -6,3 +6,5 @@ dist/
 .env.*
 originals/
 *.log
+.venv/
+build/renders/

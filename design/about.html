@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Article 121 · About</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=B612+Mono:wght@400;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="casefile.css">
+<style>
+/* About: one file, read top to bottom. */
+.wrap { max-width: 980px; margin: 0 auto; padding-inline: 16px; }
+.about { margin-top: 48px; padding: clamp(22px, 4.4vw, 56px); }
+.about h1 { font-size: clamp(2.4rem, 1.2rem + 5vw, 5rem); margin-bottom: 26px; }
+.about .lede { font-size: clamp(1.08rem, 1rem + 0.4vw, 1.3rem); line-height: 1.55; max-width: 60ch; margin: 0 0 8px; }
+.clauses { list-style: none; margin: 36px 0 0; padding: 0; display: grid; gap: 0; counter-reset: c; }
+.clauses li { counter-increment: c; display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: 4px 18px; padding: 22px 0; border-top: 1px solid var(--seam); }
+.clauses li::before { content: "§ " counter(c); font: 700 0.78rem/1.6 var(--f-data); letter-spacing: 0.12em; color: var(--marking); grid-row: span 2; }
+.clauses h2 { font: 800 1.05rem/1.3 var(--f-display); font-stretch: 112%; text-transform: uppercase; letter-spacing: 0.04em; color: var(--stencil); margin: 0; }
+.clauses p { margin: 6px 0 0; max-width: 66ch; color: var(--ink); }
+.clauses p + p { margin-top: 10px; }
+.clauses .typed { font-size: 0.98rem; }
+.stamp-row { margin-top: 30px; display: flex; gap: 18px; flex-wrap: wrap; }
+@media (max-width: 560px) { .clauses li { grid-template-columns: minmax(0, 1fr); } .clauses li::before { grid-row: auto; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="ink"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="2.2"/></filter></svg>
+
+<nav class="banner" aria-label="Sections">
+  <s>Top secret</s><b>Declassified</b><span class="sep" aria-hidden="true"></span>
+  <a href="casefile.html">File</a><a href="casefile.html#chronology">Chronology</a><a href="casefile.html#viewing">Viewing table</a><a href="register.html">Register</a><a href="casefile.html#sources">Sources</a><a href="about.html" aria-current="page">About</a>
+</nav>
+
+<main class="wrap">
+  <article class="about panel ticks revealed">
+    <div class="file-head"><b>File A121-0000</b><span>About this archive</span><span>Page 1 of 1</span></div>
+    <h1 class="display">About Article 121</h1>
+    <p class="lede">Article 121 is an archive of the Lockheed A-12, YF-12, M-21 and D-21, and SR-71: the aircraft the world came to call the Blackbirds. It gathers the best photographs, documents and records that are public and puts them in one place, with every source shown.</p>
+    <p class="lede" style="color:var(--ink-2)">The name is the program's own: Article 121 was the CIA's designation for the first A-12 airframe, serial 60-6924, which made its official first flight on 30 April 1962.</p>
+
+    <ol class="clauses">
+      <li>
+        <h2>Free, with nothing for sale</h2>
+        <p>The archive is free to read. There are no ads, no paywall, no accounts and no tracking, and there never will be. Nothing here is for sale.</p>
+      </li>
+      <li>
+        <h2>The photographs</h2>
+        <p>Every image here is in the public domain or posted with the permission of its author.</p>
+        <p>Most are U.S. government photographs from NASA, the U.S. Air Force, the CIA and the National Archives, which belong to the public. Others are released by their photographers under open licences, or shown with the author's written permission. Each image carries its credit, its licence and a link to where it came from.</p>
+        <p>Photographs are shown as they were made. Nothing is upscaled, colourised or altered by AI.</p>
+      </li>
+      <li>
+        <h2>Every fact has a source</h2>
+        <p>Every date, figure and record links to the document, archive or museum it came from. Where reliable sources disagree, the file says so and shows each version rather than picking one quietly.</p>
+      </li>
+      <li>
+        <h2>Credit where it belongs</h2>
+        <p>This archive documents work that others did. The aircraft belong to the engineers of Lockheed's Skunk Works and to the crews and ground crews who flew and kept them flying. The photographs and records belong to the people and institutions credited beside them.</p>
+      </li>
+      <li>
+        <h2>Preserving what is fading</h2>
+        <p>Much of the best Blackbird material lives on enthusiast and veterans' sites that are decades old, and some have already gone offline. Every source cited here is captured to the Internet Archive's Wayback Machine, and older sites are credited and, with their owners' permission, preserved.</p>
+      </li>
+      <li>
+        <h2>Corrections</h2>
+        <p>Found a mistake, a better source or a photograph that belongs here? Every page links to a correction form on GitHub, and every fix is made in public.</p>
+      </li>
+      <li>
+        <h2>Independent</h2>
+        <p>Article 121 is an independent archive. It is not affiliated with or endorsed by Lockheed Martin, the U.S. Air Force, NASA, the CIA or any museum it cites. The appearance of U.S. Department of War (DoW) visual information does not imply or constitute DoW endorsement.</p>
+      </li>
+      <li>
+        <h2>Source code</h2>
+        <p>The site's code and research are public at <a href="https://github.com/ralphte/article121" target="_blank" rel="noopener">github.com/ralphte/article121</a>.</p>
+      </li>
+    </ol>
+    <div class="stamp-row"><div class="stamp">Public record</div><div class="stamp white">Released to everyone</div></div>
+  </article>
+</main>
+
+<footer class="site"><div class="inner"><p class="label">Article 121 · design prototype</p></div></footer>
+</body>
+</html>
