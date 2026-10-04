@@ -1,0 +1,15 @@
+{
+  // Article 121 holding page: Workers static assets on article121.com.
+  "name": "article121",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "routes": [
+    { "pattern": "article121.com", "custom_domain": true },
+    { "pattern": "www.article121.com", "custom_domain": true }
+  ]
+}
