@@ -38,6 +38,23 @@ def table(rows):
     return lambda x, left=None, right=None: np.interp(x, a[:, 0], a[:, 1], left=left, right=right)
 
 
+def smooth_table(rows, sigma=0.08, step=0.01, keep=()):
+    """A traced profile resampled every `step` metres and smoothed with a Gaussian of `sigma`
+    metres, so pixel-scale tracing noise does not show as banding in glossy reflections.
+    `keep` lists (x0, x1) spans left unsmoothed (real corners such as the chine junction)."""
+    a = np.asarray(rows, float)
+    a = a[np.argsort(a[:, 0])]
+    gx = np.arange(a[0, 0], a[-1, 0] + step / 2, step)
+    gy = np.interp(gx, a[:, 0], a[:, 1])
+    r = int(3 * sigma / step)
+    k = np.exp(-0.5 * (np.arange(-r, r + 1) * step / sigma) ** 2); k /= k.sum()
+    sm = np.convolve(np.pad(gy, r, mode="edge"), k, mode="valid")
+    for x0, x1 in keep:
+        m = (gx >= x0) & (gx <= x1)
+        sm[m] = gy[m]
+    return lambda x, left=None, right=None: np.interp(x, gx, sm, left=left, right=right)
+
+
 def smooth(v, k=7):
     if len(v) < k:
         return v
@@ -94,13 +111,15 @@ def loft(rings, closed=True, cap_start=False, cap_end=False):
 
 def fuselage(c, mat):
     L = c["length_no_probe"]
-    xs = np.unique(np.concatenate([np.linspace(0, 1.2, 25) ** 1.0, np.arange(1.2, L - 1.0, 0.1), np.linspace(L - 1.0, L, 21)]))
-    bw = table(c["body_half_width"])
-    top = table(c["fuselage_top_path"])
-    bot = table(c["fuselage_bottom_path"])
-    chz = table(c["chine_z"])
+    base = np.arange(1.2, L - 1.0, 0.1)
+    xs = np.unique(np.round(np.concatenate([np.linspace(0, 1.2, 25), base[(base < 3.3) | (base > 8.7)],
+                                            np.arange(3.3, 8.7, 0.04), np.linspace(L - 1.0, L, 21)]), 4))
+    bw = smooth_table(c["body_half_width"])
+    top = smooth_table(c["fuselage_top_path"], sigma=0.06)
+    bot = smooth_table(c["fuselage_bottom_path"])
+    chz = smooth_table(c["chine_z"], sigma=0.15)
     plan = np.asarray(c["planform_half"], float)
-    env = lambda x: np.interp(x, plan[:, 0], plan[:, 1])
+    env = smooth_table(plan, sigma=0.06, keep=((15.6, 16.3), (29.0, 33.0)))
     x_top_end = max(r[0] for r in c["fuselage_top_path"]) - 0.3
     x_bot_end = 17.4
     st, sb = np.asarray(c["side_top"], float), np.asarray(c["side_bottom"], float)
@@ -112,7 +131,7 @@ def fuselage(c, mat):
         h00, h10, h01, h11 = 2*t**3 - 3*t**2 + 1, t**3 - 2*t**2 + t, -2*t**3 + 3*t**2, t**3 - t**2
         return h00 * za + h10 * (xb - xa) * slope_a + h01 * zb + h11 * (xb - xa) * slope_b
 
-    rings, canopy_rings = [], []
+    rings, can_params = [], []
     # Canopy: a separate body on the spine from the windscreen foot to where it fairs back in. The
     # traced top line includes it; the spine under it is faired between the stations either side.
     # Half-widths from the drawing's plan-view canopy outlines (paths 162 and 161): pilot's canopy
@@ -230,54 +249,77 @@ def fuselage(c, mat):
         if x < 0.05:
             zt = zb = zc = 0.0
         WW = max(w if s_tent > 0 else 0.0, W)
-        N_U, N_L = 34, 26
+        # Canopy: part of the forebody, not a box on it. A rounded crest at the traced top line, its
+        # sides sloping down into the tent flanks and blended in with a smooth maximum that fades
+        # to nothing at the fairing edge hb, so the canopy rises out of the spine as on the aircraft.
+        in_can = CAN_X0 < x < CAN_X1 and s_tent > 0
+        hw = float(np.interp(x, HW_X, HW_Y)) if in_can else 0.0
+        hb = hw * 1.18
+        zb_c = tent_up(min(hb, w)) if in_can else 0.0
+        top_c = max(z_canopy, zb_c) if in_can else 0.0
+        can_params.append((in_can, hw, zb_c, top_c))
+        def canopy_up(y):
+            u = min(1.0, y / max(hb, 1e-6))
+            return zb_c + (top_c - zb_c) * (1 - u ** 2.2)
+        def smax(a, b, k):
+            return (a + b + math.sqrt((a - b) ** 2 + k * k)) / 2
+        N_U, N_L = 44, 26
         half = []
         for t in np.linspace(0, 1, N_U):                   # spine out to the chine or wing edge
             y = WW * (1 - math.cos(t * math.pi / 2)) ** 0.85 if t < 1 else WW
-            half.append((y, s_tent * tent_up(min(y, w)) + (1 - s_tent) * ((1 - tail) * body_up(min(y, W)) + tail * tail_up(y))))
+            z_up = s_tent * tent_up(min(y, w)) + (1 - s_tent) * ((1 - tail) * body_up(min(y, W)) + tail * tail_up(y))
+            if in_can and y < hb:
+                z_up = smax(z_up, canopy_up(y), 0.035 * (1 - y / hb))
+            half.append((y, z_up))
         for t in np.linspace(0, 1, N_L + 1)[1:]:           # back to the keel
             y = WW * (1 - t)
             half.append((y, s_tent * tent_lo(min(y, w)) + (1 - s_tent) * ((1 - tail) * body_lo(min(y, W)) + tail * tail_lo(y))))
-        if CAN_X0 <= x <= CAN_X1:
-            hw = float(np.interp(x, HW_X, HW_Y))
-            zs = tent_up(hw)
-            h = max(z_canopy - zs, 0.005)
-            ring = []
-            for th in np.linspace(0, math.pi, 29):            # roof, right to left
-                yy = hw * math.cos(th)
-                ring.append((x, yy, zs + h * max(0.0, 1 - abs(yy / hw) ** 2.6) ** (1 / 2.6)))
-            for yy in np.linspace(-hw, hw, 13)[1:-1]:           # floor, buried in the forebody
-                ring.append((x, yy, tent_up(abs(yy)) - 0.08))
-            canopy_rings.append(np.array(ring))
         right = np.array(half)
         left = right[1:-1][::-1] * [-1, 1]
         sec = np.vstack([right, left])
         rings.append(np.column_stack([np.full(len(sec), x), sec[:, 0], sec[:, 1]]))
     v, f = loft(rings)
-    body = obj("Fuselage", v, f, mat, angle=50)
-    v, f = loft(canopy_rings, cap_start=True, cap_end=True)
-    # Glass, by face: the roof arc has 28 faces from the right sill (u = 1) over the top (u = 0) to
-    # the left sill (u = -1). Windshield panes 3.62 to 4.12 m with posts where the front pane meets
-    # the side panes; the pilot's canopy has large side windows under a metal top, 4.28 to 5.40 m;
-    # the RSO's canopy small side windows, 5.95 to 6.45 m. Frames and sills stay painted.
-    n_ring, n_roof = len(canopy_rings[0]), 28
-    cxs = [float(r[0, 0]) for r in canopy_rings]
-    fm = []
-    for i in range(len(canopy_rings) - 1):
-        xm = (cxs[i] + cxs[i + 1]) / 2
-        for j in range(n_ring):
-            k = 0
-            if j < n_roof:
-                u = abs(math.cos((j + 0.5) / n_roof * math.pi))
-                if 3.62 < xm < 4.12 and u < 0.95 and not 0.40 < u < 0.48:
-                    k = 1
-                elif 4.28 < xm < 5.40 and 0.47 < u < 0.93:
-                    k = 1
-                elif 5.95 < xm < 6.45 and 0.55 < u < 0.90:
-                    k = 1
-            fm.append(k)
-    fm += [0, 0]                                            # end caps
-    return [body, obj("Canopy", v, f, mat, angle=35, extra=[GLASS], face_mat=fm)]
+    parts = [obj("Fuselage", v, f, mat, angle=50)]
+    # Canopy glass as thin panels lying 4 mm proud of the canopy crest, so the window outlines
+    # are clean: windshield (front pane and two side panes), the pilot's side windows under a
+    # metal top strip, and the RSO's small side windows. Each panel is laid out in (x, u), where
+    # u is the lateral fraction of the canopy half-width at that station.
+    cx = np.array([r[0, 0] for r in rings])
+    cp = np.array([[p[1], p[2], p[3]] if p[0] else [np.nan] * 3 for p in can_params])
+    ok = ~np.isnan(cp[:, 0])
+    hw_at = lambda x: float(np.interp(x, cx[ok], cp[ok, 0]))
+    zb_at = lambda x: float(np.interp(x, cx[ok], cp[ok, 1]))
+    top_at = lambda x: float(np.interp(x, cx[ok], cp[ok, 2]))
+    def crest(x, u):
+        hw = hw_at(x); hb = hw * 1.18; y = u * hw
+        z = zb_at(x) + (top_at(x) - zb_at(x)) * (1 - min(1.0, y / hb) ** 2.2)
+        return y, z + 0.004
+    def panel(x0, x1, u0, u1, side, nx=36, nu=14):
+        pts, faces = [], []
+        for i, x in enumerate(np.linspace(x0, x1, nx)):
+            for j, u in enumerate(np.linspace(u0, u1, nu)):
+                y, z = crest(x, u)
+                pts.append((x, side * y, z))
+        for i in range(nx - 1):
+            for j in range(nu - 1):
+                a_, b_ = i * nu + j, i * nu + j + 1
+                q = (a_, b_, b_ + nu, a_ + nu)
+                faces.append(q if side > 0 else q[::-1])
+        return pts, faces
+    glass = []
+    for x0, x1, u0, u1 in ((3.66, 4.12, 0.0, 0.38), (3.70, 4.12, 0.47, 0.90), (4.32, 5.38, 0.45, 0.90), (5.98, 6.42, 0.52, 0.86)):
+        for side in ((1,) if u0 == 0.0 else (1, -1)):
+            pv, pf = panel(x0, x1, u0, u1, side)
+            if u0 == 0.0:      # the front pane spans the centreline: mirror it into one panel
+                pv2, pf2 = panel(x0, x1, u0, u1, -1)
+                off = len(pv); pv = pv + pv2; pf = pf + [tuple(off + k for k in q) for q in pf2]
+            off = sum(len(g[0]) for g in glass)
+            glass.append((pv, pf))
+    gv, gf, off = [], [], 0
+    for pv, pf in glass:
+        gv += pv; gf += [tuple(off + k for k in q) for q in pf]; off += len(pv)
+    parts.append(obj("Canopy glass", gv, gf, GLASS, angle=60))
+    return parts
 
 
 # ------------------------------------------------------------ wing
