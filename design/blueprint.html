@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Article 121 · Blueprint</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;600&family=Overpass:wght@300;400;600&family=Saira:wdth,wght@50..125,300..800&display=swap">
+<style>
+/* Direction C, "Blueprint": the archive as a set of engineering drawings.
+   Light mode is a diazo whiteprint, dark mode a cyanotype blueprint.
+   Each section is a drawing sheet with a border, zone marks and a title block. */
+:root {
+  --sheet: #f1f3f0;
+  --line: #1f3e8c;           /* diazo blue line */
+  --line-soft: rgba(31, 62, 140, 0.42);
+  --grid: rgba(31, 62, 140, 0.075);
+  --redline: #c4352a;        /* engineer's red pencil */
+  --text: #142650;
+  --text-soft: #4a5b85;
+  --f-display: "Saira", "Eurostile", "Arial Narrow", sans-serif;
+  --f-body: "Overpass", "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "Overpass Mono", "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --sheet: #113566; --line: #e6efff; --line-soft: rgba(230, 239, 255, 0.45); --grid: rgba(230, 239, 255, 0.07);
+    --redline: #ff9a85; --text: #eef4ff; --text-soft: #a9bfe6; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --sheet: #113566; --line: #e6efff; --line-soft: rgba(230, 239, 255, 0.45); --grid: rgba(230, 239, 255, 0.07);
+  --redline: #ff9a85; --text: #eef4ff; --text-soft: #a9bfe6; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { background: var(--sheet); }
+body {
+  margin: 0; color: var(--text); background-color: var(--sheet);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+  font: 400 1rem/1.62 var(--f-body);
+  padding-inline: 16px; padding-block: 16px 64px;
+  overflow-x: hidden;
+}
+a { color: var(--text); text-decoration-color: var(--redline); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--redline); outline-offset: 2px; }
+
+.drawing { position: relative; max-width: 1240px; margin: 0 auto 40px; border: 2px solid var(--line); padding: 26px; }
+.drawing::before { content: ""; position: absolute; inset: 7px; border: 1px solid var(--line); pointer-events: none; }
+.zones-x, .zones-y { position: absolute; font: 400 0.62rem/1 var(--f-mono); color: var(--line-soft); pointer-events: none; display: flex; }
+.zones-x { left: 26px; right: 26px; top: -1px; height: 7px; justify-content: space-around; align-items: center; }
+.zones-y { top: 26px; bottom: 26px; left: -1px; width: 7px; flex-direction: column; justify-content: space-around; align-items: center; }
+
+.sheet-label { display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: 10px; margin-bottom: 18px; font: 400 0.72rem/1.4 var(--f-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-soft); }
+h1, h2 { font-family: var(--f-display); font-stretch: 125%; text-transform: uppercase; color: var(--text); margin: 0; text-wrap: balance; }
+h1 { font-weight: 700; font-size: clamp(2rem, 1rem + 4.4vw, 4.4rem); line-height: 0.95; letter-spacing: 0.01em; }
+h2 { font-weight: 600; font-size: clamp(1.4rem, 1rem + 1.6vw, 2.2rem); line-height: 1.05; margin-bottom: 0.6rem; }
+p { margin: 0 0 1rem; max-width: 62ch; }
+.mono { font-family: var(--f-mono); }
+.small { font-size: 0.82rem; color: var(--text-soft); }
+
+/* Hero drawing: 3D line model plus title block */
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
+.viewport { position: relative; aspect-ratio: 16 / 8.2; max-width: 100%; border: 1px solid var(--line-soft); overflow: hidden; touch-action: pan-y; cursor: grab; }
+.viewport canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.dim { position: absolute; transform: translate(-50%, -50%); font: 600 0.74rem/1.25 var(--f-mono); color: var(--text); background: var(--sheet); padding: 1px 6px; white-space: nowrap; pointer-events: none; text-align: center; }
+.dim small { display: block; font-weight: 400; color: var(--text-soft); font-size: 0.66rem; }
+.note { position: absolute; font: 400 0.72rem/1.35 var(--f-mono); color: var(--redline); max-width: 15rem; pointer-events: none; transition: opacity 0.4s; }
+.view-tag { position: absolute; left: 14px; top: 12px; font: 600 0.78rem/1 var(--f-mono); letter-spacing: 0.14em; color: var(--text); }
+.view-btns { position: absolute; right: 12px; top: 10px; display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+.view-btns button { font: 600 0.7rem/1 var(--f-mono); letter-spacing: 0.1em; padding: 7px 9px; color: var(--text); background: var(--sheet); border: 1px solid var(--line); cursor: pointer; }
+.view-btns button[aria-pressed="true"] { background: var(--line); color: var(--sheet); }
+
+.title-block { display: grid; grid-template-columns: 2.2fr 1fr 1fr 1fr; border: 2px solid var(--line); font-family: var(--f-mono); }
+.title-block > div { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 6px 10px 8px; min-width: 0; }
+.title-block > div:nth-child(4n) { border-right: 0; }
+.title-block > .last { border-bottom: 0; }
+.title-block label { display: block; font-size: 0.6rem; letter-spacing: 0.14em; color: var(--text-soft); text-transform: uppercase; }
+.title-block .v { font-size: 0.86rem; font-weight: 600; overflow-wrap: anywhere; }
+.title-block .name { grid-row: span 2; display: flex; flex-direction: column; justify-content: center; }
+.title-block .name .v { font-family: var(--f-display); font-stretch: 125%; font-size: 1.1rem; text-transform: uppercase; line-height: 1.1; }
+.title-block .wide { grid-column: span 4; border-right: 0; }
+
+/* J58 inlet explainer */
+.inlet { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 26px; align-items: start; }
+.inlet svg { width: 100%; height: auto; display: block; overflow: visible; }
+.inlet .stroke { fill: none; stroke: var(--line); stroke-width: 1.6; }
+.inlet .soft { fill: none; stroke: var(--line-soft); stroke-width: 1; stroke-dasharray: 4 4; }
+.inlet .shock { fill: none; stroke: var(--redline); stroke-width: 1.8; }
+.inlet .flow { fill: none; stroke: var(--line); stroke-width: 1.2; stroke-dasharray: 2 9; animation: flow 0.8s linear infinite; }
+.inlet .fill { fill: var(--sheet); stroke: var(--line); stroke-width: 1.6; }
+.inlet text { font: 400 11px var(--f-mono); fill: var(--text-soft); }
+.inlet text.red { fill: var(--redline); }
+@keyframes flow { to { stroke-dashoffset: -11; } }
+.slider { margin-top: 10px; }
+.slider label { font: 600 0.72rem/1 var(--f-mono); letter-spacing: 0.12em; text-transform: uppercase; display: flex; justify-content: space-between; margin-bottom: 8px; }
+input[type="range"] { width: 100%; accent-color: var(--redline); }
+.readout { border: 1px solid var(--line); font-family: var(--f-mono); }
+.readout div { display: flex; justify-content: space-between; gap: 12px; padding: 8px 12px; border-bottom: 1px solid var(--line-soft); font-size: 0.84rem; }
+.readout div:last-child { border-bottom: 0; }
+.readout b { font-weight: 600; font-variant-numeric: tabular-nums; text-align: right; }
+
+/* Parts list */
+.bom-scroll { overflow-x: auto; }
+table.bom { width: 100%; border-collapse: collapse; font-family: var(--f-mono); font-size: 0.84rem; min-width: 640px; }
+.bom th { text-align: left; font-size: 0.64rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-soft); border: 1px solid var(--line); padding: 6px 8px; font-weight: 600; }
+.bom td { border: 1px solid var(--line-soft); padding: 7px 8px; font-variant-numeric: tabular-nums; }
+.bom td.item { text-align: center; width: 3rem; }
+.bom tr:hover td { background: color-mix(in srgb, var(--line) 8%, transparent); }
+
+.pledge { max-width: 1240px; margin: 0 auto; font-size: 1.1rem; }
+.pledge p { max-width: 54ch; }
+
+@media (max-width: 760px) {
+  .drawing { padding: 18px 14px; }
+  .viewport { aspect-ratio: 4 / 5; }
+  .title-block { grid-template-columns: 1fr 1fr; }
+  .title-block > div:nth-child(n) { border-right: 1px solid var(--line); }
+  .title-block > div:nth-child(2n) { border-right: 0; }
+  .title-block .name, .title-block .wide { grid-column: span 2; grid-row: auto; border-right: 0; }
+  .inlet { grid-template-columns: minmax(0, 1fr); }
+  .note { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .inlet .flow { animation: none; } }
+</style>
+</head>
+<body>
+
+<section class="drawing" aria-labelledby="h1">
+  <div class="zones-x" aria-hidden="true"><span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span></div>
+  <div class="zones-y" aria-hidden="true"><span>D</span><span>C</span><span>B</span><span>A</span></div>
+  <div class="sheet-label"><span>Article 121 · drawing set</span><span>Sheet 1 of 6</span><span>General arrangement</span></div>
+  <div class="hero-grid">
+    <div>
+      <h1 id="h1">Article 121</h1>
+      <p style="margin-top:0.8rem">The Blackbird family, documented like the engineering it was. A free archive of the A-12, YF-12, M-21 and SR-71 where every figure carries its source. Drag the drawing to turn it, or pick a view.</p>
+    </div>
+    <div class="viewport" id="vp" aria-label="Interactive three-view line drawing of the SR-71A">
+      <canvas id="gl" aria-hidden="true"></canvas>
+      <div class="view-tag" id="view-tag">VIEW: ISOMETRIC</div>
+      <div class="view-btns" role="group" aria-label="Drawing view">
+        <button data-v="iso" aria-pressed="true">ISO</button>
+        <button data-v="top" aria-pressed="false">PLAN</button>
+        <button data-v="side" aria-pressed="false">SIDE</button>
+        <button data-v="front" aria-pressed="false">FRONT</button>
+      </div>
+      <div class="dim" id="dim-len" hidden>107 FT 5 IN<small>32.74 m · length</small></div>
+      <div class="dim" id="dim-span" hidden>55 FT 7 IN<small>16.94 m · span</small></div>
+      <div class="dim" id="dim-h" hidden>18 FT 6 IN<small>5.64 m · height</small></div>
+      <div class="note" id="n-spike">Inlet spike moves aft as speed builds, keeping the shock wave at the inlet lip</div>
+      <div class="note" id="n-chine">Chines along the forebody add lift and reduce radar return</div>
+      <div class="note" id="n-fin">Twin all-moving fins, canted inboard</div>
+    </div>
+    <div class="title-block">
+      <div class="name"><label>Title</label><span class="v">SR-71A strategic reconnaissance aircraft · general arrangement</span></div>
+      <div><label>Drawing no.</label><span class="v">A121-GA-001</span></div>
+      <div><label>Scale</label><span class="v" id="scale">NTS</span></div>
+      <div><label>Sheet</label><span class="v">1 of 6</span></div>
+      <div><label>Units</label><span class="v">ft-in / m</span></div>
+      <div><label>Rev.</label><span class="v">Proto B</span></div>
+      <div><label>Status</label><span class="v">Draft</span></div>
+      <div class="wide last"><label>Dimension source</label><span class="v">National Museum of the U.S. Air Force, Lockheed SR-71A fact sheet. Line model is a simplified placeholder, not a Lockheed drawing.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="drawing" aria-labelledby="h-inlet">
+  <div class="sheet-label"><span>Sheet 2 of 6</span><span>Propulsion</span><span>Section A-A through the left nacelle</span></div>
+  <h2 id="h-inlet">The inlet does the work</h2>
+  <p>At Mach 3 cruise the J58 engine core made only about 17 percent of the thrust. The inlet, with its moving spike, made more than half by slowing and compressing the incoming air. Drag the slider to watch the spike move aft and the shock wave settle on the cowl lip.</p>
+  <div class="inlet">
+    <div>
+      <svg viewBox="0 0 720 260" role="img" aria-labelledby="inlet-title">
+        <title id="inlet-title">Simplified cross-section of the SR-71 nacelle showing the inlet spike, cowl and shock wave</title>
+        <line class="soft" x1="0" y1="130" x2="720" y2="130"></line>
+        <!-- cowl -->
+        <path class="stroke" d="M190 62 C 260 44, 330 38, 420 38 L 650 38 L 700 48"></path>
+        <path class="stroke" d="M190 198 C 260 216, 330 222, 420 222 L 650 222 L 700 212"></path>
+        <!-- engine -->
+        <rect class="fill" x="420" y="78" width="200" height="104" rx="6"></rect>
+        <text x="470" y="134">J58 ENGINE</text>
+        <!-- bypass flow above and below the engine -->
+        <path class="flow" id="bypass1" d="M300 70 C 380 52, 460 54, 700 58"></path>
+        <path class="flow" id="bypass2" d="M300 190 C 380 208, 460 206, 700 202"></path>
+        <!-- core flow -->
+        <path class="flow" d="M40 130 L 420 130"></path>
+        <!-- spike, translated by script -->
+        <g id="spike">
+          <path class="fill" d="M60 130 L 230 98 L 330 92 L 330 168 L 230 162 Z"></path>
+        </g>
+        <!-- shock wave from spike tip to cowl lip -->
+        <line class="shock" id="shock1" x1="60" y1="130" x2="190" y2="62"></line>
+        <line class="shock" id="shock2" x1="60" y1="130" x2="190" y2="198"></line>
+        <text x="190" y="30" class="red" id="lip-label">COWL LIP</text>
+        <text x="40" y="250" id="spike-label">SPIKE</text>
+        <text x="560" y="250">AFT BYPASS AND EJECTOR</text>
+      </svg>
+      <div class="slider">
+        <label for="mach"><span>Mach</span><span id="mach-out">0.0</span></label>
+        <input type="range" id="mach" min="0" max="3.2" step="0.05" value="2.4">
+      </div>
+    </div>
+    <div class="readout" aria-live="polite">
+      <div><span>Mach</span><b id="r-mach">2.40</b></div>
+      <div><span>Spike position</span><b id="r-spike">Retracting</b></div>
+      <div><span>Shock wave</span><b id="r-shock">Moving toward lip</b></div>
+      <div><span>Thrust at cruise</span><b id="r-bypass">Inlet 54% · engine 17% · ejector 29%</b></div>
+      <div class="small" style="display:block">Schematic, not to scale. Thrust split at Mach 3 cruise from Peter Merlin, NASA Dryden, AIAA 2009-1522, which also gives each inlet's intake at about 100,000 cubic feet of air per second. The full site will add spike travel and bypass door schedules from the flight manual.</div>
+    </div>
+  </div>
+</section>
+
+<section class="drawing" aria-labelledby="h-bom">
+  <div class="sheet-label"><span>Sheet 3 of 6</span><span>Airframe register</span><span>Sample rows</span></div>
+  <h2 id="h-bom">Parts list: where the airframes are now</h2>
+  <p>The full register lists every A-12, YF-12A, M-21 and SR-71 built, with its article number, first flight, fate and current location, each row cited.</p>
+  <div class="bom-scroll">
+    <table class="bom">
+      <thead><tr><th>Item</th><th>Serial</th><th>Article</th><th>Type</th><th>Status</th><th>Location</th></tr></thead>
+      <tbody>
+        <tr><td class="item">1</td><td>60-6924</td><td>121</td><td>A-12</td><td>Preserved</td><td>Blackbird Airpark, Palmdale, California</td></tr>
+        <tr><td class="item">2</td><td>60-6927</td><td>124</td><td>A-12 trainer</td><td>Preserved</td><td>California Science Center, Los Angeles</td></tr>
+        <tr><td class="item">3</td><td>60-6935</td><td>1002</td><td>YF-12A</td><td>Preserved</td><td>National Museum of the U.S. Air Force, Dayton, Ohio</td></tr>
+        <tr><td class="item">4</td><td>60-6940</td><td>134</td><td>M-21</td><td>Preserved</td><td>Museum of Flight, Seattle, Washington</td></tr>
+        <tr><td class="item">5</td><td>61-7972</td><td>2023</td><td>SR-71A</td><td>Preserved</td><td>Steven F. Udvar-Hazy Center, Chantilly, Virginia</td></tr>
+        <tr><td class="item">6</td><td>61-7956</td><td>2007</td><td>SR-71B</td><td>Preserved</td><td>Kalamazoo Air Zoo, Michigan</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small" style="margin-top:0.8rem">Sample rows for layout only. Values are being checked against the fact pack before the build.</p>
+</section>
+
+<section class="pledge">
+  <p>Article 121 will always be free, with no ads and no accounts. The engineering belongs to Lockheed's Skunk Works and the people who flew and maintained these aircraft. The photographs and documents belong to the archives credited beside them. We only collect, cite and link.</p>
+  <p class="small">Design prototype C of 3.</p>
+</section>
+
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { buildBlackbird, outlineMaterial, DIM } from './blackbird.js';
+
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const css = (n) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const vp = document.getElementById('vp');
+const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('gl'), antialias: true, alpha: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+const scene = new THREE.Scene();
+const cam = new THREE.OrthographicCamera(-1, 1, 1, -1, -500, 500);
+
+// Lines in the sheet's line colour; fills in the sheet colour hide what is behind
+const lineMat = new THREE.LineBasicMaterial({ color: css('--line') });
+const occluder = new THREE.MeshBasicMaterial({ color: css('--sheet'), polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1 });
+const outline = outlineMaterial(css('--line'), 0.075);
+const bird = buildBlackbird({ edges: lineMat, edgeAngle: 50, hideFill: true, occluder, dark: occluder, outline });
+scene.add(bird);
+
+// Dimension lines drawn in model space so they stay registered to the drawing
+const dimMat = new THREE.LineBasicMaterial({ color: css('--line'), transparent: true, opacity: 0.85 });
+function dimLine(a, b, offset) {
+  const g = new THREE.Group();
+  const A = a.clone().add(offset), B = b.clone().add(offset);
+  const pts = [a, A, b, B, A, B];
+  // arrow ticks
+  const dir = B.clone().sub(A).normalize();
+  const side = offset.clone().normalize().multiplyScalar(0.45);
+  for (const [p, s] of [[A, 1], [B, -1]]) {
+    pts.push(p, p.clone().add(dir.clone().multiplyScalar(1.1 * s)).add(side));
+    pts.push(p, p.clone().add(dir.clone().multiplyScalar(1.1 * s)).sub(side));
+  }
+  g.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(pts), dimMat));
+  g.userData.mid = A.clone().lerp(B, 0.5);
+  return g;
+}
+const H2 = DIM.length / 2, S2 = DIM.span / 2;
+const dims = {
+  len: dimLine(new THREE.Vector3(H2, 0, 0), new THREE.Vector3(-H2, 0, 0), new THREE.Vector3(0, 0, S2 + 1.4)),
+  span: dimLine(new THREE.Vector3(-H2 + 3.9, 0, S2), new THREE.Vector3(-H2 + 3.9, 0, -S2), new THREE.Vector3(-6, 0, 0)),
+  lenSide: dimLine(new THREE.Vector3(H2, 0, 0), new THREE.Vector3(-H2, 0, 0), new THREE.Vector3(0, -3.6, 0)),
+  h: dimLine(new THREE.Vector3(-H2 + 2, -1.3, 0), new THREE.Vector3(-H2 + 2, 4.4, 0), new THREE.Vector3(-4, 0, 0)),
+  spanFront: dimLine(new THREE.Vector3(0, -1.3, S2), new THREE.Vector3(0, -1.3, -S2), new THREE.Vector3(0, -3.2, 0)),
+  hFront: dimLine(new THREE.Vector3(0, -1.3, S2), new THREE.Vector3(0, 4.4, S2), new THREE.Vector3(0, 0, 2.4)),
+};
+Object.values(dims).forEach((d) => { d.visible = false; scene.add(d); });
+
+const VIEWS = {
+  iso:   { pos: new THREE.Vector3(30, 22, 34), label: 'VIEW: ISOMETRIC', dims: [], notes: true },
+  top:   { pos: new THREE.Vector3(0, 60, 0.001), label: 'VIEW: PLAN', dims: ['len', 'span'] },
+  side:  { pos: new THREE.Vector3(0, 0, 60), label: 'VIEW: LEFT SIDE', dims: ['lenSide', 'h'] },
+  front: { pos: new THREE.Vector3(60, 0, 0), label: 'VIEW: FRONT', dims: ['spanFront', 'hFront'] },
+};
+const controls = new OrbitControls(cam, renderer.domElement);
+controls.enableZoom = false; controls.enablePan = false; controls.enableDamping = true;
+let current = 'iso', tweenFrom = null, tweenT = 1, userTouched = false;
+const tag = document.getElementById('view-tag');
+const labels = { len: 'dim-len', span: 'dim-span', lenSide: 'dim-len', h: 'dim-h', spanFront: 'dim-span', hFront: 'dim-h' };
+function setView(v, instant = false) {
+  current = v;
+  document.querySelectorAll('.view-btns button').forEach((b) => b.setAttribute('aria-pressed', b.dataset.v === v));
+  tag.textContent = VIEWS[v].label;
+  tweenFrom = cam.position.clone(); tweenT = instant || reduce ? 1 : 0;
+  if (instant || reduce) cam.position.copy(VIEWS[v].pos);
+  Object.entries(dims).forEach(([k, d]) => { d.visible = VIEWS[v].dims.includes(k); });
+}
+document.querySelector('.view-btns').addEventListener('click', (e) => {
+  const b = e.target.closest('button'); if (!b) return; userTouched = true; setView(b.dataset.v);
+});
+controls.addEventListener('start', () => { userTouched = true; tweenT = 1; Object.values(dims).forEach((d) => (d.visible = false)); tag.textContent = 'VIEW: FREE'; });
+
+let w = 0, h = 0;
+function resize() {
+  w = vp.clientWidth; h = vp.clientHeight; renderer.setSize(w, h, false);
+  const a = w / h;
+  if (a < 1) { cam.left = -24; cam.right = 24; cam.top = 24 / a; cam.bottom = -24 / a; }
+  else { cam.left = -24; cam.right = 24; cam.top = 24 / a; cam.bottom = -24 / a; }
+  cam.updateProjectionMatrix();
+  // The drawing is to true scale on this screen: metres per CSS pixel at 96 dpi
+  const mPerPx = (cam.right - cam.left) / w;
+  document.getElementById('scale').textContent = `1:${Math.round(mPerPx / 0.0002645833)}`;
+}
+new ResizeObserver(resize).observe(vp);
+resize(); setView('iso', true);
+const qv = new URLSearchParams(location.search).get('view'); // design review helper
+if (qv && VIEWS[qv]) { userTouched = true; setView(qv, true); }
+
+const retheme = () => {
+  lineMat.color.set(css('--line')); dimMat.color.set(css('--line')); occluder.color.set(css('--sheet')); outline.uniforms.uColor.value.set(css('--line'));
+};
+new MutationObserver(retheme).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', retheme);
+
+// Place an HTML label at a model-space point
+const v3 = new THREE.Vector3();
+function place(el, p, dx = 0, dy = 0) {
+  v3.copy(p).project(cam);
+  el.style.left = `${(v3.x * 0.5 + 0.5) * w + dx}px`; el.style.top = `${(-v3.y * 0.5 + 0.5) * h + dy}px`;
+}
+const notes = {
+  spike: [document.getElementById('n-spike'), new THREE.Vector3(H2 - 11.9, 0, 4.35), 14, -54],
+  chine: [document.getElementById('n-chine'), new THREE.Vector3(H2 - 7, 0, -1.3), -40, 26],
+  fin: [document.getElementById('n-fin'), new THREE.Vector3(H2 - 30, 4.2, -4.0), 10, -40],
+};
+
+const order = ['iso', 'top', 'side', 'front'];
+let last = performance.now(), dwell = 0;
+function frame(now) {
+  const dt = Math.min((now - last) / 1000, 0.05); last = now;
+  if (!userTouched && !reduce) { dwell += dt; if (dwell > 4.2) { dwell = 0; setView(order[(order.indexOf(current) + 1) % order.length]); } }
+  if (tweenT < 1) {
+    tweenT = Math.min(1, tweenT + dt / 1.1);
+    const e = tweenT < 0.5 ? 4 * tweenT ** 3 : 1 - (-2 * tweenT + 2) ** 3 / 2;
+    // swing around the model on a sphere rather than cutting through it
+    const a = tweenFrom.clone().normalize(), b = VIEWS[current].pos.clone().normalize();
+    const dir = a.lerp(b, e).normalize();
+    cam.position.copy(dir.multiplyScalar(60));
+  }
+  cam.up.set(0, 1, 0);
+  if (current === 'top' && tweenT >= 1 && !userTouched) cam.up.set(-1, 0, 0);
+  cam.lookAt(0, 0, 0);
+  controls.update();
+
+  const settled = tweenT >= 1;
+  for (const [k, id] of Object.entries(labels)) {
+    const el = document.getElementById(id);
+    if (dims[k].visible && settled) { el.hidden = false; place(el, dims[k].userData.mid); }
+  }
+  Object.entries(labels).forEach(([k, id]) => { if (!Object.entries(labels).some(([k2, id2]) => id2 === id && dims[k2].visible && settled)) document.getElementById(id).hidden = true; });
+  const showNotes = current === 'iso' && settled && !userTouched;
+  for (const [el, p, dx, dy] of Object.values(notes)) { el.style.opacity = showNotes ? 1 : 0; if (showNotes) place(el, p, dx, dy); }
+
+  renderer.render(scene, cam);
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+
+// Inlet explainer: spike retracts and the shock moves from ahead of the lip onto it
+const m = document.getElementById('mach');
+const spike = document.getElementById('spike');
+const s1 = document.getElementById('shock1'), s2 = document.getElementById('shock2');
+function inlet() {
+  const M = Number(m.value);
+  document.getElementById('mach-out').textContent = M.toFixed(2);
+  document.getElementById('r-mach').textContent = M.toFixed(2);
+  const k = THREE.MathUtils.clamp((M - 1.6) / 1.6, 0, 1);    // spike locked forward below Mach 1.6, then moves aft steadily
+  const dx = k * 56;
+  spike.setAttribute('transform', `translate(${dx} 0)`);
+  const tipX = 60 + dx;
+  // shock angle steepens less as Mach rises; below Mach 1 there is no shock
+  const show = M > 1.0;
+  const lipY = 62 + (1 - k) * 12;
+  for (const [el, y] of [[s1, lipY], [s2, 260 - lipY]]) {
+    el.setAttribute('x1', tipX); el.setAttribute('x2', 190 - (1 - k) * 34); el.setAttribute('y2', y);
+    el.style.opacity = show ? 1 : 0;
+  }
+  document.getElementById('r-spike').textContent = k <= 0 ? 'Forward' : k < 1 ? 'Moving aft' : 'Aft';
+  document.getElementById('r-shock').textContent = !show ? 'None (subsonic)' : k < 0.95 ? 'Ahead of the lip' : 'On the lip';
+  document.getElementById('r-bypass').style.opacity = M >= 3 ? 1 : 0.35;
+  document.querySelectorAll('.inlet .flow').forEach((f) => { f.style.animationDuration = `${Math.max(0.25, 1.1 - M * 0.25)}s`; });
+}
+m.addEventListener('input', inlet); inlet();
+</script>
+</body>
+</html>

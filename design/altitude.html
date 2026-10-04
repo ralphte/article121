@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Article 121 · Altitude</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=B612+Mono:wght@400;700&family=Michroma&display=swap">
+<style>
+/* Direction A, "Altitude": the page is one climb from the runway to cruise.
+   Scroll position is altitude. A fixed WebGL sky and aircraft sit behind
+   glass panels; a cockpit-style readout tracks altitude, Mach and speed. */
+:root {
+  --night: #04060a;
+  --ink: #eef1f4;
+  --ink-dim: #b6c0cb;
+  --ink-faint: #7d8a98;
+  --burner: #ffb25e;        /* J58 afterburner plume */
+  --burner-deep: #e0741f;
+  --glass: rgba(5, 9, 15, 0.62);
+  --rule: rgba(222, 232, 244, 0.16);
+  --sky-top: #16233b;
+  --sky-low: #b9764c;
+  --f-display: "Michroma", "Eurostile", "Microgramma", "Arial Black", sans-serif;
+  --f-body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --f-inst: "B612 Mono", "SFMono-Regular", Menlo, monospace;
+  --s-1: clamp(0.78rem, 0.74rem + 0.2vw, 0.86rem);
+  --s0: clamp(1rem, 0.96rem + 0.2vw, 1.08rem);
+  --s1: clamp(1.25rem, 1.1rem + 0.6vw, 1.55rem);
+  --s2: clamp(1.7rem, 1.3rem + 1.6vw, 2.6rem);
+  --s3: clamp(2.4rem, 1.4rem + 4.6vw, 5.6rem);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden]{display:none!important}
+html { background: var(--night); }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--night);
+  font: 400 var(--s0)/1.62 var(--f-body);
+  font-stretch: 96%;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { color: var(--ink); text-decoration-color: var(--burner); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--burner); outline-offset: 3px; }
+
+/* Sky, stars and aircraft live behind everything */
+#sky {
+  position: fixed; inset: 0; z-index: 0;
+  background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-top) 18%, var(--sky-low) 100%);
+}
+#limb {
+  position: fixed; left: -30vw; right: -30vw; bottom: -62vh; height: 80vh; z-index: 0;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 50% 0%, rgba(120, 180, 255, 0.55) 0%, rgba(40, 90, 170, 0.35) 22%, rgba(8, 18, 35, 0.95) 46%);
+  box-shadow: 0 -2px 30px rgba(140, 190, 255, 0.45);
+  opacity: 0; transition: opacity 0.2s linear;
+  pointer-events: none;
+}
+#gl { position: fixed; inset: 0; z-index: 1; width: 100vw; height: 100vh; display: block; }
+
+/* Instrument column */
+.hud {
+  position: fixed; z-index: 5; left: clamp(12px, 2vw, 28px); top: 50%; transform: translateY(-50%);
+  width: 132px; font-family: var(--f-inst); color: var(--ink);
+  display: grid; gap: 14px;
+}
+.inst { background: var(--glass); border: 1px solid var(--rule); border-radius: 3px; padding: 8px 10px 7px; backdrop-filter: blur(6px); }
+.inst-label { font-size: 0.62rem; letter-spacing: 0.16em; color: var(--ink-faint); }
+.inst-value { font-size: 1.32rem; font-weight: 700; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; line-height: 1.15; }
+.inst-unit { font-size: 0.62rem; color: var(--ink-dim); margin-left: 3px; }
+.tape { position: relative; height: 210px; overflow: hidden; background: var(--glass); border: 1px solid var(--rule); border-radius: 3px; }
+.tape::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: var(--burner); box-shadow: 0 0 6px var(--burner); }
+.tape-inner { position: absolute; left: 0; right: 0; top: 50%; will-change: transform; }
+.tick { position: absolute; right: 0; height: 1px; background: var(--ink-faint); }
+.tick.major { background: var(--ink-dim); }
+.tick span { position: absolute; right: 26px; top: -0.55em; font-size: 0.66rem; color: var(--ink-dim); font-variant-numeric: tabular-nums; }
+.phase { font-size: 0.66rem; letter-spacing: 0.12em; color: var(--burner); min-height: 2.4em; }
+
+/* Content */
+main { position: relative; z-index: 3; }
+.wrap { width: min(1180px, 100%); margin: 0 auto; padding-inline: max(16px, 4vw); padding-left: max(16px, calc(132px + 4vw)); }
+.hero { min-height: 92vh; display: grid; align-content: center; padding-block: 12vh 8vh; }
+.eyebrow { font: 400 var(--s-1)/1.4 var(--f-inst); letter-spacing: 0.22em; text-transform: uppercase; color: var(--burner); }
+.wordmark { font: 400 var(--s3)/0.98 var(--f-display); letter-spacing: 0.02em; margin: 0.25em 0 0.2em; text-wrap: balance; text-shadow: 0 2px 30px rgba(0,0,0,0.35); }
+.lede { max-width: 34rem; font-size: var(--s1); line-height: 1.45; color: var(--ink); font-weight: 350; margin: 0; text-shadow: 0 1px 18px rgba(0,0,0,0.5); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 2rem; }
+.btn { font: 600 var(--s-1)/1 var(--f-body); letter-spacing: 0.08em; text-transform: uppercase; padding: 0.95em 1.3em; border-radius: 2px; text-decoration: none; border: 1px solid var(--rule); background: var(--glass); color: var(--ink); backdrop-filter: blur(6px); cursor: pointer; }
+.btn.primary { background: var(--burner); border-color: var(--burner); color: #1b0f04; }
+.note121 { margin-top: 2.6rem; max-width: 30rem; font-size: var(--s-1); color: var(--ink-dim); border-left: 1px solid var(--burner); padding-left: 14px; }
+
+.chapter { padding-block: 22vh 10vh; display: grid; grid-template-columns: minmax(0, 36rem); }
+.panel { background: var(--glass); border: 1px solid var(--rule); border-radius: 4px; padding: clamp(18px, 3vw, 32px); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.marker { display: flex; align-items: center; gap: 12px; font: 400 0.72rem/1 var(--f-inst); letter-spacing: 0.16em; color: var(--burner); margin-bottom: 1rem; }
+.marker::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--burner), transparent); }
+h2 { font: 400 var(--s2)/1.12 var(--f-display); letter-spacing: 0.01em; margin: 0 0 0.7rem; text-wrap: balance; }
+p { margin: 0 0 1rem; max-width: 62ch; }
+p:last-child { margin-bottom: 0; }
+.meta { font: 400 var(--s-1)/1.5 var(--f-inst); color: var(--ink-faint); }
+
+sup.cite { font: 700 0.62rem/1 var(--f-inst); }
+sup.cite button { font: inherit; color: var(--burner); background: none; border: 0; padding: 0 1px; cursor: pointer; }
+
+figure { margin: 1.4rem 0 0; }
+figure img { display: block; width: 100%; height: auto; border-radius: 2px; }
+figcaption { margin-top: 0.6rem; font-size: var(--s-1); line-height: 1.5; color: var(--ink-dim); }
+figcaption .credit { display: block; margin-top: 0.25rem; font-family: var(--f-inst); font-size: 0.7rem; color: var(--ink-faint); }
+figcaption .credit a { color: var(--ink-dim); }
+
+.family { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 1.4rem; }
+.family article { background: rgba(0,0,0,0.28); border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; }
+.family img { aspect-ratio: 4 / 3; object-fit: cover; width: 100%; display: block; }
+.family .body { padding: 12px 12px 14px; font-size: var(--s-1); line-height: 1.5; }
+.family h3 { font: 400 0.95rem/1.2 var(--f-display); margin: 0 0 0.35rem; }
+.family .count { font-family: var(--f-inst); color: var(--burner); font-size: 0.7rem; letter-spacing: 0.1em; display: block; margin-bottom: 0.4rem; }
+.chapter.wide { grid-template-columns: minmax(0, 54rem); }
+
+.records { display: grid; gap: 1px; margin-top: 1.2rem; background: var(--rule); border: 1px solid var(--rule); }
+.record { background: rgba(3, 5, 9, 0.82); padding: 16px 18px; display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 6px 18px; align-items: baseline; }
+.record .num { font: 700 clamp(1.6rem, 1.2rem + 1.8vw, 2.5rem)/1 var(--f-inst); color: var(--ink); font-variant-numeric: tabular-nums; }
+.record .num small { font-size: 0.42em; color: var(--burner); margin-left: 4px; letter-spacing: 0.06em; }
+.record .what { font-size: var(--s-1); color: var(--ink-dim); }
+
+.sources { padding-block: 16vh 6vh; }
+.sources ol { margin: 0; padding-left: 1.4rem; display: grid; gap: 0.6rem; font-size: var(--s-1); color: var(--ink-dim); max-width: 70ch; }
+.pledge { padding-block: 4vh 16vh; }
+.pledge p { font-size: var(--s1); line-height: 1.45; max-width: 40rem; font-weight: 350; }
+footer.proto { font: 400 0.7rem/1.5 var(--f-inst); color: var(--ink-faint); padding-block: 0 4rem; }
+
+/* Source drawer */
+.drawer { position: fixed; z-index: 20; right: 0; top: 0; bottom: 0; width: min(420px, 92vw); background: rgba(6, 9, 14, 0.96); border-left: 1px solid var(--rule); transform: translateX(102%); transition: transform 0.35s cubic-bezier(.2,.7,.2,1); padding: calc(22px + env(safe-area-inset-top, 0px)) 22px 22px; overflow-y: auto; }
+.drawer.open { transform: none; }
+.drawer h3 { font: 400 0.72rem/1.3 var(--f-inst); letter-spacing: 0.16em; color: var(--burner); margin: 0 0 1rem; }
+.drawer .src-title { font-size: var(--s1); line-height: 1.3; margin: 0 0 0.4rem; }
+.drawer dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 14px; font-size: var(--s-1); margin: 1rem 0; }
+.drawer dt { color: var(--ink-faint); font-family: var(--f-inst); font-size: 0.7rem; letter-spacing: 0.08em; padding-top: 2px; }
+.drawer dd { margin: 0; overflow-wrap: anywhere; }
+.drawer .close { position: absolute; right: 14px; top: calc(14px + env(safe-area-inset-top, 0px)); }
+
+@media (max-width: 760px) {
+  .hud { left: 0; right: 0; top: auto; bottom: 0; transform: none; width: auto; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; padding: 0 0 env(safe-area-inset-bottom, 0px); background: rgba(4, 6, 10, 0.88); border-top: 1px solid var(--rule); }
+  .hud .inst { border: 0; border-radius: 0; background: none; backdrop-filter: none; padding: 8px 12px; }
+  .hud .tape, .hud .phase { display: none; }
+  .inst-value { font-size: 1.05rem; }
+  .wrap { padding-left: 16px; padding-right: 16px; }
+  .hero { min-height: 80vh; padding-block: 18vh 6vh; }
+  .chapter { padding-block: 40vh 6vh; }
+  .family { grid-template-columns: minmax(0, 1fr); }
+  .record { grid-template-columns: minmax(0, 1fr); }
+  .pledge { padding-bottom: 22vh; }
+}
+@media (prefers-reduced-motion: reduce) { .drawer { transition: none; } }
+</style>
+</head>
+<body>
+<div id="sky" aria-hidden="true"></div>
+<div id="limb" aria-hidden="true"></div>
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<aside class="hud" aria-label="Flight readout, follows your scroll position">
+  <div class="inst"><div class="inst-label">ALTITUDE</div><div class="inst-value"><span id="alt">00000</span><span class="inst-unit">FT</span></div></div>
+  <div class="tape" aria-hidden="true"><div class="tape-inner" id="tape"></div></div>
+  <div class="inst"><div class="inst-label">MACH</div><div class="inst-value" id="mach">0.00</div></div>
+  <div class="inst"><div class="inst-label">GROUND SPEED</div><div class="inst-value"><span id="mph">0000</span><span class="inst-unit">MPH</span></div></div>
+  <div class="phase" id="phase">TAKEOFF ROLL</div>
+</aside>
+
+<main>
+  <section class="wrap hero" data-phase="0">
+    <div class="eyebrow">The Blackbird archive · 1959 to 1999</div>
+    <h1 class="wordmark">ARTICLE 121</h1>
+    <p class="lede">A free archive of the Lockheed A-12, YF-12, M-21 and SR-71. Every photograph, date and number on this site links to the place it came from.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#ch1">Start the climb</a>
+      <a class="btn" href="#sources">See every source</a>
+    </div>
+    <p class="note121">Article 121 was the CIA's name for the first A-12 airframe, serial 60-6924. Scroll to climb: the readout on the left follows a typical SR-71 sortie from the runway to cruise.</p>
+  </section>
+
+  <section class="wrap chapter" id="ch1">
+    <div class="panel">
+      <div class="marker">FL000 · GROOM LAKE · 1959 TO 1962</div>
+      <h2>Archangel, twelfth design</h2>
+      <p>The CIA wanted a successor to the U-2 that could fly too high and too fast to be shot down. Lockheed's answer went through a dozen design studies called Archangel. The twelfth, the A-12, won the contract in 1959.<sup class="cite"><button data-src="1" aria-label="Source 1">1</button></sup></p>
+      <p>The first airframe, known inside the program as Article 121, left Burbank by road on the night of 26 February 1962 in a crate 35 feet wide and 105 feet long. On 25 April Lou Schalk made an unannounced first hop of under two miles at about 20 feet. The official first flight followed on 30 April.<sup class="cite"><button data-src="1" aria-label="Source 1">1</button></sup></p>
+      <figure>
+        <img src="img/a12-flying.jpg" alt="A black A-12 in flight seen from the left front, against a pale sky." loading="lazy" width="1600" height="1188">
+        <figcaption>A-12 60-6932 in flight, 1960s. This aircraft was lost over the South China Sea in June 1968.
+          <span class="credit">Photo: U.S. Air Force, DoD VIRIN DF-SC-82-10542 · Public domain · <a href="https://commons.wikimedia.org/wiki/File:A12-flying.jpg" target="_blank" rel="noopener">Source</a></span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="wrap chapter" id="ch2">
+    <div class="panel">
+      <div class="marker">FL250 · AIR REFUELING · 1964</div>
+      <h2>The Air Force version</h2>
+      <p>Bob Gilliland flew the first SR-71A, 61-7950, from Palmdale on 22 December 1964. It was longer and heavier than the A-12 and carried a second crew member, the reconnaissance systems officer.<sup class="cite"><button data-src="2" aria-label="Source 2">2</button></sup></p>
+      <p>Sorties usually began with a climb to meet a KC-135Q tanker carrying the SR-71's own JP-7 fuel. Fully fuelled, about 80,000 lb of its 140,000 lb gross weight was fuel.<sup class="cite"><button data-src="2" aria-label="Source 2">2</button></sup></p>
+      <figure>
+        <img src="img/sr71-tanker.jpg" alt="An SR-71A approaches the refuelling boom of a KC-135Q, seen from the tanker." loading="lazy" width="1600" height="1080">
+        <figcaption>An SR-71A closes on a KC-135Q tanker, 1989.
+          <span class="credit">Photo: TSgt. Michael Haggerty, USAF, VIRIN DF-ST-89-06276 · Public domain · <a href="https://commons.wikimedia.org/wiki/File:SR-71_seen_from_KC-135Q_tanker_1989.JPEG" target="_blank" rel="noopener">Source</a></span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="wrap chapter wide" id="ch3">
+    <div class="panel">
+      <div class="marker">FL450 · TRANSONIC · 1962 TO 1968</div>
+      <h2>One airframe, four aircraft</h2>
+      <p>The same basic design flew in four forms. The registry on the full site will give every airframe its own page: serial, article number, first flight, fate and where to see it today.</p>
+      <div class="family">
+        <article>
+          <img src="img/a12-flying.jpg" alt="A-12 in flight." loading="lazy">
+          <div class="body"><span class="count">A-12 · CIA</span><h3>OXCART</h3>Single seat. Flew BLACK SHIELD reconnaissance missions over North Vietnam and North Korea from Kadena, Okinawa, in 1967 and 1968.<sup class="cite"><button data-src="1" aria-label="Source 1">1</button></sup></div>
+        </article>
+        <article>
+          <img src="img/yf12a.jpg" alt="YF-12A on display in a museum hangar." loading="lazy">
+          <div class="body"><span class="count">YF-12A · USAF</span><h3>KEDLOCK</h3>Interceptor prototype with a nose radar and missile bays. First flew on 7 August 1963 and later served NASA as a research aircraft.<sup class="cite"><button data-src="5" aria-label="Source 5">5</button></sup></div>
+        </article>
+        <article>
+          <img src="img/m21-d21.jpg" alt="M-21 in flight carrying a D-21 drone on its back." loading="lazy">
+          <div class="body"><span class="count">M-21 · CIA</span><h3>TAGBOARD</h3>Two-seat mothership that launched the D-21 drone from its back. The program ended after a launch collision on 30 July 1966.<sup class="cite"><button data-src="1" aria-label="Source 1">1</button></sup></div>
+        </article>
+      </div>
+      <p class="meta" style="margin-top:1rem">Photos: U.S. Air Force (A-12, M-21: DoD VIRIN DF-SC-82-10541) and National Museum of the U.S. Air Force (YF-12A). Public domain.</p>
+    </div>
+  </section>
+
+  <section class="wrap chapter wide" id="ch4">
+    <div class="panel">
+      <div class="marker">FL850 · CRUISE · MACH 3.2</div>
+      <h2>The numbers that still stand</h2>
+      <p>On 28 July 1976 SR-71 crews set world records for speed over a straight course and for altitude in sustained horizontal flight. The speed record still stands.<sup class="cite"><button data-src="4" aria-label="Source 4">4</button></sup></p>
+      <div class="records">
+        <div class="record"><div class="num">2,193.2<small>MPH</small></div><div class="what">Speed over a straight course, FAI record 8879. 61-7958, Capt. Eldon Joersz and Maj. George Morgan, 28 July 1976.<sup class="cite"><button data-src="4" aria-label="Source 4">4</button></sup></div></div>
+        <div class="record"><div class="num">85,069<small>FT</small></div><div class="what">Altitude in sustained horizontal flight. Capt. Robert Helt and Maj. Larry Elliott, 28 July 1976. Sources disagree on which airframe they flew.<sup class="cite"><button data-src="6" aria-label="Source 6">6</button></sup></div></div>
+        <div class="record"><div class="num">1:04:20<small>H:M:S</small></div><div class="what">Los Angeles to Washington, D.C. 61-7972, Lt. Col. Ed Yeilding and Lt. Col. Joseph "J.T." Vida, 6 March 1990, on its delivery flight to the Smithsonian.<sup class="cite"><button data-src="3" aria-label="Source 3">3</button></sup></div></div>
+      </div>
+      <figure>
+        <img src="img/j58-afterburner.jpg" alt="A J58 engine on a ground test stand in full afterburner, with glowing parts and visible shock diamonds." loading="lazy" width="1600" height="1448">
+        <figcaption>A J58 turbojet in full afterburner during a ground run at NASA Dryden, 4 April 1997.
+          <span class="credit">Photo: Tony Landis, NASA Armstrong Flight Research Center, EC97-44007-01 · Public domain · <a href="https://commons.wikimedia.org/wiki/File:J58_Turbojet_in_Full_Afterburner_(EC97-44007-01).jpg" target="_blank" rel="noopener">Source</a></span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="wrap chapter" id="ch5">
+    <div class="panel">
+      <div class="marker">DESCENT · 1990 TO 1999</div>
+      <h2>Retired twice</h2>
+      <p>The Air Force retired the SR-71 in January 1990. Congress paid for a brief return in 1995, and the last Air Force flight came in October 1997. NASA flew the last Blackbird flight of all on 9 October 1999.<sup class="cite"><button data-src="2" aria-label="Source 2">2</button> <button data-src="7" aria-label="Source 7">7</button></sup></p>
+      <p>Lockheed built 32 SR-71s: 29 SR-71As, two SR-71B trainers and one SR-71C. Twelve were lost in accidents and none to enemy action. The full site will map every survivor.<sup class="cite"><button data-src="3" aria-label="Source 3">3</button></sup></p>
+      <figure>
+        <img src="img/sr71-sierra.jpg" alt="An SR-71B banks over snow-covered mountain peaks." loading="lazy" width="2400" height="1880">
+        <figcaption>NASA 831, the SR-71B trainer 61-7956, over the southern Sierra Nevada after refuelling, December 1994.
+          <span class="credit">Photo: Judson Brohmer, USAF, via NASA Armstrong · Public domain · <a href="https://commons.wikimedia.org/wiki/File:Lockheed_SR-71_Blackbird.jpg" target="_blank" rel="noopener">Source</a></span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="wrap sources" id="sources">
+    <div class="panel">
+      <div class="marker">SOURCES FOR THIS PAGE</div>
+      <ol id="srclist"></ol>
+    </div>
+  </section>
+
+  <section class="wrap pledge">
+    <div class="marker">ABOUT THIS SITE</div>
+    <p>Article 121 will never show ads and will never charge for access. We did not take these photographs or write these records. We collect them, credit the people and archives who did, and link back to the original.</p>
+    <footer class="proto">Design prototype A of 3. Content is sample copy pending fact review. 3D aircraft is a placeholder model.</footer>
+  </section>
+</main>
+
+<div class="drawer" id="drawer" role="dialog" aria-modal="false" aria-labelledby="drawer-title" hidden>
+  <button class="btn close" id="drawer-close">Close</button>
+  <h3 id="drawer-title">SOURCE</h3>
+  <div id="drawer-body"></div>
+</div>
+
+<script>
+// Sources are data; the production site builds these from the content collection.
+const SOURCES = {
+  1: { title: "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft", by: "David Robarge, CIA Center for the Study of Intelligence", year: "2nd ed., 2012, pp. 11 to 17", kind: "U.S. government history, public domain", url: "https://www.cia.gov/resources/csi/static/b45f5f8f5e4937963d9e9931313d84a4/Archangel-CIAs-Supersonic-A-12-Reconnaissance-Aircraft.pdf" },
+  2: { title: "SR-71 Blackbird (FS-030)", by: "NASA Dryden Flight Research Center", year: "Fact sheet", kind: "U.S. government fact sheet, public domain", url: "https://www.nasa.gov/wp-content/uploads/2021/09/495839main_fs-030_sr-71.pdf" },
+  3: { title: "Lockheed SR-71 Blackbird, A19920072000", by: "Smithsonian National Air and Space Museum", year: "Collection record", kind: "Museum record, linked", url: "https://airandspace.si.edu/collection-objects/lockheed-sr-71-blackbird/nasm_A19920072000" },
+  4: { title: "Press release: 28 July 1976 world speed record, Joersz and Morgan", by: "FAI, World Air Sports Federation", year: "26 July 2016", kind: "Record body press release, linked", url: "https://www.fai.org/sites/default/files/documents/press_release_28-july-1976_joersz-eldon_world-speed-record_26jul2016.pdf" },
+  5: { title: "Design and Development Aspects of the Lockheed SR-71 Blackbird (AIAA 2009-1522)", by: "Peter W. Merlin, NASA Dryden", year: "2009", kind: "NASA technical paper, public domain", url: "https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf" },
+  7: { title: "A-12, YF-12A and SR-71 Timeline of Events", by: "Roadrunners Internationale (Carpenter)", year: "June 2010", kind: "Veterans' association record, linked", url: "https://roadrunnersinternationale.com/carpenter/bb_timeline_c10.pdf" },
+  6: { title: "Highest altitude in horizontal flight", by: "Guinness World Records", year: "Record entry", kind: "Record listing, linked", url: "https://www.guinnessworldrecords.com/world-records/74563-highest-altitude-in-horizontal-flight" },
+};
+const list = document.getElementById('srclist');
+for (const [n, s] of Object.entries(SOURCES)) {
+  const li = document.createElement('li');
+  li.innerHTML = `${s.by}. <em>${s.title}</em>. ${s.year}. <a href="${s.url}" target="_blank" rel="noopener">Open source</a>`;
+  list.appendChild(li);
+}
+const drawer = document.getElementById('drawer');
+const body = document.getElementById('drawer-body');
+function openSource(n) {
+  const s = SOURCES[n];
+  body.innerHTML = `<p class="src-title">${s.title}</p><p class="meta">${s.by}</p>
+    <dl><dt>TYPE</dt><dd>${s.kind}</dd><dt>EDITION</dt><dd>${s.year}</dd><dt>LINK</dt><dd><a href="${s.url}" target="_blank" rel="noopener">${s.url}</a></dd>
+    <dt>ARCHIVE</dt><dd>Wayback Machine snapshot is captured at build time on the full site.</dd></dl>
+    <p class="meta">Every claim on Article 121 carries at least one source like this. Spot a mistake? The full site links each page to a correction form on GitHub.</p>`;
+  drawer.hidden = false;
+  requestAnimationFrame(() => drawer.classList.add('open'));
+  document.getElementById('drawer-close').focus();
+}
+document.addEventListener('click', (e) => {
+  const b = e.target.closest('sup.cite button');
+  if (b) openSource(b.dataset.src);
+});
+document.getElementById('drawer-close').addEventListener('click', () => {
+  drawer.classList.remove('open');
+  setTimeout(() => { drawer.hidden = true; }, 360);
+});
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') document.getElementById('drawer-close').click(); });
+</script>
+
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { buildBlackbird, buildAfterburners } from './blackbird.js';
+
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const canvas = document.getElementById('gl');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75));
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.05;
+const scene = new THREE.Scene();
+const pmrem = new THREE.PMREMGenerator(renderer);
+scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 2000);
+
+const sun = new THREE.DirectionalLight(0xffe2c4, 2.2); sun.position.set(-30, 40, 20); scene.add(sun);
+const rim = new THREE.DirectionalLight(0x9cc4ff, 1.4); rim.position.set(20, -10, -40); scene.add(rim);
+
+const bird = buildBlackbird({
+  skin: new THREE.MeshStandardMaterial({ color: 0x14161b, metalness: 0.62, roughness: 0.42 }),
+});
+const burners = buildAfterburners(bird.userData.parts, 0xff9a3c);
+bird.add(burners);
+const rig = new THREE.Group(); rig.add(bird); scene.add(rig);
+
+// Stars, visible only near the top of the climb
+const starGeo = new THREE.BufferGeometry();
+const starPos = new Float32Array(1600 * 3);
+for (let i = 0; i < 1600; i++) {
+  const v = new THREE.Vector3().randomDirection().multiplyScalar(800);
+  v.y = Math.abs(v.y) * 0.9 + 60;
+  starPos.set([v.x, v.y, v.z], i * 3);
+}
+starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+const starMat = new THREE.PointsMaterial({ color: 0xffffff, size: 1.6, sizeAttenuation: false, transparent: true, opacity: 0 });
+scene.add(new THREE.Points(starGeo, starMat));
+
+// Streaks that sell speed: cloud wisps low, thin air high
+const N = 260;
+const streakGeo = new THREE.BufferGeometry();
+const sp = new Float32Array(N * 6);
+const seeds = Array.from({ length: N }, () => [Math.random() * 240 - 120, Math.random() * 40 - 26, Math.random() * 120 - 60]);
+streakGeo.setAttribute('position', new THREE.BufferAttribute(sp, 3));
+const streakMat = new THREE.LineBasicMaterial({ color: 0xdfe8f2, transparent: true, opacity: 0.0 });
+scene.add(new THREE.LineSegments(streakGeo, streakMat));
+
+// Flight profile: scroll progress -> altitude (ft), Mach, phase label
+const PROFILE = [
+  [0.00, 0, 0.0, 'TAKEOFF ROLL'],
+  [0.06, 0, 0.32, 'ROTATE'],
+  [0.20, 25000, 0.86, 'CLIMB'],
+  [0.34, 25500, 0.84, 'AIR REFUELING · KC-135Q'],
+  [0.50, 33000, 1.25, 'TRANSONIC ACCELERATION'],
+  [0.68, 72000, 2.9, 'CLIMB TO CRUISE'],
+  [0.80, 85000, 3.2, 'CRUISE · MACH 3.2'],
+  [0.92, 85000, 3.2, 'CRUISE · MACH 3.2'],
+  [1.00, 64000, 2.2, 'DESCENT'],
+];
+function sample(p) {
+  for (let i = 1; i < PROFILE.length; i++) {
+    const a = PROFILE[i - 1], b = PROFILE[i];
+    if (p <= b[0]) {
+      const t = (p - a[0]) / (b[0] - a[0] || 1);
+      const e = t * t * (3 - 2 * t);
+      return { alt: a[1] + (b[1] - a[1]) * e, mach: a[2] + (b[2] - a[2]) * e, phase: (t < 0.5 ? a : b)[3] };
+    }
+  }
+  const z = PROFILE[PROFILE.length - 1];
+  return { alt: z[1], mach: z[2], phase: z[3] };
+}
+// Speed of sound in mph for the standard atmosphere, rough piecewise fit
+const sos = (ft) => ft < 36089 ? 761 - (101 * ft) / 36089 : ft < 65617 ? 660 : 660 + (ft - 65617) * 0.00055;
+
+// Sky colour by altitude: twilight at Beale, day blue, then black at cruise
+const SKY = [
+  [0, '#1a2944', '#c9875a'],
+  [12000, '#1f4c80', '#86a9c9'],
+  [30000, '#123766', '#5d8fc4'],
+  [55000, '#081a38', '#2b5c97'],
+  [75000, '#02060f', '#14335f'],
+  [85000, '#010205', '#0d2649'],
+];
+const c1 = new THREE.Color(), c2 = new THREE.Color();
+function skyAt(alt) {
+  for (let i = 1; i < SKY.length; i++) {
+    if (alt <= SKY[i][0]) {
+      const t = (alt - SKY[i - 1][0]) / (SKY[i][0] - SKY[i - 1][0]);
+      const top = c1.set(SKY[i - 1][1]).lerp(new THREE.Color(SKY[i][1]), t).getStyle();
+      const low = c2.set(SKY[i - 1][2]).lerp(new THREE.Color(SKY[i][2]), t).getStyle();
+      return [top, low];
+    }
+  }
+  return [SKY[SKY.length - 1][1], SKY[SKY.length - 1][2]];
+}
+
+// Altitude tape ticks, 1 px per 100 ft
+const tape = document.getElementById('tape');
+for (let ft = 0; ft <= 90000; ft += 2500) {
+  const t = document.createElement('div');
+  const major = ft % 10000 === 0;
+  t.className = 'tick' + (major ? ' major' : '');
+  t.style.top = `${-ft / 100}px`;
+  t.style.width = major ? '20px' : '10px';
+  if (major) t.innerHTML = `<span>${ft / 1000}K</span>`;
+  tape.appendChild(t);
+}
+
+const elAlt = document.getElementById('alt'), elMach = document.getElementById('mach'), elMph = document.getElementById('mph'), elPhase = document.getElementById('phase');
+const root = document.documentElement, sky = document.getElementById('sky'), limb = document.getElementById('limb');
+let target = 0, prog = 0, w = 0, h = 0, mx = 0, my = 0;
+const isNarrow = () => innerWidth < 760;
+
+function resize() {
+  w = innerWidth; h = innerHeight;
+  renderer.setSize(w, h, false);
+  camera.aspect = w / h; camera.updateProjectionMatrix();
+}
+addEventListener('resize', resize); resize();
+const readScroll = () => {
+  const max = document.documentElement.scrollHeight - innerHeight;
+  target = max > 0 ? Math.min(1, Math.max(0, scrollY / max)) : 0;
+};
+addEventListener('scroll', readScroll, { passive: true });
+readScroll();
+const jump = new URLSearchParams(location.search).get('p'); // design review helper: freeze at a point in the climb
+if (jump) { removeEventListener('scroll', readScroll); target = Number(jump); }
+addEventListener('pointermove', (e) => { mx = e.clientX / w - 0.5; my = e.clientY / h - 0.5; });
+
+// Camera keyframes: [progress, orbit (rad), elevation (rad), distance, x shift, y shift]
+const CAM = [
+  [0.00, -0.78, -0.10, 92, 0.26, 0.24],
+  [0.22, -0.22, 0.06, 78, 0.24, 0.04],
+  [0.48, 0.28, 0.34, 72, 0.24, 0.0],
+  [0.80, 0.95, 0.78, 64, 0.22, 0.0],
+  [1.00, 1.35, 0.5, 76, 0.22, 0.0],
+];
+function camAt(p) {
+  for (let i = 1; i < CAM.length; i++) {
+    if (p <= CAM[i][0]) {
+      const a = CAM[i - 1], b = CAM[i];
+      const tt = (p - a[0]) / (b[0] - a[0]);
+      const e = tt * tt * (3 - 2 * tt);
+      return a.slice(1).map((v, j) => v + (b[j + 1] - v) * e);
+    }
+  }
+  return CAM[CAM.length - 1].slice(1);
+}
+const clock = new THREE.Clock();
+function frame() {
+  const dt = Math.min(clock.getDelta(), 0.05), t = clock.elapsedTime;
+  prog += (target - prog) * (reduce ? 1 : 1 - Math.pow(0.0015, dt));
+  const s = sample(prog);
+  elAlt.textContent = String(Math.round(s.alt / 10) * 10).padStart(5, '0');
+  elMach.textContent = s.mach.toFixed(2);
+  elMph.textContent = String(Math.round(s.mach * sos(s.alt))).padStart(4, '0');
+  elPhase.textContent = s.phase;
+  tape.style.transform = `translateY(${s.alt / 100}px)`;
+
+  const [top, low] = skyAt(s.alt);
+  sky.style.background = `linear-gradient(180deg, ${top} 0%, ${top} 22%, ${low} 100%)`;
+  const high = THREE.MathUtils.smoothstep(s.alt, 60000, 84000);
+  limb.style.opacity = high.toFixed(3);
+  starMat.opacity = high * 0.9;
+
+  // Aircraft attitude and camera path through the climb
+  const narrow = isNarrow();
+  const pitch = THREE.MathUtils.degToRad(10 * THREE.MathUtils.smoothstep(prog, 0.03, 0.12) * (1 - THREE.MathUtils.smoothstep(prog, 0.2, 0.32)) + 6 * THREE.MathUtils.smoothstep(prog, 0.5, 0.6) * (1 - THREE.MathUtils.smoothstep(prog, 0.7, 0.8)));
+  const bank = reduce ? 0 : Math.sin(t * 0.35) * 0.04 + mx * -0.1;
+  rig.rotation.set(bank, 0, pitch);
+  const k = camAt(prog);
+  const orbit = k[0] + (reduce ? 0 : mx * 0.2);
+  const elev = k[1] + (reduce ? 0 : -my * 0.1);
+  const dist = k[2] * (narrow ? 1.55 : 1);
+  camera.position.set(Math.sin(orbit) * Math.cos(elev) * dist, Math.sin(elev) * dist, Math.cos(orbit) * Math.cos(elev) * dist);
+  camera.lookAt(0, 0, 0);
+  // Push the aircraft clear of the text column on wide screens, above it on phones
+  if (!narrow) camera.setViewOffset(w, h, -w * k[3], -h * k[4], w, h);
+  else camera.setViewOffset(w, h, 0, h * 0.2, w, h);
+
+  // Afterburners: full for takeoff and acceleration, trimmed in cruise
+  const ab = prog < 0.2 ? 1 : prog < 0.4 ? 0.25 : prog < 0.8 ? 0.9 : 0.6;
+  burners.userData.flicker(reduce ? 0 : t, ab);
+
+  // Streaks scroll past faster with Mach
+  const speed = 18 + s.mach * 70;
+  streakMat.opacity = reduce ? 0 : 0.22 * (1 - high * 0.7) * THREE.MathUtils.smoothstep(s.mach, 0.2, 0.8);
+  for (let i = 0; i < N; i++) {
+    const sd = seeds[i];
+    let xx = ((sd[0] - t * speed) % 240 + 240) % 240 - 120;
+    const len = 2 + s.mach * 3.5;
+    sp.set([xx, sd[1], sd[2], xx + len, sd[1], sd[2]], i * 6);
+  }
+  streakGeo.attributes.position.needsUpdate = true;
+
+  renderer.render(scene, camera);
+  requestAnimationFrame(frame);
+}
+frame();
+</script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<title>Article 121 Design Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=B612+Mono:wght@400;700&family=Michroma&display=swap">
+<style>
+/* Review document: one reading column, a sticky contents rail on wide screens.
+   Titanium greys with a slight blue bias; afterburner amber is the only accent. */
+:root {
+  --bg: #f3f4f6;
+  --panel: #ffffff;
+  --fg: #14181e;
+  --muted: #5a6472;
+  --rule: #d8dce2;
+  --accent: #b4580c;
+  --accent-soft: #fbeee2;
+  --code-bg: #eceef2;
+  --f-mark: "Michroma", "Eurostile", "Arial Black", sans-serif;
+  --f-body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "B612 Mono", "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b0e12; --panel: #12171d; --fg: #e7ebf0; --muted: #9aa5b3; --rule: #252d37;
+    --accent: #ffb25e; --accent-soft: #2a1c10; --code-bg: #171d24; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b0e12; --panel: #12171d; --fg: #e7ebf0; --muted: #9aa5b3; --rule: #252d37;
+  --accent: #ffb25e; --accent-soft: #2a1c10; --code-bg: #171d24; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font: 400 1rem/1.62 var(--f-body); font-stretch: 98%; padding-inline: 16px; padding-block: 0 80px; }
+a { color: var(--fg); text-decoration-color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.layout { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; }
+@media (min-width: 1100px) { .layout { grid-template-columns: 200px minmax(0, 1fr); } }
+nav.toc { display: none; }
+@media (min-width: 1100px) {
+  nav.toc { display: block; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 28px); align-self: start; padding-top: 128px; font-size: 0.86rem; }
+  nav.toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  nav.toc a { text-decoration: none; color: var(--muted); }
+  nav.toc a:hover { color: var(--fg); }
+}
+main { min-width: 0; max-width: 820px; }
+
+header.top { padding-block: 48px 8px; }
+.mark { font: 400 0.9rem/1 var(--f-mark); letter-spacing: 0.08em; }
+h1 { font: 700 clamp(2rem, 1.4rem + 2.4vw, 3rem)/1.08 var(--f-body); font-stretch: 112%; letter-spacing: -0.01em; margin: 14px 0 12px; text-wrap: balance; }
+.meta { font: 400 0.78rem/1.6 var(--f-mono); color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.lede { font-size: 1.16rem; line-height: 1.55; max-width: 62ch; margin: 18px 0 0; }
+
+section { padding-top: 56px; }
+h2 { font: 700 1.5rem/1.2 var(--f-body); font-stretch: 110%; margin: 0 0 10px; text-wrap: balance; }
+h2 .n { font: 400 0.78rem/1 var(--f-mono); color: var(--accent); display: block; margin-bottom: 8px; letter-spacing: 0.12em; }
+h3 { font: 700 1.05rem/1.3 var(--f-body); margin: 0 0 4px; }
+p { margin: 0 0 1em; max-width: 66ch; }
+.muted { color: var(--muted); }
+.label { font: 400 0.7rem/1.3 var(--f-mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+
+/* Direction cards */
+.dirs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 18px; }
+@media (max-width: 820px) { .dirs { grid-template-columns: minmax(0, 1fr); } }
+.dir { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; display: grid; grid-template-rows: auto 1fr auto; }
+.dir img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-bottom: 1px solid var(--rule); }
+.dir .body { padding: 14px 16px 6px; font-size: 0.92rem; }
+.dir .body p { margin: 6px 0 10px; }
+.dir .best { font-size: 0.84rem; color: var(--muted); }
+.dir .go { padding: 0 16px 16px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; font: 700 0.8rem/1 var(--f-body); letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; padding: 11px 14px; border-radius: 3px; background: var(--fg); color: var(--bg); }
+.btn:hover { background: var(--accent); color: #1b0f04; }
+.rec { margin-top: 18px; background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 14px 18px; border-radius: 0 4px 4px 0; }
+.rec p { margin: 0; }
+
+ul.rules, ol.steps { margin: 12px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+ul.rules li, ol.steps li { background: var(--panel); border: 1px solid var(--rule); border-radius: 4px; padding: 12px 16px; }
+ul.rules li b { display: block; }
+ol.steps { counter-reset: s; }
+ol.steps li { counter-increment: s; display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: 4px 10px; }
+ol.steps li::before { content: counter(s, decimal-leading-zero); font: 700 0.9rem/1.5 var(--f-mono); color: var(--accent); grid-row: span 2; }
+ol.steps li p { margin: 0; color: var(--muted); font-size: 0.93rem; }
+
+.table-wrap { overflow-x: auto; margin-top: 12px; border: 1px solid var(--rule); border-radius: 4px; background: var(--panel); }
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+th { text-align: left; font: 400 0.68rem/1.3 var(--f-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding: 10px 12px; border-bottom: 1px solid var(--rule); white-space: nowrap; }
+td { padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+td:first-child { font-weight: 600; }
+
+.exp { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+@media (max-width: 680px) { .exp { grid-template-columns: minmax(0, 1fr); } }
+.exp div { background: var(--panel); border: 1px solid var(--rule); border-radius: 4px; padding: 12px 16px; font-size: 0.93rem; min-width: 0; }
+.exp div p { margin: 0; color: var(--muted); }
+
+pre.code { background: var(--code-bg); border: 1px solid var(--rule); border-radius: 4px; padding: 14px 16px; overflow-x: auto; font: 400 0.8rem/1.55 var(--f-mono); margin: 12px 0 0; }
+pre.mermaid { background: var(--panel); border: 1px solid var(--rule); border-radius: 4px; padding: 16px; overflow-x: auto; margin-top: 12px; }
+
+.decide { display: grid; gap: 10px; margin-top: 12px; }
+.decide div { background: var(--panel); border: 1px solid var(--rule); border-radius: 4px; padding: 12px 16px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; align-items: baseline; }
+.decide .pick { font: 700 0.72rem/1.3 var(--f-mono); letter-spacing: 0.06em; color: var(--accent); text-align: right; }
+.decide p { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: 0.92rem; }
+@media (max-width: 560px) { .decide div { grid-template-columns: minmax(0, 1fr); } .decide .pick { text-align: left; } }
+code { font: 400 0.86em/1 var(--f-mono); background: var(--code-bg); padding: 2px 5px; border-radius: 3px; }
+footer { margin-top: 56px; font: 400 0.76rem/1.6 var(--f-mono); color: var(--muted); }
+</style>
+
+<div class="layout">
+  <nav class="toc" aria-label="Contents">
+    <ol>
+      <li><a href="#directions">Design directions</a></li>
+      <li><a href="#rules">Ground rules</a></li>
+      <li><a href="#map">Site map</a></li>
+      <li><a href="#signature">Signature pieces</a></li>
+      <li><a href="#citations">Citation system</a></li>
+      <li><a href="#sources">Sources and rights</a></li>
+      <li><a href="#research">Research pack</a></li>
+      <li><a href="#stack">Stack and hosting</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#decisions">Your decisions</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <header class="top">
+      <div class="mark">ARTICLE 121</div>
+      <h1>Plan and design review</h1>
+      <div class="meta"><span>4 October 2026</span><span>article121.com: unregistered today</span><span>Repo: github.com/ralphte/article121 (public)</span></div>
+      <p class="lede">A free, ad-free archive of the Lockheed A-12, YF-12, M-21 and SR-71. It collects the best public photographs, documents and records, credits every one, and presents them with Astro and Three.js. The name comes from the CIA's designation for the first A-12 airframe, 60-6924.</p>
+    </header>
+
+    <section id="directions">
+      <h2><span class="n">STEP 1 · PICK A LOOK</span>Three design directions</h2>
+      <p>Each prototype is a live page with working 3D and animation, built from the same placeholder aircraft model and the same public-domain photos. Open them on a laptop for the full effect; all three also work on a phone.</p>
+      <div class="dirs">
+        <article class="dir">
+          <img src="img/shot-altitude.jpg" alt="Altitude prototype: the Article 121 wordmark over a twilight sky with a 3D Blackbird and a flight readout" loading="lazy">
+          <div class="body"><div class="label">Direction A</div><h3>Altitude</h3>
+            <p>Scroll is altitude. A 3D Blackbird climbs from a twilight runway to 85,000 ft while a cockpit-style readout tracks altitude, Mach and ground speed. The sky turns black and the stars come out at cruise.</p>
+            <p class="best">Strongest for the home page and story chapters.</p></div>
+          <div class="go"><a class="btn" href="altitude.html">Open A</a></div>
+        </article>
+        <article class="dir">
+          <img src="img/shot-declassified.jpg" alt="Declassified prototype: a manila case file open on a desk with a typed summary and a clipped A-12 photograph" loading="lazy">
+          <div class="body"><div class="label">Direction B</div><h3>Declassified</h3>
+            <p>The archive as a released case file. A 3D folder opens on a desk under a lamp you aim with the pointer. Redactions lift as you read. Photos are clipped prints with full provenance. Dark mode is a microfilm reader.</p>
+            <p class="best">Strongest for documents, the CIA years and the photo archive.</p></div>
+          <div class="go"><a class="btn" href="declassified.html">Open B</a></div>
+        </article>
+        <article class="dir">
+          <img src="img/shot-blueprint.jpg" alt="Blueprint prototype: a line drawing of the SR-71 on a drafting sheet with a title block" loading="lazy">
+          <div class="body"><div class="label">Direction C</div><h3>Blueprint</h3>
+            <p>Engineering drawings. The aircraft as live line work that turns through plan, side and front views with true dimensions and a real on-screen scale, plus a working J58 inlet explainer. Whiteprint by day, blueprint by night.</p>
+            <p class="best">Strongest for the engineering pages and the airframe register.</p></div>
+          <div class="go"><a class="btn" href="blueprint.html">Open C</a></div>
+        </article>
+      </div>
+      <div class="rec"><p><b>Recommendation:</b> use A as the site's shell and home page, C's drawing language for the engineering section and register, and B's case-file treatment for the documents room. Shared type, colour tokens and navigation keep it one site, like rooms in one museum. If you would rather commit to a single look, choose A.</p></div>
+    </section>
+
+    <section id="rules">
+      <h2><span class="n">MISSION</span>Ground rules</h2>
+      <ul class="rules">
+        <li><b>Free forever, no ads, no accounts, no tracking.</b> Hosting is designed to cost about the price of the domain.</li>
+        <li><b>Every claim has a source.</b> The build refuses any event, figure or photo without at least one cited source.</li>
+        <li><b>Credit, never ownership.</b> Photographers, archives and authors are named on the image itself, not buried in a footer.</li>
+        <li><b>Originals stay original.</b> No AI upscaling, colourising or "restoring" of historical photos. If a cleaned copy is ever shown, the original sits beside it and the change is labelled.</li>
+        <li><b>Preserve what is fading.</b> Every source is snapshotted to the Wayback Machine, and the old fan sites are credited and, with permission, mirrored.</li>
+        <li><b>Corrections in the open.</b> Each page links to a GitHub issue form; fixes land as public commits.</li>
+      </ul>
+    </section>
+
+    <section id="map">
+      <h2><span class="n">STRUCTURE</span>Site map</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Section</th><th>What it holds</th><th>Signature interaction</th></tr></thead>
+        <tbody>
+          <tr><td>Home</td><td>Mission, the story in six chapters, entry points</td><td>The Climb</td></tr>
+          <tr><td>Timeline</td><td>Every dated event from the U-2 shootdown to NASA's last flight and the museum era</td><td>Zoomable multi-lane timeline</td></tr>
+          <tr><td>Programs</td><td>Archangel, OXCART, KEDLOCK, TAGBOARD, SENIOR BOWL, SENIOR CROWN, NASA</td><td>Program pages with their own timelines</td></tr>
+          <tr><td>Register</td><td>One page per airframe: serial, article number, history, photos, fate</td><td>Survivors map and globe</td></tr>
+          <tr><td>The Machine</td><td>Airframe, titanium, J58, JP-7, inlet, navigation, suits</td><td>3D exploded view, inlet simulator</td></tr>
+          <tr><td>Missions</td><td>Publicly documented operations and record flights</td><td>Animated route maps</td></tr>
+          <tr><td>People</td><td>Skunk Works engineers, crews, ground crews, with oral histories</td><td>Crew and airframe cross-links</td></tr>
+          <tr><td>Archive</td><td>Photographs and film, full resolution</td><td>Deep zoom with provenance panel</td></tr>
+          <tr><td>Documents</td><td>Declassified CIA, NRO and USAF records, manuals, NASA papers</td><td>Reader with linked passages</td></tr>
+          <tr><td>Sources</td><td>Every source, its rights status and archive copy</td><td>Filter by archive and licence</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section id="signature">
+      <h2><span class="n">THE WOW</span>Signature pieces</h2>
+      <p>These are where the animation budget goes. Everything else stays fast and quiet so the photographs carry the site.</p>
+      <div class="exp">
+        <div><h3>The Climb</h3><p>Scroll-driven sortie from runway to cruise with live instruments, a real flight profile and history chapters at each altitude. Prototype A shows it.</p></div>
+        <div><h3>The Timeline</h3><p>One zoomable track across 1956 to 1999 with a lane per program. Drag to scrub, pinch to zoom, click any mark for the cited entry and photos.</p></div>
+        <div><h3>The Register and map</h3><p>Every airframe built, its story and its fate. A globe flies to each survivor's museum; losses are marked where public records place them.</p></div>
+        <div><h3>The Machine</h3><p>A properly modelled 3D Blackbird with exploded view, the J58 inlet simulator from prototype C, and a skin temperature map at Mach 3.2.</p></div>
+        <div><h3>Record flights</h3><p>The 6 March 1990 Los Angeles to Washington run replayed on a map at true pace, compressed against an airliner flying the same route.</p></div>
+        <div><h3>Deep-zoom archive</h3><p>Full-resolution scans you can zoom into rivet by rivet, each with its creator, date, catalogue number and licence.</p></div>
+      </div>
+    </section>
+
+    <section id="citations">
+      <h2><span class="n">INTEGRITY</span>How every fact gets its source</h2>
+      <p>Sources are records in their own right. Every event, airframe and photo points at one or more of them, and the build fails if any entry has none. Readers see a numbered marker on each claim that opens the source, and a credit line on every image.</p>
+      <pre class="mermaid">
+flowchart LR
+  A[Archive or document] --> B[Source record<br/>title, publisher, URL, rights]
+  B --> C[Content entry<br/>event, airframe, photo]
+  C --> D{Build checks}
+  D -- at least one source --> E[Published page]
+  D -- weekly link check --> F[Broken link report]
+  D -- snapshot --> W[Wayback Machine copy]
+  E --> G[Markers, credit lines,<br/>source drawer]
+  G --> H[Reader reports an error]
+  H -- GitHub issue form --> C
+      </pre>
+      <pre class="code"><code>// src/content.config.ts (Astro 7)
+const events = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './content/events' }),
+  schema: z.object({
+    date: z.string(),                       // 1962-04-25, 1962-04 or 1962
+    precision: z.enum(['day', 'month', 'year', 'approx']),
+    title: z.string(),
+    program: z.enum(['oxcart', 'kedlock', 'tagboard', 'senior-bowl', 'senior-crown', 'nasa', 'context']),
+    airframes: z.array(reference('airframes')).default([]),
+    sources: z.array(reference('sources')).min(1),   // no source, no build
+  }),
+});</code></pre>
+    </section>
+
+    <section id="sources">
+      <h2><span class="n">MATERIAL</span>Sources and rights</h2>
+      <div id="sources-body">
+        <p>Most of the best material is U.S. government work and therefore public domain. Every archive below was checked today, and the ones with public APIs were queried directly.</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Archive</th><th>What it holds</th><th>Rights</th><th>Access</th></tr></thead>
+          <tbody>
+            <tr><td>Smithsonian Open Access</td><td>10 master scans of 61-7972, up to 8,688 by 5,792 px and a 10,950 px panorama</td><td>CC0</td><td>API, free key</td></tr>
+            <tr><td>NASA Image Library</td><td>About 50 Dryden SR-71 images, plus YF-12 and LASRE, full-size masters</td><td>Public domain</td><td>API, no key</td></tr>
+            <tr><td>NASA Dryden gallery (Wayback)</td><td>The retired gallery with original captions, and SR-71 and YF-12 film clips found nowhere else</td><td>Public domain</td><td>Wayback copies</td></tr>
+            <tr><td>CIA reading room and CSI</td><td>OXCART histories (Robarge, McIninch), declassified files, CIA Museum photos</td><td>Public domain</td><td>Direct download</td></tr>
+            <tr><td>National Archives</td><td>DoD stills, USAF and NASA films, CIA and NRO records</td><td>Mostly public domain</td><td>API, free key</td></tr>
+            <tr><td>DVIDS</td><td>Beale AFB and 9th Reconnaissance Wing heritage imagery</td><td>Public domain</td><td>API, free key</td></tr>
+            <tr><td>Wikimedia Commons</td><td>About 690 SR-71, 218 A-12, 97 D-21 and 94 J58 files, with per-airframe categories</td><td>Per file</td><td>API</td></tr>
+            <tr><td>Library of Congress</td><td>303 SR-71 photos, some marked no known restrictions</td><td>Per item</td><td>API, no key</td></tr>
+            <tr><td>San Diego Air &amp; Space Museum</td><td>Flickr Commons sets including donated crew collections</td><td>No known restrictions</td><td>Flickr API</td></tr>
+            <tr><td>Internet Archive</td><td>The declassified SR-71 flight manual, NTIS films, the CIA A-12 file bundle</td><td>Verify per item</td><td>API, no key</td></tr>
+            <tr><td>National Museum of the USAF</td><td>Fact sheets and photos for SR-71A, YF-12A and D-21B</td><td>Public domain</td><td>By hand; blocks scripts</td></tr>
+          </tbody>
+        </table></div>
+        <p style="margin-top:16px">Rights decide what the site may host, so every asset is sorted into one of four tiers and the tier is stored with it:</p>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Tier</th><th>Covers</th><th>What we do</th></tr></thead>
+          <tbody>
+            <tr><td>A · Mirror</td><td>U.S. government works, CC0, no known restrictions</td><td>Host the full-resolution master and credit the creator anyway</td></tr>
+            <tr><td>B · Mirror under licence</td><td>CC BY, CC BY-SA, GPL models</td><td>Host with the full credit and licence link the licence requires</td></tr>
+            <tr><td>C · Link only</td><td>Copyrighted photos, fan-site pages, Lockheed Martin material, books</td><td>Link to it and to a Wayback copy; summarise in our own words</td></tr>
+            <tr><td>D · Permission</td><td>Old fan sites, crew collections, museum archives, private scans</td><td>Ask in writing; host only after a yes, within what was granted</td></tr>
+          </tbody>
+        </table></div>
+        <p style="margin-top:16px" class="muted">Two traps the research turned up: a photo on a government website is not automatically a government photo (check for "courtesy Lockheed"), and declassified does not mean public domain when a contractor wrote the document. The site will not lean on fair use for images.</p>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2><span class="n">ALREADY DONE</span>The research pack</h2>
+      <p>A first research pass built the fact pack the site will start from: 109 dated events and 51 airframe records, each with at least one source, plus notes on every place the sources disagree. It is in the repo under <code>research/</code>. A few things it caught that the site will not repeat:</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Often said</th><th>What the sources show</th></tr></thead>
+        <tbody>
+          <tr><td>The SR-71 holds the absolute altitude record</td><td>Its 85,069 ft is the record for sustained horizontal flight. The absolute jet altitude record is a MiG-25 derivative's 1977 zoom climb.</td></tr>
+          <tr><td>Nobody died flying a Blackbird</td><td>Jim Zwayer, Walt Ray, Jack Weeks and Ray Torick did.</td></tr>
+          <tr><td>President Johnson garbled RS-71 into SR-71</td><td>The official transcript of his 24 July 1964 news conference reads SR-71.</td></tr>
+          <tr><td>4,000 missiles were fired at it</td><td>Air Force sources give both 1,000 and 4,000, and neither publishes a count.</td></tr>
+          <tr><td>The Blackbirds overflew the Soviet Union</td><td>The CIA says the A-12 never did, and satellites had taken over that job by the time the SR-71 was operational.</td></tr>
+          <tr><td>Article 121 first flew on one known date</td><td>Print gives 24, 25 and 26 April 1962 for the unofficial first hop; the official first flight was 30 April.</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section id="stack">
+      <h2><span class="n">ENGINEERING</span>Stack and hosting</h2>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Layer</th><th>Choice</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Site</td><td>Astro 7.3, static output</td><td>Content collections with schemas enforce the citation rule; built-in AVIF and WebP images; zero JavaScript on pages that do not need it</td></tr>
+          <tr><td>3D</td><td>Three.js r186, WebGLRenderer</td><td>Mature, fast on phones; WebGPU is still optional. Models as glTF with meshopt and KTX2 compression</td></tr>
+          <tr><td>Motion</td><td>GSAP 3.15 with ScrollTrigger, Lenis</td><td>Free for every use since 2025; precise scroll choreography. CSS scroll-driven animation where browsers support it</td></tr>
+          <tr><td>Search</td><td>Pagefind 1.5</td><td>Full-text search with no server</td></tr>
+          <tr><td>Deep zoom</td><td>OpenSeadragon 6.1</td><td>Tiles generated with libvips at build time</td></tr>
+          <tr><td>Maps</td><td>MapLibre GL 6.12 with PMTiles</td><td>No API keys and no per-view fees</td></tr>
+          <tr><td>Hosting</td><td>Cloudflare Workers static assets</td><td>Free, unlimited static requests, 20,000 files per deploy</td></tr>
+          <tr><td>Large files</td><td>Cloudflare R2</td><td>Originals, tiles and models. 10 GB free, then $0.015 per GB a month, no egress fees</td></tr>
+          <tr><td>CI</td><td>GitHub Actions</td><td>Build and schema checks on every pull request, weekly link check with lychee, Wayback capture, deploy on merge</td></tr>
+        </tbody>
+      </table></div>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Running cost</th><th>Estimate</th></tr></thead>
+        <tbody>
+          <tr><td>Domain, article121.com</td><td class="num">about $11 a year</td></tr>
+          <tr><td>Hosting and bandwidth</td><td class="num">$0</td></tr>
+          <tr><td>R2 storage at 20 GB of originals</td><td class="num">about $0.15 a month</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+
+    <section id="roadmap">
+      <h2><span class="n">ORDER OF WORK</span>Roadmap</h2>
+      <ol class="steps">
+        <li><b>Approve</b><p>Pick a direction, register article121.com, publish the repo with this plan and the prototypes.</p></li>
+        <li><b>Foundation</b><p>Astro project, design tokens from the chosen direction, content schemas with the citation rule, CI and deploy. A live skeleton on the domain.</p></li>
+        <li><b>Harvest</b><p>Ingest scripts for the public archives, the source register, the full airframe register and the master timeline, all validated.</p></li>
+        <li><b>Signature pieces</b><p>The Climb, the Timeline, the Register with its map, and The Machine with a properly modelled aircraft.</p></li>
+        <li><b>Depth</b><p>Documents reader, missions, people, deep-zoom archive, and permission requests to the legacy fan sites.</p></li>
+        <li><b>Launch</b><p>Accessibility audit, performance budgets, reduced-motion paths, share cards, then announce.</p></li>
+      </ol>
+    </section>
+
+    <section id="decisions">
+      <h2><span class="n">STEP 2 · YOUR CALL</span>Decisions for you</h2>
+      <div class="decide">
+        <div><b>Design direction</b><span class="pick">A + C + B</span><p>A as the shell, C for engineering, B for documents. Or one of the three alone.</p></div>
+        <div><b>Where the repo lives</b><span class="pick">ralphte/article121</span><p>Your personal account to start. A dedicated organisation later makes it easy to add co-maintainers.</p></div>
+        <div><b>Licences for our own work</b><span class="pick">BY-SA text · CC0 data · MIT code</span><p>CC BY-SA 4.0 for writing keeps it open and compatible with Wikipedia. CC0 for the airframe and timeline data invites reuse by researchers and Wikidata. Third-party photos keep their own terms, shown under each one.</p></div>
+        <div><b>Hosting</b><span class="pick">Cloudflare</span><p>Workers static assets plus R2, at close to zero cost. Self-hosting behind your Hetzner proxy is possible but adds upkeep.</p></div>
+        <div><b>The 3D aircraft</b><span class="pick">CC BY mesh now, ask for a scan</span><p>No museum or agency has released an open 3D scan of any Blackbird. Start with a CC BY 4.0 model from Sketchfab, credited, and ask the author of a photogrammetry scan of the Smithsonian aircraft for permission. A custom model built from the three-view drawings is the fallback.</p></div>
+        <div><b>Permission requests to old fan sites</b><span class="pick">Yes, you approve each</span><p>I draft the emails; nothing is mirrored without a written yes.</p></div>
+        <div><b>Analytics</b><span class="pick">None</span><p>No cookies and nothing to disclose. Cloudflare's cookieless analytics can be switched on later.</p></div>
+      </div>
+    </section>
+
+    <footer>Prototypes use sample copy while facts are checked against the research pack. Photos in the prototypes are U.S. government works in the public domain, credited on each image.</footer>
+  </main>
+</div>
