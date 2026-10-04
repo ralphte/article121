@@ -1,0 +1,3359 @@
+{
+ "title": "SR-71A internal structure and systems stations for the exploded model",
+ "compiled": "2026-10-04",
+ "frame": {
+  "x": "x_m = (FS_in - 102) * 0.0254. FS 102 is the radome tip (TM-4749 figs 4 and 5); FS 1355 is the tail cone tip, x = 31.826 m.",
+  "y": "y_m = BL_in * 0.0254, positive to the right wing. NASA YF-12 papers give spanwise positions as WS (wing station) measured from the aircraft centreline, so WS is treated as BL: the YF-12 nacelle centreline WS 170 (TM X-2880 table 3, N points) equals the 14.17 ft nacelle offset of TN D-6987 fig 2.",
+  "z": "z_m = (WL_in - 82.0) * 0.0254 (proposed). Anchor: TM-4749 labels the upper fuselage line WL 131 (figs 4 and 5); in the existing model that line sits at z = 1.245 m for x = 9 to 17 m, so WL0 = 131 - 1.245/0.0254 = 82.0.",
+  "z_checks": [
+   "TM-4749 fig 5 side view (scaled with its own FS 102 and FS 1355 leaders, 1.483 px/in, leaders agree to 5 in): radome tip WL 79.7, chine line at FS 500 WL 87.8, belly WL 64.9. The conversion gives model values WL 82.0 (radome tip, z = 0), WL 85.8 (chine, z = 0.098 m) and WL 65.1 (belly, z = -0.43 m). Agreement within 2.3 in.",
+   "SR-71A-1 fig 4-24 side view (scaled 0.1445 in/px, see calibration notes): radome tip about WL 77.5 and belly WL 63.7 if its top line is WL 131.",
+   "TM-4749 nomenclature: moment reference point FS 900, BL 0, WL 100 (z = 0.457 m), near the body mid-depth of the model (about z = 0.41 m). The symbol drawn in fig 5 sits at about WL 94.",
+   "YF-12 cross-check (TM X-2880 table 3, V points): the fuselage underside at the ventral fin root runs from WL 69.5 at FS 1127.6 to WL 80.6 at FS 1270.8, consistent with a common WL datum for the family."
+  ],
+  "sides": "Where an item has side \"both\", BL and y are given for the right side; mirror with negative y for the left. Items with side \"left\" or \"right\" carry the sign of that side only where a BL is given.",
+  "z_uncertainty": "plus or minus 3 in (0.08 m). Alternative: anchor the radome tip (WL about 80 by TM-4749 fig 5) instead, which lowers every z by about 0.05 m relative to the model outline.",
+  "datum_across_types": "Fuselage stations are common to the A-12, YF-12 and SR-71 in the wing, nacelle and tail region: main gear well FS 914 to 954 in the YF-12 text (TM X-2880 p.2 to 3) and the A-12 manual (cover 70, \"W.S. 914 to W.S. 954\"), and FS 920 to 948 measured on the SR-71A fig 4-37; cowl lip near FS 790 to 800 on the SR-71A (fig 4-37, model trace) and the YF-12 (TM X-2880 fig 5a); the YF-12 movable rudder root leading edge NS 1076.6 matches the SR-71 fin leading edge at FS 1077 in the model trace. The forebodies differ: radome tip FS 90 (YF-12, TM X-2880), FS 102 (SR-71A, TM-4749); the YF-12 canopies span about FS 265 to 404 (TM X-2880 fig 5a concluded, p.43, scaled between its FS 90 and FS 670 labels), about 25 in further aft than the SR-71A canopies (FS 243 to 374, FM fig 4-37). Do not carry forebody stations across types."
+ },
+ "confidence_levels": {
+  "labelled": "Station printed on a labelled drawing or in a table",
+  "text": "Read from text",
+  "measured": "Measured from a drawing by scaling between labelled stations on the same figure",
+  "estimated": "Estimated from a drawing without station labels (method stated)",
+  "derived": "Derived by calculation from published dimensions (method stated)"
+ },
+ "calibrations": {
+  "TMX2880_fig2a": "TM X-2880 fig 2a (YF-12 generalized structure, plan): calibrated to its five labelled section cuts A-A FS 254, B-B 365, C-C 580, D-D 738, E-E 1040 plus the nose (FS 90) and fuselage end (FS 1310) from the text: FS = 0.67092 * px - 543.89 on the 300 dpi page (pages/ntrs-19730021212_TM-X-2880_p37_fig2a_*.png), residuals under 3 in. The printed inch axis of the figure is offset about 5.5 in from the drawn aircraft; the section labels were preferred. WS from the figure axis, WS = (row - 987) / 1.506.",
+  "FM_fig4-24": "SR-71A-1 fig 4-24 (plan and side of the forward fuselage, no stations): radome tip at row 4958 of the 4167 x 5834 page; one scale 0.1445 in/px fitted to the chine planform of the model trace (FS 105 to 344, rms 0.6 in). Checks: side-view body depth 67 in (model 65.7 in); canopy hump FS 245 to 381 (TM-4749 fig 5: FS 244 to 389). FS = 102 + (4958 - row) * 0.1445. Beyond FS 460 the figure could not be checked independently.",
+  "FM_fig4-37": "SR-71A-1 fig 4-37 (whole-aircraft plan, no stations): radome tip x = 567 px, tail cone tip x = 3697 px on the 4167 x 5834 page, 2.498 px/in, FS = 102 + (x - 567) / 2.498. Checks: main gear wells FS 920 to 948 (YF-12 and A-12: 914 to 954), outboard elevon hinge FS 1176 to 1182 (YF-12 EO 1 to 6: 1181 to 1187), cowl lip FS 790 (YF-12 fig 5a about 799).",
+  "FM_fig1-21": "SR-71A-1 fig 1-21 (nacelle section schematic, Mach 0 panel): scaled between the cowl lip (FS 790, fig 4-37) and the engine face (cowl lip plus 5.4 Rc = 159 in, CR-163106 figs 4 and 7, Rc = 29.38 in from TM X-3144 fig 8): 0.3087 in/px on the 2142 x 3000 media file. Checks: spike tip FS 692 (fig 4-37: 689); nacelle exit FS 1227 (fig 4-37: 1234).",
+  "FM_fig1-40": "SR-71A-1 fig 1-40 (axonometric schematic of the tanks): positions of tank end ellipses projected on the fuselage axis of the drawing, scaled between the main gear well (tank 3 aft end FS 914, tank 4 forward end FS 954; the drawing closes the gap) and the tail cone tip (FS 1355); 0.552 in per display unit. Checks: tank 2 to 3 boundary falls at FS 739, matching the YF-12 forward wing box start FS 738 (tank 3 group = forward wing boxes plus a fuselage tank, FM p.1-50); tank 1A forward end falls at FS 404, matching the air refuelling receptacle door FS 403 to 442 measured on fig 4-37 (fig 1-40 puts the receptacle on top of tank 1A). Uncertainty about 25 in.",
+  "FM_fig2-3": "SR-71A-1 fig 2-3 dimensions with p.1-4: turn centre on the main axle line, (28.3 + 47.4)/2 = 37.85 ft from the aircraft centreline; nose gear sqrt(54.5^2 - 37.85^2) = 39.21 ft ahead of the main axle (steering angle 46 deg against the 45 deg limit); probe tip sqrt(81.7^2 - 37.85^2) = 72.40 ft ahead of the main axle. With overall length 107.4 ft (p.1-4) ending at the tail cone FS 1355 (TM-4749), the probe tip is FS 66.2, the main axle FS 935.0 and the nose gear axle FS 464.5.",
+  "TM4749_fig4": "TM-4749 fig 4 plan view, 300 dpi page: least-squares fit to its FS 102, 736.5, 1226.5, 1295 and 1355 leaders, FS = 0.69304 * px - 112.84, residuals up to 9 in.",
+  "TM4749_fig5": "TM-4749 fig 5 side view, 300 dpi page: FS 102 leader at x = 364 px, FS 1355 at x = 2222 px (1.4828 px/in); other leaders (1023, 1033, 1041.9, 1196.5, 1230.9, 1244.6, 1295) fall within 5 in. WL from the labelled WL 131 line at row 725.5 with the same scale."
+ },
+ "sources": {
+  "FM": {
+   "cite": "SR-71A-1 Flight Manual, USAF T.O., Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+   "where": "Internet Archive item 0003756-lockheed-sr-71-03 (part 01 local: model/plans/raw/fm-1SR71A-1_IssueE-Ch2_IA-part01.pdf; OCR text from the item djvu.txt files)",
+   "url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+   "tier": "A (USAF work; anonymous scan, SENIOR CROWN markings, 1996 deletions)"
+  },
+  "TM4749": {
+   "cite": "Moes, Cobleigh, Conners, Cox, Smith and Shirakata, Wind-Tunnel Development of an SR-71 Aerospike Rocket Flight Test Configuration, NASA TM-4749, June 1996",
+   "where": "model/plans/raw/ntrs-19960038443_TM-4749_SR-71-LASRE-wind-tunnel.pdf; printed page = PDF page minus 4",
+   "url": "https://ntrs.nasa.gov/api/citations/19960038443/downloads/19960038443.pdf",
+   "tier": "A"
+  },
+  "TP2000": {
+   "cite": "Corda, Moes, Mizukami et al., The SR-71 Test Bed Aircraft: A Facility for High-Speed Flight Research, NASA/TP-2000-209023, June 2000",
+   "where": "model/plans/raw/ntrs-20000064011_TP-2000-209023_SR-71-test-bed.pdf; printed page = PDF page minus 4",
+   "url": "https://ntrs.nasa.gov/api/citations/20000064011/downloads/20000064011.pdf",
+   "tier": "A"
+  },
+  "TMX2880": {
+   "cite": "Wilson, Cazier and Larson, Results of Ground Vibration Tests on a YF-12 Airplane, NASA TM X-2880, 1973",
+   "where": "model/plans/raw/ntrs-19730021212_TM-X-2880_YF-12-ground-vibration.pdf; printed page = PDF page minus 2",
+   "url": "https://ntrs.nasa.gov/api/citations/19730021212/downloads/19730021212.pdf",
+   "tier": "A"
+  },
+  "TM104317": {
+   "cite": "Jenkins and Quinn, A Historical Perspective of the YF-12A Thermal Loads and Structures Program, NASA TM-104317, May 1996",
+   "where": "model/plans/raw/ntrs-19960027893_TM-104317_YF-12A-thermal-loads-structures.pdf; printed page = PDF page minus 4",
+   "url": "https://ntrs.nasa.gov/api/citations/19960027893/downloads/19960027893.pdf",
+   "tier": "A"
+  },
+  "TND6987": {
+   "cite": "Johnson and Montoya, Local Flow Measurements at the Inlet Spike Tip of a Mach 3 Supersonic Cruise Airplane, NASA TN D-6987, 1973",
+   "where": "model/plans/raw/ntrs-19730015310_TN-D-6987_YF-12A-spike-tip-flow.pdf",
+   "url": "https://ntrs.nasa.gov/api/citations/19730015310/downloads/19730015310.pdf",
+   "tier": "A"
+  },
+  "TMX3144": {
+   "cite": "Dustin, Cole and Neiner, Continuous-Output Terminal-Shock-Position Sensor for Mixed-Compression Inlets Evaluated in Wind-Tunnel Tests of YF-12 Aircraft Inlet, NASA TM X-3144, 1974",
+   "where": "model/plans/raw/ntrs-19750003899_TM-X-3144_*.pdf (page subset)",
+   "url": "https://ntrs.nasa.gov/api/citations/19750003899/downloads/19750003899.pdf",
+   "tier": "A"
+  },
+  "CP2054": {
+   "cite": "YF-12 Experiments Symposium, Volume 1, NASA CP-2054, 1978 (Kock overview: table 1 p.19 to 20, inlet cutaway fig 2 p.24)",
+   "where": "model/plans/raw/ntrs-19780024112_* and ntrs-19780024113_*",
+   "url": "https://ntrs.nasa.gov/api/citations/19780024112/downloads/19780024112.pdf",
+   "tier": "A (inlet cutaway is a NASA reproduction of a Lockheed-style drawing)"
+  },
+  "CR163106": {
+   "cite": "Bangert, Feltz, Godby and Miller (Lockheed-California Co.), Aerodynamic and Acoustic Behavior of a YF-12 Inlet at Static Conditions, NASA CR-163106, 1981",
+   "where": "model/plans/raw/ntrs-19810012550_CR-163106_*.pdf (page subset)",
+   "url": "https://ntrs.nasa.gov/api/citations/19810012550/downloads/19810012550.pdf",
+   "tier": "C (Lockheed contractor report: cite numbers, do not republish figures)"
+  },
+  "A12GH": {
+   "cite": "A-12 Support Manual, Ground Handling, fig 1-1 Access Panels and Openings, sheets 1 to 4 (pp. 1-3 to 1-6), CIA document C06230171, released 2017-07-25",
+   "where": "model/plans/raw/cia_C06230171_A-12-support-manual-ground-handling.pdf; pages model/plans/pages/cia-A-12-ground-handling_fig1-1-sh*.png",
+   "url": "https://archive.org/download/cia-readingroom-document-06230171/06230171.pdf",
+   "tier": "A with a note (Lockheed-prepared, CIA release, no copyright notice)"
+  },
+  "A12FM": {
+   "cite": "A-12 Utility Flight Manual, Lockheed for the CIA, changed 15 Mar 1968, CIA document C01316457",
+   "where": "model/plans/raw/cia_C01316457_A-12-flight-manual_1968.pdf",
+   "url": "https://www.cia.gov/readingroom/document/0001316457",
+   "tier": "A with a note"
+  },
+  "NASMJ58": {
+   "cite": "Smithsonian NASM object A19920006000, Pratt and Whitney J58 (JT11D-20) Turbojet Engine (as quoted in research/systems/systems.md section 2.1)",
+   "where": "quoted in research/systems/systems.md section 2.1",
+   "url": "https://airandspace.si.edu/collection-objects/pratt-whitney-j58-jt11d-20-turbojet-engine/nasm_A19920006000",
+   "tier": "C for images (\"usage conditions apply\"); the number is a fact, cite only"
+  },
+  "MODEL": {
+   "cite": "Existing Article 121 model trace, model/trace/dfrc/components.json (NASA Dryden EG-0075-02 vector three-view traced and calibrated to TM-4749 FS 102 and FS 1355)",
+   "where": "model/trace/dfrc/components.json and report.json",
+   "url": null,
+   "tier": "derived from tier A drawings; internal data, not a primary source"
+  }
+ },
+ "items": [
+  {
+   "id": "radome_tip",
+   "group": "datum_and_outline",
+   "name": "Radome tip (nose datum)",
+   "fs": 102,
+   "wl": [
+    79.7,
+    82.0
+   ],
+   "confidence": "labelled",
+   "sources": [
+    {
+     "source": "TM4749",
+     "where": "figs 4 and 5 (side and plan, label F.S.102)",
+     "page": "pp. 6 to 7"
+    }
+   ],
+   "notes": "WL range: 79.7 measured on TM-4749 fig 5; 82.0 by definition of the proposed z datum (model radome tip z = 0).",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": 0.0,
+   "z_m": [
+    -0.058,
+    0.0
+   ]
+  },
+  {
+   "id": "pitot_mast_tip",
+   "group": "datum_and_outline",
+   "name": "Pitot mast tip",
+   "fs": 66.2,
+   "confidence": "derived",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "p.1-4 (length overall 107.4 ft) and fig 2-3 (81.7 ft centre of turn to probe tip)",
+     "page": "pp. 1-4, 2-30"
+    },
+    {
+     "source": "TM4749",
+     "where": "FS 1355 tail cone",
+     "page": "p. 6"
+    }
+   ],
+   "method": "FS 1355 minus 107.4 ft (1288.8 in) = FS 66.2; fig 2-3 geometry gives the same main axle to probe distance (72.40 ft) when the main axle is FS 935.",
+   "notes": "Mast about 36 in ahead of the radome tip.",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": -0.909
+  },
+  {
+   "id": "tail_cone_tip",
+   "group": "datum_and_outline",
+   "name": "Tail cone tip",
+   "fs": 1355,
+   "confidence": "labelled",
+   "sources": [
+    {
+     "source": "TM4749",
+     "where": "figs 4 and 5, label F.S.1355",
+     "page": "pp. 6 to 7"
+    }
+   ],
+   "alternatives": [
+    {
+     "value": "YF-12 fuselage ends FS 1310",
+     "source": "TMX2880 p.2 to 3 text",
+     "note": "the SR-71A tail cone is longer"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": 31.826
+  },
+  {
+   "id": "upper_fuselage_wl131",
+   "group": "datum_and_outline",
+   "name": "Upper fuselage line WL 131 (aft of the canopy)",
+   "fs": [
+    440,
+    700
+   ],
+   "wl": 131,
+   "confidence": "labelled",
+   "sources": [
+    {
+     "source": "TM4749",
+     "where": "figs 4 and 5, label W.L.131",
+     "page": "pp. 6 to 7"
+    }
+   ],
+   "notes": "The WL 131 leader points at the fuselage top behind the canopy (about FS 440 in fig 5); the line runs level to about FS 700 in both figures.",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    8.585,
+    15.189
+   ],
+   "z_m": 1.245
+  },
+  {
+   "id": "moment_reference",
+   "group": "datum_and_outline",
+   "name": "Aerodynamic moment reference point",
+   "fs": 900,
+   "bl": 0,
+   "wl": 100,
+   "confidence": "labelled",
+   "sources": [
+    {
+     "source": "TM4749",
+     "where": "nomenclature (Xref F.S. 900, Yref B.L. 0, Zref W.L. 100) and fig 4 label F.S.900",
+     "page": "pp. 2, 6"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": 20.269,
+   "y_m": 0.0,
+   "z_m": 0.457
+  },
+  {
+   "id": "wing_tip",
+   "group": "datum_and_outline",
+   "name": "Wing tip (outline)",
+   "fs": [
+    1188,
+    1200
+   ],
+   "bl": [
+    333.6,
+    340.2
+   ],
+   "side": "both",
+   "confidence": "measured",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "p.1-4 span 55.6 ft (BL 333.6)",
+     "page": "p. 1-4"
+    },
+    {
+     "source": "TM4749",
+     "where": "fig 5 plan, label B.L.340.2 (reference tip)",
+     "page": "p. 7"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-37 plan, tip at FS 1188 (scaled)",
+     "page": "p. 4-125"
+    },
+    {
+     "source": "MODEL",
+     "where": "planform_half maximum at FS 1200, BL 333.8"
+    }
+   ],
+   "alternatives": [
+    {
+     "value": "FS 1193, BL 332",
+     "source": "TM4749 fig 4 plan, measured"
+    },
+    {
+     "value": "YF-12 tip about FS 1191",
+     "source": "TMX2880 fig 5a, measured"
+    }
+   ],
+   "notes": "BL 333.6 is half the published 55.6 ft span (the real tip); BL 340.2 is the TM-4749 reference tip.",
+   "applies_to": "SR-71A",
+   "x_m": [
+    27.584,
+    27.889
+   ],
+   "y_m": [
+    8.473,
+    8.641
+   ]
+  },
+  {
+   "id": "chine_wing_junction",
+   "group": "datum_and_outline",
+   "name": "Chine to inboard wing leading edge junction",
+   "fs": [
+    708,
+    730
+   ],
+   "side": "both",
+   "confidence": "measured",
+   "sources": [
+    {
+     "source": "TM4749",
+     "where": "fig 4 plan, start of the inboard leading edge at FS 708 (scaled)",
+     "page": "p. 6"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-37 plan, end of the chine bay doors and kink at FS 712 (scaled)",
+     "page": "p. 4-125"
+    },
+    {
+     "source": "MODEL",
+     "where": "planform jump at FS 729.7"
+    }
+   ],
+   "notes": "The model trace places the junction about 20 in aft of both flight manual and TM-4749 plans.",
+   "applies_to": "SR-71A",
+   "x_m": [
+    15.392,
+    15.951
+   ]
+  },
+  {
+   "id": "nose_section_joint",
+   "group": "fuselage_frames",
+   "name": "Nose section joint and nose bulkhead (interchangeable nose)",
+   "fs": [
+    232.5,
+    237.3
+   ],
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 4-24 plan (row 4055, FS 232.5) and side (row 4030, FS 236.1)",
+     "page": "p. 4-80"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-37 plan, line at x = 905 px (FS 237.3)",
+     "page": "p. 4-125"
+    },
+    {
+     "source": "FM",
+     "where": "text: PTA \"located in the left forward chine bay, aft of the nose bulkhead\"",
+     "page": "p. 1-134"
+    },
+    {
+     "source": "FM",
+     "where": "OBC \"mounted in an interchangeable OBC nose\"",
+     "page": "p. 4-93"
+    }
+   ],
+   "method": "Calibration notes FM_fig4-24 and FM_fig4-37.",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    3.315,
+    3.437
+   ]
+  },
+  {
+   "id": "forward_cockpit_front",
+   "group": "fuselage_frames",
+   "name": "Windshield base and forward cockpit front (sealed crew compartment forward end)",
+   "fs": [
+    242,
+    246
+   ],
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 4-24 side, windshield base at row 3990 (FS 242)",
+     "page": "p. 4-80"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-37, forward canopy starts FS 243",
+     "page": "p. 4-125"
+    },
+    {
+     "source": "TM4749",
+     "where": "fig 5 side, canopy hump starts FS 244 (scaled)",
+     "page": "p. 7"
+    },
+    {
+     "source": "FM",
+     "where": "text: the crew operate \"within a sealed and specially insulated compartment which contains the two cockpits\"",
+     "page": "p. 1-187"
+    }
+   ],
+   "notes": "No source gives the pressure bulkhead stations; the sealed compartment lies between the nose bulkhead (FS about 235) and the bulkhead aft of the rear cockpit (FS about 380).",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    3.556,
+    3.658
+   ]
+  },
+  {
+   "id": "cockpit_divider",
+   "group": "fuselage_frames",
+   "name": "Bulkhead between cockpits (RSO instrument panel)",
+   "fs": [
+    310,
+    321
+   ],
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 4-24 side, dark band of the RSO panel (radar display, view sight) rows 3440 to 3520",
+     "page": "p. 4-80"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-37, gap between canopies FS 313 to 319",
+     "page": "p. 4-125"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    5.283,
+    5.563
+   ]
+  },
+  {
+   "id": "aft_crew_bulkhead",
+   "group": "fuselage_frames",
+   "name": "Aft bulkhead of the crew compartment (behind the RSO)",
+   "fs": [
+    378,
+    387
+   ],
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 4-24 side, curved frame line at rows 3030 to 3050 (FS 380 to 382) ahead of the ANS block (FS 387)",
+     "page": "p. 4-80"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-37, aft canopy ends FS 373",
+     "page": "p. 4-125"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    7.01,
+    7.239
+   ]
+  },
+  {
+   "id": "yf12_forebody_frames",
+   "group": "fuselage_frames",
+   "name": "YF-12 generalized forebody frames (plan-view lines)",
+   "applies_to": "YF-12 (forebody differs from SR-71A; reference only)",
+   "fs": [
+    253.5,
+    382.3,
+    440.0,
+    485.0,
+    555.1,
+    673.5,
+    710.4,
+    716.4,
+    738.2
+   ],
+   "confidence": "measured",
+   "sources": [
+    {
+     "source": "TMX2880",
+     "where": "fig 2a, airplane structure (generalized)",
+     "page": "p. 37"
+    },
+    {
+     "source": "TMX2880",
+     "where": "text: forebody FS 90 to 715 \"basically a ring-stiffened cylinder with longerons at the top, bottom, and sides\"; \"figure 2(a) is a general representation of the structure only\"",
+     "page": "p. 2"
+    }
+   ],
+   "method": "Calibration note TMX2880_fig2a; lines found by column projection of the drawing.",
+   "notes": "FS 253.5 coincides with section A-A (FS 254) and the chine start of the YF-12; the double line at 710 and 716 is the forebody to mid-fuselage joint given in the text as FS 715.",
+   "side": "centreline",
+   "x_m": [
+    3.848,
+    7.12,
+    8.585,
+    9.728,
+    11.509,
+    14.516,
+    15.453,
+    15.606,
+    16.159
+   ]
+  },
+  {
+   "id": "yf12_sections",
+   "group": "fuselage_frames",
+   "name": "YF-12 structural cross sections A-A to E-E",
+   "applies_to": "YF-12",
+   "fs": [
+    254,
+    365,
+    580,
+    738,
+    1040
+   ],
+   "confidence": "labelled",
+   "sources": [
+    {
+     "source": "TMX2880",
+     "where": "fig 2a section labels: A-A 645 cm (254 in), B-B 927 (365), C-C 1470 (580), D-D 1870 (738), E-E 2640 (1040)",
+     "page": "p. 37"
+    }
+   ],
+   "notes": "Schematic sections: round core with chine flare (A, B), flat chine bay section (C), round core with wing attachment stubs (D, E).",
+   "side": "centreline",
+   "x_m": [
+    3.861,
+    6.68,
+    12.141,
+    16.154,
+    23.825
+   ]
+  },
+  {
+   "id": "mid_aft_fuselage_tanks",
+   "group": "fuselage_frames",
+   "name": "Mid and aft fuselage as cylindrical fuel tanks",
+   "applies_to": "YF-12 (structure shared with SR-71A)",
+   "fs": [
+    715,
+    1310
+   ],
+   "confidence": "text",
+   "sources": [
+    {
+     "source": "TMX2880",
+     "where": "text: \"The middle and aft sections of the fuselage, from F.S. 715 in. to 1310 in. ... are cylindrical fuel tanks interrupted by the main wheel well from F.S. 914 in. to 954 in.\"",
+     "page": "p. 2 to 3"
+    }
+   ],
+   "notes": "YF-12 fuselage diameter 64.0 in (1.626 m), CP2054 table 1 p.20.",
+   "side": "centreline",
+   "x_m": [
+    15.57,
+    30.683
+   ]
+  },
+  {
+   "id": "wing_carry_through_frames",
+   "group": "fuselage_frames",
+   "name": "Wing beams carried through the fuselage (aft box) as frames",
+   "applies_to": "YF-12 (applies to SR-71A wing)",
+   "fs": [
+    954,
+    970,
+    986,
+    1002,
+    1018,
+    1034,
+    1050,
+    1066,
+    1082,
+    1098,
+    1114,
+    1130,
+    1146,
+    1162,
+    1178,
+    1194,
+    1210,
+    1226
+   ],
+   "confidence": "measured",
+   "sources": [
+    {
+     "source": "TMX2880",
+     "where": "fig 2a: lines across the fuselage centreline at 16 in spacing from FS 1004 to 1229",
+     "page": "p. 37"
+    },
+    {
+     "source": "TMX2880",
+     "where": "text: wing tanks \"are continuous across the fuselage, and they occupy the entire fuselage in the wing area\"",
+     "page": "p. 3"
+    }
+   ],
+   "notes": "Measured centreline lines: 1003.9, 1019.4, 1035.8, 1051.9, 1067.7, 1083.8, 1100.2, 1117.0, 1132.7, 1148.5, 1164.6, 1180.7, 1197.1, 1213.2, 1226 to 1229. Values listed are the 16 in pattern through the labelled beams of TM-104317 fig 26.",
+   "side": "centreline",
+   "x_m": [
+    21.641,
+    22.047,
+    22.454,
+    22.86,
+    23.266,
+    23.673,
+    24.079,
+    24.486,
+    24.892,
+    25.298,
+    25.705,
+    26.111,
+    26.518,
+    26.924,
+    27.33,
+    27.737,
+    28.143,
+    28.55
+   ]
+  },
+  {
+   "id": "fs1130_section",
+   "group": "fuselage_frames",
+   "name": "Structural section at FS 1130 (fuselage frame, wing beams, nacelle frame, rudder support)",
+   "applies_to": "YF-12",
+   "fs": 1130,
+   "confidence": "labelled",
+   "sources": [
+    {
+     "source": "TM104317",
+     "where": "fig 31, \"View B looking aft at F.S. 1130\", labels fuselage frame, beam cap, beam stiffeners, wing ribs W.S. 72, 100, 127, 213, 241, 267, nacelle frame, rudder support and hinge",
+     "page": "p. 23"
+    }
+   ],
+   "side": "centreline",
+   "x_m": 26.111
+  },
+  {
+   "id": "side_longerons",
+   "group": "longerons_chine",
+   "name": "Side longerons (sides of the 64 in core cylinder)",
+   "applies_to": "YF-12",
+   "fs": [
+    381,
+    791
+   ],
+   "bl": [
+    -31.5,
+    31.5
+   ],
+   "side": "both",
+   "confidence": "measured",
+   "sources": [
+    {
+     "source": "TMX2880",
+     "where": "fig 2a plan lines at WS 31.2 and 31.9",
+     "page": "p. 37"
+    },
+    {
+     "source": "TMX2880",
+     "where": "text: longerons at the top, bottom and sides of the forebody; bending carried \"by the longerons at the top and bottom center lines\" and by the wing-attaching structure at the sides in the mid and aft fuselage",
+     "page": "p. 2 to 3"
+    }
+   ],
+   "x_m": [
+    7.087,
+    17.501
+   ],
+   "y_m": [
+    -0.8,
+    0.8
+   ]
+  },
+  {
+   "id": "top_bottom_longerons",
+   "group": "longerons_chine",
+   "name": "Top and bottom centreline longerons",
+   "applies_to": "YF-12 (applies to SR-71A)",
+   "fs": [
+    90,
+    1310
+   ],
+   "bl": 0,
+   "confidence": "text",
+   "sources": [
+    {
+     "source": "TMX2880",
+     "where": "text",
+     "page": "p. 2 to 3"
+    }
+   ],
+   "notes": "No WL given; place on the upper and lower moldline of the core cylinder.",
+   "side": "centreline",
+   "x_m": [
+    -0.305,
+    30.683
+   ],
+   "y_m": 0.0
+  },
+  {
+   "id": "inner_forebody_lines",
+   "group": "longerons_chine",
+   "name": "Inner forebody lines at WS 17 to 19 (purpose not stated)",
+   "applies_to": "YF-12",
+   "fs": [
+    252,
+    499
+   ],
+   "bl": [
+    -17.3,
+    18.6
+   ],
+   "side": "both",
+   "confidence": "measured",
+   "sources": [
+    {
+     "source": "TMX2880",
+     "where": "fig 2a",
+     "page": "p. 37"
+    }
+   ],
+   "notes": "Could be compartment walls; not identified by the text.",
+   "x_m": [
+    3.81,
+    10.084
+   ],
+   "y_m": [
+    -0.439,
+    0.472
+   ]
+  },
+  {
+   "id": "chine_edge",
+   "group": "longerons_chine",
+   "name": "Chine edge line",
+   "fs": [
+    102,
+    712
+   ],
+   "wl": [
+    79.7,
+    87.8
+   ],
+   "side": "both",
+   "confidence": "measured",
+   "sources": [
+    {
+     "source": "TM4749",
+     "where": "fig 5 side, chine line WL 87.8 at FS 500 (scaled)",
+     "page": "p. 7"
+    },
+    {
+     "source": "FM",
+     "where": "p.1-4: chine \"extending from the nose to the leading edge of the wing\"",
+     "page": "p. 1-4"
+    },
+    {
+     "source": "MODEL",
+     "where": "chine_z 0.03 to 0.10 m forward of FS 750"
+    }
+   ],
+   "notes": "Chine and fillet structure: \"Fairings between the fuselage shell and the wing enclose areas used for electrical and plumbing lines. These fairings carry local airloads only.\" (TM X-2880 p.3, YF-12). The SR-71A forebody chines hold the mission bays (FM fig 1-1, fig 4-24).",
+   "applies_to": "SR-71A",
+   "x_m": [
+    0.0,
+    15.494
+   ],
+   "z_m": [
+    -0.058,
+    0.147
+   ]
+  },
+  {
+   "id": "wing_box_forward",
+   "group": "wing",
+   "name": "Inboard forward wing box (tank 3 wing section)",
+   "applies_to": "YF-12 (applies to SR-71A)",
+   "fs": [
+    738,
+    914
+   ],
+   "bl": [
+    35,
+    127
+   ],
+   "side": "both",
+   "confidence": "text",
+   "sources": [
+    {
+     "source": "TMX2880",
+     "where": "text: forward box inboard of the nacelle \"from W.S. 35 in. to 127 in. and from F.S. 738 in. to 914 in.\"",
+     "page": "p. 3"
+    }
+   ],
+   "x_m": [
+    16.154,
+    20.625
+   ],
+   "y_m": [
+    0.889,
+    3.226
+   ]
+  },
+  {
+   "id": "wing_box_aft",
+   "group": "wing",
+   "name": "Inboard aft wing box (tanks 6A and 6B wing sections)",
+   "applies_to": "YF-12 (applies to SR-71A)",
+   "fs": [
+    954,
+    1226
+   ],
+   "bl": [
+    35,
+    127
+   ],
+   "side": "both",
+   "confidence": "text",
+   "sources": [
+    {
+     "source": "TMX2880",
+     "where": "text: aft box inboard of the nacelle \"from W.S. 35 in. to 127 in. and from F.S. 954 in. to 1226 in.\"",
+     "page": "p. 3"
+    }
+   ],
+   "x_m": [
+    21.641,
+    28.55
+   ],
+   "y_m": [
+    0.889,
+    3.226
+   ]
+  },
+  {
+   "id": "wing_box_outboard",
+   "group": "wing",
+   "name": "Outboard wing box (outer wing panel)",
+   "applies_to": "YF-12 (applies to SR-71A)",
+   "bl": [
+    213,
+    293.5
+   ],
+   "side": "both",
+   "confidence": "text",
+   "sources": [
+    {
+     "source": "TMX2880",
+     "where": "text: \"the box section outboard of the nacelle, from W.S. 213 in. to 293.5 in.\"",
+     "page": "p. 3"
+    }
+   ],
+   "fs": [
+    1050,
+    1190
+   ],
+   "notes": "FS range of the outboard beams measured on fig 2a (lines at FS 1067 to 1189 in the WS 215 to 235 band; WS 280 to 300 band only 1086 and 1184). TM-104317 fig 26 puts the outboard gauge rows at FS 1050 to 1178.",
+   "x_m": [
+    24.079,
+    27.635
+   ],
+   "y_m": [
+    5.41,
+    7.455
+   ]
+  },
+  {
+   "id": "wing_beams_labelled",
+   "group": "wing",
+   "name": "Spanwise wing beams (labelled)",
+   "applies_to": "YF-12 (applies to SR-71A)",
+   "fs": [
+    818,
+    850,
+    882,
+    914,
+    954,
+    986,
+    1018,
+    1050,
+    1082,
+    1114,
+    1146,
+    1178,
+    1210
+   ],
+   "side": "both",
+   "confidence": "labelled",
+   "sources": [
+    {
+     "source": "TM104317",
+     "where": "fig 26, strain gauge bridges on YF-12A wing, F.S. labels 818 to 1210",
+     "page": "p. 19"
+    },
+    {
+     "source": "TMX2880",
+     "where": "text: \"The primary wing structure is a multibeam box with beams normal to the airplane centerline.\"",
+     "page": "p. 3"
+    }
+   ],
+   "notes": "Beams run straight across the span at constant FS. Main gear is supported by the aft beam of the forward box (FS 914) and the forward beam of the aft box (FS 954).",
+   "x_m": [
+    18.186,
+    18.999,
+    19.812,
+    20.625,
+    21.641,
+    22.454,
+    23.266,
+    24.079,
+    24.892,
+    25.705,
+    26.518,
+    27.33,
+    28.143
+   ]
+  },
+  {
+   "id": "wing_beams_all",
+   "group": "wing",
+   "name": "All inboard wing beams (16 in pitch)",
+   "applies_to": "YF-12 (applies to SR-71A)",
+   "fs": [
+    754,
+    770,
+    786,
+    802,
+    818,
+    834,
+    850,
+    866,
+    882,
+    898,
+    914,
+    954,
+    970,
+    986,
+    1002,
+    1018,
+    1034,
+    1050,
+    1066,
+    1082,
+    1098,
+    1114,
+    1130,
+    1146,
+    1162,
+    1178,
+    1194,
+    1210,
+    1226
+   ],
+   "side": "both",
+   "confidence": "measured",
+   "sources": [
+    {
+     "source": "TMX2880",
+     "where": "fig 2a: beam lines measured at FS 769.4 (WS -40 to -60 band), 785.5, 802.0, 818.4, 834.8, 850.6, 866.7, 883.2, 900.3, 915.7, 954.9, 970.4, 987.1, 1002.9, 1019.0, 1035.8, 1051.6, 1067.3, 1083.8, 1099.9, 1116.3, 1131.7, 1148.5, 1163.9, 1180.0, 1196.1, 1213.2",
+     "page": "p. 37"
+    },
+    {
+     "source": "TM104317",
+     "where": "fig 26, unlabelled lines midway between the labelled beams",
+     "page": "p. 19"
+    }
+   ],
+   "method": "Calibration note TMX2880_fig2a; values rounded to the 16 in pattern defined by the labelled beams. FS 754 and 738 (box front) are only near the root because the inboard leading edge is swept.",
+   "x_m": [
+    16.561,
+    16.967,
+    17.374,
+    17.78,
+    18.186,
+    18.593,
+    18.999,
+    19.406,
+    19.812,
+    20.218,
+    20.625,
+    21.641,
+    22.047,
+    22.454,
+    22.86,
+    23.266,
+    23.673,
+    24.079,
+    24.486,
+    24.892,
+    25.298,
+    25.705,
+    26.111,
+    26.518,
+    26.924,
+    27.33,
+    27.737,
+    28.143,
+    28.55
+   ]
+  },
+  {
+   "id": "wing_ribs",
+   "group": "wing",
+   "name": "Wing ribs (chordwise, constant WS)",
+   "applies_to": "YF-12 (applies to SR-71A)",
+   "bl": [
+    35,
+    72,
+    100,
+    127,
+    213,
+    241,
+    267,
+    293.5
+   ],
+   "side": "both",
+   "confidence": "labelled",
+   "sources": [
+    {
+     "source": "TM104317",
+     "where": "fig 31, \"Wing rib locations W.S.72 W.S.100 W.S.127\" and \"W.S.213 W.S.241 W.S.267\"",
+     "page": "p. 23"
+    },
+    {
+     "source": "TM104317",
+     "where": "fig 2, label W.S. 72",
+     "page": "p. 4"
+    },
+    {
+     "source": "TMX2880",
+     "where": "text, box limits WS 35, 127, 213, 293.5",
+     "page": "p. 3"
+    },
+    {
+     "source": "TMX2880",
+     "where": "fig 2a, rib lines measured at WS 69.4 to 70.7, 96.9 to 98.6, 124.2 to 128.8, 212.5, 238.7, 267.6",
+     "page": "p. 37"
+    }
+   ],
+   "y_m": [
+    0.889,
+    1.829,
+    2.54,
+    3.226,
+    5.41,
+    6.121,
+    6.782,
+    7.455
+   ]
+  },
+  {
+   "id": "nacelle_wing_station",
+   "group": "wing",
+   "name": "Nacelle (structural cylinder between inner and outer wing)",
+   "applies_to": "YF-12 (applies to SR-71A)",
+   "bl": [
+    134,
+    206
+   ],
+   "side": "both",
+   "confidence": "text",
+   "sources": [
+    {
+     "source": "TMX2880",
+     "where": "text: \"The engine nacelle between W.S. 134 in. and 206 in. ... is basically a structural cylinder\"; nacelle frames carry the outer wing bending into the inner wing; the outboard wing \"applies most of its load at the aft part of the nacelle\"",
+     "page": "p. 3"
+    }
+   ],
+   "notes": "Nacelle centreline BL 170 (YF-12 N test points, TM X-2880 table 3; 14.17 ft in TN D-6987 fig 2). The model trace puts the nacelle centre at BL 166.3.",
+   "y_m": [
+    3.404,
+    5.232
+   ]
+  },
+  {
+   "id": "nacelle_pin_joints",
+   "group": "wing",
+   "name": "Nacelle and outer wing pin joints (outer panel attachment)",
+   "applies_to": "A-12 (shared structure, inference)",
+   "fs": [
+    [
+     873,
+     914
+    ],
+    [
+     1130,
+     1200
+    ]
+   ],
+   "bl": [
+    131,
+    150
+   ],
+   "side": "both",
+   "confidence": "text",
+   "sources": [
+    {
+     "source": "A12GH",
+     "where": "sheet 3 cover 21 \"N.S. 873 to N.S. 914, W.S. 131 to W.S. 150, plumbing access and nac pin joints\"; cover 3 \"B.S. 1130 to B.S. 1200, nac pin joint\"",
+     "page": "p. 1-5"
+    }
+   ],
+   "notes": "Assumes nacelle (N.S.) and body (B.S.) stations equal FS; see datum_across_types.",
+   "x_m": [
+    [
+     19.583,
+     20.625
+    ],
+    [
+     26.111,
+     27.889
+    ]
+   ],
+   "y_m": [
+    3.327,
+    3.81
+   ]
+  },
+  {
+   "id": "corrugated_skin",
+   "group": "wing",
+   "name": "Corrugated and beaded wing skins (thermal expansion relief)",
+   "applies_to": "YF-12 and SR-71A",
+   "bl": [
+    35,
+    293.5
+   ],
+   "side": "both",
+   "confidence": "text",
+   "sources": [
+    {
+     "source": "TM104317",
+     "where": "fig 5 \"Thermal expansion relief on the YF-12A wing structure\" and text: stand-off clips and \"significant beading\" in the skin panels",
+     "page": "pp. 5 to 6"
+    }
+   ],
+   "notes": "No source gives stations for the corrugated panels. The corrugations run chordwise (fore and aft), across the spanwise beams, over the inboard and outboard boxes (Johnson 1981 typed p.10 and Merlin AIAA 2009-1522 p.19 as quoted in research/systems/systems.md 3.1; both tier C, facts only). Model them on the box skins between WS 35 to 127 and WS 213 to 293.5: estimate.",
+   "y_m": [
+    0.889,
+    7.455
+   ]
+  },
+  {
+   "id": "inboard_elevon",
+   "group": "wing",
+   "name": "Inboard elevon",
+   "applies_to": "YF-12 and A-12 (applies to SR-71A)",
+   "fs": [
+    1226,
+    1300
+   ],
+   "bl": [
+    40,
+    127
+   ],
+   "side": "both",
+   "confidence": "labelled",
+   "sources": [
+    {
+     "source": "TMX2880",
+     "where": "table 3: EI 1 to 3 at FS 1245.5, 1236.7, 1230.1 (WS 40.2, 77.2, 105.2); EI 7 to 9 at FS 1300.0, 1290.5, 1284.9",
+     "page": "p. 10"
+    },
+    {
+     "source": "A12GH",
+     "where": "sheet 3 cover 2A \"W.S. 40 to W.S. 127, center of panels 15 in fwd of elev hinge line\"",
+     "page": "p. 1-5"
+    },
+    {
+     "source": "CP2054",
+     "where": "Kock table 1: inboard elevon 3.63 sq m each",
+     "page": "p. 19"
+    }
+   ],
+   "notes": "Aft box ends FS 1226 (TM X-2880 p.3); the elevon hinge line lies just aft and is swept forward outboard.",
+   "x_m": [
+    28.55,
+    30.429
+   ],
+   "y_m": [
+    1.016,
+    3.226
+   ]
+  },
+  {
+   "id": "outboard_elevon",
+   "group": "wing",
+   "name": "Outboard elevon",
+   "applies_to": "YF-12 and A-12 (applies to SR-71A)",
+   "fs": [
+    1176,
+    1257
+   ],
+   "bl": [
+    210,
+    327
+   ],
+   "side": "both",
+   "confidence": "labelled",
+   "sources": [
+    {
+     "source": "TMX2880",
+     "where": "table 3: EO 1 to 6 at FS 1187.1 to 1181.0 (WS 213.5 to 326.8, front row near the hinge); EO 12 to 15 at FS 1257.3 to 1231.4 (WS 219.5 to 316.9, rear row)",
+     "page": "p. 10"
+    },
+    {
+     "source": "A12GH",
+     "where": "sheet 1 cover 64 \"W.S. 210 to W.S. 297, fwd of elev hinge, to remove outbd elevon\"",
+     "page": "p. 1-3"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-37: outboard elevon hinge FS 1176 to 1182 and trailing edge corner FS 1256 (scaled)",
+     "page": "p. 4-125"
+    }
+   ],
+   "x_m": [
+    27.28,
+    29.337
+   ],
+   "y_m": [
+    5.334,
+    8.306
+   ]
+  },
+  {
+   "id": "spike_tip_forward",
+   "group": "nacelle_inlet",
+   "name": "Spike tip, spike forward (ground and below Mach 1.6)",
+   "fs": [
+    689,
+    702
+   ],
+   "bl": [
+    160,
+    165
+   ],
+   "side": "both",
+   "confidence": "measured",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 4-37 plan: spike tip x = 2033 px, FS 689",
+     "page": "p. 4-125"
+    },
+    {
+     "source": "FM",
+     "where": "fig 1-21 Mach 0 panel: FS 692 (calibration FM_fig1-21)",
+     "page": "p. 1-33"
+    },
+    {
+     "source": "CR163106",
+     "where": "fig 4: forward spike tip about 3.26 Rc ahead of the cowl lip (96 in)",
+     "page": "p. 12"
+    },
+    {
+     "source": "TND6987",
+     "where": "fig 2: 17.78 m from the boom tip to the spike tip with 33.26 m overall puts the YF-12 tip near FS 701",
+     "page": "p. 17"
+    }
+   ],
+   "alternatives": [
+    {
+     "value": "FS 730.6",
+     "source": "MODEL (Dryden EG-0075-02 trace)",
+     "note": "about 67 in ahead of the cowl lip, consistent with a drawing made with the spike retracted"
+    },
+    {
+     "value": "FS 711",
+     "source": "TM4749 fig 4 plan, measured",
+     "note": "also about 71 in ahead of its cowl lip"
+    }
+   ],
+   "notes": "Spike axis canted down 5.3 deg (fig) or 5.63 deg (text) and toed in 3.25 deg (TN D-6987 p.3, figs 2 and 9); cone 26 deg included (TN D-6987 p.4). BL: the toe-in puts the tip about 5.5 in inboard of the nacelle axis over 96 in (derived BL 164.5); TM-4749 fig 4 measures BL 164, fig 4-37 about 160 after correcting its 3.4 percent narrower lateral scale.",
+   "applies_to": "SR-71A",
+   "x_m": [
+    14.91,
+    15.24
+   ],
+   "y_m": [
+    4.064,
+    4.191
+   ]
+  },
+  {
+   "id": "spike_travel",
+   "group": "nacelle_inlet",
+   "name": "Spike travel aft (forward to fully aft)",
+   "confidence": "text",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "about 26 in, starting at Mach 1.6, about 1-5/8 in per 0.1 Mach",
+     "page": "p. 1-31"
+    },
+    {
+     "source": "CR163106",
+     "where": "spike translation 0.862 Rc (25.3 in); throat to capture area ratio 0.41 forward, 0.33 midway, 0.23 aft",
+     "page": "p. 29"
+    }
+   ],
+   "notes": "Fully aft tip about FS 715 to 728 (forward position plus 26 in).",
+   "applies_to": "SR-71A",
+   "side": "centreline"
+  },
+  {
+   "id": "cowl_lip",
+   "group": "nacelle_inlet",
+   "name": "Cowl lip (capture plane)",
+   "fs": [
+    785,
+    801
+   ],
+   "bl": 170,
+   "side": "both",
+   "confidence": "measured",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 4-37 plan, cowl lip x = 2285 px, FS 790",
+     "page": "p. 4-125"
+    },
+    {
+     "source": "TM4749",
+     "where": "fig 4 plan, nacelle outline starts FS 781 to 788 (fit residual 9 in)",
+     "page": "p. 6"
+    },
+    {
+     "source": "MODEL",
+     "where": "cowl_plan FS 797.6 to 801.5"
+    },
+    {
+     "source": "TMX2880",
+     "where": "fig 5a: YF-12 cowl lip about FS 799 (scaled between FS 834 and 1114)",
+     "page": "p. 42"
+    },
+    {
+     "source": "TMX3144",
+     "where": "fig 8: cowl lip radius 74.62 cm (29.38 in)",
+     "page": "p. 16"
+    }
+   ],
+   "notes": "Recommended FS 790 to 800. Capture diameter 58.76 in.",
+   "applies_to": "SR-71A",
+   "x_m": [
+    17.348,
+    17.755
+   ],
+   "y_m": 4.318
+  },
+  {
+   "id": "spike_bleed",
+   "group": "nacelle_inlet",
+   "name": "Spike porous centerbody bleed band (spike forward)",
+   "fs": [
+    796,
+    808
+   ],
+   "bl": 170,
+   "side": "both",
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-21 Mach 0 panel, louvre band on the spike behind the lip",
+     "page": "p. 1-33"
+    },
+    {
+     "source": "CR163106",
+     "where": "fig 4, \"spike bleed\" band at x/Rc about 0.25 to 0.5",
+     "page": "p. 12"
+    }
+   ],
+   "method": "Calibration FM_fig1-21; moves aft with the spike.",
+   "applies_to": "SR-71A",
+   "x_m": [
+    17.628,
+    17.932
+   ],
+   "y_m": 4.318
+  },
+  {
+   "id": "shock_trap",
+   "group": "nacelle_inlet",
+   "name": "Cowl shock trap (cowl bleed), 32 tubes",
+   "fs": [
+    831,
+    845
+   ],
+   "bl": 170,
+   "side": "both",
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "CR163106",
+     "where": "fig 4: shock trap at x/Rc about 1.46 to 1.54 (43 to 45 in aft of the lip)",
+     "page": "p. 12"
+    },
+    {
+     "source": "FM",
+     "where": "fig 1-21 Mach 0 panel (FS 831)",
+     "page": "p. 1-33"
+    },
+    {
+     "source": "CP2054",
+     "where": "fig 2: 32 shock trap tubes",
+     "page": "p. 24"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "x_m": [
+    18.517,
+    18.872
+   ],
+   "y_m": 4.318
+  },
+  {
+   "id": "throat",
+   "group": "nacelle_inlet",
+   "name": "Inlet throat region",
+   "fs": [
+    830,
+    850
+   ],
+   "bl": 170,
+   "side": "both",
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "CR163106",
+     "where": "fig 7 area distribution (spike forward): area minima near x/Rc 0.3, 1.6 to 1.9 and 3.0; throat to capture area 0.41 forward to 0.23 aft",
+     "page": "pp. 15, 29"
+    },
+    {
+     "source": "FM",
+     "where": "throat closes to 4.16 sq ft, 54 percent of its Mach 1.6 area",
+     "page": "p. 1-31"
+    }
+   ],
+   "notes": "No source gives a throat station for the SR-71A. Place the throat near the shock trap (x/Rc about 1.5); it moves with spike position.",
+   "applies_to": "SR-71A",
+   "x_m": [
+    18.491,
+    18.999
+   ],
+   "y_m": 4.318
+  },
+  {
+   "id": "forward_bypass",
+   "group": "nacelle_inlet",
+   "name": "Forward bypass doors (rotating band), 16 doors and 3 louvre exits",
+   "fs": [
+    843,
+    866
+   ],
+   "bl": 170,
+   "side": "both",
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "CR163106",
+     "where": "fig 4: \"Fwd Bypass\" band at x/Rc 2.02 to 2.62",
+     "page": "p. 12"
+    },
+    {
+     "source": "FM",
+     "where": "fig 1-21 Mach 0 panel (FS 843 to 860); text: \"just aft of the throat\"",
+     "page": "pp. 1-31, 1-33"
+    },
+    {
+     "source": "CP2054",
+     "where": "fig 2: 16 forward bypass doors, 3 louvre exits",
+     "page": "p. 24"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "x_m": [
+    18.821,
+    19.406
+   ],
+   "y_m": 4.318
+  },
+  {
+   "id": "spike_struts",
+   "group": "nacelle_inlet",
+   "name": "Spike (centerbody) support struts, 4",
+   "fs": [
+    875,
+    950
+   ],
+   "bl": 170,
+   "side": "both",
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "CR163106",
+     "where": "fig 4: centerbody strut drawn from x/Rc about 2.9 to 5.1",
+     "page": "p. 12"
+    },
+    {
+     "source": "FM",
+     "where": "fig 1-20",
+     "page": "p. 1-32"
+    },
+    {
+     "source": "CP2054",
+     "where": "fig 2: 4 spike support struts",
+     "page": "p. 24"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "x_m": [
+    19.634,
+    21.539
+   ],
+   "y_m": 4.318
+  },
+  {
+   "id": "aft_bypass",
+   "group": "nacelle_inlet",
+   "name": "Aft bypass doors (rotating band), 24 doors",
+   "fs": [
+    938,
+    950
+   ],
+   "bl": 170,
+   "side": "both",
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "text: aft bypass \"just forward of the engine face\"; fig 1-21 Mach 0 panel FS 938 to 945",
+     "page": "pp. 1-35, 1-33"
+    },
+    {
+     "source": "CP2054",
+     "where": "fig 2: 24 aft bypass doors",
+     "page": "p. 24"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "x_m": [
+    21.234,
+    21.539
+   ],
+   "y_m": 4.318
+  },
+  {
+   "id": "engine_face",
+   "group": "nacelle_inlet",
+   "name": "Engine face (compressor inlet, IGVs)",
+   "fs": [
+    949,
+    961
+   ],
+   "bl": 170,
+   "side": "both",
+   "confidence": "derived",
+   "sources": [
+    {
+     "source": "CR163106",
+     "where": "figs 4 and 7: engine face at x/Rc 5.39 to 5.47 aft of the cowl lip",
+     "page": "pp. 12, 15"
+    },
+    {
+     "source": "TMX3144",
+     "where": "Rc 29.38 in",
+     "page": "p. 16"
+    }
+   ],
+   "method": "Cowl lip FS 790 to 800 plus 158 to 161 in.",
+   "applies_to": "SR-71A",
+   "x_m": [
+    21.514,
+    21.819
+   ],
+   "y_m": 4.318
+  },
+  {
+   "id": "suck_in_doors",
+   "group": "nacelle_inlet",
+   "name": "Suck-in (inlet auxiliary) doors on the nacelle",
+   "fs": [
+    970,
+    988
+   ],
+   "bl": 170,
+   "side": "both",
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-21 Mach 0 panel, \"suck-in doors open\" at FS 978 to 988",
+     "page": "p. 1-33"
+    },
+    {
+     "source": "A12GH",
+     "where": "sheet 3 covers 10 and 13 \"B.S. 970 to B.S. 986, blow in door and eng access\"",
+     "page": "p. 1-5"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "x_m": [
+    22.047,
+    22.504
+   ],
+   "y_m": 4.318
+  },
+  {
+   "id": "fwd_engine_mount",
+   "group": "nacelle_inlet",
+   "name": "Forward engine mount access (top of nacelle)",
+   "applies_to": "A-12 (shared nacelle, inference)",
+   "fs": 1010,
+   "bl": 170,
+   "side": "both",
+   "confidence": "text",
+   "sources": [
+    {
+     "source": "A12GH",
+     "where": "sheet 1 cover 60 \"N.S. 1010 on top centerline nac., access to fwd eng mount\"",
+     "page": "p. 1-3"
+    }
+   ],
+   "notes": "No aft mount station found in any source.",
+   "x_m": 23.063,
+   "y_m": 4.318
+  },
+  {
+   "id": "j58_engine",
+   "group": "nacelle_inlet",
+   "name": "J58 (JT11D-20) engine body",
+   "fs": [
+    952,
+    1150
+   ],
+   "bl": 170,
+   "side": "both",
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-21 Mach 0 panel: engine face to nozzle about FS 949 to 1150",
+     "page": "p. 1-33"
+    },
+    {
+     "source": "NASMJ58",
+     "where": "length 180 in, diameter 50 in"
+    }
+   ],
+   "notes": "180 in from the face gives FS about 1130 to 1140; the schematic shows about 200 in. Fig 1-2 (p.1-6) gives the internal layout.",
+   "applies_to": "SR-71A",
+   "x_m": [
+    21.59,
+    26.619
+   ],
+   "y_m": 4.318
+  },
+  {
+   "id": "tertiary_doors",
+   "group": "nacelle_inlet",
+   "name": "Tertiary (blow-in) doors",
+   "fs": [
+    1150,
+    1160
+   ],
+   "bl": 170,
+   "side": "both",
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-21 Mach 0 panel",
+     "page": "p. 1-33"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "x_m": [
+    26.619,
+    26.873
+   ],
+   "y_m": 4.318
+  },
+  {
+   "id": "ejector",
+   "group": "nacelle_inlet",
+   "name": "Ejector nozzle and free-floating flaps",
+   "fs": [
+    1160,
+    1234
+   ],
+   "bl": 170,
+   "side": "both",
+   "confidence": "measured",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-21 (ejector flaps FS 1162 to 1227, calibration FM_fig1-21)",
+     "page": "p. 1-33"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-37 plan: nacelle exit FS 1234",
+     "page": "p. 4-125"
+    },
+    {
+     "source": "TM4749",
+     "where": "fig 4 plan: nacelle exit about FS 1235",
+     "page": "p. 6"
+    }
+   ],
+   "alternatives": [
+    {
+     "value": "nacelle exit about FS 1240",
+     "source": "TMX2880 fig 5a (YF-12), measured"
+    },
+    {
+     "value": "FS 1261",
+     "source": "MODEL (nacelle rings to x = 29.45 m)"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "x_m": [
+    26.873,
+    28.753
+   ],
+   "y_m": 4.318
+  },
+  {
+   "id": "yf12_nacelle_frames",
+   "group": "nacelle_inlet",
+   "name": "Nacelle frame lines (generalized)",
+   "applies_to": "YF-12",
+   "fs": [
+    792,
+    882,
+    898,
+    914,
+    930,
+    945,
+    955,
+    970,
+    986,
+    1002,
+    1019,
+    1034,
+    1051,
+    1067,
+    1083,
+    1100,
+    1116,
+    1132,
+    1180,
+    1206,
+    1239
+   ],
+   "bl": [
+    140,
+    180
+   ],
+   "side": "both",
+   "confidence": "measured",
+   "sources": [
+    {
+     "source": "TMX2880",
+     "where": "fig 2a, lines across the nacelle in the WS 140 to 180 bands",
+     "page": "p. 37"
+    },
+    {
+     "source": "TM104317",
+     "where": "text: \"The fuselage structure and engine nacelles are formed as a ring-stiffened structure.\"",
+     "page": "p. 4"
+    }
+   ],
+   "x_m": [
+    17.526,
+    19.812,
+    20.218,
+    20.625,
+    21.031,
+    21.412,
+    21.666,
+    22.047,
+    22.454,
+    22.86,
+    23.292,
+    23.673,
+    24.105,
+    24.511,
+    24.917,
+    25.349,
+    25.756,
+    26.162,
+    27.381,
+    28.042,
+    28.88
+   ],
+   "y_m": [
+    3.556,
+    4.572
+   ]
+  },
+  {
+   "id": "nacelle_axis_points",
+   "group": "nacelle_inlet",
+   "name": "Nacelle centreline test points N 1 to N 7",
+   "applies_to": "YF-12",
+   "fs": [
+    834.0,
+    882.0,
+    954.0,
+    1050.0,
+    1114.0,
+    1178.0,
+    1196.0
+   ],
+   "bl": 170,
+   "side": "both",
+   "confidence": "labelled",
+   "sources": [
+    {
+     "source": "TMX2880",
+     "where": "table 3, N 1 to N 7 (fuselage station, wing station 170)",
+     "page": "p. 10"
+    }
+   ],
+   "x_m": [
+    18.593,
+    19.812,
+    21.641,
+    24.079,
+    25.705,
+    27.33,
+    27.788
+   ],
+   "y_m": 4.318
+  },
+  {
+   "id": "rudder",
+   "group": "fins",
+   "name": "All-moving rudder (movable vertical tail), root at fin station 55.5, tip at 130",
+   "applies_to": "YF-12 (applies to SR-71A)",
+   "fs": [
+    1076.56,
+    1254.19
+   ],
+   "bl": 170,
+   "side": "both",
+   "confidence": "labelled",
+   "sources": [
+    {
+     "source": "TMX2880",
+     "where": "table 3 R points: root (fin sta 55.5) NS 1076.56 to 1254.19; tip (fin sta 130) NS 1144.41 to 1238.36",
+     "page": "p. 12"
+    },
+    {
+     "source": "CP2054",
+     "where": "Kock table 1: movable tail root chord 4.512 m, tip chord 2.387 m, span 1.892 m; total tail span 3.302 m",
+     "page": "p. 19"
+    }
+   ],
+   "notes": "Fin stations are measured along the canted (15 deg inboard) fin span from the nacelle centreline (total span 130 in = 3.302 m). The root chord from the R points (177.6 in) and tip chord (94.0 in) equal Kock table 1.",
+   "x_m": [
+    24.754,
+    29.266
+   ],
+   "y_m": 4.318
+  },
+  {
+   "id": "rudder_post",
+   "group": "fins",
+   "name": "Rudder post (pivot) and rudder actuator",
+   "applies_to": "YF-12 (applies to SR-71A)",
+   "fs": [
+    1142.01,
+    1172.01
+   ],
+   "bl": 170,
+   "side": "both",
+   "confidence": "labelled",
+   "sources": [
+    {
+     "source": "TMX2880",
+     "where": "fig 5b: \"C/L Post 2900.7 (1142.01)\", \"C/L Actuator 2976.9 (1172.01)\" (nacelle station)",
+     "page": "p. 44"
+    },
+    {
+     "source": "A12GH",
+     "where": "sheet 4 cover 74 \"N.S. 1142 to N.S. 1180 rudder servo access\"; covers 75 and 76 \"N.S. 1090 bottom of fin\"",
+     "page": "p. 1-6"
+    },
+    {
+     "source": "TM104317",
+     "where": "fig 31: rudder support and hinge on top of the nacelle frame at FS 1130",
+     "page": "p. 23"
+    }
+   ],
+   "x_m": [
+    26.416,
+    27.178
+   ],
+   "y_m": 4.318
+  },
+  {
+   "id": "fixed_stub_fin",
+   "group": "fins",
+   "name": "Fixed stub fin on the nacelle",
+   "applies_to": "YF-12 (applies to SR-71A)",
+   "fs": [
+    1060,
+    1280
+   ],
+   "bl": 170,
+   "side": "both",
+   "confidence": "measured",
+   "sources": [
+    {
+     "source": "CP2054",
+     "where": "Kock table 1: total vertical tail root chord 6.096 m (240 in)",
+     "page": "p. 19"
+    },
+    {
+     "source": "MODEL",
+     "where": "fin_side FS 1077.4 to 1280.4, fin_plan FS 1060.6 to 1255.0"
+    },
+    {
+     "source": "A12GH",
+     "where": "N.S. 1090 bottom of fin (A-12)",
+     "page": "p. 1-6"
+    }
+   ],
+   "notes": "Stub about 21 in above the nacelle (Merlin AIAA 2009-1522 p.19, tier C fact as quoted in systems.md 3.6).",
+   "x_m": [
+    24.333,
+    29.921
+   ],
+   "y_m": 4.318
+  },
+  {
+   "id": "tank_1A",
+   "group": "fuel_tanks",
+   "name": "Tank 1A (fuselage; small tank under the air refuelling receptacle, feeds tank 1)",
+   "fs": [
+    404,
+    474
+   ],
+   "capacity_gal": 251.1,
+   "capacity_lb": 1650,
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-32 capacities",
+     "page": "p. 1-48"
+    },
+    {
+     "source": "FM",
+     "where": "text: \"Tank 1A is a small tank located immediately forward of and feeding into tank 1\"",
+     "page": "p. 1-50"
+    },
+    {
+     "source": "FM",
+     "where": "fig 1-40: receptacle (item 1) on top of tank 1A",
+     "page": "p. 1-59"
+    }
+   ],
+   "method": "Calibration FM_fig1-40.",
+   "notes": "Drawn as a partial shell (saddle) round the upper fuselage, not a full cylinder.",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    7.671,
+    9.449
+   ]
+  },
+  {
+   "id": "tank_1",
+   "group": "fuel_tanks",
+   "name": "Tank 1 (fuselage)",
+   "fs": [
+    474,
+    595
+   ],
+   "capacity_gal": 2095.9,
+   "capacity_lb": 13770,
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-32",
+     "page": "p. 1-48"
+    },
+    {
+     "source": "FM",
+     "where": "fig 1-40",
+     "page": "p. 1-59"
+    },
+    {
+     "source": "FM",
+     "where": "text: four boost pumps in tank 1; nitrogen heat exchanger in tank 1",
+     "page": "pp. 1-47, 1-58"
+    }
+   ],
+   "method": "Calibration FM_fig1-40.",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    9.449,
+    12.522
+   ]
+  },
+  {
+   "id": "tank_2",
+   "group": "fuel_tanks",
+   "name": "Tank 2 (fuselage)",
+   "fs": [
+    595,
+    739
+   ],
+   "capacity_gal": 1974.1,
+   "capacity_lb": 12970,
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-32",
+     "page": "p. 1-48"
+    },
+    {
+     "source": "FM",
+     "where": "fig 1-40",
+     "page": "p. 1-59"
+    },
+    {
+     "source": "FM",
+     "where": "text: \"The three pitch and the three yaw gyros are mounted in the No. 2 fuel tank\"",
+     "page": "p. 1-107"
+    },
+    {
+     "source": "TP2000",
+     "where": "pitch rate measured at FS 683.0, roll and yaw rates at FS 683",
+     "page": "p. 10"
+    }
+   ],
+   "method": "Calibration FM_fig1-40.",
+   "notes": "The rate gyro station FS 683 (TP-2000) falls inside this estimate, as the FM statement requires.",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    12.522,
+    16.18
+   ]
+  },
+  {
+   "id": "tank_3",
+   "group": "fuel_tanks",
+   "name": "Tank 3 group (fuselage tank plus the forward section of each wing)",
+   "fs": [
+    739,
+    914
+   ],
+   "bl": [
+    0,
+    127
+   ],
+   "side": "both",
+   "capacity_gal": 2459.7,
+   "capacity_lb": 16160,
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-32",
+     "page": "p. 1-48"
+    },
+    {
+     "source": "FM",
+     "where": "text: \"The No. 3 tank group is comprised of the forward section of each wing and a fuselage tank\"",
+     "page": "p. 1-50"
+    },
+    {
+     "source": "TMX2880",
+     "where": "forward wing box FS 738 to 914, WS 35 to 127",
+     "page": "p. 3"
+    }
+   ],
+   "method": "Fuselage part from calibration FM_fig1-40; wing part = forward wing box.",
+   "applies_to": "SR-71A",
+   "x_m": [
+    16.18,
+    20.625
+   ],
+   "y_m": [
+    0.0,
+    3.226
+   ]
+  },
+  {
+   "id": "main_gear_well_gap",
+   "group": "fuel_tanks",
+   "name": "Main gear well between tanks 3 and 4 (not fuel)",
+   "fs": [
+    914,
+    954
+   ],
+   "side": "both",
+   "confidence": "text",
+   "sources": [
+    {
+     "source": "TMX2880",
+     "where": "text: tanks \"interrupted by the main wheel well from F.S. 914 in. to 954 in.\"",
+     "page": "p. 3"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "x_m": [
+    20.625,
+    21.641
+   ]
+  },
+  {
+   "id": "tank_4",
+   "group": "fuel_tanks",
+   "name": "Tank 4 (fuselage; drag chute compartment above it)",
+   "fs": [
+    954,
+    1106
+   ],
+   "capacity_gal": 1453.6,
+   "capacity_lb": 9550,
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-32",
+     "page": "p. 1-48"
+    },
+    {
+     "source": "FM",
+     "where": "fig 1-40",
+     "page": "p. 1-59"
+    },
+    {
+     "source": "FM",
+     "where": "text: drag chute \"stowed in an aft fuselage compartment above fuel tank 4\"; hot fuel recirculated to tank 4",
+     "page": "pp. 1-93, 1-58"
+    }
+   ],
+   "method": "Calibration FM_fig1-40.",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    21.641,
+    25.502
+   ]
+  },
+  {
+   "id": "tank_5",
+   "group": "fuel_tanks",
+   "name": "Tank 5 (aft fuselage; aft transfer tank)",
+   "fs": [
+    1106,
+    1300
+   ],
+   "capacity_gal": 1758.0,
+   "capacity_lb": 11550,
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-32",
+     "page": "p. 1-48"
+    },
+    {
+     "source": "FM",
+     "where": "fig 1-40",
+     "page": "p. 1-59"
+    }
+   ],
+   "method": "Calibration FM_fig1-40; aft end at the tail cone, uncertain.",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    25.502,
+    30.429
+   ]
+  },
+  {
+   "id": "tank_6A",
+   "group": "fuel_tanks",
+   "name": "Tank 6A (forward part of the aft wing box, each wing)",
+   "fs": [
+    954,
+    1090
+   ],
+   "bl": [
+    35,
+    127
+   ],
+   "side": "both",
+   "capacity_gal": 1158.3,
+   "capacity_lb": 7610,
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-32 \"6A (forward)\"",
+     "page": "p. 1-48"
+    },
+    {
+     "source": "FM",
+     "where": "text: \"The No. 6 tank group is located in the wings on either side of tanks 4 and 5\"",
+     "page": "p. 1-50"
+    },
+    {
+     "source": "TMX2880",
+     "where": "aft wing box FS 954 to 1226, WS 35 to 127; \"two [wing tanks] in the aft box\"",
+     "page": "p. 3"
+    }
+   ],
+   "method": "Aft box split at its mid station FS 1090 (6A and 6B capacities are similar); the 6A to 6B boundary in fig 1-40 lies near the tank 4 to 5 boundary (FS about 1100).",
+   "applies_to": "SR-71A",
+   "x_m": [
+    21.641,
+    25.095
+   ],
+   "y_m": [
+    0.889,
+    3.226
+   ]
+  },
+  {
+   "id": "tank_6B",
+   "group": "fuel_tanks",
+   "name": "Tank 6B (aft part of the aft wing box, each wing)",
+   "fs": [
+    1090,
+    1226
+   ],
+   "bl": [
+    35,
+    127
+   ],
+   "side": "both",
+   "capacity_gal": 1068.5,
+   "capacity_lb": 7020,
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-32 \"6B (aft)\"",
+     "page": "p. 1-48"
+    },
+    {
+     "source": "TMX2880",
+     "where": "aft wing box ends FS 1226",
+     "page": "p. 3"
+    }
+   ],
+   "method": "As tank 6A.",
+   "applies_to": "SR-71A",
+   "x_m": [
+    25.095,
+    28.55
+   ],
+   "y_m": [
+    0.889,
+    3.226
+   ]
+  },
+  {
+   "id": "tank_6_sump",
+   "group": "fuel_tanks",
+   "name": "Tank 6 group sump tank (about 12 gal, boost pumps), extreme aft fuselage",
+   "fs": [
+    1261,
+    1314
+   ],
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "text: group \"includes a small sump tank (approximately 12 gallons) at the extreme aft end of the fuselage which contains the boost pumps for the group\"",
+     "page": "p. 1-50"
+    },
+    {
+     "source": "FM",
+     "where": "fig 1-40 item 6 (dashed sump in the tail cone)",
+     "page": "p. 1-59"
+    }
+   ],
+   "method": "Calibration FM_fig1-40.",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    29.439,
+    30.785
+   ]
+  },
+  {
+   "id": "bay_A_nose",
+   "group": "equipment_bays",
+   "name": "Compartment A, radar or OBC equipment (interchangeable nose)",
+   "fs": [
+    146,
+    236
+   ],
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-1 item 12",
+     "page": "p. 1-5"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-24 plan: dark block rows 4060 to 4655 (FS 232 to 146); side: radar units (transmitter, receiver, synchronizer, antenna control, antenna and drive) rows 4030 to 4600 (FS 236 to 154)",
+     "page": "p. 4-80"
+    },
+    {
+     "source": "FM",
+     "where": "OBC in an interchangeable nose; CAPRE SLR antenna in the nose",
+     "page": "pp. 4-86, 4-93"
+    }
+   ],
+   "method": "Calibration FM_fig4-24.",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    1.118,
+    3.404
+   ]
+  },
+  {
+   "id": "bay_B_left_chine",
+   "group": "equipment_bays",
+   "name": "Compartment B, left forward chine bay (50 L liquid nitrogen Dewar; pressure transducer assembly aft of the nose bulkhead)",
+   "fs": [
+    236,
+    361
+   ],
+   "side": "left",
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "text: third Dewar \"installed in the left forward chine (B bay)\"",
+     "page": "p. 1-58"
+    },
+    {
+     "source": "FM",
+     "where": "text: PTA \"located in the left forward chine bay, aft of the nose bulkhead\"",
+     "page": "p. 1-134"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-24 plan: \"LEFT CHINE COMPARTMENT\", letter B at row 3650 (FS 291)",
+     "page": "p. 4-80"
+    }
+   ],
+   "method": "Extent assumed from the nose joint to the forward mission bay; only the B label position is measured.",
+   "applies_to": "SR-71A",
+   "x_m": [
+    3.404,
+    6.579
+   ]
+  },
+  {
+   "id": "bay_D_right_chine",
+   "group": "equipment_bays",
+   "name": "Compartment D, right chine bay (DEF A2, C2, M)",
+   "fs": [
+    287,
+    368
+   ],
+   "side": "right",
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-1 item 1",
+     "page": "p. 1-5"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-24 plan: dark block rows 3175 to 3680 (FS 360 to 287)",
+     "page": "p. 4-80"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-37: D-bay boxes FS 297 to 368; \"DEF A (A2) (D-BAY)\", \"DEF C DOOR (D-BAY)\", \"DEF M (D-BAY)\"",
+     "page": "p. 4-125"
+    },
+    {
+     "source": "FM",
+     "where": "text: DEF A2 transmit antennas \"protrude slightly from the lower surfaces of the chines, opposite the pilot's cockpit\"",
+     "page": "p. 4-124"
+    }
+   ],
+   "method": "Calibrations FM_fig4-24 and FM_fig4-37.",
+   "applies_to": "SR-71A",
+   "x_m": [
+    4.699,
+    6.756
+   ]
+  },
+  {
+   "id": "bay_C_camera",
+   "group": "equipment_bays",
+   "name": "Compartment C, camera bay (circuit breakers)",
+   "fs": [
+    360,
+    380
+   ],
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-1 item 8 (under the cockpits, centre)",
+     "page": "p. 1-5"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-24 plan: letter C at row 3105 on the centreline (FS 370)",
+     "page": "p. 4-80"
+    },
+    {
+     "source": "FM",
+     "where": "text: circuit breakers \"in the C and E bays\"",
+     "page": "p. 1-71"
+    }
+   ],
+   "notes": "Only the label position is measured; extent unknown. Probably in the lower fuselage under the rear cockpit (fig 1-1).",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    6.553,
+    7.061
+   ]
+  },
+  {
+   "id": "bay_E_electronics",
+   "group": "equipment_bays",
+   "name": "Compartment E, electronics bay (electrical equipment, circuit breakers)",
+   "fs": [
+    361,
+    400
+   ],
+   "bl": [
+    -27,
+    -15
+   ],
+   "side": "left",
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-1 item 6",
+     "page": "p. 1-5"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-24 plan: \"ELECTRICAL EQPT\" leader and letter E at row 3080 (FS 373), left of centre",
+     "page": "p. 4-80"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "x_m": [
+    6.579,
+    7.569
+   ],
+   "y_m": [
+    -0.686,
+    -0.381
+   ]
+  },
+  {
+   "id": "bay_R_radio",
+   "group": "equipment_bays",
+   "name": "Compartment R, radio equipment bay (PVD processor, roll gyros)",
+   "fs": [
+    420,
+    445
+   ],
+   "bl": [
+    15,
+    25
+   ],
+   "side": "right",
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-1 item 3",
+     "page": "p. 1-5"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-24 plan: \"RADIO EQPT\" leader and letter R at row 2680 (FS 431), right of centre",
+     "page": "p. 4-80"
+    },
+    {
+     "source": "FM",
+     "where": "text: PVD processor and the two roll gyros \"in the R bay\"",
+     "page": "pp. 1-107, 1-139"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "x_m": [
+    8.077,
+    8.712
+   ],
+   "y_m": [
+    0.381,
+    0.635
+   ]
+  },
+  {
+   "id": "bay_LN_right_fwd_mission",
+   "group": "equipment_bays",
+   "name": "Right forward mission bay, compartments L (forward) and N (aft); radar recorders",
+   "fs": [
+    360,
+    522
+   ],
+   "side": "right",
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-1 item 2",
+     "page": "p. 1-5"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-24 plan: bay arrows rows 2059 to 3183 (FS 521 to 358); L block rows 2515 to 3110 (FS 455 to 369); N rows 2050 to 2500 (FS 522 to 457)",
+     "page": "p. 4-80"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-37 right-side chine doors FS 371 to 455 and 455 to 526",
+     "page": "p. 4-125"
+    },
+    {
+     "source": "FM",
+     "where": "text: CAPRE film recorders in the right forward mission bay",
+     "page": "p. 4-86"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "x_m": [
+    6.553,
+    10.668
+   ]
+  },
+  {
+   "id": "bay_KM_left_fwd_mission",
+   "group": "equipment_bays",
+   "name": "Left forward mission bay, compartments K (forward, DEF H) and M (aft, digital and AR1700 EIP recorders)",
+   "fs": [
+    360,
+    522
+   ],
+   "side": "left",
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-1 items 7, 35, 36",
+     "page": "p. 1-5"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-24 plan: K block rows 2515 to 3100 (FS 455 to 370), M rows 2050 to 2500",
+     "page": "p. 4-80"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-37 \"DEF H DOOR (K-BAY)\" and left-side doors FS 371 to 395, 395 to 466, 478 to 572",
+     "page": "p. 4-125"
+    },
+    {
+     "source": "FM",
+     "where": "text: EIP recorders in the aft of the left forward mission bay",
+     "page": "p. 4-99"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "x_m": [
+    6.553,
+    10.668
+   ]
+  },
+  {
+   "id": "bay_QT_right_aft_mission",
+   "group": "equipment_bays",
+   "name": "Right aft mission bay, compartments Q (forward, technical objective camera or radar recorder) and T (aft, EIP)",
+   "fs": [
+    529,
+    686
+   ],
+   "side": "right",
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-1 items 4, 22, 23",
+     "page": "p. 1-5"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-24 plan: bay arrows rows 935 to 2015 (FS 683 to 527); Q block rows 1400 to 2000 (FS 616 to 529); T block rows 920 to 1340 (FS 686 to 625)",
+     "page": "p. 4-80"
+    },
+    {
+     "source": "FM",
+     "where": "text: TEOC in the left and right aft mission bays; EIP in the aft ends of the left and right aft mission bays",
+     "page": "pp. 4-81, 4-99"
+    }
+   ],
+   "alternatives": [
+    {
+     "value": "chine doors FS 538 to 630 and 630 to 712",
+     "source": "FM fig 4-37 right side, measured"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "x_m": [
+    10.846,
+    14.834
+   ]
+  },
+  {
+   "id": "bay_PS_left_aft_mission",
+   "group": "equipment_bays",
+   "name": "Left aft mission bay, compartments P (forward, technical objective camera) and S (aft, EIP)",
+   "fs": [
+    531,
+    684
+   ],
+   "side": "left",
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-1 item 5",
+     "page": "p. 1-5"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-24 plan: P block rows 1400 to 1990 (FS 616 to 531); S block rows 930 to 1330 (FS 684 to 626)",
+     "page": "p. 4-80"
+    },
+    {
+     "source": "FM",
+     "where": "text",
+     "page": "pp. 4-81, 4-99"
+    }
+   ],
+   "alternatives": [
+    {
+     "value": "chine doors FS 572 to 652 and 652 to 712",
+     "source": "FM fig 4-37 left side, measured"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "x_m": [
+    10.897,
+    14.783
+   ]
+  },
+  {
+   "id": "bay_ans_ac",
+   "group": "equipment_bays",
+   "name": "ANS guidance group and air conditioning bay (behind the rear cockpit, upper fuselage)",
+   "fs": [
+    387,
+    416
+   ],
+   "bl": [
+    -9,
+    9
+   ],
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 4-24 side: \"ANS\" dark block rows 2840 to 2985 (FS 408 to 387) under the top line; \"AIR CONDITIONING BAY\" dash-dot outline from row 2790 (FS 415); plan: centreline rectangle rows 2840 to 3020 (FS 408 to 382), BL plus or minus 9",
+     "page": "p. 4-80"
+    },
+    {
+     "source": "FM",
+     "where": "fig 1-1 item 15 \"ANS platform and computer\"",
+     "page": "p. 1-5"
+    },
+    {
+     "source": "FM",
+     "where": "text: \"The guidance group is mounted in the fuselage aft of the rear cockpit\"",
+     "page": "p. 4-5"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    7.239,
+    7.976
+   ],
+   "y_m": [
+    -0.229,
+    0.229
+   ]
+  },
+  {
+   "id": "nosewheel_well_items",
+   "group": "equipment_bays",
+   "name": "Nosewheel well equipment (two 106 L liquid nitrogen Dewars, lateral accelerometers, marker beacon antenna in the right door)",
+   "confidence": "text",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "text",
+     "page": "pp. 1-58, 1-107, 1-166"
+    }
+   ],
+   "notes": "Station range: see nose_gear.",
+   "applies_to": "SR-71A",
+   "side": "centreline"
+  },
+  {
+   "id": "lox_containers",
+   "group": "equipment_bays",
+   "name": "Liquid oxygen containers (item 37)",
+   "confidence": "estimated",
+   "fs": [
+    315,
+    345
+   ],
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-1 item 37: three spheres under the cockpits, between the two seats in the drawing",
+     "page": "p. 1-5"
+    }
+   ],
+   "method": "Scaled locally between the two ejection seats of fig 1-1 (FS 279 and 345 from fig 4-24); perspective drawing, low confidence.",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    5.41,
+    6.172
+   ]
+  },
+  {
+   "id": "def_antennas",
+   "group": "equipment_bays",
+   "name": "DEF A2 antennas: receive (aft of cut-outs in the nose chines) and transmit (lower chines opposite the pilot); DEF H CW receive antenna at the tail",
+   "fs": [
+    [
+     151,
+     165
+    ],
+    [
+     258,
+     316
+    ],
+    1300
+   ],
+   "side": "both",
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 4-37 \"DEF A (A2) RCV antennas (lower nose)\" boxes at x = 690 to 725 px (FS 151 to 165); \"CW receive antenna\" at the tail cone (FS about 1300)",
+     "page": "p. 4-125"
+    },
+    {
+     "source": "FM",
+     "where": "text: DEF A2 transmit antennas \"protrude slightly from the lower surfaces of the chines, opposite the pilot's cockpit\"; receive antennas \"aft of cut-outs on the left and right sides of the nose chines\"",
+     "page": "p. 4-124"
+    },
+    {
+     "source": "FM",
+     "where": "fig 1-1 items 29 and 39",
+     "page": "p. 1-5"
+    }
+   ],
+   "method": "Transmit range set to the forward cockpit range (FS 258 to 316) from the text; receive and tail positions scaled on fig 4-37 (calibration FM_fig4-37).",
+   "notes": "The DEF H centreline receive antenna (fig 1-1 item 39) is under the forward fuselage; its station was not measured.",
+   "applies_to": "SR-71A",
+   "x_m": [
+    [
+     1.245,
+     1.6
+    ],
+    [
+     3.962,
+     5.436
+    ],
+    30.429
+   ]
+  },
+  {
+   "id": "forward_canopy",
+   "group": "cockpits",
+   "name": "Forward (pilot) canopy",
+   "fs": [
+    243,
+    314
+   ],
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 4-37 plan, canopy outline x = 920 to 1095 px",
+     "page": "p. 4-125"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-24 side, windshield base FS 242",
+     "page": "p. 4-80"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    3.581,
+    5.385
+   ]
+  },
+  {
+   "id": "aft_canopy",
+   "group": "cockpits",
+   "name": "Aft (RSO) canopy",
+   "fs": [
+    319,
+    374
+   ],
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 4-37 plan, outline x = 1110 to 1245 px",
+     "page": "p. 4-125"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-24 side, aft canopy end about FS 381",
+     "page": "p. 4-80"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    5.512,
+    6.909
+   ]
+  },
+  {
+   "id": "canopy_hump",
+   "group": "cockpits",
+   "name": "Canopy hump on the side profile (both canopies)",
+   "fs": [
+    244,
+    389
+   ],
+   "wl": 131,
+   "confidence": "measured",
+   "sources": [
+    {
+     "source": "TM4749",
+     "where": "fig 5 side, hump from FS 244 to FS 389, top near WL 131",
+     "page": "p. 7"
+    },
+    {
+     "source": "TM4749",
+     "where": "fig 4 side, FS 238 to 387",
+     "page": "p. 6"
+    }
+   ],
+   "notes": "The model canopy object spans x = 3.5 to 8.5 m (FS 240 to 437), longer aft than these drawings.",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    3.607,
+    7.29
+   ],
+   "z_m": 1.245
+  },
+  {
+   "id": "canopy_hinges",
+   "group": "cockpits",
+   "name": "Canopy hinges",
+   "fs": [
+    [
+     310,
+     314
+    ],
+    [
+     370,
+     374
+    ]
+   ],
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "A12FM",
+     "where": "A-12 canopy \"hinged at the aft end\"",
+     "page": "p. 1-85 (PDF p.97)"
+    },
+    {
+     "source": "FM",
+     "where": "SR-71A canopy pages 1-170 to 1-179 are missing from the scan"
+    }
+   ],
+   "notes": "Not documented for the SR-71A in any source on disk. Placed at the aft edge of each canopy by analogy with the A-12; unconfirmed.",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    [
+     5.283,
+     5.385
+    ],
+    [
+     6.807,
+     6.909
+    ]
+   ]
+  },
+  {
+   "id": "pilot_cockpit",
+   "group": "cockpits",
+   "name": "Forward cockpit (pilot): instrument panel to bulkhead",
+   "fs": [
+    258,
+    316
+   ],
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 4-24 plan: instrument panel arc rows 3850 to 3880 (FS 262 to 258), consoles rows 3565 to 3850 (FS 303 to 262); side: aft bulkhead band FS 310 to 321",
+     "page": "p. 4-80"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    3.962,
+    5.436
+   ]
+  },
+  {
+   "id": "pilot_seat",
+   "group": "cockpits",
+   "name": "Pilot SR-1 ejection seat",
+   "fs": [
+    265,
+    292
+   ],
+   "wl": 121,
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 4-24 side: seat outline rows 3640 to 3830 (FS 292 to 265), headrest circle row 3730 (FS 279), about WL 121",
+     "page": "p. 4-80"
+    },
+    {
+     "source": "FM",
+     "where": "seat vertical travel 9 in (pilot)",
+     "page": "p. 1-199"
+    }
+   ],
+   "notes": "WL from the side view with its top line taken as WL 131; rough.",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    4.14,
+    4.826
+   ],
+   "z_m": 0.991
+  },
+  {
+   "id": "rso_cockpit",
+   "group": "cockpits",
+   "name": "Aft cockpit (RSO): instrument panel to aft bulkhead",
+   "fs": [
+    316,
+    382
+   ],
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 4-24 side: RSO panel (radar display, view sight) FS 310 to 321; frame line FS 380 to 382",
+     "page": "p. 4-80"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    5.436,
+    7.112
+   ]
+  },
+  {
+   "id": "rso_seat",
+   "group": "cockpits",
+   "name": "RSO SR-1 ejection seat",
+   "fs": 345,
+   "wl": 127,
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 4-24 side: seat circle row 3275 (FS 345), about WL 127",
+     "page": "p. 4-80"
+    },
+    {
+     "source": "FM",
+     "where": "seat vertical travel 6.75 in (RSO)",
+     "page": "p. 1-199"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": 6.172,
+   "z_m": 1.143
+  },
+  {
+   "id": "tp2000_cockpit_accel",
+   "group": "cockpits",
+   "name": "Test bed accelerometer \"near the cockpit\"",
+   "fs": 234.5,
+   "confidence": "text",
+   "sources": [
+    {
+     "source": "TP2000",
+     "where": "normal and longitudinal acceleration and pitch rate measured at FS 234.5 (near the cockpit) and FS 683.0",
+     "page": "p. 10"
+    }
+   ],
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": 3.365
+  },
+  {
+   "id": "main_gear_axle",
+   "group": "gear_chute_refuelling",
+   "name": "Main gear axle line",
+   "fs": 935.0,
+   "bl": [
+    -100.0,
+    100.0
+   ],
+   "side": "both",
+   "confidence": "derived",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 2-3 and p.1-4 (calibration FM_fig2-3); tread 16.67 ft between middle wheel centrelines",
+     "page": "pp. 2-30, 1-4"
+    }
+   ],
+   "alternatives": [
+    {
+     "value": "FS 939",
+     "source": "FM fig 2-3 gear marks, measured (radome FS 102 to tail FS 1355)"
+    },
+    {
+     "value": "FS 934 (well centre)",
+     "source": "FM fig 4-37 and TMX2880 text"
+    }
+   ],
+   "notes": "Three-wheel bogies; derived spacing between wheels about 1.2 ft (14 in).",
+   "applies_to": "SR-71A",
+   "x_m": 21.158,
+   "y_m": [
+    -2.54,
+    2.54
+   ]
+  },
+  {
+   "id": "main_gear_well",
+   "group": "gear_chute_refuelling",
+   "name": "Main gear wells (retract inboard into the fuselage)",
+   "fs": [
+    914,
+    954
+   ],
+   "bl": [
+    35,
+    98
+   ],
+   "side": "both",
+   "confidence": "text",
+   "sources": [
+    {
+     "source": "TMX2880",
+     "where": "text: main wheel well FS 914 to 954; gear supported by the forward beam of the aft box and the aft beam of the forward box",
+     "page": "p. 3"
+    },
+    {
+     "source": "FM",
+     "where": "fig 4-37: dashed wells FS 920 to 948, BL about 35 to 98 (scaled)",
+     "page": "p. 4-125"
+    },
+    {
+     "source": "FM",
+     "where": "text: \"Each three-wheeled main gear retracts inboard into the fuselage\"",
+     "page": "p. 1-89"
+    },
+    {
+     "source": "A12GH",
+     "where": "covers 70 and 71: \"W.S. 914 to W.S. 954, B.L. 40\" landing gear plumbing; \"B.L. 84\" landing gear pivot access",
+     "page": "p. 1-3"
+    }
+   ],
+   "notes": "Main gear pivot near BL 84 (A-12). Well covered by gear doors below and wing skin above (TM X-2880 p.3).",
+   "applies_to": "SR-71A",
+   "x_m": [
+    20.625,
+    21.641
+   ],
+   "y_m": [
+    0.889,
+    2.489
+   ]
+  },
+  {
+   "id": "nose_gear",
+   "group": "gear_chute_refuelling",
+   "name": "Nose gear axle (dual wheels, retracts forward into the fuselage)",
+   "fs": [
+    464.5,
+    490
+   ],
+   "confidence": "derived",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 2-3 and p.1-4: 39.21 ft ahead of the main axle gives FS 464.5 (calibration FM_fig2-3)",
+     "page": "pp. 2-30, 1-4"
+    },
+    {
+     "source": "FM",
+     "where": "fig 2-3 nose gear mark at FS 490 (scaled)",
+     "page": "p. 2-30"
+    },
+    {
+     "source": "FM",
+     "where": "text: nose gear retracts forward",
+     "page": "p. 1-89"
+    }
+   ],
+   "alternatives": [
+    {
+     "value": "FS 477",
+     "source": "TMX2880 fig 4 side (YF-12), scaled"
+    }
+   ],
+   "notes": "No source gives the nosewheel well extent; it lies forward of the strut (gear retracts forward) and holds the two 106 L nitrogen Dewars (FM p.1-58).",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    9.207,
+    9.855
+   ]
+  },
+  {
+   "id": "drag_chute",
+   "group": "gear_chute_refuelling",
+   "name": "Drag chute compartment door (upper aft fuselage, above tank 4)",
+   "fs": [
+    1004,
+    1070
+   ],
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 4-37: centreline door x = 2820 to 2985 px (FS 1004 to 1070)",
+     "page": "p. 4-125"
+    },
+    {
+     "source": "FM",
+     "where": "text: \"stowed in an aft fuselage compartment above fuel tank 4\"",
+     "page": "p. 1-93"
+    },
+    {
+     "source": "FM",
+     "where": "fig 1-1 item 27",
+     "page": "p. 1-5"
+    },
+    {
+     "source": "A12GH",
+     "where": "sheet 1 cover 69 \"N.S. 1008, B.L. 4 L and R, drag chute mech.\"",
+     "page": "p. 1-3"
+    }
+   ],
+   "notes": "Deployment bag holds a 42 in pilot chute, 10 ft extraction chute and 40 ft ribbon drag chute (FM p.1-93).",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    22.911,
+    24.587
+   ]
+  },
+  {
+   "id": "ar_receptacle",
+   "group": "gear_chute_refuelling",
+   "name": "Air refuelling receptacle door (spine, behind the rear canopy)",
+   "fs": [
+    403,
+    442
+   ],
+   "wl": 131,
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 4-37: unlabelled centreline door with a pointed aft end, x = 1320 to 1415 px (FS 403 to 442)",
+     "page": "p. 4-125"
+    },
+    {
+     "source": "FM",
+     "where": "fig 1-40 item 1: receptacle on top of tank 1A",
+     "page": "p. 1-59"
+    },
+    {
+     "source": "FM",
+     "where": "fig 1-1 item 19 (aft of item 15, ANS)",
+     "page": "p. 1-5"
+    }
+   ],
+   "notes": "Identification of the fig 4-37 door as the receptacle is an inference (position on the spine aft of the canopies, order behind the ANS in fig 1-1, and the tanker view in research/systems/media/photo_refuelling-receptacle-view-from-tanker_Tubridy_1988.jpg, which shows the boom just aft of the rear canopy). A separate single-point ground refuelling receptacle (fig 1-40 item 9) is under the same area.",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    7.645,
+    8.636
+   ],
+   "z_m": 1.245
+  },
+  {
+   "id": "star_tracker_window",
+   "group": "ans",
+   "name": "ANS star tracker window (upper fuselage centreline)",
+   "fs": 395,
+   "bl": 0,
+   "wl": 131,
+   "confidence": "estimated",
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 4-24 plan: dashed circle about 9 in across on the centreline at row 2930 (FS 395) inside the ANS rectangle",
+     "page": "p. 4-80"
+    },
+    {
+     "source": "FM",
+     "where": "text: upward 78 deg cone of vision; \"The axis of the cone is vertical\" at 7.5 deg aircraft pitch; software corrects for refraction and thermal lens effects \"in the window\"",
+     "page": "pp. 4-5 to 4-6"
+    }
+   ],
+   "notes": "Derived: the cone axis is tilted 7.5 deg forward of the body normal (vertical when the nose is 7.5 deg up). WL 131 is the local upper fuselage line (TM-4749).",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": 7.442,
+   "y_m": 0.0,
+   "z_m": 1.245
+  },
+  {
+   "id": "lasre_canoe",
+   "group": "other",
+   "name": "NASA test bed canoe on the upper fuselage (NASA 844 only)",
+   "fs": [
+    749.6,
+    1244.6
+   ],
+   "wl": [
+    131,
+    154.2
+   ],
+   "bl": [
+    -16.5,
+    16.5
+   ],
+   "confidence": "labelled",
+   "applies_to": "SR-71A NASA 844 (LASRE and test bed)",
+   "sources": [
+    {
+     "source": "TM4749",
+     "where": "fig 5: canoe from F.S. 749.6 to 1244.6, top W.L. 154.2, B.L. 16.5; fig 4: W.L. 154.9, pod 57.8 in high",
+     "page": "pp. 6 to 7"
+    },
+    {
+     "source": "TP2000",
+     "where": "canoe attached at fuselage hard points by vertical and lateral links; air under the canoe measured at FS 942 and 1135",
+     "page": "pp. 17, 19"
+    }
+   ],
+   "side": "centreline",
+   "x_m": [
+    16.449,
+    29.022
+   ],
+   "y_m": [
+    -0.419,
+    0.419
+   ],
+   "z_m": [
+    1.245,
+    1.834
+   ]
+  },
+  {
+   "id": "tm4749_sting_cut",
+   "group": "other",
+   "name": "Wind-tunnel sting cut at FS 1295 (not aircraft structure)",
+   "fs": 1295,
+   "bl": 58.8,
+   "confidence": "labelled",
+   "sources": [
+    {
+     "source": "TM4749",
+     "where": "figs 4 and 5: \"Sting mount\" at F.S.1295, body half width B.L.58.8",
+     "page": "pp. 6 to 7"
+    }
+   ],
+   "notes": "model/plans/NOTES.md lists FS 1295 as the wing trailing-edge tip; the figures show it is the sting mount cut across the aft fuselage.",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": 30.302,
+   "y_m": 1.494
+  },
+  {
+   "id": "roll_pitch_mixer",
+   "group": "other",
+   "name": "Roll and pitch mixer (item 28, aft fuselage)",
+   "confidence": "estimated",
+   "fs": [
+    1240,
+    1290
+   ],
+   "sources": [
+    {
+     "source": "FM",
+     "where": "fig 1-1 item 28 (aft fuselage near the elevons)",
+     "page": "p. 1-5"
+    }
+   ],
+   "method": "Position by eye on a perspective drawing; low confidence.",
+   "applies_to": "SR-71A",
+   "side": "centreline",
+   "x_m": [
+    28.905,
+    30.175
+   ]
+  }
+ ]
+}

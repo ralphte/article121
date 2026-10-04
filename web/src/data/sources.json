@@ -1,5 +1,12 @@
 [
  {
+  "id": "u-s-air-force-323b8c",
+  "title": "SR-71A-1 Flight Manual (T.O. SR-71A-1), Issue E, Change 2, 31 July 1989",
+  "publisher": "U.S. Air Force",
+  "url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "uses": 107
+ },
+ {
   "id": "central-intelligence-agency-center-for-t-70081b",
   "title": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 1",
   "publisher": "Central Intelligence Agency, Center for the Study of Intelligence",
@@ -7,13 +14,6 @@
   "uses": 89,
   "archive": "https://web.archive.org/web/20260825092923/https://www.cia.gov/resources/csi/static/b45f5f8f5e4937963d9e9931313d84a4/Archangel-CIAs-Supersonic-A-12-Reconnaissance-Aircraft.pdf",
   "archived": "2026-08-25"
- },
- {
-  "id": "u-s-air-force-323b8c",
-  "title": "SR-71A-1 Flight Manual (T.O. SR-71A-1), Issue E, Change 2, 31 July 1989",
-  "publisher": "U.S. Air Force",
-  "url": "https://archive.org/details/0003756-lockheed-sr-71-03",
-  "uses": 72
  },
  {
   "id": "nasa-technical-reports-server-707153",
@@ -137,6 +137,13 @@
   "uses": 8,
   "archive": "https://web.archive.org/web/20260923222523/https://airandspace.si.edu/collection-objects/lockheed-sr-71-blackbird/nasm_A19920072000",
   "archived": "2026-09-23"
+ },
+ {
+  "id": "nasa-5512ae",
+  "title": "Wilson, Cazier and Larson, Results of Ground Vibration Tests on a YF-12 Airplane, NASA TM X-2880, 1973",
+  "publisher": "NASA",
+  "url": "https://ntrs.nasa.gov/api/citations/19730021212/downloads/19730021212.pdf",
+  "uses": 8
  },
  {
   "id": "national-museum-of-the-united-states-air-ef079b",
@@ -337,6 +344,15 @@
   "publisher": "NASA",
   "url": "https://ntrs.nasa.gov/api/citations/19810012550/downloads/19810012550.pdf",
   "uses": 3
+ },
+ {
+  "id": "nasa-00ba9f",
+  "title": "A Historical Perspective of the YF-12A Thermal Loads and Structures Program (Jenkins and Quinn, NASA TM-104317, 1996)",
+  "publisher": "NASA",
+  "url": "https://ntrs.nasa.gov/api/citations/19960027893/downloads/19960027893.pdf",
+  "uses": 3,
+  "archive": "https://web.archive.org/web/20251207034920/https://ntrs.nasa.gov/api/citations/19960027893/downloads/19960027893.pdf",
+  "archived": "2025-12-07"
  },
  {
   "id": "national-reconnaissance-office-center-fo-02095b",

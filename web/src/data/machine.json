@@ -992,6 +992,424 @@
      "detail": "p.1-94 to 1-100"
     }
    ]
+  },
+  "fuselage-frames": {
+   "title": "Fuselage frames",
+   "text": "Frames at the bulkheads the flight manual shows (the nose joint, the cockpit bulkheads, the tank ends) and the wing beams carried across the fuselage on a 16 in pitch. The SR-71A's own frame stations are not public; these follow NASA's YF-12A structure drawing, which shares the SR-71's stations from the wing aft, and the flight manual figures.",
+   "citations": [
+    {
+     "source": "nasa-5512ae",
+     "detail": "fig 2a, p.37; text p.2 to 3"
+    },
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figures 1-40 and 4-24, p.1-59, p.4-80"
+    }
+   ]
+  },
+  "longerons": {
+   "title": "Longerons",
+   "text": "The forebody is a ring-stiffened cylinder with longerons at the top, bottom and sides; bending is carried mainly by the longerons on the top and bottom centrelines.",
+   "citations": [
+    {
+     "source": "nasa-5512ae",
+     "detail": "text p.2 to 3; fig 2a, p.37"
+    }
+   ]
+  },
+  "wing-structure": {
+   "title": "Wing beams and ribs",
+   "text": "Spanwise beams on a 16 in pitch, and ribs at wing stations 72, 100 and 127 in the inner box and 213, 241 and 267 in the outer panel, from NASA's labelled YF-12A structure drawings. The skins between them are corrugated chordwise so they can grow with heat.",
+   "citations": [
+    {
+     "source": "nasa-00ba9f",
+     "detail": "fig 31, p.23; fig 2, p.4"
+    },
+    {
+     "source": "nasa-5512ae",
+     "detail": "text p.3; fig 2a, p.37"
+    }
+   ]
+  },
+  "wing-structure-l": {
+   "title": "Wing beams and ribs",
+   "text": "Spanwise beams on a 16 in pitch, and ribs at wing stations 72, 100 and 127 in the inner box and 213, 241 and 267 in the outer panel, from NASA's labelled YF-12A structure drawings. The skins between them are corrugated chordwise so they can grow with heat.",
+   "citations": [
+    {
+     "source": "nasa-00ba9f",
+     "detail": "fig 31, p.23; fig 2, p.4"
+    },
+    {
+     "source": "nasa-5512ae",
+     "detail": "text p.3; fig 2a, p.37"
+    }
+   ]
+  },
+  "wing-structure-r": {
+   "title": "Wing beams and ribs",
+   "text": "Spanwise beams on a 16 in pitch, and ribs at wing stations 72, 100 and 127 in the inner box and 213, 241 and 267 in the outer panel, from NASA's labelled YF-12A structure drawings. The skins between them are corrugated chordwise so they can grow with heat.",
+   "citations": [
+    {
+     "source": "nasa-00ba9f",
+     "detail": "fig 31, p.23; fig 2, p.4"
+    },
+    {
+     "source": "nasa-5512ae",
+     "detail": "text p.3; fig 2a, p.37"
+    }
+   ]
+  },
+  "tank-1a": {
+   "title": "Tank 1A",
+   "text": "A small tank immediately forward of tank 1 and feeding it, under the air refuelling receptacle: 251 US gal, 1,650 lb of JP-7. Stations are scaled from the flight manual's tank drawing, to about plus or minus 25 in.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-32, p.1-48; Figure 1-40, p.1-59; p.1-47 to 1-58"
+    }
+   ]
+  },
+  "tank-1": {
+   "title": "Tank 1",
+   "text": "2,096 US gal, 13,770 lb of JP-7, with four boost pumps and the nitrogen heat exchanger. Stations are scaled from the flight manual's tank drawing, to about plus or minus 25 in.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-32, p.1-48; Figure 1-40, p.1-59; p.1-47 to 1-58"
+    }
+   ]
+  },
+  "tank-2": {
+   "title": "Tank 2",
+   "text": "1,974 US gal, 12,970 lb of JP-7. Stations are scaled from the flight manual's tank drawing, to about plus or minus 25 in.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-32, p.1-48; Figure 1-40, p.1-59; p.1-47 to 1-58"
+    }
+   ]
+  },
+  "tank-3": {
+   "title": "Tank 3",
+   "text": "The largest group, in the fuselage and the forward wing box each side: 2,460 US gal, 16,160 lb of JP-7. Stations are scaled from the flight manual's tank drawing, to about plus or minus 25 in.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-32, p.1-48; Figure 1-40, p.1-59; p.1-47 to 1-58"
+    }
+   ]
+  },
+  "tank-3-wing-l": {
+   "title": "Tank 3",
+   "text": "The largest group, in the fuselage and the forward wing box each side: 2,460 US gal, 16,160 lb of JP-7. Stations are scaled from the flight manual's tank drawing, to about plus or minus 25 in.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-32, p.1-48; Figure 1-40, p.1-59; p.1-47 to 1-58"
+    }
+   ]
+  },
+  "tank-3-wing-r": {
+   "title": "Tank 3",
+   "text": "The largest group, in the fuselage and the forward wing box each side: 2,460 US gal, 16,160 lb of JP-7. Stations are scaled from the flight manual's tank drawing, to about plus or minus 25 in.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-32, p.1-48; Figure 1-40, p.1-59; p.1-47 to 1-58"
+    }
+   ]
+  },
+  "tank-4": {
+   "title": "Tank 4",
+   "text": "1,454 US gal, 9,550 lb of JP-7. Hot fuel from the heat-sink loop comes back here, and the drag chute is stowed above it. Stations are scaled from the flight manual's tank drawing, to about plus or minus 25 in.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-32, p.1-48; Figure 1-40, p.1-59; p.1-47 to 1-58"
+    }
+   ]
+  },
+  "tank-5": {
+   "title": "Tank 5",
+   "text": "The aft transfer tank: 1,758 US gal, 11,550 lb of JP-7, used to move the centre of gravity aft for supersonic flight. Stations are scaled from the flight manual's tank drawing, to about plus or minus 25 in.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-32, p.1-48; Figure 1-40, p.1-59; p.1-47 to 1-58"
+    }
+   ]
+  },
+  "tank-6a": {
+   "title": "Tank 6A",
+   "text": "In the aft wing box each side: 1,158 US gal, 7,610 lb of JP-7. Stations are scaled from the flight manual's tank drawing, to about plus or minus 25 in.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-32, p.1-48; Figure 1-40, p.1-59; p.1-47 to 1-58"
+    }
+   ]
+  },
+  "tank-6a-l": {
+   "title": "Tank 6A",
+   "text": "In the aft wing box each side: 1,158 US gal, 7,610 lb of JP-7. Stations are scaled from the flight manual's tank drawing, to about plus or minus 25 in.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-32, p.1-48; Figure 1-40, p.1-59; p.1-47 to 1-58"
+    }
+   ]
+  },
+  "tank-6a-r": {
+   "title": "Tank 6A",
+   "text": "In the aft wing box each side: 1,158 US gal, 7,610 lb of JP-7. Stations are scaled from the flight manual's tank drawing, to about plus or minus 25 in.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-32, p.1-48; Figure 1-40, p.1-59; p.1-47 to 1-58"
+    }
+   ]
+  },
+  "tank-6b": {
+   "title": "Tank 6B",
+   "text": "In the aft wing box each side, behind 6A: 1,069 US gal, 7,020 lb of JP-7. Stations are scaled from the flight manual's tank drawing, to about plus or minus 25 in.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-32, p.1-48; Figure 1-40, p.1-59; p.1-47 to 1-58"
+    }
+   ]
+  },
+  "tank-6b-l": {
+   "title": "Tank 6B",
+   "text": "In the aft wing box each side, behind 6A: 1,069 US gal, 7,020 lb of JP-7. Stations are scaled from the flight manual's tank drawing, to about plus or minus 25 in.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-32, p.1-48; Figure 1-40, p.1-59; p.1-47 to 1-58"
+    }
+   ]
+  },
+  "tank-6b-r": {
+   "title": "Tank 6B",
+   "text": "In the aft wing box each side, behind 6A: 1,069 US gal, 7,020 lb of JP-7. Stations are scaled from the flight manual's tank drawing, to about plus or minus 25 in.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-32, p.1-48; Figure 1-40, p.1-59; p.1-47 to 1-58"
+    }
+   ]
+  },
+  "seat": {
+   "title": "Lockheed SR-1 ejection seat",
+   "text": "A rocket-assisted seat usable from zero speed and altitude to the edge of the flight envelope. Pulling the D-ring jettisons the canopy, then fires the catapult. Shape here is representative; positions from the flight manual figure.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.1-199 to 1-203; Figure 4-24, p.4-80"
+    }
+   ]
+  },
+  "seat-pilot": {
+   "title": "Lockheed SR-1 ejection seat",
+   "text": "A rocket-assisted seat usable from zero speed and altitude to the edge of the flight envelope. Pulling the D-ring jettisons the canopy, then fires the catapult. Shape here is representative; positions from the flight manual figure.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.1-199 to 1-203; Figure 4-24, p.4-80"
+    }
+   ]
+  },
+  "seat-rso": {
+   "title": "Lockheed SR-1 ejection seat",
+   "text": "A rocket-assisted seat usable from zero speed and altitude to the edge of the flight envelope. Pulling the D-ring jettisons the canopy, then fires the catapult. Shape here is representative; positions from the flight manual figure.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.1-199 to 1-203; Figure 4-24, p.4-80"
+    }
+   ]
+  },
+  "panel-pilot": {
+   "title": "Pilot's instrument panel",
+   "text": "50 numbered items in the flight manual, from the attitude director indicator in the middle to the inlet controls at lower left. See the panel explorer below.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-12, p.1-23"
+    }
+   ]
+  },
+  "panel-rso": {
+   "title": "RSO's instrument panel",
+   "text": "The reconnaissance systems officer's panel: viewsight at the top, radar display below, no flight controls.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-17, p.1-28"
+    }
+   ]
+  },
+  "bay-a": {
+   "title": "Compartment A, nose",
+   "text": "Radar or optical bar camera equipment in the interchangeable nose.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-1, p.1-5; Figure 4-24, p.4-80; p.4-86, 4-93"
+    }
+   ]
+  },
+  "bay-b": {
+   "title": "Compartment B, left chine",
+   "text": "The left forward chine bay: the third liquid nitrogen Dewar and the pressure transducer assembly.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.1-58, p.1-134; Figure 4-24, p.4-80"
+    }
+   ]
+  },
+  "bay-d": {
+   "title": "Compartment D, right chine",
+   "text": "The right chine bay, carrying defensive electronics (DEF A2, C2 and M).",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-1, p.1-5; Figure 4-37, p.4-125"
+    }
+   ]
+  },
+  "bay-km": {
+   "title": "Left forward mission bay (K, M)",
+   "text": "Compartment K, forward, with the DEF H system; compartment M, aft, with the digital and EIP recorders.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-1, p.1-5; Figures 4-24 and 4-37, p.4-80, p.4-125"
+    }
+   ]
+  },
+  "bay-ln": {
+   "title": "Right forward mission bay (L, N)",
+   "text": "Compartments L and N, carrying radar recorders.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-1, p.1-5; Figures 4-24 and 4-37, p.4-80, p.4-125"
+    }
+   ]
+  },
+  "bay-ps": {
+   "title": "Left aft mission bay (P, S)",
+   "text": "Compartment P, forward, with a technical objective camera; compartment S, aft, with the EIP electronic intelligence equipment.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-1, p.1-5; p.4-81, p.4-99"
+    }
+   ]
+  },
+  "bay-qt": {
+   "title": "Right aft mission bay (Q, T)",
+   "text": "Compartment Q, forward, with a technical objective camera or radar recorder; compartment T, aft, with EIP equipment.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-1, p.1-5; p.4-81, p.4-99"
+    }
+   ]
+  },
+  "bay-ans": {
+   "title": "Astro-inertial navigation bay",
+   "text": "The guidance group (inertial platform, star-tracking telescope and computer) is mounted in the fuselage aft of the rear cockpit, beside the air conditioning bay.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.4-5; Figure 4-24, p.4-80"
+    }
+   ]
+  },
+  "star-tracker": {
+   "title": "Star tracker window",
+   "text": "The ANS telescope looks up through this window in a 78 degree cone, its axis vertical when the nose is 7.5 degrees up, tracking stars by day and night.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.4-3 to 4-6; Figure 4-24, p.4-80"
+    }
+   ]
+  },
+  "ar-receptacle": {
+   "title": "Air refuelling receptacle",
+   "text": "On the spine above tank 1A. The flight manual's figure shows the door without a label; its identification here is inferred from the tank drawing. Tankers delivered about 6,000 lb a minute.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 4-37, p.4-125; Figure 1-40, p.1-59; p.1-60"
+    }
+   ]
+  },
+  "drag-chute": {
+   "title": "Drag chute compartment",
+   "text": "Above tank 4: a 42 in pilot chute, a 10 ft extraction chute and a 40 ft ribbon drag chute, deployed at up to 210 KIAS.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.1-93; Figure 4-37, p.4-125"
+    }
+   ]
+  },
+  "main-gear": {
+   "title": "Main landing gear",
+   "text": "Three-wheel bogies that retract inboard into the fuselage, between tanks 3 and 4. Shown stowed; wheel size from the flight manual, layout representative.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.1-89; Figures 5-6 and 5-8"
+    },
+    {
+     "source": "nasa-5512ae",
+     "detail": "text p.3"
+    }
+   ]
+  },
+  "main-gear-l": {
+   "title": "Main landing gear",
+   "text": "Three-wheel bogies that retract inboard into the fuselage, between tanks 3 and 4. Shown stowed; wheel size from the flight manual, layout representative.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.1-89; Figures 5-6 and 5-8"
+    },
+    {
+     "source": "nasa-5512ae",
+     "detail": "text p.3"
+    }
+   ]
+  },
+  "main-gear-r": {
+   "title": "Main landing gear",
+   "text": "Three-wheel bogies that retract inboard into the fuselage, between tanks 3 and 4. Shown stowed; wheel size from the flight manual, layout representative.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.1-89; Figures 5-6 and 5-8"
+    },
+    {
+     "source": "nasa-5512ae",
+     "detail": "text p.3"
+    }
+   ]
+  },
+  "nose-gear": {
+   "title": "Nose landing gear",
+   "text": "Dual wheels that retract forward into the fuselage. Shown stowed; position derived from the flight manual's turning-radius figure.",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.1-89; Figure 2-3, p.2-30"
+    }
+   ]
   }
  },
  "layers": [
@@ -1013,11 +1431,15 @@
   },
   {
    "id": "crew",
-   "name": "Cockpits and crew"
+   "name": "Cockpits"
   },
   {
    "id": "bays",
    "name": "Sensors and bays"
+  },
+  {
+   "id": "gear",
+   "name": "Landing gear"
   }
  ],
  "panel": {

@@ -342,6 +342,8 @@ def fuselage(c, mat):
     for pv, pf in glass:
         gv += pv; gf += [tuple(off + k for k in q) for q in pf]; off += len(pv)
     parts.append(tag(obj("Canopy glass", gv, gf, GLASS, angle=60), "canopy-glass", "skin", (-2.4, 0, 1.8)))
+    global FUSE
+    FUSE = {"rings": rings, "xs": np.array([r[0, 0] for r in rings]), "nu": N_U, "nl": N_L}
     return parts
 
 
@@ -418,6 +420,7 @@ def wing(c, mat):
             tagn = "R" if side > 0 else "L"
             ob = obj(f"{name} {tagn}", vu + vl, faces, mat, angle=40)
             objs.append(tag(ob, f"{name.lower().replace(' ', '-')}-{tagn.lower()}", "skin", (ex[0], side * ex[1], ex[2])))
+    objs += wing_internals(xs, ys_out, surf)
     return objs
 
 
@@ -529,7 +532,7 @@ def nacelles(c, mat, dark):
         objs.append(tag(obj(f"Bypass tubes {sd}", tubes_v, tubes_f, ENGINE, angle=50), f"bypass-tubes-{sl}", "engines", e_eng, "representative"))
         for label, x, r, ex, mt in (("Engine face", x_face, 0.62, e_eng, dark), ("Nozzle", xs[-1] - 0.25, 0.92 * min(aa[-1], bbv[-1]), e_nac, dark)):
             verts = [(x, side * yc_at(x) + r * math.cos(t), zc_at(x) + r * math.sin(t)) for t in ang]
-            objs.append(tag(obj(f"{label} {sd}", verts, [tuple(range(seg))], mt), f"{label.lower().replace(' ', '-')}-{sl}", "engines", ex))
+            objs.append(tag(obj(f"{label} {sd}", verts, [tuple(range(seg))], mt), f"{label.lower().replace(' ', '-')}-{sl}", "skin" if label == "Nozzle" else "engines", ex))
     return objs
 
 
@@ -588,6 +591,272 @@ def probe(mat):
     return tag(obj("Pitot probe", v, f, mat, angle=60), "pitot-probe", "skin", (-4.0, 0, 0))
 
 
+# ------------------------------------------------------------ internal structure and systems
+# Stations from research/structure/structure.json (cited there): wing beams and ribs from the
+# labelled YF-12A structure drawings (NASA TM X-2880 fig 2a, TM-104317 figs 26 and 31), which share
+# the SR-71's stations from the wing aft; tanks, bays, cockpits and gear scaled from the SR-71A-1
+# flight manual figures (about plus or minus 25 in). x is metres aft of the radome tip.
+
+FS = lambda fs: (fs - 102) * 0.0254
+
+
+def section_z(x, y):
+    """Upper and lower skin heights of the fuselage section nearest station x, at lateral y."""
+    xs, rings, nu, nl = FUSE["xs"], FUSE["rings"], FUSE["nu"], FUSE["nl"]
+    i = int(np.argmin(np.abs(xs - x)))
+    r = rings[i]
+    up = r[:nu]
+    lo = r[nu:nu + nl][::-1]
+    lo = np.vstack([lo, up[-1:]])
+    ay = abs(y)
+    return float(np.interp(ay, up[:, 1], up[:, 2])), float(np.interp(ay, lo[:, 1], lo[:, 2])), float(up[-1, 1])
+
+
+def volume(name, mat, xs_, ys_fn, inset, layer, part, accuracy="representative", explode=(0, 0, 0), side=1, n=16):
+    """A closed volume inside the fuselage between stations xs_, spanning ys_fn(x) -> (y0, y1)
+    on one side (side = 1 right, -1 left) or across the centreline (y0 < 0), inset from the skin."""
+    rings = []
+    for x in xs_:
+        y0, y1 = ys_fn(x)
+        top, bot = [], []
+        for y in np.linspace(y0, y1, n):
+            zu, zl, _ = section_z(x, y)
+            top.append((x, side * y, zu - inset)); bot.append((x, side * y, zl + inset))
+        ring = top + bot[::-1]
+        rings.append(np.array(ring))
+    v, f = loft(rings, cap_start=True, cap_end=True)
+    return tag(obj(name, v, f, mat, angle=45), part, layer, explode, accuracy)
+
+
+def frame(name, x, mat, depth=0.09, thick=0.035, ylim=None):
+    """A fuselage frame at station x: the skin section offset inward by `depth`, `thick` wide."""
+    xs, rings, nu, nl = FUSE["xs"], FUSE["rings"], FUSE["nu"], FUSE["nl"]
+    i = int(np.argmin(np.abs(xs - x)))
+    r = rings[i][:, 1:].copy()
+    if ylim is not None:            # keep the frame to the body (behind the wing junction)
+        r = r[np.abs(r[:, 0]) <= ylim + 1e-6]
+    n = len(r)
+    if n < 6:
+        return None
+    # inward offset of a closed polygon by `depth`
+    c = r.mean(0)
+    inner = []
+    for k in range(n):
+        a, b = r[k - 1], r[(k + 1) % n]
+        t = b - a; nrm = np.array([-t[1], t[0]]); nrm /= (np.linalg.norm(nrm) + 1e-9)
+        if np.dot(nrm, c - r[k]) < 0:
+            nrm = -nrm
+        inner.append(r[k] + nrm * depth)
+    inner = np.array(inner)
+    loops = []
+    for dx in (-thick / 2, thick / 2):
+        loops.append(np.column_stack([np.full(n, x + dx), r]))
+        loops.append(np.column_stack([np.full(n, x + dx), inner]))
+    verts = [tuple(p) for L in loops for p in L]
+    faces = []
+    A, B, C, D = 0, n, 2 * n, 3 * n          # outer front, inner front, outer back, inner back
+    for k in range(n):
+        k2 = (k + 1) % n
+        faces.append((A + k, A + k2, C + k2, C + k))      # outer band
+        faces.append((B + k, D + k, D + k2, B + k2))      # inner band
+        faces.append((A + k, B + k, B + k2, A + k2))      # front face
+        faces.append((C + k, C + k2, D + k2, D + k))      # back face
+    return obj(name, verts, faces, mat, angle=30)
+
+
+def tube_along(points, r, mat, name, seg=10):
+    ang = np.linspace(0, 2 * math.pi, seg, endpoint=False)
+    rings = [np.array([(p[0], p[1] + r * math.cos(t), p[2] + r * math.sin(t)) for t in ang]) for p in points]
+    v, f = loft(rings, cap_start=True, cap_end=True)
+    return obj(name, v, f, mat, angle=60)
+
+
+def box(name, x0, x1, y0, y1, z0, z1, mat):
+    v = [(x0, y0, z0), (x1, y0, z0), (x1, y1, z0), (x0, y1, z0), (x0, y0, z1), (x1, y0, z1), (x1, y1, z1), (x0, y1, z1)]
+    f = [(0, 3, 2, 1), (4, 5, 6, 7), (0, 1, 5, 4), (1, 2, 6, 5), (2, 3, 7, 6), (3, 0, 4, 7)]
+    return obj(name, v, f, mat)
+
+
+def wheel(name, x, y, z, r, w, mat, seg=28):
+    """A tyre with its axis along y (main bogie wheels sit side by side across the aircraft)."""
+    ang = np.linspace(0, 2 * math.pi, seg, endpoint=False)
+    rings = []
+    for yy, rr in ((y - w / 2, r * 0.82), (y - w / 2 + 0.02, r), (y + w / 2 - 0.02, r), (y + w / 2, r * 0.82)):
+        rings.append(np.array([(x + rr * math.cos(t), yy, z + rr * math.sin(t)) for t in ang]))
+    v, f = loft(rings, cap_start=True, cap_end=True)
+    return obj(name, v, f, mat, angle=40)
+
+
+def wing_internals(xs, ys_out, surf):
+    """Spanwise beams and chordwise ribs of the inner wing box and the outer panel box, and the
+    wing parts of fuel tanks 3, 6A and 6B, all held between the wing skins."""
+    objs = []
+    Y = lambda x: float(np.interp(x, xs, ys_out))
+    def le_te(y):
+        ok = xs[ys_out >= y]
+        return (float(ok[0]), float(ok[-1])) if len(ok) else (None, None)
+    def web(name, pts):
+        # pts: list of (x, y); a sheet between the lower and upper skin, inset 6 mm
+        top, bot = [], []
+        for x, y in pts:
+            zu, zl = surf(x, y)
+            top.append((x, y, zu - 0.006)); bot.append((x, y, zl + 0.006))
+        return [np.array(bot), np.array(top)]
+    beams_in = [FS(f) for f in (769.4, 785.5, 802.0, 818.4, 834.8, 850.6, 866.7, 883.2, 900.3, 915.7, 954.9, 970.4, 987.1,
+                                1002.9, 1019.0, 1035.8, 1051.6, 1067.3, 1083.8, 1099.9, 1116.3, 1131.7, 1148.5, 1163.9, 1180.0, 1196.1, 1213.2)]
+    for side in (1, -1):
+        sl = "r" if side > 0 else "l"
+        verts, faces, off = [], [], 0
+        def add(rows):
+            nonlocal off
+            v, f = loft(rows, closed=False)
+            v = [(p[0], side * p[1], p[2]) for p in v]
+            f = [q if side > 0 else q[::-1] for q in f]
+            verts.extend(v); faces.extend(tuple(off + k for k in q) for q in f); off += len(v)
+        for x in beams_in:                                   # inner box beams, WS 35 to 127
+            y1 = min(Y(x), 3.226)
+            if y1 > 0.95:
+                add(web("beam", [(x, y) for y in np.linspace(0.889, y1, 14)]))
+        for x in [FS(f) for f in range(1050, 1189, 16)]:      # outer panel box beams, WS 213 to 293.5
+            if 24.0 <= x <= 27.7:
+                y1 = min(Y(x), 7.455)
+                if y1 > 5.5:
+                    add(web("beam", [(x, y) for y in np.linspace(5.41, y1, 14)]))
+        for y in (0.889, 1.829, 2.54, 3.226, 5.41, 6.121, 6.782, 7.455):   # ribs at WS 35, 72, 100, 127, 213, 241, 267, 293.5
+            le, te = le_te(y)
+            if le is None:
+                continue
+            if y < 4:
+                lo, hi = max(le + 0.05, FS(738)), min(te - 0.05, FS(1226))
+            else:
+                lo, hi = max(le + 0.05, FS(1050)), min(te - 0.05, FS(1190))
+            if hi - lo > 0.3:
+                add(web("rib", [(x, y) for x in np.linspace(lo, hi, 30)]))
+        objs.append(tag(obj(f"Wing structure {sl.upper()}", verts, faces, FRAME, angle=30), f"wing-structure-{sl}", "structure", (0, 0, 0), "measured"))
+        # wing fuel: tank 3 (forward box) and tanks 6A, 6B (aft box), WS 35 to 127
+        for tid, a, b in (("tank-3-wing", FS(738), FS(914)), ("tank-6a", FS(954), FS(1090)), ("tank-6b", FS(1090), FS(1226))):
+            rows = []
+            for x in np.linspace(a + 0.04, b - 0.04, 18):
+                y1 = min(Y(x), 3.226) - 0.03
+                if y1 < 1.0:
+                    continue
+                ys_ = np.linspace(0.92, y1, 10)
+                top = [(x, side * y, surf(x, y)[0] - 0.015) for y in ys_]
+                bot = [(x, side * y, surf(x, y)[1] + 0.015) for y in ys_]
+                rows.append(np.array(top + bot[::-1]))
+            if len(rows) > 2:
+                v, f = loft(rows, cap_start=True, cap_end=True)
+                if side < 0:
+                    f = [q[::-1] for q in f]
+                objs.append(tag(obj(f"{tid} {sl.upper()}", v, f, FUEL, angle=40), f"{tid}-{sl}", "fuel", (0, side * 0.5, 0)))
+    return objs
+
+
+def internals():
+    objs = []
+    # fuselage frames: tank-end bulkheads and cockpit bulkheads (flight manual figures), the
+    # forebody-to-mid-fuselage joint (FS 715) and the wing beams carried through the fuselage
+    stations = sorted(set([3.38, 3.61, 5.42, 7.12, FS(404), FS(474), FS(595), FS(715), FS(739)]
+                          + [FS(f) for f in (769.4, 802.0, 834.8, 866.7, 900.3, 914, 954, 987.1, 1019.0, 1051.6,
+                                             1083.8, 1116.3, 1148.5, 1180.0, 1213.2, 1300)]))
+    fv, ff, off = [], [], 0
+    for x in stations:
+        body = None if x < 15.9 else 1.05
+        ob = frame("f", x, FRAME, ylim=body)
+        if ob is None:
+            continue
+        me = ob.data
+        vs = [tuple(ob.matrix_world @ v.co) for v in me.vertices]
+        # obj() negated x for Blender; undo so all frames merge into one model-frame mesh
+        fv.extend([(-p[0], p[1], p[2]) for p in vs]); ff.extend(tuple(off + k for k in pg.vertices) for pg in me.polygons); off += len(vs)
+        bpy.data.objects.remove(ob, do_unlink=True)
+    objs.append(tag(obj("Fuselage frames", fv, ff, FRAME, angle=30), "fuselage-frames", "structure", (0, 0, 0), "representative"))
+    # longerons: top and bottom centreline, and the side longerons of the forebody core
+    lv, lf, off = [], [], 0
+    def lon(points):
+        nonlocal off
+        ob = tube_along(points, 0.03, FRAME, "l")
+        vs = [(-v.co[0], v.co[1], v.co[2]) for v in ob.data.vertices]
+        lv.extend(vs); lf.extend(tuple(off + k for k in pg.vertices) for pg in ob.data.polygons); off += len(vs)
+        bpy.data.objects.remove(ob, do_unlink=True)
+    xs_l = np.arange(0.6, 30.4, 0.25)
+    lon([(x, 0.0, section_z(x, 0.0)[0] - 0.06) for x in xs_l])
+    lon([(x, 0.0, section_z(x, 0.0)[1] + 0.06) for x in xs_l])
+    for sd in (1, -1):
+        lon([(x, sd * 0.78, 0.5 * sum(section_z(x, 0.78)[:2])) for x in np.arange(FS(381), FS(791), 0.25)])
+    objs.append(tag(obj("Longerons", lv, lf, FRAME, angle=60), "longerons", "structure", (0, 0, 0), "representative"))
+
+    # fuel tanks in the fuselage (flight manual fig. 1-32, stations scaled from fig. 1-40)
+    core = lambda x: (-min(0.74, 0.9 * section_z(x, 0)[2]), min(0.74, 0.9 * section_z(x, 0)[2]))
+    for tid, a, b in (("tank-1a", 404, 474), ("tank-1", 474, 595), ("tank-2", 595, 739), ("tank-3", 739, 914),
+                      ("tank-4", 954, 1106), ("tank-5", 1106, 1300)):
+        x0, x1 = FS(a) + 0.04, FS(b) - 0.04
+        objs.append(volume(tid.replace("-", " ").title(), FUEL, np.linspace(x0, x1, 16), core, 0.07, "fuel", tid, explode=(0, 0, 0)))
+
+    # crew: SR-1 ejection seats and instrument panels (flight manual fig. 4-24 and 1-12, 1-17)
+    for nm, xs_, zh in (("pilot", 4.48, 0.991), ("rso", 6.17, 1.143)):
+        zu, zl, _ = section_z(xs_, 0.0)
+        floor = zl + 0.42
+        sv, sf, off = [], [], 0
+        for part_ in (box("s", xs_ - 0.05, xs_ + 0.42, -0.25, 0.25, floor, floor + 0.14, SEAT),
+                      box("s", xs_ + 0.32, xs_ + 0.46, -0.25, 0.25, floor + 0.1, floor + 0.85, SEAT),
+                      box("s", xs_ + 0.30, xs_ + 0.46, -0.16, 0.16, floor + 0.85, floor + 1.02, SEAT)):
+            vs = [(-v.co[0], v.co[1], v.co[2]) for v in part_.data.vertices]
+            sv.extend(vs); sf.extend(tuple(off + k for k in pg.vertices) for pg in part_.data.polygons); off += len(vs)
+            bpy.data.objects.remove(part_, do_unlink=True)
+        objs.append(tag(obj(f"Seat {nm}", sv, sf, SEAT, angle=30), f"seat-{nm}", "crew", (0, 0, 2.2), "representative"))
+        px = xs_ - 0.55
+        pu, pl, _ = section_z(px, 0.0)
+        objs.append(tag(box(f"Panel {nm}", px - 0.02, px + 0.02, -0.34, 0.34, pl + 0.75, min(pu - 0.12, pl + 1.25), PANEL), f"panel-{nm}", "crew", (0, 0, 2.2), "representative"))
+
+    # equipment bays: chine bays out to near the chine edge, centreline bays in the core
+    def chine(y_in, frac):
+        return lambda x: (y_in, max(y_in + 0.1, frac * section_z(x, 0)[2]))
+    bays = [("Bay A nose", "bay-a", 1.12, 3.40, lambda x: (-0.35 * section_z(x, 0)[2], 0.35 * section_z(x, 0)[2]), 1),
+            ("Bay B left chine", "bay-b", 3.40, 6.58, chine(0.55, 0.88), -1),
+            ("Bay D right chine", "bay-d", 4.70, 6.76, chine(0.55, 0.88), 1),
+            ("Mission bays K M left", "bay-km", 6.60, 10.67, chine(0.82, 0.9), -1),
+            ("Mission bays L N right", "bay-ln", 6.60, 10.67, chine(0.82, 0.9), 1),
+            ("Mission bays P S left", "bay-ps", 10.90, 14.78, chine(0.85, 0.9), -1),
+            ("Mission bays Q T right", "bay-qt", 10.85, 14.83, chine(0.85, 0.9), 1),
+            ("ANS bay", "bay-ans", 7.24, 7.98, lambda x: (-0.23, 0.23), 1)]
+    for nm, pid, a, b, fn, sd in bays:
+        objs.append(volume(nm, BAY, np.linspace(a, b, 12), fn, 0.04, "bays", pid, side=sd, n=10))
+
+    # landing gear (stowed), drag chute door, refuelling receptacle, star tracker window
+    for sd in (1, -1):
+        sl = "r" if sd > 0 else "l"
+        zu, zl, _ = section_z(21.16, 1.5)
+        gv_, gf_, off = [], [], 0
+        for k in range(3):
+            ob = wheel("w", 21.16, sd * (1.15 + k * 0.36), zl + 0.42, 0.349, 0.19, TYRE)
+            vs = [(-v.co[0], v.co[1], v.co[2]) for v in ob.data.vertices]
+            gv_.extend(vs); gf_.extend(tuple(off + kk for kk in pg.vertices) for pg in ob.data.polygons); off += len(vs)
+            bpy.data.objects.remove(ob, do_unlink=True)
+        objs.append(tag(obj(f"Main gear {sl.upper()}", gv_, gf_, TYRE, angle=40), f"main-gear-{sl}", "gear", (0, 0, -2.0), "representative"))
+    zu, zl, _ = section_z(9.53, 0)
+    nv, nf, off = [], [], 0
+    for yy in (-0.13, 0.13):
+        ob = wheel("w", 9.53, yy, zl + 0.3, 0.22, 0.14, TYRE)
+        vs = [(-v.co[0], v.co[1], v.co[2]) for v in ob.data.vertices]
+        nv.extend(vs); nf.extend(tuple(off + kk for kk in pg.vertices) for pg in ob.data.polygons); off += len(vs)
+        bpy.data.objects.remove(ob, do_unlink=True)
+    objs.append(tag(obj("Nose gear", nv, nf, TYRE, angle=40), "nose-gear", "gear", (0, 0, -2.0), "representative"))
+    for nm, pid, a, b, w in (("Drag chute door", "drag-chute", FS(1004), FS(1070), 0.32), ("Refuelling receptacle", "ar-receptacle", FS(403), FS(442), 0.14)):
+        pts = []
+        for x in np.linspace(a, b, 10):
+            for y in np.linspace(-w, w, 6):
+                pts.append((x, y, section_z(x, y)[0] + 0.006))
+        faces = [(i * 6 + j, i * 6 + j + 1, (i + 1) * 6 + j + 1, (i + 1) * 6 + j) for i in range(9) for j in range(5)]
+        objs.append(tag(obj(nm, pts, faces, MARKER, angle=60), pid, "gear" if pid == "drag-chute" else "bays", (0, 0, 0), "representative"))
+    xw = FS(395)
+    ang = np.linspace(0, 2 * math.pi, 24, endpoint=False)
+    zt = section_z(xw, 0)[0] + 0.008
+    objs.append(tag(obj("Star tracker window", [(xw + 0.115 * math.cos(t), 0.115 * math.sin(t), zt) for t in ang], [tuple(range(24))], MARKER), "star-tracker", "bays", (0, 0, 0), "representative"))
+    return objs
+
+
+
 def main():
     a = args()
     c = json.loads(Path(a["components"]).read_text())
@@ -610,7 +879,16 @@ def main():
     global ENGINE, HOT
     ENGINE = named("Engine metal", (0.40, 0.41, 0.43, 1), 1.0, 0.35)
     HOT = named("Engine hot section", (0.33, 0.25, 0.18, 1), 1.0, 0.42)
+    global FRAME, FUEL, BAY, SEAT, PANEL, TYRE, MARKER
+    FRAME = named("Frame", (0.55, 0.58, 0.62, 1), 1.0, 0.4)
+    FUEL = named("Fuel tank", (0.85, 0.55, 0.12, 1), 0.0, 0.3)
+    BAY = named("Bay", (0.15, 0.55, 0.75, 1), 0.0, 0.4)
+    SEAT = named("Seat", (0.10, 0.11, 0.09, 1), 0.0, 0.7)
+    PANEL = named("Panel", (0.02, 0.02, 0.025, 1), 0.2, 0.5)
+    TYRE = named("Tyre", (0.03, 0.03, 0.03, 1), 0.0, 0.85)
+    MARKER = named("Marker", (0.83, 0.26, 0.18, 1), 0.0, 0.5)
     parts = fuselage(c, skin) + wing(c, skin) + [probe(skin)] + nacelles(c, skin, dark) + fins(c, skin)
+    parts += internals()
     root = bpy.data.objects.new("SR-71A", None); bpy.context.collection.objects.link(root)
     for o in parts:
         o.parent = root

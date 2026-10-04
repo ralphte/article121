@@ -131,6 +131,13 @@ const HOTSPOTS: [string, string, string][] = [['inlet', 'Inlet spike', '#inlet']
     'Intake and nozzle': () => new THREE.MeshStandardMaterial({ color: lin(0.006, 0.006, 0.007), roughness: 0.75 }),
     'Engine metal': () => new THREE.MeshPhysicalMaterial({ color: lin(0.42, 0.43, 0.45), roughness: 0.32, metalness: 1 }),
     'Engine hot section': () => new THREE.MeshPhysicalMaterial({ color: lin(0.36, 0.26, 0.17), roughness: 0.4, metalness: 1 }),
+    'Frame': () => new THREE.MeshStandardMaterial({ color: lin(0.55, 0.58, 0.62), roughness: 0.45, metalness: 0.9 }),
+    'Fuel tank': () => new THREE.MeshStandardMaterial({ color: lin(0.85, 0.5, 0.1), roughness: 0.35, metalness: 0, transparent: true, opacity: 0.55, depthWrite: false }),
+    'Bay': () => new THREE.MeshStandardMaterial({ color: lin(0.12, 0.45, 0.7), roughness: 0.4, metalness: 0, transparent: true, opacity: 0.5, depthWrite: false }),
+    'Seat': () => new THREE.MeshStandardMaterial({ color: lin(0.09, 0.1, 0.08), roughness: 0.7 }),
+    'Panel': () => new THREE.MeshStandardMaterial({ color: lin(0.02, 0.02, 0.025), roughness: 0.5 }),
+    'Tyre': () => new THREE.MeshStandardMaterial({ color: lin(0.03, 0.03, 0.03), roughness: 0.85 }),
+    'Marker': () => new THREE.MeshStandardMaterial({ color: lin(0.83, 0.26, 0.18), roughness: 0.5, emissive: lin(0.2, 0.04, 0.02) }),
   };
   // X-ray: a fresnel rim, bright where the skin turns away from the eye, nearly clear face-on
   const xrayMaterial = (clip: THREE.Plane[]) => new THREE.ShaderMaterial({

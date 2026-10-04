@@ -8,7 +8,7 @@ Station shorthand used below: FS is fuselage station, WL waterline, BL buttline,
 
 | Rank | Source | What it gives | Rights |
 |---|---|---|---|
-| 1 | NASA TM-4749 (1996), LASRE wind-tunnel paper, figs 4 and 5 (`pages/ntrs-19960038443_*`) | SR-71A side and plan outlines labelled with real station coordinates: nose FS 102, tail cone FS 1355, wing trailing-edge tip FS 1295, wing tip BL 340.2, upper fuselage WL 131. Use it to put a true scale and datum on any traced outline. | NASA TM, public domain (also printed as an AIAA paper; NASA authors) |
+| 1 | NASA TM-4749 (1996), LASRE wind-tunnel paper, figs 4 and 5 (`pages/ntrs-19960038443_*`) | SR-71A side and plan outlines labelled with real station coordinates: nose FS 102, tail cone FS 1355, wing tip BL 340.2 (FS 1295 is the wind-tunnel sting cut, not aircraft structure), upper fuselage WL 131. Use it to put a true scale and datum on any traced outline. | NASA TM, public domain (also printed as an AIAA paper; NASA authors) |
 | 2 | NASA Dryden graphics EG-0075-02 (SR-71A) and EG-0075-05 (SR-71 with LASRE), 1998, original vector EPS from the Wayback Machine (`raw/dfrc_*`, `pages/dfrc_*`) | The cleanest public-domain three-view outline, as vectors. EG-0075-05 is dimensioned (55.60 / 107.40 / 18.50 ft). | U.S. government work, public domain |
 | 3 | NASA TM X-2880 (1973), YF-12 ground vibration tests, figs 2a and 5 (`pages/ntrs-19730021212_*`) | The only fuselage cross sections found (five, keyed to FS 254, 365, 580, 738, 1040), plus FS, WS, fin and ventral-fin station grids on a plan view. | Public domain |
 | 4 | NASA CP-2054 (1978), YF-12 Experiments Symposium: Gilyard and Smith fig 2 and Kock table 1 (`pages/ntrs-19780024116_*`, `pages/ntrs-19780024113_*`) | Front view with the fin cant (15 deg) and fin-tip spacing (6.92 m) on an SR-71A airframe (YF-12C). Full specification table: wing reference delta, elevons, fins, ventral fins, fuselage diameter. | Public domain |
@@ -19,7 +19,7 @@ Next in line: the inlet pair TM X-3144 (absolute cowl-lip radius) and Lockheed C
 ## 2. Best sources for each view
 
 ### Plan view
-- **SR-71A.** Trace Dryden EG-0075-02, then scale and register it to TM-4749 fig 4/5 (FS 102 nose, FS 1295 trailing-edge tip, FS 1355 tail cone, BL 340.2 tip). Check against the LASRE three-view (TM-1998-206567 fig 5, feet) and Gilyard fig 2 (metres). Flight manual fig 2-3 (turning radius) and fig 4-37 are stylised silhouettes; fig 4-24 is a good plan of the forward fuselage and chine bays. NASA photo EC97-44295-84 (`raw/nasa_EC97-44295-84_*`), taken from almost directly above, is for checking chine curvature and nacelle position.
+- **SR-71A.** Trace Dryden EG-0075-02, then scale and register it to TM-4749 fig 4/5 (FS 102 nose, FS 1355 tail cone, BL 340.2 tip; FS 1295 on TM-4749 is the wind-tunnel sting cut, not the wing trailing-edge tip, which is FS 1188 to 1200). Check against the LASRE three-view (TM-1998-206567 fig 5, feet) and Gilyard fig 2 (metres). Flight manual fig 2-3 (turning radius) and fig 4-37 are stylised silhouettes; fig 4-24 is a good plan of the forward fuselage and chine bays. NASA photo EC97-44295-84 (`raw/nasa_EC97-44295-84_*`), taken from almost directly above, is for checking chine curvature and nacelle position.
 - **YF-12A.** TN D-6987 fig 2 (dimensioned), TM X-2880 figs 2a and 5a (station grids), TP-1107 fig 2 (clean, undimensioned).
 - **A-12.** CIA A-12 ground handling manual fig 1-1 sheets 1 to 3 (top and bottom views with FS, NS, WS and BL callouts). Its fig 2-8 walkway plan is badly compressed; do not trace it.
 
@@ -154,3 +154,13 @@ A useful self-check: with nacelle centrelines at 14.17 ft, a 15 deg cant and fin
 - **Smithsonian (Open Access API, collections.si.edu, SOVA):** blocked or rate-limited scripted access. The NASM technical files remain unchecked and are worth a manual request.
 - **USAF museum and af.mil:** block scripts; Wayback had nothing beyond copies of the Dryden three-view.
 - **Lockheed engineering drawings:** none found posted publicly.
+
+
+## Internal structure (model v0.7)
+
+Stations for frames, wing beams and ribs, fuel tanks, bays, cockpits and gear are in `research/structure/structure.json` (93 cited items, with the WL to model z conversion z = (WL - 82.0) x 0.0254 m). No public document gives the SR-71A's own frame, longeron or tank bulkhead stations: the wing beams (16 in pitch) and ribs come from the labelled YF-12A drawings in NASA TM X-2880 and TM-104317, which share the SR-71's stations from the wing aft; tanks, bays, cockpits and gear are scaled from flight manual figures 1-40, 4-24, 4-37 and 2-3 (about plus or minus 25 in). The viewer marks these parts "representative".
+
+Known discrepancies between the traced outline and the flight manual, still to resolve:
+- Spike tip: the model's tip (FS 731) matches a retracted spike; a parked aircraft has it forward, at about FS 690.
+- Nacelle exit: model FS 1261 against about FS 1234 in the manual.
+- Chine to wing junction: model FS 730, 20 to 30 in aft of the manual and TM-4749.
