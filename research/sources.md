@@ -240,7 +240,7 @@ Rights: CIA site policy (https://www.cia.gov/site-policies/): "Unless a copyrigh
 
 ### 3.3 CIA, NRO, DVIDS, Smithsonian
 
-- CIA: "Archangel" https://www.youtube.com/watch?v=JXi7LkNipdc ; "The Debrief: Behind The Artifact: A-12 OXCART" https://www.youtube.com/watch?v=LPZJfChJLNs ; on the Internet Archive "Outrunning The Enemy: The CIA's A-12" and "Behind the Scenes: The A-12 Oxcart on Display at CIA Headquarters" (PD-USGov).
+- CIA: "Archangel" https://www.youtube.com/watch?v=JXi7LkNipdc ; "The Debrief: Behind The Artifact: A-12 OXCART" https://www.youtube.com/watch?v=LPZJfChJLNs ; on the Internet Archive "Outrunning The Enemy: The CIA's A-12" and "Behind the Scenes: The A-12 Oxcart on Display at CIA Headquarters", which are Smithsonian "STEM in 30" productions, not CIA works, so copyrighted (tier C, link only; corrected 4 October 2026 from the video catalogue, research/videos/catalog.md).
 - NRO: A-12 end-of-programme 50th anniversary https://www.youtube.com/watch?v=0iyU79EK_9I
 - DVIDS: images such as https://www.dvidshub.net/image/712841/sr-71-ship-1-ramp are marked "PUBLIC DOMAIN, Courtesy Photo NASA"; DVIDS video search is bot-blocked, use the API with a key.
 - Smithsonian NASM YouTube (copyrighted, embed only): `wT4uwr_eJnY` (OXCART lecture), `suWhYA5EeD0` (record flight).
