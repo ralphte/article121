@@ -722,7 +722,7 @@
  {
   "id": "nasm-61-7972-hangar",
   "file": "../assets/photos/nasm-61-7972-hangar.jpg",
-  "master": "/masters/nasm-61-7972-hangar.jpg",
+  "master": "https://files.article121.com/masters/nasm-61-7972-hangar.jpg",
   "airframe": "61-7972",
   "kind": "hero",
   "caption": "SR-71A 61-7972 seen nose-on in the Boeing Aviation Hangar of the Smithsonian's Steven F. Udvar-Hazy Center, Chantilly, Virginia.",
@@ -737,7 +737,7 @@
  {
   "id": "nasa-831-sierra-nevada",
   "file": "../assets/photos/nasa-831-sierra-nevada.jpg",
-  "master": "/masters/nasa-831-sierra-nevada.jpg",
+  "master": "https://files.article121.com/masters/nasa-831-sierra-nevada.jpg",
   "airframe": "61-7956",
   "kind": "hero",
   "caption": "SR-71B 61-7956, flown by NASA as NASA 831, over the southern Sierra Nevada, California, after refuelling from an Air Force tanker in December 1994.",
@@ -752,7 +752,7 @@
  {
   "id": "nasa-844-f16xl-formation",
   "file": "../assets/photos/nasa-844-f16xl-formation.jpg",
-  "master": "/masters/nasa-844-f16xl-formation.jpg",
+  "master": "https://files.article121.com/masters/nasa-844-f16xl-formation.jpg",
   "airframe": "61-7980",
   "kind": "hero",
   "caption": "SR-71A NASA 844 (61-7980) and F-16XL NASA 849 in formation during a NASA Dryden sonic boom research flight on 22 March 1995.",
@@ -767,7 +767,7 @@
  {
   "id": "cia-a12-60-6931-dusk",
   "file": "../assets/photos/cia-a12-60-6931-dusk.jpg",
-  "master": "/masters/cia-a12-60-6931-dusk.jpg",
+  "master": "https://files.article121.com/masters/cia-a12-60-6931-dusk.jpg",
   "airframe": "60-6931",
   "kind": "hero",
   "caption": "A-12 60-6931 on its pylon display at CIA Headquarters, Langley, Virginia, at dusk, in a CIA photograph dated 15 September 2008.",

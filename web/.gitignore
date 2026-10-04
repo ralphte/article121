@@ -3,4 +3,3 @@ dist/
 .astro/
 .wrangler/
 src/assets/photos/
-public/masters/

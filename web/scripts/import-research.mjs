@@ -7,7 +7,7 @@
 // collected into one source register keyed by URL, and each event and airframe keeps a list
 // of {source, detail} citations, where detail preserves page numbers or a more specific title.
 // Photos are copied into src/assets/photos so Astro can make responsive versions; the
-// full-resolution hero masters go to public/masters for the loupe and full-screen viewer.
+// full-resolution hero masters are served from the public R2 bucket at files.article121.com.
 import { createHash } from 'node:crypto';
 import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { basename, dirname, join, resolve } from 'node:path';
@@ -16,6 +16,7 @@ import { fileURLToPath } from 'node:url';
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, '../..');
 const web = resolve(here, '..');
+const FILES_BASE = process.env.FILES_BASE || 'https://files.article121.com';
 const read = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
 
 const timeline = read('research/timeline.json');
@@ -75,20 +76,15 @@ const known = new Set(afOut.map((a) => a.id));
 
 // ---------- photos
 const photosDir = join(web, 'src/assets/photos');
-const mastersDir = join(web, 'public/masters');
 mkdirSync(photosDir, { recursive: true });
-mkdirSync(mastersDir, { recursive: true });
 const photos = [];
 function addPhoto(p, airframe, kind) {
   const src = join(root, 'design', p.file);
   if (!existsSync(src)) throw new Error(`missing photo ${p.file}`);
   const name = basename(p.file);
   copyFileSync(src, join(photosDir, name));
-  let master = null;
-  if (kind === 'hero') {
-    copyFileSync(src, join(mastersDir, name));
-    master = `/masters/${name}`;
-  }
+  // Full-resolution masters live in R2 (tools/r2 copy design/img/hero r2:article121-files/masters)
+  const master = kind === 'hero' ? `${FILES_BASE}/masters/${name}` : null;
   for (const f of ['creator', 'license', 'source_page']) if (!p[f]) throw new Error(`photo ${name} lacks ${f}`);
   photos.push({
     id: name.replace(/\.[^.]+$/, ''),

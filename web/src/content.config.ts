@@ -68,7 +68,7 @@ const photos = defineCollection({
   loader: file('src/data/photos.json'),
   schema: ({ image }) => z.object({
     file: image(),
-    master: z.string().nullable(),
+    master: z.url().nullable(),
     airframe: z.string().nullable(),
     kind: z.enum(['hero', 'in service', 'today']),
     caption: z.string().min(1),

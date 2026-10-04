@@ -1,0 +1,58 @@
+name: Site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build and check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: House style, no em or en dashes
+        run: |
+          if grep -rnP '[\x{2013}\x{2014}]' research web/src web/scripts design/*.html README.md PLAN.md 2>/dev/null; then
+            echo "::error::Found an em or en dash. Use a comma, colon, full stop or brackets instead."
+            exit 1
+          fi
+
+      - uses: pnpm/action-setup@v4
+        with:
+          package_json_file: web/package.json
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: web/pnpm-lock.yaml
+
+      - name: Install
+        working-directory: web
+        run: pnpm install --frozen-lockfile
+
+      - name: Build (fails if any event or airframe lacks a source, or any photo lacks its credit)
+        working-directory: web
+        run: pnpm build
+
+      - name: Summary
+        working-directory: web
+        run: |
+          {
+            echo "### Article 121 build"
+            echo "- Pages: $(find dist -name '*.html' | wc -l)"
+            echo "- Size: $(du -sh dist | cut -f1)"
+            echo "- $(node -e "const d=n=>require('./src/data/'+n+'.json').length;console.log(d('events')+' events, '+d('airframes')+' airframes, '+d('photos')+' photos, '+d('sources')+' sources')")"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: web/dist
+          retention-days: 7

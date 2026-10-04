@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Run rclone against Article 121's R2 buckets without storing keys anywhere.
+# The Cloudflare token is read from 1Password at call time; R2's S3 credentials are derived
+# from it (access key = token id, secret = SHA-256 of the token) and passed through env vars.
+#
+#   tools/r2 ls r2:article121-files
+#   tools/r2 sync model/plans/raw r2:article121-archive/plans/raw
+#   tools/r2 copy design/img/hero r2:article121-files/masters
+#
+# Buckets: article121-files (public at https://files.article121.com) holds only material cleared
+# for publishing (public domain or openly licensed). article121-archive is private research storage.
+set -euo pipefail
+TOK=$(op read "op://DarkClouds-Secrets/Cloudflare article121/credential")
+eval "$(python3 - "$TOK" <<'PY'
+import hashlib, json, sys, urllib.request
+tok = sys.argv[1]
+req = lambda p: json.load(urllib.request.urlopen(urllib.request.Request("https://api.cloudflare.com/client/v4" + p, headers={"Authorization": "Bearer " + tok})))
+tid = req("/user/tokens/verify")["result"]["id"]
+acct = [a["id"] for a in req("/accounts")["result"] if a["name"] == "Ralph@mwgroup.io's Account"][0]
+print(f"export RCLONE_CONFIG_R2_ACCESS_KEY_ID={tid}")
+print(f"export RCLONE_CONFIG_R2_SECRET_ACCESS_KEY={hashlib.sha256(tok.encode()).hexdigest()}")
+print(f"export RCLONE_CONFIG_R2_ENDPOINT=https://{acct}.r2.cloudflarestorage.com")
+PY
+)"
+unset TOK
+export RCLONE_CONFIG_R2_TYPE=s3 RCLONE_CONFIG_R2_PROVIDER=Cloudflare RCLONE_CONFIG_R2_ACL=private RCLONE_CONFIG_R2_NO_CHECK_BUCKET=true
+exec rclone "$@"
