@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Article 121 · Case File</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=B612+Mono:wght@400;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="casefile.css">
+<style>
+/* Home: full-bleed photograph, then the file opens, then the photographs carry the page. */
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: 16px; }
+
+/* Hero */
+.hero { position: relative; min-height: min(88vh, 940px); display: grid; align-items: end; overflow: hidden; background: var(--void); }
+.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--focus, 60% 50%); transform: scale(1.04); animation: settle 2.4s cubic-bezier(.2,.7,.2,1) both; filter: saturate(0.85) contrast(1.05); }
+@keyframes settle { from { transform: scale(1.12); opacity: 0; } to { transform: scale(1.04); opacity: 1; } }
+.hero-shade { position: absolute; inset: 0; background:
+  linear-gradient(90deg, rgba(5,7,10,0.92) 0%, rgba(5,7,10,0.55) 42%, rgba(5,7,10,0.08) 75%),
+  linear-gradient(0deg, rgba(5,7,10,1) 0%, rgba(5,7,10,0.2) 34%, rgba(5,7,10,0) 60%); }
+.grain { position: absolute; inset: -50%; pointer-events: none; opacity: 0.07; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); animation: grain 1.2s steps(6) infinite; }
+@keyframes grain { 0% { transform: translate(0, 0); } 33% { transform: translate(-3%, 2%); } 66% { transform: translate(2%, -3%); } 100% { transform: translate(0, 0); } }
+.hero-copy { position: relative; z-index: 2; padding: 0 16px 92px; max-width: 1240px; width: 100%; margin: 0 auto; }
+.hero-title { font-size: clamp(3rem, 1rem + 9vw, 9.5rem); margin: 14px 0 18px; }
+.hero-title .redact::after { transition-duration: 1.2s; }
+.hero-lede { max-width: 38rem; font-size: clamp(1.05rem, 0.98rem + 0.35vw, 1.28rem); line-height: 1.5; color: var(--ink); margin: 0; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.hero-stamp { position: absolute; z-index: 3; right: clamp(16px, 5vw, 80px); top: clamp(80px, 14vh, 150px); font-size: 1.15rem; }
+.hero-data { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; background: rgba(5, 7, 10, 0.72); backdrop-filter: blur(6px); }
+
+/* The file: a black folder opens in 3D beside the typed summary */
+.file-sec { margin-top: 96px; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 0; }
+.desk { position: relative; min-height: 520px; background: radial-gradient(ellipse at 40% 35%, #151b24 0%, #07090c 70%); border: 1px solid var(--seam); border-right: 0; }
+.desk canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.desk .hint { position: absolute; left: 14px; bottom: 12px; }
+.summary { padding: clamp(22px, 4vw, 48px); border-left: 0; }
+.summary .stamp { position: absolute; right: 22px; top: 70px; }
+.summary p { max-width: 54ch; margin: 0 0 1rem; color: var(--ink); }
+.summary .typed { font-size: 0.98rem; line-height: 1.65; color: var(--ink); }
+.summary .pledge-line { margin-top: 1.4rem; }
+
+/* Exhibit A with the loupe */
+.exhibit { margin-top: 110px; }
+.ex-head { display: flex; align-items: end; justify-content: space-between; gap: 10px 20px; flex-wrap: wrap; margin-bottom: 16px; }
+.ex-head .label { display: block; margin-bottom: 8px; }
+.loupe-toggle { display: none; }
+@media (pointer: coarse) { .loupe-toggle { display: inline-flex; } }
+.mount { margin: 0; }
+.loupe-host { position: relative; overflow: hidden; cursor: crosshair; touch-action: pan-y; background: var(--hull); }
+.loupe-host.on { touch-action: none; }
+.loupe-host img { display: block; width: 100%; height: auto; }
+.loupe { position: absolute; width: clamp(150px, 22vw, 280px); aspect-ratio: 1; border-radius: 50%; border: 6px solid #1b2029; box-shadow: 0 0 0 1px var(--ti-lo), 0 16px 34px rgba(0,0,0,0.7), inset 0 0 24px rgba(0,0,0,0.5); background-repeat: no-repeat; pointer-events: none; }
+.loupe::before, .loupe::after { content: ""; position: absolute; background: var(--marking); opacity: 0.85; }
+.loupe::before { left: 50%; top: 16%; bottom: 16%; width: 1px; }
+.loupe::after { top: 50%; left: 16%; right: 16%; height: 1px; }
+.mount .datastrip { background: var(--hull); border: 1px solid var(--seam); border-top: 0; }
+.ex-note { max-width: 70ch; color: var(--ink-2); margin: 14px 0 0; font-size: 0.92rem; }
+
+/* Chronology ledger */
+.ledger-sec { margin-top: 110px; padding: clamp(20px, 3.4vw, 40px); }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 18px; }
+.ledger-scroll { overflow-x: auto; }
+table.ledger { width: 100%; border-collapse: collapse; min-width: 560px; }
+.ledger th { text-align: left; font: 400 0.64rem/1.2 var(--f-data); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); border-bottom: 1px solid var(--seam-2); padding: 8px 10px; }
+.ledger td { border-bottom: 1px solid var(--seam); padding: 12px 10px; vertical-align: top; font-size: 0.95rem; }
+.ledger td.date { white-space: nowrap; font: 700 0.86rem/1.5 var(--f-data); color: var(--stencil); font-variant-numeric: tabular-nums; }
+.ledger td.prog { white-space: nowrap; font: 400 0.64rem/1.9 var(--f-data); letter-spacing: 0.14em; color: var(--marking); text-transform: uppercase; }
+.ledger td.ref { white-space: nowrap; font: 400 0.75rem/1.6 var(--f-data); }
+.ledger tr:hover td { background: var(--hull-2); }
+.ledger tr[hidden] { display: none; }
+
+/* Viewing table: prints in black frames */
+.viewing { margin-top: 110px; }
+.frames { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 18px; margin-top: 18px; }
+.frame { margin: 0; background: var(--hull); border: 1px solid var(--seam); display: grid; grid-template-rows: auto 1fr; position: relative; }
+.frame .shot { position: relative; overflow: hidden; }
+.frame img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; transition: transform 0.6s cubic-bezier(.2,.7,.2,1), filter 0.6s; filter: grayscale(0.25) brightness(0.92); }
+.frame:hover img, .frame:focus-within img { transform: scale(1.04); filter: none; }
+.frame .no { position: absolute; left: 10px; top: 8px; font: 700 0.62rem/1 var(--f-data); letter-spacing: 0.16em; color: var(--stencil); background: rgba(5,7,10,0.7); padding: 5px 7px; }
+.frame figcaption { padding: 12px 14px 14px; font-size: 0.86rem; line-height: 1.45; display: grid; gap: 6px; align-content: start; }
+.frame .credit { font: 400 0.62rem/1.4 var(--f-data); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
+.frame button { all: unset; position: absolute; inset: 0; cursor: zoom-in; }
+.frame button:focus-visible { outline: 2px solid var(--marking); outline-offset: -2px; }
+
+/* Register teaser */
+.reg-sec { margin-top: 110px; padding: clamp(20px, 3.4vw, 40px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 28px; align-items: start; }
+.reg-sec p { color: var(--ink-2); max-width: 46ch; }
+.tabs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.tabs a { display: grid; gap: 2px; text-decoration: none; background: var(--hull-2); border: 1px solid var(--seam); border-left: 3px solid var(--stencil); padding: 12px 14px; transition: background 0.2s, transform 0.2s; }
+.tabs a:hover { background: var(--hull-3); transform: translateX(3px); }
+.tabs a.lost { border-left-color: var(--marking); }
+.tabs b { font: 800 1.15rem/1.1 var(--f-display); font-stretch: 112%; color: var(--stencil); }
+.tabs span { font: 400 0.66rem/1.4 var(--f-data); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
+
+/* Sources */
+.refs { margin-top: 110px; padding: clamp(20px, 3.4vw, 40px); }
+.refs ol { margin: 0; padding-left: 1.6rem; display: grid; gap: 10px; font-size: 0.9rem; color: var(--ink-2); max-width: 90ch; }
+.refs ol li::marker { font-family: var(--f-data); color: var(--ink-3); }
+.refs .lic { font: 400 0.64rem/1.4 var(--f-data); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+
+@media (max-width: 900px) {
+  .file-sec { grid-template-columns: minmax(0, 1fr); }
+  .desk { min-height: 380px; border-right: 1px solid var(--seam); border-bottom: 0; }
+  .reg-sec { grid-template-columns: minmax(0, 1fr); }
+  .hero-copy { padding-bottom: 120px; }
+  .hero-stamp { top: 70px; font-size: 0.9rem; }
+}
+@media (max-width: 520px) { .tabs { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: reduce) { .hero-img, .grain { animation: none; } .frame img { transition: none; } }
+.still .grain, .still .hero-img, .still .stamp.land { animation: none; }
+.still .redact::after { transition: none; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="ink"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="2.2"/></filter></svg>
+
+<nav class="banner" aria-label="Sections">
+  <s>Top secret</s><b>Declassified</b><span class="sep" aria-hidden="true"></span>
+  <a href="#file">File</a><a href="#exhibit-a">Exhibit A</a><a href="#chronology">Chronology</a><a href="#viewing">Viewing table</a><a href="register.html">Register</a><a href="#sources">Sources</a>
+</nav>
+
+<header class="hero" id="top">
+  <img class="hero-img" id="hero-img" src="img/sr71-takeoff.jpg" alt="NASA's SR-71B leaves the runway at Edwards with shock diamonds in both exhaust plumes, 1992." style="--focus: 62% 45%">
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="stamp land hero-stamp" style="animation-delay: 1.5s">Declassified<small>Released to the public</small></div>
+  <div class="hero-copy">
+    <div class="label">File A121 · Lockheed A-12 · YF-12 · M-21 · SR-71 · 1958 to 1999</div>
+    <h1 class="display hero-title" id="hero-title"><span class="redact" style="--d:.5s">Article 121</span></h1>
+    <p class="hero-lede">The Blackbird archive. Every photograph, date and figure, declassified, credited and linked to the place it came from. Free to read, forever.</p>
+    <div class="actions"><a class="btn solid" href="#file">Open the file</a><a class="btn" href="register.html">Where they are now</a></div>
+  </div>
+  <div class="datastrip hero-data" id="hero-data"><span>SR-71B · 61-7956 · NASA 831</span><span>Takeoff, Edwards, Calif.</span><span>1992</span><span>NASA Dryden</span><span class="hot">Public domain</span></div>
+</header>
+
+<main>
+  <section class="wrap" id="file" aria-labelledby="file-h">
+    <div class="file-sec">
+      <div class="desk" id="desk" aria-label="A black case folder opening under a desk lamp">
+        <canvas id="gl" aria-hidden="true"></canvas>
+        <span class="label hint">Move the pointer to aim the lamp</span>
+      </div>
+      <div class="summary panel ticks" id="summary">
+        <div class="file-head"><b>File A121-0001</b><span>Summary</span><span>Page 1 of 1</span></div>
+        <h2 class="section" id="file-h">The file</h2>
+        <div class="stamp white">Public record</div>
+        <p class="typed">This file documents the <span class="redact" style="--d:.1s">Lockheed A-12, YF-12, M-21 and SR-71</span>, the aircraft the world came to call the Blackbirds, from the first Archangel studies in 1958 to NASA's last flight in 1999.</p>
+        <p class="typed">Nothing here is new and nothing here is ours. Every photograph, date and figure comes from <span class="redact" style="--d:.5s">a public, citable source</span>, and every one is credited and linked. Article 121 was the program's own name for the <span class="redact" style="--d:.9s">first A-12 airframe, serial 60-6924</span>.</p>
+        <p class="label pledge-line">No ads · No paywall · No account · Corrections welcome</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap exhibit" id="exhibit-a" aria-labelledby="exa-h">
+    <div class="ex-head">
+      <div><span class="label">Exhibit A</span><h2 class="section" id="exa-h">NASA 831 over the Sierra Nevada</h2></div>
+      <button class="btn loupe-toggle" id="loupe-toggle" aria-pressed="false">Use the loupe</button>
+    </div>
+    <figure class="mount">
+      <div class="loupe-host" id="loupe-host">
+        <img src="img/sr71-sierra.jpg" data-hires="img/sr71-sierra.jpg" id="exa-img" alt="The SR-71B trainer flown by NASA as 831 banks over the snow-covered southern Sierra Nevada after refuelling, December 1994." width="2400" height="1880">
+        <div class="loupe" id="loupe" hidden aria-hidden="true"></div>
+      </div>
+      <figcaption class="datastrip"><span>SR-71B</span><span>61-7956 · NASA 831</span><span>Southern Sierra Nevada, Calif.</span><span>Dec 1994</span><span>Photo: Judson Brohmer, USAF</span><span>NASA Armstrong photo gallery</span><span class="hot">Public domain</span></figcaption>
+    </figure>
+    <p class="ex-note">The two-seat trainer NASA flew as 831, just after refuelling from an Air Force tanker. Move over the print to inspect it the way photo interpreters did, with a loupe. The full site serves every exhibit at the original scan's full resolution. <a href="https://commons.wikimedia.org/wiki/File:Lockheed_SR-71_Blackbird.jpg" target="_blank" rel="noopener">Source record</a> · <a href="register.html#61-7956">This airframe's file</a></p>
+  </section>
+
+  <section class="wrap" id="chronology" aria-labelledby="chrono-h">
+    <div class="ledger-sec panel ticks">
+      <div class="file-head"><b>File A121-0002</b><span>Chronology</span><span>Sample of 109 entries</span></div>
+      <h2 class="section" id="chrono-h">Chronology</h2>
+      <div class="filters" role="group" aria-label="Filter by program">
+        <button class="chip" aria-pressed="true" data-f="all">All</button>
+        <button class="chip" aria-pressed="false" data-f="oxcart">OXCART</button>
+        <button class="chip" aria-pressed="false" data-f="kedlock">KEDLOCK</button>
+        <button class="chip" aria-pressed="false" data-f="tagboard">TAGBOARD</button>
+        <button class="chip" aria-pressed="false" data-f="senior-crown">SENIOR CROWN</button>
+        <button class="chip" aria-pressed="false" data-f="nasa">NASA</button>
+      </div>
+      <div class="ledger-scroll">
+        <table class="ledger">
+          <thead><tr><th scope="col">Date</th><th scope="col">Event</th><th scope="col">Program</th><th scope="col">Ref.</th></tr></thead>
+          <tbody id="ledger"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap viewing" id="viewing" aria-labelledby="view-h">
+    <span class="label">Viewing table</span>
+    <h2 class="section" id="view-h">Photographs</h2>
+    <div class="frames" id="frames"></div>
+  </section>
+
+  <section class="wrap" aria-labelledby="reg-h">
+    <div class="reg-sec panel ticks">
+      <div>
+        <div class="file-head"><b>File A121-R</b><span>Register</span></div>
+        <h2 class="section" id="reg-h">Where they are now</h2>
+        <p>Every airframe Lockheed built has its own file: article number, first flight, career, how it ended and the museum where it stands today. Thirteen A-12s, three YF-12As, two M-21s and thirty-two SR-71s, plus the D-21 drones.</p>
+        <a class="btn solid" href="register.html">Open the register</a>
+      </div>
+      <div class="tabs">
+        <a href="register.html#60-6924"><b>60-6924</b><span>A-12 · Article 121</span><span>Blackbird Airpark, Palmdale</span></a>
+        <a href="register.html#60-6927"><b>60-6927</b><span>A-12 trainer · Titanium Goose</span><span>California Science Center</span></a>
+        <a href="register.html#61-7972"><b>61-7972</b><span>SR-71A · Smithsonian</span><span>Chantilly, Virginia</span></a>
+        <a href="register.html#61-7962"><b>61-7962</b><span>SR-71A</span><span>IWM Duxford, England</span></a>
+        <a href="register.html#60-6940"><b>60-6940</b><span>M-21 with D-21</span><span>Museum of Flight, Seattle</span></a>
+        <a href="register.html#61-7974" class="lost"><b>61-7974</b><span>SR-71A · Ichi Ban</span><span>Lost 21 Apr 1989</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="sources" aria-labelledby="src-h">
+    <div class="refs panel ticks">
+      <div class="file-head"><b>File A121-0004</b><span>References</span><span>Every source, every licence</span></div>
+      <h2 class="section" id="src-h">Sources</h2>
+      <ol id="refs"></ol>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="inner">
+    <p>Article 121 will never carry advertising and will never charge anyone to read it. The work belongs to the people and archives credited beside it. We collect, cite and link.</p>
+    <p class="label">Design prototype · round 3 · black file</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photograph with provenance">
+  <div class="zoomwrap" id="lb-zoom"><img id="lb-img" alt=""></div>
+  <div class="lb-bar"><span id="lb-cap"></span><button class="btn" id="lb-close">Close</button></div>
+</div>
+
+<script>
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const REFS = {
+  1: ["Robarge, David. Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft. CIA Center for the Study of Intelligence, 2nd ed., 2012.", "https://www.cia.gov/resources/csi/static/b45f5f8f5e4937963d9e9931313d84a4/Archangel-CIAs-Supersonic-A-12-Reconnaissance-Aircraft.pdf", "U.S. government work, public domain"],
+  2: ["NASA Dryden Flight Research Center. SR-71 Blackbird, fact sheet FS-030.", "https://www.nasa.gov/wp-content/uploads/2021/09/495839main_fs-030_sr-71.pdf", "U.S. government work, public domain"],
+  3: ["Smithsonian National Air and Space Museum. Lockheed SR-71 Blackbird, A19920072000.", "https://airandspace.si.edu/collection-objects/lockheed-sr-71-blackbird/nasm_A19920072000", "Museum record, linked"],
+  4: ["FAI. 50 years of Lockheed Blackbird records.", "https://www.fai.org/news/50-years-lockheed-blackbird-records", "Record body, linked"],
+  5: ["Merlin, Peter W. Design and Development Aspects of the Lockheed SR-71 Blackbird. NASA Dryden, AIAA 2009-1522.", "https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf", "U.S. government work, public domain"],
+  6: ["Roadrunners Internationale. A-12, YF-12A and SR-71 Timeline of Events (Carpenter), June 2010.", "https://roadrunnersinternationale.com/carpenter/bb_timeline_c10.pdf", "Veterans' association record, linked"],
+};
+const EVENTS = [
+  ["04 JUL 56", "First U-2 overflight of the Soviet Union. Soviet radar tracks it, which sets the clock on a successor.", "context", 1],
+  ["21 APR 58", "The Skunk Works starts the Mach 3 Archangel design studies.", "oxcart", 1],
+  ["29 AUG 59", "The CIA picks Lockheed's twelfth Archangel design, the A-12, over Convair's KINGFISH.", "oxcart", 1],
+  ["01 MAY 60", "Francis Gary Powers is shot down in a U-2 near Sverdlovsk.", "context", 1],
+  ["25 APR 62", "Lou Schalk makes an unannounced first hop in Article 121 at Groom Lake. The official first flight follows on 30 April.", "oxcart", 1],
+  ["07 AUG 63", "First flight of the YF-12A interceptor prototype.", "kedlock", 5],
+  ["22 DEC 64", "Bob Gilliland flies the first SR-71A, 61-7950, from Palmdale.", "senior-crown", 2],
+  ["30 JUL 66", "A D-21 drone collides with M-21 60-6941 at launch. Bill Park survives; Ray Torick drowns after ejecting.", "tagboard", 1],
+  ["31 MAY 67", "Mele Vojvodich flies the first BLACK SHIELD mission over North Vietnam from Kadena, at Mach 3.1 and about 80,000 ft.", "oxcart", 1],
+  ["21 JUN 68", "Final A-12 flight. The CIA fleet goes into storage at Palmdale.", "oxcart", 1],
+  ["28 JUL 76", "SR-71 crews set world records for speed over a straight course (2,193.2 mph) and altitude in sustained horizontal flight (85,069 ft).", "senior-crown", 4],
+  ["06 MAR 90", "61-7972 flies Los Angeles to Washington in 64 minutes 20 seconds, then goes to the Smithsonian.", "senior-crown", 3],
+  ["10 OCT 97", "Final Air Force SR-71 flight, after the brief reactivation.", "senior-crown", 6],
+  ["09 OCT 99", "NASA flies the last flight of any Blackbird.", "nasa", 2],
+];
+const LABEL = { context: "Context", oxcart: "OXCART", kedlock: "KEDLOCK", tagboard: "TAGBOARD", "senior-crown": "SENIOR CROWN", nasa: "NASA" };
+const tb = document.getElementById('ledger');
+tb.innerHTML = EVENTS.map(([d, e, p, r]) => `<tr data-p="${p}"><td class="date">${d}</td><td>${esc(e)}</td><td class="prog">${LABEL[p]}</td><td class="ref"><a href="#sources">[${r}]</a></td></tr>`).join('');
+document.querySelector('.filters').addEventListener('click', (ev) => {
+  const b = ev.target.closest('button'); if (!b) return;
+  document.querySelectorAll('.filters button').forEach((x) => x.setAttribute('aria-pressed', x === b));
+  tb.querySelectorAll('tr').forEach((tr) => { tr.hidden = !(b.dataset.f === 'all' || tr.dataset.p === b.dataset.f); });
+});
+document.getElementById('refs').innerHTML = Object.values(REFS).map(([t, u, l]) => `<li>${esc(t)} <a href="${u}" target="_blank" rel="noopener">Open</a><br><span class="lic">${esc(l)} · archive copy captured at build</span></li>`).join('');
+
+// Viewing table
+const PRINTS = [
+  { img: "img/a12-flying.jpg", cap: "A-12 60-6932 in flight in the 1960s. It was lost over the South China Sea in June 1968.", credit: "U.S. Air Force · DoD VIRIN DF-SC-82-10542 · Public domain", src: "https://commons.wikimedia.org/wiki/File:A12-flying.jpg" },
+  { img: "img/sr71-tanker.jpg", cap: "An SR-71A closes on the boom of a KC-135Q tanker, 1989.", credit: "TSgt. Michael Haggerty, USAF · VIRIN DF-ST-89-06276 · Public domain", src: "https://commons.wikimedia.org/wiki/File:SR-71_seen_from_KC-135Q_tanker_1989.JPEG" },
+  { img: "img/j58-afterburner.jpg", cap: "A J58 turbojet in full afterburner during a ground run at NASA Dryden, 4 April 1997.", credit: "Tony Landis, NASA · EC97-44007-01 · Public domain", src: "https://commons.wikimedia.org/wiki/File:J58_Turbojet_in_Full_Afterburner_(EC97-44007-01).jpg" },
+  { img: "img/m21-d21.jpg", cap: "M-21 60-6940 carrying a D-21 drone, about 1965.", credit: "U.S. Air Force · DoD VIRIN DF-SC-82-10541 · Public domain", src: "https://commons.wikimedia.org/wiki/File:Lockheed_M-21_with_D-21_drone_in_flight_c1965.JPEG" },
+  { img: "img/sr71b-nasa.jpg", cap: "SR-71B 61-7956 over the California desert on delivery to NASA, 25 July 1991.", credit: "NASA Dryden · EC91-372-13 · Public domain", src: "https://commons.wikimedia.org/wiki/File:SR-71B_NASA_in_flight_1991.jpg" },
+  { img: "img/yf12a.jpg", cap: "YF-12A 60-6935 on display at the National Museum of the U.S. Air Force, Dayton.", credit: "U.S. Air Force · National Museum of the USAF · Public domain", src: "https://commons.wikimedia.org/wiki/File:Lockheed_YF-12A_USAF.jpg" },
+];
+const frames = document.getElementById('frames');
+frames.innerHTML = PRINTS.map((p, i) => `<figure class="frame"><div class="shot"><img src="${p.img}" alt="${esc(p.cap)}" loading="lazy"><span class="no">FRAME ${String(i + 1).padStart(3, '0')}</span></div><figcaption>${esc(p.cap)}<span class="credit">${esc(p.credit)} · <a href="${p.src}" target="_blank" rel="noopener">Source</a></span></figcaption><button data-i="${i}" aria-label="Open frame ${i + 1} full screen"></button></figure>`).join('');
+const lb = document.getElementById('lightbox'), zw = document.getElementById('lb-zoom'), zimg = document.getElementById('lb-img');
+frames.addEventListener('click', (e) => {
+  const b = e.target.closest('button[data-i]'); if (!b) return;
+  const p = PRINTS[Number(b.dataset.i)];
+  zimg.src = p.img; zimg.alt = p.cap; zw.classList.remove('zoomed');
+  document.getElementById('lb-cap').innerHTML = `${esc(p.cap)} <span class="label">${esc(p.credit)}</span> <a href="${p.src}" target="_blank" rel="noopener">Source</a>`;
+  lb.hidden = false; document.getElementById('lb-close').focus();
+});
+const zoomAt = (e) => { const r = zw.getBoundingClientRect(); zimg.style.transformOrigin = `${((e.clientX - r.left) / r.width) * 100}% ${((e.clientY - r.top) / r.height) * 100}%`; };
+zw.addEventListener('click', (e) => { zoomAt(e); zw.classList.toggle('zoomed'); });
+zw.addEventListener('pointermove', (e) => { if (zw.classList.contains('zoomed')) zoomAt(e); });
+document.getElementById('lb-close').addEventListener('click', () => { lb.hidden = true; });
+addEventListener('keydown', (e) => { if (e.key === 'Escape') lb.hidden = true; });
+
+// Loupe
+const host = document.getElementById('loupe-host'), exa = document.getElementById('exa-img'), lp = document.getElementById('loupe');
+const Z = 3;
+lp.style.backgroundImage = `url(${exa.dataset.hires})`;
+function moveLoupe(e) {
+  const r = exa.getBoundingClientRect();
+  const x = e.clientX - r.left, y = e.clientY - r.top;
+  if (x < 0 || y < 0 || x > r.width || y > r.height) { lp.hidden = true; return; }
+  lp.hidden = false;
+  const d = lp.offsetWidth;
+  lp.style.left = `${x - d / 2}px`; lp.style.top = `${y - d / 2}px`;
+  lp.style.backgroundSize = `${r.width * Z}px ${r.height * Z}px`;
+  lp.style.backgroundPosition = `${-(x * Z - d / 2)}px ${-(y * Z - d / 2)}px`;
+}
+host.addEventListener('pointermove', (e) => { if (e.pointerType === 'mouse' || host.classList.contains('on')) moveLoupe(e); });
+host.addEventListener('pointerleave', () => { lp.hidden = true; });
+document.getElementById('loupe-toggle').addEventListener('click', (e) => {
+  const on = host.classList.toggle('on'); e.currentTarget.setAttribute('aria-pressed', on);
+  e.currentTarget.textContent = on ? 'Stop the loupe' : 'Use the loupe'; if (!on) lp.hidden = true;
+});
+
+// Redactions lift: the title on load, the rest as each panel comes into view
+const still = new URLSearchParams(location.search).has('still'); // design review helper for screenshots
+if (still) { document.documentElement.classList.add('still'); document.querySelectorAll('#top, .panel').forEach((el) => el.classList.add('revealed')); }
+requestAnimationFrame(() => setTimeout(() => document.getElementById('top').classList.add('revealed'), reduce ? 0 : 300));
+const io = new IntersectionObserver((ents) => ents.forEach((en) => { if (en.isIntersecting) { en.target.classList.add('revealed'); io.unobserve(en.target); } }), { threshold: 0.35 });
+document.querySelectorAll('.panel').forEach((s) => reduce ? s.classList.add('revealed') : io.observe(s));
+</script>
+
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.js"}}</script>
+<script type="module">
+import * as THREE from 'three';
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const host = document.getElementById('desk');
+const canvas = document.getElementById('gl');
+let renderer;
+try { renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true }); } catch (e) { host.hidden = true; throw e; }
+renderer.setPixelRatio(Math.min(devicePixelRatio, 1.75));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 400);
+
+await Promise.all([document.fonts.load('700 40px "Courier Prime"'), document.fonts.load('800 40px "Archivo"'), document.fonts.load('700 30px "B612 Mono"')]).catch(() => {});
+
+const desk = new THREE.Mesh(new THREE.PlaneGeometry(400, 400), new THREE.MeshStandardMaterial({ color: 0x080a0e, roughness: 0.75, metalness: 0.2 }));
+desk.rotation.x = -Math.PI / 2; desk.receiveShadow = true; scene.add(desk);
+
+function tex(w, h, draw) {
+  const c = document.createElement('canvas'); c.width = w; c.height = h;
+  draw(c.getContext('2d'), w, h);
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t;
+}
+function grain(g, w, h, a) {
+  const img = g.getImageData(0, 0, w, h), d = img.data;
+  for (let i = 0; i < d.length; i += 4) { const n = (Math.random() - 0.5) * a; d[i] += n; d[i + 1] += n; d[i + 2] += n; }
+  g.putImageData(img, 0, 0);
+}
+function stamp(g, text, sub, x, y, rot, color, size) {
+  g.save(); g.translate(x, y); g.rotate(rot); g.globalAlpha = 0.85; g.strokeStyle = color; g.fillStyle = color;
+  g.font = `800 ${size}px "Archivo"`; const tw = g.measureText(text).width;
+  g.lineWidth = size * 0.08; g.strokeRect(-tw / 2 - size * 0.35, -size * 0.92, tw + size * 0.7, size * (sub ? 1.7 : 1.25));
+  g.textAlign = 'center'; g.fillText(text, 0, 0);
+  if (sub) { g.font = `700 ${size * 0.3}px "B612 Mono"`; g.fillText(sub, 0, size * 0.52); }
+  g.restore();
+}
+const RED = '#d4432f';
+// Black cover with a red cover-sheet border and a titanium label plate
+const coverTex = tex(1024, 1320, (g, w, h) => {
+  g.fillStyle = '#0f131a'; g.fillRect(0, 0, w, h); grain(g, w, h, 10);
+  g.strokeStyle = RED; g.lineWidth = 22; g.strokeRect(40, 40, w - 80, h - 80);
+  g.lineWidth = 3; g.strokeRect(78, 78, w - 156, h - 156);
+  const lg = g.createLinearGradient(0, 150, 0, 360); lg.addColorStop(0, '#d5d9df'); lg.addColorStop(1, '#8b929d');
+  g.fillStyle = lg; g.fillRect(130, 150, 620, 210);
+  g.fillStyle = '#0b0d11'; g.font = '700 44px "Courier Prime"'; g.fillText('PROJECT OXCART', 160, 222);
+  g.font = '400 32px "Courier Prime"'; g.fillText('A-12  S/N 60-6924', 160, 272); g.fillText('ARTICLE 121', 160, 316);
+  stamp(g, 'TOP SECRET', null, 640, 600, -0.1, RED, 92);
+  g.save(); g.strokeStyle = '#e9e9e4'; g.lineWidth = 6; g.beginPath(); g.moveTo(380, 590); g.lineTo(905, 520); g.stroke(); g.restore();
+  stamp(g, 'DECLASSIFIED', 'RELEASED TO THE PUBLIC', 510, 900, 0.08, '#eeeee8', 100);
+  g.fillStyle = 'rgba(230,233,238,0.55)'; g.font = '400 24px "B612 Mono"';
+  g.fillText('ARTICLE 121 ARCHIVE  ·  COMPILED FROM PUBLIC SOURCES', 130, 1200);
+});
+const innerTex = tex(256, 256, (g, w, h) => { g.fillStyle = '#12161d'; g.fillRect(0, 0, w, h); grain(g, w, h, 8); });
+const memoTex = tex(1020, 1320, (g, w, h) => {
+  g.fillStyle = '#e8e8e3'; g.fillRect(0, 0, w, h); grain(g, w, h, 9);
+  g.fillStyle = '#16181c'; g.font = '700 34px "Courier Prime"';
+  g.fillText('ARTICLE 121 ARCHIVE', 80, 120); g.fillText('FILE SUMMARY: A-12 S/N 60-6924', 80, 168);
+  g.fillRect(80, 190, 860, 3);
+  g.font = '400 29px "Courier Prime"';
+  ['1. First airframe of the A-12 program,', '   known inside the program as Article 121.', '', '2. Left Burbank by road on the night of', '   26 February 1962.', '', '3. Unannounced first hop 25 April 1962,', '   pilot Louis W. Schalk. Official first', '   flight 30 April 1962.', '', '4. 332 flights, 418.2 hours. On display', '   at Blackbird Airpark, Palmdale.', '', 'SOURCE: Robarge, ARCHANGEL (CIA CSI,', '2012), pp. 16, 17, 50.'].forEach((l, i) => g.fillText(l, 80, 250 + i * 46));
+  g.fillStyle = '#000'; g.fillRect(560, 1000, 300, 34); g.fillRect(80, 1080, 520, 34);
+  stamp(g, 'PUBLIC RECORD', null, 760, 1210, -0.06, RED, 58);
+});
+
+const W = 23, H = 30, T = 0.12;
+const folder = new THREE.Group(); scene.add(folder);
+const blackBoard = new THREE.MeshStandardMaterial({ map: innerTex, roughness: 0.55, metalness: 0.15 });
+const back = new THREE.Mesh(new THREE.BoxGeometry(W, T, H), blackBoard); back.position.y = T / 2; back.castShadow = back.receiveShadow = true; folder.add(back);
+const tab = new THREE.Mesh(new THREE.BoxGeometry(8, T, 2), new THREE.MeshStandardMaterial({ color: 0xd4432f, roughness: 0.6 })); tab.position.set(4, T / 2, -H / 2 - 1); folder.add(tab);
+const memo = new THREE.Mesh(new THREE.PlaneGeometry(20.4, 26.4), new THREE.MeshStandardMaterial({ map: memoTex, roughness: 0.92 }));
+memo.rotation.x = -Math.PI / 2; memo.rotation.z = 0.02; memo.position.set(0.2, T + 0.02, 0.4); memo.receiveShadow = true; folder.add(memo);
+const photoTex = await new THREE.TextureLoader().loadAsync('img/a12-flying.jpg');
+photoTex.colorSpace = THREE.SRGBColorSpace; photoTex.anisotropy = 8;
+const print = new THREE.Group();
+const border = new THREE.Mesh(new THREE.BoxGeometry(15.2, 0.05, 11.8), new THREE.MeshStandardMaterial({ color: 0xeeeeea, roughness: 0.5 }));
+const photo = new THREE.Mesh(new THREE.PlaneGeometry(14, 10.4), new THREE.MeshStandardMaterial({ map: photoTex, roughness: 0.25, metalness: 0.05 }));
+photo.rotation.x = -Math.PI / 2; photo.position.y = 0.03; border.castShadow = true; print.add(border, photo);
+print.position.set(5.5, T + 0.25, -5.5); print.rotation.y = -0.16; folder.add(print);
+const clipPath = new THREE.CurvePath(); const P = (x, z) => new THREE.Vector3(x, 0, z);
+clipPath.add(new THREE.LineCurve3(P(0, 0), P(0, 4.2)));
+clipPath.add(new THREE.QuadraticBezierCurve3(P(0, 4.2), P(0.55, 4.9), P(1.1, 4.2)));
+clipPath.add(new THREE.LineCurve3(P(1.1, 4.2), P(1.1, 0.8)));
+clipPath.add(new THREE.QuadraticBezierCurve3(P(1.1, 0.8), P(0.75, 0.3), P(0.4, 0.8)));
+clipPath.add(new THREE.LineCurve3(P(0.4, 0.8), P(0.4, 3.4)));
+const clip = new THREE.Mesh(new THREE.TubeGeometry(clipPath, 80, 0.07, 8), new THREE.MeshStandardMaterial({ color: 0xc9ced6, metalness: 1, roughness: 0.22 }));
+clip.position.set(-2.4, 0.18, -3.4); clip.castShadow = true; print.add(clip);
+const hinge = new THREE.Group(); hinge.position.set(-W / 2, T, 0); folder.add(hinge);
+const coverFront = new THREE.MeshStandardMaterial({ map: coverTex, roughness: 0.5, metalness: 0.2 });
+const cover = new THREE.Mesh(new THREE.BoxGeometry(W, T, H), [blackBoard, blackBoard, coverFront, blackBoard, blackBoard, blackBoard]);
+cover.position.set(W / 2, T / 2 + 0.35, 0); cover.castShadow = cover.receiveShadow = true; hinge.add(cover);
+
+scene.add(new THREE.HemisphereLight(0xb8c6dc, 0x050608, 0.45));
+const lamp = new THREE.SpotLight(0xfff1dc, 2400, 170, 0.55, 0.7, 1.5);
+lamp.position.set(-16, 48, 18); lamp.castShadow = true; lamp.shadow.mapSize.set(2048, 2048); lamp.shadow.bias = -0.0004;
+scene.add(lamp, lamp.target);
+const rim = new THREE.DirectionalLight(0x7fa0d0, 0.6); rim.position.set(30, 20, -40); scene.add(rim);
+
+let w = 0, h = 0, aimX = 4, aimZ = -2, visible = false, openAt = null, running = false;
+function resize() {
+  w = host.clientWidth; h = host.clientHeight; renderer.setSize(w, h, false);
+  camera.aspect = w / h;
+  const narrow = w < 560;
+  camera.position.set(narrow ? 4 : 8, narrow ? 70 : 56, narrow ? 34 : 32);
+  camera.lookAt(narrow ? -4 : -2, 0, 0);
+  camera.updateProjectionMatrix();
+}
+new ResizeObserver(resize).observe(host); resize();
+host.addEventListener('pointermove', (e) => {
+  const r = host.getBoundingClientRect();
+  aimX = ((e.clientX - r.left) / r.width - 0.5) * 50; aimZ = ((e.clientY - r.top) / r.height - 0.5) * 36;
+});
+// Open the folder when it comes into view; render only while visible
+new IntersectionObserver(([en]) => {
+  visible = en.isIntersecting;
+  if (visible && openAt === null) openAt = performance.now() + 250;
+  if (visible && !running) { running = true; requestAnimationFrame(frame); }
+}, { threshold: 0.3 }).observe(host);
+
+const OPEN = Math.PI * 0.94;
+if (new URLSearchParams(location.search).has('still')) { // design review helper: settle and stop for screenshots
+  document.documentElement.classList.add('still'); openAt = 0; setTimeout(() => { visible = false; }, 3500);
+}
+folder.position.x = 6;
+function frame(now) {
+  const k = reduce ? 1 : openAt === null ? 0 : THREE.MathUtils.smoothstep(now - openAt, 0, 2200);
+  hinge.rotation.z = OPEN * k;
+  print.position.x = 5.5 + 1.2 * k; print.rotation.y = -0.16 + 0.08 * k;
+  lamp.target.position.x += (aimX - lamp.target.position.x) * 0.06;
+  lamp.target.position.z += (aimZ - lamp.target.position.z) * 0.06;
+  renderer.render(scene, camera);
+  if (visible) requestAnimationFrame(frame); else running = false;
+}
+renderer.render(scene, camera);
+</script>
+</body>
+</html>

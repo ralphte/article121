@@ -16,12 +16,12 @@ Legend for rights:
 ### 1.1 Smithsonian Open Access (NASM SR-71A 61-7972) [best single image source]
 
 - Object record: https://airandspace.si.edu/collection-objects/lockheed-sr-71-blackbird/nasm_A19920072000 (ARK: http://n2t.net/ark:/65665/nv9afd733c1-f6b5-45f1-ab28-2d19c801b502), the Udvar-Hazy aircraft, 61-7972.
-- Holdings (verified via API): 14 media items on the SR-71 record, all flagged `access: CC0`. 10 have downloadable masters as TIFF and JPEG, for example:
+- Holdings (verified via API): 14 media items on the SR-71 record, all flagged `access: CC0`. 11 have downloadable masters as TIFF and JPEG, for example:
   - NASM-NASM-9A08307: **10950 x 3750** px TIFF (panoramic)
   - NASM-NASM2016-00595 / 00596 / 00597: **8688 x 5792** px TIFF
-  - NASM-NASM2013-00888 to 00891: 3000 to 5664 px
+  - NASM-NASM2013-00149 and 00888 to 00891: 2100 to 5664 px on the long side
   - NASM-SI-2006-2744: 3300 x 2550
-  - 4 items (NASM-SI-2000-9346, NASM-SI-92-14116, NASM-A19920072000cp08, NASM-NASM2013-00149 partial) are screen-size only.
+  - 3 items (NASM-SI-2000-9346, NASM-SI-92-14116, NASM-A19920072000cp08) are screen-size only.
   - Download pattern: `https://ids.si.edu/ids/download?id=NASM-NASM2016-00596.tif`
 - Other Smithsonian hits are library catalogue records (Crickmore, Graham, Merlin, Jenkins books) and two Smithsonian Research Online entries (unit SLA_SRO, e.g. "Setting Records with the SR-71 Blackbird"). No NASM object records for A-12, YF-12, D-21 or J58 came back from the API.
 - Rights: CC0 on the media, but every item carries "Third party or legal restrictions may apply to your use of these images." Credit is not legally required for CC0 but is courteous and fits the site rule.
@@ -31,7 +31,7 @@ Legend for rights:
 ### 1.2 NASA Image and Video Library (images.nasa.gov)
 
 - URL: https://images.nasa.gov/
-- Holdings (verified): `q=SR-71` = **50** images (mostly Armstrong/Dryden EC-numbered: LASRE 1997 to 1998, NASA 831 SR-71B, crew portraits, J58 afterburner run EC97-44007-01, KSC 1997/1999 visits); `q=YF-12` = 4 (including GRC-1977-C-04657, YF-12 model in the Lewis 10x10 tunnel, and ARC-1971-AC71-1988); `q=LASRE` = 11; `q=Blackbird` = 11. **Zero** video or audio for SR-71, YF-12, LASRE or J58. This library holds only a fraction of the Armstrong Blackbird photography; see 1.3.
+- Holdings (verified): `q=SR-71` = **50** images (mostly Armstrong/Dryden EC-numbered: LASRE 1997 to 1998, NASA 831 SR-71B, crew portraits, J58 afterburner run EC97-44007-01, KSC 1997/1999 visits); `q=YF-12` = 4, of which GRC-1977-C-04657 (YF-12 model in the Lewis 10x10 tunnel) and EC91-0365-7 are relevant, ARC-1971-AC71-1988 is untitled (check) and one is a YF-16; `q=LASRE` = 11; `q=Blackbird` = 11. **Zero** video or audio for SR-71, YF-12, LASRE or J58. This library holds only a fraction of the Armstrong Blackbird photography; see 1.3.
 - Max resolution: `~orig.jpg` masters. Example EC97-44295-29 (LASRE first flight) is 3039 x 2444, 7.5 MB, creator "NASA/Tony Landis".
 - Rights: PD-USGov (NASA). NASA media guidelines: https://www.nasa.gov/nasa-brand-center/images-and-media/ . NASA asks that it be "acknowledged as the source", forbids implied endorsement, protects the meatball/worm insignia, and says third-party copyrighted items are marked in the caption. Check every caption for a non-NASA credit.
 - Credit line to use: `NASA / Tony Landis (EC97-44295-29)`.
@@ -295,7 +295,60 @@ There is **no CC0 or public-domain 3D scan of any Blackbird airframe** from an o
 
 ## 5. Legacy fan and veteran sites
 
-(see section filled from legacy site research below)
+Checked 2026-10-04. Wayback dates come from the CDX API (the availability API often answers "none" for sites that do have captures, so always confirm with CDX: `https://web.archive.org/cdx/search/cdx?url=<host>/*&fl=timestamp,original&collapse=urlkey&limit=1`). Some of these hosts block curl's default User-Agent and have no HTTPS; a browser User-Agent over plain HTTP works (verified for habu.org and sr71.us). Some home networks with DNS blocklists resolve a few of these domains (habus.net, sr-71.com, a-12.org) to 0.0.0.0; check with a public resolver.
+
+Every site below is (c) its owner. None is mirror-able without permission. They are Tier D in section 6: link to them now (live or Wayback), and ask.
+
+### 5.1 Active: the core sources (ask first, these people are reachable)
+
+| Site | Status | Wayback | Who | Unique material | Rights as stated | Contact |
+|---|---|---|---|---|---|---|
+| **habu.org**, "The Online Blackbird Museum" http://www.habu.org/ | Live (HTTP only); What's New updated 13 Aug 2026; domain since 1998 | 1999-01-25 to 2026-05-12 | David Allison | A page for every A-12, SR-71, M-21 and D-21 airframe, about 50 KC-135Q/T tanker pages, crew-credited photos (Denny Lombard, Tony Landis, T.D. Barnes), complete flight history of 61-7939, crew bios, events, book reviews | "Contents of all pages is copyright (c) 1997-2015 Habu.Org except where indicated. No part ... may be reproduced without written permission." Non-profit, no ads or donations | webmaster@habu.org |
+| **members.habu.org**, Blackbird Association | Live but 403 (members only); last modified 24 Mar 2024 (2024 reunion) | 2004-07-14 to 2025-12-13 | Blackbird Association via habu.org | Reunion registration and association news. The association has no separate public domain | Members only | via habu.org |
+| **Leland Haynes "SR-71 Blackbirds"** http://www.sr71.us/ (also http://www.wvi.com/~sr71webmaster/ and sr71blackbirds.com) | Live (HTTP only); Recollections updated 13 Sep 2026 | wvi.com/~lelandh from 1997-05-19; sr71.us from 2008; site founded 15 Apr 1996 | Founded by MSgt Leland R. Haynes (crew chief of 61-7972, died 26 Nov 2010); maintained by David Allison since Jan 2011 | The **"Buddy Brown Book"**: list of everyone who flew any Blackbird (rev. 27 Jan 2024); Alma Mater/Recollections veterans' guestbook; 1974 New York to London record; 45 Farnborough 1974 photos; reunion and Air Fest pages; airframe locations; 160 to 220 pages | "A large portion of this web site is copyrighted and reproduction ... is prohibited. Storage on any retrieval system is prohibited." Names third-party art (Markham, Dru Blair) and Lockheed images | sr71webmaster@sr71.us |
+| **Roadrunners Internationale** https://roadrunnersinternationale.com/ | Live; home page modified 11 Feb 2026 | 2002-07-12 to 2026-05-14 | President T.D. Barnes; webmaster Joerg Arnu | The A-12/Area 51 veterans' own site: about 200 member bios, about 100 first-person "Cold War Stories", Black Shield mission and pilot pages, reunion photos from 1993, newsletters (one from 1979), covering OXCART, AQUATONE, YF-12, TAGBOARD and M-21/D-21. area51specialprojects.com redirects here | "(c) Copyright 2001-[year], Dreamland Resort. All rights reserved." Same strict policy as Dreamland Resort | tdbarnes@me.com ; webmaster@dreamlandresort.com |
+| **Dreamland Resort** https://www.dreamlandresort.com/ | Live; updated 07/08/2026 | from 2000-01-21 (recent captures 403) | Joerg H. Arnu | Peter W. Merlin's "OXCART Down!" (2003 search for the 60-6926 crash site) and "40th Anniversary of the A-12" (2002) | Registered copyright (VAu 1-419-854); permission "only given in very rare exceptional cases" | webmaster@dreamlandresort.com |
+| **Spyflight** https://www.spyflight.co.uk/ | Live; footer (c) 2018 | 2003-02-15 to 2026-09-23 | Bruce Williamson (UK) | A-12 and SR-71 overview essays (Black Shield, Pueblo sortie, A-12 vs SR-71). No airframe or crew material | (c) Spyflight | webmaster@spyflight.co.uk |
+| **The Hunt for 928** (otherhand.org) | Live | not checked | Tom Mahood | Search for the A-12 Article 125 (60-6928) crash site, field photos | (c) author | web form |
+| **Aerial Visuals Airframe Dossier** https://www.aerialvisuals.ca/ | Live; (c) 1993-2026 | not checked | Mike Henniger | User-contributed airframe dossiers and locator database (SR-71 coverage not confirmed) | (c) | contact form |
+| **Flickr group "The SR-71 Blackbird"** https://www.flickr.com/groups/sr-71/ | Live; 1,609 photos, 527 members, since 21 Nov 2005 | n/a | group admins | Aims to photograph every SR-71 on display; good for current museum-display shots | Per-photo licence; some will be CC BY | via Flickr |
+| **sr71habu.com**, Blackbird patches | Live, stale since Sep 2020 | not checked | R. Hall | Patch catalogue, crew names on last-flight patches | "may be subject to copyright by their respective owners" | r.hall3@sr71habu.com |
+
+Single point of failure: habu.org and the Leland Haynes site (sr71.us, wvi.com, sr71blackbirds.com) are run by the same person on the same server (206.188.192.192). That pair is the biggest preservation risk among the live sites, and the most valuable permission to obtain (especially the Buddy Brown Book and the per-airframe pages).
+
+### 5.2 Dormant, offline or lost: preservation priorities
+
+| Site | Status | Wayback | Who | Unique material | Rights / contact |
+|---|---|---|---|---|---|
+| **SR-71 Online** (sr-71.org, and yf-12.com) **TOP PRIORITY** | **Offline**: "Maintenance in Progress" (HTTP 503) since about 23 Jun 2025 (verified 503 today) | 1999-08-25 to last good 2025-06-20; maintenance page from 2025-07-03. About 7,200 distinct archived HTML pages: ~2,086 photo-gallery pages and ~1,803 flight-manual pages. yf-12.com from 2008 | Paul Kucher | The "Blackbird Archive" (A-12, YF-12, SR-71, D-21), web editions of the SR-71A-1 flight manual (1,052 pp), SR-71-6CF-1 and YF-12A-1 manuals, more than 850 photos, per-airframe galleries (e.g. /photogallery/blackbird/06940/), message boards, guestbook | "All content on this site is copyright SR-71 Online by Paul Kucher unless otherwise noted ... Permission is mandatory for all image usage." Asks to be cited as "SR-71 Online". Contact was a web form (now offline); try WHOIS/registrar contact or mutual contacts via habu.org |
+| **Joe Baugher USAF serials** (joebaugher.com/usaf_serials/) | Serial pages load inside a new owner's template; home page is now a casino-affiliate site | 1961 page from 2010-06-15; last revisions 25 Jul 2023 (1961) and 3 Oct 2023 (1960) | Joe Baugher (status unconfirmed); domain control changed | Airframe-by-airframe histories on the 1960 (A-12), 1961 (SR-71/YF-12C) and 1964 serial pages | (c) Baugher. Use the pre-2024 Wayback captures as the citation, not the live domain |
+| **blackbirds.net** | Live, untouched since 2004 to 2008 | 2000-06-12 to 2026-06-07 | "John", son of a 4200th/9th SRW Supply member | Bill Gornik's tie-cutting history, 9th SRW Supply photos 1965 to 67, Frank Stampf cartoons, Chris Bennett articles, airframe list, timeline | (c) per author (e.g. "(c) Wm. M. (Bill) Gornik"); john.blackbirds@gmail.com |
+| **habus.net** | Dead (domain parked) | 2006-06-23 to ~2011 | not named | Crew reunion pages 2003/2005/2007, Duxford 2001, museum visits, "SR-71 Aircrews" page | emckim@san.rr.com (2007) |
+| **"Perils of Pasquale"**, Ray Scalise (yf12a.tripod.com) | Dead | 2003-04-10 to 2008 | Ray Scalise, Hughes Fire Control Officer | YF-12A flight-test recollections and a crash-site search story: rare YF-12 first-person source | (c) author (sold as e-book) |
+| **"Above and Beyond" / J.T. Vida Memorial Fund** (lonestar.texas.net/~snolep/recce/) | Dead | 1999-11-22 to ~2012 | Col. Richard H. (Rich) Graham, Snow Leopard Productions | Graham bio, J.T. Vida tribute signed by Ed Yeilding, photos | "strictly copyrighted to the WebMeister, Snow Leopard Productions, and the BSW Group" |
+| **Skunk Works mailing list archive** (netwrx1.com/skunk-works/) | Dead (404) | **1,562 archived URLs with HTTP 200** (verified today), including digests v02.n001 onward, v03, and sr71flt.pdf | list owner not identified | A 1990s Blackbird/Skunk Works discussion list, likely including posts from crews and engineers (contents not yet reviewed) | Individual posters hold copyright; quote briefly with attribution, link to Wayback |
+| **BlackWorld**, Clyde Atkin (blackworld.freeservers.com) | Dead | 2000-11-09 to 2002 | Clyde Atkin | Beale reconnaissance community newsletter: Roll Call, Where Are They?, war stories | okihak@jps.net (old) |
+| **Preserved US Military Aircraft** (coastcomp.com/av/pres/) | Down | 2000-01-16 to 2026-01-07 | Ben Marselis, Coastal Computers | Display aircraft survey, Bill Kistler's A-12 display pages | spotter@coastcomp.com |
+| **Fighter Tactics Academy SR-71 pages** (sci.fi/~fta/sr71b.htm) | Dead | 1998-12-02 to 2011 | Jarmo Lindberg | Neville Dawson's crew and suit-up photos | "(c) Fighter Tactics Magazine" |
+| **sleddriver.com** (Brian Shul) | Redirects to a memorial/store; Shul died May 2023 | from 2002-08-06 (mostly Flash) | Shul estate | Shul's photography (books "Sled Driver", "The Untouchables") | (c) estate; SledDriver@SledDriver.com |
+
+### 5.3 Low value or commercial
+
+- sr71blackbird.org: ad-supported generic summary site (2020 onward), MilitaryFactory-linked. Ignore.
+- sr71blackbird.net: now redirects to Terry Pappas' Amazon author page.
+- sr71.com (Haynes' old DVD/screensaver shop): 403 on every page; Wayback 2007 to 2026.
+- Yahoo Groups: the only "SR-71" groups captured by Archive Team are a band fan list and a spam-only group. No veterans' list found.
+
+### 5.4 Not checked
+
+Linda Sheffield Miller's site and Col. Buz Carpenter's (no guessed domain resolved), any current Rich Graham site, airport-data.com, abpic and airliners.net licensing terms, airrefuelingarchive.wordpress.com (KC-135Q angle), Wayback history for Aerial Visuals, the Flickr group, sr71habu.com and otherhand.org.
+
+### 5.5 What to do with these
+
+1. **Now, no permission needed**: link every page you rely on to a dated Wayback capture, and use Save Page Now on any live page you cite so a snapshot exists from the day you cited it.
+2. **Permission requests, in this order**: David Allison (habu.org and the Haynes site, one request covers both); Paul Kucher (sr-71.org, which is offline and so most at risk); T.D. Barnes for Roadrunners Internationale (expect a no on mirroring, ask instead for permission to quote and link, and for introductions to individual veterans who own their own photos and stories); Bill Gornik and the blackbirds.net owner; Ray Scalise or heirs (YF-12 memoir).
+3. **When the answer is no**: write your own summary, cite the page and its Wayback URL, and link. Facts (dates, serials, crew names, sortie data) are not copyrightable, so a fact database built from these sites, in your own words and structure, with credit, is fine. Do not copy their prose or their photos.
+4. **Individual veterans' photos** posted on these sites usually belong to the veteran, not the site. A site owner's yes does not cover them unless the owner holds the rights; ask who the photographer is.
 
 ---
 
@@ -360,3 +413,53 @@ Asking for CC BY 4.0 rather than a site-only permission is worth the extra sente
 - **Structured data** (airframe database, timelines, serial histories, the provenance register metadata): CC0 1.0. Facts are not copyrightable anyway; CC0 removes any doubt and invites reuse by Wikidata and researchers.
 - **Code**: MIT (or Apache-2.0 if patent language is wanted).
 - State clearly in the footer that third-party material keeps its own licence, shown under each item, and that the site licence covers only the site's own work.
+
+---
+
+## 7. API endpoint summary
+
+| Archive | Endpoint (example) | Key | Status 2026-10-04 |
+|---|---|---|---|
+| NASA Image and Video Library | `https://images-api.nasa.gov/search?q=SR-71&media_type=image&page_size=100` ; `/asset/<nasa_id>` ; `images-assets.nasa.gov/image/<id>/metadata.json` | none | **verified** (50 SR-71 images, 4 YF-12, 11 LASRE) |
+| NASA NTRS | `https://ntrs.nasa.gov/api/citations/search?q=YF-12&page.size=100` | none | **verified** (YF-12 86, SR-71 71, LASRE 13) |
+| Smithsonian Open Access | `https://api.si.edu/openaccess/api/v1.0/search?q=SR-71+AND+unit_code:NASM&api_key=KEY` | free api.data.gov | **verified** with DEMO_KEY (rate-limited quickly) |
+| Smithsonian 3D | `https://3d-api.si.edu/api/v1.0/content/file/search?q=Blackbird` | none | **verified** (0 Blackbird models) |
+| Wikimedia Commons | `https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch=deepcat:"Lockheed SR-71 Blackbird"&srnamespace=6&srinfo=totalhits&format=json` ; `prop=imageinfo&iiprop=url|size|extmetadata` | none (descriptive User-Agent) | **verified** (429 if you go faster than about 1 req/s) |
+| Library of Congress | `https://www.loc.gov/photos/?q=SR-71&fo=json` ; `https://www.loc.gov/item/<id>/?fo=json` ; `https://www.loc.gov/collections/veterans-history-project-collection/?q=%22SR-71%22&fo=json` | none | **verified** (303 photos; 4 VHP collections) |
+| Internet Archive | `https://archive.org/advancedsearch.php?q=%22YF-12%22&fl[]=identifier&fl[]=title&rows=50&output=json` | none | **verified** |
+| Wayback availability | `https://archive.org/wayback/available?url=dfrc.nasa.gov/Gallery/Photo/SR-71/index.html&timestamp=2005` | none | **verified** |
+| Wayback CDX | `https://web.archive.org/cdx/search/cdx?url=dfrc.nasa.gov/Gallery/Movie/SR-71*&fl=original,mimetype&collapse=urlkey` ; raw file via `https://web.archive.org/web/<ts>id_/<url>` | none | **verified** (downloaded a 6.5 MB Dryden SR-71 clip) |
+| GovInfo | `POST https://api.govinfo.gov/search?api_key=KEY` | free api.data.gov | **verified** with DEMO_KEY |
+| Sketchfab | `https://api.sketchfab.com/v3/search?type=models&q=sr-71&downloadable=true` ; `/v3/models/<uid>` | none to search | **verified** |
+| Printables | `POST https://api.printables.com/graphql/` (`searchPrints2`) | none | **verified**, undocumented |
+| NARA Catalog v2 | `https://catalog.archives.gov/api/v2/records/search?q=SR-71` + header `x-api-key` | email Catalog_API@nara.gov | **not verified** (no key; returns SPA HTML without one) |
+| DVIDS | `https://api.dvidshub.net/search?q=SR-71&type=image&api_key=key-...` | free signup | **not verified** (error "No API key was provided") |
+| Flickr (SDASM) | `flickr.photos.search` | free key | not tested |
+| CIA reading room | none | n/a | no API; use Internet Archive mirrors |
+| NRO, AFHRA, nationalmuseum.af.mil, af.mil, media.defense.gov | none | n/a | **block scripts (403)**; manual browser collection or Wayback |
+| DTIC | none public | n/a | use Internet Archive `dticarchive` |
+
+
+---
+
+## 8. Top 15 sources to ingest first (ranked)
+
+Ranking weighs: quality and uniqueness of the material, how safely it can be mirrored, and how likely it is to disappear.
+
+1. **Smithsonian Open Access, NASM SR-71A 61-7972** (1.1). CC0, masters up to 10950 x 3750 and 8688 x 5792 TIFF, API. The best-quality images that exist publicly, with zero rights friction.
+2. **CIA OXCART collection + "Archangel" + "The Oxcart Story"** (2.1). PD-USGov, the authoritative A-12 narrative and about 350 primary documents. Ingest via the Internet Archive mirrors because cia.gov blocks scripts.
+3. **sr-71.org via the Wayback Machine** (5.2). Offline since mid 2025, about 7,200 archived pages including the web flight manual and over 850 photos. Do two things now: index the Wayback captures for citation, and ask Paul Kucher for permission before anything else disappears.
+4. **NASA Armstrong/Dryden imagery: images.nasa.gov plus the Wayback Dryden gallery** (1.2, 1.3). PD, EC/ECN-numbered photos of NASA 831/844, YF-12 and LASRE, with original captions.
+5. **NASA Technical Reports Server** (2.4). PD engineering record of YF-12 and SR-71 flight research (86 + 71 records, API, direct PDFs), starting with the YF-12 Experiments Symposium and TP-2000-209023.
+6. **Merlin, "Mach 3+" (NASA SP-2001-4525), the Armstrong fact sheets and Mallick's "The Smell of Kerosene"** (2.4, 2.5). PD book-length histories; the YF-12 story in full.
+7. **Dryden movie clips in the Wayback Machine + NASA Armstrong YouTube** (1.3, 3.1). The only PD Blackbird flight footage found that can be mirrored today (EM-0025 SR-71 and EM-0041 YF-12 clips, plus ten Armstrong YouTube videos).
+8. **NRO Declassified D-21 Drones Program Records** (2.2). 97 records, 659 pages, PD; the primary record for TAGBOARD and SENIOR BOWL. Download by hand before the URLs move again.
+9. **habu.org + the Leland Haynes site (sr71.us)** (5.1). Live but one maintainer; per-airframe pages, the Buddy Brown Book crew list, veterans' recollections. Permission request to David Allison; link meanwhile.
+10. **Wikimedia Commons, PD-USGov and CC BY subsets** (1.4). About 180 PD government images and about 330 CC-licensed museum photos across the SR-71 tree, plus A-12/YF-12/M-21/D-21/J58 trees and ready-made per-airframe categories. Use the API, verify each file upstream.
+11. **Roadrunners Internationale** (5.1). The A-12 veterans' own stories and Black Shield pages. Strict copyright: ask to quote and link, and for introductions to individual veterans.
+12. **San Diego Air & Space Museum on Flickr Commons + SDASM/Calisphere oral histories** (1.9, 2.6). "No known copyright restrictions" photos (YF-12 33, SR-71 30+, A-12) and video interviews with Bill Weaver, Maury Rosenberg and Richard Kantner (the interviews need permission).
+13. **National Archives films and catalogue** (3.2, 1.6). "SR-71 Last Flight" and "The Record Breakers" MP4s (check the rights flag), plus undigitised RG 342 reels; request a free API key now.
+14. **Library of Congress: Veterans History Project and "no known restrictions" photos** (2.6, 1.5). Four SR-71 veteran video interviews (permission needed to republish) and US News & World Report photos (free).
+15. **3D: Baranger's GPL FlightGear SR-71 plus CC BY Sketchfab meshes (nicholtt, manilov.ap) and the Starlight Designs A-12/YF-12/SR-71 set** (4). The only open-licence 3D available; send permission requests for Zoilo's photogrammetry scan.
+
+Also worth doing early, though not ranked: register free keys for DVIDS, api.data.gov (Smithsonian, GovInfo) and NARA; and save Wayback snapshots of every rights page you rely on (section 6.3).

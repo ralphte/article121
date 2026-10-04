@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Article 121 · Register</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=B612+Mono:wght@400;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="casefile.css">
+<style>
+/* Register: a card index beside an open file. Black-file finish from casefile.css.
+   Aliases below feed the globe, which reads its colours from CSS. */
+:root {
+  --ocean: #0b1017; --land: #1e2735; --globe-line: rgba(188, 204, 228, 0.16);
+}
+.wrap { max-width: 1320px; margin: 0 auto; padding-inline: 16px; }
+.head { margin-top: 40px; padding: clamp(20px, 4vw, 44px); }
+.head h1 { font-size: clamp(2.4rem, 1.2rem + 5vw, 5.6rem); margin-bottom: 18px; }
+.head p { max-width: 62ch; color: var(--ink-2); margin: 0 0 1.2rem; }
+.tally { display: flex; flex-wrap: wrap; gap: 10px 26px; font: 400 0.66rem/1.4 var(--f-data); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
+.tally b { font: 800 1.5rem/1 var(--f-display); font-stretch: 112%; color: var(--stencil); margin-right: 8px; letter-spacing: 0; vertical-align: -3px; }
+
+.reg { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 20px; margin-top: 20px; align-items: start; }
+
+/* Card index drawer */
+.drawer { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 44px); display: grid; grid-template-rows: auto minmax(0, 1fr); gap: 1px; max-height: calc(100vh - 60px); background: var(--seam); border: 1px solid var(--seam); }
+.controls { display: grid; gap: 8px; background: var(--hull); padding: 12px; }
+.controls input { width: 100%; font: 400 0.92rem/1.2 var(--f-body); padding: 11px 12px; border: 1px solid var(--seam-2); background: var(--void); color: var(--ink); border-radius: 0; }
+.controls input::placeholder { color: var(--ink-3); }
+.seg { display: flex; flex-wrap: wrap; gap: 4px; }
+.seg button { font: 700 0.6rem/1 var(--f-data); letter-spacing: 0.12em; text-transform: uppercase; padding: 8px 8px; background: transparent; color: var(--ink-2); border: 1px solid var(--seam-2); cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--stencil); color: var(--void); border-color: var(--stencil); }
+.cards { list-style: none; margin: 0; padding: 0; overflow-y: auto; display: grid; gap: 1px; align-content: start; background: var(--void); overscroll-behavior: contain; scrollbar-color: var(--seam-2) transparent; }
+.group-h { font: 400 0.6rem/1.2 var(--f-data); letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); padding: 16px 14px 8px; background: var(--void); }
+.icard { width: 100%; text-align: left; cursor: pointer; background: var(--hull); color: var(--ink); border: 0; border-left: 3px solid transparent; padding: 10px 12px 11px; font-family: var(--f-body); display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1px 8px; align-items: baseline; transition: background 0.15s, border-color 0.15s; }
+.icard:hover { background: var(--hull-2); }
+.icard[aria-current="true"] { background: var(--hull-3); border-left-color: var(--marking); }
+.ic-serial { font: 800 1.02rem/1.2 var(--f-display); font-stretch: 112%; color: var(--stencil); font-variant-numeric: tabular-nums; }
+.ic-tag { font: 700 0.56rem/1 var(--f-data); letter-spacing: 0.14em; text-transform: uppercase; padding: 4px 5px 3px; border: 1px solid currentColor; color: var(--ink-2); white-space: nowrap; }
+.ic-tag.lost { color: var(--marking); }
+.ic-tag.other { color: var(--ink-3); }
+.ic-line { grid-column: 1 / -1; font-size: 0.74rem; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.empty { background: var(--hull); padding: 14px; font-size: 0.85rem; color: var(--ink-2); }
+
+/* The open file */
+.file { padding: clamp(18px, 3.4vw, 44px); min-width: 0; }
+.file.enter { animation: slide 0.5s cubic-bezier(.2,.7,.2,1); }
+@keyframes slide { from { transform: translateY(12px); opacity: 0.2; } to { transform: none; opacity: 1; } }
+.sheet-head { display: flex; justify-content: space-between; gap: 6px 18px; flex-wrap: wrap; border-bottom: 1px solid var(--seam-2); padding-bottom: 10px; margin-bottom: 22px; font: 400 0.66rem/1.4 var(--f-data); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
+.sheet-head b { color: var(--ink); }
+.ident { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 300px); gap: 24px; align-items: start; }
+.serial { font: 800 clamp(2.8rem, 1.6rem + 4vw, 5.2rem)/0.92 var(--f-display); font-stretch: 125%; color: var(--stencil); font-variant-numeric: tabular-nums; letter-spacing: -0.005em; }
+.sub { margin-top: 12px; font: 400 0.74rem/1.4 var(--f-data); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-2); }
+.nick { margin-top: 6px; font: italic 400 1rem/1.4 var(--f-typed); color: var(--ink-2); }
+.status { display: inline-block; margin-top: 20px; font: 800 1rem/1 var(--f-display); font-stretch: 112%; letter-spacing: 0.16em; text-transform: uppercase; color: var(--stencil); border: 2.5px solid currentColor; padding: 9px 12px 7px; border-radius: 3px; transform: rotate(-4deg); opacity: 0.88; filter: url(#ink); }
+.status.lost { color: var(--marking); }
+.status.other { color: var(--ink-2); }
+.status small { display: block; font: 700 0.6rem/1.3 var(--f-data); letter-spacing: 0.1em; margin-top: 5px; }
+.status.land { animation: land 0.42s cubic-bezier(.3,1.6,.5,1) both; }
+@keyframes land { from { transform: rotate(-4deg) scale(1.6); opacity: 0; } to { transform: rotate(-4deg) scale(1); opacity: 0.88; } }
+
+.globe { position: relative; aspect-ratio: 1; max-width: 100%; }
+.globe canvas { width: 100%; height: 100%; display: block; cursor: grab; touch-action: none; }
+.globe-cap { margin-top: 8px; font: 400 0.66rem/1.5 var(--f-data); letter-spacing: 0.06em; color: var(--ink-3); text-align: center; text-transform: uppercase; }
+.globe-cap b { color: var(--ink); font-weight: 700; }
+
+.prints { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 14px; margin: 30px 0 6px; }
+.prints:has(.nophoto) { grid-template-columns: minmax(0, 420px); }
+.print { position: relative; margin: 0; background: var(--hull-2); border: 1px solid var(--seam); }
+.print img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; cursor: zoom-in; background: var(--void); }
+.print figcaption { padding: 10px 12px 12px; font-size: 0.82rem; line-height: 1.45; color: var(--ink); }
+.print .credit { display: block; margin-top: 6px; font: 400 0.6rem/1.45 var(--f-data); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+.clip { display: none; }
+.nophoto { aspect-ratio: 3 / 2; display: grid; place-items: center; text-align: center; padding: 18px; background: repeating-linear-gradient(-45deg, transparent 0 9px, var(--seam) 9px 10px), var(--void); font-size: 0.82rem; color: var(--ink-2); }
+.nophoto b { display: block; font: 800 0.8rem/1.1 var(--f-display); font-stretch: 112%; letter-spacing: 0.16em; text-transform: uppercase; color: var(--marking); border: 2px solid currentColor; padding: 7px 10px 6px; transform: rotate(-3deg); margin: 0 auto 12px; width: max-content; max-width: 100%; }
+
+.file h2 { font: 400 0.68rem/1.2 var(--f-data); letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); margin: 34px 0 12px; padding-top: 14px; border-top: 1px solid var(--seam); }
+.rec { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--seam); border: 1px solid var(--seam); }
+.rec > div { background: var(--hull); padding: 9px 12px 11px; min-width: 0; }
+.rec .w2 { grid-column: span 2; }
+.rec .w4 { grid-column: span 4; }
+.rec label { display: block; font: 400 0.56rem/1.3 var(--f-data); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 3px; }
+.rec .v { font: 700 0.9rem/1.35 var(--f-data); color: var(--stencil); overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+ul.notable { margin: 0; padding-left: 1.2rem; display: grid; gap: 7px; font: 400 0.95rem/1.55 var(--f-typed); color: var(--ink); max-width: 76ch; }
+ul.notable li::marker { color: var(--marking); }
+.fate { max-width: 74ch; margin: 0; font: 400 0.98rem/1.6 var(--f-typed); color: var(--ink); }
+.notes { background: var(--marking-soft); border-left: 2px solid var(--marking); padding: 12px 16px; font-size: 0.88rem; margin: 0; max-width: 80ch; color: var(--ink); }
+table.mini { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.mini td { border-bottom: 1px solid var(--seam); padding: 9px 6px; vertical-align: top; color: var(--ink-2); }
+.mini td b { color: var(--ink); }
+.mini td.d { white-space: nowrap; width: 8em; font: 700 0.8rem/1.5 var(--f-data); color: var(--stencil); font-variant-numeric: tabular-nums; }
+ol.src { margin: 0; padding-left: 1.4rem; display: grid; gap: 7px; font-size: 0.84rem; color: var(--ink-2); overflow-wrap: anywhere; }
+.pager { display: flex; justify-content: space-between; gap: 12px; margin-top: 34px; padding-top: 16px; border-top: 1px solid var(--seam-2); }
+.pager button { font: 700 0.68rem/1 var(--f-data); letter-spacing: 0.16em; text-transform: uppercase; padding: 12px 14px; background: transparent; color: var(--stencil); border: 1px solid var(--seam-2); cursor: pointer; }
+.pager button:hover:not(:disabled) { border-color: var(--stencil); }
+.pager button:disabled { opacity: 0.3; cursor: default; }
+
+@media (max-width: 960px) {
+  .reg { grid-template-columns: minmax(0, 1fr); }
+  .drawer { position: static; max-height: none; }
+  .cards { max-height: 46vh; }
+  .ident { grid-template-columns: minmax(0, 1fr); }
+  .globe { max-width: 320px; margin: 0 auto; width: 100%; }
+}
+@media (max-width: 600px) {
+  .rec { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rec .w2, .rec .w4 { grid-column: span 2; }
+}
+@media (prefers-reduced-motion: reduce) { .file.enter, .status.land { animation: none; } .icard { transition: none; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="ink"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="2"/></filter></svg>
+
+<nav class="banner" aria-label="Sections">
+  <s>Top secret</s><b>Declassified</b><span class="sep" aria-hidden="true"></span>
+  <a href="casefile.html">File</a><a href="casefile.html#chronology">Chronology</a><a href="casefile.html#viewing">Viewing table</a><a href="register.html" aria-current="page">Register</a><a href="casefile.html#sources">Sources</a>
+</nav>
+
+<div class="wrap">
+  <header class="head panel ticks">
+    <div class="sheet-head"><b>File A121-R</b><span>Airframe register</span><span id="count-label">Loading records</span></div>
+    <h1 class="display">Where they are now</h1>
+    <p>Every airframe of the Blackbird family that Lockheed built, from Article 121 to the last SR-71. Pick any one to open its file: what it did, how its career ended, and where you can stand next to it today.</p>
+    <div class="tally" id="tally"></div>
+  </header>
+
+  <main class="reg">
+    <aside class="drawer" aria-label="Card index of airframes">
+      <div class="controls">
+        
+        <input id="q" type="search" aria-label="Search the register" placeholder="Search serial, museum, city or name" autocomplete="off">
+        <div class="seg" role="group" aria-label="Filter by type" id="f-type">
+          <button aria-pressed="true" data-v="all">All</button>
+          <button aria-pressed="false" data-v="A-12">A-12</button>
+          <button aria-pressed="false" data-v="YF-12A">YF-12A</button>
+          <button aria-pressed="false" data-v="M-21">M-21</button>
+          <button aria-pressed="false" data-v="SR-71">SR-71</button>
+          <button aria-pressed="false" data-v="D-21">D-21</button>
+        </div>
+        <div class="seg" role="group" aria-label="Filter by status" id="f-fate">
+          <button aria-pressed="true" data-v="all">Any status</button>
+          <button aria-pressed="false" data-v="preserved">On display</button>
+          <button aria-pressed="false" data-v="lost">Lost</button>
+          <button aria-pressed="false" data-v="other">Other</button>
+        </div>
+      </div>
+      <ol class="cards" id="cards"><li class="empty">Opening the card index.</li></ol>
+    </aside>
+
+    <section aria-live="polite" id="dossier-host">
+      <article class="file panel ticks" id="file"><p>Pull a card from the index to open its file.</p></article>
+    </section>
+  </main>
+</div>
+
+<footer class="site"><div class="inner">
+  <p>Records compiled from CIA, NASA, Smithsonian, U.S. Air Force and museum sources, with veterans' association and long-running enthusiast records where official ones are silent. Where sources disagree, the file says so. Found an error or a photo we should have? The full site links every record to a correction form.</p>
+  <p class="label">Design prototype · round 3 · register data from the Article 121 research pack, 4 October 2026</p>
+</div></footer>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photograph">
+  <div class="zoomwrap" id="lb-zoom"><img id="lb-img" alt=""></div>
+  <div class="lb-bar"><span id="lb-cap"></span><button class="btn" id="lb-close">Close</button></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const css = (n) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const fmtDate = (d) => {
+  if (!d) return null;
+  const [y, m, dd] = d.split('-');
+  if (dd) return `${Number(dd)} ${MONTHS[m - 1].slice(0, 3)} ${y}`;
+  if (m) return `${MONTHS[m - 1]} ${y}`;
+  return y;
+};
+const family = (t) => t.startsWith('SR-71') ? 'SR-71' : t.startsWith('A-12') ? 'A-12' : t.startsWith('D-21') ? 'D-21' : t;
+const GROUPS = [['A-12', 'A-12 · CIA OXCART'], ['YF-12A', 'YF-12A · Air Force interceptor'], ['M-21', 'M-21 · drone carrier'], ['D-21', 'D-21 · reconnaissance drone'], ['SR-71', 'SR-71 · Air Force reconnaissance']];
+const lossDate = (txt) => {
+  const m = txt && txt.match(/(\d{1,2}) (January|February|March|April|May|June|July|August|September|October|November|December) (\d{4})/);
+  return m ? `${m[1]} ${m[2].slice(0, 3)} ${m[3]}` : null;
+};
+const placeOf = (a) => a.location ? [a.location.museum, a.location.city].filter(Boolean).join(', ') : null;
+
+let AIRFRAMES = [], EVENTS = [], PHOTOS = {}, current = null, fType = 'all', fFate = 'all';
+
+async function load(url, fallback) {
+  try { const r = await fetch(url); if (!r.ok) throw new Error(r.status); return await r.json(); }
+  catch (e) { return fallback; }
+}
+
+(async function init() {
+  const [af, ev, ph, world, us] = await Promise.all([
+    load('data/airframes.json', []), load('data/timeline.json', []), load('img/airframes/manifest.json', {}),
+    load('data/countries-50m.json', null), load('data/states-10m.json', null),
+  ]);
+  AIRFRAMES = af; EVENTS = ev; PHOTOS = ph || {};
+  tally();
+  renderCards();
+  Globe.init(world, us);
+  const want = decodeURIComponent(location.hash.slice(1));
+  select(AIRFRAMES.find((a) => a.serial === want || slug(a) === want) || AIRFRAMES[0], false);
+})();
+
+const slug = (a) => a.serial.startsWith('D-21') ? 'd21' : a.serial;
+
+function tally() {
+  const built = AIRFRAMES.filter((a) => !a.serial.startsWith('D-21'));
+  const by = (f) => built.filter((a) => family(a.type) === f).length;
+  const shown = built.filter((a) => a.fate === 'preserved').length;
+  const lost = built.filter((a) => a.fate === 'lost').length;
+  document.getElementById('count-label').textContent = `${AIRFRAMES.length} records`;
+  document.getElementById('tally').innerHTML = [
+    [by('A-12'), 'A-12'], [by('YF-12A'), 'YF-12A'], [by('M-21'), 'M-21'], [by('SR-71'), 'SR-71'],
+    [shown, 'on display'], [lost, 'lost'],
+  ].map(([n, l]) => `<span><b>${n}</b>${l}</span>`).join('');
+}
+
+function matches(a) {
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  if (fType !== 'all' && family(a.type) !== fType) return false;
+  if (fFate !== 'all' && a.fate !== fFate) return false;
+  if (!q) return true;
+  const hay = [a.serial, a.serial.replace('61-79', '64-179'), a.type, a.article, a.nickname, placeOf(a), a.location?.state_or_country, a.fate_detail].join(' ').toLowerCase();
+  return q.split(/\s+/).every((t) => hay.includes(t));
+}
+
+function cardLine(a) {
+  if (a.fate === 'preserved') return placeOf(a);
+  if (a.fate === 'lost') { const d = lossDate(a.fate_detail); return d ? `Lost ${d}` : 'Lost'; }
+  if (a.serial.startsWith('D-21')) return `${(a.displays || []).length} survivors on display`;
+  return a.location ? placeOf(a) : 'See file';
+}
+function tag(a) {
+  if (a.fate === 'preserved') return '<span class="ic-tag">Display</span>';
+  if (a.fate === 'lost') return '<span class="ic-tag lost">Lost</span>';
+  return '<span class="ic-tag other">Other</span>';
+}
+
+function renderCards() {
+  const ol = document.getElementById('cards');
+  const list = AIRFRAMES.filter(matches);
+  if (!list.length) { ol.innerHTML = '<li class="empty">No airframe matches. Try a serial such as 61-7972, a museum, or a city.</li>'; return; }
+  let html = '';
+  for (const [g, label] of GROUPS) {
+    const items = list.filter((a) => family(a.type) === g);
+    if (!items.length) continue;
+    html += `<li class="group-h">${label} (${items.length})</li>`;
+    for (const a of items) {
+      const name = a.serial.startsWith('D-21') ? 'D-21 drones' : a.serial;
+      html += `<li><button class="icard" data-s="${esc(a.serial)}" aria-current="${current === a}"><span class="ic-serial">${esc(name)}</span>${tag(a)}<span class="ic-line">${esc(a.type)}${a.article ? ' · Art. ' + esc(a.article) : ''}${a.nickname && a.nickname !== 'Article ' + a.article ? ' · ' + esc(a.nickname) : ''}</span><span class="ic-line">${esc(cardLine(a))}</span></button></li>`;
+    }
+  }
+  ol.innerHTML = html;
+}
+
+document.getElementById('cards').addEventListener('click', (e) => {
+  const b = e.target.closest('.icard'); if (!b) return;
+  select(AIRFRAMES.find((a) => a.serial === b.dataset.s), true);
+});
+document.getElementById('q').addEventListener('input', renderCards);
+for (const [id, set] of [['f-type', (v) => (fType = v)], ['f-fate', (v) => (fFate = v)]]) {
+  document.getElementById(id).addEventListener('click', (e) => {
+    const b = e.target.closest('button'); if (!b) return;
+    document.querySelectorAll(`#${id} button`).forEach((x) => x.setAttribute('aria-pressed', x === b));
+    set(b.dataset.v); renderCards();
+  });
+}
+
+function statusStamp(a) {
+  if (a.fate === 'preserved') return `<div class="status land">On display<small>${esc(a.location?.city || '')}${a.location?.state_or_country ? ', ' + esc(a.location.state_or_country.replace(', USA', '')) : ''}</small></div>`;
+  if (a.fate === 'lost') { const d = lossDate(a.fate_detail); return `<div class="status lost land">Lost${d ? `<small>${esc(d)}</small>` : ''}</div>`; }
+  return `<div class="status other land">See record<small>Not a simple story</small></div>`;
+}
+
+function photosFor(a) {
+  const list = PHOTOS[slug(a)] || [];
+  if (!list.length) {
+    return `<figure class="print"><span class="clip" aria-hidden="true"></span><div class="nophoto"><div><b>No photo on file</b>No openly licensed photograph of ${esc(a.serial.startsWith('D-21') ? 'these drones' : 'this airframe')} is in the archive yet. If you took one or know of one, the full site will take submissions.</div></div><figcaption>Exhibit pending</figcaption></figure>`;
+  }
+  return list.slice(0, 2).map((p, i) => `<figure class="print"><span class="clip" aria-hidden="true"></span><img src="${esc(p.file)}" alt="${esc(p.caption)}" data-i="${i}" loading="lazy"><figcaption>${esc(p.caption)}<span class="credit">${esc(p.creator || 'Unknown')}${p.date ? ' · ' + esc(p.date) : ''} · ${esc(p.license)} · <a href="${esc(p.source_page)}" target="_blank" rel="noopener">Source</a></span></figcaption></figure>`).join('');
+}
+
+function eventsFor(a) {
+  return EVENTS.filter((e) => (e.airframes || []).includes(a.serial)).sort((x, y) => x.date.localeCompare(y.date));
+}
+
+function select(a, user) {
+  if (!a) return;
+  current = a;
+  document.querySelectorAll('.icard').forEach((b) => b.setAttribute('aria-current', b.dataset.s === a.serial));
+  const list = document.getElementById('cards'), card = list.querySelector('.icard[aria-current="true"]');
+  if (card && (card.offsetTop < list.scrollTop || card.offsetTop > list.scrollTop + list.clientHeight - 60)) list.scrollTop = card.offsetTop - list.offsetTop - 40;
+  try { history.replaceState(null, '', '#' + slug(a)); } catch (e) {}
+  const evs = eventsFor(a);
+  const idx = AIRFRAMES.indexOf(a);
+  const isD21 = a.serial.startsWith('D-21');
+  const loc = a.location;
+  const f = document.getElementById('file');
+  f.innerHTML = `
+    <div class="sheet-head"><b>File A121-R-${esc(slug(a)).toUpperCase()}</b><span>${esc(a.type)}</span><span>${a.article ? 'Article ' + esc(a.article) : 'No article number'}</span></div>
+    <div class="ident">
+      <div>
+        <div class="serial">${isD21 ? 'D-21' : esc(a.serial)}</div>
+        <div class="sub">${esc(a.type)}${a.article ? ' · Article ' + esc(a.article) : ''}</div>
+        ${a.nickname ? `<div class="nick">${esc(a.nickname)}</div>` : ''}
+        ${statusStamp(a)}
+      </div>
+      <div><div class="globe"><canvas id="globe" aria-label="Globe showing where this airframe is displayed"></canvas></div><div class="globe-cap" id="globe-cap"></div></div>
+    </div>
+    <div class="prints" id="prints">${photosFor(a)}</div>
+    <h2>Record</h2>
+    <div class="rec">
+      <div><label>Serial</label><span class="v">${esc(a.serial)}</span></div>
+      <div><label>Article</label><span class="v">${esc(a.article || 'n/a')}</span></div>
+      <div><label>Type</label><span class="v">${esc(a.type)}</span></div>
+      <div><label>Flight hours</label><span class="v">${a.total_hours != null ? Number(a.total_hours).toLocaleString('en-US') : 'Not published'}</span></div>
+      <div class="w2"><label>First flight</label><span class="v">${esc(fmtDate(a.first_flight) || 'Not confirmed')}</span></div>
+      <div class="w2"><label>Status</label><span class="v">${esc({ preserved: 'Preserved, on display', lost: 'Lost', other: 'See fate' }[a.fate] || a.fate)}</span></div>
+      <div class="w4"><label>${a.fate === 'lost' && loc ? 'Remains' : 'Where it is now'}</label><span class="v">${loc ? esc([loc.museum, loc.city, loc.state_or_country].filter(Boolean).join(', ')) : isD21 ? 'See survivors below' : 'Destroyed'}</span></div>
+    </div>
+    ${a.notable?.length ? `<h2>Career</h2><ul class="notable">${a.notable.map((n) => `<li>${esc(n)}</li>`).join('')}</ul>` : ''}
+    <h2>${a.fate === 'lost' ? 'How it was lost' : 'Fate'}</h2><p class="fate">${esc(a.fate_detail)}</p>
+    ${isD21 && a.displays?.length ? `<h2>Survivors on display</h2><table class="mini"><tbody>${a.displays.map((d) => `<tr><td class="d">Drone ${esc(d.drone)}</td><td>${esc([d.museum, d.city, d.state_or_country].filter(Boolean).join(', '))}</td></tr>`).join('')}</tbody></table>` : ''}
+    ${evs.length ? `<h2>In the chronology</h2><table class="mini"><tbody>${evs.map((e) => `<tr><td class="d">${esc(fmtDate(e.date))}</td><td><b>${esc(e.title)}</b><br>${esc(e.summary)}</td></tr>`).join('')}</tbody></table>` : ''}
+    ${a.notes ? `<h2>Where the record disagrees</h2><p class="notes">${esc(a.notes)}</p>` : ''}
+    <h2>Sources</h2><ol class="src">${(a.sources || []).map((s) => `<li>${esc(s.publisher)}. <em>${esc(s.title)}</em>. <a href="${esc(s.url)}" target="_blank" rel="noopener">Open</a></li>`).join('')}</ol>
+    <div class="pager"><button id="prev" ${idx <= 0 ? 'disabled' : ''}>Previous file</button><button id="next" ${idx >= AIRFRAMES.length - 1 ? 'disabled' : ''}>Next file</button></div>`;
+  if (!reduce) { f.classList.remove('enter'); void f.offsetWidth; f.classList.add('enter'); }
+  document.getElementById('prev').onclick = () => select(AIRFRAMES[idx - 1], true);
+  document.getElementById('next').onclick = () => select(AIRFRAMES[idx + 1], true);
+  document.getElementById('prints').addEventListener('click', (e) => {
+    const img = e.target.closest('img'); if (!img) return;
+    const p = (PHOTOS[slug(a)] || [])[Number(img.dataset.i)];
+    document.getElementById('lb-img').src = p.file; document.getElementById('lb-img').alt = p.caption;
+    document.getElementById('lb-cap').innerHTML = `${esc(p.caption)} · ${esc(p.creator || '')} · ${esc(p.license)} · <a href="${esc(p.source_page)}" target="_blank" rel="noopener">Source</a>`;
+    document.getElementById('lb-zoom').classList.remove('zoomed');
+    document.getElementById('lightbox').hidden = false; document.getElementById('lb-close').focus();
+  });
+  Globe.mount(document.getElementById('globe'), a);
+  const cap = document.getElementById('globe-cap');
+  cap.innerHTML = loc ? `<b>${esc(loc.museum)}</b><br>${esc(loc.city)}, ${esc(loc.state_or_country)} · ${loc.lat.toFixed(2)}, ${loc.lon.toFixed(2)}`
+    : isD21 ? '<b>Surviving drones</b><br>Marked on the globe'
+    : '<b>No display location</b><br>Dots mark every surviving airframe';
+  if (user && innerWidth < 960) document.getElementById('dossier-host').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+}
+
+document.getElementById('lb-close').addEventListener('click', () => (document.getElementById('lightbox').hidden = true));
+const zw = document.getElementById('lb-zoom'), zimg = document.getElementById('lb-img');
+const zoomAt = (e) => { const r = zw.getBoundingClientRect(); zimg.style.transformOrigin = `${((e.clientX - r.left) / r.width) * 100}% ${((e.clientY - r.top) / r.height) * 100}%`; };
+zw.addEventListener('click', (e) => { e.stopPropagation(); zoomAt(e); zw.classList.toggle('zoomed'); });
+zw.addEventListener('pointermove', (e) => { if (zw.classList.contains('zoomed')) zoomAt(e); });
+document.getElementById('lightbox').addEventListener('click', (e) => { if (e.target.id === 'lightbox') e.currentTarget.hidden = true; });
+addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') document.getElementById('lightbox').hidden = true;
+  if (document.activeElement?.id === 'q') return;
+  const i = AIRFRAMES.indexOf(current);
+  if (e.key === 'ArrowDown' || e.key === 'j') { e.preventDefault(); select(AIRFRAMES[Math.min(i + 1, AIRFRAMES.length - 1)], true); }
+  if (e.key === 'ArrowUp' || e.key === 'k') { e.preventDefault(); select(AIRFRAMES[Math.max(i - 1, 0)], true); }
+});
+
+// Plotting-chart globe: every surviving airframe is a dot; it turns to the selected one
+const Globe = (() => {
+  let land = null, states = null, canvas = null, ctx = null, rot = [98, -38, 0], target = rot, sel = null, raf = 0, t0 = 0, from = rot, size = 300;
+  const proj = d3.geoOrthographic().precision(0.3).clipAngle(90);
+  const grat = d3.geoGraticule10();
+  function init(world, us) {
+    if (world) land = topojson.feature(world, world.objects.countries);
+    if (us) states = topojson.mesh(us, us.objects.states, (a, b) => a !== b);
+  }
+  function mount(c, a) {
+    canvas = c; ctx = c.getContext('2d'); sel = a;
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    size = c.parentElement.clientWidth || 300;
+    c.width = size * dpr; c.height = size * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    proj.translate([size / 2, size / 2]).scale(size / 2 - 4);
+    const loc = a.location;
+    const goal = loc ? [-loc.lon, -loc.lat, 0] : a.displays?.length ? [98, -38, 0] : [98, -38, 0];
+    from = rot.slice(); target = goal; t0 = performance.now();
+    cancelAnimationFrame(raf); raf = requestAnimationFrame(tick);
+    drag(c);
+  }
+  function tick(now) {
+    const k = reduce ? 1 : Math.min(1, (now - t0) / 1300);
+    const e = d3.easeCubicInOut(k);
+    rot = d3.interpolate(from, target)(e);
+    draw(now);
+    // keep the selection pulse going for a few seconds, then rest
+    if (k < 1 || (!reduce && now - t0 < 7000)) raf = requestAnimationFrame(tick);
+  }
+  function survivors() {
+    const pts = [];
+    for (const a of AIRFRAMES) {
+      if (a.location && a.fate !== 'lost') pts.push({ a, lon: a.location.lon, lat: a.location.lat, kind: 'af' });
+      for (const d of a.displays || []) pts.push({ a, lon: d.lon, lat: d.lat, kind: 'd21' });
+    }
+    return pts;
+  }
+  function draw(now) {
+    if (!ctx) return;
+    proj.rotate(rot);
+    const path = d3.geoPath(proj, ctx);
+    const ink = css('--seam-2'), faint = css('--globe-line'), stamp = css('--stencil'), flag = css('--marking');
+    ctx.clearRect(0, 0, size, size);
+    ctx.beginPath(); path({ type: 'Sphere' }); ctx.fillStyle = css('--ocean'); ctx.fill();
+    ctx.beginPath(); path(grat); ctx.strokeStyle = css('--seam'); ctx.lineWidth = 0.6; ctx.setLineDash([2, 3]); ctx.stroke(); ctx.setLineDash([]);
+    if (land) { ctx.beginPath(); path(land); ctx.fillStyle = css('--land'); ctx.fill(); ctx.strokeStyle = faint; ctx.lineWidth = 0.4; ctx.stroke(); }
+    if (states) { ctx.beginPath(); path(states); ctx.strokeStyle = css('--globe-line'); ctx.lineWidth = 0.4; ctx.stroke(); }
+    ctx.beginPath(); path({ type: 'Sphere' }); ctx.strokeStyle = ink; ctx.lineWidth = 1.2; ctx.stroke();
+    const center = proj.invert([size / 2, size / 2]);
+    for (const p of survivors()) {
+      if (d3.geoDistance([p.lon, p.lat], center) > Math.PI / 2) continue;
+      const [x, y] = proj([p.lon, p.lat]);
+      const on = p.a === sel;
+      ctx.fillStyle = on ? flag : stamp;
+      ctx.globalAlpha = on ? 1 : 0.75;
+      if (p.kind === 'd21') ctx.fillRect(x - 2, y - 2, 4, 4);
+      else { ctx.beginPath(); ctx.arc(x, y, on ? 4 : 3, 0, Math.PI * 2); ctx.fill(); }
+      ctx.globalAlpha = 1;
+      if (on && p.kind === 'af') {
+        const pulse = reduce ? 0 : (now / 1000) % 1.6 / 1.6;
+        ctx.strokeStyle = flag; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.arc(x, y, 9 + pulse * 14, 0, Math.PI * 2); ctx.globalAlpha = 1 - pulse; ctx.stroke(); ctx.globalAlpha = 1;
+        ctx.beginPath(); ctx.moveTo(x - 18, y); ctx.lineTo(x - 7, y); ctx.moveTo(x + 7, y); ctx.lineTo(x + 18, y); ctx.moveTo(x, y - 18); ctx.lineTo(x, y - 7); ctx.moveTo(x, y + 7); ctx.lineTo(x, y + 18); ctx.stroke();
+      }
+    }
+  }
+  let dragging = false;
+  function drag(c) {
+    if (c.dataset.drag) return; c.dataset.drag = 1;
+    let start = null, startRot = null;
+    c.addEventListener('pointerdown', (e) => { dragging = true; start = [e.clientX, e.clientY]; startRot = rot.slice(); c.setPointerCapture(e.pointerId); c.style.cursor = 'grabbing'; });
+    c.addEventListener('pointermove', (e) => {
+      if (!dragging) return;
+      const k = 90 / (size / 2);
+      target = from = rot = [startRot[0] + (e.clientX - start[0]) * k, Math.max(-80, Math.min(80, startRot[1] - (e.clientY - start[1]) * k)), 0];
+      t0 = 0; draw(performance.now());
+    });
+    const up = () => { dragging = false; c.style.cursor = 'grab'; };
+    c.addEventListener('pointerup', up); c.addEventListener('pointercancel', up);
+  }
+  return { init, mount };
+})();
+</script>
+</body>
+</html>

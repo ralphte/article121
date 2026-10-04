@@ -60,6 +60,10 @@ p { margin: 0 0 1em; max-width: 66ch; }
 
 /* Direction cards */
 .dirs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 18px; }
+.dirs.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 820px) { .dirs.two { grid-template-columns: minmax(0, 1fr); } }
+details.round1 summary { cursor: pointer; list-style-position: outside; }
+details.round1[open] summary { margin-bottom: 8px; }
 @media (max-width: 820px) { .dirs { grid-template-columns: minmax(0, 1fr); } }
 .dir { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; display: grid; grid-template-rows: auto 1fr auto; }
 .dir img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-bottom: 1px solid var(--rule); }
@@ -108,7 +112,8 @@ footer { margin-top: 56px; font: 400 0.76rem/1.6 var(--f-mono); color: var(--mut
 <div class="layout">
   <nav class="toc" aria-label="Contents">
     <ol>
-      <li><a href="#directions">Design directions</a></li>
+      <li><a href="#round2">Round 3</a></li>
+      <li><a href="#directions">Earlier rounds</a></li>
       <li><a href="#rules">Ground rules</a></li>
       <li><a href="#map">Site map</a></li>
       <li><a href="#signature">Signature pieces</a></li>
@@ -125,12 +130,38 @@ footer { margin-top: 56px; font: 400 0.76rem/1.6 var(--f-mono); color: var(--mut
     <header class="top">
       <div class="mark">ARTICLE 121</div>
       <h1>Plan and design review</h1>
-      <div class="meta"><span>4 October 2026</span><span>article121.com: unregistered today</span><span>Repo: github.com/ralphte/article121 (public)</span></div>
+      <div class="meta"><span>4 October 2026 · round 3</span><span>article121.com: unregistered today</span><span>Repo: github.com/ralphte/article121 (public)</span></div>
       <p class="lede">A free, ad-free archive of the Lockheed A-12, YF-12, M-21 and SR-71. It collects the best public photographs, documents and records, credits every one, and presents them with Astro and Three.js. The name comes from the CIA's designation for the first A-12 airframe, 60-6924.</p>
     </header>
 
+    <section id="round2">
+      <h2><span class="n">ROUND 3 · YOUR FEEDBACK APPLIED</span>The black file</h2>
+      <p>You asked for real high-end photographs over 3D that was not close enough to the real aircraft, the classified feel as the identity of the site, a register where you can pick any airframe that was built and read its history, and a darker, sleeker finish like the aircraft itself. Both pages below are live.</p>
+      <div class="dirs two">
+        <article class="dir">
+          <img src="img/shot-casefile.jpg" alt="Black file home page: NASA 831 taking off with shock diamonds in its exhaust, under the Article 121 title and a red declassified stamp" loading="lazy">
+          <div class="body"><div class="label">Home</div><h3>The case file</h3>
+            <p>Opens on a full-bleed photograph with the title unredacted on load. A black folder with red cover-sheet borders opens in 3D as you reach it. Exhibit A is a full-resolution print you inspect with a photo interpreter's loupe; the chronology is a ledger; the viewing table opens any photograph full screen with zoom.</p></div>
+          <div class="go"><a class="btn" href="casefile.html">Open the case file</a></div>
+        </article>
+        <article class="dir">
+          <img src="img/shot-register.jpg" alt="Register page in the black finish: a card index of airframes beside the open file for 60-6924, with a dark globe marking Palmdale" loading="lazy">
+          <div class="body"><div class="label">New</div><h3>Where they are now</h3>
+            <p>All 51 records in a card index: every A-12, YF-12A, M-21 and SR-71, plus the D-21 drones. Pick one to open its file: photos, record card, career, how it was lost or where it stands today, chronology, disputes between sources, and every source. A globe turns to its museum.</p></div>
+          <div class="go"><a class="btn" href="register.html">Open the register</a></div>
+        </article>
+      </div>
+      <ul class="rules" style="margin-top:18px">
+        <li><b>No 3D aircraft until one is good enough.</b> The placeholder model is gone from these pages. 3D stays only where it adds something a photograph cannot: the folder that opens on the home page, the globe in the register, and later the inlet explainer. An aircraft model comes back only if one matches the photographs beside it.</li>
+        <li><b>Photographs lead.</b> Every airframe file looks for a real photograph of that exact airframe, identified by serial and openly licensed. Where none exists yet, the file says so instead of using a stand-in. The per-airframe photo search is still running and will fill the register in place.</li>
+        <li><b>Black, matte and sleek, like the aircraft.</b> Surfaces take the SR-71's blue-black finish, type is titanium grey and white stencil, and the only colour is the red of its walkway markings, used for the classification line, stamps and losses. Wide, low display type echoes the airframe. The case-file devices stay: file numbers, stamps, redactions that lift, typed documents.</li>
+      </ul>
+    </section>
+
     <section id="directions">
-      <h2><span class="n">STEP 1 · PICK A LOOK</span>Three design directions</h2>
+      <details class="round1">
+      <summary><h2 style="display:inline"><span class="n">ROUNDS 1 AND 2 · FOR REFERENCE</span>Earlier directions</h2></summary>
+      <p>Round 2 was the same case file in light manila and bond paper: <a href="declassified.html">open the light case file</a>. Round 1 was these three directions:</p>
       <p>Each prototype is a live page with working 3D and animation, built from the same placeholder aircraft model and the same public-domain photos. Open them on a laptop for the full effect; all three also work on a phone.</p>
       <div class="dirs">
         <article class="dir">
@@ -155,7 +186,8 @@ footer { margin-top: 56px; font: 400 0.76rem/1.6 var(--f-mono); color: var(--mut
           <div class="go"><a class="btn" href="blueprint.html">Open C</a></div>
         </article>
       </div>
-      <div class="rec"><p><b>Recommendation:</b> use A as the site's shell and home page, C's drawing language for the engineering section and register, and B's case-file treatment for the documents room. Shared type, colour tokens and navigation keep it one site, like rooms in one museum. If you would rather commit to a single look, choose A.</p></div>
+      <div class="rec"><p><b>Round 1 recommendation, now superseded:</b> use A as the site's shell and home page, C's drawing language for the engineering section and register, and B's case-file treatment for the documents room. Shared type, colour tokens and navigation keep it one site, like rooms in one museum. If you would rather commit to a single look, choose A.</p></div>
+      </details>
     </section>
 
     <section id="rules">
@@ -175,10 +207,10 @@ footer { margin-top: 56px; font: 400 0.76rem/1.6 var(--f-mono); color: var(--mut
       <div class="table-wrap"><table>
         <thead><tr><th>Section</th><th>What it holds</th><th>Signature interaction</th></tr></thead>
         <tbody>
-          <tr><td>Home</td><td>Mission, the story in six chapters, entry points</td><td>The Climb</td></tr>
+          <tr><td>Home</td><td>The case file: mission, summary, exhibits, entry points</td><td>Folder opening, Exhibit A loupe</td></tr>
           <tr><td>Timeline</td><td>Every dated event from the U-2 shootdown to NASA's last flight and the museum era</td><td>Zoomable multi-lane timeline</td></tr>
           <tr><td>Programs</td><td>Archangel, OXCART, KEDLOCK, TAGBOARD, SENIOR BOWL, SENIOR CROWN, NASA</td><td>Program pages with their own timelines</td></tr>
-          <tr><td>Register</td><td>One page per airframe: serial, article number, history, photos, fate</td><td>Survivors map and globe</td></tr>
+          <tr><td>Register</td><td>Where they are now: a file for every airframe built, with history, photos and fate</td><td>Card index and globe (prototype built)</td></tr>
           <tr><td>The Machine</td><td>Airframe, titanium, J58, JP-7, inlet, navigation, suits</td><td>3D exploded view, inlet simulator</td></tr>
           <tr><td>Missions</td><td>Publicly documented operations and record flights</td><td>Animated route maps</td></tr>
           <tr><td>People</td><td>Skunk Works engineers, crews, ground crews, with oral histories</td><td>Crew and airframe cross-links</td></tr>
@@ -193,10 +225,10 @@ footer { margin-top: 56px; font: 400 0.76rem/1.6 var(--f-mono); color: var(--mut
       <h2><span class="n">THE WOW</span>Signature pieces</h2>
       <p>These are where the animation budget goes. Everything else stays fast and quiet so the photographs carry the site.</p>
       <div class="exp">
-        <div><h3>The Climb</h3><p>Scroll-driven sortie from runway to cruise with live instruments, a real flight profile and history chapters at each altitude. Prototype A shows it.</p></div>
+        <div><h3>The case file</h3><p>The folder opens on the desk, redactions lift as you read, and Exhibit A can be inspected with a loupe at full resolution.</p></div>
         <div><h3>The Timeline</h3><p>One zoomable track across 1956 to 1999 with a lane per program. Drag to scrub, pinch to zoom, click any mark for the cited entry and photos.</p></div>
-        <div><h3>The Register and map</h3><p>Every airframe built, its story and its fate. A globe flies to each survivor's museum; losses are marked where public records place them.</p></div>
-        <div><h3>The Machine</h3><p>A properly modelled 3D Blackbird with exploded view, the J58 inlet simulator from prototype C, and a skin temperature map at Mach 3.2.</p></div>
+        <div><h3>Where they are now</h3><p>Every airframe built, its story and its fate, in a card index. A globe turns to each survivor's museum. Built in round 2.</p></div>
+        <div><h3>The Machine</h3><p>The J58 inlet explainer from round 1, cutaway drawings and photographs of the engine. A 3D aircraft only once a model matches the real one.</p></div>
         <div><h3>Record flights</h3><p>The 6 March 1990 Los Angeles to Washington run replayed on a map at true pace, compressed against an airliner flying the same route.</p></div>
         <div><h3>Deep-zoom archive</h3><p>Full-resolution scans you can zoom into rivet by rivet, each with its creator, date, catalogue number and licence.</p></div>
       </div>
@@ -313,7 +345,7 @@ const events = defineCollection({
         <li><b>Approve</b><p>Pick a direction, register article121.com, publish the repo with this plan and the prototypes.</p></li>
         <li><b>Foundation</b><p>Astro project, design tokens from the chosen direction, content schemas with the citation rule, CI and deploy. A live skeleton on the domain.</p></li>
         <li><b>Harvest</b><p>Ingest scripts for the public archives, the source register, the full airframe register and the master timeline, all validated.</p></li>
-        <li><b>Signature pieces</b><p>The Climb, the Timeline, the Register with its map, and The Machine with a properly modelled aircraft.</p></li>
+        <li><b>Signature pieces</b><p>The case-file home, the Register, the Timeline, the light table with deep zoom, and The Machine.</p></li>
         <li><b>Depth</b><p>Documents reader, missions, people, deep-zoom archive, and permission requests to the legacy fan sites.</p></li>
         <li><b>Launch</b><p>Accessibility audit, performance budgets, reduced-motion paths, share cards, then announce.</p></li>
       </ol>
@@ -322,7 +354,7 @@ const events = defineCollection({
     <section id="decisions">
       <h2><span class="n">STEP 2 · YOUR CALL</span>Decisions for you</h2>
       <div class="decide">
-        <div><b>Design direction</b><span class="pick">A + C + B</span><p>A as the shell, C for engineering, B for documents. Or one of the three alone.</p></div>
+        <div><b>Design direction</b><span class="pick">Chosen: black file</span><p>The classified case file, dark and sleek, led by photographs. Next: your notes on the two round 3 pages.</p></div>
         <div><b>Where the repo lives</b><span class="pick">ralphte/article121</span><p>Your personal account to start. A dedicated organisation later makes it easy to add co-maintainers.</p></div>
         <div><b>Licences for our own work</b><span class="pick">BY-SA text · CC0 data · MIT code</span><p>CC BY-SA 4.0 for writing keeps it open and compatible with Wikipedia. CC0 for the airframe and timeline data invites reuse by researchers and Wikidata. Third-party photos keep their own terms, shown under each one.</p></div>
         <div><b>Hosting</b><span class="pick">Cloudflare</span><p>Workers static assets plus R2, at close to zero cost. Self-hosting behind your Hetzner proxy is possible but adds upkeep.</p></div>

@@ -122,10 +122,46 @@ table.ledger { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-wi
 .pledge p { font: 500 var(--s1)/1.5 var(--f-head); color: var(--type); }
 .proto { font-size: 0.72rem; color: var(--type-faint); letter-spacing: 0.06em; }
 
+/* Routing slip navigation */
+.routing { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 29px); z-index: 9; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px; padding: 6px 16px; background: var(--board-edge); font: 700 0.74rem/1.4 var(--f-type); letter-spacing: 0.12em; text-transform: uppercase; }
+.routing span { color: var(--paper); opacity: 0.8; }
+.routing a { color: var(--paper); text-decoration: none; border-bottom: 1px dashed transparent; }
+.routing a:hover { border-bottom-color: var(--paper); }
+
+/* Exhibit A: a big mounted print with a photo interpreter's loupe */
+.exhibit-a { max-width: 1240px; margin: 80px auto 0; padding-inline: 16px; }
+.exa-head { display: flex; align-items: baseline; gap: 10px 18px; flex-wrap: wrap; margin-bottom: 14px; }
+.exa-head .file-no { font: 700 0.78rem/1 var(--f-type); letter-spacing: 0.16em; text-transform: uppercase; background: var(--type); color: var(--paper); padding: 6px 8px; }
+.exa-head h2 { margin: 0; flex: 1; min-width: 0; }
+.loupe-toggle { display: none; }
+@media (pointer: coarse) { .loupe-toggle { display: inline-block; } }
+.mount { margin: 0; background: var(--paper); padding: clamp(10px, 1.6vw, 18px); box-shadow: 0 24px 50px var(--shadow); }
+.loupe-host { position: relative; overflow: hidden; cursor: crosshair; touch-action: pan-y; }
+.loupe-host.on { touch-action: none; }
+.loupe-host img { display: block; width: 100%; height: auto; }
+.loupe { position: absolute; width: clamp(140px, 22vw, 260px); aspect-ratio: 1; border-radius: 50%; border: 5px solid #2b2b2b; box-shadow: 0 0 0 1px #888, 0 14px 30px rgba(0,0,0,0.55), inset 0 0 22px rgba(0,0,0,0.45); background-repeat: no-repeat; pointer-events: none; }
+.loupe::before, .loupe::after { content: ""; position: absolute; background: rgba(255, 60, 40, 0.75); }
+.loupe::before { left: 50%; top: 18%; bottom: 18%; width: 1px; }
+.loupe::after { top: 50%; left: 18%; right: 18%; height: 1px; }
+.datablock { display: flex; flex-wrap: wrap; gap: 0; margin-top: 10px; font: 700 0.7rem/1.3 var(--f-type); letter-spacing: 0.1em; text-transform: uppercase; }
+.datablock span { padding: 5px 10px; border: 1px solid var(--type); margin: 0 -1px -1px 0; }
+.exa-note { max-width: 72ch; margin: 14px 0 0; font-size: 0.9rem; }
+
+/* Register teaser: index cards */
+.teaser { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: 10px; margin-top: 14px; }
+.teaser a { display: grid; gap: 2px; text-decoration: none; background: var(--board); color: var(--type); padding: 10px 12px; border-top: 3px solid var(--stamp); font-size: 0.78rem; transition: transform 0.18s; }
+.teaser a:hover { transform: translateY(-3px); }
+.teaser a b { font-size: 1.1rem; }
+.teaser a.lost { border-top-color: var(--flag); }
+.btn { text-decoration: none; display: inline-block; }
+
 /* Lightbox with provenance */
 .lightbox { position: fixed; inset: 0; z-index: 30; background: rgba(8, 8, 6, 0.86); display: grid; place-items: center; padding: 16px; }
 .lightbox-inner { background: var(--paper); max-width: min(1100px, 100%); max-height: 92vh; overflow: auto; display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); }
-.lightbox img { width: 100%; height: 100%; object-fit: contain; background: #000; display: block; }
+.lightbox .zoomwrap { overflow: hidden; background: #000; cursor: zoom-in; min-height: 0; }
+.lightbox .zoomwrap.zoomed { cursor: zoom-out; }
+.lightbox img { width: 100%; height: 100%; object-fit: contain; display: block; transition: transform 0.25s ease; }
+.lightbox .zoomwrap.zoomed img { transform: scale(2.6); }
 .prov { padding: 20px; font-size: 0.85rem; }
 .prov dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 12px; margin: 12px 0; }
 .prov dt { font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--type-faint); padding-top: 3px; }
@@ -148,6 +184,7 @@ table.ledger { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-wi
 </svg>
 
 <div class="banner"><span><s>Top Secret</s></span><b>Fully declassified</b><span>Article 121 archive · public sources only</span></div>
+<nav class="routing" aria-label="Sections"><span>Route to:</span><a href="#summary">File</a><a href="#exhibit-a">Exhibit A</a><a href="#chrono">Chronology</a><a href="#exhibits">Light table</a><a href="register.html">Register</a><a href="#refs-h">References</a></nav>
 
 <header class="desk" id="desk" aria-label="A manila case file opening on a desk">
   <canvas id="gl" aria-hidden="true"></canvas>
@@ -159,13 +196,35 @@ table.ledger { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-wi
   <article class="sheet tilt-l" id="summary">
     <div class="sheet-head"><span class="file-no">File A121-0001</span><span>Page 1 of 1</span><span>Released to everyone</span></div>
     <h1>Article 121</h1>
-    <p>This file documents the <span class="redact" style="--d:.1s">Lockheed A-12, YF-12, M-21 and SR-71</span>, the aircraft the world came to call the Blackbirds, from the first Archangel studies in 1957 to NASA's last flight in 1999.</p>
+    <p>This file documents the <span class="redact" style="--d:.1s">Lockheed A-12, YF-12, M-21 and SR-71</span>, the aircraft the world came to call the Blackbirds, from the first Archangel studies in 1958 to NASA's last flight in 1999.</p>
     <p>Nothing here is new and nothing here is ours. Every photograph, date and figure comes from <span class="redact" style="--d:.5s">a public, citable source</span>, and every one is credited and linked. Article 121 was the program's own name for the <span class="redact" style="--d:.9s">first A-12 airframe, serial 60-6924</span>.</p>
     <p class="typed-label">No ads. No paywall. No account. Corrections welcome.</p>
     <div class="stamp" style="right: 26px; top: 128px;">Declassified<small>Public record</small></div>
   </article>
 
-  <section class="sheet tilt-r" id="chrono" aria-labelledby="chrono-h">
+</div>
+
+<section class="exhibit-a" id="exhibit-a" aria-labelledby="exa-h">
+  <div class="exa-head">
+    <span class="file-no">Exhibit A</span>
+    <h2 id="exa-h">NASA 831 over the Sierra Nevada</h2>
+    <button class="btn loupe-toggle" id="loupe-toggle" aria-pressed="false">Use the loupe</button>
+  </div>
+  <figure class="mount">
+    <div class="loupe-host" id="loupe-host">
+      <img src="img/sr71-sierra.jpg" data-hires="img/sr71-sierra.jpg" id="exa-img" alt="The SR-71B trainer flown by NASA as 831 banks over the snow-covered southern Sierra Nevada after refuelling, December 1994." width="2400" height="1880">
+      <div class="loupe" id="loupe" hidden aria-hidden="true"></div>
+    </div>
+    <figcaption class="datablock">
+      <span>SR-71B</span><span>61-7956 · NASA 831</span><span>Southern Sierra Nevada, Calif.</span><span>Dec 1994</span><span>Photo: Judson Brohmer, USAF</span><span>NASA Armstrong photo gallery</span><span>Public domain</span>
+    </figcaption>
+  </figure>
+  <p class="exa-note">The two-seat trainer NASA flew as 831, just after refuelling from an Air Force tanker. Move over the print to inspect it the way photo interpreters did, with a loupe. The full site serves every exhibit at the original scan's full resolution.
+    <a href="https://commons.wikimedia.org/wiki/File:Lockheed_SR-71_Blackbird.jpg" target="_blank" rel="noopener">Source record</a> · <a href="register.html#61-7956">This airframe's file</a></p>
+</section>
+
+<div class="sheet-wrap">
+  <section class="sheet tilt-r" id="chrono" aria-labelledby="chrono-h" style="margin-top:72px">
     <div class="sheet-head"><span class="file-no">File A121-0002</span><span>Chronology</span><span>Sample entries</span></div>
     <h2 id="chrono-h">Chronology</h2>
     <div class="filters" role="group" aria-label="Filter by program">
@@ -188,23 +247,20 @@ table.ledger { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-wi
 <section class="exhibits" aria-label="Exhibits" id="exhibits"></section>
 
 <div class="sheet-wrap">
-  <section class="sheet tilt-l" style="margin-top:72px" aria-labelledby="card-h">
-    <div class="sheet-head"><span class="file-no">File A121-0003</span><span>Airframe record</span><span>1 of 18 A-12 family airframes</span></div>
-    <h2 id="card-h">60-6924 · Article 121</h2>
-    <div class="card">
-      <div><label>Serial</label><span class="v">60-6924</span></div>
-      <div><label>Article no.</label><span class="v">121</span></div>
-      <div><label>Type</label><span class="v">A-12</span></div>
-      <div><label>Customer</label><span class="v">CIA</span></div>
-      <div class="span2"><label>First flight</label><span class="v">25 Apr 1962 (unofficial)<br>30 Apr 1962 (official)</span></div>
-      <div class="span2"><label>Pilot</label><span class="v">Louis W. Schalk</span></div>
-      <div class="span2"><label>Status</label><span class="v">Preserved</span></div>
-      <div class="span2"><label>On display</label><span class="v">Blackbird Airpark, Palmdale, California</span></div>
-      <div class="span2"><label>Lifetime</label><span class="v">332 flights · 418.2 hours</span></div>
-      <div class="span2"><label>Moved to test site</label><span class="v">By road, night of 26 Feb 1962</span></div>
-      <div class="span4"><label>Sources</label><span class="v">[1] Robarge, Archangel, CIA CSI, pp. 16, 17 and 50</span></div>
+  <section class="sheet tilt-l" style="margin-top:72px" aria-labelledby="reg-h">
+    <div class="sheet-head"><span class="file-no">File A121-R</span><span>Airframe register</span><span>51 records</span></div>
+    <h2 id="reg-h">Where they are now</h2>
+    <p>Every airframe Lockheed built has its own file: article number, first flight, career, how it ended and the museum where it stands today. Thirteen A-12s, three YF-12As, two M-21s and thirty-two SR-71s, plus the D-21 drones.</p>
+    <div class="teaser">
+      <a href="register.html#60-6924"><b>60-6924</b><span>A-12 · Article 121</span><span>Blackbird Airpark, Palmdale</span></a>
+      <a href="register.html#60-6927"><b>60-6927</b><span>A-12 trainer · Titanium Goose</span><span>California Science Center</span></a>
+      <a href="register.html#61-7972"><b>61-7972</b><span>SR-71A · Smithsonian</span><span>Chantilly, Virginia</span></a>
+      <a href="register.html#61-7962"><b>61-7962</b><span>SR-71A</span><span>IWM Duxford, England</span></a>
+      <a href="register.html#60-6940"><b>60-6940</b><span>M-21 with D-21</span><span>Museum of Flight, Seattle</span></a>
+      <a href="register.html#61-7974" class="lost"><b>61-7974</b><span>SR-71A · Ichi Ban</span><span>Lost 21 Apr 1989</span></a>
     </div>
-    <div class="stamp" style="right: 28px; top: 112px; transform: rotate(6deg)">Verified<small>CIA history</small></div>
+    <p style="margin-top:18px"><a class="btn" href="register.html">Open the register</a></p>
+    <div class="stamp" style="right: 28px; top: 112px; transform: rotate(6deg)">51 files<small>All sourced</small></div>
   </section>
 
   <section class="sheet tilt-r refs" aria-labelledby="refs-h">
@@ -220,7 +276,7 @@ table.ledger { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-wi
 </section>
 
 <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Exhibit with provenance">
-  <div class="lightbox-inner"><img id="lb-img" alt=""><div class="prov" id="lb-prov"></div></div>
+  <div class="lightbox-inner"><div class="zoomwrap" id="lb-zoom"><img id="lb-img" alt=""></div><div class="prov" id="lb-prov"></div></div>
 </div>
 
 <script>
@@ -287,11 +343,45 @@ function openExhibit(x, i) {
   document.getElementById('lb-prov').innerHTML = `<p class="typed-label">Exhibit ${String.fromCharCode(65 + i)} · provenance</p><p>${x.cap}</p>
     <dl><dt>Creator</dt><dd>${x.who}</dd><dt>Date</dt><dd>${x.date}</dd><dt>Catalogue</dt><dd>${x.neg}</dd><dt>Rights</dt><dd>${x.lic}</dd><dt>Source</dt><dd><a href="${x.src}" target="_blank" rel="noopener">${x.src.replace('https://', '')}</a></dd></dl>
     <button class="btn" id="lb-close">Close</button>`;
+  zw.classList.remove('zoomed');
   lb.hidden = false; document.getElementById('lb-close').focus();
   document.getElementById('lb-close').onclick = () => { lb.hidden = true; };
 }
 lb.addEventListener('click', (e) => { if (e.target === lb) lb.hidden = true; });
 addEventListener('keydown', (e) => { if (e.key === 'Escape') lb.hidden = true; });
+
+// Loupe over Exhibit A
+const host = document.getElementById('loupe-host'), exa = document.getElementById('exa-img'), lp = document.getElementById('loupe');
+const Z = 3;
+lp.style.backgroundImage = `url(${exa.dataset.hires})`;
+function moveLoupe(e) {
+  const r = exa.getBoundingClientRect();
+  const x = e.clientX - r.left, y = e.clientY - r.top;
+  if (x < 0 || y < 0 || x > r.width || y > r.height) { lp.hidden = true; return; }
+  lp.hidden = false;
+  const d = lp.offsetWidth;
+  lp.style.left = `${x - d / 2}px`; lp.style.top = `${y - d / 2}px`;
+  lp.style.backgroundSize = `${r.width * Z}px ${r.height * Z}px`;
+  lp.style.backgroundPosition = `${-(x * Z - d / 2)}px ${-(y * Z - d / 2)}px`;
+}
+host.addEventListener('pointermove', (e) => { if (e.pointerType === 'mouse' || host.classList.contains('on')) moveLoupe(e); });
+host.addEventListener('pointerleave', () => { lp.hidden = true; });
+document.getElementById('loupe-toggle').addEventListener('click', (e) => {
+  const on = host.classList.toggle('on'); e.currentTarget.setAttribute('aria-pressed', on);
+  e.currentTarget.textContent = on ? 'Stop the loupe' : 'Use the loupe'; if (!on) lp.hidden = true;
+});
+// Lightbox: click to zoom, move to pan
+const zw = document.getElementById('lb-zoom'), zimg = document.getElementById('lb-img');
+zw.addEventListener('click', (e) => {
+  const r = zw.getBoundingClientRect();
+  zimg.style.transformOrigin = `${((e.clientX - r.left) / r.width) * 100}% ${((e.clientY - r.top) / r.height) * 100}%`;
+  zw.classList.toggle('zoomed');
+});
+zw.addEventListener('pointermove', (e) => {
+  if (!zw.classList.contains('zoomed')) return;
+  const r = zw.getBoundingClientRect();
+  zimg.style.transformOrigin = `${((e.clientX - r.left) / r.width) * 100}% ${((e.clientY - r.top) / r.height) * 100}%`;
+});
 
 // Redactions lift once each sheet is on screen; with reduced motion they start lifted
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;

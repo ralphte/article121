@@ -1,6 +1,6 @@
 # Article 121: plan
 
-Prepared 4 October 2026. Status: awaiting a design decision.
+Prepared 4 October 2026. Status: round 3. Direction chosen: the black file, a dark classified case file led by real photographs.
 
 ## 1. Mission and ground rules
 
@@ -17,10 +17,10 @@ Article 121 documents the Lockheed A-12, YF-12, M-21/D-21 and SR-71 in the highe
 
 | Section | Contents | Signature interaction |
 |---|---|---|
-| Home | Mission, the story in six chapters | The Climb |
+| Home | The case file: mission, summary, exhibits | Folder opening, Exhibit A loupe |
 | Timeline | Every dated event, 1956 to the museum era | Zoomable multi-lane timeline |
 | Programs | Archangel, OXCART, KEDLOCK, TAGBOARD, SENIOR BOWL, SENIOR CROWN, NASA | Per-program timelines |
-| Register | One page per airframe (51 entries in the fact pack) | Survivors map and globe |
+| Register | Where they are now: a file for every airframe built (51 records) | Card index and globe |
 | The Machine | Airframe, titanium, J58, JP-7, inlet, navigation, pressure suits | 3D exploded view, inlet simulator |
 | Missions | Publicly documented operations and record flights | Animated route maps |
 | People | Engineers, crews, ground crews, oral histories | Cross-links to airframes and events |
@@ -30,22 +30,24 @@ Article 121 documents the Lockheed A-12, YF-12, M-21/D-21 and SR-71 in the highe
 
 ## 3. Signature pieces
 
-- **The Climb.** Home page. Scroll drives a sortie from a twilight runway to 85,000 ft with live altitude, Mach and ground speed. The sky darkens to black at cruise. History chapters sit at each altitude. (Prototype A.)
+- **The case file.** Home page. A full-bleed photograph with the title unredacted on load, a black folder that opens in 3D, Exhibit A inspected with a loupe at full resolution.
 - **The Timeline.** One zoomable track from 1956 onward, a lane per program. Drag to scrub, pinch to zoom, select a mark to open the cited entry.
-- **The Register and map.** Every airframe built, its story, photos and fate. A globe flies to each survivor's museum.
-- **The Machine.** A properly modelled aircraft with exploded view, the J58 inlet explainer (prototype C) and a skin temperature map at cruise.
+- **Where they are now.** Every airframe built, its story, photos and fate, chosen from a card index. A globe turns to each survivor's museum. (Prototype built.)
+- **The Machine.** The J58 inlet explainer, cutaway drawings and engine photographs. A 3D aircraft only once a model matches the real one.
 - **Record flights.** The 6 March 1990 Los Angeles to Washington flight replayed on a map at true pace beside an airliner on the same route.
 - **Deep-zoom archive.** Full-resolution scans with creator, date, catalogue number and licence beside each.
 
-## 4. Design directions
+## 4. Design direction
 
-Three live prototypes are in `design/`. They share one placeholder aircraft model (`design/blackbird.js`) and the same public-domain photos.
+**Chosen (round 3): the black file.** The classified, declassified case file is the identity of the whole site, finished like the aircraft: surfaces in the SR-71's blue-black, titanium-grey and white-stencil type, and one accent, the red of its walkway markings, used for the classification line, stamps and losses. Wide, low display type (Archivo expanded) echoes the airframe; B612 Mono, the Airbus cockpit face, carries data; Courier Prime is kept for the typed documents themselves. Case-file devices stay: file numbers, stamps, redactions that lift. The design system is `design/casefile.css`.
 
-- **A, Altitude.** Cinematic. The scroll is the climb.
-- **B, Declassified.** Archival. A released case file; dark mode is a microfilm reader.
-- **C, Blueprint.** Engineering. Line drawings with real dimensions; whiteprint by day, blueprint by night.
+Round 2 rules from the owner's feedback:
 
-Recommendation: A as the shell and home page, C's drawing language for The Machine and the Register, B's case-file treatment for the Documents room. One type system, one set of colour tokens and one navigation tie them together. If one look is preferred, choose A.
+- **Photographs lead.** Real, high-resolution photographs are the main content. Exhibits can be inspected with a loupe and opened full screen with zoom; the full site serves deep-zoom tiles of the original scans.
+- **3D only where it adds something a photograph cannot.** The folder that opens on the home page, the register globe, the inlet explainer. No 3D aircraft until a model matches the photographs beside it.
+- **Where they are now.** A register with a file for every airframe built, selectable from a card index, with photos of that exact airframe (identified by serial), record card, career, fate, chronology, source disagreements and sources, and a globe turned to its museum.
+
+Live prototypes in `design/`: `casefile.html` (home) and `register.html` (register). Earlier rounds are kept for reference: `declassified.html` (round 2, light paper), `altitude.html` and `blueprint.html` (round 1); the J58 inlet explainer from `blueprint.html` carries forward into The Machine.
 
 ## 5. Citation system
 
@@ -116,20 +118,16 @@ Repository stays small: code, content and optimised images. Masters and tile pac
 
 Performance and access budgets: Largest Contentful Paint under 2.5 s on a mid-range phone over 4G; no page ships 3D unless it is the point of the page; every animation has a `prefers-reduced-motion` path; every WebGL scene has a static fallback image; all content is readable without JavaScript.
 
-## 8. The 3D aircraft
+## 8. 3D policy
 
-No museum or agency has released an open 3D scan of any Blackbird (Smithsonian 3D, NASA 3D Resources and Sketchfab CC0 all checked). Plan:
-
-1. Ship a credited CC BY 4.0 mesh from Sketchfab for the web viewer.
-2. Ask the author of the photogrammetry scan of the Smithsonian SR-71A for permission, and ask the Smithsonian Digitization Program Office whether 61-7972 is on their list.
-3. Fallback: a custom model built in Blender from the published three-view drawings, released under CC BY-SA with the site.
+3D is used only where it adds information or atmosphere a photograph cannot: the opening folder, the register globe, the inlet explainer. No 3D aircraft appears until a model matches the photographs beside it. No museum or agency has released an open 3D scan of any Blackbird (Smithsonian 3D, NASA 3D Resources and Sketchfab CC0 all checked). If a model is wanted later: ask the author of the photogrammetry scan of the Smithsonian SR-71A for permission, ask the Smithsonian Digitization Program Office whether 61-7972 is on their list, or build one in Blender from the published three-view drawings.
 
 ## 9. Roadmap
 
 1. **Approve.** Choose a direction, register article121.com, confirm licences.
 2. **Foundation.** Astro project, design tokens, content schemas with the citation rule, CI, deploy. Live skeleton on the domain.
 3. **Harvest.** Ingest scripts (Smithsonian Open Access, NASA Image Library, CIA, NARA, DVIDS, Commons, Library of Congress, Internet Archive). Source register. Convert the fact pack into content entries.
-4. **Signature pieces.** The Climb, the Timeline, the Register and map, The Machine.
+4. **Signature pieces.** The case-file home, the Register, the Timeline, the light table with deep zoom, The Machine.
 5. **Depth.** Documents reader, missions, people, deep-zoom archive, permission requests to legacy sites.
 6. **Launch.** Accessibility audit, performance budgets, reduced-motion paths, share cards.
 
@@ -137,7 +135,7 @@ No museum or agency has released an open 3D scan of any Blackbird (Smithsonian 3
 
 | Decision | Recommendation |
 |---|---|
-| Design direction | A shell, C for engineering, B for documents |
+| Design direction | Decided: the case file, photo-led |
 | Repository owner | `ralphte/article121` to start; a dedicated organisation later for co-maintainers |
 | Licences | Text CC BY-SA 4.0, data CC0 1.0, code MIT |
 | Hosting | Cloudflare Workers static assets plus R2 |

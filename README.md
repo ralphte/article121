@@ -15,11 +15,12 @@ Article 121 was the CIA's designation for the first A-12 airframe, serial 60-692
 
 Planning and design. See [PLAN.md](PLAN.md) and the design prototypes in [`design/`](design/).
 
-| Prototype | Idea |
+| Page | What it is |
 |---|---|
-| [`design/altitude.html`](design/altitude.html) | Scroll is altitude: a 3D Blackbird climbs from the runway to 85,000 ft with live instruments |
-| [`design/declassified.html`](design/declassified.html) | The archive as a released case file, with a 3D folder and redactions that lift |
-| [`design/blueprint.html`](design/blueprint.html) | Engineering drawings: a live line model with true dimensions and a J58 inlet explainer |
+| [`design/casefile.html`](design/casefile.html) | Home, "black file" direction: a dark classified case file led by real photographs |
+| [`design/register.html`](design/register.html) | Where they are now: pick any airframe built and open its file |
+| [`design/declassified.html`](design/declassified.html) | Round 2: the same case file in light paper |
+| [`design/altitude.html`](design/altitude.html), [`design/blueprint.html`](design/blueprint.html) | Round 1 explorations |
 
 To view them locally: `cd design && python3 -m http.server 8121`, then open http://localhost:8121.
 
