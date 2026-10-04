@@ -153,17 +153,17 @@ table.ledger { width: 100%; border-collapse: collapse; min-width: 560px; }
 
   <section class="wrap exhibit" id="exhibit-a" aria-labelledby="exa-h">
     <div class="ex-head">
-      <div><span class="label">Exhibit A</span><h2 class="section" id="exa-h">NASA 831 over the Sierra Nevada</h2></div>
+      <div><span class="label">Exhibit A</span><h2 class="section" id="exa-h">61-7972 at rest</h2></div>
       <button class="btn loupe-toggle" id="loupe-toggle" aria-pressed="false">Use the loupe</button>
     </div>
     <figure class="mount">
       <div class="loupe-host" id="loupe-host">
-        <img src="img/sr71-sierra.jpg" data-hires="img/sr71-sierra.jpg" id="exa-img" alt="The SR-71B trainer flown by NASA as 831 banks over the snow-covered southern Sierra Nevada after refuelling, December 1994." width="2400" height="1880">
+        <img src="img/hero/nasm-61-7972-hangar-1800.jpg" data-hires="img/hero/nasm-61-7972-hangar.jpg" id="exa-img" alt="SR-71A 61-7972 seen nose-on in the Boeing Aviation Hangar of the Smithsonian's Udvar-Hazy Center, its chines and inlet spikes lit against the dark hangar." width="1800" height="1200">
         <div class="loupe" id="loupe" hidden aria-hidden="true"></div>
       </div>
-      <figcaption class="datastrip"><span>SR-71B</span><span>61-7956 · NASA 831</span><span>Southern Sierra Nevada, Calif.</span><span>Dec 1994</span><span>Photo: Judson Brohmer, USAF</span><span>NASA Armstrong photo gallery</span><span class="hot">Public domain</span></figcaption>
+      <figcaption class="datastrip"><span>SR-71A</span><span>61-7972 · Article 2023</span><span>Udvar-Hazy Center, Chantilly, Va.</span><span>Smithsonian NASM2016-00596</span><span class="hot">CC0</span></figcaption>
     </figure>
-    <p class="ex-note">The two-seat trainer NASA flew as 831, just after refuelling from an Air Force tanker. Move over the print to inspect it the way photo interpreters did, with a loupe. The full site serves every exhibit at the original scan's full resolution. <a href="https://commons.wikimedia.org/wiki/File:Lockheed_SR-71_Blackbird.jpg" target="_blank" rel="noopener">Source record</a> · <a href="register.html#61-7956">This airframe's file</a></p>
+    <p class="ex-note">The SR-71A that flew from Los Angeles to Washington in 64 minutes 20 seconds on its last flight, 6 March 1990, nose-on in the Smithsonian's hangar. Move over the print to inspect it the way photo interpreters did, with a loupe: the chine edges, the inlet spikes and the panel lines hold up at three times magnification. <a href="https://airandspace.si.edu/collection-objects/lockheed-sr-71-blackbird/nasm_A19920072000" target="_blank" rel="noopener">Source record</a> · <a href="register.html#61-7972">This airframe's file</a></p>
   </section>
 
   <section class="wrap" id="chronology" aria-labelledby="chrono-h">
@@ -190,6 +190,7 @@ table.ledger { width: 100%; border-collapse: collapse; min-width: 560px; }
   <section class="wrap viewing" id="viewing" aria-labelledby="view-h">
     <span class="label">Viewing table</span>
     <h2 class="section" id="view-h">Photographs</h2>
+    <p class="ex-note" style="margin-top:0">Select any print to view it full screen, then select again to zoom.</p>
     <div class="frames" id="frames"></div>
   </section>
 
@@ -273,6 +274,9 @@ document.getElementById('refs').innerHTML = Object.values(REFS).map(([t, u, l]) 
 
 // Viewing table
 const PRINTS = [
+  { img: "img/hero/cia-a12-60-6931-dusk-1800.jpg", hires: "img/hero/cia-a12-60-6931-dusk.jpg", cap: "A-12 60-6931 on its pylon at CIA Headquarters, Langley, Virginia, at dusk, 15 September 2008.", credit: "Central Intelligence Agency · Public domain", src: "https://commons.wikimedia.org/wiki/File:A-12OxcartCIA.jpg" },
+  { img: "img/hero/nasa-831-sierra-nevada-1800.jpg", hires: "img/hero/nasa-831-sierra-nevada.jpg", cap: "SR-71B 61-7956, flown by NASA as 831, over the southern Sierra Nevada after refuelling, December 1994.", credit: "Judson Brohmer, USAF, via NASA Dryden · Public domain", src: "https://commons.wikimedia.org/wiki/File:Lockheed_SR-71_Blackbird.jpg" },
+  { img: "img/hero/nasa-844-f16xl-formation-1800.jpg", hires: "img/hero/nasa-844-f16xl-formation.jpg", cap: "SR-71A NASA 844 (61-7980) and F-16XL NASA 849 on a sonic boom research flight, 22 March 1995.", credit: "NASA Dryden · EC95-43024-2 · Public domain", src: "https://commons.wikimedia.org/wiki/File:F-16_with_SR-71.jpg" },
   { img: "img/a12-flying.jpg", cap: "A-12 60-6932 in flight in the 1960s. It was lost over the South China Sea in June 1968.", credit: "U.S. Air Force · DoD VIRIN DF-SC-82-10542 · Public domain", src: "https://commons.wikimedia.org/wiki/File:A12-flying.jpg" },
   { img: "img/sr71-tanker.jpg", cap: "An SR-71A closes on the boom of a KC-135Q tanker, 1989.", credit: "TSgt. Michael Haggerty, USAF · VIRIN DF-ST-89-06276 · Public domain", src: "https://commons.wikimedia.org/wiki/File:SR-71_seen_from_KC-135Q_tanker_1989.JPEG" },
   { img: "img/j58-afterburner.jpg", cap: "A J58 turbojet in full afterburner during a ground run at NASA Dryden, 4 April 1997.", credit: "Tony Landis, NASA · EC97-44007-01 · Public domain", src: "https://commons.wikimedia.org/wiki/File:J58_Turbojet_in_Full_Afterburner_(EC97-44007-01).jpg" },
@@ -286,7 +290,7 @@ const lb = document.getElementById('lightbox'), zw = document.getElementById('lb
 frames.addEventListener('click', (e) => {
   const b = e.target.closest('button[data-i]'); if (!b) return;
   const p = PRINTS[Number(b.dataset.i)];
-  zimg.src = p.img; zimg.alt = p.cap; zw.classList.remove('zoomed');
+  zimg.src = p.hires || p.img; zimg.alt = p.cap; zw.classList.remove('zoomed');
   document.getElementById('lb-cap').innerHTML = `${esc(p.cap)} <span class="label">${esc(p.credit)}</span> <a href="${p.src}" target="_blank" rel="noopener">Source</a>`;
   lb.hidden = false; document.getElementById('lb-close').focus();
 });

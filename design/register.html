@@ -283,7 +283,7 @@ function photosFor(a) {
   if (!list.length) {
     return `<figure class="print"><span class="clip" aria-hidden="true"></span><div class="nophoto"><div><b>No photo on file</b>No openly licensed photograph of ${esc(a.serial.startsWith('D-21') ? 'these drones' : 'this airframe')} is in the archive yet. If you took one or know of one, the full site will take submissions.</div></div><figcaption>Exhibit pending</figcaption></figure>`;
   }
-  return list.slice(0, 2).map((p, i) => `<figure class="print"><span class="clip" aria-hidden="true"></span><img src="${esc(p.file)}" alt="${esc(p.caption)}" data-i="${i}" loading="lazy"><figcaption>${esc(p.caption)}<span class="credit">${esc(p.creator || 'Unknown')}${p.date ? ' · ' + esc(p.date) : ''} · ${esc(p.license)} · <a href="${esc(p.source_page)}" target="_blank" rel="noopener">Source</a></span></figcaption></figure>`).join('');
+  return list.slice(0, 2).map((p, i) => `<figure class="print"><span class="clip" aria-hidden="true"></span><img src="${esc(p.file)}" alt="${esc(p.caption)}" data-i="${i}" loading="lazy"><figcaption>${esc(p.caption)}<span class="credit">${esc(p.creator || 'Unknown')}${p.date ? ' · ' + esc(p.date) : ''} · ${p.license_url ? `<a href="${esc(p.license_url)}" target="_blank" rel="noopener">${esc(p.license)}</a>` : esc(p.license)} · <a href="${esc(p.source_page)}" target="_blank" rel="noopener">Source</a></span></figcaption></figure>`).join('');
 }
 
 function eventsFor(a) {
