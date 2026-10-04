@@ -1,0 +1,41 @@
+{
+ "plan": {
+  "source": "NASA Dryden EG-0075-02, plan view",
+  "m_per_px": 0.004235586904445036,
+  "calibration": "radome tip FS 102 to tail cone tip FS 1355 (TM-4749)",
+  "length_no_probe_m": 31.826,
+  "probe_m": 1.042,
+  "span_drawn_m": 16.959,
+  "span_published_m": 16.947,
+  "span_error_pct": 0.07,
+  "px": {
+   "nose_x": 1458.0,
+   "tail_x": 8972.0,
+   "centre_y": 2008.0,
+   "probe_x": 1212.0
+  }
+ },
+ "side": {
+  "source": "NASA Dryden EG-0075-02, side view",
+  "m_per_px": 0.004310740891236625,
+  "calibration": "radome tip FS 102 to tail cone tip FS 1355 (TM-4749); z = 0 at the radome tip",
+  "scale_vs_plan_pct": 1.77,
+  "px": {
+   "nose_x": 1589.0,
+   "tail_x": 8972.0,
+   "ref_y": 6887.5
+  },
+  "fin_top_above_nose_m": 4.119,
+  "lowest_below_nose_m": -0.55
+ },
+ "front": {
+  "source": "NASA Dryden EG-0075-02, front view",
+  "m_per_px": 0.004113320388349514,
+  "calibration": "wingtip to wingtip 55.6 ft (flight manual); z = 0 at the outer wing mid-thickness",
+  "scale_vs_plan_pct": -2.89,
+  "px": {
+   "mid_x": 2073.0,
+   "wing_y": 4783.0
+  }
+ }
+}

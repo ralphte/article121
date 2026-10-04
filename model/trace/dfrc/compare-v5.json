@@ -1,0 +1,50 @@
+[
+ {
+  "view": "plan",
+  "spec": "dfrc_plan",
+  "model_size_m": [
+   32.717,
+   16.95
+  ],
+  "drawing_size_m": [
+   32.868,
+   17.01
+  ],
+  "iou": 0.976,
+  "mean_cm": 6.8,
+  "p95_cm": 38.7,
+  "max_cm": 113.3
+ },
+ {
+  "view": "side",
+  "spec": "dfrc_side",
+  "model_size_m": [
+   31.75,
+   4.517
+  ],
+  "drawing_size_m": [
+   33.262,
+   4.72
+  ],
+  "iou": 0.954,
+  "mean_cm": 5.9,
+  "p95_cm": 16.7,
+  "max_cm": 152.0
+ },
+ {
+  "view": "front",
+  "spec": "dfrc_front",
+  "model_size_m": [
+   16.9,
+   4.517
+  ],
+  "drawing_size_m": [
+   16.996,
+   3.891
+  ],
+  "iou": 0.5586,
+  "mean_cm": 18.7,
+  "p95_cm": 45.6,
+  "max_cm": 76.3
+ }
+]

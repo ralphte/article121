@@ -112,6 +112,7 @@ footer { margin-top: 56px; font: 400 0.76rem/1.6 var(--f-mono); color: var(--mut
 <div class="layout">
   <nav class="toc" aria-label="Contents">
     <ol>
+      <li><a href="#model">3D model</a></li>
       <li><a href="#round2">Round 3</a></li>
       <li><a href="#directions">Earlier rounds</a></li>
       <li><a href="#rules">Ground rules</a></li>
@@ -133,6 +134,28 @@ footer { margin-top: 56px; font: 400 0.76rem/1.6 var(--f-mono); color: var(--mut
       <div class="meta"><span>4 October 2026 · round 3</span><span>article121.com: unregistered today</span><span>Repo: github.com/ralphte/article121 (public)</span></div>
       <p class="lede">A free, ad-free archive of the Lockheed A-12, YF-12, M-21 and SR-71. It collects the best public photographs, documents and records, credits every one, and presents them with Astro and Three.js. The name comes from the CIA's designation for the first A-12 airframe, 60-6924.</p>
     </header>
+
+    <section id="model">
+      <h2><span class="n">3D MODEL · FIRST PASS</span>Built from NASA's drawings</h2>
+      <p>The model is lofted from NASA Dryden's vector three-view of the SR-71A (EG-0075-02), put on true scale with NASA's own fuselage stations (nose FS 102, tail cone FS 1355, NASA TM-4749). Calibrated that way, the drawing's span comes out at 16.959 m against the published 16.947 m, an error of 0.07 percent. The script, the traced data and every source are in the repository, so anyone can rebuild it or check it.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>View</th><th>Overlap with NASA's drawing</th><th>Average gap</th><th>95% of the outline within</th></tr></thead>
+        <tbody>
+          <tr><td>Plan</td><td class="num">97.6%</td><td class="num">6.8 cm</td><td class="num">39 cm</td></tr>
+          <tr><td>Side</td><td class="num">95.4%</td><td class="num">5.9 cm</td><td class="num">17 cm</td></tr>
+          <tr><td>Front</td><td class="num">56%</td><td class="num">19 cm</td><td class="num">46 cm</td></tr>
+        </tbody>
+      </table></div>
+      <div class="dirs two" style="margin-top:16px">
+        <article class="dir"><img src="img/model/overlay-plan.jpg" alt="Plan view of the model (grey) with NASA's outline (red) on top" loading="lazy"><div class="body"><div class="label">Plan</div><p>Model in grey, NASA outline in red. The only visible gap is the aft end of the nacelles.</p></div></article>
+        <article class="dir"><img src="img/model/overlay-side.jpg" alt="Side view of the model (grey) with NASA's outline (red) on top" loading="lazy"><div class="body"><div class="label">Side</div><p>The red line past the nose is the drawing's pitot probe, drawn 1.44 m long; the real one is 0.91 m.</p></div></article>
+      </div>
+      <ul class="rules" style="margin-top:16px">
+        <li><b>Where the drawings disagree, published numbers win.</b> Every drawing checked is 5 to 10 percent off in heights. The fins follow NASA's specification table instead: 3.302 m span at a 15 degree cant, which reproduces the published 6.92 m tip separation. That is why the front view scores lower: the drawing's own front view draws the fins about 0.8 m shorter than its side view.</li>
+        <li><b>What is not right yet: the cross-sections.</b> No public drawing gives the chine sections; the search confirmed there is no offsets table anywhere. The comparison with the Smithsonian photograph of 61-7972 below shows the gap: the real chines rise in a pronounced V toward the nacelles. Next pass: solve the photo's exact camera position from known points and fit the sections to its edges, then repeat with other photographs.</li>
+      </ul>
+      <figure style="margin:16px 0 0"><img src="img/model/photo-compare.jpg" alt="Smithsonian photograph of 61-7972 nose-on beside a render of the model from a similar viewpoint, and a three-quarter render" style="width:100%;border:1px solid var(--rule);border-radius:4px" loading="lazy"><figcaption class="muted" style="font-size:.85rem;margin-top:6px">Left: Smithsonian NASM2016-00596, CC0. Right and below: the model, first pass.</figcaption></figure>
+    </section>
 
     <section id="round2">
       <h2><span class="n">ROUND 3 · YOUR FEEDBACK APPLIED</span>The black file</h2>

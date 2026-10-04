@@ -42,6 +42,33 @@ def raster(pts, origin, ppm, shape):
     return m, px
 
 
+def best_shift(mod, drw, ppm, thin=True):
+    """Translation of the drawing that maximises overlap with the model, searched coarse to fine.
+    Hairline features (the pitot probe) are removed first so they cannot drag the alignment."""
+    lo = np.minimum(mod.min(0), drw.min(0)) - 1.5
+    hi = np.maximum(mod.max(0), drw.max(0)) + 1.5
+    res = 25.0                                    # px per metre for the search
+    shape = (int((hi[1] - lo[1]) * res) + 1, int((hi[0] - lo[0]) * res) + 1)
+    def mask(p):
+        m = np.zeros(shape, np.uint8)
+        q = ((p - lo) * res).astype(np.int32); q[:, 1] = shape[0] - 1 - q[:, 1]
+        cv2.fillPoly(m, [q.reshape(-1, 1, 2)], 1)
+        if thin:
+            m = cv2.morphologyEx(m, cv2.MORPH_OPEN, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5, 5)))
+        return m.astype(bool)
+    M = mask(mod)
+    best, bs = -1, np.zeros(2)
+    for step, span in ((0.1, 1.2), (0.02, 0.12)):
+        centre = bs.copy()
+        for dx in np.arange(-span, span + 1e-9, step):
+            for dy in np.arange(-span / 2, span / 2 + 1e-9, step):
+                D = mask(drw + centre + [dx, dy])
+                iou = (M & D).sum() / max((M | D).sum(), 1)
+                if iou > best:
+                    best, bs = iou, centre + [dx, dy]
+    return bs
+
+
 def main(render_dir, specs):
     render_dir = Path(render_dir)
     report = []
@@ -52,6 +79,7 @@ def main(render_dir, specs):
         drw = drawing_contour_view(traced, view)
         cm, cd = (mod.min(0) + mod.max(0)) / 2, (drw.min(0) + drw.max(0)) / 2
         drw = drw - cd + cm
+        drw = drw + best_shift(mod, drw, ppm, thin=(view != "front"))
         size_m, size_d = mod.max(0) - mod.min(0), drw.max(0) - drw.min(0)
         ext = np.vstack([mod, drw])
         span = ext.max(0) - ext.min(0)

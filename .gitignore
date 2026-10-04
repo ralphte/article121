@@ -13,3 +13,5 @@ build/renders/
 model/plans/raw/
 model/plans/pages/
 model/build/
+model/trace/**/*.png
+model/tools/.venv/
