@@ -89,6 +89,18 @@ def obj(name, verts, faces, mat, angle=None, extra=None, face_mat=None):
     return ob
 
 
+def tag(ob, part, layer, explode=(0.0, 0.0, 0.0), accuracy="measured"):
+    """Metadata the web viewer reads from the glTF extras: a stable part id, its layer, the
+    exploded-view offset in metres (model frame: x aft, y to the right wing, z up; converted
+    to glTF axes here) and whether the geometry is measured from drawings or representative."""
+    dx, dy, dz = explode
+    ob["a121_part"] = part
+    ob["a121_layer"] = layer
+    ob["a121_explode"] = [-dx, dz, -dy]
+    ob["a121_accuracy"] = accuracy
+    return ob
+
+
 def loft(rings, closed=True, cap_start=False, cap_end=False):
     """rings: list of (n, 3) arrays with equal n. Returns verts, quad faces."""
     n = len(rings[0])
@@ -278,8 +290,19 @@ def fuselage(c, mat):
         left = right[1:-1][::-1] * [-1, 1]
         sec = np.vstack([right, left])
         rings.append(np.column_stack([np.full(len(sec), x), sec[:, 0], sec[:, 1]]))
-    v, f = loft(rings)
-    parts = [obj("Fuselage", v, f, mat, angle=50)]
+    # Sections, cut at stations (to be replaced by documented joints from research/structure):
+    # the detachable nose ahead of the cockpits, the forward fuselage with both cockpits, the chine
+    # forebody, the centre body with the wing carry-through, and the tail cone. Each is an open
+    # shell, so the exploded view looks inside it.
+    cuts = [("Nose section", 0.0, 3.30, (-4.0, 0, 0)), ("Forward fuselage", 3.30, 9.0, (-2.4, 0, 0.6)),
+            ("Chine forebody", 9.0, 15.9, (-0.9, 0, 0.2)), ("Centre body", 15.9, 29.4, (0, 0, 0)),
+            ("Tail cone", 29.4, 99.0, (3.2, 0, 0))]
+    cx_all = np.array([r[0, 0] for r in rings])
+    parts = []
+    for name, x0, x1, ex in cuts:
+        sel = [i for i, x in enumerate(cx_all) if x0 - 1e-6 <= x <= x1 + 1e-6]
+        v, f = loft([rings[i] for i in sel])
+        parts.append(tag(obj(name, v, f, mat, angle=50), name.lower().replace(" ", "-"), "skin", ex))
     # Canopy glass as thin panels lying 4 mm proud of the canopy crest, so the window outlines
     # are clean: windshield (front pane and two side panes), the pilot's side windows under a
     # metal top strip, and the RSO's small side windows. Each panel is laid out in (x, u), where
@@ -318,7 +341,7 @@ def fuselage(c, mat):
     gv, gf, off = [], [], 0
     for pv, pf in glass:
         gv += pv; gf += [tuple(off + k for k in q) for q in pf]; off += len(pv)
-    parts.append(obj("Canopy glass", gv, gf, GLASS, angle=60))
+    parts.append(tag(obj("Canopy glass", gv, gf, GLASS, angle=60), "canopy-glass", "skin", (-2.4, 0, 1.8)))
     return parts
 
 
@@ -357,36 +380,45 @@ def wing(c, mat):
     def le_x(y):
         hit = np.where(_ys_le >= y)[0]
         return float(_xs_le[hit[0]]) if len(hit) else float(_xs_le[-1])
-    span_n = 46
-    upper, lower = [], []
-    for x, Y in zip(xs, ys_out):
-        ys = Y * (1 - np.cos(np.linspace(0, math.pi / 2, span_n))) ** 0.9
-        ys[-1] = Y
+    def surf(x, y):
         z0 = float(chz(x))
-        u, l = [], []
-        for y in ys:
-            t = T_MAX * min(1.0, edge_dist(x, y) / REACH) ** 0.62
-            # conical camber on the outer wing (Lockheed section drawing): the leading edge droops
-            # toward the tip; up to about 0.16 m at the tip, fading 1.8 m aft of the edge
-            droop = 0.0
-            if y > 5.3:
-                d_le = x - le_x(y)
-                droop = 0.16 * ((y - 5.3) / (8.48 - 5.3)) * max(0.0, 1 - d_le / 1.8) ** 2
-            u.append((x, y, z0 + t - droop)); l.append((x, y, z0 - t * 0.85 - droop))
-        upper.append(u); lower.append(l)
-
-    def mirror(rows):
-        out = []
-        for r in rows:
-            left = [(x, -y, z) for (x, y, z) in reversed(r[1:])]
-            out.append(np.array(left + r))
-        return out
-    U, Lw = mirror(upper), mirror(lower)
-    vu, fu = loft(U, closed=False)
-    vl, fl = loft(Lw, closed=False)
-    off = len(vu)
-    faces = fu + [tuple(off + i for i in reversed(q)) for q in fl]
-    return obj("Wing", vu + vl, faces, mat, angle=40)
+        t = T_MAX * min(1.0, edge_dist(x, y) / REACH) ** 0.62
+        # conical camber on the outer wing (Lockheed section drawing): the leading edge droops
+        # toward the tip; up to about 0.16 m at the tip, fading 1.8 m aft of the edge
+        droop = 0.0
+        if y > 5.3:
+            d_le = x - le_x(y)
+            droop = 0.16 * ((y - 5.3) / (8.48 - 5.3)) * max(0.0, 1 - d_le / 1.8) ** 2
+        return z0 + t - droop, z0 - t * 0.85 - droop
+    Y_SPLIT = 4.2            # nacelle centreline: the outer wing panels join outboard of it
+    def panel(y_lo, y_hi_frac, n, outboard):
+        upper, lower = [], []
+        for x, Y in zip(xs, ys_out):
+            if outboard and Y < Y_SPLIT + 0.05:
+                continue
+            hi = Y if outboard else min(Y, Y_SPLIT)
+            ys = y_lo + (hi - y_lo) * (1 - np.cos(np.linspace(0, math.pi / 2, n))) ** 0.9
+            ys[-1] = hi
+            u, l = [], []
+            for y in ys:
+                zu, zl = surf(x, y)
+                u.append((x, y, zu)); l.append((x, y, zl))
+            upper.append(u); lower.append(l)
+        return upper, lower
+    objs = []
+    for name, y_lo, n, outboard, ex in (("Inner wing", 0.0, 26, False, (0, 0.6, 0)), ("Outer wing", Y_SPLIT, 34, True, (0, 6.5, 0.3))):
+        upper, lower = panel(y_lo, None, n, outboard)
+        for side in (1, -1):
+            U = [np.array([(x, side * y, z) for (x, y, z) in r]) for r in upper]
+            Lw = [np.array([(x, side * y, z) for (x, y, z) in r]) for r in lower]
+            vu, fu = loft(U, closed=False)
+            vl, fl = loft(Lw, closed=False)
+            off = len(vu)
+            faces = fu + [tuple(off + i for i in reversed(q)) for q in fl]
+            tagn = "R" if side > 0 else "L"
+            ob = obj(f"{name} {tagn}", vu + vl, faces, mat, angle=40)
+            objs.append(tag(ob, f"{name.lower().replace(' ', '-')}-{tagn.lower()}", "skin", (ex[0], side * ex[1], ex[2])))
+    return objs
 
 
 # ------------------------------------------------------------ nacelles, spikes, fins
@@ -430,41 +462,74 @@ EJECTOR_X = 28.75
 
 def nacelles(c, mat, dark):
     xs, ys, zs, aa, bbv, x_lip = nacelle_rings(c)
+    # engine face 5.4 cowl-lip radii aft of the lip (Lockheed CR-163106 figs 4 and 5), lip radius
+    # 29.38 in = 0.7462 m (NASA TM X-3144 fig 8)
+    x_face = x_lip + 5.4 * 0.7462
+    yc_at = lambda x: float(np.interp(x, xs, ys)); zc_at = lambda x: float(np.interp(x, xs, zs))
     seg = 56
     ang = np.linspace(0, 2 * math.pi, seg, endpoint=False)
     objs = []
     sp = np.asarray(c["spike_plan"], float)
     tip = sp[sp[:, 0].argmin()]
     for side in (1, -1):
+        sd = "R" if side > 0 else "L"
+        sl = sd.lower()
+        e_nac = (0.0, side * 4.6, -0.3)            # nacelles swing outward
+        e_eng = (5.6, side * 4.6, -2.3)            # the J58 slides aft and down out of its nacelle
+        e_spk = (-4.6, side * 4.6, -0.3)           # the spike comes forward out of the inlet
         rings = [np.column_stack([np.full(seg, x), side * y + a * np.cos(ang), z + b * np.sin(ang)]) for x, y, z, a, b in zip(xs, ys, zs, aa, bbv)]
         v, f = loft(rings)
         # the last 0.7 m is the bare-metal ejector, heat-stained in service
         fm = [1 if xs[i] > EJECTOR_X else 0 for i in range(len(rings) - 1) for _ in range(seg)]
-        tag = 'R' if side > 0 else 'L'
-        objs.append(obj(f"Nacelle {tag}", v, f, mat, angle=60, extra=[EJECTOR], face_mat=fm))
+        objs.append(tag(obj(f"Nacelle {sd}", v, f, mat, angle=60, extra=[EJECTOR], face_mat=fm), f"nacelle-{sl}", "skin", e_nac))
         # liners facing inward, so looking into an inlet or an exhaust shows a duct, not the far wall
-        for label, lo, hi, k, lm in (("Inlet duct", xs[0] + 0.02, 19.3, 0.965, DUCT), ("Ejector liner", EJECTOR_X - 0.3, xs[-1] - 0.01, 0.955, EJECTOR)):
+        for label, lo, hi, k, lm in (("Inlet duct", xs[0] + 0.02, x_face, 0.965, DUCT), ("Ejector liner", EJECTOR_X - 0.3, xs[-1] - 0.01, 0.955, EJECTOR)):
             sel = [i for i, x in enumerate(xs) if lo <= x <= hi]
             lr = [np.column_stack([np.full(seg, xs[i]), side * ys[i] + k * aa[i] * np.cos(ang), zs[i] + k * bbv[i] * np.sin(ang)])[::-1] for i in sel]
             v, f = loft(lr)
-            objs.append(obj(f"{label} {tag}", v, f, lm, angle=60))
-        # spike: traced tip and lip-plane radius, then a cylinder back inside the inlet
+            objs.append(tag(obj(f"{label} {sd}", v, f, lm, angle=60), f"{label.lower().replace(' ', '-')}-{sl}", "skin", e_nac))
+        # spike: traced tip and lip-plane radius, then the centrebody back to the engine hub
         tip_x, tip_y = float(tip[0]), float(tip[1])
         base_x, base_y, base_r = 17.40, 4.205, 0.448
         tip_z = float(zs[0]) - 0.03
-        prof = [(tip_x, 0.0), (tip_x + 0.15, 0.035), (base_x - 0.6, base_r * 0.62), (base_x, base_r), (18.3, 0.56), (19.2, 0.58)]
+        prof = [(tip_x, 0.0), (tip_x + 0.15, 0.035), (base_x - 0.6, base_r * 0.62), (base_x, base_r), (18.3, 0.56),
+                (19.2, 0.58), (x_face - 1.2, 0.50), (x_face - 0.4, 0.34), (x_face, 0.22)]
         rings = []
         for x, r in prof:
             k = min(1.0, (x - tip_x) / (base_x - tip_x))
-            yc = tip_y + (base_y - tip_y) * k
-            zc = tip_z + (float(zs[0]) - tip_z) * k
+            yc = tip_y + (base_y - tip_y) * k if x <= base_x else yc_at(x)
+            zc = tip_z + (float(zs[0]) - tip_z) * k if x <= base_x else zc_at(x)
             rings.append(np.column_stack([np.full(seg, x), side * yc + max(r, 1e-3) * np.cos(ang), zc + max(r, 1e-3) * np.sin(ang)]))
         v, f = loft(rings)
-        objs.append(obj(f"Spike {'R' if side > 0 else 'L'}", v, f, mat, angle=50))
-        for label, x, y, z, r in (("Engine face", 19.0, ys[np.searchsorted(xs, 19.0)], zs[np.searchsorted(xs, 19.0)], 0.62),
-                                  ("Nozzle", xs[-1] - 0.25, ys[-1], zs[-1], 0.92 * min(aa[-1], bbv[-1]))):
-            verts = [(x, side * y + r * math.cos(t), z + r * math.sin(t)) for t in ang]
-            objs.append(obj(f"{label} {'R' if side > 0 else 'L'}", verts, [tuple(range(seg))], dark))
+        objs.append(tag(obj(f"Spike {sd}", v, f, mat, angle=50), f"spike-{sl}", "engines", e_spk))
+        # J58 (JT11D-20): representative shape after the flight manual cutaway (Fig. 1-2): compressor
+        # case, burner and turbine, afterburner and nozzle; about 180 in long and 50 in across over
+        # the cases (Smithsonian record), six bypass tubes from the 4th stage to the afterburner.
+        eprof = [(0.0, 0.60), (0.12, 0.645), (1.50, 0.66), (1.70, 0.60), (2.55, 0.58), (2.75, 0.63),
+                 (4.30, 0.61), (4.57, 0.54)]
+        er = []
+        for dx, r in eprof:
+            x = x_face + dx
+            er.append(np.column_stack([np.full(seg, x), side * yc_at(x) + r * np.cos(ang), zc_at(x) + r * np.sin(ang)]))
+        v, f = loft(er)
+        fmx = [1 if eprof[i][0] >= 1.70 else 0 for i in range(len(er) - 1) for _ in range(seg)]
+        objs.append(tag(obj(f"J58 {sd}", v, f, ENGINE, angle=40, extra=[HOT], face_mat=fmx), f"j58-{sl}", "engines", e_eng, "representative"))
+        tubes_v, tubes_f, off = [], [], 0
+        tang = np.linspace(0, 2 * math.pi, 12, endpoint=False)
+        for kk in range(6):
+            th = math.radians(30 + 60 * kk)
+            pts = []
+            for dx in np.linspace(0.75, 2.90, 9):
+                x = x_face + dx
+                rr = 0.715 if 0.9 < dx < 2.75 else 0.66
+                cy, cz = side * yc_at(x) + rr * math.cos(th), zc_at(x) + rr * math.sin(th)
+                pts.append([(x, cy + 0.05 * math.cos(t), cz + 0.05 * math.sin(t)) for t in tang])
+            tv, tf = loft([np.array(p_) for p_ in pts])
+            tubes_v += tv; tubes_f += [tuple(off + q for q in fc) for fc in tf]; off += len(tv)
+        objs.append(tag(obj(f"Bypass tubes {sd}", tubes_v, tubes_f, ENGINE, angle=50), f"bypass-tubes-{sl}", "engines", e_eng, "representative"))
+        for label, x, r, ex, mt in (("Engine face", x_face, 0.62, e_eng, dark), ("Nozzle", xs[-1] - 0.25, 0.92 * min(aa[-1], bbv[-1]), e_nac, dark)):
+            verts = [(x, side * yc_at(x) + r * math.cos(t), zc_at(x) + r * math.sin(t)) for t in ang]
+            objs.append(tag(obj(f"{label} {sd}", verts, [tuple(range(seg))], mt), f"{label.lower().replace(' ', '-')}-{sl}", "engines", ex))
     return objs
 
 
@@ -509,7 +574,7 @@ def fins(c, mat):
         n = len(rings[0])
         f.append(tuple(range(n)))
         f.append(tuple(range(2 * n - 1, n - 1, -1)))
-        objs.append(obj(f"Fin {'R' if side > 0 else 'L'}", v, f, mat, angle=30))
+        objs.append(tag(obj(f"Fin {'R' if side > 0 else 'L'}", v, f, mat, angle=30), f"fin-{'r' if side > 0 else 'l'}", "skin", (0.0, side * 5.6, 2.6)))
     print(f"FIN tip z {target_tip:.3f} (drawn {z_tip_drawn:.3f}), height scale {k:.3f}")
     return objs
 
@@ -520,7 +585,7 @@ def probe(mat):
     prof = [(-PROBE, 0.012), (-PROBE + 0.05, 0.025), (-0.25, 0.03), (0.02, 0.045)]
     rings = [np.column_stack([np.full(seg, x), r * np.cos(ang), r * np.sin(ang)]) for x, r in prof]
     v, f = loft(rings, cap_start=True)
-    return obj("Pitot probe", v, f, mat, angle=60)
+    return tag(obj("Pitot probe", v, f, mat, angle=60), "pitot-probe", "skin", (-4.0, 0, 0))
 
 
 def main():
@@ -542,14 +607,17 @@ def main():
     GLASS = named("Canopy glass", (0.02, 0.03, 0.035, 1), 0.0, 0.05)
     EJECTOR = named("Ejector metal", (0.33, 0.30, 0.27, 1), 1.0, 0.45)
     DUCT = named("Inlet duct", (0.01, 0.011, 0.013, 1), 0.2, 0.6)
-    parts = fuselage(c, skin) + [wing(c, skin), probe(skin)] + nacelles(c, skin, dark) + fins(c, skin)
+    global ENGINE, HOT
+    ENGINE = named("Engine metal", (0.40, 0.41, 0.43, 1), 1.0, 0.35)
+    HOT = named("Engine hot section", (0.33, 0.25, 0.18, 1), 1.0, 0.42)
+    parts = fuselage(c, skin) + wing(c, skin) + [probe(skin)] + nacelles(c, skin, dark) + fins(c, skin)
     root = bpy.data.objects.new("SR-71A", None); bpy.context.collection.objects.link(root)
     for o in parts:
         o.parent = root
     out = Path(a["out"]); out.parent.mkdir(parents=True, exist_ok=True)
     if a.get("blend"):
         bpy.ops.wm.save_as_mainfile(filepath=str(Path(a["blend"]).resolve()))
-    bpy.ops.export_scene.gltf(filepath=str(out.resolve()), export_format="GLB", export_apply=True, export_yup=True)
+    bpy.ops.export_scene.gltf(filepath=str(out.resolve()), export_format="GLB", export_apply=True, export_yup=True, export_extras=True)
     print(f"BUILT {out} parts={len(parts)} faces={sum(len(o.data.polygons) for o in parts)}")
 
 

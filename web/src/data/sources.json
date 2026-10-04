@@ -13,7 +13,16 @@
   "title": "SR-71A-1 Flight Manual (T.O. SR-71A-1), Issue E, Change 2, 31 July 1989",
   "publisher": "U.S. Air Force",
   "url": "https://archive.org/details/0003756-lockheed-sr-71-03",
-  "uses": 45
+  "uses": 72
+ },
+ {
+  "id": "nasa-technical-reports-server-707153",
+  "title": "Design and Development of the Blackbird: Challenges and Lessons Learned (Peter W. Merlin, AIAA 2009-1522)",
+  "publisher": "NASA Technical Reports Server",
+  "url": "https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf",
+  "uses": 40,
+  "archive": "https://web.archive.org/web/20260928231313/https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf",
+  "archived": "2026-09-28"
  },
  {
   "id": "roadrunners-internationale-2c60a8",
@@ -32,15 +41,6 @@
   "uses": 36,
   "archive": "https://web.archive.org/web/20260908145717/https://www.cia.gov/resources/csi/static/The-Oxcart-Story.pdf",
   "archived": "2026-09-08"
- },
- {
-  "id": "nasa-technical-reports-server-707153",
-  "title": "Design and Development of the Blackbird: Challenges and Lessons Learned (Peter W. Merlin, AIAA 2009-1522)",
-  "publisher": "NASA Technical Reports Server",
-  "url": "https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf",
-  "uses": 25,
-  "archive": "https://web.archive.org/web/20260928231313/https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf",
-  "archived": "2026-09-28"
  },
  {
   "id": "joe-baugher-bc942a",
@@ -192,6 +192,13 @@
   "uses": 6
  },
  {
+  "id": "central-intelligence-agency-dd9228",
+  "title": "Development of the Lockheed SR-71 Blackbird (Clarence L. Johnson, 1981), with J58/SR-71 Propulsion Integration (William R. Brown)",
+  "publisher": "Central Intelligence Agency",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp90b00170r000100080001-5",
+  "uses": 6
+ },
+ {
   "id": "dvids-70a023",
   "title": "Legendary SR-71 Blackbird (9th Reconnaissance Wing, 4 March 2020)",
   "publisher": "DVIDS",
@@ -318,10 +325,17 @@
   "archived": "2026-10-02"
  },
  {
-  "id": "central-intelligence-agency-dd9228",
-  "title": "Development of the Lockheed SR-71 Blackbird (Clarence L. Johnson, 1981), with J58/SR-71 Propulsion Integration (William R. Brown)",
-  "publisher": "Central Intelligence Agency",
-  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp90b00170r000100080001-5",
+  "id": "nasa-7cb9d3",
+  "title": "Dynamic Response of a YF-12 Inlet (Dustin, Cole and Neiner, NASA TM X-3144, 1974)",
+  "publisher": "NASA",
+  "url": "https://ntrs.nasa.gov/api/citations/19750003899/downloads/19750003899.pdf",
+  "uses": 3
+ },
+ {
+  "id": "nasa-6f48e2",
+  "title": "YF-12 inlet suppression of compressor-face pressure transients (Lockheed, NASA CR-163106)",
+  "publisher": "NASA",
+  "url": "https://ntrs.nasa.gov/api/citations/19810012550/downloads/19810012550.pdf",
   "uses": 3
  },
  {
@@ -492,6 +506,13 @@
   "title": "Two crews, three world records, one historic day: 50th anniversary of the SR-71 Blackbird FAI World Records (press release, 29 Jun 2026)",
   "publisher": "FAI (World Air Sports Federation)",
   "url": "https://www.fai.org/sites/default/files/2026-06/FAI_Press_Release_LockheedBlackbird-50yrsanniverary-28July1976_29Jun26.pdf",
+  "uses": 2
+ },
+ {
+  "id": "nasa-dryden-flight-research-center-6228a9",
+  "title": "SR-71A three-view, graphic EG-0075-02 (vector original, 1998)",
+  "publisher": "NASA Dryden Flight Research Center",
+  "url": "https://web.archive.org/web/20041117202822/https://www.dfrc.nasa.gov/Gallery/Graphics/SR-71/EPS/EG-0075-02.eps",
   "uses": 2
  },
  {
@@ -1849,13 +1870,6 @@
   "uses": 1,
   "archive": "https://web.archive.org/web/20240805042127/https://ntrs.nasa.gov/api/citations/20120014266/downloads/20120014266.pdf",
   "archived": "2024-08-05"
- },
- {
-  "id": "nasa-dryden-flight-research-center-6228a9",
-  "title": "SR-71A three-view, graphic EG-0075-02 (vector original, 1998)",
-  "publisher": "NASA Dryden Flight Research Center",
-  "url": "https://web.archive.org/web/20041117202822/https://www.dfrc.nasa.gov/Gallery/Graphics/SR-71/EPS/EG-0075-02.eps",
-  "uses": 1
  },
  {
   "id": "nasa-d6f724",

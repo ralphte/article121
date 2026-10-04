@@ -75,6 +75,16 @@
    "title": "Wind-Tunnel Development of an SR-71 Aerospike Rocket Flight Test Configuration (NASA TM-4749, 1996)",
    "publisher": "NASA",
    "url": "https://ntrs.nasa.gov/api/citations/19960038443/downloads/19960038443.pdf"
+  },
+  "TMX3144": {
+   "title": "Dynamic Response of a YF-12 Inlet (Dustin, Cole and Neiner, NASA TM X-3144, 1974)",
+   "publisher": "NASA",
+   "url": "https://ntrs.nasa.gov/api/citations/19750003899/downloads/19750003899.pdf"
+  },
+  "CR163106": {
+   "title": "YF-12 inlet suppression of compressor-face pressure transients (Lockheed, NASA CR-163106)",
+   "publisher": "NASA",
+   "url": "https://ntrs.nasa.gov/api/citations/19810012550/downloads/19810012550.pdf"
   }
  },
  "intro": {
@@ -974,5 +984,305 @@
     "figures 4 and 5"
    ]
   ]
- }
+ },
+ "parts": {
+  "nose-section": {
+   "title": "Nose section",
+   "text": "The nose ahead of the cockpits could be exchanged. SR-71s flew with chined noses carrying the CAPRE side-looking radar, the optical bar camera or the ASARS radar; the ASARS nose had a one-piece quartz and polyimide radome-chine.",
+   "cite": [
+    [
+     "M09",
+     "p.17"
+    ],
+    [
+     "FM",
+     "p.4-93"
+    ]
+   ]
+  },
+  "pitot-probe": {
+   "title": "Pitot-static probe",
+   "text": "The pitot-static boom on the nose tip, as drawn on NASA's three-view.",
+   "cite": [
+    [
+     "EG0075",
+     "side view"
+    ]
+   ]
+  },
+  "forward-fuselage": {
+   "title": "Forward fuselage and cockpits",
+   "text": "Two cockpits in tandem, the pilot forward and the reconnaissance systems officer behind, each under its own canopy. The cockpits held a 26,000 ft or 10,000 ft pressure schedule.",
+   "cite": [
+    [
+     "FM",
+     "p.1-186 to 1-187; Figures 1-12 and 1-17"
+    ]
+   ]
+  },
+  "canopy-glass": {
+   "title": "Windshield and canopy glass",
+   "text": "At cruise the outer glass reached 420 °F while the crew's cooling air came in at minus 40 °F.",
+   "cite": [
+    [
+     "M09",
+     "p.18"
+    ]
+   ]
+  },
+  "chine-forebody": {
+   "title": "Chine forebody",
+   "text": "The chines run from the nose to the wing and carried almost 20 percent of the lift. The bays inside them carried sensors and equipment, listed on the flight manual's bay locator.",
+   "cite": [
+    [
+     "M09",
+     "p.17"
+    ],
+    [
+     "FM",
+     "Figure 1-1, p.1-5"
+    ]
+   ]
+  },
+  "centre-body": {
+   "title": "Centre body and fuel",
+   "text": "The centre body carries the wing through and holds most of the fuel: eight tanks, 80,280 lb of JP-7. The fuel cooled the cockpit air, the hydraulics and the engine oil before it was burned.",
+   "cite": [
+    [
+     "FM",
+     "Figure 1-32, p.1-48; p.1-58 to 1-60"
+    ]
+   ]
+  },
+  "tail-cone": {
+   "title": "Tail cone",
+   "text": "The fuselage ends in a tail cone behind the wing. Like the chines, wing edges, spike cones and fins, it used heat-resistant non-metallic laminates in places.",
+   "cite": [
+    [
+     "M09",
+     "p.17"
+    ]
+   ]
+  },
+  "inner-wing-l": {
+   "title": "Inner wing",
+   "alias": "inner-wing"
+  },
+  "inner-wing-r": {
+   "title": "Inner wing",
+   "alias": "inner-wing"
+  },
+  "inner-wing": {
+   "title": "Inner wing",
+   "text": "A multispar, multirib wing whose skins are corrugated chordwise so they can grow with heat without buckling; at design heating the corrugations deepened by only a few thousandths of an inch. Inboard elevons on the trailing edge.",
+   "cite": [
+    [
+     "M09",
+     "p.17"
+    ],
+    [
+     "KJ81",
+     "Johnson, p.10"
+    ],
+    [
+     "FM",
+     "p.1-94 to 1-100"
+    ]
+   ]
+  },
+  "outer-wing-l": {
+   "title": "Outer wing",
+   "alias": "outer-wing"
+  },
+  "outer-wing-r": {
+   "title": "Outer wing",
+   "alias": "outer-wing"
+  },
+  "outer-wing": {
+   "title": "Outer wing",
+   "text": "Outboard of the nacelles the leading edge droops in conical camber. The outboard elevons, each moved by 14 actuating cylinders, give pitch and roll control.",
+   "cite": [
+    [
+     "FM",
+     "p.1-94 to 1-100"
+    ]
+   ]
+  },
+  "nacelle-l": {
+   "title": "Nacelle",
+   "alias": "nacelle"
+  },
+  "nacelle-r": {
+   "title": "Nacelle",
+   "alias": "nacelle"
+  },
+  "nacelle": {
+   "title": "Nacelle",
+   "text": "Inlet, engine and ejector nozzle in one nacelle, working as one propulsion system. At Mach 3 the inlet produced 54 percent of the thrust, the ejector 29 percent and the J58 itself 17 percent.",
+   "cite": [
+    [
+     "M09",
+     "p.25"
+    ]
+   ]
+  },
+  "inlet-duct-l": {
+   "title": "Inlet duct",
+   "alias": "inlet-duct"
+  },
+  "inlet-duct-r": {
+   "title": "Inlet duct",
+   "alias": "inlet-duct"
+  },
+  "inlet-duct": {
+   "title": "Inlet duct",
+   "text": "The duct from the cowl lip, 29.38 in in radius, to the engine face about 5.4 cowl radii behind it. Bypass doors in its walls held the shock wave at the throat.",
+   "cite": [
+    [
+     "TMX3144",
+     "Figure 8"
+    ],
+    [
+     "CR163106",
+     "Figures 4 and 5"
+    ],
+    [
+     "FM",
+     "p.1-31 to 1-35"
+    ]
+   ]
+  },
+  "spike-l": {
+   "title": "Inlet spike",
+   "alias": "spike"
+  },
+  "spike-r": {
+   "title": "Inlet spike",
+   "alias": "spike"
+  },
+  "spike": {
+   "title": "Inlet spike",
+   "text": "Locked forward below 30,000 feet; from Mach 1.6 it moves aft about 1-5/8 inches per 0.1 Mach, to about 26 inches, closing the throat to 54 percent of its Mach 1.6 area.",
+   "cite": [
+    [
+     "FM",
+     "p.1-31, p.1-43"
+    ]
+   ]
+  },
+  "j58-l": {
+   "title": "Pratt & Whitney J58",
+   "alias": "j58"
+  },
+  "j58-r": {
+   "title": "Pratt & Whitney J58",
+   "alias": "j58"
+  },
+  "engine-face-l": {
+   "title": "Pratt & Whitney J58",
+   "alias": "j58"
+  },
+  "engine-face-r": {
+   "title": "Pratt & Whitney J58",
+   "alias": "j58"
+  },
+  "j58": {
+   "title": "Pratt & Whitney J58",
+   "text": "JT11D-20 bleed-bypass turbojet with afterburner, 34,000 lbf in maximum afterburner. A nine-stage compressor with a pressure ratio of only 8.8 to 1, eight burner cans and a two-stage turbine. Shape here is representative, after the flight manual cutaway.",
+   "cite": [
+    [
+     "FM",
+     "p.1-4, p.1-7, Figure 1-2"
+    ]
+   ]
+  },
+  "bypass-tubes-l": {
+   "title": "Bleed bypass tubes",
+   "alias": "bypass-tubes"
+  },
+  "bypass-tubes-r": {
+   "title": "Bleed bypass tubes",
+   "alias": "bypass-tubes"
+  },
+  "bypass-tubes": {
+   "title": "Bleed bypass tubes",
+   "text": "From about Mach 1.8 to 2.0, air bled from the fourth compressor stage runs through six tubes around the rest of the engine straight into the afterburner. Positions here are representative.",
+   "cite": [
+    [
+     "FM",
+     "p.1-4 to 1-7, Figure 1-2"
+    ]
+   ]
+  },
+  "nozzle-l": {
+   "title": "Ejector nozzle",
+   "alias": "ejector"
+  },
+  "nozzle-r": {
+   "title": "Ejector nozzle",
+   "alias": "ejector"
+  },
+  "ejector-liner-l": {
+   "title": "Ejector nozzle",
+   "alias": "ejector"
+  },
+  "ejector-liner-r": {
+   "title": "Ejector nozzle",
+   "alias": "ejector"
+  },
+  "ejector": {
+   "title": "Ejector nozzle",
+   "text": "An airframe-mounted ejector around the afterburner: flaps of Hastelloy X on a Rene 41 ring, 1,400 °F inside and 1,600 °F outside in afterburner. At Mach 3 it made 29 percent of the thrust.",
+   "cite": [
+    [
+     "M09",
+     "p.20 to 21, p.25"
+    ]
+   ]
+  },
+  "fin-l": {
+   "title": "Fin and rudder",
+   "alias": "fin"
+  },
+  "fin-r": {
+   "title": "Fin and rudder",
+   "alias": "fin"
+  },
+  "fin": {
+   "title": "Fin and rudder",
+   "text": "All-moving rudders on fixed stub fins on top of the nacelles, each canted inward 15 degrees, driven by dual A and B hydraulic servos.",
+   "cite": [
+    [
+     "FM",
+     "p.1-94 to 1-100"
+    ]
+   ]
+  }
+ },
+ "layers": [
+  {
+   "id": "skin",
+   "name": "Skin"
+  },
+  {
+   "id": "engines",
+   "name": "Engines and inlets"
+  },
+  {
+   "id": "structure",
+   "name": "Structure"
+  },
+  {
+   "id": "fuel",
+   "name": "Fuel tanks"
+  },
+  {
+   "id": "crew",
+   "name": "Cockpits and crew"
+  },
+  {
+   "id": "bays",
+   "name": "Sensors and bays"
+  }
+ ]
 }

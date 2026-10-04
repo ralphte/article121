@@ -182,6 +182,18 @@ const machine = {
 };
 delete machine.inlet.cite;
 if (machineIn.model) machine.model = { text: machineIn.model.text, citations: machineCites(machineIn.model.cite, 'model') };
+// Parts of the 3D model: what each is, with sources. Ids match the a121_part extras in the glTF;
+// an entry with "alias" shares another entry's text (left and right of a pair).
+if (machineIn.parts) {
+  const parts = {};
+  for (const [id, p] of Object.entries(machineIn.parts)) {
+    const base = p.alias ? machineIn.parts[p.alias] : p;
+    if (!base || !base.text) throw new Error(`machine.json part ${id}: no text (alias ${p.alias})`);
+    parts[id] = { title: p.title || base.title, text: base.text, citations: machineCites(base.cite, `part ${id}`) };
+  }
+  machine.parts = parts;
+  machine.layers = machineIn.layers ?? [];
+}
 // Panel explorer: positions of the keyed items on the pilot's panel drawing (research/systems/panel_fig1-12.json)
 const panelIn = machineIn.panel;
 if (panelIn && existsSync(join(root, panelIn.positions))) {
