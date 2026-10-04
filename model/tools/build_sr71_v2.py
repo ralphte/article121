@@ -102,7 +102,15 @@ def fuselage(c, mat):
         h00, h10, h01, h11 = 2*t**3 - 3*t**2 + 1, t**3 - 2*t**2 + t, -2*t**3 + 3*t**2, t**3 - t**2
         return h00 * za + h10 * (xb - xa) * slope_a + h01 * zb + h11 * (xb - xa) * slope_b
 
-    rings = []
+    rings, canopy_rings = [], []
+    # Canopy: a separate body on the spine from the windscreen foot to where it fairs back in. The
+    # traced top line includes it; the spine under it is faired between the stations either side.
+    # Half-widths from the drawing's plan-view canopy outlines (paths 162 and 161): pilot's canopy
+    # 4.4 to 5.8 m, up to 0.536 m; RSO's 5.9 to 6.8 m, 0.46 m.
+    CAN_X0, CAN_X1 = 3.5, 8.5
+    spine_slope0 = (float(top(CAN_X0)) - float(top(CAN_X0 - 0.5))) / 0.5
+    HW_X = [3.5, 3.65, 3.9, 4.4, 5.2, 5.8, 6.4, 7.0, 7.6, 8.1, 8.5]
+    HW_Y = [0.02, 0.2, 0.34, 0.5, 0.536, 0.5, 0.465, 0.44, 0.36, 0.2, 0.03]
     # how far out from the centreline the upper fillet reaches (m), by station
     FIL_X = [15.9, 17.7, 21.0, 22.6, 27.5, 29.5, 30.4]
     FIL_R = [float(env(15.9)), 3.0, 3.0, 1.6, 1.3, 1.1, 0.0]
@@ -115,6 +123,9 @@ def fuselage(c, mat):
         # top and bottom: traced where visible, then a fair curve to the tail cone tip
         if x <= x_top_end:
             zt = float(top(x))
+            z_canopy = zt
+            if CAN_X0 < x < CAN_X1:          # the forebody spine runs on under the canopy
+                zt = fair(x, CAN_X0, float(top(CAN_X0)), CAN_X1, float(top(CAN_X1)), spine_slope0, 0.0)
         elif x < X_AFT:
             zt = fair(x, x_top_end, float(top(x_top_end)), X_AFT, aft_top(X_AFT), 0.0, (aft_top(X_AFT + 0.3) - aft_top(X_AFT)) / 0.3)
         else:
@@ -203,12 +214,25 @@ def fuselage(c, mat):
         for t in np.linspace(0, 1, N_L + 1)[1:]:           # back to the keel
             y = WW * (1 - t)
             half.append((y, s_tent * tent_lo(min(y, w)) + (1 - s_tent) * body_lo(min(y, W))))
+        if CAN_X0 <= x <= CAN_X1:
+            hw = float(np.interp(x, HW_X, HW_Y))
+            zs = tent_up(hw)
+            h = max(z_canopy - zs, 0.005)
+            ring = []
+            for th in np.linspace(0, math.pi, 29):            # roof, right to left
+                yy = hw * math.cos(th)
+                ring.append((x, yy, zs + h * max(0.0, 1 - abs(yy / hw) ** 2.6) ** (1 / 2.6)))
+            for yy in np.linspace(-hw, hw, 13)[1:-1]:           # floor, buried in the forebody
+                ring.append((x, yy, tent_up(abs(yy)) - 0.08))
+            canopy_rings.append(np.array(ring))
         right = np.array(half)
         left = right[1:-1][::-1] * [-1, 1]
         sec = np.vstack([right, left])
         rings.append(np.column_stack([np.full(len(sec), x), sec[:, 0], sec[:, 1]]))
     v, f = loft(rings)
-    return obj("Fuselage", v, f, mat, angle=50)
+    body = obj("Fuselage", v, f, mat, angle=50)
+    v, f = loft(canopy_rings, cap_start=True, cap_end=True)
+    return [body, obj("Canopy", v, f, mat, angle=35)]
 
 
 # ------------------------------------------------------------ wing
@@ -409,7 +433,7 @@ def main():
     p.inputs["Base Color"].default_value = (0.018, 0.02, 0.026, 1); p.inputs["Metallic"].default_value = 0.35; p.inputs["Roughness"].default_value = 0.5
     dark = bpy.data.materials.new("Intake and nozzle"); dark.use_nodes = True
     dark.node_tree.nodes["Principled BSDF"].inputs["Base Color"].default_value = (0.002, 0.002, 0.003, 1)
-    parts = [fuselage(c, skin), wing(c, skin), probe(skin)] + nacelles(c, skin, dark) + fins(c, skin)
+    parts = fuselage(c, skin) + [wing(c, skin), probe(skin)] + nacelles(c, skin, dark) + fins(c, skin)
     root = bpy.data.objects.new("SR-71A", None); bpy.context.collection.objects.link(root)
     for o in parts:
         o.parent = root
