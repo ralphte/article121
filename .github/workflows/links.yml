@@ -14,7 +14,7 @@ jobs:
   links:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - name: Collect source URLs
         run: node -e "const s=require('./research/timeline.json').flatMap(e=>e.sources).concat(require('./research/airframes.json').flatMap(a=>a.sources));require('fs').writeFileSync('urls.txt',[...new Set(s.map(x=>x.url))].join('\n'))"
       - uses: lycheeverse/lychee-action@v2

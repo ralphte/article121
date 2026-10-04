@@ -14,7 +14,7 @@ jobs:
     name: Build and check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
       - name: House style, no em or en dashes
         run: |
@@ -23,11 +23,11 @@ jobs:
             exit 1
           fi
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6
         with:
           package_json_file: web/package.json
 
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: pnpm
@@ -51,7 +51,7 @@ jobs:
             echo "- $(node -e "const d=n=>require('./src/data/'+n+'.json').length;console.log(d('events')+' events, '+d('airframes')+' airframes, '+d('photos')+' photos, '+d('sources')+' sources')")"
           } >> "$GITHUB_STEP_SUMMARY"
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: site
           path: web/dist
