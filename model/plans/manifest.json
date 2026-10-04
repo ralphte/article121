@@ -1,0 +1,2719 @@
+[
+ {
+  "file": "pages/fm-1SR71A-1_p1-4_dimensions.png",
+  "title": "SR-71A-1 page 1-4: Introduction, The Aircraft, Dimensions",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_jp2.zip/0003756-lockheed_sr71__01_jp2%2F0003756-lockheed_sr71__01_0020.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "SR-71A",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "length (overall) 107.4 ft",
+   "height (to top of rudders) 18.5 ft",
+   "wing span 55.6 ft",
+   "wing area (reference) 1605 sq ft",
+   "tread (MLG middle wheel centerlines) 16.67 ft",
+   "gross weight about 135,000 to over 140,000 lb; zero fuel 56,500 to over 60,000 lb"
+  ],
+  "scale_or_resolution": "IA JP2 master 4167 x 5834 px (about 500 dpi); saved PNG is the full JP2 converted to 8-bit grey",
+  "usefulness": {
+   "score": 5,
+   "why": "the authoritative USAF numbers for overall length, span, height, reference wing area and main gear tread; text only, no drawing"
+  },
+  "bytes": 3255816
+ },
+ {
+  "file": "pages/ntrs-19730015310_TN-D-6987_p17_fig2_YF-12A-three-view-dimensioned.png",
+  "title": "Fig. 2, three-view drawing of the YF-12A airplane, dimensions in meters (feet)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19730015310/downloads/19730015310.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19730015310",
+  "date": "1973-05",
+  "rights": "U.S. government work, public domain (NASA TN by Flight Research Center staff; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12A",
+  "views": [
+   "plan",
+   "side",
+   "front",
+   "inlet"
+  ],
+  "dimensions_shown": [
+   "overall length 33.26 m (109.17 ft) including NASA nose boom",
+   "nose-boom tip to spike-tip sensor 17.78 m (58.33 ft)",
+   "semispan 8.50 m (27.81 ft), so span about 17.0 m (55.6 ft)",
+   "airplane centreline to engine centreline 4.32 m (14.17 ft)",
+   "height 5.61 m (18.38 ft), drawn with folding ventral fin extended",
+   "spike centreline 5.3 deg to wing reference plane in figure (text p.3 says 5.63 deg)",
+   "spike toe-in 3.25 deg"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions (page rotated upright)",
+  "usefulness": {
+   "score": 5,
+   "why": "dimensioned YF-12A plan/side/front with nacelle position and inlet cant"
+  },
+  "bytes": 71393
+ },
+ {
+  "file": "pages/ntrs-19730021212_TM-X-2880_p37_fig2a_YF-12-structure-fuselage-sections-A-E.png",
+  "title": "Fig. 2(a), airplane structure (generalized): plan view with fuselage-station and wing-station scales and five fuselage cross sections",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19730021212/downloads/19730021212.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19730021212",
+  "date": "1973-08",
+  "rights": "U.S. government work, public domain (NASA TM; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12A",
+  "views": [
+   "plan",
+   "sections"
+  ],
+  "dimensions_shown": [
+   "section A-A FS 645 cm (254 in)",
+   "section B-B FS 927 cm (365 in)",
+   "section C-C FS 1470 cm (580 in)",
+   "section D-D FS 1870 cm (738 in)",
+   "section E-E FS 2640 cm (1040 in)",
+   "FS scale 200 to 3400 cm and 100 to 1300 in",
+   "wing station scale 0 to 900 cm and 0 to 350 in"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions (rotated upright)",
+  "usefulness": {
+   "score": 5,
+   "why": "the only fuselage cross sections found, keyed to stations (schematic, generalized)"
+  },
+  "bytes": 69285
+ },
+ {
+  "file": "pages/ntrs-19750003899_TM-X-3144_p16_fig8_YF-12-inlet-section-cowl-radius.png",
+  "title": "Fig. 8, shock-sensor pressure-transducer locations on inlet half-section (radius of cowl at cowl-lip station 74.62 cm)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19750003899/downloads/19750003899.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19750003899",
+  "date": "1974-12",
+  "rights": "U.S. government work, public domain (NASA Lewis TM; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "J58 inlet (YF-12)",
+  "views": [
+   "inlet",
+   "sections"
+  ],
+  "dimensions_shown": [
+   "cowl-lip radius rcl 74.62 cm (29.38 in), so lip diameter 149.24 cm (58.76 in)",
+   "throat probe at x/rcl 1.462",
+   "taps at x/rcl 1.549 to 1.957"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 5,
+   "why": "absolute inlet scale, the key to scaling all normalized inlet drawings"
+  },
+  "bytes": 39049
+ },
+ {
+  "file": "pages/ntrs-19780024113_CP-2054_p19_table1_YF-12-specifications.png",
+  "title": "Table 1, YF-12 specifications (wing, elevons, vertical tails, fuselage ventral fin)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19780024113/downloads/19780024113.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19780024113",
+  "date": "1978-08",
+  "rights": "U.S. government work, public domain (NASA author, NASA CP; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12A",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "wing area 166.761 m2, aspect ratio 1.939, root chord 18.542 m, tip chord 0, span 17.983 m (theoretical delta), dihedral 0, incidence 1.20 deg, modified biconvex 2.5 percent, sweep 52.629 deg, MAC 12.361 m at W.S. 118.0",
+   "inboard elevon 3.63 m2 each, outboard elevon 4.877 m2 each, travel 35 up / 20 down",
+   "total vertical tail 14.006 m2, AR 0.778, taper 0.392, root chord 6.096 m, tip chord 2.387 m, span 3.302 m, sweep 32.207 deg, MAC 4.511 m",
+   "movable vertical tail 6.526 m2 each, root chord 4.512 m, tip chord 2.387 m, MAC 3.559 m, span 1.892 m, travel +/-20 deg",
+   "fuselage ventral fin 6.735 m2, root chord 4.178 m, tip chord 2.616 m, AR 0.61, biconvex 3.5 to 2.0 percent"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 5,
+   "why": "complete fin and wing reference geometry"
+  },
+  "bytes": 51499
+ },
+ {
+  "file": "pages/ntrs-19780024116_CP-2054_p107_fig2_YF-12C-SR-71-airframe-three-view-m.png",
+  "title": "Fig. 2, three-view drawing of the YF-12C airplane (an SR-71A airframe), dimensions in meters",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19780024116/downloads/19780024116.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19780024116",
+  "date": "1978-08",
+  "rights": "U.S. government work, public domain (NASA Dryden authors, NASA CP; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12C (SR-71A airframe)",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "span 16.90 m (55.45 ft)",
+   "length 31.66 m (103.87 ft), nose to tail without pitot boom",
+   "height 5.60 m (18.37 ft)",
+   "fin tip to fin tip 6.92 m (22.70 ft)",
+   "fin cant 15 deg inboard from vertical"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 5,
+   "why": "SR-71A-shaped outline with the fin cant angle and fin-tip spacing"
+  },
+  "bytes": 26520
+ },
+ {
+  "file": "pages/ntrs-19960027893_TM-104317_p23_fig31_YF-12A-section-FS1130.png",
+  "title": "Fig. 31, YF-12A structure and NASTRAN model at fuselage station 1130 (view looking aft)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19960027893/downloads/19960027893.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19960027893",
+  "date": "1996-05",
+  "rights": "U.S. government work, public domain (NASA TM; NTRS: GOV_PUBLIC_USE_PERMITTED). Figures credited to earlier NASA reports (refs 10 to 18)",
+  "aircraft": "YF-12A",
+  "views": [
+   "sections"
+  ],
+  "dimensions_shown": [
+   "FS 1130",
+   "wing rib stations WS 72, 100, 127 (inboard of nacelle) and WS 213, 241, 267 (outboard)",
+   "rudder support on nacelle top"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 5,
+   "why": "true cross section through fuselage, inboard wing, nacelle and outboard wing with conical-camber leading edge"
+  },
+  "bytes": 70180
+ },
+ {
+  "file": "pages/ntrs-19960038443_TM-4749_p6_fig4_SR-71-LASRE-fwd-model-FS-WL-BL.png",
+  "title": "Fig. 4, LASRE forward model configuration on SR-71 (side and plan with station labels)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19960038443/downloads/19960038443.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19960038443",
+  "date": "1996-06",
+  "rights": "NASA TM, effectively public domain in the U.S.: also AIAA paper, notice reads 'Copyright 1996 AIAA. No copyright is asserted in the United States under Title 17, U.S. Code'. Co-author from Lockheed Martin Skunk Works. NTRS: GOV_PUBLIC_USE_PERMITTED",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan",
+   "side"
+  ],
+  "dimensions_shown": [
+   "F.S. 102 nose tip",
+   "F.S. 726.5, 736.5, 754.5, 934.5",
+   "F.S. 900 moment reference",
+   "F.S. 1226.5",
+   "F.S. 1295 wing trailing-edge tip",
+   "F.S. 1355 tail cone tip",
+   "W.L. 131 upper fuselage",
+   "W.L. 154.9",
+   "B.L. 16.5, 45, 58.8",
+   "57.8 in model height, 20 deg, 2 deg, 45 deg"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 5,
+   "why": "SR-71A outline with real FS/WL/BL coordinates"
+  },
+  "bytes": 64768
+ },
+ {
+  "file": "pages/ntrs-19960038443_TM-4749_p7_fig5_SR-71-LASRE-aft-model-FS-WL-BL.png",
+  "title": "Fig. 5, LASRE aft model configuration on SR-71 (side and plan with station labels)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19960038443/downloads/19960038443.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19960038443",
+  "date": "1996-06",
+  "rights": "NASA TM, effectively public domain in the U.S.: also AIAA paper, notice reads 'Copyright 1996 AIAA. No copyright is asserted in the United States under Title 17, U.S. Code'. Co-author from Lockheed Martin Skunk Works. NTRS: GOV_PUBLIC_USE_PERMITTED",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan",
+   "side"
+  ],
+  "dimensions_shown": [
+   "F.S. 102, 749.6, 900, 1023.0, 1033.0, 1041.9, 1196.5, 1230.9, 1244.6, 1295, 1355",
+   "W.L. 131, 154.2",
+   "B.L. 16.5, 45, 58.8",
+   "B.L. 340.2 wing tip",
+   "9.76 deg"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 5,
+   "why": "confirms SR-71A wing tip at B.L. 340.2 and fuselage extent F.S. 102 to 1355"
+  },
+  "bytes": 55377
+ },
+ {
+  "file": "raw/fm-1SR71A-1_IA-jp2-pages/fm-1SR71A-1_p1-4_dimensions.jp2",
+  "title": "SR-71A-1 page 1-4: Introduction, The Aircraft, Dimensions (original JP2 page)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_jp2.zip/0003756-lockheed_sr71__01_jp2%2F0003756-lockheed_sr71__01_0020.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "SR-71A",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "length (overall) 107.4 ft",
+   "height (to top of rudders) 18.5 ft",
+   "wing span 55.6 ft",
+   "wing area (reference) 1605 sq ft",
+   "tread (MLG middle wheel centerlines) 16.67 ft",
+   "gross weight about 135,000 to over 140,000 lb; zero fuel 56,500 to over 60,000 lb"
+  ],
+  "scale_or_resolution": "original IA JP2, 4167 x 5834 px",
+  "usefulness": {
+   "score": 5,
+   "why": "the authoritative USAF numbers for overall length, span, height, reference wing area and main gear tread; text only, no drawing"
+  },
+  "bytes": 1278878
+ },
+ {
+  "file": "raw/ntrs-19730021212_TM-X-2880_YF-12-ground-vibration.pdf",
+  "title": "Wilson, Cazier and Larson, Results of ground vibration tests on a YF-12 airplane, NASA TM X-2880 (H-736) (complete report)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19730021212/downloads/19730021212.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19730021212",
+  "date": "1973-08",
+  "rights": "U.S. government work, public domain (NASA TM; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12A",
+  "views": [
+   "plan",
+   "side",
+   "sections",
+   "details"
+  ],
+  "dimensions_shown": [
+   "fuselage stations of sections A-A to E-E",
+   "FS/WS/fin/ventral station grids, see page entries"
+  ],
+  "scale_or_resolution": "PDF, scanned pages at 300 ppi (LASRE TM 596 ppi; CR-144972 foldouts 200 ppi); complete as published",
+  "usefulness": {
+   "score": 5,
+   "why": "only public source found with YF-12 fuselage cross sections tied to fuselage stations"
+  },
+  "bytes": 5881603
+ },
+ {
+  "file": "raw/ntrs-19780024116_CP-2054_YF-12C-autopilots-three-view.pdf",
+  "title": "Gilyard and Smith, Flight experience with altitude hold and Mach hold autopilots on the YF-12 aircraft at Mach 3, in YF-12 Experiments Symposium vol. 1, NASA CP-2054, pp. 97-119 (complete report)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19780024116/downloads/19780024116.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19780024116",
+  "date": "1978-08",
+  "rights": "U.S. government work, public domain (NASA Dryden authors, NASA CP; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12C (SR-71A airframe 60-6937 / 64-17951)",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "span 16.90 m",
+   "length 31.66 m",
+   "height 5.60 m",
+   "fin tip spacing 6.92 m",
+   "fin cant 15 deg"
+  ],
+  "scale_or_resolution": "PDF, scanned pages at 300 ppi (LASRE TM 596 ppi; CR-144972 foldouts 200 ppi); complete as published",
+  "usefulness": {
+   "score": 5,
+   "why": "only source found giving the fin cant angle and fin-tip spacing, on an SR-71A-shaped airframe"
+  },
+  "bytes": 1164996
+ },
+ {
+  "file": "raw/ntrs-19960038443_TM-4749_SR-71-LASRE-wind-tunnel.pdf",
+  "title": "Moes, Cobleigh, Conners, Cox, Smith and Shirakata, Wind-tunnel development of an SR-71 aerospike rocket flight test configuration, NASA TM-4749 (H-2108) (complete report)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19960038443/downloads/19960038443.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19960038443",
+  "date": "1996-06",
+  "rights": "NASA TM, effectively public domain in the U.S.: also AIAA paper, notice reads 'Copyright 1996 AIAA. No copyright is asserted in the United States under Title 17, U.S. Code'. Co-author from Lockheed Martin Skunk Works. NTRS: GOV_PUBLIC_USE_PERMITTED",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan",
+   "side"
+  ],
+  "dimensions_shown": [
+   "FS 102 nose, FS 1355 tail cone, BL 340.2 wing tip",
+   "reference area 1605 sq ft, reference chord 37.7 ft, reference span 56.7 ft (p.2 nomenclature)"
+  ],
+  "scale_or_resolution": "PDF, scanned pages at 300 ppi (LASRE TM 596 ppi; CR-144972 foldouts 200 ppi); complete as published",
+  "usefulness": {
+   "score": 5,
+   "why": "SR-71A outline with real fuselage-station, waterline and buttline coordinates"
+  },
+  "bytes": 4123864
+ },
+ {
+  "file": "pages/cia-A-12-ground-handling_fig1-1-sh1_top-view-access-panels-stations.png",
+  "title": "A-12 Ground Handling Figure 1-1 sheet 1: Access Panels and Openings, top view",
+  "source_url": "https://archive.org/download/cia-readingroom-document-06230171/06230171.pdf",
+  "archive_or_publisher": "CIA FOIA reading room, Internet Archive mirror",
+  "date": "c. 1964-1966",
+  "rights": "U.S. government record released by CIA under FOIA (no copyright notice); prepared by Lockheed for the government. Treat as public domain; a 1981 Lockheed letter to CIA (CIA-RDP90B00170R000200230042-2) states Blackbird data was furnished to the government with unlimited rights unless marked proprietary. Internet Archive mirror of the CIA reading room.",
+  "aircraft": "A-12",
+  "views": [
+   "plan",
+   "details"
+  ],
+  "dimensions_shown": [
+   "B.S. 970 to 986 blow-in doors",
+   "spike STA 118, 133 to 149",
+   "N.S. 890 (W.S. 146 L and R, spike control access), N.S. 954 to 970, 980, 1008 (drag chute, B.L. 4), 1010, 1072, 1082",
+   "W.S. 210 to 297 outboard elevon",
+   "B.L. 60 servo package",
+   "STA 1230 to 1243 throttle access",
+   "nacelle cross-section sketches looking fwd at N.S. 985 and looking aft at N.S. 890"
+  ],
+  "scale_or_resolution": "300 dpi grayscale render of 1-bit scan, about 2540x3300 px",
+  "usefulness": {
+   "score": 4,
+   "why": "A-12 plan outline with nacelle, spike and wing stations"
+  },
+  "bytes": 309881
+ },
+ {
+  "file": "pages/cia-A-12-ground-handling_fig1-1-sh2_bottom-view-access-panels-fuselage-stations.png",
+  "title": "A-12 Ground Handling Figure 1-1 sheet 2: bottom view, fuselage panels",
+  "source_url": "https://archive.org/download/cia-readingroom-document-06230171/06230171.pdf",
+  "archive_or_publisher": "CIA FOIA reading room, Internet Archive mirror",
+  "date": "c. 1964-1966",
+  "rights": "U.S. government record released by CIA under FOIA (no copyright notice); prepared by Lockheed for the government. Treat as public domain; a 1981 Lockheed letter to CIA (CIA-RDP90B00170R000200230042-2) states Blackbird data was furnished to the government with unlimited rights unless marked proprietary. Internet Archive mirror of the CIA reading room.",
+  "aircraft": "A-12",
+  "views": [
+   "plan",
+   "details"
+  ],
+  "dimensions_shown": [
+   "F.S. 164 to 173 nose cone",
+   "F.S. 183 to 193, 218 to 230, 233 to 258 (antenna, periscope windows)",
+   "F.S. 318 to 387 Q-bay and pitot plumbing",
+   "fuel tank boyholes F.S. 350, 685, 799, 875, 1063, 1159",
+   "F.S. 1242 to 1263 mixer"
+  ],
+  "scale_or_resolution": "300 dpi grayscale render of 1-bit scan, about 2540x3300 px",
+  "usefulness": {
+   "score": 4,
+   "why": "fuselage station ladder for the A-12 underside"
+  },
+  "bytes": 293067
+ },
+ {
+  "file": "pages/dfrc_EG-0075-02_SR-71A_3view.png",
+  "title": "Render of EG-0075-02 SR-71A 3-view at 1200 dpi",
+  "source_url": "https://web.archive.org/web/20041117202822/https://www.dfrc.nasa.gov/Gallery/Graphics/SR-71/EPS/EG-0075-02.eps",
+  "archive_or_publisher": "NASA Dryden (rendered with Ghostscript)",
+  "date": "1998-02-02",
+  "rights": "U.S. government work (NASA Dryden graphic, Adobe Illustrator file created by NASA employee Tom Tschida, 1998), public domain. Same artwork was reposted by af.mil ('Graphic courtesy of NASA') and traced on Wikimedia Commons (File:Lockheed SR-71A 3view.svg, File:Lockheed YF-12A 3view.png, File:Lockheed SR-71B trainer model 3view.png, File:EG-0075-04.gif); those copies were not kept because they are lower-fidelity duplicates.",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "none"
+  ],
+  "scale_or_resolution": "4483x3683 px",
+  "usefulness": {
+   "score": 4,
+   "why": "blueprint image for modelling"
+  },
+  "bytes": 393225
+ },
+ {
+  "file": "pages/dfrc_EG-0075-02_SR-71A_3view.svg",
+  "title": "SVG conversion of EG-0075-02",
+  "source_url": "https://web.archive.org/web/20041117202822/https://www.dfrc.nasa.gov/Gallery/Graphics/SR-71/EPS/EG-0075-02.eps",
+  "archive_or_publisher": "NASA Dryden",
+  "date": "1998-02-02",
+  "rights": "U.S. government work (NASA Dryden graphic, Adobe Illustrator file created by NASA employee Tom Tschida, 1998), public domain. Same artwork was reposted by af.mil ('Graphic courtesy of NASA') and traced on Wikimedia Commons (File:Lockheed SR-71A 3view.svg, File:Lockheed YF-12A 3view.png, File:Lockheed SR-71B trainer model 3view.png, File:EG-0075-04.gif); those copies were not kept because they are lower-fidelity duplicates.",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "none"
+  ],
+  "scale_or_resolution": "vector",
+  "usefulness": {
+   "score": 4,
+   "why": "vector outline"
+  },
+  "bytes": 145730
+ },
+ {
+  "file": "pages/dfrc_EG-0075-05_SR-71-LASRE_3view.png",
+  "title": "Render of EG-0075-05 LASRE 3-view at 1200 dpi",
+  "source_url": "https://web.archive.org/web/20041117202742/https://www.dfrc.nasa.gov/Gallery/Graphics/SR-71/EPS/EG-0075-05.eps",
+  "archive_or_publisher": "NASA Dryden (rendered with Ghostscript)",
+  "date": "1998-03-06",
+  "rights": "U.S. government work (NASA Dryden graphic, Adobe Illustrator file created by NASA employee Tom Tschida, 1998), public domain. Same artwork was reposted by af.mil ('Graphic courtesy of NASA') and traced on Wikimedia Commons (File:Lockheed SR-71A 3view.svg, File:Lockheed YF-12A 3view.png, File:Lockheed SR-71B trainer model 3view.png, File:EG-0075-04.gif); those copies were not kept because they are lower-fidelity duplicates.",
+  "aircraft": "SR-71A (LASRE)",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "see EPS entry"
+  ],
+  "scale_or_resolution": "8517x5167 px",
+  "usefulness": {
+   "score": 4,
+   "why": "raster reference image of the dimensioned 3-view"
+  },
+  "bytes": 1012506
+ },
+ {
+  "file": "pages/dfrc_EG-0075-05_SR-71-LASRE_3view.svg",
+  "title": "SVG conversion of EG-0075-05 (pdftocairo)",
+  "source_url": "https://web.archive.org/web/20041117202742/https://www.dfrc.nasa.gov/Gallery/Graphics/SR-71/EPS/EG-0075-05.eps",
+  "archive_or_publisher": "NASA Dryden",
+  "date": "1998-03-06",
+  "rights": "U.S. government work (NASA Dryden graphic, Adobe Illustrator file created by NASA employee Tom Tschida, 1998), public domain. Same artwork was reposted by af.mil ('Graphic courtesy of NASA') and traced on Wikimedia Commons (File:Lockheed SR-71A 3view.svg, File:Lockheed YF-12A 3view.png, File:Lockheed SR-71B trainer model 3view.png, File:EG-0075-04.gif); those copies were not kept because they are lower-fidelity duplicates.",
+  "aircraft": "SR-71A (LASRE)",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "see EPS entry"
+  ],
+  "scale_or_resolution": "vector",
+  "usefulness": {
+   "score": 4,
+   "why": "vector outline importable into Blender or Inkscape"
+  },
+  "bytes": 220925
+ },
+ {
+  "file": "pages/fm-1SR71A-1_fig2-3_minimum-turning-radius-plan-view.png",
+  "title": "SR-71A-1 Figure 2-3 Minimum Turning Radius (page 2-30)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__02_jp2.zip/0003756-lockheed_sr71__02_jp2%2F0003756-lockheed_sr71__02_0027.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan"
+  ],
+  "dimensions_shown": [
+   "center of turn to nose (probe tip) 81.7 ft",
+   "center of turn to nose gear 54.5 ft",
+   "center of turn to outer wingtip 69.5 ft",
+   "center of turn to inner main gear 28.3 ft",
+   "center of turn to outer main gear 47.4 ft",
+   "nose gear steering 45 deg max",
+   "minimum runway width for 180 deg turn 101.9 ft"
+  ],
+  "scale_or_resolution": "IA JP2 master 4167 x 5834 px (about 500 dpi); saved PNG is the full JP2 converted to 8-bit grey",
+  "usefulness": {
+   "score": 4,
+   "why": "the only dimensioned orthographic plan silhouette in the manual; stylized, but the radii give independent checks of gear positions and span"
+  },
+  "bytes": 1541078
+ },
+ {
+  "file": "pages/fm-1SR71A-1_fig4-24_forward-fuselage-plan-and-side.png",
+  "title": "SR-71A-1 Figure 4-24 Sensor Component and DEF Equipment Locations (page 4-80)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__03_jp2.zip/0003756-lockheed_sr71__03_jp2%2F0003756-lockheed_sr71__03_0054.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan",
+   "side",
+   "details"
+  ],
+  "dimensions_shown": [
+   "no dimensions; plan of the forward fuselage and chines from the nose to the aft mission bays, side view of the nose, cockpits and nose radar bay"
+  ],
+  "scale_or_resolution": "IA JP2 master 4167 x 5834 px (about 500 dpi); saved PNG is the full JP2 converted to 8-bit grey",
+  "usefulness": {
+   "score": 4,
+   "why": "near-orthographic plan and side of the forward fuselage and chine bays; best manual source for chine planform and cockpit station layout, needs scaling from the 107.4 ft length"
+  },
+  "bytes": 2252343
+ },
+ {
+  "file": "pages/fm-1SR71A-1_p1-31_air-inlet-system-spike-travel-text.png",
+  "title": "SR-71A-1 page 1-31: Air Inlet System and Inlet Spikes (text)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_jp2.zip/0003756-lockheed_sr71__01_jp2%2F0003756-lockheed_sr71__01_0047.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "J58 inlet",
+  "views": [
+   "inlet"
+  ],
+  "dimensions_shown": [
+   "spike retracts about 1-5/8 in per 0.1 Mach above Mach 1.6",
+   "total spike motion about 26 in",
+   "captured stream tube area 8.7 sq ft to 18.5 sq ft (+112%)",
+   "throat closes to 4.16 sq ft, 54% of throat area at Mach 1.6",
+   "inlets canted inboard and downward (no angle given)"
+  ],
+  "scale_or_resolution": "IA JP2 master 4167 x 5834 px (about 500 dpi); saved PNG is the full JP2 converted to 8-bit grey",
+  "usefulness": {
+   "score": 4,
+   "why": "the primary source for spike travel and inlet capture and throat areas; text only"
+  },
+  "bytes": 3460496
+ },
+ {
+  "file": "pages/ntrs-19730021212_TM-X-2880_p42_fig5a_YF-12-wing-body-stations.png",
+  "title": "Fig. 5(a), test points for YF-12 ground vibration survey, wing/body (one side)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19730021212/downloads/19730021212.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19730021212",
+  "date": "1973-08",
+  "rights": "U.S. government work, public domain (NASA TM; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12A",
+  "views": [
+   "plan"
+  ],
+  "dimensions_shown": [
+   "fuselage/nacelle stations cm (in): 2118.4 (834.0), 2240.3 (882.0), 2321.6 (914.0), 2423.2 (954.0), 2667.0 (1050.0), 2829.6 (1114.0)",
+   "wing stations along trailing region: 3276.6 (1290.0), 3173.7 (1249.5), 3026.4 (1191.5), 2823.2 (1111.5), 2660.6 (1047.5), 2440.9 (961.0), 2306.3 (908.0), 2233.9 (879.5), 2112.0 (831.5), 1908.8 (751.5)"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 4,
+   "why": "plan outline with many labelled stations for calibrating wing and nacelle planform"
+  },
+  "bytes": 74824
+ },
+ {
+  "file": "pages/ntrs-19730021212_TM-X-2880_p43_fig5a-concl_YF-12-forebody-stations.png",
+  "title": "Fig. 5(a) concluded, forebody test points with fuselage and wing stations",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19730021212/downloads/19730021212.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19730021212",
+  "date": "1973-08",
+  "rights": "U.S. government work, public domain (NASA TM; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12A",
+  "views": [
+   "plan"
+  ],
+  "dimensions_shown": [
+   "wing stations 323 cm (127 in), 432 cm (170 in), 541 cm (213 in)",
+   "forebody FS cm (in): 1701.8 (670.0), 1397.0 (550.0), 1099.2 (432.75), 765.8 (301.5), 452.1 (178), 228.6 (90) at nose tip"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 4,
+   "why": "YF-12A forebody plan with chine start and stations; WS 170 in matches the 14.17 ft nacelle offset"
+  },
+  "bytes": 28144
+ },
+ {
+  "file": "pages/ntrs-19780024112_CP-2054_p240_fig4_YF-12A-YF-12C-boattail-sections.png",
+  "title": "CP-2054 p.240, Fig. 4, views of YF-12 boattails, configurations A (YF-12A) and C (YF-12C), top view, side view and rear cross-sectional views",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19780024112/downloads/19780024112.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19780024112",
+  "date": "1978-09",
+  "rights": "U.S. government work, public domain (NASA conference publication; NTRS: GOV_PERMITTED). Individual papers by NASA staff",
+  "aircraft": "YF-12A, YF-12C (SR-71A airframe)",
+  "views": [
+   "plan",
+   "side",
+   "sections"
+  ],
+  "dimensions_shown": [
+   "axis x/L 0.7 to 1.0",
+   "start of fuselage closure marked for both"
+  ],
+  "scale_or_resolution": "300 dpi greyscale render of a 300 ppi JPEG scan",
+  "usefulness": {
+   "score": 4,
+   "why": "aft fuselage cross sections and closure shape for YF-12A versus SR-71-type tail"
+  },
+  "bytes": 1762070
+ },
+ {
+  "file": "pages/ntrs-19780024113_CP-2054_p20_table1-concl_YF-12-specifications.png",
+  "title": "Table 1 concluded, YF-12 specifications (nacelle ventral fin, fuselage)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19780024113/downloads/19780024113.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19780024113",
+  "date": "1978-08",
+  "rights": "U.S. government work, public domain (NASA author, NASA CP; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12A",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "nacelle ventral fin 2.044 m2, root chord 4.248 m, tip chord 3.266 m, biconvex 2.5 percent",
+   "fuselage diameter 1.626 m (64.0 in)",
+   "fuselage overall length 30.986 m (101.66 ft)"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 4,
+   "why": "fuselage diameter and length"
+  },
+  "bytes": 13928
+ },
+ {
+  "file": "pages/ntrs-19810012550_CR-163106_p12_fig4_YF-12-inlet-section-spike-forward.png",
+  "title": "Fig. 4, inlet half-section with spike forward, axial scale x/Rc from cowl lip",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19810012550/downloads/19810012550.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19810012550",
+  "date": "1981-01",
+  "rights": "NASA contractor report written by Lockheed-California Company for NASA Dryden; no copyright notice in the document; NTRS: GOV_PUBLIC_USE_PERMITTED. Contractor work, so treat as cite and link (tier C) until rights are confirmed",
+  "aircraft": "J58 inlet (YF-12)",
+  "views": [
+   "inlet",
+   "sections"
+  ],
+  "dimensions_shown": [
+   "x/Rc axis -1.0 to 6.0",
+   "cowl lip at 0, engine face at about 5.4",
+   "positions of shock trap, forward bypass, spike bleed, centrebody struts"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 4,
+   "why": "to-scale normalized inlet section (spike forward)"
+  },
+  "bytes": 46578
+ },
+ {
+  "file": "pages/ntrs-19810012550_CR-163106_p13_fig5_YF-12-inlet-section-spike-aft.png",
+  "title": "Fig. 5, inlet half-section with spike aft",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19810012550/downloads/19810012550.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19810012550",
+  "date": "1981-01",
+  "rights": "NASA contractor report written by Lockheed-California Company for NASA Dryden; no copyright notice in the document; NTRS: GOV_PUBLIC_USE_PERMITTED. Contractor work, so treat as cite and link (tier C) until rights are confirmed",
+  "aircraft": "J58 inlet (YF-12)",
+  "views": [
+   "inlet",
+   "sections"
+  ],
+  "dimensions_shown": [
+   "x/Rc axis, spike aft position"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 4,
+   "why": "to-scale normalized inlet section (spike aft)"
+  },
+  "bytes": 51252
+ },
+ {
+  "file": "pages/ntrs-19810012550_CR-163106_p29_spike-translation-throat-area-table.png",
+  "title": "p.29, spike translation and throat-to-capture area ratio table",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19810012550/downloads/19810012550.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19810012550",
+  "date": "1981-01",
+  "rights": "NASA contractor report written by Lockheed-California Company for NASA Dryden; no copyright notice in the document; NTRS: GOV_PUBLIC_USE_PERMITTED. Contractor work, so treat as cite and link (tier C) until rights are confirmed",
+  "aircraft": "J58 inlet (YF-12)",
+  "views": [
+   "inlet"
+  ],
+  "dimensions_shown": [
+   "spike translation X/rc: forward 0.862, midway 0.431, aft 0.0",
+   "throat to capture area ratio: 0.41, 0.33, 0.23"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 4,
+   "why": "spike travel 0.862 rc, about 64 cm (25.3 in) with rc 74.62 cm"
+  },
+  "bytes": 41756
+ },
+ {
+  "file": "pages/ntrs-19960027893_TM-104317_p19_fig26_YF-12A-wing-FS-WS-grid.png",
+  "title": "Fig. 26, strain gauge bridges on YF-12A wing, with fuselage-station grid",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19960027893/downloads/19960027893.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19960027893",
+  "date": "1996-05",
+  "rights": "U.S. government work, public domain (NASA TM; NTRS: GOV_PUBLIC_USE_PERMITTED). Figures credited to earlier NASA reports (refs 10 to 18)",
+  "aircraft": "YF-12A",
+  "views": [
+   "plan"
+  ],
+  "dimensions_shown": [
+   "FS 818, 850, 882, 914, 954, 986, 1018, 1050, 1082, 1114, 1146, 1178, 1210 in",
+   "WS 35, 111, 215 in"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 4,
+   "why": "wing planform with spar/rib stations, good for calibrating the wing and chine junction"
+  },
+  "bytes": 52126
+ },
+ {
+  "file": "pages/ntrs-19980223961_TM-1998-206567_p5_fig5_SR-71-LASRE-three-view-ft.png",
+  "title": "Fig. 5, the LASRE pod mounted on the SR-71 (three-view, feet)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19980223961/downloads/19980223961-TM-1998-206567-Flight%20Testing%20the%20Linear%20Aerospike%20SR-71%20Experiment%20(LASRE).pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19980223961",
+  "date": "1998-09",
+  "rights": "U.S. government work, public domain (paper states 'declared a work of the U.S. Government and is not subject to copyright protection in the United States'; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "span 55.60 ft",
+   "overall length 107.40 ft",
+   "height 18.50 ft",
+   "canoe 41.21 ft long, 1.86 ft high, 2.75 ft wide",
+   "reflection plane 17.32 ft by 7.50 ft",
+   "model 7.53 ft, 2.50 ft wide"
+  ],
+  "scale_or_resolution": "600 dpi 1-bit render of a 596 ppi JBIG2 scan; not to scale",
+  "usefulness": {
+   "score": 4,
+   "why": "clean SR-71A three-view with structural panel lines on the wing, overall dimensions"
+  },
+  "bytes": 393309
+ },
+ {
+  "file": "raw/cia_C06230171_A-12-support-manual-ground-handling.pdf",
+  "title": "A-12 Support Manual, Ground Handling: Normal and Emergency Operations (CIA doc C06230171, approved for release 2017-07-25), 86 pp",
+  "source_url": "https://archive.org/download/cia-readingroom-document-06230171/06230171.pdf",
+  "archive_or_publisher": "CIA FOIA reading room, Internet Archive mirror (same manual is in the CC0 'CIAA-12Manuals' bundle as a poorer scan)",
+  "date": "c. 1964-1966",
+  "rights": "U.S. government record released by CIA under FOIA (no copyright notice); prepared by Lockheed for the government. Treat as public domain; a 1981 Lockheed letter to CIA (CIA-RDP90B00170R000200230042-2) states Blackbird data was furnished to the government with unlimited rights unless marked proprietary. Internet Archive mirror of the CIA reading room.",
+  "aircraft": "A-12",
+  "views": [
+   "plan",
+   "side",
+   "details"
+  ],
+  "dimensions_shown": [
+   "fuselage stations (F.S.) for every access panel, nose cone F.S. 164 to 173, Q-bay about F.S. 318 to 387, fuel tanks No.1 F.S. 350, No.2 F.S. 685, No.3 F.S. 767 to 799, No.4 F.S. 875 to 907, No.5 F.S. 1063, No.6 F.S. 1159, fuel dump mixer F.S. 1242 to 1263",
+   "nacelle stations N.S. 890 to 1082, spike stations 118 and 133 to 149, wing stations W.S. 210 to 297 (outboard elevon), B.L. 60 (servo package)"
+  ],
+  "scale_or_resolution": "1-bit scans at 300 dpi; orthographic top, bottom and side outlines, not to scale (proportions off by several percent)",
+  "usefulness": {
+   "score": 4,
+   "why": "the only public orthographic A-12 outlines found, with real station numbers to place bays, panels and nacelle features"
+  },
+  "bytes": 2861818
+ },
+ {
+  "file": "raw/dfrc_EG-0075-02_SR-71A_3view.eps",
+  "title": "NASA Dryden EG-0075-02 SR-71A 3-view (Illustrator EPS, vector), Feb 1998",
+  "source_url": "https://web.archive.org/web/20041117202822/https://www.dfrc.nasa.gov/Gallery/Graphics/SR-71/EPS/EG-0075-02.eps",
+  "archive_or_publisher": "NASA Dryden Flight Research Center graphics gallery, via Wayback Machine",
+  "date": "1998-02-02",
+  "rights": "U.S. government work (NASA Dryden graphic, Adobe Illustrator file created by NASA employee Tom Tschida, 1998), public domain. Same artwork was reposted by af.mil ('Graphic courtesy of NASA') and traced on Wikimedia Commons (File:Lockheed SR-71A 3view.svg, File:Lockheed YF-12A 3view.png, File:Lockheed SR-71B trainer model 3view.png, File:EG-0075-04.gif); those copies were not kept because they are lower-fidelity duplicates.",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "none labelled",
+   "measured plan length (pitot tip to tail cone) / plan span = 1.932, equal to 107.4/55.6",
+   "side-view length 0.5 percent shorter than plan length",
+   "front-view span 2.9 percent wider than plan span"
+  ],
+  "scale_or_resolution": "vector; rendered 4483x3683 px at 1200 dpi",
+  "usefulness": {
+   "score": 4,
+   "why": "cleanest public-domain vector SR-71A outline in all three views; plan view proportions consistent with the manual; scale front view separately"
+  },
+  "bytes": 184026
+ },
+ {
+  "file": "raw/dfrc_EG-0075-05_SR-71-LASRE_3view.eps",
+  "title": "NASA Dryden EG-0075-05 'SR-71/LASRE Configuration' 3-view (Illustrator EPS, vector), March 1998",
+  "source_url": "https://web.archive.org/web/20041117202742/https://www.dfrc.nasa.gov/Gallery/Graphics/SR-71/EPS/EG-0075-05.eps",
+  "archive_or_publisher": "NASA Dryden Flight Research Center graphics gallery, via Wayback Machine",
+  "date": "1998-03-06",
+  "rights": "U.S. government work (NASA Dryden graphic, Adobe Illustrator file created by NASA employee Tom Tschida, 1998), public domain. Same artwork was reposted by af.mil ('Graphic courtesy of NASA') and traced on Wikimedia Commons (File:Lockheed SR-71A 3view.svg, File:Lockheed YF-12A 3view.png, File:Lockheed SR-71B trainer model 3view.png, File:EG-0075-04.gif); those copies were not kept because they are lower-fidelity duplicates.",
+  "aircraft": "SR-71A (NASA 844 with LASRE pod)",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "all dimensions in feet",
+   "span 55.60 (plan and front views)",
+   "length 107.40 (side view; extension line drawn at radome tip, but drawing proportions match 107.4 ft from pitot tip to tail cone at the plan-view span scale)",
+   "height 18.50 (ground to fin top)",
+   "LASRE canoe length 41.21",
+   "canoe depth 1.86",
+   "model top above fuselage 7.53",
+   "reflector plane 17.32 x 7.50",
+   "pod/strut widths 2.50 and 2.75 (front view)"
+  ],
+  "scale_or_resolution": "vector; rendered 8517x5167 px at 1200 dpi. Not an engineering drawing: measured scale differs between views (front-view span 3.5 percent wider than plan-view span; height dimension implies a third scale)",
+  "usefulness": {
+   "score": 4,
+   "why": "only NASA-origin SR-71 3-view with labelled overall dimensions, vector, public domain; illustration accuracy only (about 3 to 5 percent view-to-view)"
+  },
+  "bytes": 163430
+ },
+ {
+  "file": "raw/fm-1SR71A-1_IA-jp2-pages/fm-1SR71A-1_fig2-3_minimum-turning-radius-plan-view.jp2",
+  "title": "SR-71A-1 Figure 2-3 Minimum Turning Radius (page 2-30) (original JP2 page)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__02_jp2.zip/0003756-lockheed_sr71__02_jp2%2F0003756-lockheed_sr71__02_0027.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan"
+  ],
+  "dimensions_shown": [
+   "center of turn to nose (probe tip) 81.7 ft",
+   "center of turn to nose gear 54.5 ft",
+   "center of turn to outer wingtip 69.5 ft",
+   "center of turn to inner main gear 28.3 ft",
+   "center of turn to outer main gear 47.4 ft",
+   "nose gear steering 45 deg max",
+   "minimum runway width for 180 deg turn 101.9 ft"
+  ],
+  "scale_or_resolution": "original IA JP2, 4167 x 5834 px",
+  "usefulness": {
+   "score": 4,
+   "why": "the only dimensioned orthographic plan silhouette in the manual; stylized, but the radii give independent checks of gear positions and span"
+  },
+  "bytes": 633841
+ },
+ {
+  "file": "raw/fm-1SR71A-1_IA-jp2-pages/fm-1SR71A-1_fig4-24_forward-fuselage-plan-and-side.jp2",
+  "title": "SR-71A-1 Figure 4-24 Sensor Component and DEF Equipment Locations (page 4-80) (original JP2 page)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__03_jp2.zip/0003756-lockheed_sr71__03_jp2%2F0003756-lockheed_sr71__03_0054.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan",
+   "side",
+   "details"
+  ],
+  "dimensions_shown": [
+   "no dimensions; plan of the forward fuselage and chines from the nose to the aft mission bays, side view of the nose, cockpits and nose radar bay"
+  ],
+  "scale_or_resolution": "original IA JP2, 4167 x 5834 px",
+  "usefulness": {
+   "score": 4,
+   "why": "near-orthographic plan and side of the forward fuselage and chine bays; best manual source for chine planform and cockpit station layout, needs scaling from the 107.4 ft length"
+  },
+  "bytes": 797810
+ },
+ {
+  "file": "raw/fm-1SR71A-1_IA-jp2-pages/fm-1SR71A-1_p1-31_air-inlet-system-spike-travel-text.jp2",
+  "title": "SR-71A-1 page 1-31: Air Inlet System and Inlet Spikes (text) (original JP2 page)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_jp2.zip/0003756-lockheed_sr71__01_jp2%2F0003756-lockheed_sr71__01_0047.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "J58 inlet",
+  "views": [
+   "inlet"
+  ],
+  "dimensions_shown": [
+   "spike retracts about 1-5/8 in per 0.1 Mach above Mach 1.6",
+   "total spike motion about 26 in",
+   "captured stream tube area 8.7 sq ft to 18.5 sq ft (+112%)",
+   "throat closes to 4.16 sq ft, 54% of throat area at Mach 1.6",
+   "inlets canted inboard and downward (no angle given)"
+  ],
+  "scale_or_resolution": "original IA JP2, 4167 x 5834 px",
+  "usefulness": {
+   "score": 4,
+   "why": "the primary source for spike travel and inlet capture and throat areas; text only"
+  },
+  "bytes": 1363777
+ },
+ {
+  "file": "raw/fm-1SR71A-1_IssueE-Ch2_IA-part01.pdf",
+  "title": "SR-71A-1 Flight Manual, Issue E Change 2, Internet Archive scan part 1 of 3 (front matter, Section I, Section IA), 248 leaves",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01.pdf",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan",
+   "details",
+   "inlet"
+  ],
+  "dimensions_shown": [
+   "see page entries: length 107.4 ft, span 55.6 ft, height 18.5 ft, wing area 1605 sq ft, tread 16.67 ft, spike travel about 26 in"
+  ],
+  "scale_or_resolution": "PDF pages are 1000 x 1400 px (72 ppi index colour), far below the JP2 masters; use the JP2 pages for drawings. Parts 2 and 3 (Sections II to VII) not mirrored to save space: same item, files _02.pdf and _03.pdf",
+  "usefulness": {
+   "score": 4,
+   "why": "complete Section I in one file for text search and citation; drawings are low resolution in this PDF"
+  },
+  "bytes": 37430745
+ },
+ {
+  "file": "raw/ntrs-19730015310_TN-D-6987_YF-12A-spike-tip-flow.pdf",
+  "title": "Johnson and Montoya, Local flow measurements at the inlet spike tip of a Mach 3 supersonic cruise airplane, NASA TN D-6987 (H-722) (complete report)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19730015310/downloads/19730015310.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19730015310",
+  "date": "1973-05",
+  "rights": "U.S. government work, public domain (NASA TN by Flight Research Center staff; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12A",
+  "views": [
+   "plan",
+   "side",
+   "front",
+   "inlet"
+  ],
+  "dimensions_shown": [
+   "see pages/ntrs-19730015310_* entries",
+   "spike cant 5.63 deg down from wing reference plane and toe-in 3.25 deg (text p.3)",
+   "spike cone included angle 26 deg (text p.4)"
+  ],
+  "scale_or_resolution": "PDF, scanned pages at 300 ppi (LASRE TM 596 ppi; CR-144972 foldouts 200 ppi); complete as published",
+  "usefulness": {
+   "score": 4,
+   "why": "dimensioned YF-12A three-view plus the only published spike cant and toe-in angles"
+  },
+  "bytes": 2966984
+ },
+ {
+  "file": "raw/ntrs-19750003899_TM-X-3144_YF-12-inlet-shock-sensor_pages-1-6-17-19.pdf",
+  "title": "Dustin, Cole and Neiner, Continuous-output terminal-shock-position sensor for mixed-compression inlets evaluated in wind-tunnel tests of YF-12 aircraft inlet, NASA TM X-3144 (E-7808), page subset",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19750003899/downloads/19750003899.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19750003899",
+  "date": "1974-12",
+  "rights": "U.S. government work, public domain (NASA Lewis TM; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "J58 inlet (YF-12)",
+  "views": [
+   "inlet",
+   "sections"
+  ],
+  "dimensions_shown": [
+   "cowl-lip radius rcl 74.62 cm (29.38 in)",
+   "throat at x/rcl 1.462 in fig. 8"
+  ],
+  "scale_or_resolution": "PDF, scanned pages at 300 ppi (LASRE TM 596 ppi; CR-144972 foldouts 200 ppi); subset of original pages listed in file name",
+  "usefulness": {
+   "score": 4,
+   "why": "gives the absolute cowl-lip radius needed to scale every normalized inlet drawing"
+  },
+  "bytes": 4991791
+ },
+ {
+  "file": "raw/ntrs-19780024113_CP-2054_YF-12-overview-specs-table.pdf",
+  "title": "Kock, Overview of the NASA YF-12 program, in YF-12 Experiments Symposium vol. 1, NASA CP-2054 (complete report)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19780024113/downloads/19780024113.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19780024113",
+  "date": "1978-08",
+  "rights": "U.S. government work, public domain (NASA author, NASA CP; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12A",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "YF-12 specification table: wing, elevons, fins, ventral fins, fuselage diameter 1.626 m, fuselage length 30.986 m"
+  ],
+  "scale_or_resolution": "PDF, scanned pages at 300 ppi (LASRE TM 596 ppi; CR-144972 foldouts 200 ppi); complete as published",
+  "usefulness": {
+   "score": 4,
+   "why": "the only full geometry specification table found (fins, ventrals, theoretical wing)"
+  },
+  "bytes": 1077074
+ },
+ {
+  "file": "raw/ntrs-19810012550_CR-163106_YF-12-inlet-static_pages-1-3-21-31-45.pdf",
+  "title": "Bangert, Feltz, Godby and Miller (Lockheed-California Company), Aerodynamic and acoustic behavior of a YF-12 inlet at static conditions, NASA CR-163106 (LR 29623), page subset",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19810012550/downloads/19810012550.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19810012550",
+  "date": "1981-01",
+  "rights": "NASA contractor report written by Lockheed-California Company for NASA Dryden; no copyright notice in the document; NTRS: GOV_PUBLIC_USE_PERMITTED. Contractor work, so treat as cite and link (tier C) until rights are confirmed",
+  "aircraft": "J58 inlet (YF-12)",
+  "views": [
+   "inlet",
+   "sections"
+  ],
+  "dimensions_shown": [
+   "spike translation x/rc 0.862 fwd, 0.431 mid, 0.0 aft",
+   "throat/capture area 0.41, 0.33, 0.23",
+   "engine face about x/rc 5.4 from cowl lip"
+  ],
+  "scale_or_resolution": "PDF, scanned pages at 300 ppi (LASRE TM 596 ppi; CR-144972 foldouts 200 ppi); subset of original pages listed in file name",
+  "usefulness": {
+   "score": 4,
+   "why": "to-scale normalized inlet half-sections at spike forward and aft, with area distribution"
+  },
+  "bytes": 940131
+ },
+ {
+  "file": "raw/ntrs-19960027893_TM-104317_YF-12A-thermal-loads-structures.pdf",
+  "title": "Jenkins and Quinn, A historical perspective of the YF-12A thermal loads and structures program, NASA TM-104317 (H-2079) (complete report)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19960027893/downloads/19960027893.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19960027893",
+  "date": "1996-05",
+  "rights": "U.S. government work, public domain (NASA TM; NTRS: GOV_PUBLIC_USE_PERMITTED). Figures credited to earlier NASA reports (refs 10 to 18)",
+  "aircraft": "YF-12A",
+  "views": [
+   "plan",
+   "sections",
+   "details"
+  ],
+  "dimensions_shown": [
+   "FS 1130 section with WS 72, 100, 127, 213, 241, 267",
+   "wing FS 818 to 1210 grid"
+  ],
+  "scale_or_resolution": "PDF, scanned pages at 300 ppi (LASRE TM 596 ppi; CR-144972 foldouts 200 ppi); complete as published",
+  "usefulness": {
+   "score": 4,
+   "why": "structural section at FS 1130 through fuselage, wing and nacelle"
+  },
+  "bytes": 1593509
+ },
+ {
+  "file": "raw/ntrs-19980223961_TM-1998-206567_LASRE-flight-testing.pdf",
+  "title": "Corda, Neal, Moes, Cox et al., Flight testing the Linear Aerospike SR-71 Experiment (LASRE), NASA/TM-1998-206567 (H-2280) (complete report)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19980223961/downloads/19980223961-TM-1998-206567-Flight%20Testing%20the%20Linear%20Aerospike%20SR-71%20Experiment%20(LASRE).pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19980223961",
+  "date": "1998-09",
+  "rights": "U.S. government work, public domain (paper states 'declared a work of the U.S. Government and is not subject to copyright protection in the United States'; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "span 55.60 ft",
+   "length 107.40 ft",
+   "height 18.50 ft"
+  ],
+  "scale_or_resolution": "PDF, scanned pages at 300 ppi (LASRE TM 596 ppi; CR-144972 foldouts 200 ppi); complete as published",
+  "usefulness": {
+   "score": 4,
+   "why": "crisp 600 ppi SR-71A three-view with overall dimensions"
+  },
+  "bytes": 4775769
+ },
+ {
+  "file": "raw/ntrs-20000064011_TP-2000-209023_SR-71-test-bed.pdf",
+  "title": "Corda, Moes, Mizukami, Hass et al., The SR-71 test bed aircraft: a facility for high-speed flight research, NASA/TP-2000-209023 (H-2405) (complete report)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/20000064011/downloads/20000064011.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/20000064011",
+  "date": "2000-06",
+  "rights": "U.S. government work, public domain (NASA TP; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "length 107.40 ft",
+   "span 55.60 ft",
+   "height 18.50 ft",
+   "wing reference chord (MAC) 37.70 ft"
+  ],
+  "scale_or_resolution": "PDF, scanned pages at 300 ppi (LASRE TM 596 ppi; CR-144972 foldouts 200 ppi); complete as published",
+  "usefulness": {
+   "score": 4,
+   "why": "SR-71A specification table and dimensioned three-view"
+  },
+  "bytes": 2400500
+ },
+ {
+  "file": "pages/cia-A-12-flight-manual_p1-19_air-inlet-system-spike-travel-text.png",
+  "title": "A-12 FM p.1-19 Air Inlet System text",
+  "source_url": "https://archive.org/download/cia-readingroom-document-0001316457/0001316457.pdf",
+  "archive_or_publisher": "CIA FOIA reading room, Internet Archive mirror",
+  "date": "1968-03-15",
+  "rights": "U.S. government record released by CIA under FOIA (no copyright notice); prepared by Lockheed for the government. Treat as public domain; a 1981 Lockheed letter to CIA (CIA-RDP90B00170R000200230042-2) states Blackbird data was furnished to the government with unlimited rights unless marked proprietary. Internet Archive mirror of the CIA reading room.",
+  "aircraft": "A-12",
+  "views": [
+   "inlet"
+  ],
+  "dimensions_shown": [
+   "spike moves aft approximately 26 inches during transition between Mach 1.6 and 3.2",
+   "inlets canted inboard and down"
+  ],
+  "scale_or_resolution": "300 dpi grayscale render of 1-bit scan",
+  "usefulness": {
+   "score": 3,
+   "why": "spike travel source for A-12"
+  },
+  "bytes": 268856
+ },
+ {
+  "file": "pages/cia-A-12-flight-manual_p1-1_aircraft-dimensions.png",
+  "title": "A-12 FM p.1-1 Aircraft Dimensions",
+  "source_url": "https://archive.org/download/cia-readingroom-document-0001316457/0001316457.pdf",
+  "archive_or_publisher": "CIA FOIA reading room, Internet Archive mirror",
+  "date": "1968-03-15",
+  "rights": "U.S. government record released by CIA under FOIA (no copyright notice); prepared by Lockheed for the government. Treat as public domain; a 1981 Lockheed letter to CIA (CIA-RDP90B00170R000200230042-2) states Blackbird data was furnished to the government with unlimited rights unless marked proprietary. Internet Archive mirror of the CIA reading room.",
+  "aircraft": "A-12",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "span 55.62 ft",
+   "length 101.6 ft",
+   "height 18.45 ft",
+   "tread 16.67 ft",
+   "ramp gross weight 122,900 to 124,600 lb"
+  ],
+  "scale_or_resolution": "300 dpi grayscale render of 1-bit scan",
+  "usefulness": {
+   "score": 3,
+   "why": "primary A-12 overall dimensions"
+  },
+  "bytes": 178647
+ },
+ {
+  "file": "pages/cia-A-12-ground-handling_fig1-1-sh3_bottom-view-nacelle-wing-stations.png",
+  "title": "A-12 Ground Handling Figure 1-1 sheet 3: bottom view, nacelle and wing panels",
+  "source_url": "https://archive.org/download/cia-readingroom-document-06230171/06230171.pdf",
+  "archive_or_publisher": "CIA FOIA reading room, Internet Archive mirror",
+  "date": "c. 1964-1966",
+  "rights": "U.S. government record released by CIA under FOIA (no copyright notice); prepared by Lockheed for the government. Treat as public domain; a 1981 Lockheed letter to CIA (CIA-RDP90B00170R000200230042-2) states Blackbird data was furnished to the government with unlimited rights unless marked proprietary. Internet Archive mirror of the CIA reading room.",
+  "aircraft": "A-12",
+  "views": [
+   "plan",
+   "details"
+  ],
+  "dimensions_shown": [
+   "B.S. 1146 to 1162 with W.S. 214 to 241",
+   "B.S. 1122 and B.S. 1089 at W.S. 218",
+   "N.S. 1096 W.S. 186",
+   "N.S. 1082 to 1090 W.S. 164",
+   "N.S. 1040 W.S. 172",
+   "B.S. 914 to 950 with W.S. 131 to 151",
+   "N.S. 873 to 914",
+   "spike STA 118 and 133 to 148",
+   "B.S. and N.S. ranges overlap the fuselage station numbers, so they appear to share the fuselage station origin; W.S. appears to be spanwise"
+  ],
+  "scale_or_resolution": "300 dpi grayscale render of 1-bit scan, about 2540x3300 px",
+  "usefulness": {
+   "score": 3,
+   "why": "nacelle and wing station references"
+  },
+  "bytes": 340732
+ },
+ {
+  "file": "pages/cia-A-12-ground-handling_fig1-1-sh4_side-views-left-right.png",
+  "title": "A-12 Ground Handling Figure 1-1 sheet 4: left and right side views",
+  "source_url": "https://archive.org/download/cia-readingroom-document-06230171/06230171.pdf",
+  "archive_or_publisher": "CIA FOIA reading room, Internet Archive mirror",
+  "date": "c. 1964-1966",
+  "rights": "U.S. government record released by CIA under FOIA (no copyright notice); prepared by Lockheed for the government. Treat as public domain; a 1981 Lockheed letter to CIA (CIA-RDP90B00170R000200230042-2) states Blackbird data was furnished to the government with unlimited rights unless marked proprietary. Internet Archive mirror of the CIA reading room.",
+  "aircraft": "A-12",
+  "views": [
+   "side",
+   "details"
+  ],
+  "dimensions_shown": [
+   "spike STA 133 to 149, N.S. 954 to 1090, fin STA 56 to 62, rudder hinge stations",
+   "STA 1180 bottom"
+  ],
+  "scale_or_resolution": "300 dpi grayscale render of 1-bit scan, about 2540x3300 px",
+  "usefulness": {
+   "score": 3,
+   "why": "A-12 side outline with fin and nacelle stations"
+  },
+  "bytes": 565882
+ },
+ {
+  "file": "pages/dfrc_EG-0106-01_YF-12A_3view.png",
+  "title": "Render of EG-0106-01 YF-12A 3-view at 1200 dpi",
+  "source_url": "https://web.archive.org/web/20041117202605/https://www.dfrc.nasa.gov/Gallery/Graphics/YF-12A/EPS/EG-0106-01.eps",
+  "archive_or_publisher": "NASA Dryden (rendered with Ghostscript)",
+  "date": "1998-02-04",
+  "rights": "U.S. government work (NASA Dryden graphic, Adobe Illustrator file created by NASA employee Tom Tschida, 1998), public domain. Same artwork was reposted by af.mil ('Graphic courtesy of NASA') and traced on Wikimedia Commons (File:Lockheed SR-71A 3view.svg, File:Lockheed YF-12A 3view.png, File:Lockheed SR-71B trainer model 3view.png, File:EG-0075-04.gif); those copies were not kept because they are lower-fidelity duplicates.",
+  "aircraft": "YF-12A",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "none"
+  ],
+  "scale_or_resolution": "4517x3383 px",
+  "usefulness": {
+   "score": 3,
+   "why": "see EPS entry"
+  },
+  "bytes": 325058
+ },
+ {
+  "file": "pages/dfrc_EG-0106-01_YF-12A_3view.svg",
+  "title": "SVG conversion of EG-0106-01",
+  "source_url": "https://web.archive.org/web/20041117202605/https://www.dfrc.nasa.gov/Gallery/Graphics/YF-12A/EPS/EG-0106-01.eps",
+  "archive_or_publisher": "NASA Dryden",
+  "date": "1998-02-04",
+  "rights": "U.S. government work (NASA Dryden graphic, Adobe Illustrator file created by NASA employee Tom Tschida, 1998), public domain. Same artwork was reposted by af.mil ('Graphic courtesy of NASA') and traced on Wikimedia Commons (File:Lockheed SR-71A 3view.svg, File:Lockheed YF-12A 3view.png, File:Lockheed SR-71B trainer model 3view.png, File:EG-0075-04.gif); those copies were not kept because they are lower-fidelity duplicates.",
+  "aircraft": "YF-12A",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "none"
+  ],
+  "scale_or_resolution": "vector",
+  "usefulness": {
+   "score": 3,
+   "why": "vector outline, length suspect"
+  },
+  "bytes": 136141
+ },
+ {
+  "file": "pages/fm-1SR71A-1_fig1-20_air-inlet-system-spike-forward.png",
+  "title": "SR-71A-1 Figure 1-20 Air Inlet System, Spike Forward (page 1-32)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_jp2.zip/0003756-lockheed_sr71__01_jp2%2F0003756-lockheed_sr71__01_0048.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "J58 inlet",
+  "views": [
+   "inlet",
+   "sections"
+  ],
+  "dimensions_shown": [
+   "no dimensions; longitudinal section of the inlet with spike forward, shock trap bleed, forward bypass, centerbody struts (4), aft bypass, spike actuator"
+  ],
+  "scale_or_resolution": "IA JP2 master 4167 x 5834 px (about 500 dpi); saved PNG is the full JP2 converted to 8-bit grey",
+  "usefulness": {
+   "score": 3,
+   "why": "best public USAF longitudinal section of spike, cowl lip and centerbody shape; schematic, not dimensioned, page printed rotated"
+  },
+  "bytes": 1938055
+ },
+ {
+  "file": "pages/fm-1SR71A-1_fig1-21_inlet-airflow-patterns-nacelle-sections.png",
+  "title": "SR-71A-1 Figure 1-21 Airflow Patterns (page 1-33)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_jp2.zip/0003756-lockheed_sr71__01_jp2%2F0003756-lockheed_sr71__01_0049.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "J58 inlet",
+  "views": [
+   "inlet",
+   "sections"
+  ],
+  "dimensions_shown": [
+   "no dimensions; five longitudinal nacelle sections at Mach 0, 0.5, 1.5, 2.5, 3.2 showing spike forward and retracted, bypass doors, suck-in doors, tertiary doors, ejector flaps"
+  ],
+  "scale_or_resolution": "IA JP2 master 4167 x 5834 px (about 500 dpi); saved PNG is the full JP2 converted to 8-bit grey",
+  "usefulness": {
+   "score": 3,
+   "why": "shows the whole nacelle from spike tip to ejector in section and the spike forward and retracted positions; schematic, not to scale"
+  },
+  "bytes": 3197181
+ },
+ {
+  "file": "pages/fm-1SR71A-1_fig1-22-sh2_air-inlet-spike-schedule.png",
+  "title": "SR-71A-1 Figure 1-22 sheet 2 Air Inlet Spike Schedule (page 1-35)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_jp2.zip/0003756-lockheed_sr71__01_jp2%2F0003756-lockheed_sr71__01_0051.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "J58 inlet",
+  "views": [
+   "inlet"
+  ],
+  "dimensions_shown": [
+   "spike position 0 to about 26 in aft versus Mach 1.6 to about 3.2 (nominal, 5 deg alpha), plus inlet unstart spike position band"
+  ],
+  "scale_or_resolution": "IA JP2 master 4167 x 5834 px (about 500 dpi); saved PNG is the full JP2 converted to 8-bit grey",
+  "usefulness": {
+   "score": 3,
+   "why": "spike travel against Mach, needed to animate the spike correctly"
+  },
+  "bytes": 4181600
+ },
+ {
+  "file": "pages/fm-1SR71A-1_fig4-37_DEF-equipment-location-plan-view.png",
+  "title": "SR-71A-1 Figure 4-37 DEF Equipment Location (page 4-125)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__03_jp2.zip/0003756-lockheed_sr71__03_jp2%2F0003756-lockheed_sr71__03_0099.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan",
+   "details"
+  ],
+  "dimensions_shown": [
+   "no dimensions; whole-aircraft plan view with DEF antenna positions; small cockpit perspective"
+  ],
+  "scale_or_resolution": "IA JP2 master 4167 x 5834 px (about 500 dpi); saved PNG is the full JP2 converted to 8-bit grey",
+  "usefulness": {
+   "score": 3,
+   "why": "second whole-aircraft plan silhouette, useful for antenna and hatch placement"
+  },
+  "bytes": 1429073
+ },
+ {
+  "file": "pages/ntrs-19730015310_TN-D-6987_p24_fig9_spike-cant-toe-in-notation.png",
+  "title": "Fig. 9, angle notation and sign convention: spike cant and toe-in relative to airplane axes",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19730015310/downloads/19730015310.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19730015310",
+  "date": "1973-05",
+  "rights": "U.S. government work, public domain (NASA TN by Flight Research Center staff; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12A",
+  "views": [
+   "inlet",
+   "details"
+  ],
+  "dimensions_shown": [
+   "theta wrp = alpha + 5.6 deg (spike cant)",
+   "beta offset 3.25 deg (toe-in)"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 3,
+   "why": "shows how the inlet axis is canted down and in"
+  },
+  "bytes": 46810
+ },
+ {
+  "file": "pages/ntrs-19730021212_TM-X-2880_p44_fig5b_YF-12-rudder-stations.png",
+  "title": "Fig. 5(b), rudder (vertical tail) test points with fin and nacelle stations",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19730021212/downloads/19730021212.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19730021212",
+  "date": "1973-08",
+  "rights": "U.S. government work, public domain (NASA TM; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12A",
+  "views": [
+   "side",
+   "details"
+  ],
+  "dimensions_shown": [
+   "fin stations 141.0 cm (55.5 in), 184.8 (72.75), 213.1 (83.9), 275.6 (108.5), 330.2 cm (130 in)",
+   "nacelle stations 2734.5 (1076.56), 2824.7 (1112.09), rudder post 2900.7 (1142.01), actuator 2976.9 (1172.01), 3034.8 (1194.8), 3107.7 (1223.5), 3185.6 cm (1254.19 in)"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions (rotated upright)",
+  "usefulness": {
+   "score": 3,
+   "why": "fin planform calibration points"
+  },
+  "bytes": 44128
+ },
+ {
+  "file": "pages/ntrs-19730021212_TM-X-2880_p45_fig5c_YF-12-ventral-fin-stations.png",
+  "title": "Fig. 5(c), fuselage ventral fin test points with fuselage stations and waterlines",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19730021212/downloads/19730021212.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19730021212",
+  "date": "1973-08",
+  "rights": "U.S. government work, public domain (NASA TM; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12A",
+  "views": [
+   "side",
+   "details"
+  ],
+  "dimensions_shown": [
+   "root FS 1127.59 in (printed 2364.1 cm, probably a misprint for 2864.1), 1184.48, 1230.95, 1270.76 in",
+   "tip FS 1155, 1197.4, 1230.6, 1258 in",
+   "waterlines 22, 34, 44, 54, 64 in"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions (rotated upright)",
+  "usefulness": {
+   "score": 3,
+   "why": "YF-12A ventral fin outline points"
+  },
+  "bytes": 41496
+ },
+ {
+  "file": "pages/ntrs-19750003899_TM-X-3144_p17_fig9_YF-12-inlet-wind-tunnel-installation.png",
+  "title": "Fig. 9, schematic of full-scale YF-12 flight inlet installed in Lewis 10- by 10-ft tunnel; Fig. 10 airflow disturbance generator",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19750003899/downloads/19750003899.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19750003899",
+  "date": "1974-12",
+  "rights": "U.S. government work, public domain (NASA Lewis TM; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "J58 inlet (YF-12)",
+  "views": [
+   "inlet",
+   "side"
+  ],
+  "dimensions_shown": [
+   "view A-A: inlet plane of symmetry 30 deg from tunnel vertical"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 3,
+   "why": "side profile of spike and forward nacelle"
+  },
+  "bytes": 123462
+ },
+ {
+  "file": "pages/ntrs-19760016165_CR-144972_E-6_fig1_YF-12-ventral-fin-assembly.png",
+  "title": "Fig. 1, Lockalloy ventral fin assembly (Lockheed drawing, foldout)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19760016165/downloads/19760016165.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19760016165",
+  "date": "1976-01",
+  "rights": "NASA contractor report by Lockheed-California Co. ADP (Skunk Works); the geometry foldouts are Lockheed engineering drawings. No copyright notice in the document; NTRS: GOV_PUBLIC_USE_PERMITTED. Treat the drawings as Lockheed work, reference only, until rights are confirmed",
+  "aircraft": "YF-12A",
+  "views": [
+   "side",
+   "details"
+  ],
+  "dimensions_shown": [
+   "partly legible F.S., V.S. and angle callouts"
+  ],
+  "scale_or_resolution": "200 dpi 1-bit render of a 200 ppi CCITT scan of a foldout; poor quality ('original page is of poor quality')",
+  "usefulness": {
+   "score": 3,
+   "why": "real Lockheed geometry of the YF-12A ventral fin; hard to read"
+  },
+  "bytes": 41045
+ },
+ {
+  "file": "pages/ntrs-19760016165_CR-144972_E-7a_fig2_YF-12-ventral-fin-geometry-left.png",
+  "title": "Fig. 2, basic ventral fin geometry, left half (Lockheed drawing, foldout)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19760016165/downloads/19760016165.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19760016165",
+  "date": "1976-01",
+  "rights": "NASA contractor report by Lockheed-California Co. ADP (Skunk Works); the geometry foldouts are Lockheed engineering drawings. No copyright notice in the document; NTRS: GOV_PUBLIC_USE_PERMITTED. Treat the drawings as Lockheed work, reference only, until rights are confirmed",
+  "aircraft": "YF-12A",
+  "views": [
+   "side",
+   "details"
+  ],
+  "dimensions_shown": [
+   "partly legible F.S., V.S. and angle callouts"
+  ],
+  "scale_or_resolution": "200 dpi 1-bit render of a 200 ppi CCITT scan of a foldout; poor quality ('original page is of poor quality')",
+  "usefulness": {
+   "score": 3,
+   "why": "real Lockheed geometry of the YF-12A ventral fin; hard to read"
+  },
+  "bytes": 42755
+ },
+ {
+  "file": "pages/ntrs-19760016165_CR-144972_E-7b_fig2_YF-12-ventral-fin-geometry-right.png",
+  "title": "Fig. 2, basic ventral fin geometry, right half (Lockheed drawing, foldout)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19760016165/downloads/19760016165.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19760016165",
+  "date": "1976-01",
+  "rights": "NASA contractor report by Lockheed-California Co. ADP (Skunk Works); the geometry foldouts are Lockheed engineering drawings. No copyright notice in the document; NTRS: GOV_PUBLIC_USE_PERMITTED. Treat the drawings as Lockheed work, reference only, until rights are confirmed",
+  "aircraft": "YF-12A",
+  "views": [
+   "side",
+   "details"
+  ],
+  "dimensions_shown": [
+   "partly legible: F.S. 1200.000, F.S. 1230.000, F.S. 1258.000, F.S. 1197.598, F.S. 1184.437, F.S. 1270.769, F.S. 1275.0; V.S. 14.0006, 26.100; angles 14.0217 deg, 3.817991 deg, 2.54549 deg"
+  ],
+  "scale_or_resolution": "200 dpi 1-bit render of a 200 ppi CCITT scan of a foldout; poor quality ('original page is of poor quality')",
+  "usefulness": {
+   "score": 3,
+   "why": "real Lockheed geometry of the YF-12A ventral fin; hard to read"
+  },
+  "bytes": 53573
+ },
+ {
+  "file": "pages/ntrs-19760016165_CR-144972_E-8a_fig3_YF-12-ventral-fin-geometry-left.png",
+  "title": "Fig. 3, ventral fin geometry, left half (Lockheed drawing, foldout)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19760016165/downloads/19760016165.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19760016165",
+  "date": "1976-01",
+  "rights": "NASA contractor report by Lockheed-California Co. ADP (Skunk Works); the geometry foldouts are Lockheed engineering drawings. No copyright notice in the document; NTRS: GOV_PUBLIC_USE_PERMITTED. Treat the drawings as Lockheed work, reference only, until rights are confirmed",
+  "aircraft": "YF-12A",
+  "views": [
+   "side",
+   "details"
+  ],
+  "dimensions_shown": [
+   "partly legible F.S., V.S. and angle callouts"
+  ],
+  "scale_or_resolution": "200 dpi 1-bit render of a 200 ppi CCITT scan of a foldout; poor quality ('original page is of poor quality')",
+  "usefulness": {
+   "score": 3,
+   "why": "real Lockheed geometry of the YF-12A ventral fin; hard to read"
+  },
+  "bytes": 24761
+ },
+ {
+  "file": "pages/ntrs-19760016165_CR-144972_E-8b_fig3_YF-12-ventral-fin-geometry-right.png",
+  "title": "Fig. 3, ventral fin geometry, right half (Lockheed drawing, foldout)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19760016165/downloads/19760016165.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19760016165",
+  "date": "1976-01",
+  "rights": "NASA contractor report by Lockheed-California Co. ADP (Skunk Works); the geometry foldouts are Lockheed engineering drawings. No copyright notice in the document; NTRS: GOV_PUBLIC_USE_PERMITTED. Treat the drawings as Lockheed work, reference only, until rights are confirmed",
+  "aircraft": "YF-12A",
+  "views": [
+   "side",
+   "details"
+  ],
+  "dimensions_shown": [
+   "partly legible F.S., V.S. and angle callouts"
+  ],
+  "scale_or_resolution": "200 dpi 1-bit render of a 200 ppi CCITT scan of a foldout; poor quality ('original page is of poor quality')",
+  "usefulness": {
+   "score": 3,
+   "why": "real Lockheed geometry of the YF-12A ventral fin; hard to read"
+  },
+  "bytes": 39421
+ },
+ {
+  "file": "pages/ntrs-19780004157_TP-1107_p24_fig2_YF-12A-three-view.png",
+  "title": "Fig. 2, three-view drawing of test airplane (YF-12A), with centerbody spike and forward bypass exit louvres",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19780004157/downloads/19780004157.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19780004157",
+  "date": "1977-12",
+  "rights": "U.S. government work, public domain (NASA TP; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12A",
+  "views": [
+   "plan",
+   "side",
+   "front",
+   "inlet"
+  ],
+  "dimensions_shown": [
+   "none"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 3,
+   "why": "clean undimensioned YF-12A three-view"
+  },
+  "bytes": 38771
+ },
+ {
+  "file": "pages/ntrs-19780024112_CP-2054_p24_fig2_YF-12-inlet-cutaway.png",
+  "title": "CP-2054 p.24, Fig. 2 cutaway view of the inlet and Fig. 3 J58 engine photo (Kock overview)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19780024112/downloads/19780024112.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19780024112",
+  "date": "1978-09",
+  "rights": "U.S. government work, public domain (NASA conference publication; NTRS: GOV_PERMITTED). Individual papers by NASA staff",
+  "aircraft": "YF-12A, YF-12C",
+  "views": [
+   "inlet",
+   "details"
+  ],
+  "dimensions_shown": [
+   "labels only: spike bleed exit louvres (4), forward bypass exit louvres (3), support struts (4), aft bypass doors (24), shock trap tubes (32), forward bypass doors (16)"
+  ],
+  "scale_or_resolution": "300 dpi greyscale render of a 300 ppi JPEG scan",
+  "usefulness": {
+   "score": 3,
+   "why": "inlet component layout with part counts"
+  },
+  "bytes": 3717094
+ },
+ {
+  "file": "pages/ntrs-19780024112_CP-2054_p86_fig4_YF-12A-three-views-ventral-fin.png",
+  "title": "CP-2054 p.86, Fig. 4, three views of YF-12A airplane showing proximity of ailerons (elevons) to ventral fin",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19780024112/downloads/19780024112.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19780024112",
+  "date": "1978-09",
+  "rights": "U.S. government work, public domain (NASA conference publication; NTRS: GOV_PERMITTED). Individual papers by NASA staff",
+  "aircraft": "YF-12A, YF-12C",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "none"
+  ],
+  "scale_or_resolution": "300 dpi greyscale render of a 300 ppi JPEG scan",
+  "usefulness": {
+   "score": 3,
+   "why": "YF-12A outline with elevon split and all three ventral fins"
+  },
+  "bytes": 946847
+ },
+ {
+  "file": "pages/ntrs-19810012550_CR-163106_p15_fig7_YF-12-inlet-area-distribution.png",
+  "title": "Fig. 7, YF-12 inlet area distribution, A/Ac versus x/Rc (spike forward)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19810012550/downloads/19810012550.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19810012550",
+  "date": "1981-01",
+  "rights": "NASA contractor report written by Lockheed-California Company for NASA Dryden; no copyright notice in the document; NTRS: GOV_PUBLIC_USE_PERMITTED. Contractor work, so treat as cite and link (tier C) until rights are confirmed",
+  "aircraft": "J58 inlet (YF-12)",
+  "views": [
+   "inlet"
+  ],
+  "dimensions_shown": [
+   "A/Ac 0.2 to 0.7 scale",
+   "cowl lip x/Rc 0",
+   "engine face x/Rc about 5.4",
+   "minimum area about 0.41 near the lip"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 3,
+   "why": "internal duct area distribution"
+  },
+  "bytes": 39600
+ },
+ {
+  "file": "pages/ntrs-20000064011_TP-2000-209023_p5_table1_SR-71A-specifications.png",
+  "title": "Table 1, SR-71A test bed configuration specifications",
+  "source_url": "https://ntrs.nasa.gov/api/citations/20000064011/downloads/20000064011.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/20000064011",
+  "date": "2000-06",
+  "rights": "U.S. government work, public domain (NASA TP; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "SR-71A",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "aircraft length 107.40 ft",
+   "wing span 55.60 ft",
+   "height 18.50 ft",
+   "wing reference chord (MAC) 37.70 ft",
+   "gross takeoff weight 143,000 lb",
+   "zero fuel weight 59,000 lb"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 3,
+   "why": "authoritative overall SR-71A dimensions in one table"
+  },
+  "bytes": 61290
+ },
+ {
+  "file": "pages/usaf_sr71a_3view_x4.png",
+  "title": "Render of Lockheed SR-71A 3view.svg at 4x (7416 x 5676 px)",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Lockheed_SR-71A_3view.svg",
+  "archive_or_publisher": "Wikimedia Commons (rendered locally; file found in pages/, not made by this survey)",
+  "date": "2007-12-30 (source upload)",
+  "rights": "Public domain per Wikimedia Commons (credited United States Air Force, af.mil art igphoto 2000791546); SVG redrawn in Inkscape by Commons user Falcorian, 2007. Same drawing as NASA Dryden EG-0075-02, so prefer the Dryden EPS as the master",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "none labelled"
+  ],
+  "scale_or_resolution": "7416 x 5676 px raster of the SVG (exactly 4x its canvas)",
+  "usefulness": {
+   "score": 3,
+   "why": "convenient tracing raster; same caveats as the SVG"
+  },
+  "bytes": 1225305
+ },
+ {
+  "file": "raw/cia_C01316457_A-12-flight-manual_1968.pdf",
+  "title": "A-12 Flight Manual with technical data change (CIA doc C01316457), 459 pp, changed to 15 March 1968",
+  "source_url": "https://archive.org/download/cia-readingroom-document-0001316457/0001316457.pdf",
+  "archive_or_publisher": "CIA FOIA reading room, Internet Archive mirror",
+  "date": "1968-03-15",
+  "rights": "U.S. government record released by CIA under FOIA (no copyright notice); prepared by Lockheed for the government. Treat as public domain; a 1981 Lockheed letter to CIA (CIA-RDP90B00170R000200230042-2) states Blackbird data was furnished to the government with unlimited rights unless marked proprietary. Internet Archive mirror of the CIA reading room.",
+  "aircraft": "A-12",
+  "views": [
+   "details",
+   "inlet"
+  ],
+  "dimensions_shown": [
+   "wing span 55.62 ft",
+   "length (overall) 101.6 ft",
+   "height (to top of vertical stabilizer) 18.45 ft",
+   "tread (MLG center wheels) 16.67 ft",
+   "spike moves aft approximately 26 inches between Mach 1.6 and 3.2",
+   "elevon travel: pitch 10 down 24 up; pitch plus roll 20 down 35 up; roll 12 down 12 up; rudders 20 left 20 right"
+  ],
+  "scale_or_resolution": "1-bit scans at 305 dpi; figures are perspective illustrations, no orthographic 3-view",
+  "usefulness": {
+   "score": 3,
+   "why": "authoritative A-12 dimensions and control travel; General Arrangement is a perspective view"
+  },
+  "bytes": 42277621
+ },
+ {
+  "file": "raw/commons_Lockheed_SR-71A_3view.svg",
+  "title": "Lockheed SR-71A 3view.svg (Wikimedia Commons vector redraw of the USAF/NASA Dryden SR-71A three-view)",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Lockheed_SR-71A_3view.svg",
+  "archive_or_publisher": "Wikimedia Commons",
+  "date": "2007-12-30 (upload)",
+  "rights": "Public domain per Wikimedia Commons (credited United States Air Force, af.mil art igphoto 2000791546); SVG redrawn in Inkscape by Commons user Falcorian, 2007. Same drawing as NASA Dryden EG-0075-02, so prefer the Dryden EPS as the master",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "none labelled"
+  ],
+  "scale_or_resolution": "vector, 1854 x 1419 px canvas",
+  "usefulness": {
+   "score": 3,
+   "why": "tidy vector with composite sawtooth edges drawn, but a second-generation copy of the Dryden drawing, so not an independent outline source"
+  },
+  "bytes": 172218
+ },
+ {
+  "file": "raw/dfrc_EG-0106-01_YF-12A_3view.eps",
+  "title": "NASA Dryden EG-0106-01 YF-12A 3-view (Illustrator EPS, vector), Feb 1998",
+  "source_url": "https://web.archive.org/web/20041117202605/https://www.dfrc.nasa.gov/Gallery/Graphics/YF-12A/EPS/EG-0106-01.eps",
+  "archive_or_publisher": "NASA Dryden Flight Research Center graphics gallery, via Wayback Machine",
+  "date": "1998-02-04",
+  "rights": "U.S. government work (NASA Dryden graphic, Adobe Illustrator file created by NASA employee Tom Tschida, 1998), public domain. Same artwork was reposted by af.mil ('Graphic courtesy of NASA') and traced on Wikimedia Commons (File:Lockheed SR-71A 3view.svg, File:Lockheed YF-12A 3view.png, File:Lockheed SR-71B trainer model 3view.png, File:EG-0075-04.gif); those copies were not kept because they are lower-fidelity duplicates.",
+  "aircraft": "YF-12A",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "none labelled",
+   "measured plan length / span = 1.929, the SR-71A ratio; the YF-12A-1 manual gives 101.7/55.7 = 1.826, so the drawn length is about 5 percent too long for a YF-12A (apparently derived from the SR-71A drawing)"
+  ],
+  "scale_or_resolution": "vector; rendered 4517x3383 px at 1200 dpi",
+  "usefulness": {
+   "score": 3,
+   "why": "right YF-12A features (cut-back chines, nose radome, ventral fins, folding ventral) but overall length suspect; rescale to manual dimensions"
+  },
+  "bytes": 179302
+ },
+ {
+  "file": "raw/fm-1SR71A-1_IA-jp2-pages/fm-1SR71A-1_fig1-20_air-inlet-system-spike-forward.jp2",
+  "title": "SR-71A-1 Figure 1-20 Air Inlet System, Spike Forward (page 1-32) (original JP2 page)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_jp2.zip/0003756-lockheed_sr71__01_jp2%2F0003756-lockheed_sr71__01_0048.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "J58 inlet",
+  "views": [
+   "inlet",
+   "sections"
+  ],
+  "dimensions_shown": [
+   "no dimensions; longitudinal section of the inlet with spike forward, shock trap bleed, forward bypass, centerbody struts (4), aft bypass, spike actuator"
+  ],
+  "scale_or_resolution": "original IA JP2, 4167 x 5834 px",
+  "usefulness": {
+   "score": 3,
+   "why": "best public USAF longitudinal section of spike, cowl lip and centerbody shape; schematic, not dimensioned, page printed rotated"
+  },
+  "bytes": 726683
+ },
+ {
+  "file": "raw/fm-1SR71A-1_IA-jp2-pages/fm-1SR71A-1_fig1-21_inlet-airflow-patterns-nacelle-sections.jp2",
+  "title": "SR-71A-1 Figure 1-21 Airflow Patterns (page 1-33) (original JP2 page)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_jp2.zip/0003756-lockheed_sr71__01_jp2%2F0003756-lockheed_sr71__01_0049.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "J58 inlet",
+  "views": [
+   "inlet",
+   "sections"
+  ],
+  "dimensions_shown": [
+   "no dimensions; five longitudinal nacelle sections at Mach 0, 0.5, 1.5, 2.5, 3.2 showing spike forward and retracted, bypass doors, suck-in doors, tertiary doors, ejector flaps"
+  ],
+  "scale_or_resolution": "original IA JP2, 4167 x 5834 px",
+  "usefulness": {
+   "score": 3,
+   "why": "shows the whole nacelle from spike tip to ejector in section and the spike forward and retracted positions; schematic, not to scale"
+  },
+  "bytes": 1238945
+ },
+ {
+  "file": "raw/fm-1SR71A-1_IA-jp2-pages/fm-1SR71A-1_fig1-22-sh2_air-inlet-spike-schedule.jp2",
+  "title": "SR-71A-1 Figure 1-22 sheet 2 Air Inlet Spike Schedule (page 1-35) (original JP2 page)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_jp2.zip/0003756-lockheed_sr71__01_jp2%2F0003756-lockheed_sr71__01_0051.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "J58 inlet",
+  "views": [
+   "inlet"
+  ],
+  "dimensions_shown": [
+   "spike position 0 to about 26 in aft versus Mach 1.6 to about 3.2 (nominal, 5 deg alpha), plus inlet unstart spike position band"
+  ],
+  "scale_or_resolution": "original IA JP2, 4167 x 5834 px",
+  "usefulness": {
+   "score": 3,
+   "why": "spike travel against Mach, needed to animate the spike correctly"
+  },
+  "bytes": 1707011
+ },
+ {
+  "file": "raw/fm-1SR71A-1_IA-jp2-pages/fm-1SR71A-1_fig4-37_DEF-equipment-location-plan-view.jp2",
+  "title": "SR-71A-1 Figure 4-37 DEF Equipment Location (page 4-125) (original JP2 page)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__03_jp2.zip/0003756-lockheed_sr71__03_jp2%2F0003756-lockheed_sr71__03_0099.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan",
+   "details"
+  ],
+  "dimensions_shown": [
+   "no dimensions; whole-aircraft plan view with DEF antenna positions; small cockpit perspective"
+  ],
+  "scale_or_resolution": "original IA JP2, 4167 x 5834 px",
+  "usefulness": {
+   "score": 3,
+   "why": "second whole-aircraft plan silhouette, useful for antenna and hatch placement"
+  },
+  "bytes": 485304
+ },
+ {
+  "file": "raw/nasa_EC97-44295-84_SR-71-LASRE_overhead-plan-photo.jpg",
+  "title": "NASA photo EC97-44295-84: SR-71A 844 with LASRE seen from directly above in flight",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Linear_Aerospike_SR-71_Experiment_(LASRE)_first_flight_view_from_above_(EC97-44295-84).jpg",
+  "archive_or_publisher": "NASA Armstrong (photo Brad Neal), via Wikimedia Commons",
+  "date": "1997",
+  "rights": "U.S. government work (NASA photo), public domain.",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan"
+  ],
+  "dimensions_shown": [
+   "none"
+  ],
+  "scale_or_resolution": "2100x2400 px; slight perspective",
+  "usefulness": {
+   "score": 3,
+   "why": "near-vertical photo to check the plan outline, chine curvature and nacelle position against the drawings"
+  },
+  "bytes": 6542215
+ },
+ {
+  "file": "raw/ntrs-19760016165_CR-144972_YF-12-ventral-fin-vol2_pages-1-3-116-125.pdf",
+  "title": "Duba, Haramis, Marks, Payne et al. (Lockheed-California Company, Advanced Development Projects), YF-12 Lockalloy ventral fin program, volume 2, NASA CR-144972, page subset",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19760016165/downloads/19760016165.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19760016165",
+  "date": "1976-01",
+  "rights": "NASA contractor report by Lockheed-California Co. ADP (Skunk Works); the geometry foldouts are Lockheed engineering drawings. No copyright notice in the document; NTRS: GOV_PUBLIC_USE_PERMITTED. Treat the drawings as Lockheed work, reference only, until rights are confirmed",
+  "aircraft": "YF-12A",
+  "views": [
+   "details",
+   "side"
+  ],
+  "dimensions_shown": [
+   "ventral fin F.S. 1197.598 to 1275.0 (partly legible)"
+  ],
+  "scale_or_resolution": "PDF, scanned pages at 300 ppi (LASRE TM 596 ppi; CR-144972 foldouts 200 ppi); subset of original pages listed in file name",
+  "usefulness": {
+   "score": 3,
+   "why": "actual Lockheed geometry drawings of the YF-12A folding ventral fin, poor scan"
+  },
+  "bytes": 734703
+ },
+ {
+  "file": "raw/ntrs-19780004157_TP-1107_YF-12-phugoid-three-view.pdf",
+  "title": "Powers, Phugoid characteristics of a YF-12 airplane with variable-geometry inlets obtained in flight tests at a Mach number of 2.9, NASA TP-1107 (H-953) (complete report)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19780004157/downloads/19780004157.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19780004157",
+  "date": "1977-12",
+  "rights": "U.S. government work, public domain (NASA TP; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12A",
+  "views": [
+   "plan",
+   "side",
+   "front",
+   "inlet"
+  ],
+  "dimensions_shown": [],
+  "scale_or_resolution": "PDF, scanned pages at 300 ppi (LASRE TM 596 ppi; CR-144972 foldouts 200 ppi); complete as published",
+  "usefulness": {
+   "score": 3,
+   "why": "cleanest undimensioned YF-12A three-view, good for tracing YF-12A outline features"
+  },
+  "bytes": 1488379
+ },
+ {
+  "file": "raw/ntrs-19780024112_CP-2054-vol1_pages-1-31-93-247.pdf",
+  "title": "YF-12 Experiments Symposium, Volume 1, NASA CP-2054 (H-1059), page subset",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19780024112/downloads/19780024112.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19780024112",
+  "date": "1978-09",
+  "rights": "U.S. government work, public domain (NASA conference publication; NTRS: GOV_PERMITTED). Individual papers by NASA staff",
+  "aircraft": "YF-12A, YF-12C",
+  "views": [
+   "plan",
+   "side",
+   "front",
+   "sections",
+   "inlet"
+  ],
+  "dimensions_shown": [
+   "boattail x/L 0.7 to 1.0 for YF-12A and YF-12C"
+  ],
+  "scale_or_resolution": "PDF, scanned pages at 300 ppi (LASRE TM 596 ppi; CR-144972 foldouts 200 ppi); subset of original pages listed in file name",
+  "usefulness": {
+   "score": 3,
+   "why": "unique pages: aft fuselage (boattail) cross sections, YF-12A ventral fin three views, inlet cutaway"
+  },
+  "bytes": 1648069
+ },
+ {
+  "file": "raw/sr71org-wayback_YF-12A-1_p1-3_dimensions.png",
+  "title": "YF-12A-1 flight manual p.1-3, The Aircraft and Dimensions (Change A-11)",
+  "source_url": "https://web.archive.org/web/2017/http://www.sr-71.org/blackbird/yf-12a-1/1/display.php?file=1-3.png",
+  "archive_or_publisher": "SR-71 Online (sr-71.org), via Wayback Machine",
+  "date": "manual c. 1965 to 1970; capture 2017",
+  "rights": "Page image made by SR-71 Online (Paul Kucher), retrieved from the Wayback Machine. The underlying YF-12A-1 flight manual is a USAF technical order, but SR-71 Online states permission is mandatory for image use: reference only, do not mirror or publish.",
+  "aircraft": "YF-12A",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "length (overall) 101.7 ft",
+   "height (to top of vertical stabilizer) 18.4 ft",
+   "wing span 55.7 ft",
+   "wing area (nominal) 1795 sq ft",
+   "tread (MLG middle wheel centerlines) 16.67 ft",
+   "loaded gross weight about 126,000 to 127,500 lb"
+  ],
+  "scale_or_resolution": "1000x1300 px",
+  "usefulness": {
+   "score": 3,
+   "why": "only primary YF-12A dimension source found (Section I figures were not archived)"
+  },
+  "bytes": 178581
+ },
+ {
+  "file": "pages/cia-A-12-flight-manual_fig1-10-sh1_inlet-airflows.png",
+  "title": "A-12 FM Figure 1-10 sheet 1 Inlet Airflows (forward and aft bypass)",
+  "source_url": "https://archive.org/download/cia-readingroom-document-0001316457/0001316457.pdf",
+  "archive_or_publisher": "CIA FOIA reading room, Internet Archive mirror",
+  "date": "1968-03-15",
+  "rights": "U.S. government record released by CIA under FOIA (no copyright notice); prepared by Lockheed for the government. Treat as public domain; a 1981 Lockheed letter to CIA (CIA-RDP90B00170R000200230042-2) states Blackbird data was furnished to the government with unlimited rights unless marked proprietary. Internet Archive mirror of the CIA reading room.",
+  "aircraft": "A-12",
+  "views": [
+   "inlet"
+  ],
+  "dimensions_shown": [
+   "none"
+  ],
+  "scale_or_resolution": "300 dpi grayscale render of 1-bit scan",
+  "usefulness": {
+   "score": 2,
+   "why": "perspective cutaway of nacelle, bypass doors and louvres"
+  },
+  "bytes": 134023
+ },
+ {
+  "file": "pages/cia-A-12-flight-manual_fig1-10-sh2_inlet-airflows-bleeds.png",
+  "title": "A-12 FM Figure 1-10 sheet 2 Inlet Airflows (porous bleed, shock trap)",
+  "source_url": "https://archive.org/download/cia-readingroom-document-0001316457/0001316457.pdf",
+  "archive_or_publisher": "CIA FOIA reading room, Internet Archive mirror",
+  "date": "1968-03-15",
+  "rights": "U.S. government record released by CIA under FOIA (no copyright notice); prepared by Lockheed for the government. Treat as public domain; a 1981 Lockheed letter to CIA (CIA-RDP90B00170R000200230042-2) states Blackbird data was furnished to the government with unlimited rights unless marked proprietary. Internet Archive mirror of the CIA reading room.",
+  "aircraft": "A-12",
+  "views": [
+   "inlet"
+  ],
+  "dimensions_shown": [
+   "none"
+  ],
+  "scale_or_resolution": "300 dpi grayscale render of 1-bit scan",
+  "usefulness": {
+   "score": 2,
+   "why": "spike porous bleed and shock trap tube layout"
+  },
+  "bytes": 154709
+ },
+ {
+  "file": "pages/cia-A-12-flight-manual_fig1-1_general-arrangement.png",
+  "title": "A-12 FM Figure 1-1 General Arrangement (p.1-2)",
+  "source_url": "https://archive.org/download/cia-readingroom-document-0001316457/0001316457.pdf",
+  "archive_or_publisher": "CIA FOIA reading room, Internet Archive mirror",
+  "date": "1968-03-15",
+  "rights": "U.S. government record released by CIA under FOIA (no copyright notice); prepared by Lockheed for the government. Treat as public domain; a 1981 Lockheed letter to CIA (CIA-RDP90B00170R000200230042-2) states Blackbird data was furnished to the government with unlimited rights unless marked proprietary. Internet Archive mirror of the CIA reading room.",
+  "aircraft": "A-12",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "none; labelled equipment locations (Q-bay, E-bay, chine equipment box, spike, fwd bypass)"
+  ],
+  "scale_or_resolution": "300 dpi grayscale render of 1-bit scan",
+  "usefulness": {
+   "score": 2,
+   "why": "perspective; shows A-12 chine-to-nose shape and equipment bays"
+  },
+  "bytes": 173679
+ },
+ {
+  "file": "pages/cia-A-12-flight-manual_p1-47_control-surface-travel-limits.png",
+  "title": "A-12 FM p.1-47 Flight Control System, surface travel limits",
+  "source_url": "https://archive.org/download/cia-readingroom-document-0001316457/0001316457.pdf",
+  "archive_or_publisher": "CIA FOIA reading room, Internet Archive mirror",
+  "date": "1968-03-15",
+  "rights": "U.S. government record released by CIA under FOIA (no copyright notice); prepared by Lockheed for the government. Treat as public domain; a 1981 Lockheed letter to CIA (CIA-RDP90B00170R000200230042-2) states Blackbird data was furnished to the government with unlimited rights unless marked proprietary. Internet Archive mirror of the CIA reading room.",
+  "aircraft": "A-12",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "elevons pitch 10 down 24 up",
+   "pitch plus roll 20 down 35 up",
+   "roll 12 down 12 up",
+   "rudders 20 left 20 right"
+  ],
+  "scale_or_resolution": "300 dpi grayscale render of 1-bit scan",
+  "usefulness": {
+   "score": 2,
+   "why": "control surface deflection limits for posing the model"
+  },
+  "bytes": 240479
+ },
+ {
+  "file": "pages/cia-A-12-ground-handling_fig2-8_walkways-plan-view.png",
+  "title": "A-12 Ground Handling Figure 2-8: Aircraft Walkways (plan view)",
+  "source_url": "https://archive.org/download/cia-readingroom-document-06230171/06230171.pdf",
+  "archive_or_publisher": "CIA FOIA reading room, Internet Archive mirror",
+  "date": "c. 1964-1966",
+  "rights": "U.S. government record released by CIA under FOIA (no copyright notice); prepared by Lockheed for the government. Treat as public domain; a 1981 Lockheed letter to CIA (CIA-RDP90B00170R000200230042-2) states Blackbird data was furnished to the government with unlimited rights unless marked proprietary. Internet Archive mirror of the CIA reading room.",
+  "aircraft": "A-12",
+  "views": [
+   "plan"
+  ],
+  "dimensions_shown": [
+   "none"
+  ],
+  "scale_or_resolution": "300 dpi grayscale render of 1-bit scan, about 2540x3300 px",
+  "usefulness": {
+   "score": 2,
+   "why": "clean A-12 plan silhouette but not to scale (length to span ratio badly compressed)"
+  },
+  "bytes": 206562
+ },
+ {
+  "file": "pages/commons_SR71_J58-inlet-airflow-patterns_render.png",
+  "title": "Quick Look render of the J58 airflow SVG",
+  "source_url": "https://commons.wikimedia.org/wiki/File:SR71_J58_Engine_Airflow_Patterns.svg",
+  "archive_or_publisher": "Wikimedia Commons",
+  "date": "2009-01-31",
+  "rights": "Public domain per Commons.",
+  "aircraft": "J58 inlet",
+  "views": [
+   "inlet",
+   "sections"
+  ],
+  "dimensions_shown": [
+   "none"
+  ],
+  "scale_or_resolution": "1600 px render (top of sheet only)",
+  "usefulness": {
+   "score": 2,
+   "why": "preview"
+  },
+  "bytes": 583714
+ },
+ {
+  "file": "pages/dfrc_EG-0075-04_SR-71B_3view.png",
+  "title": "Render of EG-0075-04 SR-71B 3-view",
+  "source_url": "https://web.archive.org/web/20041117202816/https://www.dfrc.nasa.gov/Gallery/Graphics/SR-71/EPS/EG-0075-04.eps",
+  "archive_or_publisher": "NASA Dryden (rendered with Ghostscript)",
+  "date": "1998-03-02",
+  "rights": "U.S. government work (NASA Dryden graphic, Adobe Illustrator file created by NASA employee Tom Tschida, 1998), public domain. Same artwork was reposted by af.mil ('Graphic courtesy of NASA') and traced on Wikimedia Commons (File:Lockheed SR-71A 3view.svg, File:Lockheed YF-12A 3view.png, File:Lockheed SR-71B trainer model 3view.png, File:EG-0075-04.gif); those copies were not kept because they are lower-fidelity duplicates.",
+  "aircraft": "SR-71B",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "none"
+  ],
+  "scale_or_resolution": "11367x7067 px",
+  "usefulness": {
+   "score": 2,
+   "why": "SR-71B reference"
+  },
+  "bytes": 1184845
+ },
+ {
+  "file": "pages/dfrc_EG-0075-04_SR-71B_3view.svg",
+  "title": "SVG conversion of EG-0075-04",
+  "source_url": "https://web.archive.org/web/20041117202816/https://www.dfrc.nasa.gov/Gallery/Graphics/SR-71/EPS/EG-0075-04.eps",
+  "archive_or_publisher": "NASA Dryden",
+  "date": "1998-03-02",
+  "rights": "U.S. government work (NASA Dryden graphic, Adobe Illustrator file created by NASA employee Tom Tschida, 1998), public domain. Same artwork was reposted by af.mil ('Graphic courtesy of NASA') and traced on Wikimedia Commons (File:Lockheed SR-71A 3view.svg, File:Lockheed YF-12A 3view.png, File:Lockheed SR-71B trainer model 3view.png, File:EG-0075-04.gif); those copies were not kept because they are lower-fidelity duplicates.",
+  "aircraft": "SR-71B",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "none"
+  ],
+  "scale_or_resolution": "vector",
+  "usefulness": {
+   "score": 2,
+   "why": "SR-71B vector"
+  },
+  "bytes": 140398
+ },
+ {
+  "file": "pages/fm-1SR71A-1_fig1-1_general-arrangement-bay-locator.png",
+  "title": "SR-71A-1 Figure 1-1 General Arrangement and Bay Locator Diagram (page 1-5)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_jp2.zip/0003756-lockheed_sr71__01_jp2%2F0003756-lockheed_sr71__01_0021.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "SR-71A",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "no dimensions; 42 numbered items (chine bays, mission bays, pitot mast, spike, ejector flaps, drag chute, air refuelling receptacle, antennas)"
+  ],
+  "scale_or_resolution": "IA JP2 master 4167 x 5834 px (about 500 dpi); saved PNG is the full JP2 converted to 8-bit grey",
+  "usefulness": {
+   "score": 2,
+   "why": "perspective cutaway, not orthographic; good for where bays, hatches, antennas and the drag chute door sit, useless for measured outline"
+  },
+  "bytes": 2156042
+ },
+ {
+  "file": "pages/fm-1SR71A-1_fig1-32_fuel-tank-arrangement.png",
+  "title": "SR-71A-1 Figure 1-32 Fuel Quantity, tank arrangement and capacities (page 1-48)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_jp2.zip/0003756-lockheed_sr71__01_jp2%2F0003756-lockheed_sr71__01_0065.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "SR-71A",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "no lengths; tanks 1A, 1, 2, 3, 4, 5, 6A, 6B positions; total 12,219.2 US gal, 80,280 lb JP-7"
+  ],
+  "scale_or_resolution": "IA JP2 master 4167 x 5834 px (about 500 dpi); saved PNG is the full JP2 converted to 8-bit grey",
+  "usefulness": {
+   "score": 2,
+   "why": "perspective, shows fuselage tank order and wing tank 6 extent; context for the internal model only"
+  },
+  "bytes": 1695643
+ },
+ {
+  "file": "pages/fm-1SR71A-1_p1A-3_SR-71B-external-differences.png",
+  "title": "SR-71A-1 page 1A-3: The SR-71B Aircraft (text)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_jp2.zip/0003756-lockheed_sr71__01_jp2%2F0003756-lockheed_sr71__01_0224.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "SR-71B",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "SR-71B: stabilizing fin under each nacelle, raised aft (instructor) cockpit canopy, no camera, radar or EMR gear; gross weight about 139,200 lb"
+  ],
+  "scale_or_resolution": "IA JP2 master 4167 x 5834 px (about 500 dpi); saved PNG is the full JP2 converted to 8-bit grey",
+  "usefulness": {
+   "score": 2,
+   "why": "names the external differences of the trainer; text only"
+  },
+  "bytes": 3352196
+ },
+ {
+  "file": "pages/ntrs-19730015310_TN-D-6987_p18_fig3_spike-tip-cone-sensor.png",
+  "title": "Fig. 3, drawing of spike tip conical flow sensor (replaces the spike tip; 26 deg included angle)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19730015310/downloads/19730015310.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19730015310",
+  "date": "1973-05",
+  "rights": "U.S. government work, public domain (NASA TN by Flight Research Center staff; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12A",
+  "views": [
+   "inlet",
+   "details"
+  ],
+  "dimensions_shown": [
+   "spike tip cone included angle 26 deg (text)",
+   "sensor dimensions in cm (in.)"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions (rotated upright)",
+  "usefulness": {
+   "score": 2,
+   "why": "confirms spike-tip cone angle only"
+  },
+  "bytes": 57572
+ },
+ {
+  "file": "pages/ntrs-19730021212_TM-X-2880_p38_fig2b_YF-12-fuel-compartments.png",
+  "title": "Fig. 2(b), fuel compartment configuration (isometric)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19730021212/downloads/19730021212.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19730021212",
+  "date": "1973-08",
+  "rights": "U.S. government work, public domain (NASA TM; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12A",
+  "views": [
+   "details",
+   "sections"
+  ],
+  "dimensions_shown": [
+   "none"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 2,
+   "why": "shows non-circular forward fuel compartments and chine volume, no numbers"
+  },
+  "bytes": 55376
+ },
+ {
+  "file": "pages/ntrs-19730021212_TM-X-2880_p40_fig4_YF-12-plan-side-gear-supports.png",
+  "title": "Fig. 4(a), plan and side views showing landing-gear support system for ground vibration tests",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19730021212/downloads/19730021212.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19730021212",
+  "date": "1973-08",
+  "rights": "U.S. government work, public domain (NASA TM; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12A",
+  "views": [
+   "plan",
+   "side"
+  ],
+  "dimensions_shown": [
+   "none (shows nose and main gear positions)"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 2,
+   "why": "plan and side outline with gear positions, no numbers"
+  },
+  "bytes": 45617
+ },
+ {
+  "file": "pages/ntrs-19750003899_TM-X-3144_p15_fig7_YF-12-flight-inlet-schematic.png",
+  "title": "Fig. 7, schematic of YF-12 flight inlet (isometric, labelled)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19750003899/downloads/19750003899.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19750003899",
+  "date": "1974-12",
+  "rights": "U.S. government work, public domain (NASA Lewis TM; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "J58 inlet (YF-12)",
+  "views": [
+   "inlet"
+  ],
+  "dimensions_shown": [
+   "labels only"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 2,
+   "why": "labelled inlet layout"
+  },
+  "bytes": 61765
+ },
+ {
+  "file": "pages/ntrs-19780013217_TP-1180_p7_fig3-4_YF-12-NASA-nose-boom.png",
+  "title": "Figs. 3 and 4, three-view of nose boom and pitot-static probe; static pressure source locations, cm (in.)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19780013217/downloads/19780013217.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19780013217",
+  "date": "1978-04",
+  "rights": "U.S. government work, public domain (NASA TP; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12A",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "94.34 cm (37.14 in)",
+   "49.38 cm (19.44 in)",
+   "32.71 cm (12.88 in)",
+   "boom diameter 2.54 cm (1.00 in)",
+   "26.70 cm (10.50 in)"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 2,
+   "why": "NASA YF-12 research boom only, not the SR-71 pitot mast"
+  },
+  "bytes": 46932
+ },
+ {
+  "file": "pages/ntrs-19810012550_CR-163106_p10_fig3_YF-12-inlet-isometric.png",
+  "title": "Fig. 3, YF-12 inlet (isometric, labelled)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19810012550/downloads/19810012550.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19810012550",
+  "date": "1981-01",
+  "rights": "NASA contractor report written by Lockheed-California Company for NASA Dryden; no copyright notice in the document; NTRS: GOV_PUBLIC_USE_PERMITTED. Contractor work, so treat as cite and link (tier C) until rights are confirmed",
+  "aircraft": "J58 inlet (YF-12)",
+  "views": [
+   "inlet"
+  ],
+  "dimensions_shown": [
+   "labels only"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 2,
+   "why": "labelled inlet layout"
+  },
+  "bytes": 50174
+ },
+ {
+  "file": "pages/ntrs-19810012550_CR-163106_p11_table1_inlet-stations-x-over-rc.png",
+  "title": "Table 1, inlet instrumentation locations (station x/rc and angle, spike and cowl)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19810012550/downloads/19810012550.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19810012550",
+  "date": "1981-01",
+  "rights": "NASA contractor report written by Lockheed-California Company for NASA Dryden; no copyright notice in the document; NTRS: GOV_PUBLIC_USE_PERMITTED. Contractor work, so treat as cite and link (tier C) until rights are confirmed",
+  "aircraft": "J58 inlet (YF-12)",
+  "views": [
+   "inlet"
+  ],
+  "dimensions_shown": [
+   "spike and cowl surface stations x/rc from -0.53 to about 5.3"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 2,
+   "why": "station list, indirect geometry"
+  },
+  "bytes": 48330
+ },
+ {
+  "file": "pages/ntrs-19960027893_TM-104317_p4_fig2_YF-12A-structural-skeleton.png",
+  "title": "Fig. 2, structural skeleton of the YF-12A aircraft (isometric)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19960027893/downloads/19960027893.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19960027893",
+  "date": "1996-05",
+  "rights": "U.S. government work, public domain (NASA TM; NTRS: GOV_PUBLIC_USE_PERMITTED). Figures credited to earlier NASA reports (refs 10 to 18)",
+  "aircraft": "YF-12A",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "none"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions",
+  "usefulness": {
+   "score": 2,
+   "why": "structural layout, no numbers"
+  },
+  "bytes": 65983
+ },
+ {
+  "file": "pages/ntrs-20000064011_TP-2000-209023_p3_fig2_SR-71-test-bed-three-view-ft.png",
+  "title": "Fig. 2, canoe and reflection plane on the SR-71 (three-view, feet)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/20000064011/downloads/20000064011.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/20000064011",
+  "date": "2000-06",
+  "rights": "U.S. government work, public domain (NASA TP; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "span 55.60 ft",
+   "length 107.40 ft",
+   "height 18.50 ft",
+   "canoe 41.21 by 2.75 by 1.86 ft",
+   "reflection plane 17.32 by 7.50 ft"
+  ],
+  "scale_or_resolution": "300 dpi 1-bit render of a 300 ppi CCITT scan (native resolution); not to scale, use labelled dimensions; drawing itself is a coarse dithered raster",
+  "usefulness": {
+   "score": 2,
+   "why": "same data as the LASRE three-view but lower quality"
+  },
+  "bytes": 72949
+ },
+ {
+  "file": "pages/usaf_sr71a_3view_x4_margin.png",
+  "title": "Render of Lockheed SR-71A 3view.svg at 4x with a 320 px margin (8056 x 6316 px)",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Lockheed_SR-71A_3view.svg",
+  "archive_or_publisher": "Wikimedia Commons (rendered locally; file found in pages/, not made by this survey)",
+  "date": "2007-12-30 (source upload)",
+  "rights": "Public domain per Wikimedia Commons (credited United States Air Force, af.mil art igphoto 2000791546); SVG redrawn in Inkscape by Commons user Falcorian, 2007. Same drawing as NASA Dryden EG-0075-02, so prefer the Dryden EPS as the master",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "none labelled"
+  ],
+  "scale_or_resolution": "8056 x 6316 px raster of the SVG with margin",
+  "usefulness": {
+   "score": 2,
+   "why": "duplicate of the 4x render with padding, kept because other model tooling may use it"
+  },
+  "bytes": 1256539
+ },
+ {
+  "file": "raw/commons_SR71_J58_Engine_Airflow_Patterns.svg",
+  "title": "SR-71 J58 Engine Airflow Patterns (Mach 0, 0.5, 1.5, 2.5), SVG redraw",
+  "source_url": "https://commons.wikimedia.org/wiki/File:SR71_J58_Engine_Airflow_Patterns.svg",
+  "archive_or_publisher": "Wikimedia Commons (Inductiveload, 2009), redrawn from the flight manual inlet airflow figure",
+  "date": "2009-01-31",
+  "rights": "Public domain per Commons (redraw of a USAF manual figure).",
+  "aircraft": "J58 inlet",
+  "views": [
+   "inlet",
+   "sections"
+  ],
+  "dimensions_shown": [
+   "none; shows spike forward vs retracting, forward bypass, aft bypass, suck-in and tertiary doors, ejector flaps"
+  ],
+  "scale_or_resolution": "vector, 850x1050 nominal",
+  "usefulness": {
+   "score": 2,
+   "why": "schematic nacelle section, not to scale"
+  },
+  "bytes": 630488
+ },
+ {
+  "file": "raw/commons_Sr-71-composit.gif",
+  "title": "'Composite-Honeycomb Areas of the SR-71' (Figure 4-5)",
+  "source_url": "https://commons.wikimedia.org/wiki/File:Sr-71-composit.gif",
+  "archive_or_publisher": "Wikimedia Commons (uploader HDP, 2006), credited to a USAF SR-71 pilot handbook",
+  "date": "unknown",
+  "rights": "Commons tags it PD-USGov (USAF); the same figure appears elsewhere with a Lockheed figure code (R203-183), so verify before mirroring.",
+  "aircraft": "SR-71A",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "none; labels nose chine, fuselage chine, inner wing LE, nacelle chine, elevon trailing edges, rudders"
+  ],
+  "scale_or_resolution": "1000x801 px GIF",
+  "usefulness": {
+   "score": 2,
+   "why": "where the sawtooth composite edges are, for texturing"
+  },
+  "bytes": 43354
+ },
+ {
+  "file": "raw/dfrc_EG-0075-04_SR-71B_3view.eps",
+  "title": "NASA Dryden EG-0075-04 SR-71B 3-view (Illustrator EPS, vector), March 1998",
+  "source_url": "https://web.archive.org/web/20041117202816/https://www.dfrc.nasa.gov/Gallery/Graphics/SR-71/EPS/EG-0075-04.eps",
+  "archive_or_publisher": "NASA Dryden Flight Research Center graphics gallery, via Wayback Machine",
+  "date": "1998-03-02",
+  "rights": "U.S. government work (NASA Dryden graphic, Adobe Illustrator file created by NASA employee Tom Tschida, 1998), public domain. Same artwork was reposted by af.mil ('Graphic courtesy of NASA') and traced on Wikimedia Commons (File:Lockheed SR-71A 3view.svg, File:Lockheed YF-12A 3view.png, File:Lockheed SR-71B trainer model 3view.png, File:EG-0075-04.gif); those copies were not kept because they are lower-fidelity duplicates.",
+  "aircraft": "SR-71B",
+  "views": [
+   "plan",
+   "side",
+   "front"
+  ],
+  "dimensions_shown": [
+   "none"
+  ],
+  "scale_or_resolution": "vector; rendered 11367x7067 px at 1200 dpi (page includes title block)",
+  "usefulness": {
+   "score": 2,
+   "why": "trainer with raised second cockpit and ventral fins; same base outline as SR-71A"
+  },
+  "bytes": 131898
+ },
+ {
+  "file": "raw/fm-1SR71A-1_IA-jp2-pages/fm-1SR71A-1_fig1-1_general-arrangement-bay-locator.jp2",
+  "title": "SR-71A-1 Figure 1-1 General Arrangement and Bay Locator Diagram (page 1-5) (original JP2 page)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_jp2.zip/0003756-lockheed_sr71__01_jp2%2F0003756-lockheed_sr71__01_0021.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "SR-71A",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "no dimensions; 42 numbered items (chine bays, mission bays, pitot mast, spike, ejector flaps, drag chute, air refuelling receptacle, antennas)"
+  ],
+  "scale_or_resolution": "original IA JP2, 4167 x 5834 px",
+  "usefulness": {
+   "score": 2,
+   "why": "perspective cutaway, not orthographic; good for where bays, hatches, antennas and the drag chute door sit, useless for measured outline"
+  },
+  "bytes": 832691
+ },
+ {
+  "file": "raw/fm-1SR71A-1_IA-jp2-pages/fm-1SR71A-1_fig1-32_fuel-tank-arrangement.jp2",
+  "title": "SR-71A-1 Figure 1-32 Fuel Quantity, tank arrangement and capacities (page 1-48) (original JP2 page)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_jp2.zip/0003756-lockheed_sr71__01_jp2%2F0003756-lockheed_sr71__01_0065.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "SR-71A",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "no lengths; tanks 1A, 1, 2, 3, 4, 5, 6A, 6B positions; total 12,219.2 US gal, 80,280 lb JP-7"
+  ],
+  "scale_or_resolution": "original IA JP2, 4167 x 5834 px",
+  "usefulness": {
+   "score": 2,
+   "why": "perspective, shows fuselage tank order and wing tank 6 extent; context for the internal model only"
+  },
+  "bytes": 649179
+ },
+ {
+  "file": "raw/fm-1SR71A-1_IA-jp2-pages/fm-1SR71A-1_p1A-3_SR-71B-external-differences.jp2",
+  "title": "SR-71A-1 page 1A-3: The SR-71B Aircraft (text) (original JP2 page)",
+  "source_url": "https://archive.org/download/0003756-lockheed-sr-71-03/SR-71%20Flight%20Manual/0003756-lockheed_sr71__01_jp2.zip/0003756-lockheed_sr71__01_jp2%2F0003756-lockheed_sr71__01_0224.jp2",
+  "archive_or_publisher": "Internet Archive item 0003756-lockheed-sr-71-03 (USAF technical order SR-71A-1, uploader anonymous)",
+  "date": "Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "rights": "U.S. government work (USAF technical order), public domain; IA tags it Public Domain Mark 1.0. Scan provenance unclear (anonymous uploader, original SENIOR CROWN markings visible, Fig 4-37 page hand-annotated 'Deleted IAW SR71 SCG 23 Sept 96'), so cite with care",
+  "aircraft": "SR-71B",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "SR-71B: stabilizing fin under each nacelle, raised aft (instructor) cockpit canopy, no camera, radar or EMR gear; gross weight about 139,200 lb"
+  ],
+  "scale_or_resolution": "original IA JP2, 4167 x 5834 px",
+  "usefulness": {
+   "score": 2,
+   "why": "names the external differences of the trainer; text only"
+  },
+  "bytes": 1354836
+ },
+ {
+  "file": "raw/ntrs-19780013217_TP-1180_YF-12-nose-boom_pages-1-9-11.pdf",
+  "title": "Gilyard and Smith, Results from flight and simulator studies of a Mach 3 cruise longitudinal autopilot, NASA TP-1180 (H-940), page subset",
+  "source_url": "https://ntrs.nasa.gov/api/citations/19780013217/downloads/19780013217.pdf",
+  "archive_or_publisher": "NASA Technical Reports Server (NTRS), citation https://ntrs.nasa.gov/citations/19780013217",
+  "date": "1978-04",
+  "rights": "U.S. government work, public domain (NASA TP; NTRS: GOV_PUBLIC_USE_PERMITTED)",
+  "aircraft": "YF-12A",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "nose boom 94.34 cm (37.14 in) and 49.38 cm (19.44 in) segments"
+  ],
+  "scale_or_resolution": "PDF, scanned pages at 300 ppi (LASRE TM 596 ppi; CR-144972 foldouts 200 ppi); subset of original pages listed in file name",
+  "usefulness": {
+   "score": 2,
+   "why": "NASA YF-12 research nose boom only"
+  },
+  "bytes": 424006
+ },
+ {
+  "file": "raw/sr71org-wayback_sr-71diagram-01_major-assemblies-exploded.gif",
+  "title": "SR-71 major assemblies exploded view (21 items: nose section to main gear doors)",
+  "source_url": "https://web.archive.org/web/2010/http://www.sr-71.org/blackbird/diagrams/sr-71diagram-01.gif",
+  "archive_or_publisher": "SR-71 Online (sr-71.org), via Wayback Machine",
+  "date": "unknown",
+  "rights": "Unknown origin (looks like a Lockheed or USAF maintenance figure); hosted by SR-71 Online, permission required. Reference only.",
+  "aircraft": "SR-71A",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "none"
+  ],
+  "scale_or_resolution": "1000x809 px GIF",
+  "usefulness": {
+   "score": 2,
+   "why": "shows the real production breaks (nose, forward fuselage, aft fuselage, inner wing, nacelle halves) for splitting the mesh"
+  },
+  "bytes": 80655
+ },
+ {
+  "file": "raw/sr71org-wayback_sr-71diagram-04_fig4-6_panel-temperatures-top-bottom-plan.gif",
+  "title": "'Figure 4-6. SR-71 Composite-Honeycomb Panel Temperatures', top and bottom plan views",
+  "source_url": "https://web.archive.org/web/2010/http://www.sr-71.org/blackbird/diagrams/sr-71diagram-04.gif",
+  "archive_or_publisher": "SR-71 Online (sr-71.org) diagrams page, via Wayback Machine; original publication not identified (Lockheed-style figure)",
+  "date": "unknown (1960s to 1980s figure)",
+  "rights": "Unknown origin, probably Lockheed or USAF figure; hosted by SR-71 Online, which requires permission. Reference only.",
+  "aircraft": "SR-71A",
+  "views": [
+   "plan",
+   "details"
+  ],
+  "dimensions_shown": [
+   "surface temperatures 520 to 640 F; no geometric dimensions"
+  ],
+  "scale_or_resolution": "1000x1236 px GIF",
+  "usefulness": {
+   "score": 2,
+   "why": "top and bottom plan outlines showing extent of the composite (RAM) chine and wing edges"
+  },
+  "bytes": 82237
+ },
+ {
+  "file": "pages/cia-A-12-flight-manual_fig1-12_fuel-tanks.png",
+  "title": "A-12 FM Figure 1-12 Fuel Quantity Data (tank layout)",
+  "source_url": "https://archive.org/download/cia-readingroom-document-0001316457/0001316457.pdf",
+  "archive_or_publisher": "CIA FOIA reading room, Internet Archive mirror",
+  "date": "1968-03-15",
+  "rights": "U.S. government record released by CIA under FOIA (no copyright notice); prepared by Lockheed for the government. Treat as public domain; a 1981 Lockheed letter to CIA (CIA-RDP90B00170R000200230042-2) states Blackbird data was furnished to the government with unlimited rights unless marked proprietary. Internet Archive mirror of the CIA reading room.",
+  "aircraft": "A-12",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "tank capacities, total 10,590 gal"
+  ],
+  "scale_or_resolution": "300 dpi grayscale render of 1-bit scan",
+  "usefulness": {
+   "score": 1,
+   "why": "internal tank layout only"
+  },
+  "bytes": 214971
+ },
+ {
+  "file": "raw/sr71org-wayback_YF-12A-1_p1-29_air-inlet-system.png",
+  "title": "YF-12A-1 flight manual p.1-29, Air Inlet System and Inlet Spikes",
+  "source_url": "https://web.archive.org/web/2017/http://www.sr-71.org/blackbird/yf-12a-1/1/display.php?file=1-29.png",
+  "archive_or_publisher": "SR-71 Online (sr-71.org), via Wayback Machine",
+  "date": "manual c. 1965 to 1970; capture 2017",
+  "rights": "Page image made by SR-71 Online (Paul Kucher), retrieved from the Wayback Machine. The underlying YF-12A-1 flight manual is a USAF technical order, but SR-71 Online states permission is mandatory for image use: reference only, do not mirror or publish.",
+  "aircraft": "YF-12A",
+  "views": [
+   "inlet"
+  ],
+  "dimensions_shown": [
+   "spike g-bias approximately 2 1/2 inches forward per 1 g",
+   "spikes locked forward below 30,000 ft, retract above Mach 1.6",
+   "inlets canted inboard and downward"
+  ],
+  "scale_or_resolution": "1000x1300 px",
+  "usefulness": {
+   "score": 1,
+   "why": "inlet schedule text, no geometry"
+  },
+  "bytes": 179243
+ },
+ {
+  "file": "raw/sr71org-wayback_yf-12diagram-01_YF-12A-inboard-arrangement.gif",
+  "title": "YF-12A inboard arrangement cutaway (21 items: pitot, cockpits, missile bays, tanks)",
+  "source_url": "https://web.archive.org/web/2010/http://www.sr-71.org/blackbird/diagrams/yf-12diagram-01.gif",
+  "archive_or_publisher": "SR-71 Online (sr-71.org), via Wayback Machine",
+  "date": "c. 1964 (Lockheed release artwork)",
+  "rights": "Probably Lockheed release artwork; hosted by SR-71 Online, permission required. Reference only.",
+  "aircraft": "YF-12A",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "none"
+  ],
+  "scale_or_resolution": "1000x1098 px GIF",
+  "usefulness": {
+   "score": 1,
+   "why": "interior arrangement only"
+  },
+  "bytes": 67850
+ },
+ {
+  "file": "raw/sr71us-wayback_M-21-D-21_drawing_fuselage-stations.jpg",
+  "title": "M-21 with D-21 perspective drawing with fuselage station callouts",
+  "source_url": "https://web.archive.org/web/20060210221919/http://www.wvi.com:80/~sr71webmaster/M-21%20Drawing%2023%20JULY%2004.jpg",
+  "archive_or_publisher": "'SR-71 Blackbirds' site by Leland R. Haynes (sr71.us), via Wayback Machine",
+  "date": "posted 2004; drawing date unknown",
+  "rights": "Unknown origin (Lockheed-style drawing); hosted on a copyrighted fan site. Reference only.",
+  "aircraft": "M-21 / D-21",
+  "views": [
+   "details"
+  ],
+  "dimensions_shown": [
+   "F.S. callouts along fuselage and D-21 pylon stations; mostly illegible at 640x480 (one reads F.S. 1254)"
+  ],
+  "scale_or_resolution": "640x480 px",
+  "usefulness": {
+   "score": 1,
+   "why": "low resolution, only for D-21 pylon placement"
+  },
+  "bytes": 81250
+ }
+]

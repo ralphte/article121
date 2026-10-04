@@ -1,0 +1,72 @@
+---
+import Base from '../../layouts/Base.astro';
+import SourceLinks from '../../components/SourceLinks.astro';
+import { eventsInOrder, fmtDate, PROGRAM_LABEL } from '../../lib/data';
+import { getCollection } from 'astro:content';
+const events = await eventsInOrder();
+const airframeIds = new Set((await getCollection('airframes')).map((a) => a.id));
+const programs = [...new Set(events.map((e) => e.data.program))];
+const decades = [...new Set(events.map((e) => e.data.date.slice(0, 3) + '0s'))];
+---
+<Base title="Chronology" description="Every dated event in the Blackbird story, from the U-2 years to the museums, each with its sources.">
+  <div class="wrap">
+    <header class="page-head panel ticks">
+      <div class="file-head"><b>File A121-0002</b><span>Chronology</span><span>{events.length} entries</span></div>
+      <h1 class="display">Chronology</h1>
+      <p>Every dated event in the record, from the U-2's first overflight of the Soviet Union to the museums. Each entry names its sources, and where reliable sources disagree, the entry says so.</p>
+      <div class="filters" role="group" aria-label="Filter by program">
+        <button class="chip" aria-pressed="true" data-f="all">All</button>
+        {programs.map((p) => <button class="chip" aria-pressed="false" data-f={p}>{PROGRAM_LABEL[p]}</button>)}
+      </div>
+      <nav class="decades" aria-label="Jump to decade">{decades.map((d) => <a href={`#d${d.slice(0, 4)}`}>{d}</a>)}</nav>
+    </header>
+    <ol class="tl">
+      {events.map((e, i) => {
+        const dec = e.data.date.slice(0, 3) + '0';
+        const first = i === 0 || events[i - 1].data.date.slice(0, 3) + '0' !== dec;
+        return (
+          <li data-p={e.data.program} id={first ? `d${dec}` : undefined}>
+            <div class="when">{fmtDate(e.data.date, e.data.precision, true)}</div>
+            <div class="what">
+              <h2>{e.data.title} <span class="prog">{PROGRAM_LABEL[e.data.program]}</span></h2>
+              <p>{e.data.summary}</p>
+              {e.data.airframes.length > 0 && <p class="afs">{e.data.airframes.map((s) => airframeIds.has(s) ? <a href={`/register/${s}/`}>{s}</a> : <span>{s}</span>)}</p>}
+              {e.data.notes && <p class="note"><b>Where sources differ:</b> {e.data.notes}</p>}
+              <SourceLinks citations={e.data.citations} />
+            </div>
+          </li>
+        );
+      })}
+    </ol>
+  </div>
+</Base>
+<style>
+  .filters { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .decades { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 16px; font: 400 0.7rem/1.4 var(--f-data); letter-spacing: 0.12em; }
+  .tl { list-style: none; margin: 24px 0 0; padding: 0; position: relative; }
+  .tl::before { content: ""; position: absolute; left: 9.5rem; top: 0; bottom: 0; width: 1px; background: var(--seam-2); }
+  .tl li { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 0 28px; padding: 18px 0; border-bottom: 1px solid var(--seam); position: relative; scroll-margin-top: 60px; }
+  .tl li::before { content: ""; position: absolute; left: calc(9.5rem - 4px); top: 26px; width: 9px; height: 9px; background: var(--void); border: 1.5px solid var(--marking); transform: rotate(45deg); }
+  .tl li[hidden] { display: none; }
+  .when { font: 700 0.84rem/1.5 var(--f-data); color: var(--stencil); text-align: right; padding-right: 8px; padding-top: 2px; font-variant-numeric: tabular-nums; }
+  .what h2 { font: 700 1.08rem/1.3 var(--f-display); font-stretch: 105%; color: var(--stencil); margin: 0 0 6px; }
+  .what p { margin: 0 0 8px; max-width: 72ch; color: var(--ink); }
+  .prog { font: 400 0.6rem/1 var(--f-data); letter-spacing: 0.14em; color: var(--marking); text-transform: uppercase; margin-left: 6px; vertical-align: 2px; }
+  .afs { display: flex; flex-wrap: wrap; gap: 6px; }
+  .afs a, .afs span { font: 700 0.66rem/1 var(--f-data); letter-spacing: 0.08em; padding: 5px 7px; border: 1px solid var(--seam-2); text-decoration: none; color: var(--ink); }
+  .afs a:hover { border-color: var(--stencil); }
+  .note { font-size: 0.86rem; color: var(--ink-2) !important; border-left: 2px solid var(--marking); padding-left: 10px; }
+  @media (max-width: 680px) {
+    .tl::before, .tl li::before { display: none; }
+    .tl li { grid-template-columns: minmax(0, 1fr); }
+    .when { text-align: left; padding: 0 0 4px; }
+  }
+</style>
+<script>
+  const filters = document.querySelector('.filters');
+  filters?.addEventListener('click', (ev) => {
+    const b = (ev.target as HTMLElement).closest('button'); if (!b) return;
+    filters.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+    document.querySelectorAll<HTMLLIElement>('.tl li').forEach((li) => { li.hidden = !(b.dataset.f === 'all' || li.dataset.p === b.dataset.f); });
+  });
+</script>

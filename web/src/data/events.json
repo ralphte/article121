@@ -1,0 +1,2820 @@
+[
+ {
+  "id": "project-suntan-begins",
+  "date": "1956-01-18",
+  "precision": "day",
+  "title": "Air Force starts Project Suntan (Lockheed CL-400)",
+  "summary": "After Kelly Johnson pitched a liquid-hydrogen-fueled Mach 2.5 reconnaissance aircraft as a U-2 follow-on, Lt. Gen. Donald Putt convened an Air Force meeting on 18 January 1956 that launched the secret Suntan project, with Lockheed designing the CL-400 and Pratt & Whitney a hydrogen engine. Johnson soon concluded the CL-400's range could not be stretched; CL-400 development was cancelled in October 1957 and Suntan was formally ended in February 1959.",
+  "program": "context",
+  "airframes": [],
+  "people": [
+   "Kelly Johnson",
+   "Donald Putt",
+   "Ben Rich"
+  ],
+  "citations": [
+   {
+    "source": "nasa-cff4d4"
+   },
+   {
+    "source": "nasa-technical-reports-server-707153"
+   }
+  ],
+  "notes": "SP-4404 says the Air Force Suntan management team itself requested cancellation in February 1959; Merlin (AIAA 2009-1522) says it was terminated at Johnson's request. Ben Rich first described the CL-400 publicly in 1973 (SP-4404). Only about 25 people had full access to the program."
+ },
+ {
+  "id": "u2-first-overflight-tracked",
+  "date": "1956-07-04",
+  "precision": "day",
+  "title": "First U-2 overflight of the USSR is tracked by Soviet radar",
+  "summary": "The CIA's U-2, built by Lockheed under a 1954 contract and operational from June 1956, made its first overflights of the Soviet Union on 4 and 5 July 1956. Soviet radar tracked both flights, undercutting hopes that the U-2 could fly undetected and starting the search for a faster, harder to detect successor.",
+  "program": "context",
+  "airframes": [],
+  "people": [
+   "Richard Bissell"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-8eb403"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   }
+  ],
+  "notes": "CIA project officers had expected the U-2 to survive over the USSR for two years at most (Archangel); McIninch says 18 months to two years."
+ },
+ {
+  "id": "gusto-land-panel",
+  "date": "1957-11",
+  "precision": "month",
+  "title": "Project GUSTO and the Land panel",
+  "summary": "In the fall of 1957 U-2 project manager Richard Bissell commissioned an operations analysis showing that supersonic speed greatly reduced the chance of radar detection, and set up an advisory panel chaired by Polaroid's Edwin Land. Under the codename GUSTO, the panel met from November 1957 to August 1959 to judge U-2 successor designs from Lockheed and Convair.",
+  "program": "context",
+  "airframes": [],
+  "people": [
+   "Richard Bissell",
+   "Edwin Land"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   },
+   {
+    "source": "nasa-technical-reports-server-707153"
+   }
+  ],
+  "notes": "Archangel says the Land committee met seven times between November 1957 and August 1959; McIninch says about six times between 1957 and 1959 and implies the GUSTO codename was applied after presidential approval in late 1958."
+ },
+ {
+  "id": "archangel-studies-begin",
+  "date": "1958-04-21",
+  "precision": "day",
+  "title": "Skunk Works starts the Mach 3 'Archangel' studies",
+  "summary": "Lockheed's Skunk Works began designing an aircraft to cruise at Mach 3 above 90,000 feet, and Kelly Johnson presented the concept to Land's committee on 23 July 1958. The configurations were called Archangel-1, Archangel-2 and so on, after the U-2's development nickname 'Angel', soon shortened to A-1, A-2 and onward.",
+  "program": "archangel",
+  "airframes": [],
+  "people": [
+   "Kelly Johnson"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b"
+   },
+   {
+    "source": "nasa-technical-reports-server-707153"
+   }
+  ],
+  "notes": "Archangel gives 21 April 1958 as the start of design work; Johnson's first rough pencil sketch of the Mach 3 aircraft (then called U-3) is dated 23 April 1958 (Merlin; the A-1 drawing in Archangel is also captioned 23 April 1958)."
+ },
+ {
+  "id": "land-panel-favors-fish",
+  "date": "1958-09",
+  "precision": "month",
+  "title": "Land panel rejects A-2 and keeps Convair's FISH alive",
+  "summary": "Reviewing the concepts in September 1958, the Land committee rejected two Lockheed designs, including the large ramjet-assisted A-2, and approved continued work on Convair's FISH, a Mach 4 ramjet 'parasite' to be launched from a B-58B. Lockheed answered in November with the much smaller A-3, and in December 1958 President Eisenhower approved funding for further work on a U-2 successor.",
+  "program": "archangel",
+  "airframes": [],
+  "people": [
+   "Kelly Johnson",
+   "Edwin Land",
+   "Dwight D. Eisenhower"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b"
+   },
+   {
+    "source": "nasa-technical-reports-server-707153"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   }
+  ],
+  "notes": "McIninch places the decisive panel meeting in late November 1958, followed by presidential approval; Archangel says Eisenhower approved funding in December 1958."
+ },
+ {
+  "id": "a11-design",
+  "date": "1959-03",
+  "precision": "month",
+  "title": "The A-11 design falls short on radar cross section",
+  "summary": "Johnson's A-11 promised Mach 3.2, about 3,200 miles range and 90,000 feet, but the Land committee rejected it because its radar cross section was still too large. Convair's FISH dropped out after the Air Force cancelled the B-58B in June 1959, so the competition continued.",
+  "program": "archangel",
+  "airframes": [],
+  "people": [
+   "Kelly Johnson"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 4"
+   },
+   {
+    "source": "nasa-technical-reports-server-707153"
+   }
+  ],
+  "notes": "Merlin dates the A-10 to February 1959 and the A-11 to the following month. The 'A-11' name resurfaced in February 1964 as the public cover designation for the YF-12A."
+ },
+ {
+  "id": "kingfish-vs-a12-proposals",
+  "date": "1959-08-20",
+  "precision": "day",
+  "title": "KINGFISH versus A-12: final proposals",
+  "summary": "Convair and Lockheed submitted final designs to a joint DoD, Air Force and CIA selection panel: Convair's single-pilot, J58-powered KINGFISH and Lockheed's A-12, the twelfth design in the Archangel series. The A-12 added chines, canted fins, nonmetallic parts and a cesium fuel additive to cut its radar return and promised Mach 3.2 at up to 97,600 feet at lower projected cost.",
+  "program": "archangel",
+  "airframes": [],
+  "people": [
+   "Kelly Johnson"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 4"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   },
+   {
+    "source": "nasa-technical-reports-server-707153"
+   }
+  ],
+  "notes": "Archangel gives the A-12's range as around 4,600 miles; McIninch's comparison table gives 4,120 nautical miles total. Convair's KINGFISH had the smaller radar cross section and CIA representatives initially favored it (Archangel)."
+ },
+ {
+  "id": "lockheed-selected-oxcart",
+  "date": "1959-08-29",
+  "precision": "day",
+  "title": "Lockheed's A-12 selected; OXCART is born",
+  "summary": "Bissell told Kelly Johnson privately on 28 August that Lockheed had won, and the selection panel voted for the A-12 on 29 August 1959, provided Lockheed proved its radar cross section reductions by 1 January 1960. GUSTO ended and the new work took the randomly chosen codeword OXCART; CIA then authorized a four-month, $4.5 million phase of antiradar studies, structural tests and engineering design.",
+  "program": "oxcart",
+  "airframes": [],
+  "people": [
+   "Richard Bissell",
+   "Kelly Johnson"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 5"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   },
+   {
+    "source": "nasa-technical-reports-server-707153"
+   }
+  ],
+  "notes": "McIninch dates the CIA authorization of the four-month phase to 3 September 1959. Lockheed's U-2 record and lower cost decided the contest (Archangel)."
+ },
+ {
+  "id": "oxcart-contract-12-aircraft",
+  "date": "1960-02-11",
+  "precision": "day",
+  "title": "Contract for 12 A-12s signed",
+  "summary": "After radar tests satisfied CIA, Bissell authorized design, construction and testing of the A-12 on 26 January 1960, official approval followed four days later, and the contract for 12 aircraft was signed on 11 February 1960. Lockheed's original price of $96.6 million was soon overtaken by technical problems.",
+  "program": "oxcart",
+  "airframes": [],
+  "people": [
+   "Richard Bissell",
+   "Kelly Johnson"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 6"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   }
+  ],
+  "notes": "McIninch gives 30 January 1960 as the date CIA 'gave the green light to produce 12 aircraft'."
+ },
+ {
+  "id": "af12-interceptor-concept",
+  "date": "1960-03",
+  "precision": "month",
+  "title": "AF-12 interceptor (KEDLOCK) proposed",
+  "summary": "Even before the first A-12 was finished, Lockheed and Air Force officials discussed an interceptor version, the AF-12, under project KEDLOCK, with a Hughes ASG-18 pulse-Doppler radar, a second seat for a fire control officer and bays for three AIM-47 missiles. Three prototypes were built and became the YF-12A.",
+  "program": "kedlock",
+  "airframes": [],
+  "people": [
+   "Kelly Johnson"
+  ],
+  "citations": [
+   {
+    "source": "nasa-technical-reports-server-707153"
+   },
+   {
+    "source": "nasa-bbc042"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 52"
+   }
+  ],
+  "notes": "Sources disagree on the order date for the three interceptors: McIninch says the Air Force contracted for them in October 1960, while Archangel says October 1962. Merlin dates the first discussions to March 1960 and says the AF-12 became the YF-12A under the 1962 designation system."
+ },
+ {
+  "id": "powers-u2-shootdown",
+  "date": "1960-05-01",
+  "precision": "day",
+  "title": "Francis Gary Powers' U-2 shot down",
+  "summary": "A Soviet surface-to-air missile brought down the U-2 flown by CIA pilot Francis Gary Powers near Sverdlovsk, ending U-2 overflights of the Soviet Union. With the CORONA satellite still unproven, US leaders were now willing to pay heavily for the A-12.",
+  "program": "context",
+  "airframes": [],
+  "people": [
+   "Francis Gary Powers"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 6"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   },
+   {
+    "source": "national-reconnaissance-office-center-fo-02095b"
+   }
+  ]
+ },
+ {
+  "id": "nevada-test-site-built",
+  "date": "1960-09",
+  "precision": "month",
+  "title": "Building the Nevada test site",
+  "summary": "Bissell chose a secluded site in Nevada (Groom Lake, later known as Area 51), where construction began in earnest in September 1960. A new runway was poured between 7 September and 15 November 1960 because the old 5,000-foot asphalt strip could not carry the A-12, and by 1965 the site's population had reached about 1,835.",
+  "program": "oxcart",
+  "airframes": [],
+  "people": [
+   "Richard Bissell"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 6"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   },
+   {
+    "source": "national-security-archive-george-washing-deed0c"
+   }
+  ],
+  "notes": "The CIA histories call it only 'a secluded site in Nevada'; the Groom Lake and Area 51 names come from the National Security Archive. An EG&G radar test range was set up there in November 1959, when a full-scale A-12 radar model was trucked in (McIninch, National Security Archive). Archangel gives the population as over 1,800."
+ },
+ {
+  "id": "oxcart-pilots-recruited",
+  "date": "1961-11",
+  "precision": "month",
+  "title": "First OXCART pilots sign on",
+  "summary": "Screening of Air Force files produced 16 candidates; five agreed in November 1961 to join a project involving 'a very advanced aircraft', and a second search added six more. The eleven CIA 'drivers' were Ken Collins, Jack Layton, Frank Murray, Walter Ray, Russell Scott, William Skliar, Dennis Sullivan, Mele Vojvodich, Lon Walter, Jack Weeks and David Young, who had to be under six feet tall and 175 pounds to fit the cockpit.",
+  "program": "oxcart",
+  "airframes": [],
+  "people": [
+   "Ken Collins",
+   "Jack Layton",
+   "Frank Murray",
+   "Walter Ray",
+   "Russell Scott",
+   "William Skliar",
+   "Dennis Sullivan",
+   "Mele Vojvodich",
+   "Lon Walter",
+   "Jack Weeks",
+   "David Young"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 7"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   }
+  ],
+  "notes": "Scott, Walter and Young left before the A-12 became operational, and Skliar went to the YF-12A side (Archangel)."
+ },
+ {
+  "id": "article-121-trucked",
+  "date": "1962-02-26",
+  "precision": "day",
+  "title": "Article 121 leaves Burbank by road",
+  "summary": "The first A-12, Article 121 (60-6924), was ground tested at Burbank in January and February 1962. On the night of 26 February its fuselage left the Skunk Works in a 35 by 105 foot crate on a special trailer for a two-day road trip to the Nevada test site, with road signs removed and trees trimmed along the way; the wings were shipped separately.",
+  "program": "oxcart",
+  "airframes": [
+   "60-6924"
+  ],
+  "people": [],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 16"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   },
+   {
+    "source": "nasa-technical-reports-server-707153"
+   }
+  ],
+  "notes": "No exact arrival date is given: Archangel describes a two-day trip (implying about 28 February 1962) and McIninch says it 'arrived at the base according to plan'. Merlin says the first airframe was delivered in February 1962. The National Security Archive's 2013 'Area 51 File' says the first A-12 arrived in late December 1961, which conflicts with both CIA accounts."
+ },
+ {
+  "id": "a12-unofficial-first-flight",
+  "date": "1962-04-25",
+  "precision": "day",
+  "title": "Article 121's unofficial first hop",
+  "summary": "In keeping with Lockheed tradition, Lou Schalk made an unannounced first flight of Article 121, flying less than two miles at about 20 feet before wobbling caused by mis-connected controls forced him down on the lakebed beyond the runway. The next day he flew it for about 40 minutes, during which titanium fillets shed from the airframe.",
+  "program": "oxcart",
+  "airframes": [
+   "60-6924"
+  ],
+  "people": [
+   "Lou Schalk",
+   "Kelly Johnson"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 16"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 48"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   }
+  ],
+  "notes": "Sources disagree. Archangel's narrative gives 25 April 1962 for the hop and the next day (26 April) for the 40-minute flight, while its milestone timeline lists 26 April as the 'first test flight'. McIninch gives 26 April 1962 as the unofficial maiden flight of 'some 40 minutes' and does not mention a 25 April hop."
+ },
+ {
+  "id": "a12-official-first-flight",
+  "date": "1962-04-30",
+  "precision": "day",
+  "title": "A-12 official first flight",
+  "summary": "With senior Air Force and CIA officials watching, Lou Schalk flew Article 121 for 59 minutes on interim J75 engines, reaching 30,000 feet and just under 400 mph. Kelly Johnson called it the smoothest official first flight of any aircraft he had designed or tested; the A-12 was christened Cygnus.",
+  "program": "oxcart",
+  "airframes": [
+   "60-6924"
+  ],
+  "people": [
+   "Lou Schalk",
+   "Kelly Johnson"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 17"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   }
+  ],
+  "notes": "McIninch gives a top speed of 340 knots and a takeoff weight of 72,000 lb."
+ },
+ {
+  "id": "a12-first-supersonic",
+  "date": "1962-05-04",
+  "precision": "day",
+  "title": "First supersonic A-12 flight",
+  "summary": "On its second official flight, Article 121 with Lou Schalk at the controls reached Mach 1.1 at 40,000 feet, and DCI John McCone sent Kelly Johnson a congratulatory telegram.",
+  "program": "oxcart",
+  "airframes": [
+   "60-6924"
+  ],
+  "people": [
+   "Lou Schalk",
+   "Kelly Johnson",
+   "John McCone"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 17"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   }
+  ]
+ },
+ {
+  "id": "tagboard-study-begins",
+  "date": "1962-10",
+  "precision": "month",
+  "title": "TAGBOARD drone study authorized",
+  "summary": "CIA authorized the Skunk Works to study an A-12 variant that would carry and launch a ramjet-powered reconnaissance drone, first called Q-12 and later D-21, from a pylon on its back. Johnson received approval on 28 February 1963 to build 20 drones and two launch aircraft (the M-21), and the Air Force took over the project in June 1963.",
+  "program": "tagboard",
+  "airframes": [],
+  "people": [
+   "Kelly Johnson"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 52"
+   },
+   {
+    "source": "nasa-technical-reports-server-707153"
+   },
+   {
+    "source": "american-institute-of-aeronautics-and-as-b032d7"
+   }
+  ],
+  "notes": "Merlin says Johnson designed the drone in early 1962; Archangel and AIAA 2007-5761 date the feasibility study to October 1962. Lockheed eventually built 38 D-21s (Archangel, AIAA 2007-5761)."
+ },
+ {
+  "id": "titanium-goose-delivered",
+  "date": "1962-11",
+  "precision": "month",
+  "title": "Two-seat trainer 'Titanium Goose' delivered",
+  "summary": "Article 124 (60-6927), the only A-12 trainer, was delivered to the test site in November 1962 and first flew in January 1963. Fitted with less powerful J75 engines, it was limited to about Mach 1.6, and it was the only A-12 Kelly Johnson ever flew in.",
+  "program": "oxcart",
+  "airframes": [
+   "60-6927"
+  ],
+  "people": [
+   "Kelly Johnson"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 17"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 50"
+   }
+  ],
+  "notes": "The trainer made 614 flights totaling 1,076.4 hours, more than any other A-12 (Archangel inventory, p. 50)."
+ },
+ {
+  "id": "rs71-ordered",
+  "date": "1962-12",
+  "precision": "month",
+  "title": "Air Force orders the reconnaissance/strike variant",
+  "summary": "The Air Force ordered six two-seat 'reconnaissance/strike' aircraft, the R-12/RS-12 design that became the SR-71, and added 25 more in August 1963 for a total of 31. Johnson had begun sketching a 'common market' R-12 family in September 1962.",
+  "program": "senior-crown",
+  "airframes": [],
+  "people": [
+   "Kelly Johnson"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 53"
+   },
+   {
+    "source": "nasa-technical-reports-server-707153"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   }
+  ],
+  "notes": "Archangel says six were ordered in December 1962; Merlin says Lockheed received pre-contractual authority for six R-12 airframes in February 1963, with 24 more expected. McIninch confirms 31 SR-71s were produced."
+ },
+ {
+  "id": "a12-first-j58-flight",
+  "date": "1963-01-15",
+  "precision": "day",
+  "title": "First A-12 flight on two J58 engines",
+  "summary": "Pratt & Whitney J58 delays meant the first test A-12s flew on two J75s, or one J75 and one J58. The first flight with two J58s took place on 15 January 1963, ten engines were on hand by the end of that month, and thereafter every A-12 except the trainer was J58-powered.",
+  "program": "oxcart",
+  "airframes": [],
+  "people": [],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 21"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   }
+  ]
+ },
+ {
+  "id": "a12-collins-crash",
+  "date": "1963-05-24",
+  "precision": "day",
+  "title": "First A-12 loss: Ken Collins ejects",
+  "summary": "CIA pilot Ken Collins ejected from Article 123 (60-6926) after an iced-up pitot-static tube gave false airspeed readings and the aircraft stalled into an inverted spin; it crashed about 14 miles south of Wendover, Utah. Collins was unhurt, and the press was told an F-105 had crashed.",
+  "program": "oxcart",
+  "airframes": [
+   "60-6926"
+  ],
+  "people": [
+   "Ken Collins"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 22"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 50"
+   }
+  ],
+  "notes": "McIninch calls it a routine training flight; Archangel says it was a low-altitude subsonic flight testing an inertial navigation system."
+ },
+ {
+  "id": "a12-reaches-mach-3",
+  "date": "1963-07-20",
+  "precision": "day",
+  "title": "A-12 first reaches Mach 3",
+  "summary": "An A-12 flew at Mach 3 for the first time on 20 July 1963, about 15 months after first flight, and reached the Mach 3.2 design speed at 78,000 feet that November. Engine inlet 'unstarts' between about Mach 2.4 and 2.9 were the toughest obstacle, and Ben Rich later called developing the inlet control system the most exhausting work of his professional life.",
+  "program": "oxcart",
+  "airframes": [],
+  "people": [
+   "Ben Rich"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-80c044"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 14"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 48"
+   }
+  ],
+  "notes": "Archangel's narrative gives only 'July 1963'; its timeline and McIninch give 20 July."
+ },
+ {
+  "id": "yf12a-first-flight",
+  "date": "1963-08-07",
+  "precision": "day",
+  "title": "YF-12A interceptor first flight",
+  "summary": "Lockheed test pilot Jim Eastham flew the first YF-12A, 60-6934, from the secret Nevada base, with Lou Schalk flying chase in an F-104. Early YF-12A testing was carried out in secret through 1963 and early 1964.",
+  "program": "kedlock",
+  "airframes": [
+   "60-6934"
+  ],
+  "people": [
+   "Jim Eastham",
+   "Lou Schalk"
+  ],
+  "citations": [
+   {
+    "source": "nasa-bbc042"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 48"
+   },
+   {
+    "source": "this-day-in-aviation-7789ed"
+   },
+   {
+    "source": "roadrunners-internationale-a-12-program--4a96f0"
+   }
+  ]
+ },
+ {
+  "id": "a12-sustained-design-conditions",
+  "date": "1964-02-03",
+  "precision": "day",
+  "title": "First sustained flight at design conditions",
+  "summary": "An A-12 held Mach 3.2 at 83,000 feet for ten minutes, the first sustained flight at operational conditions. By the end of 1964 the fleet had made 1,160 flights totaling 1,616 hours.",
+  "program": "oxcart",
+  "airframes": [],
+  "people": [],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-80c044"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 21"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 48"
+   }
+  ],
+  "notes": "Archangel's narrative dates this only to February 1964; its timeline and McIninch give 3 February."
+ },
+ {
+  "id": "lbj-announces-a11",
+  "date": "1964-02-29",
+  "precision": "day",
+  "title": "President Johnson reveals the 'A-11'",
+  "summary": "At a news conference President Lyndon Johnson announced 'an advanced experimental jet aircraft, the A-11', tested at more than 2,000 mph and above 70,000 feet. 'A-11' was a cover name proposed by Kelly Johnson for the Air Force's YF-12A, and two were hurriedly flown from Nevada to Edwards AFB, where their heat set off the hangar sprinklers, while the CIA's A-12 stayed secret.",
+  "program": "kedlock",
+  "airframes": [],
+  "people": [
+   "Lyndon B. Johnson",
+   "Kelly Johnson"
+  ],
+  "citations": [
+   {
+    "source": "the-american-presidency-project-uc-santa-da9d4e"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 27"
+   },
+   {
+    "source": "nasa-bbc042"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   }
+  ],
+  "notes": "McIninch dates the press conference 24 February 1964, but the American Presidency Project transcript and Archangel give 29 February; Kelly Johnson's log entry for 25 February 1964 records him drafting the 'A-11' wording (quoted in Mach 3+), so 24 February appears to be an error."
+ },
+ {
+  "id": "a12-park-crash",
+  "date": "1964-07-09",
+  "precision": "day",
+  "title": "Bill Park ejects from Article 133",
+  "summary": "On approach after a Mach 3 check flight, Article 133 (60-6939) began an uncontrollable roll at about 500 feet because a roll and pitch control servo froze. Lockheed test pilot Bill Park ejected at roughly 200 feet and escaped injury, and the accident was kept secret.",
+  "program": "oxcart",
+  "airframes": [
+   "60-6939"
+  ],
+  "people": [
+   "Bill Park"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 23"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 50"
+   }
+  ],
+  "notes": "The CIA histories spell his name 'Parks' in the crash accounts; Archangel lists him as Bill Park among the Lockheed test pilots. Article 133 had flown only 10 flights and 8.3 hours (Archangel inventory)."
+ },
+ {
+  "id": "lbj-announces-sr71",
+  "date": "1964-07-24",
+  "precision": "day",
+  "title": "SR-71 announced",
+  "summary": "President Johnson announced the SR-71, a long-range strategic reconnaissance aircraft for Strategic Air Command able to fly at more than three times the speed of sound above 80,000 feet, using the same J58 engines as the interceptor revealed in February. The aircraft had been developed under the designation RS-71 (reconnaissance/strike).",
+  "program": "senior-crown",
+  "airframes": [],
+  "people": [
+   "Lyndon B. Johnson",
+   "Curtis LeMay"
+  ],
+  "citations": [
+   {
+    "source": "the-american-presidency-project-uc-santa-ef6bda"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 53"
+   },
+   {
+    "source": "beale-air-force-base-9th-reconnaissance--575eac"
+   }
+  ],
+  "notes": "The naming story is disputed. CIA's Archangel says Johnson 'mistakenly transposed the designator letters' and the Air Force let the error stand. A 2014 Beale AFB history article says Air Force Chief of Staff Gen. Curtis LeMay preferred 'SR' and the change was made before the speech, but press transcripts still said RS-71, creating the rumor of a misreading; the American Presidency Project transcript reads 'SR-71'. The Beale article gives the date as 25 July 1964; the transcript is dated 24 July 1964."
+ },
+ {
+  "id": "sr71-first-flight",
+  "date": "1964-12-22",
+  "precision": "day",
+  "title": "SR-71 first flight",
+  "summary": "Lockheed test pilot Bob Gilliland flew the first SR-71A, 61-7950, from Air Force Plant 42 at Palmdale, California, and landed at Edwards AFB to begin the flight test program.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7950"
+  ],
+  "people": [
+   "Bob Gilliland"
+  ],
+  "citations": [
+   {
+    "source": "national-museum-of-the-united-states-air-0f15b5"
+   },
+   {
+    "source": "edwards-air-force-base-527710"
+   },
+   {
+    "source": "this-day-in-aviation-045fb4"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 49"
+   }
+  ],
+  "notes": "Reported first-flight performance differs: Edwards AFB (2014) says Mach 1.5 and 50,000 feet; This Day in Aviation says above 45,000 feet and more than 1,000 mph."
+ },
+ {
+  "id": "md21-first-captive-flight",
+  "date": "1964-12-22",
+  "precision": "day",
+  "title": "First M-21/D-21 captive flight",
+  "summary": "On the same day as the SR-71's first flight, an M-21 mothership flew for the first time carrying a D-21 drone on its back, with no launch attempted. Captive-carry testing revealed range and transonic acceleration problems with the combination.",
+  "program": "tagboard",
+  "airframes": [],
+  "people": [
+   "Bill Park"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 49"
+   },
+   {
+    "source": "roadrunners-internationale-a-12-program--47a843"
+   },
+   {
+    "source": "nasa-bbc042"
+   }
+  ],
+  "notes": "Which of the two M-21s made this flight was not established in the sources checked. Archangel says Bill Park flew all M-21 flights."
+ },
+ {
+  "id": "a12-mach-3-29",
+  "date": "1965-05",
+  "precision": "month",
+  "title": "A-12 reaches Mach 3.29 in secret",
+  "summary": "About a week after the YF-12A's public records, a CIA pilot flew an A-12 to Mach 3.29, and in August 1965 an A-12 cruised at 90,000 feet; both facts stayed classified for more than 30 years. These were the peak speed and altitude of the A-12 program.",
+  "program": "oxcart",
+  "airframes": [],
+  "people": [],
+  "citations": [
+   {
+    "source": "nasa-technical-reports-server-707153"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 21"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 49"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   }
+  ],
+  "notes": "Sources differ. Archangel's narrative says Mach 3.29 and 90,000 ft were reached by separate aircraft in May and August 1965, but its timeline lists both on a single A-12 flight on 20 November 1965, and McIninch lists them among the autumn 1965 validation results. Merlin converts Mach 3.29 to 2,171 mph; Archangel says 'over 2,200 mph'."
+ },
+ {
+  "id": "yf12a-world-records",
+  "date": "1965-05-01",
+  "precision": "day",
+  "title": "YF-12A sets world speed and altitude records",
+  "summary": "YF-12A crews set official records including 2,070.101 mph over a 15/25 km straight course, flown by Col. Robert L. Stephens and Lt. Col. Daniel Andre, a sustained altitude of 80,257.65 feet, and closed-circuit records of about 1,643 mph (500 km) and 1,689 mph (1,000 km). Stephens and Andre received the 1965 Thompson Trophy, and these were the first of many official records for the Blackbird family.",
+  "program": "kedlock",
+  "airframes": [
+   "60-6936"
+  ],
+  "people": [
+   "Robert L. Stephens",
+   "Daniel Andre",
+   "Walter F. Daniel"
+  ],
+  "citations": [
+   {
+    "source": "national-museum-of-the-united-states-air-01dc8f"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 28"
+   },
+   {
+    "source": "nasa-bbc042"
+   },
+   {
+    "source": "this-day-in-aviation-285c82"
+   }
+  ],
+  "notes": "Altitude is given as 80,257.65 ft by NMUSAF, CIA and NASA; This Day in Aviation lists the FAI altitude record as 24,463 m (80,259 ft). A figure of 80,257.86 ft sometimes quoted was not found in any source checked. This Day in Aviation attributes all the records to 60-6936, while NMUSAF says the first and third YF-12As set them."
+ },
+ {
+  "id": "a12-operationally-ready",
+  "date": "1965-11-12",
+  "precision": "day",
+  "title": "A-12 declared operationally ready",
+  "summary": "After Kelly Johnson moved to the test site full-time in August 1965 to fix wiring, inlet and quality problems, CIA's director of special activities declared the A-12, its sensors and its detachment operationally ready on 12 November 1965, and validation flights were complete by 20 November. Johnson wrote on 22 November that 'the time has come when the bird should leave its nest', but deployment requests were refused for more than a year.",
+  "program": "oxcart",
+  "airframes": [],
+  "people": [
+   "Kelly Johnson",
+   "John Parangosky"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 32"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   }
+  ],
+  "notes": "McIninch says Johnson began full-time duty at the site the day after a 3 August 1965 meeting with CIA's John Parangosky."
+ },
+ {
+  "id": "a12-vojvodich-crash",
+  "date": "1965-12-28",
+  "precision": "day",
+  "title": "Article 126 crashes on takeoff",
+  "summary": "Less than 30 seconds after takeoff, Article 126 (60-6929) became unflyable because an electrician had cross-wired the yaw and pitch gyros, in effect reversing the controls. CIA pilot Mele Vojvodich ejected at about 150 feet without injury, and a sabotage inquiry found negligence instead.",
+  "program": "oxcart",
+  "airframes": [
+   "60-6929"
+  ],
+  "people": [
+   "Mele Vojvodich"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 23"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   }
+  ],
+  "notes": "Archangel says DCI William Raborn ordered the sabotage investigation; McIninch attributes it to McCone, although Raborn had succeeded McCone as DCI in April 1965."
+ },
+ {
+  "id": "sr71-first-delivery-beale",
+  "date": "1966-01-07",
+  "precision": "day",
+  "title": "First SR-71 delivered to Beale AFB",
+  "summary": "The first SR-71 to enter Air Force service, an SR-71B two-seat trainer, was delivered to the 4200th Strategic Reconnaissance Wing at Beale AFB, California. Beale stayed the Blackbird's home until January 1990.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7956"
+  ],
+  "people": [
+   "Douglas Nelson",
+   "Raymond Haupt"
+  ],
+  "citations": [
+   {
+    "source": "dvids-70a023"
+   },
+   {
+    "source": "national-museum-of-the-united-states-air-0f15b5",
+    "detail": "Lockheed SR-71A (fact sheet)"
+   },
+   {
+    "source": "beale-air-force-base-7b16f3"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   },
+   {
+    "source": "roadrunners-internationale-258a6c"
+   }
+  ],
+  "notes": "Both Roadrunners Internationale timelines identify the aircraft as SR-71B 61-7956 flown by Col. Douglas Nelson and Lt. Col. Raymond Haupt. Beale AFB history material pictures Haupt with Col. Russell Lewis as the delivery crew. The NMUSAF fact sheet gives only January 1966."
+ },
+ {
+  "id": "sr71-61-7952-breakup",
+  "date": "1966-01-25",
+  "precision": "day",
+  "title": "SR-71 61-7952 breaks up at Mach 3; Jim Zwayer killed",
+  "summary": "On a Lockheed test flight from Edwards AFB, an inlet unstart during a turn at about Mach 3.17 and roughly 78,000 ft caused 61-7952 to disintegrate over northeastern New Mexico. Pilot Bill Weaver was torn from the aircraft and survived; Lockheed reconnaissance and navigation specialist Jim Zwayer was killed.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7952"
+  ],
+  "people": [
+   "Bill Weaver",
+   "Jim Zwayer"
+  ],
+  "citations": [
+   {
+    "source": "habu-org-08a1c9"
+   },
+   {
+    "source": "roadrunners-internationale-0dfa2c"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   },
+   {
+    "source": "roadrunners-internationale-258a6c"
+   }
+  ],
+  "notes": "Figures vary between sources: Mach 3.17 to over 3.2 and 78,000 to 80,000 ft. Habu.org calls Zwayer the only fatality aboard any SR-71."
+ },
+ {
+  "id": "first-d21-launch",
+  "date": "1966-03-05",
+  "precision": "day",
+  "title": "First D-21 launch from an M-21",
+  "summary": "The first D-21 drone was released from an M-21 mothership, though it hovered above the carrier's back for several seconds before separating. Further launches followed on 27 April and 16 June 1966, and on its second free flight the drone reached about Mach 3.3 and 90,000 feet.",
+  "program": "tagboard",
+  "airframes": [],
+  "people": [
+   "Bill Park",
+   "Kelly Johnson"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 49"
+   },
+   {
+    "source": "nasa-bbc042"
+   },
+   {
+    "source": "roadrunners-internationale-a-12-program--47a843"
+   },
+   {
+    "source": "nasa-technical-reports-server-707153"
+   },
+   {
+    "source": "american-institute-of-aeronautics-and-as-b032d7"
+   }
+  ],
+  "notes": "Kelly Johnson called the launch maneuver 'the most dangerous maneuver' of any airplane he had worked on (quoted in Mach 3+)."
+ },
+ {
+  "id": "ninth-srw-formed",
+  "date": "1966-06-25",
+  "precision": "day",
+  "title": "4200th SRW becomes the 9th Strategic Reconnaissance Wing",
+  "summary": "The 4200th Strategic Reconnaissance Wing was inactivated and the 9th Strategic Reconnaissance Wing took over the SR-71 mission at Beale AFB, with Col. Douglas Nelson as its first commander.",
+  "program": "senior-crown",
+  "airframes": [],
+  "people": [
+   "Douglas Nelson"
+  ],
+  "citations": [
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   },
+   {
+    "source": "national-museum-of-the-united-states-air-0f15b5",
+    "detail": "Lockheed SR-71A (fact sheet)"
+   }
+  ],
+  "notes": "Exact date from the Carpenter timeline (citing 9th Wing history); NMUSAF confirms the 4200th was 'later 9th' SRW."
+ },
+ {
+  "id": "m21-d21-collision",
+  "date": "1966-07-30",
+  "precision": "day",
+  "title": "M-21 destroyed in D-21 launch collision",
+  "summary": "On the fourth launch, off the California coast, the D-21 struck M-21 Article 135 (60-6941) on separation and the mothership broke up. Pilot Bill Park and launch control officer Ray Torick ejected into the Pacific; Park survived but Torick drowned, and Kelly Johnson ended launches from the M-21.",
+  "program": "tagboard",
+  "airframes": [
+   "60-6941"
+  ],
+  "people": [
+   "Bill Park",
+   "Ray Torick",
+   "Kelly Johnson"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 52"
+   },
+   {
+    "source": "nasa-bbc042"
+   },
+   {
+    "source": "american-institute-of-aeronautics-and-as-b032d7"
+   },
+   {
+    "source": "nasa-technical-reports-server-707153"
+   },
+   {
+    "source": "roadrunners-internationale-a-12-program--47a843"
+   }
+  ],
+  "notes": "Merlin's AIAA 2009-1522 paper dates the accident 31 July 1966; Archangel, AIAA 2007-5761 and Roadrunners Internationale give 30 July. Roadrunners attribute Torick's drowning to his pressure suit taking on water."
+ },
+ {
+  "id": "yf12a-aim47-lookdown-shot",
+  "date": "1966-09-21",
+  "precision": "day",
+  "title": "YF-12A's Mach 3.2 look-down missile shot",
+  "summary": "Flying at about Mach 3.2 and 74,000 feet, a YF-12A fired an AIM-47 at a QB-47 target drone flying near sea level, the best known of the interceptor's test shots. In all, seven guided AIM-47 launches from YF-12As scored six kills, the one miss being blamed on a missile power failure.",
+  "program": "kedlock",
+  "airframes": [
+   "60-6936"
+  ],
+  "people": [],
+  "citations": [
+   {
+    "source": "photorecon-net-97e52e"
+   },
+   {
+    "source": "directory-of-u-s-military-rockets-and-mi-4ff573"
+   },
+   {
+    "source": "edwards-air-force-base-527710"
+   }
+  ],
+  "notes": "Dates and parameters come from secondary sources (Photorecon.net and designation-systems.net); no primary document was found. Photorecon also lists hits on 22 March 1966 (Ryan Q-2C at 1,500 ft, fired from 74,500 ft at Mach 3.15) and 13 May 1966. Bob Gilliland, quoted by Edwards AFB, described the YF-12A as able to shoot a target 'at 500 feet while we were at 85,000'."
+ },
+ {
+  "id": "a12-park-10198-mile-flight",
+  "date": "1966-12-21",
+  "precision": "day",
+  "title": "Bill Park's 10,198-mile A-12 flight",
+  "summary": "Lockheed test pilot Bill Park flew an A-12 10,198 statute miles in about six hours, ranging from Nevada over Yellowstone, Duluth, Tampa, Portland and Knoxville and back, at an average of about 1,659 mph including refueling slowdowns. In October 1966 an A-12 had also flown a record 7 hour 40 minute endurance sortie.",
+  "program": "oxcart",
+  "airframes": [],
+  "people": [
+   "Bill Park"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-80c044"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 33"
+   },
+   {
+    "source": "nasa-technical-reports-server-707153"
+   }
+  ],
+  "notes": "Archangel dates the endurance flight to October 1966 (7 h 40 min); Merlin gives 18 October 1966 and 7.67 hours. Merlin rounds Park's flight to 10,200 miles."
+ },
+ {
+  "id": "a12-termination-decision",
+  "date": "1966-12-28",
+  "precision": "day",
+  "title": "President Johnson orders the A-12 retired",
+  "summary": "On 12 December 1966 Deputy Defense Secretary Cyrus Vance, Budget Director Charles Schultze and science adviser Donald Hornig voted, over DCI Richard Helms' objection, to end the CIA's A-12 program in favor of the Air Force SR-71. President Johnson accepted their recommendation on 28 December 1966, ordering termination by 1 January 1968, before the A-12 had flown a single operational mission.",
+  "program": "oxcart",
+  "airframes": [],
+  "people": [
+   "Lyndon B. Johnson",
+   "Richard Helms",
+   "Cyrus Vance"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-80c044"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 41"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 49"
+   }
+  ],
+  "notes": "Archangel's narrative says only 'late December'; McIninch and Archangel's timeline give 28 December. The deadline was later extended to mid-1968."
+ },
+ {
+  "id": "walter-ray-killed",
+  "date": "1967-01-05",
+  "precision": "day",
+  "title": "Walter Ray killed in Article 125",
+  "summary": "A faulty fuel gauge let Article 125 (60-6928) run out of fuel on descent about 70 miles from the base. CIA pilot Walter Ray ejected but could not separate from his seat and was killed, the program's first fatality; the Air Force told the press an SR-71 on a test flight from Edwards was missing.",
+  "program": "oxcart",
+  "airframes": [
+   "60-6928"
+  ],
+  "people": [
+   "Walter Ray"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 33"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 50"
+   }
+  ],
+  "notes": "McIninch says the wreckage was found on 6 January and Ray's body recovered a day later."
+ },
+ {
+  "id": "black-shield-deployment",
+  "date": "1967-05-22",
+  "precision": "day",
+  "title": "BLACK SHIELD: A-12s deploy to Kadena",
+  "summary": "After President Johnson approved deployment at his 16 May 1967 Tuesday lunch, Article 131 (60-6937) flew nonstop from Nevada to Kadena Air Base, Okinawa, in 6 hours 6 minutes on 22 May, followed by Article 127 (60-6930) on 24 May and Article 129 (60-6932), which diverted to Wake Island and arrived on 27 May. The 1129th Special Activities Squadron, Detachment 1, under Col. Hugh Slater, was ready for operations on 29 May.",
+  "program": "oxcart",
+  "airframes": [
+   "60-6937",
+   "60-6930",
+   "60-6932"
+  ],
+  "people": [
+   "Lyndon B. Johnson",
+   "Richard Helms",
+   "Hugh Slater",
+   "Mele Vojvodich",
+   "Jack Layton",
+   "Jack Weeks"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-80c044"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 33"
+   }
+  ],
+  "notes": "Archangel's timeline lists the first trans-Pacific A-12 flight as 23 May 1967, probably the Okinawa local date; McIninch gives 22 May. Archangel lists the aircraft (131, 127, 129) and pilots (Vojvodich, Layton, Weeks) in the same order but does not pair them explicitly."
+ },
+ {
+  "id": "first-black-shield-mission",
+  "date": "1967-05-31",
+  "precision": "day",
+  "title": "First operational A-12 mission, over North Vietnam",
+  "summary": "Mele Vojvodich took off from Kadena in a downpour in Article 131 (60-6937) for a 3 hour 39 minute mission flown at Mach 3.1 and about 80,000 feet. He photographed 70 of the 190 known SAM sites in North Vietnam and nine other priority targets; no radar tracked the aircraft and no surface-to-surface missiles were found.",
+  "program": "oxcart",
+  "airframes": [
+   "60-6937"
+  ],
+  "people": [
+   "Mele Vojvodich",
+   "Jack Layton",
+   "Jack Weeks"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 33"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 35"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 51"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   }
+  ],
+  "notes": "Layton was the secondary pilot and Weeks the backup (Archangel)."
+ },
+ {
+  "id": "first-d21b-launch-attempt",
+  "date": "1967-09-28",
+  "precision": "day",
+  "title": "First D-21B launch attempt from a B-52H",
+  "summary": "After the M-21 accident the drones were reworked as D-21Bs with a solid rocket booster for launch from under the wing of a B-52H. The first attempt failed when the drone fell prematurely from the bomber, its booster fired and it flew into the ground; the first fully successful test launch followed on 16 June 1968.",
+  "program": "senior-bowl",
+  "airframes": [],
+  "people": [
+   "Kelly Johnson"
+  ],
+  "citations": [
+   {
+    "source": "american-institute-of-aeronautics-and-as-b032d7"
+   },
+   {
+    "source": "nasa-technical-reports-server-707153"
+   }
+  ],
+  "notes": "Johnson proposed the B-52 launch scheme to Strategic Air Command on 29 April 1966 (Merlin), and the reoriented D-21B program was formally approved in September 1966 (AIAA 2007-5761)."
+ },
+ {
+  "id": "nice-girl-flyoff",
+  "date": "1967-10-20",
+  "precision": "day",
+  "title": "NICE GIRL: A-12 versus SR-71 fly-off",
+  "summary": "Between 20 October and 3 November 1967, A-12s and SR-71s flew three identical routes along the Mississippi River about an hour apart to help decide which fleet to keep. The results were inconclusive: the A-12's camera had a wider swath and higher resolution, but the SR-71 carried infrared, side-looking radar and ELINT sensors the A-12 lacked.",
+  "program": "oxcart",
+  "airframes": [],
+  "people": [],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 42"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 49"
+   }
+  ]
+ },
+ {
+  "id": "a12-sam-fragment",
+  "date": "1967-10-30",
+  "precision": "day",
+  "title": "Six SAMs fired at an A-12; fragment found",
+  "summary": "Two days after North Vietnam fired its first SA-2 at an A-12 (28 October, Dennis Sullivan in Article 131), at least six missiles were launched at Sullivan in Article 129 (60-6932), flying at Mach 3.1 and 84,000 feet near Hanoi, and he saw three detonations behind him. A small piece of metal, probably missile debris, was found lodged in the lower right wing after landing, the closest an A-12 came to being shot down.",
+  "program": "oxcart",
+  "airframes": [
+   "60-6932",
+   "60-6937"
+  ],
+  "people": [
+   "Dennis Sullivan"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 36"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 51"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   }
+  ],
+  "notes": "SAMs were fired at A-12s on three missions in all (28 and 30 October 1967 and 4 January 1968), with damage only on 30 October (Archangel). McIninch says the fragment 'was not a warhead pellet'."
+ },
+ {
+  "id": "f12b-cancelled",
+  "date": "1967-12-29",
+  "precision": "day",
+  "title": "F-12B interceptor cancelled",
+  "summary": "Defense Secretary Robert McNamara would not fund the operational F-12B interceptor, and on 29 December 1967 the Air Force instructed Lockheed to stop F-12B development; the YF-12A program ended on 1 February 1968 and the surviving YF-12As went into storage. NMUSAF cites high costs, the Vietnam War and a lower priority for continental air defense.",
+  "program": "kedlock",
+  "airframes": [
+   "60-6935",
+   "60-6936"
+  ],
+  "people": [
+   "Robert McNamara",
+   "Kelly Johnson"
+  ],
+  "citations": [
+   {
+    "source": "nasa-bbc042"
+   },
+   {
+    "source": "nasa-technical-reports-server-707153"
+   },
+   {
+    "source": "national-museum-of-the-united-states-air-01dc8f"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 49"
+   }
+  ],
+  "notes": "Archangel's timeline dates the Air Force cancellation of the YF-12A program to 5 January 1968, and Archangel's narrative says McNamara cancelled KEDLOCK in early 1968. The date of the last USAF YF-12A flight was not found."
+ },
+ {
+  "id": "habu-nickname",
+  "date": "1968",
+  "precision": "approx",
+  "title": "The 'Habu' nickname and tie-cutting tradition",
+  "summary": "On Okinawa the SR-71 became known as the 'Habu', after the venomous pit viper native to the Ryukyu Islands, and its crews as Habus. Crew chiefs cut the ties of crews returning from their first operational sortie, a tradition reportedly begun on 29 May 1968.",
+  "program": "senior-crown",
+  "airframes": [],
+  "people": [
+   "Bill Gornick"
+  ],
+  "citations": [
+   {
+    "source": "roadrunners-internationale-258a6c"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   },
+   {
+    "source": "habu-org-54846f"
+   }
+  ],
+  "notes": "Hildebrant's timeline places the nickname in winter 1968; no primary source dates it precisely. The crew chief's name is spelled Gornick, Gornik and Gormick in different sources."
+ },
+ {
+  "id": "pueblo-overflight",
+  "date": "1968-01-26",
+  "precision": "day",
+  "title": "A-12 finds the USS Pueblo",
+  "summary": "Three days after North Korea seized the USS Pueblo, Jack Weeks flew Article 131 (60-6937) on a three-pass mission over North Korea, photographing the ship in a bay north of Wonsan and finding no sign of North Korean mobilization. Chinese radar tracked the A-12 but no missiles were fired.",
+  "program": "oxcart",
+  "airframes": [
+   "60-6937"
+  ],
+  "people": [
+   "Jack Weeks"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 37"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 38"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 51"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   }
+  ]
+ },
+ {
+  "id": "sr71-deploy-kadena-ol8",
+  "date": "1968-03-08",
+  "precision": "day",
+  "title": "First SR-71s deploy to Kadena (OL-8)",
+  "summary": "SR-71A 61-7978 arrived at Kadena AB, Okinawa, followed by 61-7976 on 10 March and 61-7974 on 13 March, forming Operating Location 8 to take over the reconnaissance role of the CIA's A-12s. All three were reported operational by 15 March 1968.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7978",
+   "61-7976",
+   "61-7974"
+  ],
+  "people": [
+   "Buddy Brown",
+   "David Jensen",
+   "Jerome O'Malley",
+   "Edward Payne",
+   "Robert Spencer"
+  ],
+  "citations": [
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   },
+   {
+    "source": "roadrunners-internationale-258a6c"
+   }
+  ],
+  "notes": "The code name GLOWING HEAT for the transpacific deployments appears in secondary sources but was not confirmed in a primary document for this pack."
+ },
+ {
+  "id": "sr71-first-operational-sortie",
+  "date": "1968-03-21",
+  "precision": "day",
+  "title": "First operational SR-71 sortie",
+  "summary": "Maj. Jerome F. O'Malley and Maj. Edward D. Payne flew the first operational SR-71 sortie, over North Vietnam from Kadena, in 61-7976. That airframe went on to log 2,981 flying hours and 942 sorties, more than any other SR-71, including 257 operational missions.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7976"
+  ],
+  "people": [
+   "Jerome O'Malley",
+   "Edward Payne"
+  ],
+  "citations": [
+   {
+    "source": "national-museum-of-the-united-states-air-0f15b5",
+    "detail": "Lockheed SR-71A (fact sheet)"
+   },
+   {
+    "source": "habu-org-183f12"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   }
+  ]
+ },
+ {
+  "id": "last-a12-mission",
+  "date": "1968-05-08",
+  "precision": "day",
+  "title": "Last A-12 operational mission",
+  "summary": "Jack Layton flew Article 127 (60-6930) on the final BLACK SHIELD sortie, a two-pass mission over North Korea that found no sign of a military buildup. A-12s flew 29 operational missions in all from Kadena: 24 over North Vietnam, two over Cambodia, Laos and the DMZ, and three over North Korea.",
+  "program": "oxcart",
+  "airframes": [
+   "60-6930"
+  ],
+  "people": [
+   "Jack Layton"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-80c044"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 35"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 42"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 51"
+   }
+  ],
+  "notes": "CIA sources disagree on the date: McIninch and Archangel's narrative (p. 42) give 8 May 1968, while Archangel's mission table, map and milestone timeline give 6 May 1968."
+ },
+ {
+  "id": "jack-weeks-lost",
+  "date": "1968-06-04",
+  "precision": "day",
+  "title": "Jack Weeks lost over the Pacific",
+  "summary": "On a check flight from Kadena after an engine change, Article 129 (60-6932) disappeared about 520 miles east of Manila, and no trace of the aircraft or of CIA pilot Jack Weeks was found. Telemetry suggested engine trouble, and the official release again called the aircraft an SR-71.",
+  "program": "oxcart",
+  "airframes": [
+   "60-6932"
+  ],
+  "people": [
+   "Jack Weeks"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 42"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 50"
+   }
+  ],
+  "notes": "Both CIA histories give 4 June 1968; many secondary sources give 5 June 1968, probably a time-zone or local-date difference."
+ },
+ {
+  "id": "last-a12-flight",
+  "date": "1968-06-21",
+  "precision": "day",
+  "title": "Final A-12 flight",
+  "summary": "Defense Secretary Clark Clifford reaffirmed the termination on 16 May and President Johnson concurred on 21 May 1968; the Kadena A-12s flew home on 8 and 19 June. Frank Murray made the last A-12 flight on 21 June 1968, taking Article 131 (60-6937) from the Nevada test site to storage at Palmdale, California.",
+  "program": "oxcart",
+  "airframes": [
+   "60-6937"
+  ],
+  "people": [
+   "Frank Murray",
+   "Clark Clifford",
+   "Lyndon B. Johnson"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 42"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 49"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   },
+   {
+    "source": "nasa-technical-reports-server-707153"
+   }
+  ],
+  "notes": "McIninch says the A-12s at the Nevada base were in storage by 7 June and that the two remaining Okinawa aircraft returned 'a few days' after Weeks' loss."
+ },
+ {
+  "id": "intelligence-star-ceremony",
+  "date": "1968-06-26",
+  "precision": "day",
+  "title": "BLACK SHIELD pilots receive the CIA Intelligence Star",
+  "summary": "At the Nevada base, Deputy DCI Vice Adm. Rufus Taylor presented the CIA Intelligence Star for valor to Ken Collins, Jack Layton, Frank Murray, Dennis Sullivan and Mele Vojvodich, and Jack Weeks' widow accepted his posthumous award. The pilots' wives learned for the first time what their husbands had been doing, and guest speaker Kelly Johnson lamented the end of his greatest design achievement.",
+  "program": "oxcart",
+  "airframes": [],
+  "people": [
+   "Ken Collins",
+   "Jack Layton",
+   "Frank Murray",
+   "Dennis Sullivan",
+   "Mele Vojvodich",
+   "Jack Weeks",
+   "Kelly Johnson",
+   "Rufus Taylor",
+   "Hugh Slater"
+  ],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-80c044"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 43"
+   }
+  ],
+  "notes": "Col. Hugh Slater and his deputy Col. Maynard Amundson received the Legion of Merit, and the detachment received the Air Force Outstanding Unit Award."
+ },
+ {
+  "id": "yf12-nasa-program-announced",
+  "date": "1969-07-18",
+  "precision": "day",
+  "title": "NASA and USAF announce joint YF-12 research program",
+  "summary": "NASA and the Air Force announced a joint flight research program using YF-12As 60-6935 and 60-6936 taken from Air Force storage. NASA's work focused on loads, structural heating, propulsion and supersonic cruise technology, led by Gene Matranga.",
+  "program": "nasa",
+  "airframes": [
+   "60-6935",
+   "60-6936"
+  ],
+  "people": [
+   "Gene Matranga"
+  ],
+  "citations": [
+   {
+    "source": "nasa-dryden-flight-research-center-9398ad"
+   },
+   {
+    "source": "nasa-history-division-d3ceea"
+   }
+  ]
+ },
+ {
+  "id": "senior-bowl-mission-1",
+  "date": "1969-11-09",
+  "precision": "day",
+  "title": "First SENIOR BOWL mission over China",
+  "summary": "A B-52H launched a D-21B over East Asia on the first operational SENIOR BOWL mission. The drone reached cruise altitude above Mach 3 but disappeared over China and its film hatch was never recovered.",
+  "program": "senior-bowl",
+  "airframes": [],
+  "people": [],
+  "citations": [
+   {
+    "source": "american-institute-of-aeronautics-and-as-b032d7"
+   },
+   {
+    "source": "national-museum-of-the-united-states-air-ef079b"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 52"
+   }
+  ],
+  "notes": "AIAA 2007-5761 gives 9 November 1969 in its text but 10 November 1969 in its flight table. Secondary accounts say the drone failed to turn for home and came down in Soviet territory, and that the target was the Lop Nur nuclear test site; neither point was confirmed in a primary source."
+ },
+ {
+  "id": "yf12-nasa-first-flight",
+  "date": "1969-12-11",
+  "precision": "day",
+  "title": "First NASA/USAF YF-12A research flight",
+  "summary": "YF-12A 60-6935 flew the first sortie of the joint program at Edwards AFB. Over its life the YF-12 program logged 297 flights and about 450 flight hours and produced more than 125 technical reports.",
+  "program": "nasa",
+  "airframes": [
+   "60-6935"
+  ],
+  "people": [
+   "Joseph Rogers",
+   "Gary Heidelbaugh"
+  ],
+  "citations": [
+   {
+    "source": "nasa-dryden-flight-research-center-9398ad"
+   },
+   {
+    "source": "nasa-history-division-d3ceea"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   }
+  ],
+  "notes": "Crew from the Carpenter timeline. Hildebrant's timeline gives 10 December 1969; NASA gives 11 December."
+ },
+ {
+  "id": "sr71-61-7969-loss",
+  "date": "1970-05-10",
+  "precision": "day",
+  "title": "SR-71A 61-7969 lost near Korat, Thailand",
+  "summary": "61-7969 was lost near Korat RTAFB, Thailand, during an operational sortie from Kadena. Maj. William Lawson and Maj. Gil Martinez ejected safely.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7969"
+  ],
+  "people": [
+   "William Lawson",
+   "Gil Martinez"
+  ],
+  "citations": [
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   },
+   {
+    "source": "roadrunners-internationale-258a6c"
+   },
+   {
+    "source": "habu-org-5026e6"
+   }
+  ],
+  "notes": "Date disagreement: both Roadrunners timelines give 10 May 1970; habu.org gives 1 May 1970. Cause also differs: habu.org describes a double flameout after the aircraft could not avoid a thunderstorm following air refueling, while Hildebrant cites a pitch-up linked to an improper center of gravity."
+ },
+ {
+  "id": "sr71-61-7970-loss",
+  "date": "1970-06-17",
+  "precision": "day",
+  "title": "SR-71A 61-7970 lost after tanker collision",
+  "summary": "During air refueling near El Paso, Texas, 61-7970 pitched up into its KC-135Q tanker and was lost. Pilot Buddy Brown and RSO Mort Jarvis ejected safely and the tanker recovered to Beale AFB.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7970"
+  ],
+  "people": [
+   "Buddy Brown",
+   "Mort Jarvis"
+  ],
+  "citations": [
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   },
+   {
+    "source": "roadrunners-internationale-258a6c"
+   }
+  ]
+ },
+ {
+  "id": "senior-bowl-mission-2",
+  "date": "1970-12-16",
+  "precision": "day",
+  "title": "Second SENIOR BOWL mission",
+  "summary": "The second operational D-21B flew about 2,448 nautical miles and returned toward the recovery area, but its imagery was not recovered.",
+  "program": "senior-bowl",
+  "airframes": [],
+  "people": [],
+  "citations": [
+   {
+    "source": "american-institute-of-aeronautics-and-as-b032d7"
+   },
+   {
+    "source": "national-museum-of-the-united-states-air-ef079b"
+   }
+  ],
+  "notes": "Secondary accounts say the payload parachute failed and the hatch was lost at sea; not confirmed in a primary source."
+ },
+ {
+  "id": "senior-bowl-mission-3",
+  "date": "1971-03-04",
+  "precision": "day",
+  "title": "Third SENIOR BOWL mission",
+  "summary": "The third operational D-21B flew about 2,935 nautical miles and completed its route, but again the imagery was not recovered.",
+  "program": "senior-bowl",
+  "airframes": [],
+  "people": [],
+  "citations": [
+   {
+    "source": "american-institute-of-aeronautics-and-as-b032d7"
+   },
+   {
+    "source": "national-museum-of-the-united-states-air-ef079b"
+   }
+  ],
+  "notes": "Secondary accounts say the mid-air catch failed and a recovery ship ran over the floating hatch; not confirmed in a primary source."
+ },
+ {
+  "id": "senior-bowl-mission-4",
+  "date": "1971-03-20",
+  "precision": "day",
+  "title": "Fourth and last SENIOR BOWL mission",
+  "summary": "The final operational D-21B was boosted and launched successfully but was lost during the flight. None of the four SENIOR BOWL missions over China fully succeeded.",
+  "program": "senior-bowl",
+  "airframes": [],
+  "people": [],
+  "citations": [
+   {
+    "source": "american-institute-of-aeronautics-and-as-b032d7"
+   },
+   {
+    "source": "national-museum-of-the-united-states-air-ef079b"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 52"
+   }
+  ],
+  "notes": "Secondary accounts say the drone came down in Yunnan province, China; not confirmed in a primary source."
+ },
+ {
+  "id": "yf12a-60-6936-loss",
+  "date": "1971-06-24",
+  "precision": "day",
+  "title": "YF-12A 60-6936 lost to in-flight fire",
+  "summary": "On its 62nd flight of the joint program, a failed fuel line in the right engine started a fire; Lt. Col. Ronald 'Jack' Layton and Maj. Billy Curtis ejected uninjured near Edwards AFB. It was the YF-12 research program's only crash.",
+  "program": "nasa",
+  "airframes": [
+   "60-6936"
+  ],
+  "people": [
+   "Ronald Layton",
+   "Billy Curtis"
+  ],
+  "citations": [
+   {
+    "source": "nasa-dryden-flight-research-center-9398ad"
+   },
+   {
+    "source": "nasa-history-division-d3ceea"
+   }
+  ]
+ },
+ {
+  "id": "d21-program-cancelled",
+  "date": "1971-07-15",
+  "precision": "day",
+  "title": "D-21 program cancelled",
+  "summary": "With no fully successful missions, little CIA interest and photo-reconnaissance satellites maturing, the D-21 program was cancelled in July 1971. Of the 38 D-21s built, 4 were expended in TAGBOARD tests and 17 on SENIOR BOWL flights.",
+  "program": "senior-bowl",
+  "airframes": [],
+  "people": [],
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 49"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 52"
+   },
+   {
+    "source": "american-institute-of-aeronautics-and-as-b032d7"
+   },
+   {
+    "source": "national-museum-of-the-united-states-air-ef079b"
+   },
+   {
+    "source": "national-reconnaissance-office-center-fo-02095b"
+   }
+  ],
+  "notes": "Archangel's milestone timeline gives 15 July 1971 and labels it 'TAGBOARD program discontinued'; its narrative and AIAA 2007-5761 say SENIOR BOWL was cancelled in July 1971 without a day."
+ },
+ {
+  "id": "yf12c-arrives-nasa",
+  "date": "1971-07-16",
+  "precision": "day",
+  "title": "The 'YF-12C', really SR-71A 61-7951, joins NASA",
+  "summary": "Because NASA was not then allowed to openly operate the reconnaissance version, the Air Force loaned the second SR-71A, 61-7951, under the cover designation YF-12C with the borrowed tail number 06937, which actually belonged to a still-secret A-12. It arrived at the NASA Flight Research Center on 16 July 1971 and made its last NASA flight on 28 September 1978.",
+  "program": "nasa",
+  "airframes": [
+   "61-7951",
+   "60-6937"
+  ],
+  "people": [
+   "Gene Matranga"
+  ],
+  "citations": [
+   {
+    "source": "nasa-dryden-flight-research-center-9398ad"
+   },
+   {
+    "source": "nasa-history-division-d3ceea"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   }
+  ],
+  "notes": "NASA FS-047 writes the serial as 64-17951; Merlin writes 61-7951. Merlin notes 06937 was chosen to follow the YF-12A tail numbers 06934 to 06936, and that the real A-12 60-6937 stayed unknown to the public until 1982. The aircraft returned to the Air Force on 27 October 1978; Merlin's flight log shows a final flight (no. 090) to storage at Palmdale on 22 December 1978."
+ },
+ {
+  "id": "sr71-61-7978-loss",
+  "date": "1972-07-20",
+  "precision": "day",
+  "title": "'Rapid Rabbit' 61-7978 lost landing at Kadena",
+  "summary": "61-7978, nicknamed 'Rapid Rabbit' for the Playboy bunny on its rudders, was destroyed when pilot Denny Bush tried to land at Kadena in extreme crosswinds after jettisoning the brake chute during a go-around. Bush and RSO Jimmy Fagg survived.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7978"
+  ],
+  "people": [
+   "Denny Bush",
+   "Jimmy Fagg"
+  ],
+  "citations": [
+   {
+    "source": "habu-org-6c992e"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   },
+   {
+    "source": "roadrunners-internationale-258a6c"
+   }
+  ]
+ },
+ {
+  "id": "giant-reach-yom-kippur",
+  "date": "1973-10-13",
+  "precision": "day",
+  "title": "First SR-71 mission of the Yom Kippur War",
+  "summary": "On JCS orders SAC moved SR-71s to Griffiss AFB, New York, and Lt. Col. James Shelton and Lt. Col. Gary Coleman flew the first GIANT REACH photo reconnaissance mission over the Middle East, an 11 hour 13 minute round trip supported by 14 KC-135Q tankers. Further sorties followed, later from Seymour Johnson AFB, North Carolina.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7979"
+  ],
+  "people": [
+   "James Shelton",
+   "Gary Coleman",
+   "Eldon Joersz",
+   "John Fuller"
+  ],
+  "citations": [
+   {
+    "source": "national-security-archive-george-washing-63e6f1"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   },
+   {
+    "source": "smithsonian-national-air-and-space-museu-2583e3"
+   }
+  ],
+  "notes": "SAC's December 1973 chronology records the 11 October deployment order, the 13 October mission and the second mission on 25 October (Capt. E. W. Joersz and Capt. J. T. Fuller); it says the first sortie beat the previous SR-71 duration record of 10 hours 33 minutes from April 1971. The airframe 61-7979 comes from the Carpenter timeline."
+ },
+ {
+  "id": "det1-kadena-activated",
+  "date": "1974-08-09",
+  "precision": "day",
+  "title": "Kadena operating location becomes Detachment 1",
+  "summary": "The Kadena SR-71 unit, known successively as OL-8, OL-RK (from 30 October 1970) and OL-KA (from 26 October 1971), was redesignated Detachment 1, 9th Strategic Reconnaissance Wing.",
+  "program": "senior-crown",
+  "airframes": [],
+  "people": [],
+  "citations": [
+   {
+    "source": "blackbirds-net-7263f9"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   },
+   {
+    "source": "roadrunners-internationale-258a6c"
+   }
+  ],
+  "notes": "Day of month from Blackbirds.net and the Carpenter timeline; Hildebrant gives only August 1974."
+ },
+ {
+  "id": "record-new-york-london",
+  "date": "1974-09-01",
+  "precision": "day",
+  "title": "New York to London in under two hours",
+  "summary": "Maj. James Sullivan and Maj. Noel Widdifield flew 61-7972 from New York to London in 1 hour 54 minutes 56.4 seconds, averaging 2,908 km/h (1,806.96 mph), on the SR-71's first visit to Britain for the Farnborough air show.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7972"
+  ],
+  "people": [
+   "James Sullivan",
+   "Noel Widdifield"
+  ],
+  "citations": [
+   {
+    "source": "this-day-in-aviation-bryan-r-swopes-ad691e"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   },
+   {
+    "source": "roadrunners-internationale-258a6c"
+   }
+  ],
+  "notes": "Some secondary sources give 1,817 mph; the FAI-certified figure quoted by This Day in Aviation is 2,908.026 km/h. The average includes slowing for air refueling."
+ },
+ {
+  "id": "record-london-los-angeles",
+  "date": "1974-09-13",
+  "precision": "day",
+  "title": "London to Los Angeles in 3 h 47 min",
+  "summary": "Buck Adams and RSO William Machorek flew 61-7972 from London to Los Angeles, 5,446.87 miles, in 3 hours 47 minutes 39 seconds, averaging about 1,435.5 mph. A first attempt the day before was abandoned.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7972"
+  ],
+  "people": [
+   "Buck Adams",
+   "William Machorek"
+  ],
+  "citations": [
+   {
+    "source": "this-day-in-aviation-bryan-r-swopes-91b065"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   },
+   {
+    "source": "roadrunners-internationale-258a6c"
+   }
+  ],
+  "notes": "The research brief named the pilot as Shoemaker; every source consulted names Buck Adams as pilot with William Machorek as RSO. Average speed is 1,435.59 mph (Carpenter) or 1,435.49 mph (This Day in Aviation)."
+ },
+ {
+  "id": "d21-storage-davis-monthan",
+  "date": "1976",
+  "precision": "approx",
+  "title": "Stored D-21s surface at Davis-Monthan",
+  "summary": "By 1976 or 1977 the remaining drones had been moved to outdoor storage at the Military Aircraft Storage and Disposition Center at Davis-Monthan AFB, Arizona, where their appearance set off public speculation about the secret program. Survivors later went to museums including NMUSAF, Pima Air and Space Museum and the Museum of Flight in Seattle, which displays the only D-21 mated to an M-21.",
+  "program": "senior-bowl",
+  "airframes": [],
+  "people": [],
+  "citations": [
+   {
+    "source": "american-institute-of-aeronautics-and-as-b032d7"
+   },
+   {
+    "source": "national-museum-of-the-united-states-air-ef079b"
+   },
+   {
+    "source": "national-reconnaissance-office-244bb3"
+   }
+  ],
+  "notes": "AIAA 2007-5761 says '1976 or 1977'. The NRO released 97 declassified D-21 documents on 21 March 2019, when its D-21 went on long-term loan to the Southern Museum of Flight, Birmingham, Alabama."
+ },
+ {
+  "id": "det4-first-deployment",
+  "date": "1976-04-20",
+  "precision": "day",
+  "title": "SR-71 operations begin from RAF Mildenhall",
+  "summary": "61-7972 arrived at RAF Mildenhall for a 10-day deployment, the start of SR-71 reconnaissance operations from England that ran until 1990.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7972"
+  ],
+  "people": [
+   "Pat Bledsoe",
+   "John Fuller"
+  ],
+  "citations": [
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   },
+   {
+    "source": "roadrunners-internationale-258a6c"
+   },
+   {
+    "source": "raf-fairford-raf-fairford-co-uk-f59b54"
+   },
+   {
+    "source": "smithsonian-national-air-and-space-museu-2583e3"
+   }
+  ],
+  "notes": "Hildebrant says the first two operational sorties toward the Barents Sea were aborted for low fuel and the first successful Det 4 mission was flown by 61-7962 on 7 September 1976; Carpenter credits a first operational sortie in April 1976 to Maury Rosenberg and Don Bulloch. The Smithsonian says Europe operations began, only temporarily, in 1974."
+ },
+ {
+  "id": "record-1000km-closed-circuit",
+  "date": "1976-07-27",
+  "precision": "day",
+  "title": "Closed-circuit speed record: 2,092 mph",
+  "summary": "Capt. Adolphus 'Pat' Bledsoe and Maj. John Fuller set the world record for speed over a 1,000 km closed circuit, 3,367.22 km/h (2,092.29 mph), in 61-7958 flying from Beale AFB.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7958"
+  ],
+  "people": [
+   "Adolphus Bledsoe",
+   "John Fuller"
+  ],
+  "citations": [
+   {
+    "source": "fai-federation-aeronautique-internationa-521c18"
+   },
+   {
+    "source": "this-day-in-aviation-bryan-r-swopes-553685"
+   },
+   {
+    "source": "habu-org-4f4164"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   }
+  ],
+  "notes": "The FAI's 2026 anniversary article and habu.org agree Bledsoe's record came the day before the two 28 July records; habu.org explains the plan to set all three in 61-7958 on one day was split by weather and mechanical delays."
+ },
+ {
+  "id": "record-absolute-speed",
+  "date": "1976-07-28",
+  "precision": "day",
+  "title": "Absolute speed record: 2,193.17 mph",
+  "summary": "Capt. Eldon Joersz and Maj. George Morgan flew 61-7958 over a 15/25 km straight course at 3,529.56 km/h (2,193.17 mph). FAI record 8879, the absolute speed record for air-breathing aircraft, still stands.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7958"
+  ],
+  "people": [
+   "Eldon Joersz",
+   "George Morgan"
+  ],
+  "citations": [
+   {
+    "source": "fai-federation-aeronautique-internationa-521c18"
+   },
+   {
+    "source": "fai-records-database-b7e319"
+   },
+   {
+    "source": "this-day-in-aviation-bryan-r-swopes-553685"
+   },
+   {
+    "source": "habu-org-4f4164"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   }
+  ],
+  "notes": "Commonly quoted as 2,193.167 mph. The FAI also lists the same value as class record 8865. Flown from Beale AFB."
+ },
+ {
+  "id": "record-altitude-horizontal",
+  "date": "1976-07-28",
+  "precision": "day",
+  "title": "Altitude record in horizontal flight: 85,069 ft",
+  "summary": "Capt. Robert Helt and Maj. Larry Elliott set the record for altitude in sustained horizontal flight, 25,929 m (85,069 ft, often written 85,068.997 ft), FAI record 3496.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7962"
+  ],
+  "people": [
+   "Robert Helt",
+   "Larry Elliott"
+  ],
+  "citations": [
+   {
+    "source": "fai-federation-aeronautique-internationa-521c18"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   },
+   {
+    "source": "habu-org-4f4164"
+   },
+   {
+    "source": "this-day-in-aviation-bryan-r-swopes-553685"
+   },
+   {
+    "source": "imperial-war-museums-3e2c5a"
+   }
+  ],
+  "notes": "Airframe is disputed. IWM Duxford and the Carpenter timeline say 61-7962; habu.org, citing a September 1991 Lockheed Martin press release, says 61-7963; This Day in Aviation says 61-7958. FAI notes this record has since been retired by changes to its Sporting Code."
+ },
+ {
+  "id": "yf12-coldwall-data",
+  "date": "1977-06-23",
+  "precision": "day",
+  "title": "Coldwall experiment returns its first good data",
+  "summary": "The Coldwall experiment, a liquid-nitrogen-cooled, insulated tube carried under YF-12A 60-6935 whose insulation was blown off at Mach 3 to measure turbulent heat transfer, first produced good data at Mach 3.0 and 72,500 ft. The first true Coldwall flight on 21 October 1976 had been spoiled by premature loss of the insulation.",
+  "program": "nasa",
+  "airframes": [
+   "60-6935"
+  ],
+  "people": [],
+  "citations": [
+   {
+    "source": "nasa-dryden-flight-research-center-9398ad"
+   },
+   {
+    "source": "nasa-history-division-d3ceea"
+   }
+  ]
+ },
+ {
+  "id": "det4-mildenhall-activated",
+  "date": "1979-03-31",
+  "precision": "day",
+  "title": "Detachment 4 activated at RAF Mildenhall",
+  "summary": "Detachment 4 of the 9th SRW was formed at RAF Mildenhall to run U-2 and SR-71 deployments in Europe. The British government later agreed to a permanent two-aircraft SR-71 detachment.",
+  "program": "senior-crown",
+  "airframes": [],
+  "people": [],
+  "citations": [
+   {
+    "source": "raf-fairford-raf-fairford-co-uk-f59b54"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   },
+   {
+    "source": "smithsonian-national-air-and-space-museu-2583e3"
+   }
+  ],
+  "notes": "Day from the Carpenter timeline; RAF Fairford gives March 1979. The permanent two-aircraft decision is dated 5 April 1982 (RAF Fairford, Thatcher announcement) but 5 April 1984 in the Carpenter timeline; the Smithsonian says two aircraft were based there from 1982."
+ },
+ {
+  "id": "yf12-final-nasa-flight",
+  "date": "1979-10-31",
+  "precision": "day",
+  "title": "Final NASA YF-12 flight; 60-6935 goes to the museum",
+  "summary": "Fitzhugh Fulton and Victor Horton flew the final NASA flight of YF-12A 60-6935. On 7 November 1979 Col. James Sullivan and Col. Richard Uppstrom ferried it to the Air Force Museum at Wright-Patterson AFB, Ohio, where it is the only surviving YF-12.",
+  "program": "nasa",
+  "airframes": [
+   "60-6935"
+  ],
+  "people": [
+   "Fitzhugh Fulton",
+   "Victor Horton",
+   "James Sullivan",
+   "Richard Uppstrom"
+  ],
+  "citations": [
+   {
+    "source": "nasa-dryden-flight-research-center-9398ad"
+   },
+   {
+    "source": "nasa-history-division-d3ceea"
+   }
+  ],
+  "notes": "NASA says the program was ordered terminated in 1977 but residual funding kept it flying into 1979."
+ },
+ {
+  "id": "libya-el-dorado-canyon-bda",
+  "date": "1986-04-15",
+  "precision": "day",
+  "title": "SR-71s assess the Libya raid",
+  "summary": "SR-71s from Det 4 at RAF Mildenhall flew bomb damage assessment sorties over Libya after the Operation El Dorado Canyon strikes, on 15, 16 and 17 April 1986.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7980",
+   "61-7960"
+  ],
+  "people": [
+   "Jerry Glasser",
+   "Ron Tabor",
+   "Brian Shul",
+   "Walter Watson",
+   "Bernie Smith",
+   "Denny Whalen"
+  ],
+  "citations": [
+   {
+    "source": "smithsonian-national-air-and-space-museu-2583e3"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   }
+  ],
+  "notes": "Crews and airframes from the Carpenter timeline, citing Crickmore and Shul and Watson's The Untouchables: 61-7980 Glasser and Tabor on 15 April, 61-7960 Shul and Watson on 16 April, 61-7980 Smith and Whalen on 17 April. The Smithsonian confirms the SR-71 provided imagery of the 1986 raid but gives no sortie details."
+ },
+ {
+  "id": "persian-gulf-missions-1987",
+  "date": "1987",
+  "precision": "year",
+  "title": "SR-71 missions over the Persian Gulf",
+  "summary": "Kadena-based SR-71 crews flew a number of missions over the Persian Gulf, revealing Iranian Silkworm missile batteries that threatened commercial shipping and American escort vessels.",
+  "program": "senior-crown",
+  "airframes": [],
+  "people": [],
+  "citations": [
+   {
+    "source": "smithsonian-national-air-and-space-museu-2583e3",
+    "detail": "Lockheed SR-71 Blackbird (collection object A19920072000)"
+   }
+  ],
+  "notes": "Exact sortie dates and airframes were not verified; the Smithsonian gives the year only."
+ },
+ {
+  "id": "sr71-61-7974-loss",
+  "date": "1989-04-21",
+  "precision": "day",
+  "title": "Last SR-71 loss: 61-7974 off the Philippines",
+  "summary": "61-7974, the 'Ichi Ban' Habu, was lost off Luzon in the Philippines after an engine failure on a sortie from Kadena. Pilot Dan House and RSO Blair Bozek ejected and were rescued; it was the twelfth and last SR-71 lost, and none was ever lost to hostile action.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7974"
+  ],
+  "people": [
+   "Dan House",
+   "Blair Bozek"
+  ],
+  "citations": [
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   },
+   {
+    "source": "roadrunners-internationale-258a6c"
+   },
+   {
+    "source": "habu-org-54846f"
+   },
+   {
+    "source": "dvids-70a023"
+   }
+  ],
+  "notes": "Hildebrant describes the cause as an engine explosion. The count of 12 losses is from the per-aircraft entries in the Carpenter timeline (61-7950, 7952, 7953, 7954, 7957, 7965, 7966, 7969, 7970, 7974, 7977, 7978); Carpenter mislabels the 18 December 1969 loss of 61-7953 as YF-12A 935."
+ },
+ {
+  "id": "sr71-program-terminated-1989",
+  "date": "1989-11-22",
+  "precision": "day",
+  "title": "SR-71 program officially terminated",
+  "summary": "SR-71 operations were suspended on 1 October 1989 except for minimum proficiency flights, and the program was officially terminated on 22 November 1989, the same day Det 4 at Mildenhall ceased operations.",
+  "program": "senior-crown",
+  "airframes": [],
+  "people": [],
+  "citations": [
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   },
+   {
+    "source": "roadrunners-internationale-258a6c"
+   },
+   {
+    "source": "raf-fairford-raf-fairford-co-uk-f59b54"
+   }
+  ],
+  "notes": "Hildebrant gives 30 September 1989 for the termination decision and 7 November 1989 for the last training flight. DVIDS attributes the retirement to budget restrictions and high operating cost."
+ },
+ {
+  "id": "sr71-retirement-ceremony",
+  "date": "1990-01-26",
+  "precision": "day",
+  "title": "SR-71 retired at Beale AFB",
+  "summary": "The Air Force formally retired its SR-71 fleet at a ceremony at Beale AFB, citing a decreasing defense budget and high operating costs. Days earlier the last Det 4 aircraft left the UK (18 January) and the last Det 1 aircraft, 61-7962, left Kadena (21 January) wearing tombstone tail art reading 'Det 1 RIP 1968-1990'.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7960",
+   "61-7962"
+  ],
+  "people": [
+   "Ben Rich",
+   "John Chain"
+  ],
+  "citations": [
+   {
+    "source": "national-museum-of-the-united-states-air-0f15b5",
+    "detail": "Lockheed SR-71A (fact sheet)"
+   },
+   {
+    "source": "dvids-70a023"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   },
+   {
+    "source": "raf-fairford-raf-fairford-co-uk-f59b54"
+   }
+  ],
+  "notes": "Carpenter records a Mach 3 overflight by 61-7960 at the ceremony and attendance by SAC commander Gen. John T. 'Jack' Chain and Ben Rich. The Smithsonian says the 9th SRW ceased SR-71 operations in January 1990."
+ },
+ {
+  "id": "nasa-receives-sr71s-1990",
+  "date": "1990-02-15",
+  "precision": "day",
+  "title": "NASA receives SR-71A 61-7980",
+  "summary": "SR-71A 61-7980 arrived at NASA Dryden as NASA 844, followed by 61-7971 (NASA 832) on 19 March 1990. NASA 844 was stored until 1992 and then served as NASA's research Blackbird until 1999.",
+  "program": "nasa",
+  "airframes": [
+   "61-7980",
+   "61-7971"
+  ],
+  "people": [],
+  "citations": [
+   {
+    "source": "nasa-dryden-flight-research-center-c5099a"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   }
+  ]
+ },
+ {
+  "id": "record-flight-61-7972-smithsonian",
+  "date": "1990-03-06",
+  "precision": "day",
+  "title": "61-7972's record-setting delivery flight to the Smithsonian",
+  "summary": "Lt. Col. Ed Yeilding and Lt. Col. J.T. Vida flew 61-7972 coast to coast (2,404 miles) in 1 hour 7 minutes 53.69 seconds, setting city-pair records including Los Angeles to Washington, D.C. in 1 hour 4 minutes 20 seconds, Kansas City to Washington in 25 minutes 59 seconds and St. Louis to Cincinnati in 8 minutes 32 seconds. The aircraft landed at Dulles and passed into the National Air and Space Museum's custody with 2,801.1 flight hours.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7972"
+  ],
+  "people": [
+   "Ed Yeilding",
+   "J.T. Vida"
+  ],
+  "citations": [
+   {
+    "source": "smithsonian-national-air-and-space-museu-2583e3"
+   },
+   {
+    "source": "this-day-in-aviation-bryan-r-swopes-91b065"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   }
+  ],
+  "notes": "The Smithsonian pairs the LA to DC time (1:04:20) with an average of 2,124 mph. Lockheed's record data reproduced by This Day in Aviation show 2,124.51 mph is the coast-to-coast average (2,404.05 mi in 1:07:53.69), while LA to DC (2,299.67 mi in 1:04:19.89) averaged 2,144.83 mph. Vida had logged 1,392.7 Blackbird hours, more than any other crewman."
+ },
+ {
+  "id": "sr71-61-7976-to-nmusaf",
+  "date": "1990-03-27",
+  "precision": "day",
+  "title": "First operational SR-71 flown to the Air Force Museum",
+  "summary": "Don Watkins and Bob Fowlkes flew 61-7976, which had flown the first operational SR-71 sortie in 1968, to the Air Force Museum at Wright-Patterson AFB, Ohio. Habu.org calls it the last Blackbird flown to a museum in the 1990 retirement.",
+  "program": "legacy",
+  "airframes": [
+   "61-7976"
+  ],
+  "people": [
+   "Don Watkins",
+   "Bob Fowlkes"
+  ],
+  "citations": [
+   {
+    "source": "habu-org-183f12"
+   },
+   {
+    "source": "national-museum-of-the-united-states-air-0f15b5",
+    "detail": "Lockheed SR-71A (fact sheet)"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   }
+  ],
+  "notes": "NMUSAF gives March 1990; the day comes from habu.org and the Carpenter timeline."
+ },
+ {
+  "id": "kelly-johnson-dies",
+  "date": "1990-12-21",
+  "precision": "day",
+  "title": "Kelly Johnson dies",
+  "summary": "Clarence L. 'Kelly' Johnson, founder of Lockheed's Skunk Works and leader of the team that designed the A-12, YF-12 and SR-71, died at 80. He had handed the Skunk Works to Ben Rich in January 1975.",
+  "program": "legacy",
+  "airframes": [],
+  "people": [
+   "Kelly Johnson",
+   "Ben Rich"
+  ],
+  "citations": [
+   {
+    "source": "national-inventors-hall-of-fame-3a29e9"
+   },
+   {
+    "source": "roadrunners-internationale-258a6c"
+   },
+   {
+    "source": "nasa-dryden-flight-research-center-c5099a"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   }
+  ],
+  "notes": "The National Inventors Hall of Fame and Hildebrant give 21 December 1990; the Carpenter timeline gives 22 December."
+ },
+ {
+  "id": "nasa-receives-sr71b",
+  "date": "1991-07-25",
+  "precision": "day",
+  "title": "SR-71B trainer joins NASA",
+  "summary": "SR-71B 61-7956 (NASA 831) arrived at Dryden, where it served as a research platform and for crew training and proficiency until October 1997.",
+  "program": "nasa",
+  "airframes": [
+   "61-7956"
+  ],
+  "people": [
+   "Ed Schneider",
+   "Robert Meyer"
+  ],
+  "citations": [
+   {
+    "source": "nasa-dryden-flight-research-center-c5099a"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   }
+  ],
+  "notes": "Carpenter records its last flight on 19 October 1997 at the Edwards open house: flight number 1,454 and 3,967.5 total hours, crew Ed Schneider and Robert Meyer."
+ },
+ {
+  "id": "bohn-meyer-first-woman",
+  "date": "1991-10-03",
+  "precision": "day",
+  "title": "First woman crewmember from NASA or the Air Force",
+  "summary": "NASA flight engineer Marta Bohn-Meyer made her first SR-71 flight, becoming the first female crewmember from NASA or the Air Force, and by NASA's account the second woman, to fly in an SR-71.",
+  "program": "nasa",
+  "airframes": [],
+  "people": [
+   "Marta Bohn-Meyer"
+  ],
+  "citations": [
+   {
+    "source": "nasa-7c3024"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   }
+  ],
+  "notes": "Date from the Carpenter timeline; NASA's biography gives no date."
+ },
+ {
+  "id": "reactivation-funded",
+  "date": "1994-09-28",
+  "precision": "day",
+  "title": "Congress funds SR-71 reactivation",
+  "summary": "Congress directed the Air Force, which had not asked for it, to return SR-71s to service. The Carpenter timeline records a 28 September 1994 vote allocating $100 million to reactivate three SR-71s; two SR-71As, 61-7967 and 61-7971, were returned to flight.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7967",
+   "61-7971"
+  ],
+  "people": [],
+  "citations": [
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   },
+   {
+    "source": "nasa-dryden-flight-research-center-c5099a"
+   },
+   {
+    "source": "blackbirds-net-84d3ff"
+   },
+   {
+    "source": "flight-international-f920a3"
+   }
+  ],
+  "notes": "The amount, the three-aircraft figure and the exact date come from one secondary source (Carpenter, citing Richard Graham). NASA says only that Congress reinstated funding several years after 1990."
+ },
+ {
+  "id": "ben-rich-dies",
+  "date": "1995-01-05",
+  "precision": "day",
+  "title": "Ben Rich dies",
+  "summary": "Ben Rich, who worked on the thermodynamics and propulsion of the YF-12 and SR-71 and succeeded Kelly Johnson as head of the Skunk Works in 1975, died at 69.",
+  "program": "legacy",
+  "airframes": [],
+  "people": [
+   "Ben Rich"
+  ],
+  "citations": [
+   {
+    "source": "national-aviation-hall-of-fame-bf6c84"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   }
+  ]
+ },
+ {
+  "id": "reactivation-first-flight-61-7971",
+  "date": "1995-04-26",
+  "precision": "day",
+  "title": "Reactivated SR-71A 61-7971 flies",
+  "summary": "61-7971, returned from NASA, made the first flight of the reactivation program from Palmdale, crewed by NASA's Ed Schneider and Marta Bohn-Meyer, a subsonic 1.4 hour functional check flight. The 9th Reconnaissance Wing commander formally accepted the aircraft for the Air Force on 28 June 1995.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7971"
+  ],
+  "people": [
+   "Ed Schneider",
+   "Marta Bohn-Meyer",
+   "Bill Rutledge"
+  ],
+  "citations": [
+   {
+    "source": "blackbirds-net-538800"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   },
+   {
+    "source": "nasa-dryden-flight-research-center-c5099a"
+   }
+  ]
+ },
+ {
+  "id": "reactivation-61-7967-first-flight",
+  "date": "1995-08-28",
+  "precision": "day",
+  "title": "Second reactivated SR-71, 61-7967, flies",
+  "summary": "61-7967 flew for the first time after refurbishment by Lockheed Martin, but needed nine functional check flights and did not pass its high-speed check until 12 January 1996. Both reactivated aircraft moved to Det 2 at Edwards AFB on 30 January and 1 February 1996.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7967",
+   "61-7971"
+  ],
+  "people": [
+   "Ed Schneider",
+   "Robert Meyer",
+   "Rogers Smith"
+  ],
+  "citations": [
+   {
+    "source": "blackbirds-net-538800"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   }
+  ],
+  "notes": "Blackbirds.net records Det 2 as opening on 1 April 1995."
+ },
+ {
+  "id": "last-usaf-sr71-flight",
+  "date": "1997-10-10",
+  "precision": "day",
+  "title": "Final Air Force SR-71 flight",
+  "summary": "Maj. Bert Garrison and Capt. Domingo Ochotorena flew 61-7967 on a 4.1 hour sortie from Edwards AFB that turned out to be the last SR-71 flight in Air Force service.",
+  "program": "senior-crown",
+  "airframes": [
+   "61-7967"
+  ],
+  "people": [
+   "Bert Garrison",
+   "Domingo Ochotorena"
+  ],
+  "citations": [
+   {
+    "source": "blackbirds-net-ee4bc4"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   }
+  ],
+  "notes": "The RSO's surname is spelled Ochotorena and Ochtorena on the same source page."
+ },
+ {
+  "id": "line-item-veto-sr71",
+  "date": "1997-10-14",
+  "precision": "day",
+  "title": "Clinton line-item vetoes SR-71 funding",
+  "summary": "President Clinton used the Line Item Veto Act to cancel $30 million of FY1998 SR-71 operations and maintenance money (Cancellation 97-42) and $9 million for SR-71 modifications (Cancellation 97-43), stating there was no military requirement to keep operating the SR-71.",
+  "program": "senior-crown",
+  "airframes": [],
+  "people": [
+   "Bill Clinton"
+  ],
+  "citations": [
+   {
+    "source": "office-of-management-and-budget-via-govi-88364a"
+   },
+   {
+    "source": "flight-international-f920a3"
+   }
+  ],
+  "notes": "The Carpenter timeline gives 15 October 1997, but the special message was signed on 14 October 1997."
+ },
+ {
+  "id": "lasre-first-flight",
+  "date": "1997-10-31",
+  "precision": "day",
+  "title": "LASRE aerospike experiment flies on NASA 844",
+  "summary": "NASA 844 (61-7980) first flew with the Linear Aerospike SR-71 Experiment, a 20 percent scale half-span X-33 lifting body with eight aerospike thrust cells mounted on its back, reaching Mach 1.2 and 33,000 ft. Seven research flights in all were flown; no in-flight hot firing took place because of liquid oxygen leaks, and the flight phase ended in November 1998.",
+  "program": "nasa",
+  "airframes": [
+   "61-7980"
+  ],
+  "people": [],
+  "citations": [
+   {
+    "source": "nasa-dryden-flight-research-center-098e5d"
+   },
+   {
+    "source": "nasa-dryden-flight-research-center-c5099a"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   }
+  ],
+  "notes": "Carpenter dates the final LASRE flight to 29 October 1998; NASA says only that flight operations concluded in November 1998."
+ },
+ {
+  "id": "secdef-permanent-retirement",
+  "date": "1998-03-06",
+  "precision": "day",
+  "title": "Defense Secretary approves permanent SR-71 retirement",
+  "summary": "The Air Force received a Secretary of Defense memorandum approving the permanent retirement of the SR-71, according to an Air Force message of 30 October 1998 directing all agencies to retire the aircraft expeditiously.",
+  "program": "senior-crown",
+  "airframes": [],
+  "people": [],
+  "citations": [
+   {
+    "source": "thesr71blackbird-com-39d844"
+   },
+   {
+    "source": "dvids-70a023"
+   }
+  ],
+  "notes": "DVIDS (2020) gives 6 March 1998 as the date the SR-71 was finally retired. The Air Force message is reproduced only on a secondary site."
+ },
+ {
+  "id": "supreme-court-line-item-veto",
+  "date": "1998-06-25",
+  "precision": "day",
+  "title": "Supreme Court strikes down the Line Item Veto Act",
+  "summary": "In Clinton v. City of New York the Supreme Court held that the Line Item Veto Act's cancellation procedure violated the Presentment Clause. The ruling did not bring the SR-71 back: the Air Force proceeded with permanent retirement later in 1998.",
+  "program": "context",
+  "airframes": [],
+  "people": [
+   "Bill Clinton"
+  ],
+  "citations": [
+   {
+    "source": "legal-information-institute-cornell-law--66888c"
+   },
+   {
+    "source": "thesr71blackbird-com-39d844"
+   }
+  ],
+  "notes": "The case itself concerned other cancellations; its effect on the SR-71 is described only in secondary sources."
+ },
+ {
+  "id": "final-sr71-flight",
+  "date": "1999-10-09",
+  "precision": "day",
+  "title": "Last flight of any Blackbird",
+  "summary": "NASA research pilot Rogers Smith and flight test engineer Robert Meyer flew NASA 844 (61-7980) at the Edwards AFB open house air show, the last flight of any SR-71. The aircraft finished with 734 flights and 2,353.6 hours and was later put on outdoor display at NASA Armstrong (moved back into a hangar in 2026).",
+  "program": "nasa",
+  "airframes": [
+   "61-7980"
+  ],
+  "people": [
+   "Rogers Smith",
+   "Robert Meyer"
+  ],
+  "citations": [
+   {
+    "source": "nasa-dryden-flight-research-center-c5099a"
+   },
+   {
+    "source": "dvids-70a023"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   }
+  ],
+  "notes": "Flight and hour totals from the Carpenter timeline. The date of NASA's last SR-71 research (as opposed to display) flight was not verified."
+ },
+ {
+  "id": "sr71-61-7962-to-duxford",
+  "date": "2001",
+  "precision": "year",
+  "title": "61-7962 goes on display at IWM Duxford",
+  "summary": "After 11 years in storage at Palmdale, SR-71A 61-7962 went to the American Air Museum at IWM Duxford, England, in recognition of the years of Det 4 operations from RAF Mildenhall. It is the only SR-71 displayed outside the United States.",
+  "program": "legacy",
+  "airframes": [
+   "61-7962"
+  ],
+  "people": [],
+  "citations": [
+   {
+    "source": "habu-org-095477"
+   },
+   {
+    "source": "warbird-registry-67fce6"
+   },
+   {
+    "source": "imperial-war-museums-3e2c5a"
+   },
+   {
+    "source": "raf-fairford-raf-fairford-co-uk-f59b54"
+   }
+  ],
+  "notes": "Arrival month and transport method were not verified here. Joe Baugher's serial list (http://www.joebaugher.com/usaf_serials/1961.html) says it was unveiled for public display in Hangar 1 on 11 April 2001; no primary source was found for that date."
+ },
+ {
+  "id": "museum-dispersal-2003",
+  "date": "2003-03-27",
+  "precision": "day",
+  "title": "Last stored SR-71s head to museums",
+  "summary": "NASA announced that SR-71B 61-7956 (NASA 831) would go to the Kalamazoo Air Zoo in Michigan. During 2003 the reactivated SR-71As also left Edwards: 61-7971 to the Evergreen Aviation and Space Museum in Oregon and 61-7967 to the Eighth Air Force Museum at Barksdale AFB, Louisiana.",
+  "program": "legacy",
+  "airframes": [
+   "61-7956",
+   "61-7971",
+   "61-7967"
+  ],
+  "people": [],
+  "citations": [
+   {
+    "source": "nasa-dryden-flight-research-center-414658"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   }
+  ],
+  "notes": "Carpenter dates 61-7971's move to 30 April 2003 and 61-7967's to September 2003; other secondary sources give December 2003 for Barksdale."
+ },
+ {
+  "id": "udvar-hazy-opens",
+  "date": "2003-12-15",
+  "precision": "day",
+  "title": "Udvar-Hazy Center opens",
+  "summary": "The Smithsonian's Steven F. Udvar-Hazy Center opened at Chantilly, Virginia, on the 100th anniversary of the Wright brothers' first flight. SR-71A 61-7972 is displayed in its Boeing Aviation Hangar.",
+  "program": "legacy",
+  "airframes": [
+   "61-7972"
+  ],
+  "people": [],
+  "citations": [
+   {
+    "source": "smithsonian-national-air-and-space-museu-c29290"
+   },
+   {
+    "source": "smithsonian-national-air-and-space-museu-2583e3"
+   }
+  ],
+  "notes": "Sources consulted confirm the opening date and the current display, not that 61-7972 was on show on opening day."
+ },
+ {
+  "id": "cia-a12-dedication",
+  "date": "2007-09-19",
+  "precision": "day",
+  "title": "CIA dedicates A-12 at headquarters",
+  "summary": "During the CIA's 60th anniversary the agency dedicated A-12 Article 128 (60-6931), transferred from the Air Force, mounted on pylons at its Langley headquarters. It was the first operational A-12 certified for Mach 3, though it flew no BLACK SHIELD missions.",
+  "program": "legacy",
+  "airframes": [
+   "60-6931"
+  ],
+  "people": [],
+  "citations": [
+   {
+    "source": "roadrunners-internationale-f78da8"
+   },
+   {
+    "source": "central-intelligence-agency-c17792"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8"
+   }
+  ],
+  "notes": "Article 128 had been at the Minnesota Air National Guard museum since 27 October 1991 (Carpenter). Interpretive plaques were completed in December 2008 (Roadrunners)."
+ },
+ {
+  "id": "swedish-pilots-air-medal",
+  "date": "2018-11-28",
+  "precision": "day",
+  "title": "Swedish pilots receive the U.S. Air Medal",
+  "summary": "In Stockholm the U.S. Air Force presented the Air Medal to four Swedish airmen who had risked their lives in 1987 to protect a stricken SR-71 and its crew.",
+  "program": "legacy",
+  "airframes": [],
+  "people": [],
+  "citations": [
+   {
+    "source": "u-s-air-force-fc6a04"
+   },
+   {
+    "source": "u-s-air-forces-in-europe-and-air-forces--d8fb8a"
+   }
+  ],
+  "notes": "Details of the 1987 incident (date, airframe, crew) were not verified for this pack; the award is confirmed in Air Force news release summaries."
+ },
+ {
+  "id": "fiftieth-anniversary-2026",
+  "date": "2026-07",
+  "precision": "month",
+  "title": "Fiftieth anniversary of the 1976 records and Det 4",
+  "summary": "The FAI marked 50 years since the July 1976 Blackbird records, IWM Duxford held a 'Legends of the SR-71' weekend on 25 and 26 July, and veteran SR-71 pilots and maintainers revisited RAF Mildenhall on 27 July 2026.",
+  "program": "legacy",
+  "airframes": [
+   "61-7962"
+  ],
+  "people": [],
+  "citations": [
+   {
+    "source": "fai-federation-aeronautique-internationa-521c18"
+   },
+   {
+    "source": "imperial-war-museums-iwm-duxford-3b6bb9"
+   },
+   {
+    "source": "dvids-100th-air-refueling-wing-2e3f76"
+   }
+  ]
+ },
+ {
+  "id": "nasa-844-removed-from-display",
+  "date": "2026-09-24",
+  "precision": "day",
+  "title": "NASA 844 disappears from display",
+  "summary": "The War Zone reported that SR-71A 61-7980 (NASA 844), on outdoor display at NASA Armstrong since 2002, had been moved into a hangar earlier in 2026 and had not been seen in satellite imagery since at least 17 May 2026. Aviation Week reported a possible return-to-flight effort; NASA said only that it had 'no additional information to share regarding the aircraft at this time'.",
+  "program": "legacy",
+  "airframes": [
+   "61-7980"
+  ],
+  "people": [],
+  "citations": [
+   {
+    "source": "the-war-zone-63e5f2"
+   },
+   {
+    "source": "aviation-week-space-technology-f0edc3"
+   }
+  ],
+  "notes": "Return to flight is reported, not confirmed by NASA. The date is the first public report; the move into the hangar happened earlier in 2026."
+ }
+]

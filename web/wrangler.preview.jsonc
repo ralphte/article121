@@ -1,0 +1,9 @@
+{
+  // Preview of the Astro site at preview.article121.com, kept out of search engines.
+  "name": "article121-preview",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  "assets": { "directory": "./dist", "not_found_handling": "404-page" },
+  "routes": [{ "pattern": "preview.article121.com", "custom_domain": true }]
+}

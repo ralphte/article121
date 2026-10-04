@@ -1,0 +1,88 @@
+---
+// Plotting-chart globe: every surviving airframe is a dot; it turns to the selected one.
+interface Point { id: string; lon: number; lat: number; kind: 'af' | 'd21'; }
+interface Props { points: Point[]; focus?: { lon: number; lat: number; id: string } | null; caption?: string; }
+const { points, focus = null } = Astro.props;
+---
+<div class="globe" data-points={JSON.stringify(points)} data-focus={focus ? JSON.stringify(focus) : ''}>
+  <canvas aria-label="Globe marking where the surviving airframes are displayed"></canvas>
+</div>
+<style>
+  .globe { position: relative; aspect-ratio: 1; width: 100%; max-width: 340px; margin: 0 auto; }
+  canvas { width: 100%; height: 100%; display: block; cursor: grab; touch-action: none; }
+</style>
+<script>
+  import { geoOrthographic, geoPath, geoGraticule10, geoDistance } from 'd3-geo';
+  import { interpolate } from 'd3-interpolate';
+  import { easeCubicInOut } from 'd3-ease';
+  import { feature, mesh } from 'topojson-client';
+
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const css = (n: string) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  let worldP: Promise<[unknown, unknown]> | null = null;
+  const loadWorld = () => (worldP ??= Promise.all([fetch('/geo/countries-50m.json').then((r) => r.json()), fetch('/geo/states-10m.json').then((r) => r.json())]));
+
+  for (const host of document.querySelectorAll<HTMLElement>('.globe')) {
+    const canvas = host.querySelector('canvas')!;
+    const ctx = canvas.getContext('2d')!;
+    const points = JSON.parse(host.dataset.points || '[]');
+    const focus = host.dataset.focus ? JSON.parse(host.dataset.focus) : null;
+    const proj = geoOrthographic().precision(0.3).clipAngle(90);
+    const grat = geoGraticule10();
+    let land: any = null, states: any = null, size = 300, rot: number[] = [98, -38, 0], from = rot, target = focus ? [-focus.lon, -focus.lat, 0] : rot, t0 = performance.now(), raf = 0;
+    const draw = (now: number) => {
+      proj.rotate(rot as [number, number, number]);
+      const path = geoPath(proj, ctx);
+      ctx.clearRect(0, 0, size, size);
+      ctx.beginPath(); path({ type: 'Sphere' }); ctx.fillStyle = '#0b1017'; ctx.fill();
+      ctx.beginPath(); path(grat); ctx.strokeStyle = css('--seam'); ctx.lineWidth = 0.6; ctx.setLineDash([2, 3]); ctx.stroke(); ctx.setLineDash([]);
+      if (land) { ctx.beginPath(); path(land); ctx.fillStyle = '#1e2735'; ctx.fill(); ctx.strokeStyle = 'rgba(188,204,228,0.16)'; ctx.lineWidth = 0.4; ctx.stroke(); }
+      if (states) { ctx.beginPath(); path(states); ctx.strokeStyle = 'rgba(188,204,228,0.14)'; ctx.lineWidth = 0.4; ctx.stroke(); }
+      ctx.beginPath(); path({ type: 'Sphere' }); ctx.strokeStyle = css('--seam-2'); ctx.lineWidth = 1.2; ctx.stroke();
+      const centre = proj.invert!([size / 2, size / 2])!;
+      for (const p of points) {
+        if (geoDistance([p.lon, p.lat], centre) > Math.PI / 2) continue;
+        const [x, y] = proj([p.lon, p.lat])!;
+        const on = focus && p.id === focus.id;
+        ctx.fillStyle = on ? css('--marking') : css('--stencil');
+        ctx.globalAlpha = on ? 1 : 0.75;
+        if (p.kind === 'd21') ctx.fillRect(x - 2, y - 2, 4, 4); else { ctx.beginPath(); ctx.arc(x, y, on ? 4 : 3, 0, Math.PI * 2); ctx.fill(); }
+        ctx.globalAlpha = 1;
+        if (on && p.kind === 'af') {
+          const pulse = reduce ? 0 : ((now / 1000) % 1.6) / 1.6;
+          ctx.strokeStyle = css('--marking'); ctx.lineWidth = 1.5;
+          ctx.beginPath(); ctx.arc(x, y, 9 + pulse * 14, 0, Math.PI * 2); ctx.globalAlpha = 1 - pulse; ctx.stroke(); ctx.globalAlpha = 1;
+          ctx.beginPath(); ctx.moveTo(x - 18, y); ctx.lineTo(x - 7, y); ctx.moveTo(x + 7, y); ctx.lineTo(x + 18, y); ctx.moveTo(x, y - 18); ctx.lineTo(x, y - 7); ctx.moveTo(x, y + 7); ctx.lineTo(x, y + 18); ctx.stroke();
+        }
+      }
+    };
+    const tick = (now: number) => {
+      const k = reduce ? 1 : Math.min(1, (now - t0) / 1400);
+      rot = interpolate(from, target)(easeCubicInOut(k));
+      draw(now);
+      if (k < 1 || (!reduce && now - t0 < 7000)) raf = requestAnimationFrame(tick);
+    };
+    const resize = () => {
+      const dpr = Math.min(devicePixelRatio || 1, 2);
+      size = host.clientWidth || 300;
+      canvas.width = size * dpr; canvas.height = size * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      proj.translate([size / 2, size / 2]).scale(size / 2 - 4);
+      draw(performance.now());
+    };
+    new ResizeObserver(resize).observe(host);
+    loadWorld().then(([w, u]: any) => {
+      land = feature(w, w.objects.countries); states = mesh(u, u.objects.states, (a: unknown, b: unknown) => a !== b);
+      t0 = performance.now(); cancelAnimationFrame(raf); raf = requestAnimationFrame(tick);
+    });
+    let start: number[] | null = null, startRot = rot;
+    canvas.addEventListener('pointerdown', (e) => { start = [e.clientX, e.clientY]; startRot = rot.slice(); canvas.setPointerCapture(e.pointerId); });
+    canvas.addEventListener('pointermove', (e) => {
+      if (!start) return;
+      const k = 90 / (size / 2);
+      rot = from = target = [startRot[0] + (e.clientX - start[0]) * k, Math.max(-80, Math.min(80, startRot[1] - (e.clientY - start[1]) * k)), 0];
+      t0 = 0; draw(performance.now());
+    });
+    const up = () => { start = null; };
+    canvas.addEventListener('pointerup', up); canvas.addEventListener('pointercancel', up);
+  }
+</script>

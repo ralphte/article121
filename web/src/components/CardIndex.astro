@@ -1,0 +1,98 @@
+---
+// The card index: every airframe as a card, grouped by type, with search and filters.
+import { airframesInOrder, family, GROUPS, lossDate, placeOf, displayName } from '../lib/data';
+interface Props { current?: string; compact?: boolean; }
+const { current, compact = false } = Astro.props;
+const all = await airframesInOrder();
+const line = (a: (typeof all)[number]) =>
+  a.data.fate === 'preserved' ? placeOf(a.data)
+  : a.data.fate === 'lost' ? `Lost ${lossDate(a.data.fate_detail) ?? ''}`.trim()
+  : a.id === 'd-21' ? `${a.data.displays.length} survivors on display` : (placeOf(a.data) ?? 'See file');
+const hay = (a: (typeof all)[number]) => [a.data.serial, a.data.serial.replace('61-79', '64-179'), a.data.type, a.data.article, a.data.nickname, placeOf(a.data), a.data.location?.state_or_country].filter(Boolean).join(' ').toLowerCase();
+---
+<aside class:list={['drawer', { compact }]} aria-label="Card index of airframes">
+  <div class="controls">
+    <input type="search" aria-label="Search the register" placeholder="Search serial, museum, city or name" autocomplete="off" />
+    <div class="seg" role="group" aria-label="Filter by type" data-k="type">
+      <button aria-pressed="true" data-v="all">All</button>
+      {GROUPS.map(([g]) => <button aria-pressed="false" data-v={g}>{g}</button>)}
+    </div>
+    <div class="seg" role="group" aria-label="Filter by status" data-k="fate">
+      <button aria-pressed="true" data-v="all">Any status</button>
+      <button aria-pressed="false" data-v="preserved">On display</button>
+      <button aria-pressed="false" data-v="lost">Lost</button>
+      <button aria-pressed="false" data-v="other">Other</button>
+    </div>
+  </div>
+  <ol class="cards">
+    {GROUPS.map(([g, label]) => {
+      const items = all.filter((a) => family(a.data.type) === g);
+      return items.length ? (
+        <>
+          <li class="group-h" data-group={g}>{label} ({items.length})</li>
+          {items.map((a) => (
+            <li data-type={g} data-fate={a.data.fate} data-hay={hay(a)}>
+              <a class="icard" href={`/register/${a.id}/`} aria-current={current === a.id ? 'page' : undefined}>
+                <span class="ic-serial">{displayName(a)}</span>
+                <span class:list={['ic-tag', { lost: a.data.fate === 'lost', other: a.data.fate === 'other' }]}>{a.data.fate === 'preserved' ? 'Display' : a.data.fate === 'lost' ? 'Lost' : 'Other'}</span>
+                <span class="ic-line">{a.data.type}{a.data.article && ` · Art. ${a.data.article}`}{a.data.nickname && a.data.nickname !== `Article ${a.data.article}` && ` · ${a.data.nickname}`}</span>
+                <span class="ic-line">{line(a)}</span>
+              </a>
+            </li>
+          ))}
+        </>
+      ) : null;
+    })}
+    <li class="empty" hidden>No airframe matches. Try a serial such as 61-7972, a museum, or a city.</li>
+  </ol>
+</aside>
+<style>
+  .drawer { display: grid; grid-template-rows: auto minmax(0, 1fr); gap: 1px; background: var(--seam); border: 1px solid var(--seam); }
+  .drawer.compact { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 44px); max-height: calc(100vh - 60px); }
+  .controls { display: grid; gap: 8px; background: var(--hull); padding: 12px; }
+  input { width: 100%; font: 400 0.92rem/1.2 var(--f-body); padding: 11px 12px; border: 1px solid var(--seam-2); background: var(--void); color: var(--ink); border-radius: 0; }
+  input::placeholder { color: var(--ink-3); }
+  .seg { display: flex; flex-wrap: wrap; gap: 4px; }
+  .seg button { font: 700 0.6rem/1 var(--f-data); letter-spacing: 0.12em; text-transform: uppercase; padding: 8px; background: transparent; color: var(--ink-2); border: 1px solid var(--seam-2); cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: var(--stencil); color: var(--void); border-color: var(--stencil); }
+  .cards { list-style: none; margin: 0; padding: 0; overflow-y: auto; display: grid; gap: 1px; align-content: start; background: var(--void); overscroll-behavior: contain; scrollbar-color: var(--seam-2) transparent; }
+  .drawer:not(.compact) .cards { grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 8px; padding: 8px; }
+  .drawer:not(.compact) .group-h { grid-column: 1 / -1; }
+  .group-h { font: 400 0.6rem/1.2 var(--f-data); letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); padding: 16px 14px 8px; background: var(--void); }
+  .icard { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1px 8px; align-items: baseline; text-decoration: none; background: var(--hull); color: var(--ink); border-left: 3px solid transparent; padding: 10px 12px 11px; transition: background 0.15s, border-color 0.15s; }
+  .icard:hover { background: var(--hull-2); }
+  .icard[aria-current="page"] { background: var(--hull-3); border-left-color: var(--marking); }
+  .ic-serial { font: 800 1.02rem/1.2 var(--f-display); font-stretch: 112%; color: var(--stencil); font-variant-numeric: tabular-nums; }
+  .ic-tag { font: 700 0.56rem/1 var(--f-data); letter-spacing: 0.14em; text-transform: uppercase; padding: 4px 5px 3px; border: 1px solid currentColor; color: var(--ink-2); white-space: nowrap; }
+  .ic-tag.lost { color: var(--marking); }
+  .ic-tag.other { color: var(--ink-3); }
+  .ic-line { grid-column: 1 / -1; font-size: 0.74rem; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .empty { background: var(--hull); padding: 14px; font-size: 0.85rem; color: var(--ink-2); }
+  [hidden] { display: none !important; }
+  @media (max-width: 960px) { .drawer.compact { position: static; max-height: none; } .drawer.compact .cards { max-height: 46vh; } }
+</style>
+<script>
+  for (const d of document.querySelectorAll<HTMLElement>('.drawer')) {
+    const q = d.querySelector('input')!;
+    const f: Record<string, string> = { type: 'all', fate: 'all' };
+    const apply = () => {
+      const terms = q.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+      let shown = 0;
+      d.querySelectorAll<HTMLLIElement>('li[data-hay]').forEach((li) => {
+        const ok = (f.type === 'all' || li.dataset.type === f.type) && (f.fate === 'all' || li.dataset.fate === f.fate) && terms.every((t) => li.dataset.hay!.includes(t));
+        li.hidden = !ok; if (ok) shown++;
+      });
+      d.querySelectorAll<HTMLLIElement>('li.group-h').forEach((h) => { h.hidden = !d.querySelector(`li[data-type="${h.dataset.group}"]:not([hidden])`); });
+      d.querySelector<HTMLLIElement>('li.empty')!.hidden = shown > 0;
+    };
+    q.addEventListener('input', apply);
+    d.querySelectorAll<HTMLElement>('.seg').forEach((seg) => seg.addEventListener('click', (e) => {
+      const b = (e.target as HTMLElement).closest('button'); if (!b) return;
+      seg.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      f[seg.dataset.k!] = b.dataset.v!; apply();
+    }));
+    const cur = d.querySelector<HTMLElement>('.icard[aria-current="page"]');
+    const list = d.querySelector<HTMLElement>('.cards')!;
+    if (cur && d.classList.contains('compact')) list.scrollTop = cur.offsetTop - list.offsetTop - 60;
+  }
+</script>

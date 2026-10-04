@@ -1,0 +1,153 @@
+@font-face { font-family: "Courier Prime"; src: url("/fonts/courier-prime-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Courier Prime"; src: url("/fonts/courier-prime-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Courier Prime"; src: url("/fonts/courier-prime-400-italic.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Archivo"; src: url("/fonts/archivo-300-900.woff2") format("woff2"); font-weight: 300 900; font-stretch: 62% 125%; font-display: swap; }
+@font-face { font-family: "B612 Mono"; src: url("/fonts/b612-mono-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "B612 Mono"; src: url("/fonts/b612-mono-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+/* Article 121 · "Black file"
+   The classified case file, finished like the aircraft: the SR-71's blue-black
+   paint for surfaces, titanium greys for type, white stencil for markings and
+   the red of its walkway lines for stamps and warnings. One dark world. */
+:root {
+  --void: #05070a;          /* page */
+  --hull: #0b0f15;          /* main surface, the blue-black paint */
+  --hull-2: #111721;        /* raised surface */
+  --hull-3: #19212e;        /* hover, selected */
+  --seam: rgba(188, 204, 228, 0.11);    /* panel lines */
+  --seam-2: rgba(188, 204, 228, 0.24);
+  --ink: #e6e9ee;           /* primary text */
+  --ink-2: #a2abb9;         /* secondary text */
+  --ink-3: #6b7585;         /* captions, hints */
+  --stencil: #f3f2ec;       /* white stencil lettering */
+  --marking: #d4432f;       /* red walkway markings: stamps, warnings, focus */
+  --marking-soft: rgba(212, 67, 47, 0.14);
+  --redact: #000000;
+  --ti-hi: #c9ced6;         /* titanium highlight */
+  --ti-lo: #7d8593;
+  --f-display: "Archivo", "Helvetica Neue", Arial, sans-serif;   /* set wide: font-stretch 125% */
+  --f-body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --f-data: "B612 Mono", "SFMono-Regular", Menlo, monospace;     /* cockpit display face */
+  --f-typed: "Courier Prime", "Courier New", Courier, monospace; /* the documents themselves */ /* the documents themselves */
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { background: var(--void); }
+body {
+  margin: 0; background: var(--void); color: var(--ink);
+  font: 400 1rem/1.62 var(--f-body); font-stretch: 100%;
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+a { color: var(--ink); text-decoration-color: var(--marking); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--stencil); }
+:focus-visible { outline: 2px solid var(--marking); outline-offset: 3px; }
+::selection { background: var(--marking); color: var(--stencil); }
+
+/* Classification banner and routing bar */
+.banner {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30;
+  display: flex; justify-content: center; align-items: center; gap: 6px 20px; flex-wrap: wrap;
+  padding: 7px 16px; background: var(--void); border-top: 3px solid var(--marking); border-bottom: 1px solid var(--seam);
+  font: 700 0.66rem/1.3 var(--f-data); letter-spacing: 0.24em; text-transform: uppercase; color: var(--ink-2);
+}
+.banner s { color: var(--marking); text-decoration-thickness: 1.5px; }
+.banner b { color: var(--stencil); font-weight: 700; }
+.banner a { text-decoration: none; color: var(--ink-2); }
+.banner a:hover, .banner a[aria-current="page"] { color: var(--stencil); }
+.banner .sep { width: 1px; height: 12px; background: var(--seam-2); }
+
+/* Type */
+.display {
+  font-family: var(--f-display); font-stretch: 125%; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.01em; line-height: 0.92; text-wrap: balance; color: var(--stencil); margin: 0;
+}
+.label {
+  font: 400 0.68rem/1.35 var(--f-data); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3);
+}
+.typed { font-family: var(--f-typed); }
+h2.section {
+  font-family: var(--f-display); font-stretch: 125%; font-weight: 700; text-transform: uppercase;
+  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.4rem); line-height: 1; letter-spacing: 0.01em; margin: 0 0 0.5rem; text-wrap: balance; color: var(--stencil);
+}
+
+/* Panels: the hull with panel lines and registration ticks at the corners */
+.panel { position: relative; background: var(--hull); border: 1px solid var(--seam); }
+.panel.ticks::before, .panel.ticks::after {
+  content: ""; position: absolute; width: 14px; height: 14px; pointer-events: none;
+  border-color: var(--seam-2); border-style: solid;
+}
+.panel.ticks::before { left: -1px; top: -1px; border-width: 1px 0 0 1px; }
+.panel.ticks::after { right: -1px; bottom: -1px; border-width: 0 1px 1px 0; }
+.file-head {
+  display: flex; justify-content: space-between; gap: 6px 18px; flex-wrap: wrap;
+  border-bottom: 1px solid var(--seam-2); padding-bottom: 10px; margin-bottom: 20px;
+  font: 400 0.68rem/1.4 var(--f-data); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3);
+}
+.file-head b { color: var(--ink); font-weight: 700; }
+
+/* Redaction bars that lift */
+.redact { position: relative; white-space: nowrap; }
+.redact::after {
+  content: ""; position: absolute; left: -3px; right: -3px; top: 0.08em; bottom: 0.02em;
+  background: linear-gradient(180deg, #262d38 0%, #0b0d11 38%, var(--redact) 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  transform-origin: right center; transition: transform 0.9s cubic-bezier(.7, 0, .2, 1); transition-delay: var(--d, 0s);
+}
+.revealed .redact::after { transform: scaleX(0); }
+
+/* Rubber stamps in marking red */
+.stamp {
+  display: inline-block; font: 800 0.95rem/1 var(--f-display); font-stretch: 112%; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--marking); border: 2.5px solid currentColor; padding: 8px 12px 6px; border-radius: 3px;
+  transform: rotate(-5deg); opacity: 0.9; filter: url(#ink); pointer-events: none;
+}
+.stamp small { display: block; font: 700 0.6rem/1.3 var(--f-data); letter-spacing: 0.12em; margin-top: 4px; }
+.stamp.white { color: var(--stencil); opacity: 0.8; }
+.stamp.land { animation: stamp-land 0.42s cubic-bezier(.3, 1.6, .5, 1) both; }
+@keyframes stamp-land { from { transform: rotate(-5deg) scale(1.7); opacity: 0; } to { transform: rotate(-5deg) scale(1); opacity: 0.9; } }
+
+/* Buttons and chips */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px; text-decoration: none; cursor: pointer;
+  font: 700 0.72rem/1 var(--f-data); letter-spacing: 0.16em; text-transform: uppercase;
+  padding: 12px 16px; color: var(--stencil); background: transparent; border: 1px solid var(--seam-2);
+  transition: border-color 0.2s, background 0.2s;
+}
+.btn:hover { border-color: var(--stencil); background: var(--hull-2); }
+.btn.solid { background: var(--stencil); color: var(--void); border-color: var(--stencil); }
+.btn.solid:hover { background: var(--marking); border-color: var(--marking); color: var(--stencil); }
+.chip {
+  font: 700 0.62rem/1 var(--f-data); letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer;
+  padding: 8px 9px; color: var(--ink-2); background: transparent; border: 1px solid var(--seam-2);
+}
+.chip[aria-pressed="true"] { color: var(--void); background: var(--stencil); border-color: var(--stencil); }
+
+/* Data strip: the photo's real catalogue data set like a film annotation */
+.datastrip { display: flex; flex-wrap: wrap; font: 400 0.64rem/1.3 var(--f-data); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); border-top: 1px solid var(--seam-2); }
+.datastrip span { padding: 8px 12px 7px; border-right: 1px solid var(--seam); }
+.datastrip span:last-child { border-right: 0; }
+.datastrip .hot { color: var(--marking); }
+
+footer.site { border-top: 1px solid var(--seam); margin-top: 96px; padding: 28px 16px 72px; }
+footer.site .inner { max-width: 1240px; margin: 0 auto; display: grid; gap: 10px; font-size: 0.86rem; color: var(--ink-2); }
+footer.site p { margin: 0; max-width: 72ch; }
+
+@media (prefers-reduced-motion: reduce) {
+  .redact::after, .btn { transition: none; }
+  .stamp.land { animation: none; }
+}
+
+/* Site layout additions */
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: 16px; }
+.wrap.wide { max-width: 1320px; }
+main { display: block; }
+.skip { position: absolute; left: -9999px; top: 0; z-index: 100; background: var(--stencil); color: var(--void); padding: 10px 14px; }
+.skip:focus { left: 16px; top: 16px; }
+.nw { white-space: nowrap; }
+sup.cite { font: 700 0.62rem/1 var(--f-data); margin-left: 1px; }
+sup.cite a { text-decoration: none; color: var(--marking); }
+.page-head { margin-top: 40px; padding: clamp(20px, 4vw, 44px); }
+.page-head h1 { font-size: clamp(2.4rem, 1.2rem + 5vw, 5.6rem); margin-bottom: 18px; }
+.page-head p { max-width: 64ch; color: var(--ink-2); margin: 0 0 1rem; }
+
+@view-transition { navigation: auto; }

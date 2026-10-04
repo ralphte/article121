@@ -1,0 +1,69 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  path?: string;
+}
+const {
+  title,
+  description = 'A documented history of the Lockheed A-12, YF-12, M-21 and SR-71, with every photograph, date and figure credited and linked to its source.',
+  image = '/og.jpg',
+} = Astro.props;
+const full = title === 'Article 121' ? 'Article 121 · The Blackbird archive' : `${title} · Article 121`;
+const here = Astro.url.pathname;
+const nav: [string, string][] = [['/', 'File'], ['/timeline/', 'Chronology'], ['/register/', 'Register'], ['/sources/', 'Sources'], ['/about/', 'About']];
+const isCurrent = (href: string) => (href === '/' ? here === '/' : here.startsWith(href));
+const canonical = new URL(here, Astro.site);
+const noindex = import.meta.env.PUBLIC_NOINDEX === '1';
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{full}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonical}>
+  {noindex && <meta name="robots" content="noindex, nofollow">}
+  <meta name="theme-color" content="#05070a">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Article 121">
+  <meta property="og:title" content={full}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content={new URL(image, Astro.site)}>
+  <meta property="og:url" content={canonical}>
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/fonts/archivo-300-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="ink"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="4" /><feDisplacementMap in="SourceGraphic" scale="2.2" /></filter>
+  </svg>
+  <nav class="banner" aria-label="Sections">
+    <s>Top secret</s><b>Declassified</b><span class="sep" aria-hidden="true"></span>
+    {nav.map(([href, label]) => <a href={href} aria-current={isCurrent(href) ? 'page' : undefined}>{label}</a>)}
+  </nav>
+  <main id="main"><slot /></main>
+  <footer class="site">
+    <div class="inner">
+      <p>Photographs are in the public domain or posted with the permission of their authors. Credits and sources sit beside every image and every fact. <a href="/about/">About this archive</a> · <a href="/sources/">All sources</a> · <a href="https://github.com/ralphte/article121">Source code</a></p>
+      <p class="label">Article 121 · not affiliated with Lockheed Martin, the U.S. Air Force, NASA or the CIA</p>
+    </div>
+  </footer>
+  <script>
+    // Redactions lift when their panel comes into view; reduced motion shows them lifted.
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const targets = document.querySelectorAll('[data-reveal]');
+    if (reduce || !('IntersectionObserver' in window)) targets.forEach((t) => t.classList.add('revealed'));
+    else {
+      const io = new IntersectionObserver((ents) => ents.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('revealed'); io.unobserve(e.target); } }), { threshold: 0.3 });
+      targets.forEach((t) => io.observe(t));
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+---
+// Compact list of the sources behind one claim; each links to its entry in the source register.
+import { resolveCitations, shortTitle, type Citation } from '../lib/data';
+interface Props { citations: Citation[]; }
+const list = await resolveCitations(Astro.props.citations);
+---
+<span class="srcs">{list.map(({ entry }, i) => (
+  <>{i > 0 && ' · '}<a href={`/sources/#${entry.id}`} title={`${entry.data.publisher}: ${entry.data.title}`}>{shortTitle(entry.data.title).slice(0, 48)}</a></>
+))}</span>
+<style>
+  .srcs { font: 400 0.68rem/1.5 var(--f-data); letter-spacing: 0.04em; color: var(--ink-3); }
+  .srcs a { color: var(--ink-2); text-decoration-color: var(--seam-2); }
+  .srcs a:hover { color: var(--stencil); text-decoration-color: var(--marking); }
+</style>

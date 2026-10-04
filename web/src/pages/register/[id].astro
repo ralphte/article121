@@ -1,0 +1,122 @@
+---
+import Base from '../../layouts/Base.astro';
+import CardIndex from '../../components/CardIndex.astro';
+import Globe from '../../components/Globe.astro';
+import Photo from '../../components/Photo.astro';
+import Lightbox from '../../components/Lightbox.astro';
+import { getCollection } from 'astro:content';
+import { getImage } from 'astro:assets';
+import { airframesInOrder, fmtDate, lossDate, photosFor, resolveCitations, PROGRAM_LABEL } from '../../lib/data';
+
+export async function getStaticPaths() {
+  const all = await airframesInOrder();
+  return all.map((a, i) => ({ params: { id: a.id }, props: { a, prev: all[i - 1] ?? null, next: all[i + 1] ?? null, all } }));
+}
+const { a, prev, next, all } = Astro.props;
+const d = a.data;
+const isD21 = a.id === 'd-21';
+const photos = await photosFor(a.id);
+const events = (await getCollection('events', (e) => e.data.airframes.includes(d.serial))).sort((x, y) => x.data.date.localeCompare(y.data.date));
+const cites = await resolveCitations(d.citations);
+const points = all.flatMap((x) => [
+  ...(x.data.location && x.data.fate !== 'lost' ? [{ id: x.id, lon: x.data.location.lon, lat: x.data.location.lat, kind: 'af' as const }] : []),
+  ...x.data.displays.map((dd) => ({ id: x.id, lon: dd.lon, lat: dd.lat, kind: 'd21' as const })),
+]);
+const focus = d.location && d.fate !== 'lost' ? { id: a.id, lon: d.location.lon, lat: d.location.lat } : null;
+const lost = d.fate === 'lost' ? lossDate(d.fate_detail) : null;
+const name = isD21 ? 'D-21' : d.serial;
+const title = isD21 ? 'D-21 drones' : `${d.serial} · ${d.type}`;
+const desc = `${d.type} ${isD21 ? '' : d.serial}${d.article ? `, Lockheed Article ${d.article}` : ''}. ${d.fate_detail}`.slice(0, 300);
+const hero = photos[0];
+const og = hero ? (await getImage({ src: hero.data.file, width: 1200, format: 'jpg' })).src : undefined;
+---
+<Base title={title} description={desc} image={og}>
+  <div class="wrap wide reg">
+    <CardIndex current={a.id} compact />
+    <article class="file panel ticks">
+      <div class="sheet-head"><b>File A121-R-{a.id.toUpperCase()}</b><span>{d.type}</span><span>{d.article ? `Article ${d.article}` : 'No article number'}</span></div>
+      <div class="ident">
+        <div>
+          <h1 class="serial">{name}</h1>
+          <div class="sub">{d.type}{d.article && ` · Article ${d.article}`}</div>
+          {d.nickname && d.nickname !== `Article ${d.article}` && <div class="nick">{d.nickname}</div>}
+          {d.fate === 'preserved' && <div class="stamp land white">On display<small>{d.location?.city}{d.location?.state_or_country && `, ${d.location.state_or_country.replace(', USA', '')}`}</small></div>}
+          {d.fate === 'lost' && <div class="stamp land">Lost{lost && <small>{lost}</small>}</div>}
+          {d.fate === 'other' && <div class="stamp land white">See record<small>Not a simple story</small></div>}
+        </div>
+        <div>
+          <Globe points={points} focus={focus} />
+          <p class="globe-cap">{d.location ? <><b>{d.location.museum}</b><br />{d.location.city}, {d.location.state_or_country} · {d.location.lat.toFixed(2)}, {d.location.lon.toFixed(2)}</> : isD21 ? <><b>Surviving drones</b><br />Marked as squares</> : <><b>No display location</b><br />Dots mark every surviving airframe</>}</p>
+        </div>
+      </div>
+
+      <div class:list={['prints', { single: photos.length < 2 }]}>
+        {photos.length ? photos.slice(0, 2).map((p) => <Photo photo={p} sizes="(max-width: 960px) 100vw, 480px" eager />) : (
+          <div class="nophoto"><div><b>No photo on file</b>No openly licensed photograph of {isD21 ? 'these drones' : 'this airframe'} is in the archive yet. If you took one or know of one, it can be added with your permission.</div></div>
+        )}
+      </div>
+
+      <h2>Record</h2>
+      <div class="rec">
+        <div><label>Serial</label><span class="v">{d.serial}</span></div>
+        <div><label>Article</label><span class="v">{d.article ?? 'n/a'}</span></div>
+        <div><label>Type</label><span class="v">{d.type}</span></div>
+        <div><label>Flight hours</label><span class="v">{d.total_hours != null ? d.total_hours.toLocaleString('en-US') : 'Not published'}</span></div>
+        <div class="w2"><label>First flight</label><span class="v">{fmtDate(d.first_flight) || 'Not confirmed'}</span></div>
+        <div class="w2"><label>Status</label><span class="v">{{ preserved: 'Preserved, on display', lost: 'Lost', other: 'See fate' }[d.fate]}</span></div>
+        <div class="w4"><label>{d.fate === 'lost' && d.location ? 'Remains' : 'Where it is now'}</label><span class="v">{d.location ? [d.location.museum, d.location.city, d.location.state_or_country].filter(Boolean).join(', ') : isD21 ? 'See survivors below' : 'Destroyed'}</span></div>
+      </div>
+
+      {d.notable.length > 0 && <><h2>Career</h2><ul class="notable">{d.notable.map((n) => <li>{n}</li>)}</ul></>}
+      <h2>{d.fate === 'lost' ? 'How it was lost' : 'Fate'}</h2>
+      <p class="fate">{d.fate_detail}</p>
+      {isD21 && d.displays.length > 0 && <><h2>Survivors on display</h2><table class="mini"><tbody>{d.displays.map((x) => <tr><td class="d">Drone {x.drone}</td><td>{[x.museum, x.city, x.state_or_country].filter(Boolean).join(', ')}</td></tr>)}</tbody></table></>}
+      {events.length > 0 && <><h2>In the chronology</h2><table class="mini"><tbody>{events.map((e) => <tr><td class="d">{fmtDate(e.data.date, e.data.precision, true)}</td><td><b>{e.data.title}</b> <span class="prog">{PROGRAM_LABEL[e.data.program]}</span><br />{e.data.summary}</td></tr>)}</tbody></table></>}
+      {d.notes && <><h2>Where the record disagrees</h2><p class="notes">{d.notes}</p></>}
+      <h2>Sources</h2>
+      <ol class="src">{cites.map(({ entry, detail }) => <li>{entry.data.publisher}. <em>{detail ?? entry.data.title}</em>. <a href={entry.data.url}>Open</a> · <a href={`/sources/#${entry.id}`}>In the register</a></li>)}</ol>
+      <nav class="pager" aria-label="Neighbouring files">
+        {prev ? <a class="btn" href={`/register/${prev.id}/`}>Previous: {prev.id === 'd-21' ? 'D-21' : prev.data.serial}</a> : <span></span>}
+        {next ? <a class="btn" href={`/register/${next.id}/`}>Next: {next.id === 'd-21' ? 'D-21' : next.data.serial}</a> : <span></span>}
+      </nav>
+    </article>
+  </div>
+  <Lightbox />
+</Base>
+<style>
+  .reg { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 20px; margin-top: 24px; align-items: start; }
+  .file { padding: clamp(18px, 3.4vw, 44px); min-width: 0; }
+  .sheet-head { display: flex; justify-content: space-between; gap: 6px 18px; flex-wrap: wrap; border-bottom: 1px solid var(--seam-2); padding-bottom: 10px; margin-bottom: 22px; font: 400 0.66rem/1.4 var(--f-data); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
+  .sheet-head b { color: var(--ink); }
+  .ident { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 300px); gap: 24px; align-items: start; }
+  .serial { font: 800 clamp(2.8rem, 1.6rem + 4vw, 5.2rem)/0.92 var(--f-display); font-stretch: 125%; color: var(--stencil); font-variant-numeric: tabular-nums; margin: 0; }
+  .sub { margin-top: 12px; font: 400 0.74rem/1.4 var(--f-data); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-2); }
+  .nick { margin-top: 6px; font: italic 400 1rem/1.4 var(--f-typed); color: var(--ink-2); }
+  .ident .stamp { margin-top: 20px; }
+  .globe-cap { margin-top: 8px; font: 400 0.66rem/1.5 var(--f-data); letter-spacing: 0.06em; color: var(--ink-3); text-align: center; text-transform: uppercase; }
+  .globe-cap b { color: var(--ink); }
+  .prints { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 14px; margin: 30px 0 6px; }
+  .prints.single { grid-template-columns: minmax(0, 640px); }
+  .nophoto { aspect-ratio: 3 / 2; display: grid; place-items: center; text-align: center; padding: 18px; background: repeating-linear-gradient(-45deg, transparent 0 9px, var(--seam) 9px 10px), var(--void); font-size: 0.82rem; color: var(--ink-2); border: 1px solid var(--seam); max-width: 420px; }
+  .nophoto b { display: block; font: 800 0.8rem/1.1 var(--f-display); font-stretch: 112%; letter-spacing: 0.16em; text-transform: uppercase; color: var(--marking); border: 2px solid currentColor; padding: 7px 10px 6px; transform: rotate(-3deg); margin: 0 auto 12px; width: max-content; max-width: 100%; }
+  .file h2 { font: 400 0.68rem/1.2 var(--f-data); letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); margin: 34px 0 12px; padding-top: 14px; border-top: 1px solid var(--seam); }
+  .rec { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--seam); border: 1px solid var(--seam); }
+  .rec > div { background: var(--hull); padding: 9px 12px 11px; min-width: 0; }
+  .rec .w2 { grid-column: span 2; }
+  .rec .w4 { grid-column: span 4; }
+  .rec label { display: block; font: 400 0.56rem/1.3 var(--f-data); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 3px; }
+  .rec .v { font: 700 0.9rem/1.35 var(--f-data); color: var(--stencil); overflow-wrap: anywhere; }
+  ul.notable { margin: 0; padding-left: 1.2rem; display: grid; gap: 7px; font: 400 0.95rem/1.55 var(--f-typed); max-width: 76ch; }
+  ul.notable li::marker { color: var(--marking); }
+  .fate { max-width: 74ch; margin: 0; font: 400 0.98rem/1.6 var(--f-typed); }
+  .notes { background: var(--marking-soft); border-left: 2px solid var(--marking); padding: 12px 16px; font-size: 0.88rem; margin: 0; max-width: 80ch; }
+  table.mini { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  .mini td { border-bottom: 1px solid var(--seam); padding: 9px 6px; vertical-align: top; color: var(--ink-2); }
+  .mini td b { color: var(--ink); }
+  .mini td.d { white-space: nowrap; width: 8em; font: 700 0.8rem/1.5 var(--f-data); color: var(--stencil); }
+  .prog { font: 400 0.6rem/1 var(--f-data); letter-spacing: 0.14em; color: var(--marking); text-transform: uppercase; margin-left: 6px; }
+  ol.src { margin: 0; padding-left: 1.4rem; display: grid; gap: 7px; font-size: 0.84rem; color: var(--ink-2); overflow-wrap: anywhere; }
+  .pager { display: flex; justify-content: space-between; gap: 12px; margin-top: 34px; padding-top: 16px; border-top: 1px solid var(--seam-2); flex-wrap: wrap; }
+  @media (max-width: 960px) { .reg { grid-template-columns: minmax(0, 1fr); } .ident { grid-template-columns: minmax(0, 1fr); } }
+  @media (max-width: 600px) { .rec { grid-template-columns: repeat(2, minmax(0, 1fr)); } .rec .w2, .rec .w4 { grid-column: span 2; } }
+</style>

@@ -1,0 +1,37 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+const all = await getCollection('sources');
+const byPub = new Map<string, typeof all>();
+for (const s of all) { const k = s.data.publisher || 'Other'; byPub.set(k, [...(byPub.get(k) ?? []), s]); }
+const groups = [...byPub.entries()].map(([pub, list]) => ({ pub, list: list.sort((a, b) => b.data.uses - a.data.uses), uses: list.reduce((n, s) => n + s.data.uses, 0) })).sort((a, b) => b.uses - a.uses);
+const photos = await getCollection('photos');
+const lic = new Map<string, number>();
+for (const p of photos) lic.set(p.data.license, (lic.get(p.data.license) ?? 0) + 1);
+---
+<Base title="Sources" description="Every source behind Article 121: who published it, where to read it, and how often it is cited.">
+  <div class="wrap">
+    <header class="page-head panel ticks">
+      <div class="file-head"><b>File A121-0004</b><span>Source register</span><span>{all.length} sources</span></div>
+      <h1 class="display">Sources</h1>
+      <p>Every document, archive and record cited anywhere on Article 121, grouped by who published it. The number beside each is how many facts on the site rest on it.</p>
+      <p class="label">Photographs: {[...lic.entries()].sort((a, b) => b[1] - a[1]).map(([l, n]) => `${n} ${l}`).join(' · ')}</p>
+    </header>
+    {groups.map((g) => (
+      <section class="pub panel">
+        <h2>{g.pub} <span class="label">{g.list.length} {g.list.length === 1 ? 'source' : 'sources'} · cited {g.uses} times</span></h2>
+        <ol>
+          {g.list.map((s) => <li id={s.id}><a href={s.data.url}>{s.data.title}</a> <span class="uses">{s.data.uses}</span></li>)}
+        </ol>
+      </section>
+    ))}
+  </div>
+</Base>
+<style>
+  .pub { margin-top: 14px; padding: 18px 22px; }
+  .pub h2 { font: 700 1rem/1.3 var(--f-display); font-stretch: 105%; color: var(--stencil); margin: 0 0 10px; display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline; }
+  .pub ol { margin: 0; padding-left: 1.4rem; display: grid; gap: 6px; font-size: 0.9rem; }
+  .pub li { scroll-margin-top: 70px; overflow-wrap: anywhere; }
+  .pub li:target { background: var(--marking-soft); outline: 1px solid var(--marking); outline-offset: 4px; }
+  .uses { font: 700 0.62rem/1 var(--f-data); color: var(--ink-3); margin-left: 6px; }
+</style>

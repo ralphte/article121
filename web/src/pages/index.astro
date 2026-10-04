@@ -1,0 +1,199 @@
+---
+import { Picture } from 'astro:assets';
+import { getCollection, getEntry } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import FolderScene from '../components/FolderScene.astro';
+import Loupe from '../components/Loupe.astro';
+import Photo from '../components/Photo.astro';
+import Lightbox from '../components/Lightbox.astro';
+import SourceLinks from '../components/SourceLinks.astro';
+import { fmtDate, PROGRAM_LABEL, resolveCitations, lossDate, placeOf } from '../lib/data';
+
+const hero = (await getEntry('photos', 'sr71-takeoff'))!;
+const exhibitA = (await getEntry('photos', 'nasm-61-7972-hangar'))!;
+const KEY_EVENTS = [
+  'u2-first-overflight-tracked', 'archangel-studies-begin', 'lockheed-selected-oxcart', 'powers-u2-shootdown',
+  'a12-unofficial-first-flight', 'a12-official-first-flight', 'yf12a-first-flight', 'sr71-first-flight',
+  'm21-d21-collision', 'first-black-shield-mission', 'last-a12-flight', 'record-absolute-speed',
+  'record-altitude-horizontal', 'record-flight-61-7972-smithsonian', 'last-usaf-sr71-flight', 'final-sr71-flight',
+];
+const events = (await Promise.all(KEY_EVENTS.map((id) => getEntry('events', id)))).filter((e) => !!e);
+const programs = [...new Set(events.map((e) => e.data.program))];
+const VIEW = ['cia-a12-60-6931-dusk', 'nasa-831-sierra-nevada', 'nasa-844-f16xl-formation', 'a12-flying', 'sr71-tanker', 'j58-afterburner'];
+const prints = (await Promise.all(VIEW.map((id) => getEntry('photos', id)))).filter((p) => !!p);
+const TEASER = ['60-6924', '60-6927', '61-7972', '61-7962', '60-6940', '61-7974'];
+const teaser = (await Promise.all(TEASER.map((id) => getEntry('airframes', id)))).filter((a) => !!a);
+// every source cited on this page, in order of first use
+const seen = new Map<string, Awaited<ReturnType<typeof resolveCitations>>[number]>();
+for (const e of events) for (const c of await resolveCitations(e.data.citations)) if (!seen.has(c.entry.id)) seen.set(c.entry.id, c);
+const pageSources = [...seen.values()];
+const totalSources = (await getCollection('sources')).length;
+---
+<Base title="Article 121">
+  <header class="hero" id="top" data-reveal>
+    <Picture src={hero.data.file} alt={hero.data.caption} widths={[800, 1200, 1600, 2400]} sizes="100vw" formats={['avif', 'webp']} loading="eager" fetchpriority="high" class="hero-img" />
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="stamp land hero-stamp">Declassified<small>Released to the public</small></div>
+    <div class="hero-copy">
+      <div class="label">File A121 · Lockheed <span class="nw">A-12</span> · <span class="nw">YF-12</span> · <span class="nw">M-21</span> · <span class="nw">SR-71</span> · 1958 to 1999</div>
+      <h1 class="display hero-title"><span class="redact" style="--d:.4s">Article 121</span></h1>
+      <p class="hero-lede">The Blackbird archive. Every photograph, date and figure, declassified, credited and linked to the place it came from.</p>
+      <div class="actions"><a class="btn solid" href="#file">Open the file</a><a class="btn" href="/register/">Where they are now</a></div>
+    </div>
+    <div class="datastrip hero-data"><span>SR-71B · 61-7956 · NASA 831</span><span>Takeoff, Edwards, Calif.</span><span>1992</span><span>{hero.data.creator}</span><a class="hot" href={hero.data.source_page}>Public domain · source</a></div>
+  </header>
+
+  <section class="wrap" id="file" aria-labelledby="file-h">
+    <div class="file-sec">
+      <FolderScene />
+      <div class="summary panel ticks" data-reveal>
+        <div class="file-head"><b>File A121-0001</b><span>Summary</span><span>Page 1 of 1</span></div>
+        <h2 class="section" id="file-h">The file</h2>
+        <div class="stamp white">Public record</div>
+        <p class="typed">This file documents the <span class="redact" style="--d:.1s">Lockheed A-12, YF-12, M-21 and SR-71</span>, the aircraft the world came to call the Blackbirds, from the first Archangel studies in 1958 to NASA's last flight in 1999.</p>
+        <p class="typed">Every photograph, date and figure here comes from <span class="redact" style="--d:.5s">a public, citable source</span>, and every one is credited and linked. Article 121 was the program's own name for the <span class="redact" style="--d:.9s">first A-12 airframe, serial 60-6924</span>.</p>
+        <p><a class="btn" href="/register/60-6924/">Open the file on Article 121</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap exhibit" id="exhibit-a" aria-labelledby="exa-h">
+    <div class="ex-head"><div><span class="label">Exhibit A</span><h2 class="section" id="exa-h">61-7972 at rest</h2></div></div>
+    <Loupe photo={exhibitA}>
+      <span>SR-71A</span><span>61-7972 · Article 2023</span><span>Udvar-Hazy Center, Chantilly, Va.</span><span>Smithsonian {exhibitA.data.original_id}</span><a class="hot" href={exhibitA.data.source_page}>CC0 · source</a>
+    </Loupe>
+    <p class="ex-note">The SR-71A that flew from Los Angeles to Washington in 64 minutes 20 seconds on its last flight, 6 March 1990, nose-on in the Smithsonian's hangar. Move over the print to inspect it the way photo interpreters did, with a loupe. <a href="/register/61-7972/">This airframe's file</a></p>
+  </section>
+
+  <section class="wrap" id="chronology" aria-labelledby="chrono-h">
+    <div class="ledger-sec panel ticks">
+      <div class="file-head"><b>File A121-0002</b><span>Chronology</span><span>{events.length} key entries of 109</span></div>
+      <h2 class="section" id="chrono-h">Chronology</h2>
+      <div class="filters" role="group" aria-label="Filter by program">
+        <button class="chip" aria-pressed="true" data-f="all">All</button>
+        {programs.map((p) => <button class="chip" aria-pressed="false" data-f={p}>{PROGRAM_LABEL[p]}</button>)}
+      </div>
+      <div class="ledger-scroll">
+        <table class="ledger">
+          <thead><tr><th scope="col">Date</th><th scope="col">Event</th><th scope="col">Program</th></tr></thead>
+          <tbody>
+            {events.map((e) => (
+              <tr data-p={e.data.program}>
+                <td class="date">{fmtDate(e.data.date, e.data.precision, true)}</td>
+                <td><b>{e.data.title}</b><br />{e.data.summary}<br /><SourceLinks citations={e.data.citations} /></td>
+                <td class="prog">{PROGRAM_LABEL[e.data.program]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:18px"><a class="btn" href="/timeline/">The full chronology</a></p>
+    </div>
+  </section>
+
+  <section class="wrap viewing" id="viewing" aria-labelledby="view-h">
+    <span class="label">Viewing table</span>
+    <h2 class="section" id="view-h">Photographs</h2>
+    <p class="ex-note" style="margin-top:0">Select any print to view it full screen, then select again to zoom.</p>
+    <div class="frames">
+      {prints.map((p, i) => <Photo photo={p} frame={`FRAME ${String(i + 1).padStart(3, '0')}`} sizes="(max-width: 760px) 100vw, (max-width: 1240px) 50vw, 400px" />)}
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="reg-h">
+    <div class="reg-sec panel ticks">
+      <div>
+        <div class="file-head"><b>File A121-R</b><span>Register</span></div>
+        <h2 class="section" id="reg-h">Where they are now</h2>
+        <p>Every airframe Lockheed built has its own file: article number, first flight, career, how it ended and the museum where it stands today.</p>
+        <a class="btn solid" href="/register/">Open the register</a>
+      </div>
+      <div class="tabs">
+        {teaser.map((a) => (
+          <a href={`/register/${a.id}/`} class={a.data.fate === 'lost' ? 'lost' : undefined}>
+            <b>{a.data.serial}</b>
+            <span>{a.data.type}{a.data.nickname ? ` · ${a.data.nickname}` : a.data.article ? ` · Article ${a.data.article}` : ''}</span>
+            <span>{a.data.fate === 'lost' ? `Lost ${lossDate(a.data.fate_detail) ?? ''}` : placeOf(a.data)}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="sources" aria-labelledby="src-h">
+    <div class="refs panel ticks">
+      <div class="file-head"><b>File A121-0004</b><span>Sources on this page</span><span>{pageSources.length}</span></div>
+      <h2 class="section" id="src-h">Sources</h2>
+      <ol>
+        {pageSources.map(({ entry }) => <li>{entry.data.publisher}. <em>{entry.data.title}</em>. <a href={entry.data.url}>Open</a> · <a href={`/sources/#${entry.id}`}>In the register</a></li>)}
+      </ol>
+      <p style="margin-top:16px"><a class="btn" href="/sources/">All {totalSources} sources</a></p>
+    </div>
+  </section>
+  <Lightbox />
+</Base>
+
+<style>
+  .hero { position: relative; min-height: min(88vh, 940px); display: grid; align-items: end; overflow: hidden; background: var(--void); }
+  .hero :global(.hero-img) { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 45%; filter: saturate(0.85) contrast(1.05); animation: settle 2.4s cubic-bezier(.2,.7,.2,1) both; }
+  @keyframes settle { from { transform: scale(1.1); opacity: 0; } to { transform: scale(1.03); opacity: 1; } }
+  .hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5,7,10,0.92) 0%, rgba(5,7,10,0.55) 42%, rgba(5,7,10,0.08) 75%), linear-gradient(0deg, rgba(5,7,10,1) 0%, rgba(5,7,10,0.2) 34%, rgba(5,7,10,0) 60%); }
+  .hero-copy { position: relative; z-index: 2; padding: 0 16px 92px; max-width: 1240px; width: 100%; margin: 0 auto; }
+  .hero-title { font-size: clamp(3rem, 1rem + 9vw, 9.5rem); margin: 14px 0 18px; }
+  .hero-title .redact::after { transition-duration: 1.2s; }
+  .hero-lede { max-width: 38rem; font-size: clamp(1.05rem, 0.98rem + 0.35vw, 1.28rem); line-height: 1.5; margin: 0; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .hero-stamp { position: absolute; z-index: 3; right: clamp(16px, 5vw, 80px); top: clamp(60px, 12vh, 130px); font-size: 1.15rem; animation-delay: 1.5s; }
+  .hero-data { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; background: rgba(5, 7, 10, 0.72); backdrop-filter: blur(6px); }
+  .hero-data a { padding: 8px 12px 7px; text-decoration: none; }
+  .file-sec { margin-top: 96px; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+  .summary { padding: clamp(22px, 4vw, 48px); border-left: 0; }
+  .summary .stamp { position: absolute; right: 22px; top: 70px; }
+  .summary p { max-width: 54ch; margin: 0 0 1rem; }
+  .summary .typed { font-size: 0.98rem; line-height: 1.65; }
+  .exhibit { margin-top: 110px; }
+  .ex-head { margin-bottom: 16px; }
+  .ex-head .label { display: block; margin-bottom: 8px; }
+  .ex-note { max-width: 70ch; color: var(--ink-2); margin: 14px 0 0; font-size: 0.92rem; }
+  .ledger-sec { margin-top: 110px; padding: clamp(20px, 3.4vw, 40px); }
+  .filters { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 18px; }
+  .ledger-scroll { overflow-x: auto; }
+  table.ledger { width: 100%; border-collapse: collapse; min-width: 560px; }
+  .ledger th { text-align: left; font: 400 0.64rem/1.2 var(--f-data); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); border-bottom: 1px solid var(--seam-2); padding: 8px 10px; }
+  .ledger td { border-bottom: 1px solid var(--seam); padding: 12px 10px; vertical-align: top; font-size: 0.95rem; }
+  .ledger td b { color: var(--stencil); font-weight: 600; }
+  .ledger td.date { white-space: nowrap; font: 700 0.86rem/1.5 var(--f-data); color: var(--stencil); font-variant-numeric: tabular-nums; }
+  .ledger td.prog { white-space: nowrap; font: 400 0.64rem/1.9 var(--f-data); letter-spacing: 0.14em; color: var(--marking); text-transform: uppercase; }
+  .ledger tr:hover td { background: var(--hull-2); }
+  .ledger tr[hidden] { display: none; }
+  .viewing { margin-top: 110px; }
+  .frames { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 18px; margin-top: 18px; }
+  .reg-sec { margin-top: 110px; padding: clamp(20px, 3.4vw, 40px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 28px; align-items: start; }
+  .reg-sec p { color: var(--ink-2); max-width: 46ch; }
+  .tabs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .tabs a { display: grid; gap: 2px; text-decoration: none; background: var(--hull-2); border: 1px solid var(--seam); border-left: 3px solid var(--stencil); padding: 12px 14px; transition: background 0.2s, transform 0.2s; }
+  .tabs a:hover { background: var(--hull-3); transform: translateX(3px); }
+  .tabs a.lost { border-left-color: var(--marking); }
+  .tabs b { font: 800 1.15rem/1.1 var(--f-display); font-stretch: 112%; color: var(--stencil); }
+  .tabs span { font: 400 0.66rem/1.4 var(--f-data); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
+  .refs { margin-top: 110px; padding: clamp(20px, 3.4vw, 40px); }
+  .refs ol { margin: 0; padding-left: 1.6rem; display: grid; gap: 10px; font-size: 0.9rem; color: var(--ink-2); max-width: 90ch; }
+  @media (max-width: 900px) {
+    .file-sec { grid-template-columns: minmax(0, 1fr); }
+    .reg-sec { grid-template-columns: minmax(0, 1fr); }
+    .hero-copy { padding-bottom: 120px; }
+    .hero-stamp { top: 60px; font-size: 0.9rem; }
+  }
+  @media (max-width: 520px) { .tabs { grid-template-columns: minmax(0, 1fr); } }
+  @media (prefers-reduced-motion: reduce) { .hero :global(.hero-img) { animation: none; } }
+</style>
+<script>
+  // Title redaction lifts on load; program filter on the ledger.
+  requestAnimationFrame(() => setTimeout(() => document.getElementById('top')?.classList.add('revealed'), 300));
+  const filters = document.querySelector('.filters');
+  filters?.addEventListener('click', (ev) => {
+    const b = (ev.target as HTMLElement).closest('button'); if (!b) return;
+    filters.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+    document.querySelectorAll<HTMLTableRowElement>('.ledger tbody tr').forEach((tr) => { tr.hidden = !(b.dataset.f === 'all' || tr.dataset.p === b.dataset.f); });
+  });
+</script>

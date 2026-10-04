@@ -1,0 +1,2234 @@
+[
+ {
+  "id": "60-6924",
+  "serial": "60-6924",
+  "type": "A-12",
+  "article": "121",
+  "nickname": "Article 121",
+  "first_flight": "1962-04-26",
+  "fate": "preserved",
+  "fate_detail": "Retired with the A-12 fleet in 1968 and stored at Palmdale; on display at Blackbird Airpark since the park opened in November 1991, next to SR-71A 61-7973.",
+  "location": {
+   "museum": "Blackbird Airpark (annex of the Air Force Flight Test Museum)",
+   "city": "Palmdale",
+   "state_or_country": "California, USA",
+   "lat": 34.6032,
+   "lon": -118.086
+  },
+  "displays": [],
+  "total_hours": 418.2,
+  "notable": [
+   "First A-12 built and the first OXCART aircraft to fly",
+   "Built and ground tested at Burbank in Jan to Feb 1962, then trucked to Groom Lake in a 35 ft by 105 ft crate, leaving the Skunk Works on the night of 26 Feb 1962 for a two-day trip",
+   "Lockheed test pilot Lou Schalk made the low unofficial hop, the first real flight (about 40 minutes) and the official first flight (30 Apr 1962, 59 minutes, 30,000 ft)",
+   "First supersonic A-12 flight on 4 May 1962 (Mach 1.1 at 40,000 ft)",
+   "In Aug 1964 CIA noted it was the only one of the four test aircraft to have reached the speed needed to beat the Soviet speed record; the CIA refused to use it for a record attempt",
+   "332 flights per CIA inventory"
+  ],
+  "notes": "First flight dates differ by source. CIA Archangel narrative: unofficial first flight on 25 Apr 1962 (under two miles at about 20 ft, wobbling from mis-connected controls), a roughly 40-minute flight the next day (26 Apr), official first flight 30 Apr 1962. The same CIA monograph's timeline lists 26 Apr as 'First test flight'. Wikipedia and the Blackbird Airpark sources give 26 Apr as the first (unofficial) flight, with a momentary lift-off during a high-speed taxi test 'two days earlier' (24 Apr). Flight count: CIA inventory gives 332 flights, Wikipedia table gives 322; both give 418.2 hours. McIninch's earlier CIA history 'The Oxcart Story' gives 26 Apr 1962 as the unofficial, unannounced maiden flight of about 40 minutes, departure from Burbank on 26 Feb 1962, and the official first flight on 30 Apr 1962 (59 minutes). This file uses 26 Apr 1962, the first flight of real duration that both CIA histories record. Blackbird Airpark opening: November 1991 (Roadrunners Internationale) vs dedication on 27 September 1991 (sr-71.org / habu.org, per the 61-7973 entry).",
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed.; includes 'Inventory of A-12s' table, p. 50)"
+   },
+   {
+    "source": "central-intelligence-agency-80c044"
+   },
+   {
+    "source": "roadrunners-internationale-oxcart-vetera-15041a"
+   },
+   {
+    "source": "wikipedia-566759"
+   },
+   {
+    "source": "historical-marker-database-hmdb-ac34b9"
+   }
+  ]
+ },
+ {
+  "id": "60-6925",
+  "serial": "60-6925",
+  "type": "A-12",
+  "article": "122",
+  "nickname": null,
+  "first_flight": "1963-01",
+  "fate": "preserved",
+  "fate_detail": "Retired in 1968 and stored at Palmdale; on display on the flight deck of USS Intrepid in New York since 1991.",
+  "location": {
+   "museum": "Intrepid Museum (flight deck of USS Intrepid)",
+   "city": "New York",
+   "state_or_country": "New York, USA",
+   "lat": 40.7646,
+   "lon": -73.9996
+  },
+  "displays": [],
+  "total_hours": 177.9,
+  "notable": [
+   "Second A-12; arrived at the test site in late June 1962",
+   "Used principally for checking electronic and propulsion systems and radar cross section; photographed mounted inverted on a pylon for radar testing at Area 51",
+   "During delivery a Greyhound bus grazed its 35 ft wide crate; the project paid nearly $5,000 for the bus damage to avoid an insurance inquiry",
+   "122 flights per CIA inventory"
+  ],
+  "notes": "First flight given only as 'January 1963' by CIA (Archangel). Flight count: CIA inventory 122, Wikipedia table 161; hours agree (177.9). Intrepid Museum says the aircraft arrived in 1991; some registry sites say 1990.",
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed.; includes 'Inventory of A-12s' table, p. 50)"
+   },
+   {
+    "source": "roadrunners-internationale-oxcart-vetera-15041a"
+   },
+   {
+    "source": "intrepid-museum-9ffd79"
+   },
+   {
+    "source": "wikipedia-566759"
+   }
+  ]
+ },
+ {
+  "id": "60-6926",
+  "serial": "60-6926",
+  "type": "A-12",
+  "article": "123",
+  "nickname": null,
+  "first_flight": null,
+  "fate": "lost",
+  "fate_detail": "Crashed 24 May 1963 near Wendover, Utah, during a low-altitude subsonic test of an inertial navigation system after iced pitot tubing gave false airspeed readings and the aircraft stalled into an inverted spin. CIA pilot Ken Collins ejected safely; the press was told an F-105 had crashed.",
+  "location": null,
+  "displays": [],
+  "total_hours": 135.3,
+  "notable": [
+   "First A-12 loss",
+   "Arrived at the test site in August 1962 and was outfitted for operational use",
+   "Collins wore a standard flight suit, which helped preserve the cover story; he later took truth serum to help investigators",
+   "Fleet grounded for about a week; wreckage recovered in two days",
+   "79 flights"
+  ],
+  "notes": "First flight date not found in sources checked. Collins's middle initial varies between sources, so it is omitted.",
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed.; includes 'Inventory of A-12s' table, p. 50)"
+   },
+   {
+    "source": "wikipedia-566759"
+   },
+   {
+    "source": "the-salt-lake-tribune-37e935"
+   }
+  ]
+ },
+ {
+  "id": "60-6927",
+  "serial": "60-6927",
+  "type": "A-12 (trainer)",
+  "article": "124",
+  "nickname": "Titanium Goose",
+  "first_flight": null,
+  "fate": "preserved",
+  "fate_detail": "Retired in 1968 and stored at Palmdale (where it was vandalised in storage); on pylon display outside the California Science Center in Exposition Park since late 2003.",
+  "location": {
+   "museum": "California Science Center (Roy A. Anderson Blackbird Exhibit and Garden)",
+   "city": "Los Angeles",
+   "state_or_country": "California, USA",
+   "lat": 34.0156,
+   "lon": -118.2858
+  },
+  "displays": [],
+  "total_hours": 1076.4,
+  "notable": [
+   "Only two-seat A-12 built, with a raised instructor cockpit behind the pilot",
+   "Delivered to the test site in November 1962",
+   "Kept J75 engines for its whole life, limiting it to about Mach 1.6 and 40,000 ft",
+   "The only A-12 Kelly Johnson ever flew in; CIA DDS&T Bud Wheelon also took a ride",
+   "Most-flown A-12: 614 flights and 1,076.4 hours",
+   "Displayed in bare metal finish, unlike the other survivors"
+  ],
+  "notes": "First flight date not verified (secondary sources disagree). The bare-metal finish claim comes from secondary sources and current photos, not an official page.",
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed.; includes 'Inventory of A-12s' table, p. 50)"
+   },
+   {
+    "source": "california-science-center-482865"
+   },
+   {
+    "source": "roadrunners-internationale-f17c85"
+   },
+   {
+    "source": "wikipedia-566759"
+   }
+  ]
+ },
+ {
+  "id": "60-6928",
+  "serial": "60-6928",
+  "type": "A-12",
+  "article": "125",
+  "nickname": null,
+  "first_flight": null,
+  "fate": "lost",
+  "fate_detail": "Crashed 5 January 1967 in the Nevada desert about 70 miles from the test site after a faulty fuel gauge let it run out of fuel on descent. CIA pilot Walter L. 'Walt' Ray ejected at 30,000 to 35,000 ft but could not separate from his seat and was killed, the first OXCART fatality; the Air Force told the press a missing SR-71 was down.",
+  "location": null,
+  "displays": [],
+  "total_hours": 334.9,
+  "notable": [
+   "Arrived at the test site in December 1962 and was outfitted for operational use",
+   "First OXCART pilot fatality; Ray is honoured at the CIA HQ A-12 display",
+   "202 flights"
+  ],
+  "notes": "Popular Science (2021) reports the site near Meadow Valley Wash, Nevada, and adds a claim that a wooden block Ray fitted to his headrest contributed to the seat-separation failure; that detail is not in the CIA history.",
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed.; includes 'Inventory of A-12s' table, p. 50)"
+   },
+   {
+    "source": "central-intelligence-agency-65f7ba"
+   },
+   {
+    "source": "wikipedia-566759"
+   },
+   {
+    "source": "popular-science-de49e7"
+   }
+  ]
+ },
+ {
+  "id": "60-6929",
+  "serial": "60-6929",
+  "type": "A-12",
+  "article": "126",
+  "nickname": null,
+  "first_flight": null,
+  "fate": "lost",
+  "fate_detail": "Crashed 28 December 1965 less than 30 seconds after takeoff from the Groom Lake test site because an electrician had cross-wired the yaw and pitch gyros of the stability augmentation system. CIA pilot Mele Vojvodich ejected close to the ground and was not injured.",
+  "location": null,
+  "displays": [],
+  "total_hours": 169.2,
+  "notable": [
+   "Lost barely a month after the A-12 was declared operationally ready (12 Nov 1965)",
+   "DCI William Raborn ordered a sabotage investigation; simple negligence was found",
+   "105 flights"
+  ],
+  "notes": "First flight date not found in sources checked.",
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed.; includes 'Inventory of A-12s' table, p. 50)"
+   },
+   {
+    "source": "wikipedia-566759"
+   }
+  ]
+ },
+ {
+  "id": "60-6930",
+  "serial": "60-6930",
+  "type": "A-12",
+  "article": "127",
+  "nickname": null,
+  "first_flight": "1963",
+  "fate": "preserved",
+  "fate_detail": "Returned from Kadena after BLACK SHIELD and stored at Palmdale; dedicated at the U.S. Space & Rocket Center on 1 February 1991 and repainted in 2017.",
+  "location": {
+   "museum": "U.S. Space & Rocket Center",
+   "city": "Huntsville",
+   "state_or_country": "Alabama, USA",
+   "lat": 34.7114,
+   "lon": -86.6542
+  },
+  "displays": [],
+  "total_hours": 499.2,
+  "notable": [
+   "One of the three BLACK SHIELD aircraft at Kadena; flown there by Jack Layton in May 1967",
+   "Flew 10 of the 29 BLACK SHIELD missions (tally from the CIA mission table)",
+   "Flew the last operational A-12 reconnaissance mission, over North Korea, in May 1968 (mission BX6858, pilot Jack Layton)",
+   "In October 1966 flew for 7 hours 40 minutes, then the longest A-12 flight",
+   "258 flights"
+  ],
+  "notes": "Date of the last operational mission: CIA Archangel says 6 May 1968 in a photo caption and that the 8 May sortie 'would be its last' in the text. The museum says it first flew in 1963 (no day given). Archangel's phrase 'one week after its first flight' for the Oct 1966 endurance flight conflicts with a 1963 first flight and may refer to a return to flight.",
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed.; includes 'Inventory of A-12s' table, p. 50)"
+   },
+   {
+    "source": "roadrunners-internationale-oxcart-vetera-15041a"
+   },
+   {
+    "source": "u-s-space-rocket-center-83008e"
+   },
+   {
+    "source": "wikipedia-566759"
+   }
+  ]
+ },
+ {
+  "id": "60-6931",
+  "serial": "60-6931",
+  "type": "A-12",
+  "article": "128",
+  "nickname": null,
+  "first_flight": "1963-10-03",
+  "fate": "preserved",
+  "fate_detail": "Retired 28 May 1968 and stored at Palmdale; loaned by the USAF to CIA, it arrived at CIA Headquarters on 9 Aug 2007, was dedicated on 19 Sep 2007 and is mounted on pylons in a climbing, banked attitude. Restored by CIA from September to 30 October 2025.",
+  "location": {
+   "museum": "CIA Headquarters, George Bush Center for Intelligence (not open to the public)",
+   "city": "Langley (McLean)",
+   "state_or_country": "Virginia, USA",
+   "lat": 38.9522,
+   "lon": -77.1444
+  },
+  "displays": [],
+  "total_hours": 453,
+  "notable": [
+   "First operationally outfitted A-12 (not a test aircraft) to reach Mach 3, in March 1965",
+   "Eighth A-12 built; CIA describes it as the eighth of 15 OXCART airframes",
+   "Display honours CIA pilots Walt Ray and Jack Weeks",
+   "Its 2007 dedication prompted CIA's Archangel history and the release of hundreds of declassified OXCART documents",
+   "232 flights"
+  ],
+  "notes": "Inside the CIA compound and not open to the public. CIA counts 15 OXCART airframes (13 A-12s plus 2 M-21s) and says nine remain (8 A-12s plus the M-21). CIA Museum gives final pylon installation as 8 Dec 2007 and display completion in early May 2008.",
+  "citations": [
+   {
+    "source": "central-intelligence-agency-65f7ba"
+   },
+   {
+    "source": "central-intelligence-agency-546fcd"
+   },
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed.; includes 'Inventory of A-12s' table, p. 50)"
+   },
+   {
+    "source": "roadrunners-internationale-f78da8"
+   }
+  ]
+ },
+ {
+  "id": "60-6932",
+  "serial": "60-6932",
+  "type": "A-12",
+  "article": "129",
+  "nickname": null,
+  "first_flight": null,
+  "fate": "lost",
+  "fate_detail": "Lost on 4 June 1968 (5 June local time on Okinawa) about 520 miles east of Manila on a functional check flight from Kadena after an engine change; telemetry showed engine trouble and no wreckage was found. CIA pilot Jack Weeks was killed, the second and last OXCART pilot fatality.",
+  "location": null,
+  "displays": [],
+  "total_hours": 409.9,
+  "notable": [
+   "One of the three BLACK SHIELD aircraft at Kadena; flown there by Jack Weeks via Wake Island in May 1967",
+   "Flew 6 of the 29 BLACK SHIELD missions (tally from the CIA mission table)",
+   "On 30 Oct 1967 (mission BX6734, pilot Dennis Sullivan) at least six SA-2s were fired at it over Hanoi; a fragment lodged in the lower right wing, the closest an OXCART aircraft came to being shot down",
+   "268 flights"
+  ],
+  "notes": "Loss date: CIA Archangel gives 4 June 1968 (US date); Roadrunners and the Wikipedia narrative give 5 June 1968 (Kadena local date, takeoff about 1400). Use '4 June 1968 (5 June local time on Okinawa)'. First flight date not found.",
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed.; includes 'Inventory of A-12s' table, p. 50)"
+   },
+   {
+    "source": "central-intelligence-agency-65f7ba"
+   },
+   {
+    "source": "wikipedia-566759"
+   },
+   {
+    "source": "roadrunners-internationale-990730"
+   }
+  ]
+ },
+ {
+  "id": "60-6933",
+  "serial": "60-6933",
+  "type": "A-12",
+  "article": "130",
+  "nickname": null,
+  "first_flight": "1963-11-27",
+  "fate": "preserved",
+  "fate_detail": "Retired in 1968 and stored at Palmdale, then trucked to San Diego; displayed on a pylon outside the San Diego Air & Space Museum in Balboa Park.",
+  "location": {
+   "museum": "San Diego Air & Space Museum, Balboa Park",
+   "city": "San Diego",
+   "state_or_country": "California, USA",
+   "lat": 32.7262,
+   "lon": -117.1543
+  },
+  "displays": [],
+  "total_hours": 406.3,
+  "notable": [
+   "Tenth A-12 built (museum)",
+   "Operational-configuration aircraft; not one of the three deployed to Kadena",
+   "217 flights"
+  ],
+  "notes": "The 27 Nov 1963 first flight date comes only from photo-archive and secondary sources (ABPic and similar); not confirmed by CIA. Those same sources claim a final flight in August 1965, which conflicts with the CIA statement that all operational A-12s flew until 1968, so treat both as unverified.",
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed.; includes 'Inventory of A-12s' table, p. 50)"
+   },
+   {
+    "source": "roadrunners-internationale-oxcart-vetera-15041a"
+   },
+   {
+    "source": "san-diego-air-space-museum-e9df2e"
+   },
+   {
+    "source": "air-britain-abpic-0ff8d9"
+   }
+  ]
+ },
+ {
+  "id": "60-6937",
+  "serial": "60-6937",
+  "type": "A-12",
+  "article": "131",
+  "nickname": null,
+  "first_flight": null,
+  "fate": "preserved",
+  "fate_detail": "Made the final flight of any A-12 on 21 June 1968, flown by Frank Murray from the Nevada test site to storage at Palmdale; now displayed outdoors by the Southern Museum of Flight in Birmingham.",
+  "location": {
+   "museum": "Southern Museum of Flight",
+   "city": "Birmingham",
+   "state_or_country": "Alabama, USA",
+   "lat": 33.5635,
+   "lon": -86.7381
+  },
+  "displays": [],
+  "total_hours": 345.8,
+  "notable": [
+   "Flew the first BLACK SHIELD mission over North Vietnam on 31 May 1967 (Mele Vojvodich; 3 h 39 min at Mach 3.1 and 80,000 ft, two refuelings)",
+   "Flew 13 of the 29 BLACK SHIELD missions, the most of any A-12 (tally from the CIA mission table)",
+   "First A-12 fired on by a SAM: 28 Oct 1967, the 16th BLACK SHIELD mission (BX6732), Dennis Sullivan; the SA-2 was fired too late and was no threat",
+   "Took the only A-12 photograph of the captured USS Pueblo, over North Korea on 26 Jan 1968 (Jack Weeks)",
+   "Last A-12 ever to fly (21 June 1968)",
+   "177 flights"
+  ],
+  "notes": "Serial oddity: the tail number '06937' was reused as a fictitious serial for NASA's 'YF-12C', which was really SR-71A 61-7951 (USAF 64-17951), loaned to NASA 1971 to 1978. Do not confuse the two. CIA Archangel states the first attempted shootdown of an A-12 was the 16th BLACK SHIELD mission on 28 Oct 1967.",
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed.; includes 'Inventory of A-12s' table, p. 50)"
+   },
+   {
+    "source": "roadrunners-internationale-oxcart-vetera-15041a"
+   },
+   {
+    "source": "southern-museum-of-flight-4087e9"
+   }
+  ]
+ },
+ {
+  "id": "60-6938",
+  "serial": "60-6938",
+  "type": "A-12",
+  "article": "132",
+  "nickname": null,
+  "first_flight": null,
+  "fate": "preserved",
+  "fate_detail": "Retired in 1968 and stored at Palmdale; displayed at USS ALABAMA Battleship Memorial Park, Mobile, where it was heavily damaged by Hurricane Katrina on 29 August 2005.",
+  "location": {
+   "museum": "USS ALABAMA Battleship Memorial Park",
+   "city": "Mobile",
+   "state_or_country": "Alabama, USA",
+   "lat": 30.6819,
+   "lon": -88.0153
+  },
+  "displays": [],
+  "total_hours": 369.9,
+  "notable": [
+   "Operational-configuration aircraft; not deployed to Kadena",
+   "Owned by the National Museum of the USAF and on loan to the park",
+   "197 flights"
+  ],
+  "notes": "First flight date not found. Whether it is displayed indoors or outdoors today was not confirmed from an official park page; the NMUSAF loan detail is from secondary sources.",
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed.; includes 'Inventory of A-12s' table, p. 50)"
+   },
+   {
+    "source": "roadrunners-internationale-oxcart-vetera-15041a"
+   },
+   {
+    "source": "wikipedia-566759"
+   }
+  ]
+ },
+ {
+  "id": "60-6939",
+  "serial": "60-6939",
+  "type": "A-12",
+  "article": "133",
+  "nickname": null,
+  "first_flight": null,
+  "fate": "lost",
+  "fate_detail": "Crashed 9 July 1964 on approach to Groom Lake after a Mach 3 check flight when a roll and pitch control component froze and the aircraft rolled uncontrollably at about 500 ft. Lockheed test pilot Bill Park ejected at about 200 ft and was not hurt.",
+  "location": null,
+  "displays": [],
+  "total_hours": 8.3,
+  "notable": [
+   "Shortest-lived A-12: 10 flights and 8.3 hours",
+   "The accident was not publicised"
+  ],
+  "notes": "Cause wording differs: CIA says a roll and pitch control component froze; Wikipedia (citing Crickmore) says complete hydraulic failure. CIA's Archangel spells the pilot 'Bill Parks' in one passage and 'Bill Park' in another; Lockheed's test pilot was William C. 'Bill' Park.",
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed.; includes 'Inventory of A-12s' table, p. 50)"
+   },
+   {
+    "source": "wikipedia-566759"
+   }
+  ]
+ },
+ {
+  "id": "60-6934",
+  "serial": "60-6934",
+  "type": "YF-12A",
+  "article": "1001",
+  "nickname": null,
+  "first_flight": "1963-08-07",
+  "fate": "other",
+  "fate_detail": "Damaged beyond repair on 14 August 1966 at Edwards AFB in a landing mishap with a brake fire. Its rear half was joined to the front half of a static test airframe to create the only SR-71C, 61-7981 (USAF 64-17981), now at the Hill Aerospace Museum, Utah.",
+  "location": null,
+  "displays": [],
+  "total_hours": null,
+  "notable": [
+   "First YF-12A; first flown from Groom Lake by Lockheed test pilot James D. 'Jim' Eastham",
+   "Only YF-12A to wear Air Defense Command markings",
+   "Its rear fuselage survives as part of SR-71C 61-7981 'The Bastard'"
+  ],
+  "notes": "Article/constructor number 1001 is from secondary sources. SR-71 serials are often written 61-79xx (from the tail number 179xx) but the official USAF serial block is 64-17950 to 64-17981.",
+  "citations": [
+   {
+    "source": "nasa-bbc042",
+    "detail": "Mach 3+: NASA/USAF YF-12 Flight Research, 1969-1979 (Peter W. Merlin, NASA SP-2002-4525)"
+   },
+   {
+    "source": "this-day-in-aviation-7789ed",
+    "detail": "Tag Archives: 60-6934 (YF-12A first flight, 1966 accident, 1965 records by 60-6936)"
+   },
+   {
+    "source": "wikipedia-fbc9b5"
+   },
+   {
+    "source": "1000aircraftphotos-com-johan-visschedijk-dd485f"
+   }
+  ]
+ },
+ {
+  "id": "60-6935",
+  "serial": "60-6935",
+  "type": "YF-12A",
+  "article": "1002",
+  "nickname": null,
+  "first_flight": null,
+  "fate": "preserved",
+  "fate_detail": "Recalled from storage in 1969 for the joint NASA/USAF YF-12 research programme, flown 146 times between 1969 and 1979, then ferried to the USAF Museum at Wright-Patterson AFB on 7 November 1979. It is the only surviving YF-12A.",
+  "location": {
+   "museum": "National Museum of the United States Air Force",
+   "city": "Dayton (Wright-Patterson AFB)",
+   "state_or_country": "Ohio, USA",
+   "lat": 39.7814,
+   "lon": -84.1106
+  },
+  "displays": [],
+  "total_hours": null,
+  "notable": [
+   "Only surviving YF-12A",
+   "Loaned to NASA under an agreement signed 31 Mar 1970",
+   "First flew with the improved K-type J58 engines on 18 Oct 1974",
+   "Final NASA flight 31 Oct 1979 (Fitz Fulton and Vic Horton); delivery flight 7 Nov 1979 by Col. James V. Sullivan with museum director Col. Richard Uppstrom"
+  ],
+  "notes": "Museum arrival date: NASA's flight log gives 7 Nov 1979 (flight 146); Wikipedia gives 17 Nov 1979, probably an error. First flight date not verified. Article number 1002 is from secondary sources.",
+  "citations": [
+   {
+    "source": "nasa-bbc042",
+    "detail": "Mach 3+: NASA/USAF YF-12 Flight Research, 1969-1979 (Peter W. Merlin, NASA SP-2002-4525)"
+   },
+   {
+    "source": "national-museum-of-the-united-states-air-01dc8f"
+   },
+   {
+    "source": "wikipedia-fbc9b5"
+   },
+   {
+    "source": "warbird-registry-b8d051"
+   }
+  ]
+ },
+ {
+  "id": "60-6936",
+  "serial": "60-6936",
+  "type": "YF-12A",
+  "article": "1003",
+  "nickname": null,
+  "first_flight": "1964-03-13",
+  "fate": "lost",
+  "fate_detail": "Lost 24 June 1971 on its 62nd flight of the joint NASA/USAF programme when a fuel line in the right engine failed and caused a fire on the return to Edwards. Lt. Col. Ronald J. 'Jack' Layton and Maj. Billy A. Curtis ejected safely; the aircraft crashed near Boron, California.",
+  "location": null,
+  "displays": [],
+  "total_hours": 439.8,
+  "notable": [
+   "Set world speed and altitude records on 1 May 1965: 2,070.101 mph over a straight course and 80,257.65 ft in sustained horizontal flight",
+   "Primary USAF test aircraft in the joint NASA/USAF YF-12 programme from 1970",
+   "Its loss led NASA to borrow SR-71A 61-7951, disguised as the 'YF-12C' with fictitious tail number 06937"
+  ],
+  "notes": "First flight (13 Mar 1964, pilot Robert Gilliland) and total hours (439.8) come from secondary sources only. Wikipedia's YF-12 page gives the loss date as both 24 June and 24 July 1971; the NASA flight log and mishap report confirm 24 June 1971. Record crew is usually given as Col. Robert L. 'Fox' Stephens and Lt. Col. Daniel Andre (some sites say David). Record figures vary slightly between sources (altitude 80,257.65 ft per NASA and CIA; 80,257.86 or 80,259 ft elsewhere). NASA's 'YF-12C' was not a YF-12: see SR-71A 61-7951.",
+  "citations": [
+   {
+    "source": "nasa-bbc042",
+    "detail": "Mach 3+: NASA/USAF YF-12 Flight Research, 1969-1979 (Peter W. Merlin, NASA SP-2002-4525)"
+   },
+   {
+    "source": "this-day-in-aviation-7789ed",
+    "detail": "Tag Archives: 60-6934 (YF-12A first flight, 1966 accident, 1965 records by 60-6936)"
+   },
+   {
+    "source": "wikipedia-fbc9b5"
+   },
+   {
+    "source": "photorecon-net-97e52e",
+    "detail": "YF-12A 60-6936 (Article 1003) profile"
+   }
+  ]
+ },
+ {
+  "id": "60-6940",
+  "serial": "60-6940",
+  "type": "M-21",
+  "article": "134",
+  "nickname": null,
+  "first_flight": "1964-12-22",
+  "fate": "preserved",
+  "fate_detail": "Stored at Palmdale after TAGBOARD ended; acquired by The Museum of Flight in 1991 on loan from the National Museum of the USAF and displayed in the Great Gallery with D-21B drone 510 mounted on its back.",
+  "location": {
+   "museum": "The Museum of Flight (Great Gallery)",
+   "city": "Seattle",
+   "state_or_country": "Washington, USA",
+   "lat": 47.518,
+   "lon": -122.297
+  },
+  "displays": [],
+  "total_hours": 123.9,
+  "notable": [
+   "Only surviving M-21 (A-12 derivative with a second seat for a launch control officer and a dorsal pylon for the D-21)",
+   "CIA timeline marks 22 Dec 1964 as the first flight of an M-21 carrying a D-21",
+   "80 flights",
+   "D-21B 510 joined it in 1994 after the museum acquired the drone in November 1993"
+  ],
+  "notes": "The CIA timeline entry reads 'First flights of SR-71 and M-21 carrying D-21 drone' (22 Dec 1964); the Museum of Flight only says it first flew in 1964. Which M-21 made which of the first three D-21 launches was not confirmed.",
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed.; includes 'Inventory of A-12s' table, p. 50)"
+   },
+   {
+    "source": "the-museum-of-flight-cc2374"
+   },
+   {
+    "source": "the-museum-of-flight-252b93"
+   },
+   {
+    "source": "roadrunners-internationale-oxcart-vetera-15041a"
+   }
+  ]
+ },
+ {
+  "id": "60-6941",
+  "serial": "60-6941",
+  "type": "M-21",
+  "article": "135",
+  "nickname": null,
+  "first_flight": null,
+  "fate": "lost",
+  "fate_detail": "Destroyed 30 July 1966 off the California coast on the fourth D-21 launch, when the drone struck the mothership after separation at about Mach 3.2 and the M-21 broke up. Lockheed pilot Bill Park and launch control officer Ray Torick ejected over the sea; Park was rescued but Torick drowned.",
+  "location": null,
+  "displays": [],
+  "total_hours": 152.7,
+  "notable": [
+   "The accident led Kelly Johnson to end M-21 launches; the D-21 programme moved to B-52H launches (SENIOR BOWL)",
+   "Bill Park flew all M-21 flights (CIA)",
+   "95 flights"
+  ],
+  "notes": "CIA spells the LCO 'Ray Torick'; Wikipedia uses 'Torrick'. Cause wording: Wikipedia says a D-21 engine unstart or failure to start led the drone to strike the M-21's tail; CIA says simply 'a launch mishap'.",
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed.; includes 'Inventory of A-12s' table, p. 50)"
+   },
+   {
+    "source": "wikipedia-566759"
+   },
+   {
+    "source": "wikipedia-883fef"
+   }
+  ]
+ },
+ {
+  "id": "d-21",
+  "serial": "D-21 (summary)",
+  "type": "D-21/D-21B",
+  "article": null,
+  "nickname": null,
+  "first_flight": "1966-03-05",
+  "fate": "other",
+  "fate_detail": "38 D-21 and D-21B drones were built and 21 were expended in tests and operations; the remaining 17 were stored at Norton AFB and moved to the Davis-Monthan AFB boneyard in 1976 and 1977. At least 11 survive intact today, mostly in museums, plus the wreckage of the drone lost over China in 1971.",
+  "location": null,
+  "displays": [
+   {
+    "drone": "510",
+    "museum": "The Museum of Flight",
+    "city": "Seattle",
+    "state_or_country": "Washington, USA",
+    "lat": 47.518,
+    "lon": -122.297
+   },
+   {
+    "drone": "522",
+    "museum": "Pacific Coast Air Museum",
+    "city": "Santa Rosa",
+    "state_or_country": "California, USA",
+    "lat": 38.5064,
+    "lon": -122.802
+   },
+   {
+    "drone": "524",
+    "museum": "National Museum of the United States Air Force",
+    "city": "Dayton",
+    "state_or_country": "Ohio, USA",
+    "lat": 39.7814,
+    "lon": -84.1106
+   },
+   {
+    "drone": "525",
+    "museum": "Blackbird Airpark",
+    "city": "Palmdale",
+    "state_or_country": "California, USA",
+    "lat": 34.6032,
+    "lon": -118.086
+   },
+   {
+    "drone": "528",
+    "museum": "Grissom Air Museum",
+    "city": "Peru",
+    "state_or_country": "Indiana, USA",
+    "lat": 40.6693,
+    "lon": -86.1299
+   },
+   {
+    "drone": "530",
+    "museum": "309th AMARG storage (not a public display)",
+    "city": "Tucson",
+    "state_or_country": "Arizona, USA",
+    "lat": 32.1636,
+    "lon": -110.8494
+   },
+   {
+    "drone": "533",
+    "museum": "Pima Air & Space Museum",
+    "city": "Tucson",
+    "state_or_country": "Arizona, USA",
+    "lat": 32.1389,
+    "lon": -110.8687
+   },
+   {
+    "drone": "534",
+    "museum": "North American Aerospace Museum (formerly Evergreen Aviation & Space Museum)",
+    "city": "McMinnville",
+    "state_or_country": "Oregon, USA",
+    "lat": 45.2036,
+    "lon": -123.143
+   },
+   {
+    "drone": "537",
+    "museum": "March Field Air Museum",
+    "city": "Riverside",
+    "state_or_country": "California, USA",
+    "lat": 33.8838,
+    "lon": -117.2667
+   },
+   {
+    "drone": "538",
+    "museum": "Southern Museum of Flight",
+    "city": "Birmingham",
+    "state_or_country": "Alabama, USA",
+    "lat": 33.5635,
+    "lon": -86.7381
+   },
+   {
+    "drone": "539",
+    "museum": "Beale Air Force Base (base display)",
+    "city": "Marysville",
+    "state_or_country": "California, USA",
+    "lat": 39.1361,
+    "lon": -121.4364
+   },
+   {
+    "drone": "527 (wreckage)",
+    "museum": "China Aviation Museum",
+    "city": "Beijing (Changping)",
+    "state_or_country": "China",
+    "lat": 40.1825,
+    "lon": 116.3636
+   }
+  ],
+  "total_hours": null,
+  "notable": [
+   "Ramjet-powered (Marquardt RJ43) Mach 3+ reconnaissance drone; first launched from an M-21 on 5 Mar 1966 (TAGBOARD)",
+   "Four M-21 launches in 1966; the fourth (30 Jul 1966) destroyed M-21 60-6941 and killed Ray Torick",
+   "Relaunched from B-52H carriers as D-21B (SENIOR BOWL); first B-52 launch attempt 28 Sep 1967",
+   "Four operational SENIOR BOWL missions over China, 9 Nov 1969 to 20 Mar 1971; none fully succeeded",
+   "Programme cancelled in July 1971",
+   "Wreck of the first operational drone was recovered by the Soviets in Siberia; a CIA official returned a panel from it to Ben Rich in 1986",
+   "Survivors (number, place): 510 Museum of Flight, Seattle WA (on M-21 60-6940); 522 Pacific Coast Air Museum, Santa Rosa CA; 524 National Museum of the USAF, Dayton OH (arrived 1993); 525 Blackbird Airpark, Palmdale CA; 528 Grissom Air Museum, Peru IN; 530 AMARG storage, Davis-Monthan AFB AZ; 533 Pima Air & Space Museum, Tucson AZ; 534 North American Aerospace Museum (formerly Evergreen Aviation & Space Museum), McMinnville OR; 537 March Field Air Museum, Riverside CA (delivered 19 Jul 2007); 538 Southern Museum of Flight, Birmingham AL; 539 Beale AFB CA",
+   "Wreckage of 527 (lost 20 Mar 1971 over Yunnan) is displayed at the China Aviation Museum, Beijing"
+  ],
+  "notes": "'first_flight' here is the first D-21 launch. The count of 38 built is given by both CIA and Wikipedia; 21 expended and 17 stored are from Wikipedia citing Landis and Jenkins (2005). The survivor list is Wikipedia's, spot-checked against the Museum of Flight, NMUSAF, Pima and March Field pages; whereabouts of the remaining stored drones were not found. Cancellation date: CIA Archangel timeline says 15 July 1971, Wikipedia says 23 July 1971. The Evergreen museum was renamed the North American Aerospace Museum in August 2026 (FLYING); its D-21B was not re-verified after the rename. Coordinates are museum or base centroids. 'displays' is an extra field for mapping, beyond the base schema.",
+  "citations": [
+   {
+    "source": "central-intelligence-agency-center-for-t-70081b",
+    "detail": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed.; includes 'Inventory of A-12s' table, p. 50)"
+   },
+   {
+    "source": "wikipedia-883fef"
+   },
+   {
+    "source": "national-museum-of-the-united-states-air-ef079b"
+   },
+   {
+    "source": "the-museum-of-flight-252b93"
+   },
+   {
+    "source": "pima-air-space-museum-748a14"
+   },
+   {
+    "source": "march-field-air-museum-da30d7"
+   },
+   {
+    "source": "flying-magazine-cb9ce6"
+   }
+  ]
+ },
+ {
+  "id": "61-7950",
+  "serial": "61-7950",
+  "type": "SR-71A",
+  "article": "2001",
+  "nickname": null,
+  "first_flight": "1964-12-22",
+  "fate": "lost",
+  "fate_detail": "Destroyed 10 January 1967 at Edwards AFB during an anti-skid braking system evaluation: the main tires blew, the magnesium wheels caught fire and the fire spread as the aircraft ran off the end of the runway. Lockheed test pilot Art Peterson survived.",
+  "location": null,
+  "displays": [],
+  "total_hours": null,
+  "notable": [
+   "First SR-71 built (prototype)",
+   "First flight 22 Dec 1964 from AF Plant 42, Palmdale, flown solo by Lockheed test pilot Bob Gilliland, landing at Edwards AFB",
+   "Delivered to Palmdale 29 Oct 1964 (sr-71.org timeline)"
+  ],
+  "notes": "Total flight hours not published in the Merlin flight-hours list (shown as unknown).",
+  "citations": [
+   {
+    "source": "lockheed-martin-b519c5"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--a9728c"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--5c22ff"
+   },
+   {
+    "source": "joe-baugher-bc942a"
+   },
+   {
+    "source": "roadrunners-internationale-df04a3"
+   },
+   {
+    "source": "this-day-in-aviation-045fb4",
+    "detail": "22 December 1964"
+   }
+  ]
+ },
+ {
+  "id": "61-7951",
+  "serial": "61-7951",
+  "type": "SR-71A",
+  "article": "2002",
+  "nickname": "YF-12C \"60-6937\" (NASA cover identity)",
+  "first_flight": "1965-03-05",
+  "fate": "preserved",
+  "fate_detail": "Returned to the USAF on 27 October 1978 after NASA service and made its last flight on 22 December 1978; stored at Lockheed Palmdale until 1990, then disassembled and trucked to Pima Air and Space Museum.",
+  "location": {
+   "museum": "Pima Air & Space Museum",
+   "city": "Tucson",
+   "state_or_country": "Arizona, USA",
+   "lat": 32.1379,
+   "lon": -110.8671
+  },
+  "displays": [],
+  "total_hours": 796.7,
+  "notable": [
+   "Second SR-71 built and the oldest surviving SR-71 (61-7950 was destroyed in 1967)",
+   "Test-force aircraft, never flew operational missions",
+   "Loaned to NASA as the fictitious \"YF-12C\" with tail number 06937 so NASA could fly an SR-71 without revealing it; 937 followed the YF-12A tails 934, 935 and 936",
+   "The serial 60-6937 actually belonged to a still-classified CIA A-12 (existence of the A-12 not public until 1982), so the borrowed number caused no visible clash at the time",
+   "Arrived at NASA Flight Research Center 16 Jul 1971; propulsion research flights began Jun 1972; 90 NASA flights 1971 to 1978"
+  ],
+  "notes": "Do not confuse with A-12 60-6937 (a separate CIA airframe). NASA's monograph gives arrival at NASA FRC as 16 July 1971 and start of propulsion research as 6 June 1972; one secondary summary gives the first NASA flight as 24 May 1972 (unverified). habu.org says the 27 Oct 1978 return flight was crewed by Col. Jim Sullivan and Maj. William Frazier and the last flight (22 Dec 1978) by Lt Col Calvin Jewett and Frazier.",
+  "citations": [
+   {
+    "source": "nasa-bbc042"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--6e4775"
+   },
+   {
+    "source": "habu-org-7fafc3"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--bb62c1"
+   },
+   {
+    "source": "pima-air-space-museum-78ec0c"
+   },
+   {
+    "source": "joe-baugher-bc942a"
+   },
+   {
+    "source": "roadrunners-internationale-df04a3"
+   },
+   {
+    "source": "openstreetmap-nominatim-geocode-0ec955"
+   }
+  ]
+ },
+ {
+  "id": "61-7952",
+  "serial": "61-7952",
+  "type": "SR-71A",
+  "article": "2003",
+  "nickname": null,
+  "first_flight": "1965-03-24",
+  "fate": "lost",
+  "fate_detail": "Disintegrated on 25 January 1966 near Albert and Bueyeros, New Mexico (northeast of Tucumcari) after a right-engine inlet unstart in a 35-degree bank at about Mach 3.17 and 78,000 ft during a Lockheed test flight from Edwards (callsign DUTCH 54). Lockheed test pilot Bill Weaver was thrown clear and survived; flight test reconnaissance and navigation systems specialist Jim Zwayer was killed.",
+  "location": null,
+  "displays": [],
+  "total_hours": 79.47,
+  "notable": [
+   "Systems and sensors test aircraft for the SR-71/F-12 Test Force at Edwards",
+   "First SR-71 used for inflight refueling tests, from 29 Apr 1965",
+   "Weaver's ejection seat never left the aircraft: he was ripped from the cockpit as the airframe broke apart",
+   "Zwayer was the only aircrew fatality in an SR-71",
+   "Debris field about 15 by 10 miles; 41 flights in total"
+  ],
+  "notes": "Speed at the unstart: Mach 3.17 per The X-Hunters (Merlin); Mach 3.18 in Weaver's own account as quoted by The Aviationist (from Graham's SR-71 book); habu.org says \"above Mach 3.2\". Location is variously given as near Tucumcari (where Weaver was taken to hospital) or near Albert/Bueyeros, NM. habu.org identifies the first-refueling tanker as KC-135Q 58-0054; X-Hunters says KC-135A 58-0064.",
+  "citations": [
+   {
+    "source": "the-x-hunters-peter-merlin-tony-moore-dc6bb3"
+   },
+   {
+    "source": "the-x-hunters-peter-merlin-tony-moore-c0c90e"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--5c22ff"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--bb62c1"
+   },
+   {
+    "source": "habu-org-977549"
+   },
+   {
+    "source": "the-aviationist-217bce"
+   },
+   {
+    "source": "joe-baugher-bc942a"
+   }
+  ]
+ },
+ {
+  "id": "61-7953",
+  "serial": "61-7953",
+  "type": "SR-71A",
+  "article": "2004",
+  "nickname": null,
+  "first_flight": "1965-06-04",
+  "fate": "lost",
+  "fate_detail": "Crashed 18 December 1969 near Shoshone, California (southern end of Death Valley) after a loss of control during a functional check flight from Edwards (callsign DUTCH 68). Col. Joe Rogers and RSO Maj. Gary Heidelbaugh ejected safely.",
+  "location": null,
+  "displays": [],
+  "total_hours": 290.2,
+  "notable": [
+   "Primary performance, stability and control test aircraft (Category II tests); reached 86,700 ft on one test mission",
+   "NASA analysed inlet and stability data from this aircraft in 1968 and 1969",
+   "Lost on the first flight with the Optical Bar Camera (OBC) nose installed"
+  ],
+  "notes": "Cause disputed in secondary sources: The X-Hunters (Merlin) reports the accident board found a rolled-up piece of duct tape in a static line of the new OBC nose, corrupting air data so the aircraft was slower and higher than indicated, leading to compressor stalls and an unrecoverable pitch-up; the sr-71.org losses page and habu.org describe an in-flight explosion whose cause was never determined. Heidelbaugh's rank is given as Maj. (X-Hunters, sr-71.org) and Lt Col (habu.org).",
+  "citations": [
+   {
+    "source": "the-x-hunters-peter-merlin-tony-moore-9a17b4"
+   },
+   {
+    "source": "the-x-hunters-peter-merlin-tony-moore-379824"
+   },
+   {
+    "source": "nasa-bbc042"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--5c22ff"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--bb62c1"
+   },
+   {
+    "source": "habu-org-2c0911"
+   },
+   {
+    "source": "joe-baugher-bc942a"
+   }
+  ]
+ },
+ {
+  "id": "61-7954",
+  "serial": "61-7954",
+  "type": "SR-71A",
+  "article": "2005",
+  "nickname": null,
+  "first_flight": null,
+  "fate": "lost",
+  "fate_detail": "Destroyed 11 April 1969 at Edwards AFB during a maximum-weight takeoff test when the left main tires blew and the wheel debris started a fire; the takeoff was aborted. Lt Col Bill Skliar and RSO Maj. Noel Warner escaped from the aircraft uninjured.",
+  "location": null,
+  "displays": [],
+  "total_hours": null,
+  "notable": [
+   "One of the six SR-71 flight test aircraft",
+   "Loss (similar to 61-7950) led to new aluminum wheels and stronger tires being retrofitted fleet-wide",
+   "NASA photo shows 61-7954 used as a stand-in for the YF-12A during construction of heaters for NASA's structural loads program"
+  ],
+  "notes": "First flight date and total hours not found in sources checked (Merlin hours list shows unknown). A witness quoted by habu.org says the crew climbed out rather than ejecting.",
+  "citations": [
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--5c22ff"
+   },
+   {
+    "source": "habu-org-983265"
+   },
+   {
+    "source": "nasa-bbc042"
+   },
+   {
+    "source": "joe-baugher-bc942a"
+   },
+   {
+    "source": "roadrunners-internationale-df04a3"
+   }
+  ]
+ },
+ {
+  "id": "61-7955",
+  "serial": "61-7955",
+  "type": "SR-71A",
+  "article": "2006",
+  "nickname": null,
+  "first_flight": "1965-08-17",
+  "fate": "preserved",
+  "fate_detail": "Retired after its last flight on 24 January 1985 when 61-7972 replaced it as the Palmdale test aircraft; now displayed at the Air Force Flight Test Museum on Edwards AFB (base access required).",
+  "location": {
+   "museum": "Air Force Flight Test Museum",
+   "city": "Edwards AFB",
+   "state_or_country": "California, USA",
+   "lat": 34.9123,
+   "lon": -117.921
+  },
+  "displays": [],
+  "total_hours": 1993.7,
+  "notable": [
+   "Lockheed Palmdale test aircraft for most of its career (never flew operational missions)",
+   "First flown by Bill Weaver and (George) Andre",
+   "Flown to RAF Mildenhall in July 1983 to demonstrate the ASARS radar; reportedly wore 962's tail number while there"
+  ],
+  "notes": "The 1983 disguise as 17962 is stated by habu.org but described by Joe Baugher as a long-running rumor; treat as unconfirmed. Baugher says the aircraft is on loan from the National Museum of the USAF.",
+  "citations": [
+   {
+    "source": "flight-test-historical-foundation-air-fo-1bc985"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--2d0cb4"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--bb62c1"
+   },
+   {
+    "source": "habu-org-52017f"
+   },
+   {
+    "source": "joe-baugher-bc942a"
+   },
+   {
+    "source": "roadrunners-internationale-df04a3"
+   },
+   {
+    "source": "openstreetmap-nominatim-geocode-e0d302"
+   }
+  ]
+ },
+ {
+  "id": "61-7956",
+  "serial": "61-7956",
+  "type": "SR-71B",
+  "article": "2007",
+  "nickname": "NASA 831",
+  "first_flight": "1965-11-18",
+  "fate": "preserved",
+  "fate_detail": "Last flight 19 October 1997 at the Edwards AFB open house after NASA service; delivered to the Air Zoo on 28 March 2003 and placed on display 23 April 2003.",
+  "location": {
+   "museum": "Air Zoo Aerospace & Science Center",
+   "city": "Portage (Kalamazoo)",
+   "state_or_country": "Michigan, USA",
+   "lat": 42.2275,
+   "lon": -85.5572
+  },
+  "displays": [],
+  "total_hours": 3967.5,
+  "notable": [
+   "Only surviving SR-71B two-seat trainer (raised instructor cockpit, ventral fins)",
+   "Highest flight time of any Blackbird: 3,967.5 hours",
+   "First flown by Bob Gilliland and Steve Belgau",
+   "Flew its 1,000th sortie on 15 Jan 1982",
+   "Arrived at NASA Dryden 25 Jul 1991 as NASA 831; research, training and proficiency aircraft until Oct 1997, also supporting the 1995 USAF reactivation"
+  ],
+  "notes": "Baugher says NASA 831 was used for training but not research; NASA's fact sheet says it served as a research platform as well as for crew training. Museum is often described as Kalamazoo; its address is in Portage, Michigan.",
+  "citations": [
+   {
+    "source": "nasa-dryden-flight-research-center-361fcd"
+   },
+   {
+    "source": "nasa-41cf3d"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--ede445"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--bb62c1"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--a9728c"
+   },
+   {
+    "source": "habu-org-aa9944"
+   },
+   {
+    "source": "air-zoo-ace01d"
+   },
+   {
+    "source": "roadrunners-internationale-df04a3"
+   },
+   {
+    "source": "openstreetmap-nominatim-geocode-31e3a0"
+   }
+  ]
+ },
+ {
+  "id": "61-7957",
+  "serial": "61-7957",
+  "type": "SR-71B",
+  "article": "2008",
+  "nickname": null,
+  "first_flight": null,
+  "fate": "lost",
+  "fate_detail": "Crashed 11 January 1968 on approach to Beale AFB, about seven miles out, after a double generator failure followed by a double flameout from fuel cavitation. Instructor Lt Col Robert G. Sowers and student Capt. David E. Fruehauf ejected safely.",
+  "location": null,
+  "displays": [],
+  "total_hours": null,
+  "notable": [
+   "Second of only two SR-71B trainers built",
+   "Only SR-71B lost; its loss led to the hybrid SR-71C (61-7981) being built as a replacement trainer",
+   "Flew its 100th sortie on 17 Mar 1967 and gave Gen. Bruce Holloway (CINCSAC) a Mach 3 ride on 4 Oct 1967"
+  ],
+  "notes": "Article number: 2008 per Baugher, the Roadrunners production list and a Lockheed construction photo on habu.org showing build number 2008; the sr-71.org losses page lists it as 2007 (apparently an error, since 61-7956 is 2007). First flight date and total hours not found.",
+  "citations": [
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--5c22ff"
+   },
+   {
+    "source": "habu-org-115703"
+   },
+   {
+    "source": "habu-org-e4661b"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--ede445"
+   },
+   {
+    "source": "joe-baugher-bc942a"
+   },
+   {
+    "source": "roadrunners-internationale-df04a3"
+   }
+  ]
+ },
+ {
+  "id": "61-7958",
+  "serial": "61-7958",
+  "type": "SR-71A",
+  "article": "2009",
+  "nickname": null,
+  "first_flight": "1965-12-15",
+  "fate": "preserved",
+  "fate_detail": "Flown to Robins AFB on 23 February 1990 by Don Watkins and Bob Fowlkes after the USAF retirement; displayed indoors in the Museum of Aviation's Century of Flight hangar.",
+  "location": {
+   "museum": "Museum of Aviation",
+   "city": "Warner Robins (Robins AFB)",
+   "state_or_country": "Georgia, USA",
+   "lat": 32.5919,
+   "lon": -83.5869
+  },
+  "displays": [],
+  "total_hours": 2288.9,
+  "notable": [
+   "First \"regular\" (non-test, non-trainer) SR-71 delivered to the Air Force (habu.org)",
+   "27 Jul 1976: world speed record over a 1,000 km closed circuit, 2,092.29 mph, Maj. Adolphus \"Pat\" Bledsoe and Maj. John Fuller",
+   "28 Jul 1976: FAI absolute world speed record, 2,193.167 mph (3,529.56 km/h) over a 15/25 km course, Capt. Eldon \"Al\" Joersz and Maj. George Morgan; still stands",
+   "First flight by Bill Weaver and George Andre"
+  ],
+  "notes": "Records flights took off and landed at Beale; timing was on Edwards AFB instrumented ranges (Code One). This Day in Aviation and the sr-71.org gallery page also credit 958 with the 28 Jul 1976 altitude in horizontal flight record; Code One (Lockheed Martin) and habu.org say Helt and Elliott flew 61-7963 after a problem with their assigned aircraft, while IWM and an FAI 2026 news page say 61-7962. The FAI press release confirms two aircraft flew that day but does not name serials. Treat the altitude-record airframe as disputed. Baugher misdates the speed record to 1979.",
+  "citations": [
+   {
+    "source": "code-one-magazine-lockheed-martin-3a8a10"
+   },
+   {
+    "source": "museum-of-aviation-7c077c"
+   },
+   {
+    "source": "fai-world-air-sports-federation-1b7e77"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--764ab6"
+   },
+   {
+    "source": "habu-org-160379"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--bb62c1"
+   },
+   {
+    "source": "joe-baugher-bc942a"
+   },
+   {
+    "source": "roadrunners-internationale-df04a3"
+   },
+   {
+    "source": "this-day-in-aviation-bryan-r-swopes-553685"
+   },
+   {
+    "source": "openstreetmap-nominatim-geocode-27b857"
+   }
+  ]
+ },
+ {
+  "id": "61-7959",
+  "serial": "61-7959",
+  "type": "SR-71A",
+  "article": "2010",
+  "nickname": "Big Tail",
+  "first_flight": null,
+  "fate": "preserved",
+  "fate_detail": "Withdrawn after the Big Tail program was dropped and flown to Eglin AFB in October 1976 for display at the Air Force Armament Museum.",
+  "location": {
+   "museum": "Air Force Armament Museum",
+   "city": "Eglin AFB (near Valparaiso)",
+   "state_or_country": "Florida, USA",
+   "lat": 30.4666,
+   "lon": -86.5613
+  },
+  "displays": [],
+  "total_hours": 866.1,
+  "notable": [
+   "Only \"Big Tail\" SR-71: a 9 ft tail extension carrying extra sensors and ECM equipment",
+   "Rolled out 16 Aug 1965",
+   "First flight in Big Tail configuration 3 Dec 1975",
+   "Tests showed little performance loss but little sensor advantage, so the fleet retrofit was cancelled"
+  ],
+  "notes": "Last flight date disagrees: 29 Oct 1976 (sr-71.org, TheSR71Blackbird.com) versus 23 Oct 1976 (Baugher, Warbird Registry). Original first flight date not found; habu.org says it began service in 1966.",
+  "citations": [
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--32ef92"
+   },
+   {
+    "source": "habu-org-0e2e78"
+   },
+   {
+    "source": "thesr71blackbird-com-1847a4"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--a9728c"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--bb62c1"
+   },
+   {
+    "source": "warbird-registry-a320d8"
+   },
+   {
+    "source": "joe-baugher-bc942a"
+   },
+   {
+    "source": "openstreetmap-nominatim-geocode-c6b22d"
+   }
+  ]
+ },
+ {
+  "id": "61-7960",
+  "serial": "61-7960",
+  "type": "SR-71A",
+  "article": "2011",
+  "nickname": null,
+  "first_flight": "1966-02-09",
+  "fate": "preserved",
+  "fate_detail": "Last flown on 27 February 1990, delivered to Castle Air Museum after the first SR-71 retirement.",
+  "location": {
+   "museum": "Castle Air Museum",
+   "city": "Atwater",
+   "state_or_country": "California, USA",
+   "lat": 37.3648,
+   "lon": -120.5779
+  },
+  "displays": [],
+  "total_hours": 2669.6,
+  "notable": [
+   "Assembly began 8 Dec 1964, rolled out 20 Sep 1965",
+   "Displayed at the former Castle AFB"
+  ],
+  "notes": "Coordinates are the museum location (Wikipedia, Castle Air Museum).",
+  "citations": [
+   {
+    "source": "castle-air-museum-8a8b76"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--ece64b"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--bb62c1"
+   },
+   {
+    "source": "warbird-registry-519f4c"
+   },
+   {
+    "source": "joe-baugher-bc942a"
+   },
+   {
+    "source": "roadrunners-internationale-df04a3"
+   }
+  ]
+ },
+ {
+  "id": "61-7961",
+  "serial": "61-7961",
+  "type": "SR-71A",
+  "article": "2012",
+  "nickname": null,
+  "first_flight": "1966-04-13",
+  "fate": "preserved",
+  "fate_detail": "Last flight 2 February 1977; withdrawn early and cannibalized for spares, later displayed in the Cosmosphere's Grand Lobby.",
+  "location": {
+   "museum": "Cosmosphere (Kansas Cosmosphere and Space Center)",
+   "city": "Hutchinson",
+   "state_or_country": "Kansas, USA",
+   "lat": 38.0656,
+   "lon": -97.9216
+  },
+  "displays": [],
+  "total_hours": 1601,
+  "notable": [
+   "Assembly began 13 Jan 1965, rolled out 19 Oct 1965",
+   "Subject of the well-known early-1970s in-flight publicity photos used in most SR-71 press releases (habu.org)"
+  ],
+  "notes": null,
+  "citations": [
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--1af4b3"
+   },
+   {
+    "source": "habu-org-234816"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--bb62c1"
+   },
+   {
+    "source": "cosmosphere-39329c"
+   },
+   {
+    "source": "joe-baugher-bc942a"
+   },
+   {
+    "source": "roadrunners-internationale-df04a3"
+   },
+   {
+    "source": "openstreetmap-nominatim-geocode-f0e830"
+   }
+  ]
+ },
+ {
+  "id": "61-7962",
+  "serial": "61-7962",
+  "type": "SR-71A",
+  "article": "2013",
+  "nickname": null,
+  "first_flight": null,
+  "fate": "preserved",
+  "fate_detail": "Last flight January 1990 when it left Kadena (the last SR-71 to leave Okinawa, 21 Jan 1990) and went into storage at Palmdale; shipped to IWM Duxford in 2001 and unveiled on 11 April 2001, now in the American Air Museum.",
+  "location": {
+   "museum": "IWM Duxford (American Air Museum)",
+   "city": "Duxford, Cambridgeshire",
+   "state_or_country": "England, United Kingdom",
+   "lat": 52.0914,
+   "lon": 0.1288
+  },
+  "displays": [],
+  "total_hours": 2835.9,
+  "notable": [
+   "Only SR-71 on display outside the United States",
+   "Flew from both Det 4 (RAF Mildenhall) and Det 1 (Kadena)",
+   "IWM and FAI credit it with the 28 Jul 1976 altitude in horizontal flight record, 85,068.997 ft, Capt. Robert Helt and Maj. Larry Elliott (disputed, see notes)"
+  ],
+  "notes": "Altitude-record airframe is disputed: 61-7962 per IWM and an FAI 2026 news page; 61-7963 per Code One (Lockheed Martin, 2011) and habu.org; 61-7958 per This Day in Aviation. IWM pages could not be fetched directly (HTTP 403); their content was confirmed via search-engine extracts. First flight date not found.",
+  "citations": [
+   {
+    "source": "imperial-war-museums-3e2c5a"
+   },
+   {
+    "source": "fai-federation-aeronautique-internationa-521c18",
+    "detail": "Two crews, three world records, one historic day: 50 years of the Lockheed Blackbird records"
+   },
+   {
+    "source": "fai-world-air-sports-federation-1b7e77"
+   },
+   {
+    "source": "habu-org-9defd8"
+   },
+   {
+    "source": "habu-org-0f6cbf"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--a9728c"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--bb62c1"
+   },
+   {
+    "source": "joe-baugher-bc942a"
+   },
+   {
+    "source": "roadrunners-internationale-df04a3"
+   },
+   {
+    "source": "openstreetmap-nominatim-geocode-757fa6"
+   }
+  ]
+ },
+ {
+  "id": "61-7963",
+  "serial": "61-7963",
+  "type": "SR-71A",
+  "article": "2014",
+  "nickname": null,
+  "first_flight": "1966-06-09",
+  "fate": "preserved",
+  "fate_detail": "Last flew 28 October 1976 and was then cannibalized for parts; now on static display at Beale AFB beside a D-21 drone, on a pad shaped like the Mach 3+ crew patch.",
+  "location": {
+   "museum": "Beale AFB static display (Heritage Park)",
+   "city": "Beale AFB (near Marysville)",
+   "state_or_country": "California, USA",
+   "lat": 39.1137,
+   "lon": -121.3901
+  },
+  "displays": [],
+  "total_hours": 1604.4,
+  "notable": [
+   "Displayed at Beale, home of the 9th SRW and the SR-71 fleet",
+   "Code One (Lockheed Martin) and habu.org say Helt and Elliott flew this aircraft for the 28 Jul 1976 altitude record of 85,069 ft after a problem with their assigned aircraft (disputed)"
+  ],
+  "notes": "See 61-7958 and 61-7962 for the altitude-record dispute. Display is on an active base and may need base access. Coordinates are for the aircraft from Warbird Registry.",
+  "citations": [
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--38f762"
+   },
+   {
+    "source": "code-one-magazine-lockheed-martin-3a8a10"
+   },
+   {
+    "source": "habu-org-6d83a9"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--bb62c1"
+   },
+   {
+    "source": "warbird-registry-db3a94"
+   },
+   {
+    "source": "joe-baugher-bc942a"
+   },
+   {
+    "source": "roadrunners-internationale-df04a3"
+   }
+  ]
+ },
+ {
+  "id": "61-7964",
+  "serial": "61-7964",
+  "type": "SR-71A",
+  "article": "2015",
+  "nickname": null,
+  "first_flight": "1966-05-11",
+  "fate": "preserved",
+  "fate_detail": "Left RAF Mildenhall for the last time on 18 January 1990 and was ferried to Offutt AFB on 20 March 1990 for the SAC Museum; moved to the new museum at Ashland in the late 1990s.",
+  "location": {
+   "museum": "Strategic Air Command & Aerospace Museum",
+   "city": "Ashland",
+   "state_or_country": "Nebraska, USA",
+   "lat": 41.0169,
+   "lon": -96.3198
+  },
+  "displays": [],
+  "total_hours": 3373.1,
+  "notable": [
+   "Assembly began 14 Apr 1965, rolled out 19 Jan 1966",
+   "Last flight 20 Mar 1990, delivered for permanent display"
+  ],
+  "notes": "Move date to the Ashland building: Baugher says June 1997; sr-71.org says the new museum was built in 1998. A search-engine summary attributed \"first operational sortie, 942 sorties, 2,981 hours\" to this airframe, but those figures belong to 61-7976 (NMUSAF); do not use them for 61-7964. The old museum domain sasmuseum.com now hosts unrelated content; use sacmuseum.org.",
+  "citations": [
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--0e5edd"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--bb62c1"
+   },
+   {
+    "source": "joe-baugher-bc942a"
+   },
+   {
+    "source": "warbird-registry-b7f257"
+   },
+   {
+    "source": "roadrunners-internationale-df04a3"
+   },
+   {
+    "source": "openstreetmap-nominatim-geocode-f56cf6"
+   }
+  ]
+ },
+ {
+  "id": "61-7965",
+  "serial": "61-7965",
+  "type": "SR-71A",
+  "article": "2016",
+  "nickname": null,
+  "first_flight": "1966-06-10",
+  "fate": "lost",
+  "fate_detail": "Crashed 25 October 1967 in the Trinity Range north of Lovelock, Nevada, during a night training flight (callsign ASPEN 28) after an inertial/attitude reference failure left the crew without a valid attitude display in total darkness. Maj. Roy L. St. Martin and RSO Capt. John F. Carnochan ejected safely.",
+  "location": null,
+  "displays": [],
+  "total_hours": 204.6,
+  "notable": [
+   "First flown by Lockheed test pilots Bill Weaver and Kenneth E. Moeller",
+   "Accepted by the USAF 14 Jul 1966 and assigned to the 9th SRW at Beale"
+  ],
+  "notes": "Baugher gives the loss year as 1976, an error; all other sources say 25 Oct 1967. Carnochan's middle initials appear as \"John F.\" (sr-71.org) and \"John A. F.\" (X-Hunters).",
+  "citations": [
+   {
+    "source": "the-x-hunters-peter-merlin-tony-moore-eaa60d"
+   },
+   {
+    "source": "the-x-hunters-peter-merlin-tony-moore-194cf9"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--5c22ff"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-read-via-wayback--bb62c1"
+   },
+   {
+    "source": "joe-baugher-bc942a"
+   },
+   {
+    "source": "roadrunners-internationale-df04a3"
+   }
+  ]
+ },
+ {
+  "id": "61-7966",
+  "serial": "61-7966",
+  "type": "SR-71A",
+  "article": "2017",
+  "nickname": null,
+  "first_flight": null,
+  "fate": "lost",
+  "fate_detail": "Lost on the night of 13 April 1967 near Las Vegas, New Mexico, after entering an unrecoverable subsonic high-speed stall following in-flight refuelling on a training sortie (call sign ASPEN 29). Pilot Earle M. Boone and RSO Richard E. \"Butch\" Sheffield both ejected safely.",
+  "location": null,
+  "displays": [],
+  "total_hours": 53.2,
+  "notable": [
+   "Very low-time airframe: about 53 hours when lost",
+   "Crash site rediscovered by Robb Magley on 10 May 2001"
+  ],
+  "notes": "Total hours uncertain: habu.org cites a June 1967 DCMA summary at 53.2 h but a March 1967 activity summary implies about 64.7 h; Sheffield estimated under 50 h. Crew ranks differ by source (Captain in sr-71.org, Major in the accident report extract on thesr71blackbird.com). The archived sr-71.org locations page misprints the year as 1965, and Baugher wrongly gives Las Vegas, NV; the accident report and habu.org say New Mexico. First flight date not found.",
+  "citations": [
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-1503c7"
+   },
+   {
+    "source": "habu-org-ebcbec"
+   },
+   {
+    "source": "the-sr-71-blackbird-thesr71blackbird-com-2c6b6d"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-3d2bc7"
+   }
+  ]
+ },
+ {
+  "id": "61-7967",
+  "serial": "61-7967",
+  "type": "SR-71A",
+  "article": "2018",
+  "nickname": null,
+  "first_flight": "1966-08-03",
+  "fate": "preserved",
+  "fate_detail": "One of the two SR-71As reactivated for the USAF in 1995 (Det 2, Edwards AFB); after the program ended in 1998 it went into storage at Edwards and was placed on display at Barksdale AFB, Louisiana, on 17 December 2003.",
+  "location": {
+   "museum": "Barksdale Global Power Museum (formerly 8th Air Force Museum)",
+   "city": "Barksdale AFB, Bossier City",
+   "state_or_country": "Louisiana, USA",
+   "lat": 32.5107,
+   "lon": -93.6809
+  },
+  "displays": [],
+  "total_hours": 2765.5,
+  "notable": [
+   "Reactivated 1995: first flight after refurbishment 28 August 1995",
+   "Flown by NASA crews in support of the USAF reactivation program",
+   "Last Blackbird moved to a museum (left Edwards November 2003)"
+  ],
+  "notes": "Baugher (and warbirdregistry, which copies it) wrongly describes 7967 as NASA-assigned and in flyable storage 1992 to 2002; NASA FS-030 and habu.org show it was a 1995 to 1998 USAF Det 2 aircraft. Coordinates are the museum site (Wikipedia infobox, cross-checked against OpenStreetMap).",
+  "citations": [
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-4b9aac"
+   },
+   {
+    "source": "habu-org-8d2a7a"
+   },
+   {
+    "source": "habu-org-f22f75"
+   },
+   {
+    "source": "nasa-dryden-flight-research-center-c5099a"
+   },
+   {
+    "source": "the-sr-71-blackbird-thesr71blackbird-com-f65389"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-3d2bc7"
+   }
+  ]
+ },
+ {
+  "id": "61-7968",
+  "serial": "61-7968",
+  "type": "SR-71A",
+  "article": "2019",
+  "nickname": null,
+  "first_flight": "1966-10-10",
+  "fate": "preserved",
+  "fate_detail": "Last flew 12 February 1990; stored at Edwards in hope of 1990s reactivation, then trucked to the Virginia Aviation Museum, Richmond (unveiled 30 October 1999). Moved in January 2016 to the Science Museum of Virginia, where it hangs indoors.",
+  "location": {
+   "museum": "Science Museum of Virginia",
+   "city": "Richmond",
+   "state_or_country": "Virginia, USA",
+   "lat": 37.5611,
+   "lon": -77.4658
+  },
+  "displays": [],
+  "total_hours": 2279,
+  "notable": [
+   "26 April 1971: Thomas B. Estes and Dewain C. Vick flew over 15,000 miles in 10 h 30 min",
+   "That flight won the 1971 Mackay Trophy and the 1972 Harmon Trophy",
+   "Only suspended (hanging) Blackbird display"
+  ],
+  "notes": "Crew ranks for the 1971 flight differ (Majors per sr-71.org, Lt Cols per habu.org). The Virginia Aviation Museum closed in 2016. Coordinates are the museum site (Wikipedia infobox, cross-checked against OpenStreetMap).",
+  "citations": [
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-f89176"
+   },
+   {
+    "source": "habu-org-603ba7"
+   },
+   {
+    "source": "habu-org-d04de6"
+   },
+   {
+    "source": "science-museum-of-virginia-9afbd7"
+   },
+   {
+    "source": "joe-baugher-bc942a",
+    "detail": "1961 USAF Serial Numbers (61-7950 to 61-7981)"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-3d2bc7"
+   }
+  ]
+ },
+ {
+  "id": "61-7969",
+  "serial": "61-7969",
+  "type": "SR-71A",
+  "article": "2020",
+  "nickname": null,
+  "first_flight": null,
+  "fate": "lost",
+  "fate_detail": "Lost on 10 May 1970 near Korat RTAFB, Thailand, on an operational sortie from Kadena: climbing heavy with fuel after refuelling, it entered thunderstorm turbulence, both engines flamed out and could not be restarted. Pilot William E. Lawson and RSO Gilbert Martinez ejected safely.",
+  "location": null,
+  "displays": [],
+  "total_hours": null,
+  "notable": [
+   "Det 1 (Kadena) operational loss, not due to enemy action"
+  ],
+  "notes": "Date conflict: sr-71.org, Baugher and most sources give 10 May 1970; habu.org gives 1 May 1970. Habu.org notes its first flight at Beale after fuel cell repairs was 25 January 1967 (not its maiden flight). Maiden flight date and hours not found.",
+  "citations": [
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-1503c7"
+   },
+   {
+    "source": "habu-org-5026e6",
+    "detail": "61-7969 (Blackbird Photo Archive)"
+   },
+   {
+    "source": "the-sr-71-blackbird-thesr71blackbird-com-5ad0b6"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-3d2bc7"
+   },
+   {
+    "source": "joe-baugher-bc942a",
+    "detail": "1961 USAF Serial Numbers (61-7950 to 61-7981)"
+   }
+  ]
+ },
+ {
+  "id": "61-7970",
+  "serial": "61-7970",
+  "type": "SR-71A",
+  "article": "2021",
+  "nickname": null,
+  "first_flight": null,
+  "fate": "lost",
+  "fate_detail": "Lost on 17 June 1970 about 20 miles east of El Paso, Texas, when it pitched up and collided with its KC-135Q tanker (59-1474) just after refuelling. Pilot Buddy L. Brown (both legs broken) and RSO Mortimer J. Jarvis ejected; the damaged tanker landed safely at Beale AFB.",
+  "location": null,
+  "displays": [],
+  "total_hours": null,
+  "notable": [
+   "KC-135Q tanker 59-1474 survived and returned to Beale"
+  ],
+  "notes": "Baugher places the crash near 'El Paso, NM', an error (El Paso is in Texas). Habu.org says Jarvis bailed out unharmed. First flight date and hours not found.",
+  "citations": [
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-1503c7"
+   },
+   {
+    "source": "habu-org-808bb5"
+   },
+   {
+    "source": "the-sr-71-blackbird-thesr71blackbird-com-656caf"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-3d2bc7"
+   }
+  ]
+ },
+ {
+  "id": "61-7971",
+  "serial": "61-7971",
+  "type": "SR-71A",
+  "article": "2022",
+  "nickname": null,
+  "first_flight": "1966-11-17",
+  "fate": "preserved",
+  "fate_detail": "Retired 1990 and loaned to NASA as NASA 832 (arrived Dryden 19 March 1990); returned to the USAF as the first aircraft reactivated in 1995 and last flew 30 September 1997. Unveiled at the Evergreen Aviation and Space Museum, McMinnville, on 7 June 2003.",
+  "location": {
+   "museum": "North American Aerospace Museum (Evergreen Aviation & Space Museum until August 2026)",
+   "city": "McMinnville",
+   "state_or_country": "Oregon, USA",
+   "lat": 45.2039,
+   "lon": -123.1433
+  },
+  "displays": [],
+  "total_hours": 3512.5,
+  "notable": [
+   "NASA 832",
+   "First SR-71 reactivated for the USAF in 1995 (delivered to Palmdale 12 January 1995)",
+   "Displayed under the wing of the Hughes H-4 'Spruce Goose'"
+  ],
+  "notes": "The host museum was renamed the North American Aerospace Museum in August 2026 (Flying, 13 August 2026). Last flight date (30 September 1997) and hours are from sr-71.org only. Coordinates are the museum site (Wikipedia infobox, cross-checked against OpenStreetMap).",
+  "citations": [
+   {
+    "source": "nasa-dryden-flight-research-center-c5099a"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-ed6642"
+   },
+   {
+    "source": "habu-org-bba868"
+   },
+   {
+    "source": "joe-baugher-bc942a",
+    "detail": "1961 USAF Serial Numbers (61-7950 to 61-7981)"
+   },
+   {
+    "source": "flying-magazine-22c98a"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-3d2bc7"
+   }
+  ]
+ },
+ {
+  "id": "61-7972",
+  "serial": "61-7972",
+  "type": "SR-71A",
+  "article": "2023",
+  "nickname": null,
+  "first_flight": "1966-12-12",
+  "fate": "preserved",
+  "fate_detail": "Flown from Palmdale to Washington Dulles on 6 March 1990 by Ed Yeilding and Joseph T. Vida, setting speed records en route, and handed to the Smithsonian. Stored at Dulles, then displayed at the Steven F. Udvar-Hazy Center from its December 2003 opening.",
+  "location": {
+   "museum": "Smithsonian National Air and Space Museum, Steven F. Udvar-Hazy Center (Boeing Aviation Hangar)",
+   "city": "Chantilly",
+   "state_or_country": "Virginia, USA",
+   "lat": 38.9114,
+   "lon": -77.4442
+  },
+  "displays": [],
+  "total_hours": 2801.1,
+  "notable": [
+   "1 Sep 1974: New York to London in 1 h 54 min 56.4 s, avg 1,806.964 mph (James V. Sullivan, Noel F. Widdifield)",
+   "13 Sep 1974: London to Los Angeles in 3 h 47 min, avg about 1,435.6 mph (Harold B. Adams, William C. Machorek)",
+   "6 Mar 1990: Los Angeles to Washington DC in 1 h 4 min 20 s (Ed Yeilding, Joseph T. Vida)",
+   "6 Mar 1990: West Coast to East Coast in 1 h 7 min 53.69 s, avg 2,124.5 mph",
+   "6 Mar 1990: St. Louis to Cincinnati in 8 min 31.97 s, avg 2,189.94 mph",
+   "Palmdale (Lockheed) test aircraft after 61-7955 retired in 1985"
+  ],
+  "notes": "Speed figures disagree: NASM pairs the 1 h 4 min 20 s LA to DC time with a 2,124 mph average, but sr-71.org lists LA to DC as 1 h 4 min 19.89 s at 2,144.83 mph, with 2,124.5 mph belonging to the coast to coast leg (1 h 7 min 53.69 s); a Kansas City to Washington leg (25 min 59 s, avg about 2,176 mph) is listed on Wikipedia but not on the archived sr-71.org page. London to LA: 3 h 47 min 39 s and 5,446.87 mi (This Day in Aviation, White Eagle) versus 3 h 47 min 35.8 s, avg 1,435.587 mph (sr-71.org); Machorek is Major in some sources, Captain in sr-71.org. Hours: 2,801.1 (NASM page, sr-71.org) versus 'about 2,800' (NASM archives). Display start: Udvar-Hazy opened 15 December 2003 (sr-71.org photos); habu.org says on display since 17 December 2003. NASM certificate erroneously reads 64-17972. Coordinates are the museum site (Wikipedia infobox, cross-checked against OpenStreetMap).",
+  "citations": [
+   {
+    "source": "smithsonian-national-air-and-space-museu-2583e3",
+    "detail": "Lockheed SR-71 Blackbird (collection object A19920072000)"
+   },
+   {
+    "source": "smithsonian-national-air-and-space-museu-104008"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-7d62ef"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-f13642"
+   },
+   {
+    "source": "this-day-in-aviation-bryan-r-swopes-ad691e"
+   },
+   {
+    "source": "white-eagle-aerospace-03abac"
+   },
+   {
+    "source": "habu-org-522ebd"
+   }
+  ]
+ },
+ {
+  "id": "61-7973",
+  "serial": "61-7973",
+  "type": "SR-71A",
+  "article": "2024",
+  "nickname": null,
+  "first_flight": "1967-02-08",
+  "fate": "preserved",
+  "fate_detail": "Last flew on 21 July 1987 and was stored at Palmdale, then towed to Blackbird Airpark (dedicated 27 September 1991), where it is shown with A-12 60-6924 and D-21 525.",
+  "location": {
+   "museum": "Blackbird Airpark (annex of the Air Force Flight Test Museum)",
+   "city": "Palmdale",
+   "state_or_country": "California, USA",
+   "lat": 34.6028,
+   "lon": -118.0859
+  },
+  "displays": [],
+  "total_hours": 1729.9,
+  "notable": [
+   "First SR-71 repainted in the 1982 red low-visibility markings scheme",
+   "Only SR-71 to carry a red-painted USAF star (not repeated)",
+   "Displayed beside the first A-12, 'Article 121' (60-6924)"
+  ],
+  "notes": "Baugher states 7973 was damaged on 21 July 1987 while being demonstrated at RAF Mildenhall; habu.org gives 21 July 1987 only as its last flight. The damage claim was not confirmed by a second source. Location coordinates from OpenStreetMap (2503 East Avenue P). Airpark date: dedicated 27 September 1991 here; Roadrunners Internationale says the Airpark opened in November 1991.",
+  "citations": [
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-9fe956"
+   },
+   {
+    "source": "habu-org-527992"
+   },
+   {
+    "source": "habu-org-99d0e3"
+   },
+   {
+    "source": "the-sr-71-blackbird-thesr71blackbird-com-67662d"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-3d2bc7"
+   }
+  ]
+ },
+ {
+  "id": "61-7974",
+  "serial": "61-7974",
+  "type": "SR-71A",
+  "article": "2025",
+  "nickname": "Ichi Ban",
+  "first_flight": null,
+  "fate": "lost",
+  "fate_detail": "Lost on 21 April 1989 over the South China Sea near the Philippines after an engine exploded at Mach 3 out of Kadena and shrapnel severed hydraulic lines, leaving no flight controls. Pilot Dan E. House and RSO Blair L. Bozek ejected and were picked up by local fishermen; it was the last Blackbird ever lost.",
+  "location": null,
+  "displays": [],
+  "total_hours": null,
+  "notable": [
+   "'Ichi Ban' (Number One) tail art with habu snake",
+   "One of the first three SR-71s deployed to Kadena in 1968 and flew the most operational sorties of that first rotation",
+   "First SR-71 loss in nearly 17 years (previous loss July 1972)"
+  ],
+  "notes": "Which engine failed is disputed: sr-71.org (quoting House) and thesr71blackbird.com say the left engine; habu.org says the right. Ranks also differ (Maj. House and Capt. Bozek per sr-71.org; Lt Cols per habu.org). Wikipedia says the recovered wreckage was buried at sea in the Mariana Trench on 24 December 1989; this was not confirmed by a primary or museum source and should not be repeated without one. First flight and hours not found.",
+  "citations": [
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-1503c7"
+   },
+   {
+    "source": "habu-org-040571"
+   },
+   {
+    "source": "habu-org-54846f",
+    "detail": "61-7974 (Blackbird Photo Archive)"
+   },
+   {
+    "source": "the-sr-71-blackbird-thesr71blackbird-com-8baa06"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-3d2bc7"
+   }
+  ]
+ },
+ {
+  "id": "61-7975",
+  "serial": "61-7975",
+  "type": "SR-71A",
+  "article": "2026",
+  "nickname": null,
+  "first_flight": "1967-04-13",
+  "fate": "preserved",
+  "fate_detail": "Flown to March AFB for museum display on 28 February 1990 by Terry Pappas and John Manzi; on loan from the National Museum of the USAF and now shown indoors in the museum's reconnaissance exhibit.",
+  "location": {
+   "museum": "March Field Air Museum",
+   "city": "Riverside (March Air Reserve Base)",
+   "state_or_country": "California, USA",
+   "lat": 33.8838,
+   "lon": -117.2667
+  },
+  "displays": [],
+  "total_hours": 2854,
+  "notable": [
+   "Flew 82 sorties during the Vietnam War",
+   "Carried a rudder salvaged from 61-7978 (markings removed by 2009)"
+  ],
+  "notes": "Coordinates are the museum site (Wikipedia infobox, cross-checked against OpenStreetMap).",
+  "citations": [
+   {
+    "source": "march-field-air-museum-6bb1a6"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-1f719f"
+   },
+   {
+    "source": "habu-org-c515ef"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-3d2bc7"
+   }
+  ]
+ },
+ {
+  "id": "61-7976",
+  "serial": "61-7976",
+  "type": "SR-71A",
+  "article": "2027",
+  "nickname": null,
+  "first_flight": "1967-05",
+  "fate": "preserved",
+  "fate_detail": "Flown to the Air Force Museum at Wright-Patterson AFB on 27 March 1990 (Don Watkins and Bob Fowlkes) and kept indoors ever since; now in the museum's Cold War Gallery.",
+  "location": {
+   "museum": "National Museum of the United States Air Force",
+   "city": "Wright-Patterson AFB, Dayton",
+   "state_or_country": "Ohio, USA",
+   "lat": 39.7814,
+   "lon": -84.1106
+  },
+  "displays": [],
+  "total_hours": 2981,
+  "notable": [
+   "21 March 1968: first operational SR-71 sortie (Vietnam), Jerome F. O'Malley and Edward D. Payne",
+   "942 total sorties, more than any other SR-71, including 257 operational missions",
+   "Operated from Beale, Palmdale, Kadena and RAF Mildenhall"
+  ],
+  "notes": "First flight is given only as May 1967 (sr-71.org, Baugher). Hours: 2,981 (NMUSAF) versus 2,985.7 (sr-71.org). NMUSAF fact sheet blocks automated fetches; its text was confirmed via search snippet and the verbatim copy on thesr71blackbird.com. Coordinates are the museum site (Wikipedia infobox, cross-checked against OpenStreetMap).",
+  "citations": [
+   {
+    "source": "national-museum-of-the-united-states-air-6c66f2"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-9d82e0"
+   },
+   {
+    "source": "habu-org-183f12",
+    "detail": "61-7976 (Blackbird Photo Archive)"
+   },
+   {
+    "source": "joe-baugher-bc942a",
+    "detail": "1961 USAF Serial Numbers (61-7950 to 61-7981)"
+   },
+   {
+    "source": "the-sr-71-blackbird-thesr71blackbird-com-7999f8"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-3d2bc7"
+   }
+  ]
+ },
+ {
+  "id": "61-7977",
+  "serial": "61-7977",
+  "type": "SR-71A",
+  "article": "2028",
+  "nickname": null,
+  "first_flight": null,
+  "fate": "lost",
+  "fate_detail": "Destroyed on 10 October 1968 at Beale AFB when a wheel and brake assembly failed on the takeoff roll, starting a fire; the aborted takeoff ended about 1,000 ft off the end of runway 14. RSO James A. Kogler ejected and pilot Gabriel \"Abe\" Kardong rode the aircraft to a stop; both survived.",
+  "location": {
+   "museum": "The Museum of Flight (cockpit section only, 'Cockpits' exhibit)",
+   "city": "Seattle",
+   "state_or_country": "Washington, USA",
+   "lat": 47.518,
+   "lon": -122.297
+  },
+  "displays": [],
+  "total_hours": null,
+  "notable": [
+   "Restored cockpit is a sit-in exhibit: the museum says it is the only place the public can handle a Blackbird's controls"
+  ],
+  "notes": "The Museum of Flight labels the cockpit with the erroneous serial form 64-17977. Location is for the surviving cockpit section only; the rest of the airframe was destroyed. First flight and hours not found. Coordinates are the museum site (Wikipedia infobox, cross-checked against OpenStreetMap).",
+  "citations": [
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-1503c7"
+   },
+   {
+    "source": "habu-org-ee14bd"
+   },
+   {
+    "source": "the-museum-of-flight-272349"
+   },
+   {
+    "source": "joe-baugher-bc942a",
+    "detail": "1961 USAF Serial Numbers (61-7950 to 61-7981)"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-3d2bc7"
+   }
+  ]
+ },
+ {
+  "id": "61-7978",
+  "serial": "61-7978",
+  "type": "SR-71A",
+  "article": "2029",
+  "nickname": "Rapid Rabbit",
+  "first_flight": null,
+  "fate": "lost",
+  "fate_detail": "Written off on 20 July 1972 landing at Kadena in strong crosswinds: after a go-around with the drag chute already jettisoned, it touched down hot, could not stop and left the runway, wrecking the main gear. Pilot Dennis K. Bush and RSO James W. Fagg were unhurt.",
+  "location": null,
+  "displays": [],
+  "total_hours": null,
+  "notable": [
+   "Playboy bunny tail art, hence 'Rapid Rabbit'",
+   "Remains reportedly buried at Kadena ('Habu Hill'); a rudder went to 61-7975"
+  ],
+  "notes": "Pilot's middle initial differs (Dennis K. Bush per sr-71.org, Dennis R. Bush per Baugher). Wikipedia's timeline says 7978 was the first SR-71A to arrive at Kadena, on 8 March 1968; not confirmed by a second source here. First flight and hours not found.",
+  "citations": [
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-1503c7"
+   },
+   {
+    "source": "habu-org-6c992e",
+    "detail": "61-7978 (Blackbird Photo Archive)"
+   },
+   {
+    "source": "the-sr-71-blackbird-thesr71blackbird-com-7a17e4"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-3d2bc7"
+   }
+  ]
+ },
+ {
+  "id": "61-7979",
+  "serial": "61-7979",
+  "type": "SR-71A",
+  "article": "2030",
+  "nickname": null,
+  "first_flight": null,
+  "fate": "preserved",
+  "fate_detail": "Flown to Lackland AFB, Texas, on 6 March 1990 (Steve Grzebiniak and Stanley Gudmundson), the same day as 61-7972's record flight; on static display on the base, owned by the National Museum of the USAF.",
+  "location": {
+   "museum": "USAF Airman Heritage Museum / Lackland air park (on-base, restricted access)",
+   "city": "Joint Base San Antonio-Lackland, San Antonio",
+   "state_or_country": "Texas, USA",
+   "lat": 29.384,
+   "lon": -98.6217
+  },
+  "displays": [],
+  "total_hours": 3321.7,
+  "notable": [
+   "Flew the first of the 1973 Middle East (Yom Kippur War) sorties from Griffiss AFB, NY (Jim Shelton and Gary Coleman): 11.13 h with 6 refuellings",
+   "Fourth-highest flight time of any Blackbird (per habu.org)"
+  ],
+  "notes": "One unverified secondary source gives a first flight of 10 August 1967; left null. The 1973 sortie date is not stated by the cited page (commonly given as 13 October 1973) and the 'Giant Reach' name is that source's label. Older sources name the display host as the USAF History and Traditions Museum. Coordinates are the Airman Heritage Museum site; the aircraft sits on the Lackland parade ground air park nearby.",
+  "citations": [
+   {
+    "source": "habu-org-828237"
+   },
+   {
+    "source": "habu-org-b4dadb"
+   },
+   {
+    "source": "the-sr-71-blackbird-thesr71blackbird-com-de2854"
+   },
+   {
+    "source": "living-history-registry-ee2e8d"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-3d2bc7"
+   }
+  ]
+ },
+ {
+  "id": "61-7980",
+  "serial": "61-7980",
+  "type": "SR-71A",
+  "article": "2031",
+  "nickname": "NASA 844",
+  "first_flight": "1967-09-25",
+  "fate": "other",
+  "fate_detail": "Last SR-71A built and the last Blackbird to fly: NASA 844 arrived at Dryden on 15 February 1990 and made the final SR-71 flight on 9 October 1999; displayed outside the center from September 2002. By May 2026 NASA had removed it from display into the former Space Shuttle hangar at Armstrong, where Aviation Week reports a return-to-flight effort; NASA has not confirmed.",
+  "location": {
+   "museum": "NASA Armstrong Flight Research Center (in hangar, not on public display since about May 2026)",
+   "city": "Edwards AFB",
+   "state_or_country": "California, USA",
+   "lat": 34.9519,
+   "lon": -117.8856
+  },
+  "displays": [],
+  "total_hours": 2353.6,
+  "notable": [
+   "First flight 25 September 1967 with Lockheed chief project pilot Bob Gilliland",
+   "Final SR-71 flight of all: 9 October 1999, Edwards open house",
+   "Final flight was its 734th, bringing it to 2,353.6 flight hours (Carpenter timeline)",
+   "Transferred from USAF loan to NASA ownership July 1999",
+   "2026: reported NASA effort to return it to flight"
+  ],
+  "notes": "Status changing as of October 2026: NASA's only statement is 'We recognize the interest in the SR-71 and its remarkable history at NASA but have no additional information to share regarding the aircraft at this time.' Treat return-to-flight as reported, not confirmed. Moved to its display spot in front of Dryden on 14 September 2002 (habu.org). Total hours (2,353.6 over 734 flights) are from the Carpenter timeline only. Coordinates are the Armstrong center (Wikipedia).",
+  "citations": [
+   {
+    "source": "nasa-dryden-flight-research-center-c5099a"
+   },
+   {
+    "source": "aviation-week-space-technology-f0edc3"
+   },
+   {
+    "source": "the-war-zone-63e5f2",
+    "detail": "An SR-71 Blackbird Has Vanished (Updated, 24 to 25 Sep 2026)"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-418833"
+   },
+   {
+    "source": "1000aircraftphotos-com-e5ad37"
+   },
+   {
+    "source": "habu-org-e6f0d1"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-3d2bc7"
+   },
+   {
+    "source": "roadrunners-internationale-2c60a8",
+    "detail": "A-12, YF-12A, & SR-71 Timeline of Events (Carpenter, June 2010)"
+   }
+  ]
+ },
+ {
+  "id": "61-7981",
+  "serial": "61-7981",
+  "type": "SR-71C",
+  "article": "2000",
+  "nickname": "The Bastard",
+  "first_flight": "1969-03-14",
+  "fate": "preserved",
+  "fate_detail": "Built as a trainer to replace SR-71B 61-7957 (lost January 1968) from the aft fuselage and wing of YF-12A 60-6934 and a forward fuselage from an SR-71 static test article; last flew April 1976 and was removed from flying status June 1976. Assigned to Hill Aerospace Museum in April 1990, flown in by C-5 and reassembled by October 1991.",
+  "location": {
+   "museum": "Hill Aerospace Museum",
+   "city": "Hill AFB (near Roy / Clearfield)",
+   "state_or_country": "Utah, USA",
+   "lat": 41.1619,
+   "lon": -112.0194
+  },
+  "displays": [],
+  "total_hours": 556.4,
+  "notable": [
+   "Only SR-71C built; last Blackbird completed",
+   "Hours exclude 180.9 h flown as YF-12A 60-6934",
+   "Early yaw problem traced to a misaligned pitot boom, then fixed"
+  ],
+  "notes": "Article number 2000 per Baugher and the Roadrunners production list; thesr71blackbird.com uses 2001 (which duplicates 61-7950). Hill museum gives first flight only as March 1969; habu.org gives 14 March 1969. Hill describes the forward fuselage as 'a functional engine mock-up of a SR-71A'; others say static test article. Often misquoted as 64-17981. Coordinates are the museum site (Wikipedia infobox, cross-checked against OpenStreetMap).",
+  "citations": [
+   {
+    "source": "hill-aerospace-museum-aerospace-heritage-c40d14"
+   },
+   {
+    "source": "habu-org-512ad6"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-aea3f9"
+   },
+   {
+    "source": "joe-baugher-bc942a",
+    "detail": "1961 USAF Serial Numbers (61-7950 to 61-7981)"
+   },
+   {
+    "source": "roadrunners-internationale-df04a3",
+    "detail": "Lockheed SR-71 Blackbird production list (Word document)"
+   },
+   {
+    "source": "sr-71-online-sr-71-org-via-internet-arch-3d2bc7"
+   }
+  ]
+ }
+]

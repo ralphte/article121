@@ -1,0 +1,54 @@
+---
+// A large print with a photo interpreter's loupe. The loupe reads from the full-resolution master.
+import { Picture } from 'astro:assets';
+import type { Photo } from '../lib/data';
+interface Props { photo: Photo; }
+const p = Astro.props.photo.data;
+---
+<figure class="mount">
+  <div class="loupe-host">
+    <Picture src={p.file} alt={p.caption} widths={[800, 1200, 1800, 2400]} sizes="(max-width: 1240px) 100vw, 1208px" formats={['avif', 'webp']} />
+    <div class="loupe" hidden aria-hidden="true" data-master={p.master ?? ''}></div>
+  </div>
+  <figcaption class="datastrip"><slot /></figcaption>
+</figure>
+<button class="btn loupe-toggle" type="button" aria-pressed="false">Use the loupe</button>
+<style>
+  .mount { margin: 0; }
+  .loupe-host { position: relative; overflow: hidden; cursor: crosshair; touch-action: pan-y; background: var(--hull); }
+  .loupe-host.on { touch-action: none; }
+  .loupe-host :global(img) { display: block; width: 100%; height: auto; }
+  .loupe { position: absolute; width: clamp(150px, 22vw, 280px); aspect-ratio: 1; border-radius: 50%; border: 6px solid #1b2029; box-shadow: 0 0 0 1px var(--ti-lo), 0 16px 34px rgba(0,0,0,0.7), inset 0 0 24px rgba(0,0,0,0.5); background-repeat: no-repeat; pointer-events: none; }
+  .loupe::before, .loupe::after { content: ""; position: absolute; background: var(--marking); opacity: 0.85; }
+  .loupe::before { left: 50%; top: 16%; bottom: 16%; width: 1px; }
+  .loupe::after { top: 50%; left: 16%; right: 16%; height: 1px; }
+  .mount .datastrip { background: var(--hull); border: 1px solid var(--seam); border-top: 0; }
+  .loupe-toggle { display: none; margin-top: 10px; }
+  @media (pointer: coarse) { .loupe-toggle { display: inline-flex; } }
+</style>
+<script>
+  for (const host of document.querySelectorAll<HTMLElement>('.loupe-host')) {
+    const lp = host.querySelector<HTMLElement>('.loupe')!;
+    const img = host.querySelector('img')!;
+    const Z = 3;
+    let loaded = false;
+    const move = (e: PointerEvent) => {
+      if (!loaded) { lp.style.backgroundImage = `url(${lp.dataset.master || img.currentSrc})`; loaded = true; }
+      const r = img.getBoundingClientRect();
+      const x = e.clientX - r.left, y = e.clientY - r.top;
+      if (x < 0 || y < 0 || x > r.width || y > r.height) { lp.hidden = true; return; }
+      lp.hidden = false;
+      const d = lp.offsetWidth;
+      lp.style.left = `${x - d / 2}px`; lp.style.top = `${y - d / 2}px`;
+      lp.style.backgroundSize = `${r.width * Z}px ${r.height * Z}px`;
+      lp.style.backgroundPosition = `${-(x * Z - d / 2)}px ${-(y * Z - d / 2)}px`;
+    };
+    host.addEventListener('pointermove', (e) => { if (e.pointerType === 'mouse' || host.classList.contains('on')) move(e); });
+    host.addEventListener('pointerleave', () => { lp.hidden = true; });
+    const btn = host.closest('section')?.querySelector<HTMLButtonElement>('.loupe-toggle');
+    btn?.addEventListener('click', () => {
+      const on = host.classList.toggle('on'); btn.setAttribute('aria-pressed', String(on));
+      btn.textContent = on ? 'Stop the loupe' : 'Use the loupe'; if (!on) lp.hidden = true;
+    });
+  }
+</script>

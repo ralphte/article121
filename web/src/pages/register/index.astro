@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import CardIndex from '../../components/CardIndex.astro';
+import Globe from '../../components/Globe.astro';
+import { airframesInOrder, family } from '../../lib/data';
+const all = await airframesInOrder();
+const built = all.filter((a) => a.id !== 'd-21');
+const n = (f: string) => built.filter((a) => family(a.data.type) === f).length;
+const shown = built.filter((a) => a.data.fate === 'preserved').length;
+const lost = built.filter((a) => a.data.fate === 'lost').length;
+const points = all.flatMap((a) => [
+  ...(a.data.location && a.data.fate !== 'lost' ? [{ id: a.id, lon: a.data.location.lon, lat: a.data.location.lat, kind: 'af' as const }] : []),
+  ...a.data.displays.map((d) => ({ id: a.id, lon: d.lon, lat: d.lat, kind: 'd21' as const })),
+]);
+---
+<Base title="Where they are now" description="Every Lockheed A-12, YF-12A, M-21 and SR-71 built, with its history, its fate and where it is displayed today.">
+  <div class="wrap wide">
+    <header class="page-head panel ticks reg-head">
+      <div>
+        <div class="file-head"><b>File A121-R</b><span>Airframe register</span><span>{all.length} records</span></div>
+        <h1 class="display">Where they are now</h1>
+        <p>Every airframe of the Blackbird family that Lockheed built, from Article 121 to the last SR-71. Pick any one to open its file: what it did, how its career ended, and where you can stand next to it today.</p>
+        <div class="tally">
+          <span><b>{n('A-12')}</b>A-12</span><span><b>{n('YF-12A')}</b>YF-12A</span><span><b>{n('M-21')}</b>M-21</span><span><b>{n('SR-71')}</b>SR-71</span><span><b>{shown}</b>on display</span><span><b>{lost}</b>lost</span>
+        </div>
+      </div>
+      <div class="globe-col"><Globe points={points} /><p class="label cap">Every dot is an airframe you can visit. Squares are D-21 drones. Drag to turn.</p></div>
+    </header>
+    <div class="index"><CardIndex /></div>
+  </div>
+</Base>
+<style>
+  .reg-head { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 30px; align-items: center; }
+  .tally { display: flex; flex-wrap: wrap; gap: 10px 26px; font: 400 0.66rem/1.4 var(--f-data); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
+  .tally b { font: 800 1.5rem/1 var(--f-display); font-stretch: 112%; color: var(--stencil); margin-right: 8px; letter-spacing: 0; vertical-align: -3px; }
+  .cap { text-align: center; margin-top: 10px; }
+  .index { margin-top: 20px; }
+  @media (max-width: 860px) { .reg-head { grid-template-columns: minmax(0, 1fr); } }
+</style>

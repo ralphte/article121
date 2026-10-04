@@ -8,3 +8,8 @@ originals/
 *.log
 .venv/
 build/renders/
+
+# drawing scans and renders live outside git (R2 later); manifests and notes stay
+model/plans/raw/
+model/plans/pages/
+model/build/
