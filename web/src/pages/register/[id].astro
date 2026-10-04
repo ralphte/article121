@@ -6,7 +6,7 @@ import Photo from '../../components/Photo.astro';
 import Lightbox from '../../components/Lightbox.astro';
 import { getCollection } from 'astro:content';
 import { getImage } from 'astro:assets';
-import { airframesInOrder, fmtDate, lossDate, photosFor, resolveCitations, PROGRAM_LABEL } from '../../lib/data';
+import { airframesInOrder, fmtDate, lossDate, photosFor, resolveCitations, sourceHref, PROGRAM_LABEL } from '../../lib/data';
 
 export async function getStaticPaths() {
   const all = await airframesInOrder();
@@ -74,7 +74,7 @@ const og = hero ? (await getImage({ src: hero.data.file, width: 1200, format: 'j
       {events.length > 0 && <><h2>In the chronology</h2><table class="mini"><tbody>{events.map((e) => <tr><td class="d">{fmtDate(e.data.date, e.data.precision, true)}</td><td><b>{e.data.title}</b> <span class="prog">{PROGRAM_LABEL[e.data.program]}</span><br />{e.data.summary}</td></tr>)}</tbody></table></>}
       {d.notes && <><h2>Where the record disagrees</h2><p class="notes">{d.notes}</p></>}
       <h2>Sources</h2>
-      <ol class="src">{cites.map(({ entry, detail }) => <li>{entry.data.publisher}. <em>{detail ?? entry.data.title}</em>. <a href={entry.data.url}>Open</a> · <a href={`/sources/#${entry.id}`}>In the register</a></li>)}</ol>
+      <ol class="src">{cites.map(({ entry, detail }) => <li>{entry.data.publisher}. <em>{detail ?? entry.data.title}</em>. <a href={sourceHref(entry.data)}>{entry.data.offline && entry.data.archive ? 'Archived copy' : 'Open'}</a>{entry.data.archive && !entry.data.offline && <> · <a href={entry.data.archive}>Archived</a></>} · <a href={`/sources/#${entry.id}`}>In the register</a></li>)}</ol>
       <nav class="pager" aria-label="Neighbouring files">
         {prev ? <a class="btn" href={`/register/${prev.id}/`}>Previous: {prev.id === 'd-21' ? 'D-21' : prev.data.serial}</a> : <span></span>}
         {next ? <a class="btn" href={`/register/${next.id}/`}>Next: {next.id === 'd-21' ? 'D-21' : next.data.serial}</a> : <span></span>}

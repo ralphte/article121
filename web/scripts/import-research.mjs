@@ -1,7 +1,8 @@
 // Turn the research pack into the site's content data.
 //
-//   research/timeline.json, research/airframes.json, design/img/airframes/manifest.json
-//     -> web/src/data/{sources,events,airframes,photos}.json
+//   research/timeline.json, research/airframes.json, design/img/airframes/manifest.json,
+//   research/machine.json (+ research/systems/media/manifest.json)
+//     -> web/src/data/{sources,events,airframes,photos,machine}.json
 //
 // Every citation in the research pack is an inline {title, publisher, url}. Here they are
 // collected into one source register keyed by URL, and each event and airframe keeps a list
@@ -23,6 +24,8 @@ const timeline = read('research/timeline.json');
 const airframes = read('research/airframes.json');
 const manifest = read('design/img/airframes/manifest.json');
 const legacyCredits = read('design/img/credits.json');
+// Wayback Machine copies of cited pages (tools/archive_sources.py); optional so a fresh clone builds
+const archives = existsSync(join(root, 'research/archives.json')) ? read('research/archives.json') : {};
 
 // ---------- source register
 const sources = new Map();
@@ -33,7 +36,12 @@ function cite(s) {
   const key = norm(s.url);
   if (!sources.has(key)) {
     const id = `${slug(s.publisher || 'source')}-${createHash('sha1').update(key).digest('hex').slice(0, 6)}`;
-    sources.set(key, { id, title: s.title, publisher: s.publisher || '', url: s.url, uses: 0 });
+    const arc = archives[s.url.trim()] ?? Object.entries(archives).find(([u]) => norm(u) === key)?.[1];
+    sources.set(key, {
+      id, title: s.title, publisher: s.publisher || '', url: s.url, uses: 0,
+      ...(arc?.wayback ? { archive: arc.wayback, archived: arc.captured } : {}),
+      ...(arc?.offline ? { offline: arc.offline } : {}),
+    });
   }
   const rec = sources.get(key);
   rec.uses += 1;
@@ -78,13 +86,13 @@ const known = new Set(afOut.map((a) => a.id));
 const photosDir = join(web, 'src/assets/photos');
 mkdirSync(photosDir, { recursive: true });
 const photos = [];
-function addPhoto(p, airframe, kind) {
+function addPhoto(p, airframe, kind, masterUrl = null) {
   const src = join(root, 'design', p.file);
   if (!existsSync(src)) throw new Error(`missing photo ${p.file}`);
   const name = basename(p.file);
   copyFileSync(src, join(photosDir, name));
   // Full-resolution masters live in R2 (tools/r2 copy design/img/hero r2:article121-files/masters)
-  const master = kind === 'hero' ? `${FILES_BASE}/masters/${name}` : null;
+  const master = kind === 'hero' ? `${FILES_BASE}/masters/${name}` : masterUrl;
   for (const f of ['creator', 'license', 'source_page']) if (!p[f]) throw new Error(`photo ${name} lacks ${f}`);
   photos.push({
     id: name.replace(/\.[^.]+$/, ''),
@@ -126,6 +134,78 @@ function serialFromCaption(c) {
   return m ? m[1] : null;
 }
 
+// ---------- The Machine (research/machine.json, figures from research/systems)
+// Paragraphs and data plate rows cite sources by key and page; a missing or unknown key fails the
+// build. Figures are reduced copies in design/img/systems; the full-resolution files are in R2
+// under systems/ (tools/r2 copy research/systems/media r2:article121-files/systems).
+const machineIn = read('research/machine.json');
+const media = Object.fromEntries(read('research/systems/media/manifest.json').map((m) => [m.file, m]));
+const licenseUrl = (l) => (
+  /^CC BY-SA 3\.0/.test(l) ? 'https://creativecommons.org/licenses/by-sa/3.0/'
+  : /^CC BY-SA 2\.0/.test(l) ? 'https://creativecommons.org/licenses/by-sa/2.0/'
+  : /^CC BY 2\.0/.test(l) ? 'https://creativecommons.org/licenses/by/2.0/'
+  : /^CC0/.test(l) ? 'https://creativecommons.org/publicdomain/zero/1.0/'
+  : null);
+function machineCites(list, where) {
+  if (!list?.length) throw new Error(`machine.json ${where}: needs at least one source`);
+  return list.map(([key, at]) => {
+    const src = machineIn.sources[key];
+    if (!src) throw new Error(`machine.json ${where}: unknown source ${key}`);
+    return { source: cite(src).source, detail: at };
+  });
+}
+const machineAdded = new Set();
+function machineFigure(f, where) {
+  const m = media[f.file];
+  if (!m) throw new Error(`machine.json ${where}: ${f.file} is not in the systems media manifest`);
+  if (!['A', 'B'].includes(m.rights_tier)) throw new Error(`${f.file}: tier ${m.rights_tier} cannot be shown`);
+  const stem = f.file.replace(/\.[^.]+$/, '');
+  if (machineAdded.has(stem)) return stem;
+  machineAdded.add(stem);
+  addPhoto({
+    file: `img/systems/${stem}.jpg`, caption: f.caption, creator: m.creator, date: m.date || null,
+    license: m.license, license_url: licenseUrl(m.license), tier: m.rights_tier,
+    source_page: m.source_url, original_id: f.original_id ?? null,
+  }, null, 'system', `${FILES_BASE}/systems/${encodeURIComponent(f.file)}`);
+  return stem;
+}
+const machine = {
+  intro: { text: machineIn.intro.text, citations: machineCites(machineIn.intro.cite, 'intro') },
+  plate: machineIn.plate.map((r, i) => ({ label: r.label, value: r.value, metric: r.metric ?? null, citations: machineCites(r.cite, `plate ${i}`) })),
+  hero: machineFigure(machineIn.hero, 'hero'),
+  sections: machineIn.sections.map((sec) => ({
+    id: sec.id, kicker: sec.kicker, title: sec.title,
+    paras: sec.paras.map((p, i) => ({ text: p.text, citations: machineCites(p.cite, `${sec.id} paragraph ${i + 1}`) })),
+    figures: sec.figures.map((f) => machineFigure(f, sec.id)),
+  })),
+  inlet: { ...machineIn.inlet_explainer, citations: machineCites(machineIn.inlet_explainer.cite, 'inlet explainer') },
+};
+delete machine.inlet.cite;
+// Panel explorer: positions of the keyed items on the pilot's panel drawing (research/systems/panel_fig1-12.json)
+const panelIn = machineIn.panel;
+if (panelIn && existsSync(join(root, panelIn.positions))) {
+  const pos = read(panelIn.positions);
+  const zoneOf = new Map(panelIn.zones.flatMap((z) => z.keys.map((k) => [k, z.id])));
+  machine.panel = {
+    figure: machineFigure({ file: panelIn.figure, caption: 'Flight manual Figure 1-12: the pilot\'s centre instrument panel, keyed 1 to 50.', original_id: 'T.O. SR-71A-1 p.1-23' }, 'panel'),
+    width: pos.width, height: pos.height,
+    citations: machineCites(panelIn.cite, 'panel'),
+    zones: panelIn.zones.map(({ id, name }) => ({ id, name })),
+    items: pos.items.map((it) => {
+      const note = panelIn.notes[String(it.key)];
+      if (!zoneOf.has(it.key)) throw new Error(`panel item ${it.key} has no zone`);
+      return {
+        key: it.key, name: it.name, zone: zoneOf.get(it.key), inset: !!it.inset,
+        // tap targets: each half of a left/right pair separately where the positions give them
+        spots: (it.parts?.length ? it.parts : [it]).map((q) => ({
+          x: +(q.x / pos.width * 100).toFixed(3), y: +(q.y / pos.height * 100).toFixed(3), r: +(q.r / pos.width * 100).toFixed(3),
+        })),
+        note: note ? { text: note.text, citations: machineCites(note.cite, `panel note ${it.key}`) } : null,
+      };
+    }),
+  };
+}
+
 // ---------- write
 const out = join(web, 'src/data');
 mkdirSync(out, { recursive: true });
@@ -134,4 +214,5 @@ writeFileSync(join(out, 'sources.json'), JSON.stringify(srcList, null, 1));
 writeFileSync(join(out, 'events.json'), JSON.stringify(events, null, 1));
 writeFileSync(join(out, 'airframes.json'), JSON.stringify(afOut, null, 1));
 writeFileSync(join(out, 'photos.json'), JSON.stringify(photos, null, 1));
+writeFileSync(join(out, 'machine.json'), JSON.stringify(machine, null, 1));
 console.log(`imported ${events.length} events, ${afOut.length} airframes, ${photos.length} photos, ${srcList.length} sources`);

@@ -1,0 +1,955 @@
+{
+ "about": "Content for The Machine page. Every paragraph and every data plate row cites at least one source by key and page; the build fails otherwise. Facts come from research/systems/systems.md, which records disagreements between sources. Figures are files in research/systems/media (manifest.json there holds their rights); captions here are Article 121's own.",
+ "sources": {
+  "FM": {
+   "title": "SR-71A-1 Flight Manual (T.O. SR-71A-1), Issue E, Change 2, 31 July 1989",
+   "publisher": "U.S. Air Force",
+   "url": "https://archive.org/details/0003756-lockheed-sr-71-03"
+  },
+  "A12FM": {
+   "title": "A-12 Utility Flight Manual, changed 15 June 1968 (document C01316457)",
+   "publisher": "Central Intelligence Agency",
+   "url": "https://www.cia.gov/readingroom/document/0001316457"
+  },
+  "M09": {
+   "title": "Design and Development of the Blackbird: Challenges and Lessons Learned (Peter W. Merlin, AIAA 2009-1522)",
+   "publisher": "NASA",
+   "url": "https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf"
+  },
+  "M12": {
+   "title": "Mach 3 Legend: Design and Development of the Lockheed Blackbird (Peter W. Merlin, 2012)",
+   "publisher": "NASA",
+   "url": "https://ntrs.nasa.gov/api/citations/20120013451/downloads/20120013451.pdf"
+  },
+  "SP4525": {
+   "title": "Mach 3+: NASA/USAF YF-12 Flight Research, 1969-1979 (Peter W. Merlin, SP-2001-4525)",
+   "publisher": "NASA",
+   "url": "https://www.nasa.gov/wp-content/uploads/2021/04/88796main_yf-12.pdf"
+  },
+  "FS030": {
+   "title": "SR-71 Blackbird fact sheet (FS-2008-6-030-DFRC)",
+   "publisher": "NASA",
+   "url": "https://www.nasa.gov/wp-content/uploads/2021/09/495839main_fs-030_sr-71.pdf"
+  },
+  "CP2054": {
+   "title": "YF-12 Experiments Symposium, Volume 1 (NASA CP-2054, 1978)",
+   "publisher": "NASA",
+   "url": "https://ntrs.nasa.gov/api/citations/19780024112/downloads/19780024112.pdf"
+  },
+  "SCAR": {
+   "title": "YF-12 Propulsion Research Program and Results (Albers and Olinger, NASA CP-001, 1976)",
+   "publisher": "NASA",
+   "url": "https://ntrs.nasa.gov/api/citations/19770011073/downloads/19770011073.pdf"
+  },
+  "TM104317": {
+   "title": "A Historical Perspective of the YF-12A Thermal Loads and Structures Program (Jenkins and Quinn, NASA TM-104317, 1996)",
+   "publisher": "NASA",
+   "url": "https://ntrs.nasa.gov/api/citations/19960027893/downloads/19960027893.pdf"
+  },
+  "DFA": {
+   "title": "Dressing for Altitude: U.S. Aviation Pressure Suits (Dennis R. Jenkins, NASA SP-2011-595)",
+   "publisher": "NASA",
+   "url": "https://ntrs.nasa.gov/api/citations/20120014266/downloads/20120014266.pdf"
+  },
+  "KJ81": {
+   "title": "Development of the Lockheed SR-71 Blackbird (Clarence L. Johnson, 1981), with J58/SR-71 Propulsion Integration (William R. Brown)",
+   "publisher": "Central Intelligence Agency",
+   "url": "https://archive.org/details/cia-readingroom-document-cia-rdp90b00170r000100080001-5"
+  },
+  "ARCH": {
+   "title": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge)",
+   "publisher": "Central Intelligence Agency",
+   "url": "https://www.cia.gov/resources/csi/static/b45f5f8f5e4937963d9e9931313d84a4/Archangel-CIAs-Supersonic-A-12-Reconnaissance-Aircraft.pdf"
+  },
+  "EIS90": {
+   "title": "Deactivation of the SR-71 Program at Beale Air Force Base, California (environmental assessment, October 1990)",
+   "publisher": "U.S. Air Force",
+   "url": "https://archive.org/details/DTIC_ADA270896"
+  }
+ },
+ "intro": {
+  "text": "Almost nothing on the SR-71 came off the shelf: not the fuel, the engines, the metal, the navigation or the suits its crews wore. It was designed to cruise at Mach 3.2 and cleared to 85,000 feet. These are its systems, as the flight manual the Air Force flew it by and the NASA reports written about it describe them.",
+  "cite": [
+   [
+    "FM",
+    "p.5-8, p.5-10"
+   ]
+  ]
+ },
+ "plate": [
+  {
+   "label": "Length, with pitot mast",
+   "value": "107.4 ft",
+   "metric": "32.74 m",
+   "cite": [
+    [
+     "FM",
+     "p.1-4"
+    ]
+   ]
+  },
+  {
+   "label": "Wing span",
+   "value": "55.6 ft",
+   "metric": "16.95 m",
+   "cite": [
+    [
+     "FM",
+     "p.1-4"
+    ]
+   ]
+  },
+  {
+   "label": "Height to the top of the rudders",
+   "value": "18.5 ft",
+   "metric": "5.64 m",
+   "cite": [
+    [
+     "FM",
+     "p.1-4"
+    ]
+   ]
+  },
+  {
+   "label": "Crew",
+   "value": "2",
+   "metric": "pilot and reconnaissance systems officer",
+   "cite": [
+    [
+     "FM",
+     "p.1-4"
+    ]
+   ]
+  },
+  {
+   "label": "Loaded gross weight",
+   "value": "135,000 to over 140,000 lb",
+   "metric": "61 to over 63.5 t",
+   "cite": [
+    [
+     "FM",
+     "p.1-4"
+    ]
+   ]
+  },
+  {
+   "label": "Fuel",
+   "value": "80,280 lb of JP-7",
+   "metric": "12,219 US gal in 8 tanks",
+   "cite": [
+    [
+     "FM",
+     "Figure 1-32, p.1-48"
+    ]
+   ]
+  },
+  {
+   "label": "Engines",
+   "value": "2 Pratt & Whitney J58",
+   "metric": "34,000 lbf each in maximum afterburner (151 kN)",
+   "cite": [
+    [
+     "FM",
+     "p.1-4, p.1-7"
+    ]
+   ]
+  },
+  {
+   "label": "Design Mach number",
+   "value": "3.2",
+   "metric": "maximum scheduled cruise Mach 3.17",
+   "cite": [
+    [
+     "FM",
+     "p.5-8"
+    ]
+   ]
+  },
+  {
+   "label": "Altitude limit",
+   "value": "85,000 ft",
+   "metric": "25,908 m",
+   "cite": [
+    [
+     "FM",
+     "p.5-10"
+    ]
+   ]
+  },
+  {
+   "label": "Fuel burn at cruise",
+   "value": "36,000 to 38,000 lb/h",
+   "metric": "Mach 3.0 to 3.15, standard day",
+   "cite": [
+    [
+     "M09",
+     "p.26"
+    ]
+   ]
+  },
+  {
+   "label": "Longest operational sortie",
+   "value": "11.2 h",
+   "metric": null,
+   "cite": [
+    [
+     "M09",
+     "p.27"
+    ]
+   ]
+  },
+  {
+   "label": "Titanium",
+   "value": "93%",
+   "metric": "of the structural weight",
+   "cite": [
+    [
+     "M09",
+     "p.16"
+    ]
+   ]
+  }
+ ],
+ "hero": {
+  "file": "photo_SR-71A-both-engines-max-afterburner-on-ramp_NASA-EC98-44817-2.jpg",
+  "caption": "A NASA SR-71A tied down on the ramp with both J58s in maximum afterburner during a ground run, 1998.",
+  "original_id": "NASA EC98-44817-2"
+ },
+ "sections": [
+  {
+   "id": "inlet",
+   "kicker": "Propulsion",
+   "title": "The inlet did most of the work",
+   "paras": [
+    {
+     "text": "At cruise the J58 was not the main source of thrust. A Lockheed breakdown quoted by NASA historian Peter Merlin gives the inlet 54 percent of the thrust at Mach 3, the ejector nozzle behind the engine 29 percent and the engine itself 17 percent. At Mach 2.2 the engine still supplied 73 percent. NASA's own fact sheet puts it plainly: less than 20 percent of the thrust at Mach 3 came from the engine.",
+     "cite": [
+      [
+       "M09",
+       "p.25"
+      ],
+      [
+       "FS030",
+       "p.3"
+      ]
+     ]
+    },
+    {
+     "text": "Each inlet is a mixed-compression design with a spike that moves. The spike is locked forward on the ground and below 30,000 feet. From Mach 1.6 it moves aft about 1-5/8 inches for every 0.1 Mach, to about 26 inches. As it retracts, the throat closes to 54 percent of its Mach 1.6 area while the air the inlet captures more than doubles.",
+     "cite": [
+      [
+       "FM",
+       "p.1-31, p.1-43"
+      ]
+     ]
+    },
+    {
+     "text": "Two rings of doors keep the shock wave where it belongs. Forward bypass doors just behind the throat spill air overboard to hold the shock at the throat; aft bypass doors just ahead of the engine send air around it to the ejector. If the shock is thrown out of the inlet, an unstart, a sensor sees compressor inlet pressure fall by more than 23 percent, opens the forward bypass fully and drives the spike forward by up to 15 inches, then retracts it 3.75 seconds later.",
+     "cite": [
+      [
+       "FM",
+       "p.1-31 to 1-35, p.1-42A"
+      ]
+     ]
+    },
+    {
+     "text": "NASA's YF-12 flights measured how fast an unstart happens: the shock reached the spike tip in about a hundredth of a second. Between Mach 2.3 and 2.6 an unstart was violent enough to snap a pilot's head and helmet against the inside of the canopy.",
+     "cite": [
+      [
+       "SCAR",
+       "p.425"
+      ],
+      [
+       "SP4525",
+       "p.105"
+      ]
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "file": "diagram_SR-71A-1_fig1-21_inlet-airflow-patterns-nacelle-sections_p1-33.jpg",
+     "caption": "Flight manual Figure 1-21: the inlet's doors and airflow at each stage of flight, from standstill to Mach 3.2.",
+     "original_id": "T.O. SR-71A-1 p.1-33"
+    },
+    {
+     "file": "diagram_YF-12-inlet-cutaway-door-counts_CP-2054-p24-fig2.png",
+     "caption": "NASA's cutaway of the inlet: 16 forward bypass doors, 24 aft bypass doors, 32 shock trap tubes and 4 spike struts. Drawn for the YF-12 program, which used the same inlet.",
+     "original_id": "NASA CP-2054 p.24, Figure 2"
+    },
+    {
+     "file": "photo_inlet-spike-head-on_Clemens-Vasters.jpg",
+     "caption": "Looking into the left inlet of SR-71A 61-7971 at the Evergreen Aviation & Space Museum.",
+     "original_id": null
+    }
+   ]
+  },
+  {
+   "id": "j58",
+   "kicker": "Propulsion",
+   "title": "The J58, built to burn in afterburner for hours",
+   "paras": [
+    {
+     "text": "Two Pratt & Whitney J58s, company designation JT11D-20, each rated at 34,000 lb of thrust in maximum afterburner at sea level. The 32,500 lb often quoted belongs to the early engine with fixed inlet guide vanes; the A-12's version was rated at 31,500 lb.",
+     "cite": [
+      [
+       "FM",
+       "p.1-7"
+      ],
+      [
+       "SP4525",
+       "p.20, note 25"
+      ],
+      [
+       "A12FM",
+       "p.1-7"
+      ]
+     ]
+    },
+    {
+     "text": "Its compressor has nine stages and a pressure ratio of only 8.8 to 1, because at cruise the inlet does most of the compressing. From about Mach 1.8 to 2.0, air bled from the fourth stage flows through six tubes around the rest of the engine and straight into the afterburner.",
+     "cite": [
+      [
+       "FM",
+       "p.1-4 to 1-7"
+      ],
+      [
+       "CP2054",
+       "p.4"
+      ]
+     ]
+    },
+    {
+     "text": "It was designed for Mach 3.2 with both full military power and afterburner run continuously, and its own fuel served as the hydraulic fluid for the nozzle, guide vanes and bleeds, at up to 1,800 psi.",
+     "cite": [
+      [
+       "KJ81",
+       "Brown, p.2, Figure 1"
+      ],
+      [
+       "FM",
+       "p.1-21"
+      ]
+     ]
+    },
+    {
+     "text": "JP-7 is so hard to light that a lit match will not ignite it. The engines are lit chemically instead, with triethylborane, which burns on contact with air. Each engine carries enough for at least 16 shots, and a counter beside each throttle counts them down.",
+     "cite": [
+      [
+       "ARCH",
+       "p.12"
+      ],
+      [
+       "FM",
+       "p.1-9, p.1-22"
+      ]
+     ]
+    },
+    {
+     "text": "Turning a J58 over to start took more than 600 horsepower. Lockheed's answer was a cart carrying two Buick racing car engines, geared together to the engine's starter drive.",
+     "cite": [
+      [
+       "KJ81",
+       "Johnson, p.9"
+      ],
+      [
+       "ARCH",
+       "p.13"
+      ]
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "file": "diagram_SR-71A-1_fig1-2_JT11D-20-engine-cutaway-keyed_p1-6.jpg",
+     "caption": "Flight manual Figure 1-2: the JT11D-20 with 26 numbered parts, among them the bypass tubes that carry fourth-stage air to the afterburner.",
+     "original_id": "T.O. SR-71A-1 p.1-6"
+    },
+    {
+     "file": "photo_J58-in-altitude-chamber_NASA-Lewis_NARA-17419331.jpg",
+     "caption": "A J58 in an altitude test chamber at NASA's Lewis Research Center, March 1974.",
+     "original_id": "NARA 17419331"
+    },
+    {
+     "file": "photo_J58-engine_NMUSAF_Aaron-Headly.jpg",
+     "caption": "A J58 on its stand at the National Museum of the U.S. Air Force, with its bypass ducts and plumbing on the outside.",
+     "original_id": null
+    },
+    {
+     "file": "photo_AG330-start-cart_Hill-Aerospace-Museum_Jaydec.jpg",
+     "caption": "A start cart at the Hill Aerospace Museum, Utah, which calls it the AG330. A drive shaft from the cart spins the engine through its gearbox.",
+     "original_id": null
+    }
+   ]
+  },
+  {
+   "id": "cockpits",
+   "kicker": "Crew",
+   "title": "Two cockpits, and only one has a stick",
+   "paras": [
+    {
+     "text": "The pilot's centre panel alone has 50 numbered items in the flight manual. The attitude director indicator sits in the middle. The inlet controls are grouped at the lower left: spike and forward bypass knobs graduated in Mach from 1.4 to 3.2, and a spike position indicator reading 0 to 26 inches. The engine instruments run down the right: tachometers, exhaust gas temperature, nozzle position, fuel flow and oil pressure.",
+     "cite": [
+      [
+       "FM",
+       "Figure 1-12, p.1-23; p.1-43"
+      ]
+     ]
+    },
+    {
+     "text": "A triple display indicator shows speed, altitude and Mach in digits. Its altitude window reads to 99,950 feet and drops the first digit above 100,000.",
+     "cite": [
+      [
+       "FM",
+       "p.1-135 to 1-136"
+      ]
+     ]
+    },
+    {
+     "text": "Behind the pilot sits the reconnaissance systems officer, who has no flight controls: a downward-looking viewsight at the top of the panel, a radar display below it, and the sensor and navigation panels on the consoles.",
+     "cite": [
+      [
+       "FM",
+       "Figures 1-17 and 1-19, p.1-28 to 1-30; p.4-105"
+      ]
+     ]
+    },
+    {
+     "text": "The astro-inertial navigation system steers by the stars, day and night. A telescope behind the rear cockpit looks up through a window and tracks stars from a 61-star catalogue; in astro-inertial mode the expected position error is 0.3 nautical miles for up to 10 hours.",
+     "cite": [
+      [
+       "FM",
+       "p.4-3 to 4-6, Figure 4-2"
+      ]
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "file": "diagram_SR-71A-1_fig1-12_front-cockpit-center-instrument-panel_p1-23.jpg",
+     "caption": "Flight manual Figure 1-12: the pilot's centre instrument panel, keyed 1 to 50.",
+     "original_id": "T.O. SR-71A-1 p.1-23"
+    },
+    {
+     "file": "photo_front-cockpit_61-7975_March-Field_Alan-Wilson.jpg",
+     "caption": "The pilot's cockpit of SR-71A 61-7975 at the March Field Air Museum, California, canopy open.",
+     "original_id": null
+    },
+    {
+     "file": "diagram_SR-71A-1_fig1-17_rear-cockpit-RSO-instrument-panel_p1-28.jpg",
+     "caption": "Flight manual Figure 1-17: the reconnaissance systems officer's panel, viewsight at the top.",
+     "original_id": "T.O. SR-71A-1 p.1-28"
+    },
+    {
+     "file": "photo_rear-cockpit_61-7975_March-Field_Alan-Wilson.jpg",
+     "caption": "The rear cockpit of 61-7975 from above, with its seat removed.",
+     "original_id": null
+    },
+    {
+     "file": "photo_ANS-astro-inertial-navigation-unit_Evergreen_Daderot.jpg",
+     "caption": "The astro-inertial navigation unit displayed beside SR-71A 61-7971 at Evergreen. The star tracker looks out through the window on top.",
+     "original_id": null
+    }
+   ]
+  },
+  {
+   "id": "heat",
+   "kicker": "Structure",
+   "title": "Built to run hot",
+   "paras": [
+    {
+     "text": "At cruise the skin averaged 462 to 622 °F and reached 1,050 °F on the nacelles. Titanium alloys make up 93 percent of the structural weight.",
+     "cite": [
+      [
+       "M12",
+       "slide 33"
+      ],
+      [
+       "M09",
+       "p.16"
+      ]
+     ]
+    },
+    {
+     "text": "The wing skins are corrugated chordwise so they can expand without buckling. Kelly Johnson wrote that at design heating the corrugations merely deepened by a few thousandths of an inch. The airframe as a whole grows by up to four inches in length.",
+     "cite": [
+      [
+       "KJ81",
+       "Johnson, p.10"
+      ],
+      [
+       "SP4525",
+       "p.5"
+      ]
+     ]
+    },
+    {
+     "text": "It is painted black to radiate heat away. In the cockpit the outer glass reached 420 °F while the cooling air came in at minus 40 °F.",
+     "cite": [
+      [
+       "FM",
+       "p.1-4"
+      ],
+      [
+       "M09",
+       "p.18"
+      ]
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "file": "diagram_YF-12A-upper-surface-temperature-contours_TM-104317-p3-fig1.png",
+     "caption": "Upper surface temperatures of the YF-12A at Mach 3 cruise, 250 to 600 °F: hottest on the wing edges and nacelles, coolest over the fuel tanks.",
+     "original_id": "NASA TM-104317 p.3, Figure 1"
+    },
+    {
+     "file": "diagram_YF-12A-wing-thermal-expansion-relief-corrugations_TM-104317-p6-fig5.png",
+     "caption": "The YF-12A wing structure, with chordwise corrugated skins that let it grow as it heats.",
+     "original_id": "NASA TM-104317 p.6, Figure 5"
+    }
+   ]
+  },
+  {
+   "id": "fuel",
+   "kicker": "Systems",
+   "title": "Fuel as coolant, nitrogen as insurance",
+   "paras": [
+    {
+     "text": "Eight tanks hold 12,219 US gallons, 80,280 lb of JP-7. Before it is burned, the fuel cools the air conditioning, the hydraulic fluid and the engine oil; once it passes 290 °F, the hottest fuel is sent back to tank 4 instead of to the engines.",
+     "cite": [
+      [
+       "FM",
+       "Figure 1-32, p.1-48; p.1-58 to 1-60"
+      ]
+     ]
+    },
+    {
+     "text": "Liquid nitrogen, 262 liters in three flasks, pressurises the tanks and fills the space above the hot fuel so it cannot ignite. Without it the aircraft is limited to Mach 2.6.",
+     "cite": [
+      [
+       "FM",
+       "p.1-58, p.5-8"
+      ]
+     ]
+    },
+    {
+     "text": "In the air it took on fuel at about 6,000 lb a minute, every tank filling at once in 12 to 15 minutes, from a dedicated fleet of KC-135Q tankers.",
+     "cite": [
+      [
+       "FM",
+       "p.1-60"
+      ],
+      [
+       "EIS90",
+       "p.1-4"
+      ]
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "file": "diagram_SR-71A-1_fig1-32_fuel-tank-arrangement-and-capacities_p1-48.jpg",
+     "caption": "Flight manual Figure 1-32: the eight tanks and what each holds.",
+     "original_id": "T.O. SR-71A-1 p.1-48"
+    },
+    {
+     "file": "photo_KC-135Q-refuelling-SR-71_DF-ST-83-07614.jpg",
+     "caption": "SR-71 61-7974 moves in behind KC-135Q 59-1513 to refuel, 1983.",
+     "original_id": "DoD DF-ST-83-07614"
+    }
+   ]
+  },
+  {
+   "id": "escape",
+   "kicker": "Crew",
+   "title": "Getting out at Mach 3",
+   "paras": [
+    {
+     "text": "Both crew sat on Lockheed SR-1 rocket ejection seats, usable from zero speed and altitude to the edge of the flight envelope. Pulling the D-ring jettisons the canopy and then fires the catapult; the rocket lights as the seat clears the sills, a drogue opens from the headrest, and at 15,000 feet the seat throws its occupant clear before a 35-foot parachute opens.",
+     "cite": [
+      [
+       "FM",
+       "p.1-199 to 1-203"
+      ]
+     ]
+    },
+    {
+     "text": "From late 1978 until 1996 they flew in David Clark S1030 full-pressure suits: six layers that hold 3.5 psi if the cockpit loses pressure.",
+     "cite": [
+      [
+       "DFA",
+       "p.339 to 341"
+      ],
+      [
+       "FM",
+       "p.1-197"
+      ]
+     ]
+    }
+   ],
+   "figures": [
+    {
+     "file": "diagram_SR-71A-1_fig1-83_SR-1-ejection-seat_p1-202.jpg",
+     "caption": "Flight manual Figure 1-83: the SR-1 ejection seat.",
+     "original_id": "T.O. SR-71A-1 p.1-202"
+    },
+    {
+     "file": "photo_NASA-SR-71-crew-in-pressure-suits_Jim-Ross_1991.jpg",
+     "caption": "A NASA SR-71 crew in full-pressure suits, 1991.",
+     "original_id": null
+    }
+   ]
+  }
+ ],
+ "inlet_explainer": {
+  "cite": [
+   [
+    "FM",
+    "Figure 1-21, p.1-33; p.1-31, p.1-43"
+   ],
+   [
+    "M09",
+    "p.25"
+   ]
+  ],
+  "spike": {
+   "start_mach": 1.6,
+   "inches_per_tenth": 1.625,
+   "max_inches": 26
+  },
+  "states": [
+   {
+    "mach": 0.0,
+    "spike": "Forward",
+    "forward_bypass": "Open",
+    "aft_bypass": "Closed",
+    "centerbody_bleed": "Inward",
+    "suck_in_doors": "Open",
+    "tertiary_doors": "Open",
+    "ejector_flaps": "Closed"
+   },
+   {
+    "mach": 0.5,
+    "spike": "Forward",
+    "forward_bypass": "Closed",
+    "aft_bypass": "Closed",
+    "centerbody_bleed": "Overboard",
+    "suck_in_doors": "Closed",
+    "tertiary_doors": "Open",
+    "ejector_flaps": "Closed"
+   },
+   {
+    "mach": 1.5,
+    "spike": "Forward",
+    "forward_bypass": "Open as required to place the shock",
+    "aft_bypass": "Closed",
+    "centerbody_bleed": "Overboard",
+    "suck_in_doors": "Closed",
+    "tertiary_doors": "Closed",
+    "ejector_flaps": "Opening"
+   },
+   {
+    "mach": 2.5,
+    "spike": "Retracting",
+    "forward_bypass": "Open as required",
+    "aft_bypass": "Scheduled open",
+    "centerbody_bleed": "Overboard",
+    "suck_in_doors": "Closed",
+    "tertiary_doors": "Closed",
+    "ejector_flaps": "Opening"
+   },
+   {
+    "mach": 3.2,
+    "spike": "Retracted",
+    "forward_bypass": "Closed, opening as required",
+    "aft_bypass": "Not shown",
+    "centerbody_bleed": "Overboard",
+    "suck_in_doors": "Closed",
+    "tertiary_doors": "Closed",
+    "ejector_flaps": "Open"
+   }
+  ],
+  "split": [
+   {
+    "mach": 2.2,
+    "label": "Mach 2.2",
+    "inlet": 13,
+    "engine": 73,
+    "ejector": 14
+   },
+   {
+    "mach": 3.0,
+    "label": "Mach 3 cruise",
+    "inlet": 54,
+    "engine": 17,
+    "ejector": 29
+   }
+  ]
+ },
+ "panel": {
+  "figure": "diagram_SR-71A-1_fig1-12_front-cockpit-center-instrument-panel_p1-23.jpg",
+  "positions": "research/systems/panel_fig1-12.json",
+  "cite": [
+   [
+    "FM",
+    "Figure 1-12, p.1-23"
+   ]
+  ],
+  "zones": [
+   {
+    "id": "top",
+    "name": "Glareshield and top row",
+    "keys": [
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     23
+    ]
+   },
+   {
+    "id": "upper-left",
+    "name": "Upper left",
+    "keys": [
+     12,
+     13,
+     14,
+     15
+    ]
+   },
+   {
+    "id": "left",
+    "name": "Left column",
+    "keys": [
+     2,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10,
+     11
+    ]
+   },
+   {
+    "id": "inlet",
+    "name": "Inlet controls",
+    "keys": [
+     1,
+     3,
+     46,
+     49,
+     50
+    ]
+   },
+   {
+    "id": "trim",
+    "name": "Trim",
+    "keys": [
+     45,
+     47,
+     48
+    ]
+   },
+   {
+    "id": "centre",
+    "name": "Centre column",
+    "keys": [
+     41,
+     42,
+     43,
+     44
+    ]
+   },
+   {
+    "id": "right-centre",
+    "name": "Right of centre",
+    "keys": [
+     24,
+     25,
+     32,
+     36,
+     37,
+     38,
+     39,
+     40
+    ]
+   },
+   {
+    "id": "engines",
+    "name": "Engine column",
+    "keys": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     33,
+     34,
+     35
+    ]
+   }
+  ],
+  "notes": {
+   "1": {
+    "text": "Marked in one-inch steps from 0, fully forward, to 26, fully aft.",
+    "cite": [
+     [
+      "FM",
+      "p.1-43"
+     ]
+    ]
+   },
+   "3": {
+    "text": "Two pointers, left and right inlet, in percent open.",
+    "cite": [
+     [
+      "FM",
+      "Figure 1-12, p.1-23"
+     ]
+    ]
+   },
+   "4": {
+    "text": "Left and right needles plus a striped needle showing the pressure DAFICS expects. Left and right should not differ by more than 1 psi.",
+    "cite": [
+     [
+      "FM",
+      "p.1-17"
+     ]
+    ]
+   },
+   "8": {
+    "text": "A T-handle: pull to deploy the drag chute; rotate left and pull for emergency deployment.",
+    "cite": [
+     [
+      "FM",
+      "Figure 1-12, p.1-23"
+     ]
+    ]
+   },
+   "17": {
+    "text": "A 3-inch instrument at the top centre. The inset shows the 2-inch unit fitted without service bulletin R-2466.",
+    "cite": [
+     [
+      "FM",
+      "Figure 1-12, p.1-23"
+     ]
+    ]
+   },
+   "19": {
+    "text": "The attitude director indicator, the largest instrument on the panel.",
+    "cite": [
+     [
+      "FM",
+      "Figure 1-12, p.1-23"
+     ]
+    ]
+   },
+   "23": {
+    "text": "Mounted in the canopy, not on the panel.",
+    "cite": [
+     [
+      "FM",
+      "Figure 1-12, p.1-23"
+     ]
+    ]
+   },
+   "27": {
+    "text": "Main dial to 10,000 rpm with a 1,000 rpm subdial. The tachometers power themselves.",
+    "cite": [
+     [
+      "FM",
+      "p.1-9"
+     ]
+    ]
+   },
+   "29": {
+    "text": "Digital, reading 0 to 1,198 °C, with a red warning light at 860 °C. At cruise the engines ran at 775 to 805 °C.",
+    "cite": [
+     [
+      "FM",
+      "p.1-14, p.2-50"
+     ]
+    ]
+   },
+   "31": {
+    "text": "Reads 0, closed, to 10, open.",
+    "cite": [
+     [
+      "FM",
+      "p.1-19"
+     ]
+    ]
+   },
+   "34": {
+    "text": "Dial in 5,000 lb per hour steps to 95,000 lb per hour, with a five-digit window.",
+    "cite": [
+     [
+      "FM",
+      "p.1-11"
+     ]
+    ]
+   },
+   "37": {
+    "text": "Pressure in the L and R hydraulic systems, which move the inlet spikes and bypass doors.",
+    "cite": [
+     [
+      "FM",
+      "Figure 1-12, p.1-23"
+     ]
+    ]
+   },
+   "38": {
+    "text": "Pressure in the A and B hydraulic systems, which move the flight control surfaces.",
+    "cite": [
+     [
+      "FM",
+      "Figure 1-12, p.1-23"
+     ]
+    ]
+   },
+   "43": {
+    "text": "Speed (KEAS), altitude and Mach in digits, computed by DAFICS. The altitude window reads to 99,950 ft and drops the first digit above 100,000 ft.",
+    "cite": [
+     [
+      "FM",
+      "p.1-135 to 1-136"
+     ]
+    ]
+   },
+   "49": {
+    "text": "Left and right knobs with AUTO, FWD and a manual scale graduated in Mach from 1.4 to 3.2.",
+    "cite": [
+     [
+      "FM",
+      "p.1-43"
+     ]
+    ]
+   },
+   "46": {
+    "text": "Left and right knobs: AUTO, OPEN, and a manual schedule.",
+    "cite": [
+     [
+      "FM",
+      "Figure 1-12, p.1-23"
+     ]
+    ]
+   },
+   "50": {
+    "text": "Left and right toggles that restart an inlet after an unstart.",
+    "cite": [
+     [
+      "FM",
+      "Figure 1-12, p.1-23; p.1-42A"
+     ]
+    ]
+   }
+  }
+ }
+}

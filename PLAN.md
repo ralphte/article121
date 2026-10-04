@@ -122,12 +122,14 @@ Performance and access budgets: Largest Contentful Paint under 2.5 s on a mid-ra
 
 3D is used only where it adds information or atmosphere a photograph cannot: the opening folder, the register globe, the inlet explainer. No 3D aircraft appears until a model matches the photographs beside it. No museum or agency has released an open 3D scan of any Blackbird (Smithsonian 3D, NASA 3D Resources and Sketchfab CC0 all checked). If a model is wanted later: ask the author of the photogrammetry scan of the Smithsonian SR-71A for permission, ask the Smithsonian Digitization Program Office whether 61-7972 is on their list, or build one in Blender from the published three-view drawings.
 
+Status, 4 October 2026: the model is being built in Blender from NASA Dryden's three-view (EG-0075-02), scaled to NASA's fuselage stations, with cross-sections from the Lockheed section sheet (`model/`). v0.3 adds the canopy; outline scores against the drawing are 97.6 percent (plan) and 95.4 percent (side). It stays off the public site until it matches the photographs beside it; files are at files.article121.com/models/.
+
 ## 9. Roadmap
 
 1. **Approve.** Choose a direction, register article121.com, confirm licences.
 2. **Foundation.** Astro project, design tokens, content schemas with the citation rule, CI, deploy. Live skeleton on the domain.
 3. **Harvest.** Ingest scripts (Smithsonian Open Access, NASA Image Library, CIA, NARA, DVIDS, Commons, Library of Congress, Internet Archive). Source register. Convert the fact pack into content entries.
-4. **Signature pieces.** The case-file home, the Register, the Timeline, the light table with deep zoom, The Machine.
+4. **Signature pieces.** The case-file home, the Register, the Timeline, the light table with deep zoom, The Machine. Built so far: home, Register (51 airframes), Chronology, Sources, About, and The Machine (data plate, inlet explainer, J58, cockpits with the pilot's panel explorer, heat, fuel, escape), all on preview.article121.com.
 5. **Depth.** Documents reader, missions, people, deep-zoom archive, permission requests to legacy sites.
 6. **Launch.** Accessibility audit, performance budgets, reduced-motion paths, share cards.
 

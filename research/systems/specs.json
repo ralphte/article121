@@ -1,0 +1,772 @@
+[
+ {
+  "item": "Length overall (incl. nose pitot mast)",
+  "value": 107.4,
+  "unit": "ft",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-4",
+  "notes": "Same in NASA FS-030 (107.4 ft, 32.73 m). Without the pitot mast the fuselage is about 104 ft (FS 102 to FS 1355 = 104.4 ft, NASA TM-4749; 103.9 ft, Gilyard, NASA CP-2054); see model/plans/NOTES.md section 4."
+ },
+ {
+  "item": "Wing span",
+  "value": 55.6,
+  "unit": "ft",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-4",
+  "notes": "NASA FS-030 also 55.6 ft (16.94 m). Gilyard (CP-2054) 16.90 m (55.45 ft); 56.7 ft is a theoretical reference span (TM-4749)."
+ },
+ {
+  "item": "Height to top of rudders",
+  "value": 18.5,
+  "unit": "ft",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-4",
+  "notes": "NASA FS-030 18.5 ft (5.63 m)."
+ },
+ {
+  "item": "Wing area (reference)",
+  "value": 1605,
+  "unit": "sq ft",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-4",
+  "notes": "A different reference delta gives 1795 sq ft (YF-12A manual, Kock table 1 in CP-2054); not a different wing."
+ },
+ {
+  "item": "Main gear tread (middle wheel centrelines)",
+  "value": 16.67,
+  "unit": "ft",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-4",
+  "notes": ""
+ },
+ {
+  "item": "Crew",
+  "value": 2,
+  "unit": "persons",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-4",
+  "notes": "\"two-place aircraft\": pilot and reconnaissance systems officer (RSO). SR-71B trainer: student and instructor. A-12: one pilot (A-12 FM p.1-1)."
+ },
+ {
+  "item": "Loaded gross weight",
+  "value": "135,000 to over 140,000",
+  "unit": "lb",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-4",
+  "notes": "NASA FS-030: gross takeoff weight about 140,000 lb including 80,000 lb of fuel."
+ },
+ {
+  "item": "Zero fuel weight",
+  "value": "56,500 to more than 60,000",
+  "unit": "lb",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-4",
+  "notes": "Varies with sensor fit; use the weight and balance manual for a given aircraft."
+ },
+ {
+  "item": "Maximum takeoff weight",
+  "value": "not limited (performance-limited)",
+  "unit": "",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.5-5",
+  "notes": "\"The maximum gross weight for takeoff and landing is not limited\"; routine full-stop landings with no more than 10,000 lb of fuel; landing above 125,000 lb not recommended (p.5-18). Most takeoffs were made with a partial fuel load and the aircraft refuelled soon after (see fact_notes.md myth 6)."
+ },
+ {
+  "item": "Gross takeoff weight (typical)",
+  "value": 140000,
+  "unit": "lb",
+  "applies_to": "SR-71A",
+  "source_title": "NASA Dryden Fact Sheet FS-2008-6-030-DFRC, SR-71 Blackbird",
+  "source_url": "https://www.nasa.gov/wp-content/uploads/2021/09/495839main_fs-030_sr-71.pdf",
+  "page": "p.4",
+  "notes": "\"about 140,000 pounds (52,253.83 kilograms), including a fuel weight of 80,000 pounds\"."
+ },
+ {
+  "item": "Fuel capacity (volume)",
+  "value": 12219.2,
+  "unit": "US gal",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "Figure 1-32, p.1-48",
+  "notes": "Tanks 1A, 1, 2, 3, 4, 5, 6A, 6B at normal flight attitude."
+ },
+ {
+  "item": "Fuel capacity (weight)",
+  "value": 80280,
+  "unit": "lb",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "Figure 1-32, p.1-48",
+  "notes": "At 6.57 lb/gal (JP-7, 46.2 API, 78 F). NASA FS-030 rounds to 80,000 lb."
+ },
+ {
+  "item": "Fuel tanks",
+  "value": "8 (1A, 1, 2, 3, 4, 5, 6A, 6B)",
+  "unit": "",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-47, Figure 1-32",
+  "notes": "Five fuselage tanks plus two wing-fuselage groups (3 and 6), tank 6 split into 6A and 6B."
+ },
+ {
+  "item": "Fuel type",
+  "value": "JP-7 (PWA 535) or PWA 523E",
+  "unit": "",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-4",
+  "notes": "With 1 gal PWA 536 lubricity additive per 5200 gal."
+ },
+ {
+  "item": "Fuel capacity (A-12)",
+  "value": "10,590 gal / 68,300 lb",
+  "unit": "",
+  "applies_to": "A-12",
+  "source_title": "A-12 Utility Flight Manual (Lockheed for CIA), changed 15 Mar to 15 Jun 1968, CIA doc C01316457",
+  "source_url": "https://www.cia.gov/readingroom/document/0001316457",
+  "page": "Figure 1-12, p.1-26 (PDF p.38)",
+  "notes": "Six tanks at 6.45 lb/gal."
+ },
+ {
+  "item": "Air refuelling rate",
+  "value": 6000,
+  "unit": "lb/min",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-60",
+  "notes": "\"approximately 6000 pounds per minute from KC-10 or KC-135 boom-equipped tanker aircraft\"; all tanks fill in 12 to 15 minutes."
+ },
+ {
+  "item": "Liquid nitrogen for tank inerting",
+  "value": "2 x 106 + 1 x 50",
+  "unit": "liters",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-58",
+  "notes": "Two Dewars in the nosewheel well, one in the left forward chine."
+ },
+ {
+  "item": "Maximum speed without inert fuel tank atmosphere",
+  "value": 2.6,
+  "unit": "Mach",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.5-8",
+  "notes": ""
+ },
+ {
+  "item": "Engines",
+  "value": "2 x Pratt & Whitney JT11D-20 (J58) bleed bypass turbojets with afterburners",
+  "unit": "",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-4",
+  "notes": ""
+ },
+ {
+  "item": "Maximum afterburning thrust per engine (uninstalled, sea level static, standard day)",
+  "value": 34000,
+  "unit": "lbf",
+  "applies_to": "J58 (JT11D-20)",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-7",
+  "notes": "NASA FS-030 says 32,500 lb; the Smithsonian J58 page says 30,000 lb; the A-12's JT11D-20A had an interim rating of 31,500 lb (A-12 FM p.1-7). See systems.md section 2."
+ },
+ {
+  "item": "Thrust per engine (NASA figure)",
+  "value": 32500,
+  "unit": "lbf",
+  "applies_to": "J58",
+  "source_title": "NASA Dryden Fact Sheet FS-2008-6-030-DFRC, SR-71 Blackbird",
+  "source_url": "https://www.nasa.gov/wp-content/uploads/2021/09/495839main_fs-030_sr-71.pdf",
+  "page": "p.3",
+  "notes": "\"each producing 32,500 pounds of thrust\"; conditions not stated."
+ },
+ {
+  "item": "Military (max dry) thrust",
+  "value": "about 70% of maximum (sea level static); about 28% at high altitude",
+  "unit": "",
+  "applies_to": "J58 (JT11D-20)",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-8",
+  "notes": "70% of 34,000 lb is about 23,800 lb (derived)."
+ },
+ {
+  "item": "Compressor",
+  "value": "single rotor, 9 stages, pressure ratio 8.8:1",
+  "unit": "",
+  "applies_to": "J58 (JT11D-20)",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-4",
+  "notes": "A-12 JT11D-20A: 8:1 (A-12 FM p.1-7)."
+ },
+ {
+  "item": "Turbine stages",
+  "value": 2,
+  "unit": "",
+  "applies_to": "J58 (JT11D-20)",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-7",
+  "notes": ""
+ },
+ {
+  "item": "Combustor",
+  "value": "8 cans, 48 dual-orifice fuel nozzles",
+  "unit": "",
+  "applies_to": "J58 (JT11D-20)",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-11",
+  "notes": ""
+ },
+ {
+  "item": "Bleed bypass",
+  "value": "4th-stage bleed, 6 bypass tubes to the afterburner, opens at CIT 85 to 115 C (Mach 1.8 to 2.0)",
+  "unit": "",
+  "applies_to": "J58 (JT11D-20)",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-4 to 1-7, Figure 1-2",
+  "notes": "A-12: CIT 150 to 190 C, Mach 2.2 to 2.3 (A-12 FM p.1-7)."
+ },
+ {
+  "item": "Maximum compressor inlet temperature",
+  "value": 427,
+  "unit": "deg C",
+  "applies_to": "J58 (JT11D-20)",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.5-5",
+  "notes": "With both IGVs cambered."
+ },
+ {
+  "item": "TEB ignition shots per engine",
+  "value": 16,
+  "unit": "",
+  "applies_to": "J58 (JT11D-20)",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-9, p.1-22",
+  "notes": "600 cc TEB tank per engine; A-12 counters were set to 12 (A-12 FM p.1-17)."
+ },
+ {
+  "item": "Design Mach number",
+  "value": 3.2,
+  "unit": "Mach",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.5-8",
+  "notes": "\"Mach 3.17 is the maximum scheduled cruise speed recommended for normal operations\"; up to Mach 3.3 when authorised by the Commander if CIT 427 C is not exceeded."
+ },
+ {
+  "item": "Maximum scheduled cruise Mach",
+  "value": 3.17,
+  "unit": "Mach",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.5-8",
+  "notes": ""
+ },
+ {
+  "item": "Cruise speed (NASA)",
+  "value": "Mach 3.2, more than 2,200 mph",
+  "unit": "",
+  "applies_to": "SR-71A",
+  "source_title": "NASA Dryden Fact Sheet FS-2008-6-030-DFRC, SR-71 Blackbird",
+  "source_url": "https://www.nasa.gov/wp-content/uploads/2021/09/495839main_fs-030_sr-71.pdf",
+  "page": "p.2",
+  "notes": "\"designed to cruise at Mach 3.2 ... at altitudes up to 85,000 feet\"."
+ },
+ {
+  "item": "Maximum altitude limit",
+  "value": 85000,
+  "unit": "ft",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.5-10",
+  "notes": "\"unless higher altitude is specifically authorized\"; 80,000 ft with an inlet in manual; 75,000 ft with a derich system inoperative. A-12 also 85,000 ft (A-12 FM Section V, PDF p.262)."
+ },
+ {
+  "item": "Load factor limits, Mach 2.6 to 3.2 (operational rule of thumb)",
+  "value": "-0.1 to +1.5",
+  "unit": "g",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.5-8",
+  "notes": "Mach 2.0 to 2.6: -0.1 to +2.0 g; Mach 2.0 or less: -0.2 to +2.5 g (65,000 to 124,000 lb). Full diagrams in Figure 5-5."
+ },
+ {
+  "item": "Minimum supersonic airspeed",
+  "value": 310,
+  "unit": "KEAS",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.5-8",
+  "notes": ""
+ },
+ {
+  "item": "Endurance at Mach 3",
+  "value": "more than one hour at a time (continuous)",
+  "unit": "",
+  "applies_to": "SR-71A",
+  "source_title": "NASA Dryden Fact Sheet FS-2008-6-030-DFRC, SR-71 Blackbird",
+  "source_url": "https://www.nasa.gov/wp-content/uploads/2021/09/495839main_fs-030_sr-71.pdf",
+  "page": "p.3",
+  "notes": "\"Capable of cruising at Mach 3 continuously for more than one hour at a time\"."
+ },
+ {
+  "item": "FAI absolute speed record (15/25 km course)",
+  "value": 2193.167,
+  "unit": "mph",
+  "applies_to": "SR-71A 61-7958",
+  "source_title": "FAI press release 26 Jul 2016 (via research/fact_notes.md)",
+  "source_url": "https://www.fai.org/sites/default/files/documents/press_release_28-july-1976_joersz-eldon_world-speed-record_26jul2016.pdf",
+  "page": "",
+  "notes": "3,529.56 km/h, 28 Jul 1976, Joersz and Morgan."
+ },
+ {
+  "item": "Altitude in sustained horizontal flight (record)",
+  "value": 85068.997,
+  "unit": "ft",
+  "applies_to": "SR-71A",
+  "source_title": "Guinness World Records (via research/fact_notes.md)",
+  "source_url": "https://www.guinnessworldrecords.com/world-records/74563-highest-altitude-in-horizontal-flight",
+  "page": "",
+  "notes": "28 Jul 1976, Helt and Elliott; airframe disputed (fact_notes.md myth 15)."
+ },
+ {
+  "item": "Electrical generators",
+  "value": "2 x 60 kVA AC",
+  "unit": "",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-67",
+  "notes": ""
+ },
+ {
+  "item": "Hydraulic systems",
+  "value": "4 (A, B, L, R)",
+  "unit": "",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-86",
+  "notes": "A and B flight controls; L and R inlets, gear, brakes, refuelling."
+ },
+ {
+  "item": "Main gear tyres",
+  "value": "Goodrich 27.5 x 7.5 x 16 silver, 400 psi, rated 239 kt (275 mph) ground speed",
+  "unit": "",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "Figures 5-6 and 5-8 (p.5-19, 5-21)",
+  "notes": "Six main wheels on two three-wheel bogies; dual nose wheels (p.1-89)."
+ },
+ {
+  "item": "Drag chute",
+  "value": "40 ft ribbon chute (with 10 ft extraction and 42 in pilot chutes); deploy at 210 KIAS max",
+  "unit": "",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-93, p.5-23",
+  "notes": ""
+ },
+ {
+  "item": "Ejection seat",
+  "value": "Lockheed SR-1, zero-zero, rocket",
+  "unit": "",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-199",
+  "notes": "\"usable from zero speed and altitude to the extremities of the flight envelope\"."
+ },
+ {
+  "item": "Pressure suit",
+  "value": "David Clark model 1030 (S1030) full-pressure suit, 3.5 psi",
+  "unit": "",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.1-197",
+  "notes": ""
+ },
+ {
+  "item": "Sensors (Change 2 manual)",
+  "value": "2 x TEOC (HR-308B/C), ASARS-1, CAPRE SLR, EIP ELINT, OBC; DEF A2, C2, H, M",
+  "unit": "",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.4-79, p.4-119",
+  "notes": "TROC and OOC no longer available (p.4-81)."
+ },
+ {
+  "item": "Navigation",
+  "value": "Astro-inertial navigation system (ANS) with 61-star catalogue, plus SKN-2417 INS",
+  "unit": "",
+  "applies_to": "SR-71A",
+  "source_title": "SR-71A-1 Flight Manual (USAF T.O. SR-71A-1), Issue E 31 Oct 1986, Change 2 31 Jul 1989",
+  "source_url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "page": "p.4-3, p.4-8",
+  "notes": ""
+ },
+ {
+  "item": "Maximum afterburning thrust per engine, early J58 (J-engine, fixed IGVs)",
+  "value": 32500,
+  "unit": "lbf",
+  "applies_to": "J58 (YF-12A, early SR-71)",
+  "source_title": "Peter W. Merlin, Mach 3+: NASA/USAF YF-12 Flight Research, 1969-1979, NASA SP-2001-4525",
+  "source_url": "https://www.nasa.gov/wp-content/uploads/2021/04/88796main_yf-12.pdf",
+  "page": "p.20, footnote 25",
+  "notes": "Sea level standard day. The later K-engine (two-position IGVs) was rated 34,000 lbf; this footnote explains the 32,500 vs 34,000 split."
+ },
+ {
+  "item": "Maximum afterburning static thrust per engine (A-12)",
+  "value": 31500,
+  "unit": "lbf",
+  "applies_to": "A-12 (JT11D-20A)",
+  "source_title": "A-12 Utility Flight Manual (Lockheed for CIA), changed 15 Mar to 15 Jun 1968, CIA doc C01316457",
+  "source_url": "https://www.cia.gov/readingroom/document/0001316457",
+  "page": "p.1-7 (PDF p.19)",
+  "notes": "\"interim maximum afterburning static thrust rating\"."
+ },
+ {
+  "item": "Thrust per engine (Smithsonian)",
+  "value": 30000,
+  "unit": "lbf",
+  "applies_to": "J58",
+  "source_title": "Smithsonian NASM object A19920006000, Pratt & Whitney J58 (JT11D-20) Turbojet Engine",
+  "source_url": "https://airandspace.si.edu/collection-objects/pratt-whitney-j58-jt11d-20-turbojet-engine/nasm_A19920006000",
+  "page": "physical description",
+  "notes": "Outlier against the manuals; Pratt & Whitney's own web page also says 30,000 lb."
+ },
+ {
+  "item": "J58 weight",
+  "value": 6000,
+  "unit": "lb",
+  "applies_to": "J58",
+  "source_title": "National Museum of the USAF fact sheet, Pratt & Whitney J58 Turbojet (Wayback 2023-08-27)",
+  "source_url": "http://web.archive.org/web/20230827143917/https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/195665/pratt-whitney-j58-turbojet/",
+  "page": "",
+  "notes": "\"approx. 6,000 lb\". Smithsonian: 6,500 lb (2,948 kg); its 8,690 lb overall figure probably includes the stand."
+ },
+ {
+  "item": "J58 weight (Smithsonian)",
+  "value": 6500,
+  "unit": "lb",
+  "applies_to": "J58",
+  "source_title": "Smithsonian NASM object A19920006000, Pratt & Whitney J58 (JT11D-20) Turbojet Engine",
+  "source_url": "https://airandspace.si.edu/collection-objects/pratt-whitney-j58-jt11d-20-turbojet-engine/nasm_A19920006000",
+  "page": "physical description",
+  "notes": ""
+ },
+ {
+  "item": "J58 length x diameter",
+  "value": "180 x 50",
+  "unit": "in",
+  "applies_to": "J58",
+  "source_title": "Smithsonian NASM object A19920006000, Pratt & Whitney J58 (JT11D-20) Turbojet Engine",
+  "source_url": "https://airandspace.si.edu/collection-objects/pratt-whitney-j58-jt11d-20-turbojet-engine/nasm_A19920006000",
+  "page": "dimensions",
+  "notes": "Only source found; 457.2 x 127 cm."
+ },
+ {
+  "item": "J58 compressor stages (Smithsonian)",
+  "value": 8,
+  "unit": "",
+  "applies_to": "J58",
+  "source_title": "Smithsonian NASM object A19920006000, Pratt & Whitney J58 (JT11D-20) Turbojet Engine",
+  "source_url": "https://airandspace.si.edu/collection-objects/pratt-whitney-j58-jt11d-20-turbojet-engine/nasm_A19920006000",
+  "page": "physical description",
+  "notes": "Outlier: the flight manual, NMUSAF and NASA papers all say 9 stages."
+ },
+ {
+  "item": "Range (unrefuelled)",
+  "value": "more than 2,900",
+  "unit": "statute miles",
+  "applies_to": "SR-71A",
+  "source_title": "National Museum of the USAF fact sheet, Lockheed SR-71A (Wayback 2024-11-30)",
+  "source_url": "http://web.archive.org/web/20241130031508/https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/198054/lockheed-sr-71a/",
+  "page": "",
+  "notes": "Merlin: model specification maximum 3,800 nmi; 3,048 nmi on the maximum-altitude profile; operational average 2,800 nmi (AIAA 2009-1522 p.27). Not in the flight manual scan."
+ },
+ {
+  "item": "Range, model specification maximum",
+  "value": 3800,
+  "unit": "nmi",
+  "applies_to": "SR-71A",
+  "source_title": "Peter W. Merlin, Design and Development of the Blackbird: Challenges and Lessons Learned, AIAA 2009-1522 (NTRS 20090007797)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf",
+  "page": "p.27",
+  "notes": "At 60 percent afterburner, 74,000 to 85,000 ft."
+ },
+ {
+  "item": "Range, operational average",
+  "value": 2800,
+  "unit": "nmi",
+  "applies_to": "SR-71A",
+  "source_title": "Peter W. Merlin, Design and Development of the Blackbird: Challenges and Lessons Learned, AIAA 2009-1522 (NTRS 20090007797)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf",
+  "page": "p.27",
+  "notes": ""
+ },
+ {
+  "item": "Longest operational sortie",
+  "value": 11.2,
+  "unit": "h",
+  "applies_to": "SR-71A",
+  "source_title": "Peter W. Merlin, Design and Development of the Blackbird: Challenges and Lessons Learned, AIAA 2009-1522 (NTRS 20090007797)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf",
+  "page": "p.27",
+  "notes": "1987, with air refuelling. 15,000 mi in 10.5 h in 1971."
+ },
+ {
+  "item": "Highest altitude reached in tests",
+  "value": 89650,
+  "unit": "ft",
+  "applies_to": "SR-71A",
+  "source_title": "Peter W. Merlin, Design and Development of the Blackbird: Challenges and Lessons Learned, AIAA 2009-1522 (NTRS 20090007797)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf",
+  "page": "p.26",
+  "notes": "At Mach 3.22 in Category II tests; 86,700 ft at 80,000 lb."
+ },
+ {
+  "item": "Maximum speed (Smithsonian)",
+  "value": "Mach 3.3 at more than 85,000 ft",
+  "unit": "",
+  "applies_to": "SR-71A",
+  "source_title": "Smithsonian NASM object A19920072000, Lockheed SR-71 Blackbird (61-7972)",
+  "source_url": "https://airandspace.si.edu/collection-objects/lockheed-sr-71-blackbird/nasm_A19920072000",
+  "page": "",
+  "notes": "\"maximum speed of Mach 3.3 at an altitude more than sixteen miles, or 25,908 m (85,000 ft)\"."
+ },
+ {
+  "item": "Fuel burn at cruise",
+  "value": "36,000 to 38,000",
+  "unit": "lb/h",
+  "applies_to": "SR-71A",
+  "source_title": "Peter W. Merlin, Design and Development of the Blackbird: Challenges and Lessons Learned, AIAA 2009-1522 (NTRS 20090007797)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf",
+  "page": "p.26",
+  "notes": "Mach 3.15 to 3.0, 100,000 lb, standard day; from the flight manual specific range charts."
+ },
+ {
+  "item": "Specific range at Mach 3.2",
+  "value": 54.1,
+  "unit": "nmi per 1,000 lb",
+  "applies_to": "SR-71A",
+  "source_title": "Peter W. Merlin, Design and Development of the Blackbird: Challenges and Lessons Learned, AIAA 2009-1522 (NTRS 20090007797)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf",
+  "page": "p.27",
+  "notes": "Standard day, citing Graham."
+ },
+ {
+  "item": "Gross takeoff weight (NASA 844 test bed)",
+  "value": 143000,
+  "unit": "lb",
+  "applies_to": "SR-71A 61-7980",
+  "source_title": "Corda et al., The SR-71 Test Bed Aircraft: A Facility for High-Speed Flight Research, NASA/TP-2000-209023",
+  "source_url": "https://ntrs.nasa.gov/api/citations/20000064011/downloads/20000064011.pdf",
+  "page": "Table 1, p.5",
+  "notes": ""
+ },
+ {
+  "item": "Zero fuel weight, basic (NASA 844)",
+  "value": 59000,
+  "unit": "lb",
+  "applies_to": "SR-71A 61-7980",
+  "source_title": "Corda et al., The SR-71 Test Bed Aircraft: A Facility for High-Speed Flight Research, NASA/TP-2000-209023",
+  "source_url": "https://ntrs.nasa.gov/api/citations/20000064011/downloads/20000064011.pdf",
+  "page": "Table 1, p.5",
+  "notes": ""
+ },
+ {
+  "item": "Gross weight fully fuelled (1967)",
+  "value": 136700,
+  "unit": "lb",
+  "applies_to": "SR-71",
+  "source_title": "CIA memorandum, Comparison of the A-12 and SR-71, May 1967 (CIA-RDP69B00369R000200240001-7)",
+  "source_url": "https://archive.org/details/cia-readingroom-document-cia-rdp69b00369r000200240001-7",
+  "page": "p.1",
+  "notes": ""
+ },
+ {
+  "item": "Weight (Smithsonian, do not use)",
+  "value": 169998.5,
+  "unit": "lb",
+  "applies_to": "SR-71A 61-7972",
+  "source_title": "Smithsonian NASM object A19920072000, Lockheed SR-71 Blackbird (61-7972)",
+  "source_url": "https://airandspace.si.edu/collection-objects/lockheed-sr-71-blackbird/nasm_A19920072000",
+  "page": "dimensions",
+  "notes": "Outlier far above the flight manual's 135,000 to 140,000+ lb gross; unexplained."
+ },
+ {
+  "item": "Titanium share of structural weight",
+  "value": 93,
+  "unit": "percent",
+  "applies_to": "SR-71/A-12",
+  "source_title": "Peter W. Merlin, Design and Development of the Blackbird: Challenges and Lessons Learned, AIAA 2009-1522 (NTRS 20090007797)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf",
+  "page": "p.16",
+  "notes": "CIA: \"over 90 percent of the A-12's airframe\" (Archangel p.11)."
+ },
+ {
+  "item": "Thrust split at Mach 3 cruise (inlet / engine / ejector)",
+  "value": "54 / 17 / 29",
+  "unit": "percent",
+  "applies_to": "SR-71",
+  "source_title": "Peter W. Merlin, Design and Development of the Blackbird: Challenges and Lessons Learned, AIAA 2009-1522 (NTRS 20090007797)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf",
+  "page": "p.25",
+  "notes": "Citing D. Urie, Caltech Ae107 (1990), a Lockheed source. NASA FS-030: engine \"less than 20 percent\". Mach 2.2: 13 / 73 / 14."
+ },
+ {
+  "item": "Engine share of total thrust at Mach 3 (NASA)",
+  "value": "less than 20",
+  "unit": "percent",
+  "applies_to": "SR-71",
+  "source_title": "NASA Dryden Fact Sheet FS-2008-6-030-DFRC, SR-71 Blackbird",
+  "source_url": "https://www.nasa.gov/wp-content/uploads/2021/09/495839main_fs-030_sr-71.pdf",
+  "page": "p.3",
+  "notes": "\"Less than 20 percent of the total thrust used to fly at Mach 3 was produced by the engine itself\"."
+ },
+ {
+  "item": "Sustained surface temperatures at cruise",
+  "value": "462 to 622 F average, up to 1,050 F on the nacelle",
+  "unit": "",
+  "applies_to": "SR-71",
+  "source_title": "Peter W. Merlin, Mach 3 Legend (slides), NTRS 20120013451",
+  "source_url": "https://ntrs.nasa.gov/api/citations/20120013451/downloads/20120013451.pdf",
+  "page": "slide 33",
+  "notes": "NASA FS-030: heat soak over 600 F; Smithsonian 600 F; YF-12A map 250 to 600 F (TM-104317 Fig. 1)."
+ },
+ {
+  "item": "Length overall",
+  "value": 101.6,
+  "unit": "ft",
+  "applies_to": "A-12",
+  "source_title": "A-12 Utility Flight Manual (Lockheed for CIA), changed 15 Mar to 15 Jun 1968, CIA doc C01316457",
+  "source_url": "https://www.cia.gov/readingroom/document/0001316457",
+  "page": "p.1-1",
+  "notes": ""
+ },
+ {
+  "item": "Wing span",
+  "value": 55.62,
+  "unit": "ft",
+  "applies_to": "A-12",
+  "source_title": "A-12 Utility Flight Manual (Lockheed for CIA), changed 15 Mar to 15 Jun 1968, CIA doc C01316457",
+  "source_url": "https://www.cia.gov/readingroom/document/0001316457",
+  "page": "p.1-1",
+  "notes": ""
+ },
+ {
+  "item": "Height to top of vertical stabilizer",
+  "value": 18.45,
+  "unit": "ft",
+  "applies_to": "A-12",
+  "source_title": "A-12 Utility Flight Manual (Lockheed for CIA), changed 15 Mar to 15 Jun 1968, CIA doc C01316457",
+  "source_url": "https://www.cia.gov/readingroom/document/0001316457",
+  "page": "p.1-1",
+  "notes": ""
+ },
+ {
+  "item": "Crew",
+  "value": 1,
+  "unit": "person",
+  "applies_to": "A-12",
+  "source_title": "A-12 Utility Flight Manual (Lockheed for CIA), changed 15 Mar to 15 Jun 1968, CIA doc C01316457",
+  "source_url": "https://www.cia.gov/readingroom/document/0001316457",
+  "page": "p.1-1",
+  "notes": ""
+ },
+ {
+  "item": "Ramp gross weight",
+  "value": "122,900 to 124,600",
+  "unit": "lb",
+  "applies_to": "A-12",
+  "source_title": "A-12 Utility Flight Manual (Lockheed for CIA), changed 15 Mar to 15 Jun 1968, CIA doc C01316457",
+  "source_url": "https://www.cia.gov/readingroom/document/0001316457",
+  "page": "p.1-1",
+  "notes": "With 10,590 gal of fuel; zero fuel weights 54,600 to 56,300 lb; fuel 6.45 lb/gal."
+ },
+ {
+  "item": "Zero fuel weight",
+  "value": "54,600 to 56,300",
+  "unit": "lb",
+  "applies_to": "A-12",
+  "source_title": "A-12 Utility Flight Manual (Lockheed for CIA), changed 15 Mar to 15 Jun 1968, CIA doc C01316457",
+  "source_url": "https://www.cia.gov/readingroom/document/0001316457",
+  "page": "p.1-1",
+  "notes": ""
+ },
+ {
+  "item": "Normal cruise Mach",
+  "value": 3.1,
+  "unit": "Mach",
+  "applies_to": "A-12",
+  "source_title": "A-12 Utility Flight Manual (Lockheed for CIA), changed 15 Mar to 15 Jun 1968, CIA doc C01316457",
+  "source_url": "https://www.cia.gov/readingroom/document/0001316457",
+  "page": "Section V (PDF p.266)",
+  "notes": ""
+ },
+ {
+  "item": "Maximum altitude limit",
+  "value": 85000,
+  "unit": "ft",
+  "applies_to": "A-12",
+  "source_title": "A-12 Utility Flight Manual (Lockheed for CIA), changed 15 Mar to 15 Jun 1968, CIA doc C01316457",
+  "source_url": "https://www.cia.gov/readingroom/document/0001316457",
+  "page": "Section V (PDF p.262)",
+  "notes": "75,000 ft without derichment."
+ },
+ {
+  "item": "Peak speed and altitude reached",
+  "value": "Mach 3.29; 90,000 ft",
+  "unit": "",
+  "applies_to": "A-12",
+  "source_title": "David Robarge, Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft, 2nd ed., CIA",
+  "source_url": "https://www.cia.gov/resources/csi/static/b45f5f8f5e4937963d9e9931313d84a4/Archangel-CIAs-Supersonic-A-12-Reconnaissance-Aircraft.pdf",
+  "page": "p.21",
+  "notes": "Reached in 1965 on separate flights (research/fact_notes.md)."
+ }
+]

@@ -14,7 +14,7 @@ const {
 } = Astro.props;
 const full = title === 'Article 121' ? 'Article 121 · The Blackbird archive' : `${title} · Article 121`;
 const here = Astro.url.pathname;
-const nav: [string, string][] = [['/', 'File'], ['/timeline/', 'Chronology'], ['/register/', 'Register'], ['/sources/', 'Sources'], ['/about/', 'About']];
+const nav: [string, string][] = [['/', 'File'], ['/timeline/', 'Chronology'], ['/register/', 'Register'], ['/machine/', 'Machine'], ['/sources/', 'Sources'], ['/about/', 'About']];
 const isCurrent = (href: string) => (href === '/' ? here === '/' : here.startsWith(href));
 const canonical = new URL(here, Astro.site);
 const noindex = import.meta.env.PUBLIC_NOINDEX === '1';

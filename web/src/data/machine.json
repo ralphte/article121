@@ -1,0 +1,1484 @@
+{
+ "intro": {
+  "text": "Almost nothing on the SR-71 came off the shelf: not the fuel, the engines, the metal, the navigation or the suits its crews wore. It was designed to cruise at Mach 3.2 and cleared to 85,000 feet. These are its systems, as the flight manual the Air Force flew it by and the NASA reports written about it describe them.",
+  "citations": [
+   {
+    "source": "u-s-air-force-323b8c",
+    "detail": "p.5-8, p.5-10"
+   }
+  ]
+ },
+ "plate": [
+  {
+   "label": "Length, with pitot mast",
+   "value": "107.4 ft",
+   "metric": "32.74 m",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.1-4"
+    }
+   ]
+  },
+  {
+   "label": "Wing span",
+   "value": "55.6 ft",
+   "metric": "16.95 m",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.1-4"
+    }
+   ]
+  },
+  {
+   "label": "Height to the top of the rudders",
+   "value": "18.5 ft",
+   "metric": "5.64 m",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.1-4"
+    }
+   ]
+  },
+  {
+   "label": "Crew",
+   "value": "2",
+   "metric": "pilot and reconnaissance systems officer",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.1-4"
+    }
+   ]
+  },
+  {
+   "label": "Loaded gross weight",
+   "value": "135,000 to over 140,000 lb",
+   "metric": "61 to over 63.5 t",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.1-4"
+    }
+   ]
+  },
+  {
+   "label": "Fuel",
+   "value": "80,280 lb of JP-7",
+   "metric": "12,219 US gal in 8 tanks",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "Figure 1-32, p.1-48"
+    }
+   ]
+  },
+  {
+   "label": "Engines",
+   "value": "2 Pratt & Whitney J58",
+   "metric": "34,000 lbf each in maximum afterburner (151 kN)",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.1-4, p.1-7"
+    }
+   ]
+  },
+  {
+   "label": "Design Mach number",
+   "value": "3.2",
+   "metric": "maximum scheduled cruise Mach 3.17",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.5-8"
+    }
+   ]
+  },
+  {
+   "label": "Altitude limit",
+   "value": "85,000 ft",
+   "metric": "25,908 m",
+   "citations": [
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.5-10"
+    }
+   ]
+  },
+  {
+   "label": "Fuel burn at cruise",
+   "value": "36,000 to 38,000 lb/h",
+   "metric": "Mach 3.0 to 3.15, standard day",
+   "citations": [
+    {
+     "source": "nasa-technical-reports-server-707153",
+     "detail": "p.26"
+    }
+   ]
+  },
+  {
+   "label": "Longest operational sortie",
+   "value": "11.2 h",
+   "metric": null,
+   "citations": [
+    {
+     "source": "nasa-technical-reports-server-707153",
+     "detail": "p.27"
+    }
+   ]
+  },
+  {
+   "label": "Titanium",
+   "value": "93%",
+   "metric": "of the structural weight",
+   "citations": [
+    {
+     "source": "nasa-technical-reports-server-707153",
+     "detail": "p.16"
+    }
+   ]
+  }
+ ],
+ "hero": "photo_SR-71A-both-engines-max-afterburner-on-ramp_NASA-EC98-44817-2",
+ "sections": [
+  {
+   "id": "inlet",
+   "kicker": "Propulsion",
+   "title": "The inlet did most of the work",
+   "paras": [
+    {
+     "text": "At cruise the J58 was not the main source of thrust. A Lockheed breakdown quoted by NASA historian Peter Merlin gives the inlet 54 percent of the thrust at Mach 3, the ejector nozzle behind the engine 29 percent and the engine itself 17 percent. At Mach 2.2 the engine still supplied 73 percent. NASA's own fact sheet puts it plainly: less than 20 percent of the thrust at Mach 3 came from the engine.",
+     "citations": [
+      {
+       "source": "nasa-technical-reports-server-707153",
+       "detail": "p.25"
+      },
+      {
+       "source": "nasa-dryden-flight-research-center-c5099a",
+       "detail": "p.3"
+      }
+     ]
+    },
+    {
+     "text": "Each inlet is a mixed-compression design with a spike that moves. The spike is locked forward on the ground and below 30,000 feet. From Mach 1.6 it moves aft about 1-5/8 inches for every 0.1 Mach, to about 26 inches. As it retracts, the throat closes to 54 percent of its Mach 1.6 area while the air the inlet captures more than doubles.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.1-31, p.1-43"
+      }
+     ]
+    },
+    {
+     "text": "Two rings of doors keep the shock wave where it belongs. Forward bypass doors just behind the throat spill air overboard to hold the shock at the throat; aft bypass doors just ahead of the engine send air around it to the ejector. If the shock is thrown out of the inlet, an unstart, a sensor sees compressor inlet pressure fall by more than 23 percent, opens the forward bypass fully and drives the spike forward by up to 15 inches, then retracts it 3.75 seconds later.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.1-31 to 1-35, p.1-42A"
+      }
+     ]
+    },
+    {
+     "text": "NASA's YF-12 flights measured how fast an unstart happens: the shock reached the spike tip in about a hundredth of a second. Between Mach 2.3 and 2.6 an unstart was violent enough to snap a pilot's head and helmet against the inside of the canopy.",
+     "citations": [
+      {
+       "source": "nasa-5059e8",
+       "detail": "p.425"
+      },
+      {
+       "source": "nasa-history-division-d3ceea",
+       "detail": "p.105"
+      }
+     ]
+    }
+   ],
+   "figures": [
+    "diagram_SR-71A-1_fig1-21_inlet-airflow-patterns-nacelle-sections_p1-33",
+    "diagram_YF-12-inlet-cutaway-door-counts_CP-2054-p24-fig2",
+    "photo_inlet-spike-head-on_Clemens-Vasters"
+   ]
+  },
+  {
+   "id": "j58",
+   "kicker": "Propulsion",
+   "title": "The J58, built to burn in afterburner for hours",
+   "paras": [
+    {
+     "text": "Two Pratt & Whitney J58s, company designation JT11D-20, each rated at 34,000 lb of thrust in maximum afterburner at sea level. The 32,500 lb often quoted belongs to the early engine with fixed inlet guide vanes; the A-12's version was rated at 31,500 lb.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.1-7"
+      },
+      {
+       "source": "nasa-history-division-d3ceea",
+       "detail": "p.20, note 25"
+      },
+      {
+       "source": "central-intelligence-agency-bb8d0e",
+       "detail": "p.1-7"
+      }
+     ]
+    },
+    {
+     "text": "Its compressor has nine stages and a pressure ratio of only 8.8 to 1, because at cruise the inlet does most of the compressing. From about Mach 1.8 to 2.0, air bled from the fourth stage flows through six tubes around the rest of the engine and straight into the afterburner.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.1-4 to 1-7"
+      },
+      {
+       "source": "nasa-a437f2",
+       "detail": "p.4"
+      }
+     ]
+    },
+    {
+     "text": "It was designed for Mach 3.2 with both full military power and afterburner run continuously, and its own fuel served as the hydraulic fluid for the nozzle, guide vanes and bleeds, at up to 1,800 psi.",
+     "citations": [
+      {
+       "source": "central-intelligence-agency-dd9228",
+       "detail": "Brown, p.2, Figure 1"
+      },
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.1-21"
+      }
+     ]
+    },
+    {
+     "text": "JP-7 is so hard to light that a lit match will not ignite it. The engines are lit chemically instead, with triethylborane, which burns on contact with air. Each engine carries enough for at least 16 shots, and a counter beside each throttle counts them down.",
+     "citations": [
+      {
+       "source": "central-intelligence-agency-center-for-t-70081b",
+       "detail": "p.12"
+      },
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.1-9, p.1-22"
+      }
+     ]
+    },
+    {
+     "text": "Turning a J58 over to start took more than 600 horsepower. Lockheed's answer was a cart carrying two Buick racing car engines, geared together to the engine's starter drive.",
+     "citations": [
+      {
+       "source": "central-intelligence-agency-dd9228",
+       "detail": "Johnson, p.9"
+      },
+      {
+       "source": "central-intelligence-agency-center-for-t-70081b",
+       "detail": "p.13"
+      }
+     ]
+    }
+   ],
+   "figures": [
+    "diagram_SR-71A-1_fig1-2_JT11D-20-engine-cutaway-keyed_p1-6",
+    "photo_J58-in-altitude-chamber_NASA-Lewis_NARA-17419331",
+    "photo_J58-engine_NMUSAF_Aaron-Headly",
+    "photo_AG330-start-cart_Hill-Aerospace-Museum_Jaydec"
+   ]
+  },
+  {
+   "id": "cockpits",
+   "kicker": "Crew",
+   "title": "Two cockpits, and only one has a stick",
+   "paras": [
+    {
+     "text": "The pilot's centre panel alone has 50 numbered items in the flight manual. The attitude director indicator sits in the middle. The inlet controls are grouped at the lower left: spike and forward bypass knobs graduated in Mach from 1.4 to 3.2, and a spike position indicator reading 0 to 26 inches. The engine instruments run down the right: tachometers, exhaust gas temperature, nozzle position, fuel flow and oil pressure.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "Figure 1-12, p.1-23; p.1-43"
+      }
+     ]
+    },
+    {
+     "text": "A triple display indicator shows speed, altitude and Mach in digits. Its altitude window reads to 99,950 feet and drops the first digit above 100,000.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.1-135 to 1-136"
+      }
+     ]
+    },
+    {
+     "text": "Behind the pilot sits the reconnaissance systems officer, who has no flight controls: a downward-looking viewsight at the top of the panel, a radar display below it, and the sensor and navigation panels on the consoles.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "Figures 1-17 and 1-19, p.1-28 to 1-30; p.4-105"
+      }
+     ]
+    },
+    {
+     "text": "The astro-inertial navigation system steers by the stars, day and night. A telescope behind the rear cockpit looks up through a window and tracks stars from a 61-star catalogue; in astro-inertial mode the expected position error is 0.3 nautical miles for up to 10 hours.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.4-3 to 4-6, Figure 4-2"
+      }
+     ]
+    }
+   ],
+   "figures": [
+    "diagram_SR-71A-1_fig1-12_front-cockpit-center-instrument-panel_p1-23",
+    "photo_front-cockpit_61-7975_March-Field_Alan-Wilson",
+    "diagram_SR-71A-1_fig1-17_rear-cockpit-RSO-instrument-panel_p1-28",
+    "photo_rear-cockpit_61-7975_March-Field_Alan-Wilson",
+    "photo_ANS-astro-inertial-navigation-unit_Evergreen_Daderot"
+   ]
+  },
+  {
+   "id": "heat",
+   "kicker": "Structure",
+   "title": "Built to run hot",
+   "paras": [
+    {
+     "text": "At cruise the skin averaged 462 to 622 °F and reached 1,050 °F on the nacelles. Titanium alloys make up 93 percent of the structural weight.",
+     "citations": [
+      {
+       "source": "nasa-f62692",
+       "detail": "slide 33"
+      },
+      {
+       "source": "nasa-technical-reports-server-707153",
+       "detail": "p.16"
+      }
+     ]
+    },
+    {
+     "text": "The wing skins are corrugated chordwise so they can expand without buckling. Kelly Johnson wrote that at design heating the corrugations merely deepened by a few thousandths of an inch. The airframe as a whole grows by up to four inches in length.",
+     "citations": [
+      {
+       "source": "central-intelligence-agency-dd9228",
+       "detail": "Johnson, p.10"
+      },
+      {
+       "source": "nasa-history-division-d3ceea",
+       "detail": "p.5"
+      }
+     ]
+    },
+    {
+     "text": "It is painted black to radiate heat away. In the cockpit the outer glass reached 420 °F while the cooling air came in at minus 40 °F.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.1-4"
+      },
+      {
+       "source": "nasa-technical-reports-server-707153",
+       "detail": "p.18"
+      }
+     ]
+    }
+   ],
+   "figures": [
+    "diagram_YF-12A-upper-surface-temperature-contours_TM-104317-p3-fig1",
+    "diagram_YF-12A-wing-thermal-expansion-relief-corrugations_TM-104317-p6-fig5"
+   ]
+  },
+  {
+   "id": "fuel",
+   "kicker": "Systems",
+   "title": "Fuel as coolant, nitrogen as insurance",
+   "paras": [
+    {
+     "text": "Eight tanks hold 12,219 US gallons, 80,280 lb of JP-7. Before it is burned, the fuel cools the air conditioning, the hydraulic fluid and the engine oil; once it passes 290 °F, the hottest fuel is sent back to tank 4 instead of to the engines.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "Figure 1-32, p.1-48; p.1-58 to 1-60"
+      }
+     ]
+    },
+    {
+     "text": "Liquid nitrogen, 262 liters in three flasks, pressurises the tanks and fills the space above the hot fuel so it cannot ignite. Without it the aircraft is limited to Mach 2.6.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.1-58, p.5-8"
+      }
+     ]
+    },
+    {
+     "text": "In the air it took on fuel at about 6,000 lb a minute, every tank filling at once in 12 to 15 minutes, from a dedicated fleet of KC-135Q tankers.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.1-60"
+      },
+      {
+       "source": "u-s-air-force-3728ef",
+       "detail": "p.1-4"
+      }
+     ]
+    }
+   ],
+   "figures": [
+    "diagram_SR-71A-1_fig1-32_fuel-tank-arrangement-and-capacities_p1-48",
+    "photo_KC-135Q-refuelling-SR-71_DF-ST-83-07614"
+   ]
+  },
+  {
+   "id": "escape",
+   "kicker": "Crew",
+   "title": "Getting out at Mach 3",
+   "paras": [
+    {
+     "text": "Both crew sat on Lockheed SR-1 rocket ejection seats, usable from zero speed and altitude to the edge of the flight envelope. Pulling the D-ring jettisons the canopy and then fires the catapult; the rocket lights as the seat clears the sills, a drogue opens from the headrest, and at 15,000 feet the seat throws its occupant clear before a 35-foot parachute opens.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.1-199 to 1-203"
+      }
+     ]
+    },
+    {
+     "text": "From late 1978 until 1996 they flew in David Clark S1030 full-pressure suits: six layers that hold 3.5 psi if the cockpit loses pressure.",
+     "citations": [
+      {
+       "source": "nasa-d15982",
+       "detail": "p.339 to 341"
+      },
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.1-197"
+      }
+     ]
+    }
+   ],
+   "figures": [
+    "diagram_SR-71A-1_fig1-83_SR-1-ejection-seat_p1-202",
+    "photo_NASA-SR-71-crew-in-pressure-suits_Jim-Ross_1991"
+   ]
+  }
+ ],
+ "inlet": {
+  "spike": {
+   "start_mach": 1.6,
+   "inches_per_tenth": 1.625,
+   "max_inches": 26
+  },
+  "states": [
+   {
+    "mach": 0,
+    "spike": "Forward",
+    "forward_bypass": "Open",
+    "aft_bypass": "Closed",
+    "centerbody_bleed": "Inward",
+    "suck_in_doors": "Open",
+    "tertiary_doors": "Open",
+    "ejector_flaps": "Closed"
+   },
+   {
+    "mach": 0.5,
+    "spike": "Forward",
+    "forward_bypass": "Closed",
+    "aft_bypass": "Closed",
+    "centerbody_bleed": "Overboard",
+    "suck_in_doors": "Closed",
+    "tertiary_doors": "Open",
+    "ejector_flaps": "Closed"
+   },
+   {
+    "mach": 1.5,
+    "spike": "Forward",
+    "forward_bypass": "Open as required to place the shock",
+    "aft_bypass": "Closed",
+    "centerbody_bleed": "Overboard",
+    "suck_in_doors": "Closed",
+    "tertiary_doors": "Closed",
+    "ejector_flaps": "Opening"
+   },
+   {
+    "mach": 2.5,
+    "spike": "Retracting",
+    "forward_bypass": "Open as required",
+    "aft_bypass": "Scheduled open",
+    "centerbody_bleed": "Overboard",
+    "suck_in_doors": "Closed",
+    "tertiary_doors": "Closed",
+    "ejector_flaps": "Opening"
+   },
+   {
+    "mach": 3.2,
+    "spike": "Retracted",
+    "forward_bypass": "Closed, opening as required",
+    "aft_bypass": "Not shown",
+    "centerbody_bleed": "Overboard",
+    "suck_in_doors": "Closed",
+    "tertiary_doors": "Closed",
+    "ejector_flaps": "Open"
+   }
+  ],
+  "split": [
+   {
+    "mach": 2.2,
+    "label": "Mach 2.2",
+    "inlet": 13,
+    "engine": 73,
+    "ejector": 14
+   },
+   {
+    "mach": 3,
+    "label": "Mach 3 cruise",
+    "inlet": 54,
+    "engine": 17,
+    "ejector": 29
+   }
+  ],
+  "citations": [
+   {
+    "source": "u-s-air-force-323b8c",
+    "detail": "Figure 1-21, p.1-33; p.1-31, p.1-43"
+   },
+   {
+    "source": "nasa-technical-reports-server-707153",
+    "detail": "p.25"
+   }
+  ]
+ },
+ "panel": {
+  "figure": "diagram_SR-71A-1_fig1-12_front-cockpit-center-instrument-panel_p1-23",
+  "width": 2142,
+  "height": 3000,
+  "citations": [
+   {
+    "source": "u-s-air-force-323b8c",
+    "detail": "Figure 1-12, p.1-23"
+   }
+  ],
+  "zones": [
+   {
+    "id": "top",
+    "name": "Glareshield and top row"
+   },
+   {
+    "id": "upper-left",
+    "name": "Upper left"
+   },
+   {
+    "id": "left",
+    "name": "Left column"
+   },
+   {
+    "id": "inlet",
+    "name": "Inlet controls"
+   },
+   {
+    "id": "trim",
+    "name": "Trim"
+   },
+   {
+    "id": "centre",
+    "name": "Centre column"
+   },
+   {
+    "id": "right-centre",
+    "name": "Right of centre"
+   },
+   {
+    "id": "engines",
+    "name": "Engine column"
+   }
+  ],
+  "items": [
+   {
+    "key": 1,
+    "name": "Spike Position Indicator",
+    "zone": "inlet",
+    "inset": false,
+    "spots": [
+     {
+      "x": 22.689,
+      "y": 51,
+      "r": 3.828
+     }
+    ],
+    "note": {
+     "text": "Marked in one-inch steps from 0, fully forward, to 26, fully aft.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.1-43"
+      }
+     ]
+    }
+   },
+   {
+    "key": 2,
+    "name": "Pusher/Shaker Switch",
+    "zone": "left",
+    "inset": false,
+    "spots": [
+     {
+      "x": 15.92,
+      "y": 50.167,
+      "r": 1.774
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 3,
+    "name": "Forward Bypass Position Indicator",
+    "zone": "inlet",
+    "inset": false,
+    "spots": [
+     {
+      "x": 30.345,
+      "y": 51.033,
+      "r": 3.641
+     }
+    ],
+    "note": {
+     "text": "Two pointers, left and right inlet, in percent open.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "Figure 1-12, p.1-23"
+      }
+     ]
+    }
+   },
+   {
+    "key": 4,
+    "name": "Compressor Inlet Pressure Gage",
+    "zone": "left",
+    "inset": false,
+    "spots": [
+     {
+      "x": 26.704,
+      "y": 44.633,
+      "r": 3.735
+     }
+    ],
+    "note": {
+     "text": "Left and right needles plus a striped needle showing the pressure DAFICS expects. Left and right should not differ by more than 1 psi.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.1-17"
+      }
+     ]
+    }
+   },
+   {
+    "key": 5,
+    "name": "RSO Bailout Switch",
+    "zone": "left",
+    "inset": false,
+    "spots": [
+     {
+      "x": 21.008,
+      "y": 45.733,
+      "r": 3.268
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 6,
+    "name": "Temperature Indicator",
+    "zone": "left",
+    "inset": false,
+    "spots": [
+     {
+      "x": 14.472,
+      "y": 42.7,
+      "r": 3.735
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 7,
+    "name": "RSO Ejected Indicator Light",
+    "zone": "left",
+    "inset": false,
+    "spots": [
+     {
+      "x": 25.21,
+      "y": 40.267,
+      "r": 2.988
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 8,
+    "name": "Drag Chute Handle",
+    "zone": "left",
+    "inset": false,
+    "spots": [
+     {
+      "x": 19.001,
+      "y": 36.533,
+      "r": 4.669
+     }
+    ],
+    "note": {
+     "text": "A T-handle: pull to deploy the drag chute; rotate left and pull for emergency deployment.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "Figure 1-12, p.1-23"
+      }
+     ]
+    }
+   },
+   {
+    "key": 9,
+    "name": "Left Inlet Unstart Light",
+    "zone": "left",
+    "inset": false,
+    "spots": [
+     {
+      "x": 25.77,
+      "y": 30.467,
+      "r": 1.214
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 10,
+    "name": "Compressor Inlet Temperature Gage",
+    "zone": "left",
+    "inset": false,
+    "spots": [
+     {
+      "x": 25.677,
+      "y": 35,
+      "r": 3.641
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 11,
+    "name": "Airspeed - Mach Meter",
+    "zone": "left",
+    "inset": false,
+    "spots": [
+     {
+      "x": 36.601,
+      "y": 33.4,
+      "r": 5.602
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 12,
+    "name": "Nosewheel Steering Engaged Light",
+    "zone": "upper-left",
+    "inset": false,
+    "spots": [
+     {
+      "x": 35.201,
+      "y": 27.733,
+      "r": 1.214
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 13,
+    "name": "KEAS Warning Light",
+    "zone": "upper-left",
+    "inset": false,
+    "spots": [
+     {
+      "x": 38.049,
+      "y": 27.7,
+      "r": 1.494
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 14,
+    "name": "Air Refuel Switch",
+    "zone": "upper-left",
+    "inset": false,
+    "spots": [
+     {
+      "x": 37.768,
+      "y": 24.367,
+      "r": 1.214
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 15,
+    "name": "Air Refuel Ready - Disc Pushbutton and Light",
+    "zone": "upper-left",
+    "inset": false,
+    "spots": [
+     {
+      "x": 41.503,
+      "y": 27.7,
+      "r": 1.494
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 16,
+    "name": "Angle of Attack Indicator",
+    "zone": "top",
+    "inset": false,
+    "spots": [
+     {
+      "x": 44.071,
+      "y": 20.333,
+      "r": 4.108
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 17,
+    "name": "Standby Attitude Indicator",
+    "zone": "top",
+    "inset": false,
+    "spots": [
+     {
+      "x": 52.894,
+      "y": 19.9,
+      "r": 4.762
+     }
+    ],
+    "note": {
+     "text": "A 3-inch instrument at the top centre. The inset shows the 2-inch unit fitted without service bulletin R-2466.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "Figure 1-12, p.1-23"
+      }
+     ]
+    }
+   },
+   {
+    "key": 18,
+    "name": "Shaker Indicator Light",
+    "zone": "top",
+    "inset": false,
+    "spots": [
+     {
+      "x": 64.332,
+      "y": 18.8,
+      "r": 2.568
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 19,
+    "name": "Attitude Director Indicator",
+    "zone": "top",
+    "inset": false,
+    "spots": [
+     {
+      "x": 52.708,
+      "y": 30.867,
+      "r": 7.703
+     }
+    ],
+    "note": {
+     "text": "The attitude director indicator, the largest instrument on the panel.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "Figure 1-12, p.1-23"
+      }
+     ]
+    }
+   },
+   {
+    "key": 20,
+    "name": "Marker Beacon Light",
+    "zone": "top",
+    "inset": false,
+    "spots": [
+     {
+      "x": 62.979,
+      "y": 38.5,
+      "r": 1.214
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 21,
+    "name": "Master Caution and Warning Lights",
+    "zone": "top",
+    "inset": false,
+    "spots": [
+     {
+      "x": 64.052,
+      "y": 21.2,
+      "r": 4.015
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 22,
+    "name": "Elapsed Time Clock",
+    "zone": "top",
+    "inset": false,
+    "spots": [
+     {
+      "x": 67.367,
+      "y": 25.867,
+      "r": 4.482
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 23,
+    "name": "Standby Compass (In Canopy)",
+    "zone": "top",
+    "inset": true,
+    "spots": [
+     {
+      "x": 86.368,
+      "y": 19.6,
+      "r": 3.548
+     }
+    ],
+    "note": {
+     "text": "Mounted in the canopy, not on the panel.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "Figure 1-12, p.1-23"
+      }
+     ]
+    }
+   },
+   {
+    "key": 24,
+    "name": "Altimeter",
+    "zone": "right-centre",
+    "inset": false,
+    "spots": [
+     {
+      "x": 69.141,
+      "y": 33.433,
+      "r": 5.976
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 25,
+    "name": "Inertial - lead Vertical Speed Ind.",
+    "zone": "right-centre",
+    "inset": false,
+    "spots": [
+     {
+      "x": 68.534,
+      "y": 43.2,
+      "r": 5.696
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 26,
+    "name": "Right Inlet Unstart Light",
+    "zone": "engines",
+    "inset": false,
+    "spots": [
+     {
+      "x": 79.272,
+      "y": 30.6,
+      "r": 1.214
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 27,
+    "name": "Tachometers",
+    "zone": "engines",
+    "inset": false,
+    "spots": [
+     {
+      "x": 78.898,
+      "y": 35.067,
+      "r": 3.735
+     },
+     {
+      "x": 86.648,
+      "y": 35,
+      "r": 3.735
+     }
+    ],
+    "note": {
+     "text": "Main dial to 10,000 rpm with a 1,000 rpm subdial. The tachometers power themselves.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.1-9"
+      }
+     ]
+    }
+   },
+   {
+    "key": 28,
+    "name": "Fire Warning Lights",
+    "zone": "engines",
+    "inset": false,
+    "spots": [
+     {
+      "x": 79.365,
+      "y": 39.3,
+      "r": 2.894
+     },
+     {
+      "x": 86.695,
+      "y": 39.3,
+      "r": 2.894
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 29,
+    "name": "Exhaust Gas Temperature Inds.",
+    "zone": "engines",
+    "inset": false,
+    "spots": [
+     {
+      "x": 78.898,
+      "y": 43.267,
+      "r": 3.548
+     },
+     {
+      "x": 86.555,
+      "y": 43.2,
+      "r": 3.548
+     }
+    ],
+    "note": {
+     "text": "Digital, reading 0 to 1,198 °C, with a red warning light at 860 °C. At cruise the engines ran at 775 to 805 °C.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.1-14, p.2-50"
+      }
+     ]
+    }
+   },
+   {
+    "key": 30,
+    "name": "Fuel Derich Lights",
+    "zone": "engines",
+    "inset": false,
+    "spots": [
+     {
+      "x": 75.957,
+      "y": 46.267,
+      "r": 1.027
+     },
+     {
+      "x": 89.823,
+      "y": 46.667,
+      "r": 1.027
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 31,
+    "name": "Exhaust Nozzle Position Indicators",
+    "zone": "engines",
+    "inset": false,
+    "spots": [
+     {
+      "x": 78.898,
+      "y": 49.733,
+      "r": 3.828
+     },
+     {
+      "x": 86.741,
+      "y": 49.667,
+      "r": 3.828
+     }
+    ],
+    "note": {
+     "text": "Reads 0, closed, to 10, open.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.1-19"
+      }
+     ]
+    }
+   },
+   {
+    "key": 32,
+    "name": "Display Mode Select Switch",
+    "zone": "right-centre",
+    "inset": false,
+    "spots": [
+     {
+      "x": 65.406,
+      "y": 50.667,
+      "r": 2.241
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 33,
+    "name": "IGV Lights",
+    "zone": "engines",
+    "inset": false,
+    "spots": [
+     {
+      "x": 74.51,
+      "y": 52.733,
+      "r": 1.494
+     },
+     {
+      "x": 90.43,
+      "y": 52.733,
+      "r": 1.494
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 34,
+    "name": "Fuel Flow Indicators",
+    "zone": "engines",
+    "inset": false,
+    "spots": [
+     {
+      "x": 78.805,
+      "y": 55.6,
+      "r": 3.782
+     },
+     {
+      "x": 86.741,
+      "y": 55.6,
+      "r": 3.782
+     }
+    ],
+    "note": {
+     "text": "Dial in 5,000 lb per hour steps to 95,000 lb per hour, with a five-digit window.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.1-11"
+      }
+     ]
+    }
+   },
+   {
+    "key": 35,
+    "name": "Oil Pressure Indicators",
+    "zone": "engines",
+    "inset": false,
+    "spots": [
+     {
+      "x": 78.992,
+      "y": 61.2,
+      "r": 3.828
+     },
+     {
+      "x": 86.555,
+      "y": 61.267,
+      "r": 3.828
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 36,
+    "name": "Tacan Control Transfer Switch",
+    "zone": "right-centre",
+    "inset": false,
+    "spots": [
+     {
+      "x": 71.195,
+      "y": 50.4,
+      "r": 1.681
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 37,
+    "name": "L and R Hydraulic Systems Pressure Gage",
+    "zone": "right-centre",
+    "inset": false,
+    "spots": [
+     {
+      "x": 70.495,
+      "y": 55.9,
+      "r": 3.828
+     }
+    ],
+    "note": {
+     "text": "Pressure in the L and R hydraulic systems, which move the inlet spikes and bypass doors.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "Figure 1-12, p.1-23"
+      }
+     ]
+    }
+   },
+   {
+    "key": 38,
+    "name": "A and B Hydraulic Systems Pressure Gage",
+    "zone": "right-centre",
+    "inset": false,
+    "spots": [
+     {
+      "x": 70.588,
+      "y": 61.633,
+      "r": 3.828
+     }
+    ],
+    "note": {
+     "text": "Pressure in the A and B hydraulic systems, which move the flight control surfaces.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "Figure 1-12, p.1-23"
+      }
+     ]
+    }
+   },
+   {
+    "key": 39,
+    "name": "Attitude Reference Select Switch",
+    "zone": "right-centre",
+    "inset": false,
+    "spots": [
+     {
+      "x": 64.379,
+      "y": 62.667,
+      "r": 1.494
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 40,
+    "name": "Bearing Select Switch",
+    "zone": "right-centre",
+    "inset": false,
+    "spots": [
+     {
+      "x": 64.426,
+      "y": 56.433,
+      "r": 1.494
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 41,
+    "name": "Nav Map Display",
+    "zone": "centre",
+    "inset": false,
+    "spots": [
+     {
+      "x": 51.867,
+      "y": 58.833,
+      "r": 8.403
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 42,
+    "name": "Horizontal Situation Indicator",
+    "zone": "centre",
+    "inset": false,
+    "spots": [
+     {
+      "x": 52.894,
+      "y": 44.6,
+      "r": 6.909
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 43,
+    "name": "Triple Display Indicator",
+    "zone": "centre",
+    "inset": false,
+    "spots": [
+     {
+      "x": 37.021,
+      "y": 43.4,
+      "r": 5.135
+     }
+    ],
+    "note": {
+     "text": "Speed (KEAS), altitude and Mach in digits, computed by DAFICS. The altitude window reads to 99,950 ft and drops the first digit above 100,000 ft.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.1-135 to 1-136"
+      }
+     ]
+    }
+   },
+   {
+    "key": 44,
+    "name": "Accelerometer",
+    "zone": "centre",
+    "inset": false,
+    "spots": [
+     {
+      "x": 38.655,
+      "y": 51.2,
+      "r": 2.894
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 45,
+    "name": "Yaw Trim Indicator",
+    "zone": "trim",
+    "inset": false,
+    "spots": [
+     {
+      "x": 39.963,
+      "y": 62.367,
+      "r": 2.988
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 46,
+    "name": "Forward Bypass Switches",
+    "zone": "inlet",
+    "inset": false,
+    "spots": [
+     {
+      "x": 31.746,
+      "y": 57.267,
+      "r": 3.315
+     },
+     {
+      "x": 39.122,
+      "y": 57.167,
+      "r": 3.315
+     }
+    ],
+    "note": {
+     "text": "Left and right knobs: AUTO, OPEN, and a manual schedule.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "Figure 1-12, p.1-23"
+      }
+     ]
+    }
+   },
+   {
+    "key": 47,
+    "name": "Roll Trim Indicator",
+    "zone": "trim",
+    "inset": false,
+    "spots": [
+     {
+      "x": 33.287,
+      "y": 62.367,
+      "r": 2.988
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 48,
+    "name": "Pitch Trim Indicator",
+    "zone": "trim",
+    "inset": false,
+    "spots": [
+     {
+      "x": 26.611,
+      "y": 62.333,
+      "r": 2.988
+     }
+    ],
+    "note": null
+   },
+   {
+    "key": 49,
+    "name": "Spike Switches",
+    "zone": "inlet",
+    "inset": false,
+    "spots": [
+     {
+      "x": 16.713,
+      "y": 57.3,
+      "r": 3.175
+     },
+     {
+      "x": 23.996,
+      "y": 57.2,
+      "r": 3.175
+     }
+    ],
+    "note": {
+     "text": "Left and right knobs with AUTO, FWD and a manual scale graduated in Mach from 1.4 to 3.2.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "p.1-43"
+      }
+     ]
+    }
+   },
+   {
+    "key": 50,
+    "name": "Inlet Restart Switches",
+    "zone": "inlet",
+    "inset": false,
+    "spots": [
+     {
+      "x": 14.472,
+      "y": 62.533,
+      "r": 1.401
+     },
+     {
+      "x": 21.989,
+      "y": 62.533,
+      "r": 1.401
+     }
+    ],
+    "note": {
+     "text": "Left and right toggles that restart an inlet after an unstart.",
+     "citations": [
+      {
+       "source": "u-s-air-force-323b8c",
+       "detail": "Figure 1-12, p.1-23; p.1-42A"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

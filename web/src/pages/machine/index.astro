@@ -1,0 +1,156 @@
+---
+// The Machine: the SR-71's systems, from the flight manual and NASA's reports. Content and its
+// citations come from research/machine.json via scripts/import-research.mjs.
+import Base from '../../layouts/Base.astro';
+import Photo from '../../components/Photo.astro';
+import Lightbox from '../../components/Lightbox.astro';
+import InletExplainer from '../../components/InletExplainer.astro';
+import PanelExplorer from '../../components/PanelExplorer.astro';
+import { getEntry } from 'astro:content';
+import { resolveCitations, sourceHref, type Citation } from '../../lib/data';
+import machine from '../../data/machine.json';
+
+// Number every source in order of first use; each mark carries the page it cites.
+const order = new Map<string, number>();
+const pages = new Map<string, Set<string>>();
+type Raw = { source: string; detail?: string | null };
+const toCites = (raw: Raw[]): Citation[] => raw.map((c) => ({ source: { id: c.source, collection: 'sources' }, detail: c.detail ?? undefined }));
+async function marks(raw: Raw[]) {
+  const list = await resolveCitations(toCites(raw));
+  return list.map(({ entry, detail }) => {
+    if (!order.has(entry.id)) order.set(entry.id, order.size + 1);
+    if (detail) pages.set(entry.id, (pages.get(entry.id) ?? new Set()).add(detail));
+    return { n: order.get(entry.id)!, id: entry.id, title: `${entry.data.publisher}: ${entry.data.title}${detail ? ', ' + detail : ''}`, detail };
+  });
+}
+type Mark = Awaited<ReturnType<typeof marks>>[number];
+const supHtml = (ms: Mark[]) => `<sup class="cite">${ms.map((m) => `<a href="#src-${m.n}" title="${m.title.replace(/"/g, '&quot;')}">${m.n}</a>`).join(',')}</sup>`;
+
+const intro = { text: machine.intro.text, marks: await marks(machine.intro.citations) };
+const plate = [];
+for (const r of machine.plate) plate.push({ ...r, marks: await marks(r.citations) });
+const hero = (await getEntry('photos', machine.hero))!;
+const sections = [];
+for (const s of machine.sections) {
+  const paras = [];
+  for (const p of s.paras) paras.push({ text: p.text, marks: await marks(p.citations) });
+  const figures = (await Promise.all(s.figures.filter((id) => !((machine as any).panel && id === (machine as any).panel.figure)).map((id) => getEntry('photos', id)))).filter((f) => !!f);
+  sections.push({ ...s, paras, figures });
+}
+const inletMarks = await marks(machine.inlet.citations);
+// The panel explorer appears once its item positions exist (research/systems/panel_fig1-12.json)
+const panelIn = (machine as any).panel as undefined | {
+  figure: string; width: number; height: number; citations: Raw[]; zones: { id: string; name: string }[];
+  items: { key: number; name: string; zone: string; inset: boolean; spots: { x: number; y: number; r: number }[]; note: { text: string; citations: Raw[] } | null }[];
+};
+let panel = null;
+if (panelIn) {
+  const items = [];
+  for (const it of panelIn.items) items.push({ ...it, note: it.note ? { text: it.note.text, marksHtml: supHtml(await marks(it.note.citations)) } : null });
+  panel = { photo: (await getEntry('photos', panelIn.figure))!, zones: panelIn.zones, items, aspect: panelIn.width / panelIn.height, cites: supHtml(await marks(panelIn.citations)) };
+}
+const used = await resolveCitations(toCites([...order.keys()].map((source) => ({ source }))));
+const pageSources = used.map(({ entry }) => ({ entry, n: order.get(entry.id)!, pages: [...(pages.get(entry.id) ?? [])] })).sort((a, b) => a.n - b.n);
+const isDiagram = (id: string) => id.startsWith('diagram_');
+---
+<Base title="The Machine" description="What made the SR-71 special, system by system: the inlet, the J58, the cockpits, the heat, the fuel and the escape system, from the flight manual and NASA's reports.">
+  <div class="wrap">
+    <header class="page-head panel ticks">
+      <div class="file-head"><b>File A121-0005</b><span>The machine</span><span>SR-71A systems</span></div>
+      <h1 class="display">The Machine</h1>
+      <p class="lede">{intro.text}<Fragment set:html={supHtml(intro.marks)} /></p>
+      <nav class="toc" aria-label="Systems on this page">
+        {sections.map((s, i) => <a class="chip" href={`#${s.id}`}><span>§{i + 1}</span> {s.title}</a>)}
+      </nav>
+    </header>
+
+    <section class="plate panel" aria-labelledby="plate-h">
+      <div class="file-head"><b id="plate-h">Data plate</b><span>SR-71A, from the flight manual unless marked</span></div>
+      <dl class="plate-grid">
+        {plate.map((r) => (
+          <div class="cell">
+            <dt class="label">{r.label}</dt>
+            <dd><span class="v"><b>{r.value}</b><Fragment set:html={supHtml(r.marks)} /></span>{r.metric && <span class="m">{r.metric}</span>}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+
+    <div class="hero-photo"><Photo photo={hero} sizes="(max-width: 1240px) 100vw, 1240px" eager /></div>
+
+    {sections.map((s, i) => (
+      <section class="sys panel ticks" id={s.id} aria-labelledby={`${s.id}-h`}>
+        <div class="file-head"><b>§ {i + 1}</b><span>{s.kicker}</span><span>{s.figures.length} {s.figures.length === 1 ? 'exhibit' : 'exhibits'}</span></div>
+        <h2 class="section" id={`${s.id}-h`}>{s.title}</h2>
+        <div class="sys-body">
+          <div class="sys-text">
+            {s.paras.map((p) => <p>{p.text}<Fragment set:html={supHtml(p.marks)} /></p>)}
+          </div>
+          <div class:list={['sys-figs', { single: s.figures.length === 1 }]}>
+            {s.figures.map((f) => <Photo photo={f} whole={isDiagram(f.id)} sizes="(max-width: 900px) 100vw, 380px" />)}
+          </div>
+        </div>
+        {s.id === 'inlet' && <InletExplainer data={machine.inlet} cites={supHtml(inletMarks)} />}
+        {s.id === 'cockpits' && panel && <PanelExplorer {...panel} />}
+      </section>
+    ))}
+
+    <section class="srcs panel" aria-labelledby="srcs-h">
+      <div class="file-head"><b id="srcs-h">Sources on this page</b><span>{pageSources.length}</span></div>
+      <ol>
+        {pageSources.map(({ entry, n, pages }) => (
+          <li id={`src-${n}`}>
+            {entry.data.publisher}. <em>{entry.data.title}</em>.{pages.length > 0 && <span class="pp"> Cited at {pages.join('; ')}.</span>}
+            {' '}<a href={sourceHref(entry.data)}>{entry.data.offline && entry.data.archive ? 'Archived copy' : 'Open'}</a>
+            {entry.data.archive && !entry.data.offline && <> · <a href={entry.data.archive}>Archived</a></>} · <a href={`/sources/#${entry.id}`}>In the register</a>
+          </li>
+        ))}
+      </ol>
+      <p class="label note">Diagrams are pages of the declassified SR-71A-1 flight manual (1989) and NASA reports. Select one to read it at full resolution.</p>
+    </section>
+  </div>
+  <Lightbox />
+</Base>
+
+<style>
+  .lede { font-size: clamp(1.05rem, 1rem + 0.35vw, 1.25rem); line-height: 1.55; max-width: 62ch; margin: 0; color: var(--ink); }
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+  .toc .chip { text-decoration: none; display: inline-flex; gap: 8px; align-items: baseline; }
+  .toc .chip span { color: var(--marking); }
+
+  .plate { margin-top: 14px; padding: clamp(16px, 3vw, 28px); }
+  .plate .file-head { margin-bottom: 0; }
+  .plate-grid { margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 1px; background: var(--seam); border-bottom: 1px solid var(--seam); }
+  .cell { background: var(--hull); padding: 16px 14px 14px 0; display: grid; gap: 6px; align-content: start; min-width: 0; }
+  .cell dt { font-size: 0.62rem; }
+  .cell dd { margin: 0; display: grid; gap: 4px; }
+  .cell .v b { font: 700 clamp(1.15rem, 1rem + 0.6vw, 1.5rem)/1.15 var(--f-data); color: var(--stencil); font-variant-numeric: tabular-nums; }
+  .cell .m { font-size: 0.8rem; color: var(--ink-2); line-height: 1.4; }
+
+  .hero-photo { margin-top: 14px; }
+  .hero-photo :global(.shot img) { aspect-ratio: 21 / 9; }
+
+  .sys { margin-top: 14px; padding: clamp(18px, 3.6vw, 44px); scroll-margin-top: 56px; }
+  .sys h2 { margin-bottom: 22px; max-width: 24ch; }
+  .sys-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(18px, 3vw, 40px); align-items: start; }
+  .sys-text p { margin: 0 0 1.05em; max-width: 64ch; line-height: 1.62; }
+  .sys-text p:last-child { margin-bottom: 0; }
+  .sys-figs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; align-items: start; }
+  .sys-figs.single { grid-template-columns: minmax(0, 1fr); }
+  .sys-figs :global(figcaption) { font-size: 0.8rem; }
+
+  .srcs { margin-top: 14px; padding: clamp(18px, 3.6vw, 44px); }
+  .srcs ol { margin: 0; padding-left: 1.6rem; display: grid; gap: 10px; font-size: 0.9rem; line-height: 1.5; }
+  .srcs li { scroll-margin-top: 70px; overflow-wrap: anywhere; }
+  .srcs li:target { outline: 1px solid var(--marking); outline-offset: 4px; background: var(--marking-soft); }
+  .srcs .pp { color: var(--ink-2); }
+  .srcs .note { margin: 18px 0 0; }
+
+  @media (max-width: 900px) {
+    .sys-body { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 520px) {
+    .sys-figs { grid-template-columns: minmax(0, 1fr); }
+    .hero-photo :global(.shot img) { aspect-ratio: 3 / 2; }
+  }
+</style>

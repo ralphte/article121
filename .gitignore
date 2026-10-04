@@ -18,3 +18,7 @@ model/tools/.venv/
 
 # third-party reference models (FlightGear SR-71, GPL v2): compared against, never shipped; copy in R2 archive
 model/reference/
+
+# systems research media: public set in R2 article121-files/systems, Cockpit360 crops in the archive
+research/systems/media/*
+!research/systems/media/manifest.json

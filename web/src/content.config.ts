@@ -17,6 +17,9 @@ const sources = defineCollection({
     publisher: z.string(),
     url: z.url(),
     uses: z.number().int(),
+    archive: z.url().optional(), // Wayback Machine copy
+    archived: z.string().optional(), // capture date of that copy
+    offline: z.string().optional(), // why the original is unreachable; the copy becomes the main link
   }),
 });
 
@@ -70,7 +73,7 @@ const photos = defineCollection({
     file: image(),
     master: z.url().nullable(),
     airframe: z.string().nullable(),
-    kind: z.enum(['hero', 'in service', 'today']),
+    kind: z.enum(['hero', 'in service', 'today', 'system']),
     caption: z.string().min(1),
     creator: z.string().min(1),
     date: z.string().nullable(),

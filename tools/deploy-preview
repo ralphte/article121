@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Build the Astro site with noindex and deploy it to preview.article121.com (Worker article121-preview).
+# The Cloudflare token is read from 1Password at call time and never written anywhere.
+#
+#   tools/deploy-preview
+set -euo pipefail
+cd "$(dirname "$0")/../web"
+PUBLIC_NOINDEX=1 pnpm -s build
+printf '\n/*\n  X-Robots-Tag: noindex, nofollow\n' >> dist/_headers
+export CLOUDFLARE_API_TOKEN=$(op read "op://DarkClouds-Secrets/Cloudflare article121/credential")
+export CLOUDFLARE_ACCOUNT_ID=$(python3 - <<'PY'
+import json, os, urllib.request
+req = urllib.request.Request("https://api.cloudflare.com/client/v4/accounts", headers={"Authorization": "Bearer " + os.environ["CLOUDFLARE_API_TOKEN"]})
+print([a["id"] for a in json.load(urllib.request.urlopen(req))["result"] if a["name"] == "Ralph@mwgroup.io's Account"][0])
+PY
+)
+npx -y wrangler@4 deploy -c wrangler.preview.jsonc

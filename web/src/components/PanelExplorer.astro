@@ -1,0 +1,117 @@
+---
+// The pilot's centre instrument panel from the flight manual (Figure 1-12), with every keyed item
+// selectable on the drawing or from the list. Positions come from research/systems/panel_fig1-12.json.
+import { Picture } from 'astro:assets';
+import type { Photo } from '../lib/data';
+interface Item { key: number; name: string; zone: string; inset: boolean; spots: { x: number; y: number; r: number }[]; note: { text: string; marksHtml: string } | null; }
+interface Props { photo: Photo; zones: { id: string; name: string }[]; items: Item[]; aspect: number; cites: string; }
+const { photo, zones, items, aspect, cites } = Astro.props;
+const byZone = zones.map((z) => ({ ...z, items: items.filter((i) => i.zone === z.id).sort((a, b) => a.key - b.key) }));
+const p = photo.data;
+---
+<div class="panelx" data-panelx>
+  <div class="px-figure">
+    <div class="px-sheet" style={`aspect-ratio: ${aspect}`}>
+      <Picture src={p.file} alt={p.caption} widths={[800, 1200, 1800]} sizes="(max-width: 900px) 100vw, 720px" formats={['avif', 'webp']} loading="lazy" />
+      {items.flatMap((it) => it.spots.map((sp, i) => (
+        <button type="button" class="hot" data-key={it.key} data-zone={it.zone}
+          style={`left:${sp.x}%;top:${sp.y}%;--r:${sp.r}`}
+          aria-label={`${it.key}: ${it.name}${it.spots.length > 1 ? (i === 0 ? ', left' : ', right') : ''}`} aria-pressed="false"></button>
+      )))}
+    </div>
+    <p class="px-credit">{p.creator} · {p.date} · {p.license} · <a href={p.source_page}>Source</a> · <a href={p.master ?? p.source_page}>Full resolution</a></p>
+  </div>
+  <div class="px-side">
+    <div class="px-readout" aria-live="polite">
+      <span class="label" data-zone-label>Select an instrument</span>
+      <b data-name>Tap any part of the panel, or pick from the list.</b>
+      <p data-note class="px-note"></p>
+    </div>
+    <div class="px-zones" role="group" aria-label="Highlight a zone">
+      {zones.map((z) => <button type="button" class="chip" data-zone-btn={z.id} aria-pressed="false">{z.name}</button>)}
+    </div>
+    <ol class="px-list">
+      {byZone.map((z) => (
+        <li class="px-zone"><span class="label">{z.name}</span>
+          <ul>{z.items.map((it) => (
+            <li><button type="button" data-pick={it.key}><span class="k">{it.key}</span> {it.name}{it.inset && <em> (inset)</em>}</button></li>
+          ))}</ul>
+        </li>
+      ))}
+    </ol>
+    <p class="px-cite">Names and numbers from the flight manual's key to Figure 1-12. <span set:html={cites} /></p>
+  </div>
+  <script type="application/json" data-panelx-data set:html={JSON.stringify({ zones, items: items.map(({ key, name, zone, inset, note }) => ({ key, name, zone, inset, note })) })} />
+</div>
+
+<style>
+  .panelx { margin-top: 26px; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(16px, 2.6vw, 30px); align-items: start; border: 1px solid var(--seam-2); background: var(--void); padding: clamp(12px, 2.2vw, 22px); }
+  .px-sheet { position: relative; background: #e8e5dc; }
+  .px-sheet :global(img) { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .hot {
+    position: absolute; width: calc(var(--r) * 2%); aspect-ratio: 1; transform: translate(-50%, -50%);
+    border-radius: 50%; border: 0; padding: 0; cursor: pointer; background: transparent;
+    box-shadow: 0 0 0 0 rgba(212, 67, 47, 0); transition: box-shadow 0.2s, background 0.2s;
+  }
+  .hot:hover { background: rgba(212, 67, 47, 0.16); box-shadow: 0 0 0 2px rgba(212, 67, 47, 0.7); }
+  .hot:focus-visible { outline: 2px solid var(--marking); outline-offset: 2px; }
+  .hot.zone-on, .hot.peek { background: rgba(212, 67, 47, 0.12); box-shadow: 0 0 0 1.5px rgba(212, 67, 47, 0.55); }
+  .hot[aria-pressed="true"] { background: rgba(212, 67, 47, 0.28); box-shadow: 0 0 0 3px var(--marking), 0 0 0 9px rgba(212, 67, 47, 0.22); }
+  .px-credit { margin: 8px 0 0; font: 400 0.6rem/1.5 var(--f-data); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); overflow-wrap: anywhere; }
+  .px-credit a { color: var(--ink-2); }
+  .px-side { display: grid; gap: 14px; min-width: 0; position: sticky; top: 56px; max-height: calc(100vh - 72px); grid-template-rows: auto auto minmax(0, 1fr) auto; }
+  .px-readout { border: 1px solid var(--seam-2); background: var(--hull); padding: 14px 16px; display: grid; gap: 6px; min-height: 8.5rem; align-content: start; }
+  .px-readout b { font: 700 1.15rem/1.25 var(--f-data); color: var(--stencil); }
+  .px-note { margin: 0; font-size: 0.9rem; line-height: 1.5; color: var(--ink); }
+  .px-zones { display: flex; flex-wrap: wrap; gap: 6px; }
+  .px-list { list-style: none; margin: 0; padding: 0; overflow-y: auto; display: grid; gap: 12px; border-top: 1px solid var(--seam); padding-top: 10px; min-height: 0; }
+  .px-zone ul { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 2px; }
+  .px-zone button { all: unset; cursor: pointer; display: flex; gap: 10px; width: 100%; box-sizing: border-box; padding: 4px 6px; font-size: 0.86rem; color: var(--ink-2); line-height: 1.35; }
+  .px-zone button:hover, .px-zone button[aria-current="true"] { color: var(--stencil); background: var(--hull-2); }
+  .px-zone button:focus-visible { outline: 2px solid var(--marking); }
+  .px-zone .k { font: 700 0.72rem/1.6 var(--f-data); color: var(--marking); min-width: 2ch; text-align: right; }
+  .px-cite { margin: 0; font-size: 0.78rem; color: var(--ink-3); }
+  @media (max-width: 900px) {
+    .panelx { grid-template-columns: minmax(0, 1fr); }
+    .px-side { position: static; max-height: none; }
+    .px-list { max-height: 22rem; }
+  }
+</style>
+
+<script>
+  type It = { key: number; name: string; zone: string; inset: boolean; note: { text: string; marksHtml: string } | null };
+  for (const root of document.querySelectorAll<HTMLElement>('[data-panelx]')) {
+    const data = JSON.parse(root.querySelector('[data-panelx-data]')!.textContent || '{}') as { zones: { id: string; name: string }[]; items: It[] };
+    const byKey = new Map(data.items.map((i) => [i.key, i]));
+    const zoneName = new Map(data.zones.map((z) => [z.id, z.name]));
+    const hots = [...root.querySelectorAll<HTMLButtonElement>('.hot')];
+    const picks = [...root.querySelectorAll<HTMLButtonElement>('[data-pick]')];
+    const zoneBtns = [...root.querySelectorAll<HTMLButtonElement>('[data-zone-btn]')];
+    const zl = root.querySelector('[data-zone-label]')!, nm = root.querySelector('[data-name]')!, nt = root.querySelector<HTMLElement>('[data-note]')!;
+    function select(key: number, scroll = false) {
+      const it = byKey.get(key); if (!it) return;
+      for (const h of hots) h.setAttribute('aria-pressed', String(Number(h.dataset.key) === key));
+      for (const b of picks) {
+        const on = Number(b.dataset.pick) === key;
+        b.setAttribute('aria-current', String(on));
+        if (on && scroll) b.scrollIntoView({ block: 'nearest' });
+      }
+      zl.textContent = `${zoneName.get(it.zone) ?? ''} · item ${it.key}${it.inset ? ' · inset' : ''}`;
+      nm.textContent = it.name;
+      nt.innerHTML = it.note ? `${it.note.text}${it.note.marksHtml}` : '';
+    }
+    hots.forEach((h) => h.addEventListener('click', () => select(Number(h.dataset.key), true)));
+    picks.forEach((b) => {
+      b.addEventListener('click', () => select(Number(b.dataset.pick)));
+      b.addEventListener('mouseenter', () => hots.filter((h) => h.dataset.key === b.dataset.pick).forEach((h) => h.classList.add('peek')));
+      b.addEventListener('mouseleave', () => hots.filter((h) => h.dataset.key === b.dataset.pick).forEach((h) => h.classList.remove('peek')));
+    });
+    const fromHash = /^#panel-(\d{1,2})$/.exec(location.hash);
+    if (fromHash) select(Number(fromHash[1]));
+    zoneBtns.forEach((z) => z.addEventListener('click', () => {
+      const on = z.getAttribute('aria-pressed') !== 'true';
+      zoneBtns.forEach((o) => o.setAttribute('aria-pressed', String(o === z && on)));
+      hots.forEach((h) => h.classList.toggle('zone-on', on && h.dataset.zone === z.dataset.zoneBtn));
+    }));
+  }
+</script>

@@ -1,0 +1,218 @@
+---
+// The inlet at any Mach number: a schematic half-section whose spike moves on the flight manual's
+// schedule, the door states from the manual's Figure 1-21, and the published thrust split.
+// Nothing is interpolated: door states hold the manual's nearest row at or below the chosen Mach,
+// and the split is shown only at the two Mach numbers it was published for.
+interface State { mach: number; spike: string; forward_bypass: string; aft_bypass: string; centerbody_bleed: string; suck_in_doors: string; tertiary_doors: string; ejector_flaps: string; }
+interface Split { mach: number; label: string; inlet: number; engine: number; ejector: number; }
+interface Props {
+  data: { spike: { start_mach: number; inches_per_tenth: number; max_inches: number }; states: State[]; split: Split[] };
+  cites: string; // rendered citation marks for the caption
+}
+const { data } = Astro.props;
+const ROWS: [keyof State, string][] = [
+  ['spike', 'Spike'], ['forward_bypass', 'Forward bypass'], ['aft_bypass', 'Aft bypass'], ['centerbody_bleed', 'Centerbody bleed'],
+  ['suck_in_doors', 'Suck-in doors'], ['tertiary_doors', 'Tertiary doors'], ['ejector_flaps', 'Ejector flaps'],
+];
+---
+<div class="inlet" data-inlet>
+  <script type="application/json" data-inlet-data set:html={JSON.stringify(data)} />
+  <div class="ix-top">
+    <div class="ix-mach"><span class="label">Mach</span><output data-mach>0.0</output></div>
+    <div class="ix-control">
+      <label class="label" for="ix-range">Flight Mach number</label>
+      <input id="ix-range" type="range" min="0" max="3.2" step="0.1" value="0" data-range />
+      <div class="ix-scale" aria-hidden="true"><span>0</span><span>0.8</span><span>1.6</span><span>2.4</span><span>3.2</span></div>
+    </div>
+    <button class="btn" type="button" data-play>Run 0 to 3.2</button>
+  </div>
+
+  <div class="ix-svg-wrap">
+  <svg class="ix-svg" viewBox="0 0 1000 250" role="img" aria-labelledby="ix-title">
+    <title id="ix-title">Schematic half-section of the SR-71 inlet and nacelle, with the spike and doors at the chosen Mach number</title>
+    <!-- Upper half of the nacelle, flow left to right, axis at y 230. Length: 1.74 px per inch from the
+         spike tip (69 in ahead of the cowl lip) to the ejector exit; radius exaggerated 2.5 times. -->
+    <line class="ix-axis" x1="10" y1="230" x2="990" y2="230" />
+    <!-- spike, moved by script; drawn fully forward -->
+    <g data-spike>
+      <path class="ix-spike" d="M40 230 L 138 153 C 148 140, 156 132, 168 131 L 262 131 C 330 140, 400 170, 452 188 L 452 230 Z" />
+    </g>
+    <!-- nacelle: outer skin, duct wall, and the annulus around the engine -->
+    <path class="ix-skin" d="M160 102 C 185 88, 215 80, 250 78 L 905 78 C 935 79, 955 82, 964 86" />
+    <path class="ix-wall" d="M160 102 C 200 105, 230 106, 250 106 C 320 108, 390 113, 436 117" />
+    <path class="ix-wall dim" d="M436 92 L 905 92" />
+    <!-- engine and afterburner sit on top of the spike's aft end -->
+    <rect class="ix-engine" x="436" y="121" width="313" height="109" />
+    <text class="ix-lbl" x="592" y="182" text-anchor="middle">J58</text>
+    <rect class="ix-ab" x="749" y="130" width="157" height="100" />
+    <text class="ix-lbl dim" x="828" y="186" text-anchor="middle">afterburner</text>
+    <!-- doors, opened or closed by script -->
+    <g class="ix-door" data-door="forward_bypass"><rect x="228" y="100" width="22" height="8" /><path class="ix-flow" d="M239 98 C 241 80, 246 66, 254 52 m -9 3 l 9 -3 l 1 9" /></g>
+    <g class="ix-door" data-door="suck_in_doors"><rect x="356" y="74" width="26" height="8" /><path class="ix-flow" d="M369 44 L 369 96 m -6 -8 l 6 8 l 6 -8" /></g>
+    <g class="ix-door" data-door="aft_bypass"><rect x="400" y="110" width="26" height="8" /><path class="ix-flow" d="M413 108 C 430 100, 450 106, 470 106 L 860 106 m -9 -5 l 9 5 l -9 5" /></g>
+    <g class="ix-door" data-door="tertiary_doors"><rect x="860" y="74" width="26" height="8" /><path class="ix-flow" d="M873 44 L 873 96 m -6 -8 l 6 8 l 6 -8" /></g>
+    <g class="ix-door" data-door="ejector_flaps"><path class="ix-flap" d="M930 82 L 964 100" /></g>
+    <g class="ix-tags">
+      <text x="239" y="30" text-anchor="middle">forward bypass</text>
+      <text x="369" y="30" text-anchor="middle">suck-in doors</text>
+      <text x="873" y="30" text-anchor="middle">tertiary doors</text>
+      <text x="150" y="96" text-anchor="end">cowl lip</text>
+      <text x="84" y="246" text-anchor="middle">spike</text>
+      <text x="476" y="117">aft bypass</text>
+      <text x="990" y="120" text-anchor="end">ejector</text>
+    </g>
+  </svg>
+  </div>
+
+  <div class="ix-readouts">
+    <div class="ix-cell"><span class="label">Spike</span><b data-spike-in>0.0 in aft</b><small>From the flight manual schedule: locked forward to Mach 1.6, then about 1-5/8 in aft per 0.1 Mach, to about 26 in.</small></div>
+    <div class="ix-cell"><span class="label">Inlet</span><b data-start>Unstarted</b><small>The inlet normally starts, swallowing its shock, between Mach 1.6 and 1.8.</small></div>
+    <div class="ix-cell ix-split">
+      <span class="label">Thrust split</span>
+      <div class="bars" data-bars hidden>
+        <div class="bar"><i style="--w:0" data-bar="inlet"></i><span>Inlet <b data-val="inlet"></b>%</span></div>
+        <div class="bar"><i style="--w:0" data-bar="engine"></i><span>Engine <b data-val="engine"></b>%</span></div>
+        <div class="bar"><i style="--w:0" data-bar="ejector"></i><span>Ejector <b data-val="ejector"></b>%</span></div>
+      </div>
+      <small data-split-note>Published only for Mach 2.2 and Mach 3 cruise. Nothing in between is interpolated.</small>
+    </div>
+  </div>
+
+  <div class="ix-table-wrap">
+    <table class="ix-table">
+      <caption class="label">Door and flow states, flight manual Figure 1-21, row for Mach <span data-row>0.0</span></caption>
+      <tbody>
+        {ROWS.map(([k, label]) => <tr><th scope="row">{label}</th><td data-state={k}>{data.states[0][k]}</td></tr>)}
+      </tbody>
+    </table>
+  </div>
+  <p class="ix-note">Schematic. Lengths keep the spike's travel in proportion to how far it stands ahead of the cowl lip; heights are stretched for legibility. The spike position follows the published schedule; the doors show the manual's state for the nearest Mach number it lists at or below the one chosen (0, 0.5, 1.5, 2.5 and 3.2). <span set:html={Astro.props.cites} /></p>
+</div>
+
+<style>
+  .inlet { margin-top: 26px; border: 1px solid var(--seam-2); background: var(--void); padding: clamp(14px, 2.4vw, 24px); display: grid; gap: 18px; }
+  .ix-top { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 14px 22px; align-items: center; }
+  .ix-mach { display: grid; gap: 2px; }
+  .ix-mach output { font: 700 clamp(2.2rem, 1.6rem + 2.4vw, 3.4rem)/1 var(--f-data); color: var(--stencil); font-variant-numeric: tabular-nums; min-width: 3.2ch; }
+  .ix-control { display: grid; gap: 6px; min-width: 0; }
+  .ix-control input { width: 100%; accent-color: var(--marking); }
+  .ix-scale { display: flex; justify-content: space-between; font: 400 0.62rem/1 var(--f-data); color: var(--ink-3); letter-spacing: 0.08em; }
+  .ix-svg-wrap { overflow-x: auto; }
+  .ix-svg { width: 100%; min-width: 620px; height: auto; display: block; color: var(--seam-2); }
+  .ix-axis { stroke: var(--seam-2); stroke-dasharray: 8 6; }
+  .ix-skin, .ix-wall { fill: none; stroke: var(--ti-hi); stroke-width: 2.5; }
+  .ix-wall.dim { stroke: var(--seam-2); stroke-width: 1.5; stroke-dasharray: 5 4; }
+  .ix-engine { fill: var(--hull-3); stroke: var(--ti-lo); }
+  .ix-ab { fill: var(--hull-2); stroke: var(--seam-2); }
+  .ix-lbl { font: 700 13px var(--f-data); fill: var(--ink-2); letter-spacing: 0.12em; }
+  .ix-lbl.dim { fill: var(--ink-3); font-weight: 400; font-size: 11px; }
+  .ix-spike { fill: var(--ti-lo); stroke: var(--ti-hi); stroke-width: 1.5; }
+  [data-spike] { transition: transform 0.35s cubic-bezier(.2, .7, .2, 1); }
+  .ix-door rect { fill: var(--ti-hi); transition: fill 0.25s, opacity 0.25s; }
+  .ix-door .ix-flow { fill: none; stroke: var(--marking); stroke-width: 2; opacity: 0; transition: opacity 0.25s; }
+  .ix-door[data-open="1"] rect { fill: var(--marking); opacity: 0.35; }
+  .ix-door[data-open="1"] .ix-flow { opacity: 1; }
+  .ix-door[data-open="0.5"] rect { fill: var(--marking); opacity: 0.6; }
+  .ix-door[data-open="0.5"] .ix-flow { opacity: 0.55; stroke-dasharray: 4 3; }
+  .ix-flap { stroke: var(--ti-hi); stroke-width: 2.5; fill: none; transform-box: fill-box; transform-origin: 0 0; transition: transform 0.35s; }
+  .ix-door[data-open="1"] .ix-flap { transform: rotate(-14deg); stroke: var(--marking); }
+  .ix-door[data-open="0.5"] .ix-flap { transform: rotate(-7deg); }
+  .ix-tags text { font: 400 11px var(--f-data); fill: var(--ink-3); letter-spacing: 0.06em; }
+  .ix-readouts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--seam); border: 1px solid var(--seam); }
+  .ix-cell { background: var(--hull); padding: 14px 16px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+  .ix-cell b { font: 700 1.25rem/1.15 var(--f-data); color: var(--stencil); font-variant-numeric: tabular-nums; }
+  .ix-cell small { font-size: 0.78rem; line-height: 1.45; color: var(--ink-3); }
+  .bars { display: grid; gap: 7px; }
+  .bar { position: relative; height: 22px; background: var(--hull-2); }
+  .bar i { position: absolute; inset: 0 auto 0 0; width: calc(var(--w) * 1%); background: var(--marking); opacity: 0.75; transition: width 0.4s cubic-bezier(.2, .7, .2, 1); }
+  .bar:nth-child(2) i { background: var(--ti-lo); }
+  .bar:nth-child(3) i { background: var(--ti-hi); opacity: 0.5; }
+  .bar span { position: relative; font: 400 0.72rem/22px var(--f-data); padding-left: 8px; color: var(--stencil); letter-spacing: 0.04em; }
+  .bar b { font-variant-numeric: tabular-nums; }
+  .ix-table-wrap { overflow-x: auto; }
+  .ix-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  .ix-table caption { text-align: left; padding-bottom: 8px; }
+  .ix-table th, .ix-table td { text-align: left; padding: 7px 10px; border-top: 1px solid var(--seam); vertical-align: top; }
+  .ix-table th { font: 400 0.7rem/1.5 var(--f-data); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); width: 34%; font-weight: 400; }
+  .ix-table td { color: var(--ink); }
+  .ix-table td.changed { animation: ix-flash 0.8s ease-out; }
+  @keyframes ix-flash { from { background: var(--marking-soft); } to { background: transparent; } }
+  .ix-note { margin: 0; font-size: 0.8rem; color: var(--ink-3); line-height: 1.5; }
+  @media (max-width: 760px) {
+    .ix-top { grid-template-columns: auto minmax(0, 1fr); }
+    .ix-top .btn { grid-column: 1 / -1; justify-content: center; }
+    .ix-readouts { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-spike], .ix-door rect, .ix-door .ix-flow, .ix-flap, .bar i { transition: none; }
+    .ix-table td.changed { animation: none; }
+  }
+</style>
+
+<script>
+  type State = Record<string, string | number> & { mach: number };
+  type Split = { mach: number; label: string; inlet: number; engine: number; ejector: number };
+  for (const root of document.querySelectorAll<HTMLElement>('[data-inlet]')) {
+    const data = JSON.parse(root.querySelector('[data-inlet-data]')!.textContent || '{}') as {
+      spike: { start_mach: number; inches_per_tenth: number; max_inches: number }; states: State[]; split: Split[];
+    };
+    const range = root.querySelector<HTMLInputElement>('[data-range]')!;
+    const out = root.querySelector('[data-mach]')!;
+    const spike = root.querySelector<SVGGElement>('[data-spike]')!;
+    const spikeIn = root.querySelector('[data-spike-in]')!;
+    const start = root.querySelector('[data-start]')!;
+    const bars = root.querySelector<HTMLElement>('[data-bars]')!;
+    const note = root.querySelector('[data-split-note]')!;
+    const rowLabel = root.querySelector('[data-row]')!;
+    const play = root.querySelector<HTMLButtonElement>('[data-play]')!;
+    const PX_PER_IN = 1.74; // the spike protrudes 69 in ahead of the cowl lip, drawn as 120 px, so its travel keeps that proportion
+    // How open a door looks for the manual's wording
+    const openness = (v: string) => (/^open$|^scheduled open|^open$/i.test(v) ? '1' : /as required|opening/i.test(v) ? '0.5' : '0');
+    let last = -1;
+    function set(m: number) {
+      m = Math.round(m * 10) / 10;
+      out.textContent = m.toFixed(1);
+      const inches = Math.min(data.spike.max_inches, Math.max(0, (m - data.spike.start_mach) * 10 * data.spike.inches_per_tenth));
+      spike.style.transform = `translateX(${(inches * PX_PER_IN).toFixed(1)}px)`;
+      spikeIn.textContent = `${inches.toFixed(1)} in aft`;
+      start.textContent = m < 1.6 ? 'Not yet started' : m < 1.8 ? 'Starting (Mach 1.6 to 1.8)' : 'Started';
+      const row = [...data.states].reverse().find((s) => s.mach <= m + 1e-9) ?? data.states[0];
+      if (row.mach !== last) {
+        last = row.mach;
+        rowLabel.textContent = row.mach.toFixed(1);
+        for (const td of root.querySelectorAll<HTMLElement>('[data-state]')) {
+          const v = String(row[td.dataset.state!]);
+          if (td.textContent !== v) { td.textContent = v; td.classList.remove('changed'); void td.offsetWidth; td.classList.add('changed'); }
+        }
+        for (const g of root.querySelectorAll<SVGGElement>('[data-door]')) g.dataset.open = openness(String(row[g.dataset.door!]));
+      }
+      const sp = [...data.split].reverse().find((s) => s.mach <= m + 1e-9);
+      bars.hidden = !sp;
+      if (sp) {
+        for (const k of ['inlet', 'engine', 'ejector'] as const) {
+          root.querySelector<HTMLElement>(`[data-bar="${k}"]`)!.style.setProperty('--w', String(sp[k]));
+          root.querySelector(`[data-val="${k}"]`)!.textContent = String(sp[k]);
+        }
+        note.textContent = `Published figure for ${sp.label}. The split is published only for Mach 2.2 and Mach 3 cruise; nothing in between is interpolated.`;
+      } else {
+        note.textContent = 'No split is published below Mach 2.2. The published figures are for Mach 2.2 and Mach 3 cruise only.';
+      }
+    }
+    range.addEventListener('input', () => set(parseFloat(range.value)));
+    let timer = 0;
+    play.addEventListener('click', () => {
+      cancelAnimationFrame(timer);
+      const t0 = performance.now(), dur = 9000;
+      const tick = (t: number) => {
+        const k = Math.min(1, (t - t0) / dur);
+        range.value = String(Math.round(k * 32) / 10);
+        set(parseFloat(range.value));
+        if (k < 1) timer = requestAnimationFrame(tick);
+      };
+      timer = requestAnimationFrame(tick);
+    });
+    const fromHash = /^#m(\d(?:\.\d)?)$/.exec(location.hash);
+    if (fromHash) range.value = String(Math.min(3.2, parseFloat(fromHash[1])));
+    set(parseFloat(range.value));
+  }
+</script>

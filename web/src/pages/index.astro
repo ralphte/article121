@@ -7,7 +7,7 @@ import Loupe from '../components/Loupe.astro';
 import Photo from '../components/Photo.astro';
 import Lightbox from '../components/Lightbox.astro';
 import SourceLinks from '../components/SourceLinks.astro';
-import { fmtDate, PROGRAM_LABEL, resolveCitations, lossDate, placeOf } from '../lib/data';
+import { fmtDate, PROGRAM_LABEL, resolveCitations, lossDate, placeOf, sourceHref } from '../lib/data';
 
 const hero = (await getEntry('photos', 'sr71-takeoff'))!;
 const exhibitA = (await getEntry('photos', 'nasm-61-7972-hangar'))!;
@@ -62,7 +62,7 @@ const totalSources = (await getCollection('sources')).length;
     <Loupe photo={exhibitA}>
       <span>SR-71A</span><span>61-7972 · Article 2023</span><span>Udvar-Hazy Center, Chantilly, Va.</span><span>Smithsonian {exhibitA.data.original_id}</span><a class="hot" href={exhibitA.data.source_page}>CC0 · source</a>
     </Loupe>
-    <p class="ex-note">The SR-71A that flew from Los Angeles to Washington in 64 minutes 20 seconds on its last flight, 6 March 1990, nose-on in the Smithsonian's hangar. Move over the print to inspect it the way photo interpreters did, with a loupe. <a href="/register/61-7972/">This airframe's file</a></p>
+    <p class="ex-note">The SR-71A that flew from Los Angeles to Washington in 64 minutes 20 seconds on its last flight, 6 March 1990, nose-on in the Smithsonian's hangar. Move over the print to inspect it the way photo interpreters did, with a loupe. <a href="/register/61-7972/">This airframe's file</a> · <a href="/machine/#inlet">How those inlets worked</a></p>
   </section>
 
   <section class="wrap" id="chronology" aria-labelledby="chrono-h">
@@ -125,7 +125,7 @@ const totalSources = (await getCollection('sources')).length;
       <div class="file-head"><b>File A121-0004</b><span>Sources on this page</span><span>{pageSources.length}</span></div>
       <h2 class="section" id="src-h">Sources</h2>
       <ol>
-        {pageSources.map(({ entry }) => <li>{entry.data.publisher}. <em>{entry.data.title}</em>. <a href={entry.data.url}>Open</a> · <a href={`/sources/#${entry.id}`}>In the register</a></li>)}
+        {pageSources.map(({ entry }) => <li>{entry.data.publisher}. <em>{entry.data.title}</em>. <a href={sourceHref(entry.data)}>{entry.data.offline && entry.data.archive ? 'Archived copy' : 'Open'}</a>{entry.data.archive && !entry.data.offline && <> · <a href={entry.data.archive}>Archived</a></>} · <a href={`/sources/#${entry.id}`}>In the register</a></li>)}
       </ol>
       <p style="margin-top:16px"><a class="btn" href="/sources/">All {totalSources} sources</a></p>
     </div>

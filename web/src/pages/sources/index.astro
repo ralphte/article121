@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
+import { sourceHref } from '../../lib/data';
 const all = await getCollection('sources');
 const byPub = new Map<string, typeof all>();
 for (const s of all) { const k = s.data.publisher || 'Other'; byPub.set(k, [...(byPub.get(k) ?? []), s]); }
@@ -14,14 +15,22 @@ for (const p of photos) lic.set(p.data.license, (lic.get(p.data.license) ?? 0) +
     <header class="page-head panel ticks">
       <div class="file-head"><b>File A121-0004</b><span>Source register</span><span>{all.length} sources</span></div>
       <h1 class="display">Sources</h1>
-      <p>Every document, archive and record cited anywhere on Article 121, grouped by who published it. The number beside each is how many facts on the site rest on it.</p>
+      <p>Every document, archive and record cited anywhere on Article 121, grouped by who published it. The number beside each is how many facts on the site rest on it. Where the Internet Archive holds a copy, it is linked too; where the original has gone offline, the title links to that copy.</p>
       <p class="label">Photographs: {[...lic.entries()].sort((a, b) => b[1] - a[1]).map(([l, n]) => `${n} ${l}`).join(' · ')}</p>
     </header>
     {groups.map((g) => (
       <section class="pub panel">
         <h2>{g.pub} <span class="label">{g.list.length} {g.list.length === 1 ? 'source' : 'sources'} · cited {g.uses} times</span></h2>
         <ol>
-          {g.list.map((s) => <li id={s.id}><a href={s.data.url}>{s.data.title}</a> <span class="uses">{s.data.uses}</span></li>)}
+          {g.list.map((s) => (
+            <li id={s.id}>
+              <a href={sourceHref(s.data)}>{s.data.title}</a> <span class="uses">{s.data.uses}</span>
+              {s.data.archive && (s.data.offline
+                ? <span class="arc">archived copy of {s.data.archived}; <a href={s.data.url} title={s.data.offline}>original offline</a></span>
+                : <span class="arc"><a href={s.data.archive}>archived copy</a> {s.data.archived}</span>)}
+              {!s.data.archive && s.data.offline && <span class="arc">original offline, no archived copy</span>}
+            </li>
+          ))}
         </ol>
       </section>
     ))}
@@ -34,4 +43,6 @@ for (const p of photos) lic.set(p.data.license, (lic.get(p.data.license) ?? 0) +
   .pub li { scroll-margin-top: 70px; overflow-wrap: anywhere; }
   .pub li:target { background: var(--marking-soft); outline: 1px solid var(--marking); outline-offset: 4px; }
   .uses { font: 700 0.62rem/1 var(--f-data); color: var(--ink-3); margin-left: 6px; }
+  .arc { display: block; font: 400 0.68rem/1.5 var(--f-data); letter-spacing: 0.04em; color: var(--ink-3); }
+  .arc a { color: var(--ink-2); text-decoration-color: var(--seam-2); }
 </style>

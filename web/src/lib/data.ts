@@ -62,5 +62,8 @@ export async function photosFor(airframeId: string) {
     .sort((a, b) => a.id.localeCompare(b.id));
 }
 
+/** Where a source link should go: the archived copy when the original has gone offline. */
+export const sourceHref = (d: { url: string; archive?: string; offline?: string }) => (d.offline && d.archive ? d.archive : d.url);
+
 /** Short label for a source: the work's title without parenthetical detail. */
 export const shortTitle = (t: string) => t.replace(/\s*\([^)]*\)\s*$/, '').replace(/\s*\([^)]*\)/g, '').trim();

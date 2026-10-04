@@ -2,12 +2,13 @@
 // One photograph with its full credit: creator, date, licence (linked) and source.
 import { Picture } from 'astro:assets';
 import type { Photo } from '../lib/data';
-interface Props { photo: Photo; sizes?: string; frame?: string; eager?: boolean; }
-const { photo, sizes = '(max-width: 900px) 100vw, 640px', frame, eager = false } = Astro.props;
+interface Props { photo: Photo; sizes?: string; frame?: string; eager?: boolean; whole?: boolean; }
+// whole: show the entire image uncropped (document pages and diagrams) on a paper mat
+const { photo, sizes = '(max-width: 900px) 100vw, 640px', frame, eager = false, whole = false } = Astro.props;
 const p = photo.data;
 const full = p.master ?? null;
 ---
-<figure class="photo" data-full={full ?? undefined} data-caption={p.caption} data-credit={`${p.creator}${p.date ? ' · ' + p.date : ''} · ${p.license}`} data-source={p.source_page}>
+<figure class:list={["photo", { whole }]} data-full={full ?? undefined} data-caption={p.caption} data-credit={`${p.creator}${p.date ? ' · ' + p.date : ''} · ${p.license}`} data-source={p.source_page}>
   <div class="shot">
     <Picture src={p.file} alt={p.caption} widths={[480, 800, 1200, 1600]} sizes={sizes} formats={['avif', 'webp']} loading={eager ? 'eager' : 'lazy'} />
     {frame && <span class="no">{frame}</span>}
@@ -23,6 +24,9 @@ const full = p.master ?? null;
   .shot { position: relative; overflow: hidden; background: var(--void); }
   .shot :global(img) { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; transition: transform 0.6s cubic-bezier(.2,.7,.2,1); }
   .photo:hover .shot :global(img) { transform: scale(1.03); }
+  .whole .shot { background: #e8e5dc; padding: 10px; }
+  .whole .shot :global(img) { aspect-ratio: auto; object-fit: contain; }
+  .photo.whole:hover .shot :global(img) { transform: none; }
   .no { position: absolute; left: 10px; top: 8px; font: 700 0.6rem/1 var(--f-data); letter-spacing: 0.16em; color: var(--stencil); background: rgba(5,7,10,0.7); padding: 5px 7px; }
   .open { all: unset; position: absolute; inset: 0; cursor: zoom-in; }
   .open:focus-visible { outline: 2px solid var(--marking); outline-offset: -2px; }
