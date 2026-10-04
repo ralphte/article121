@@ -22,3 +22,21 @@ model/reference/
 # systems research media: public set in R2 article121-files/systems, Cockpit360 crops in the archive
 research/systems/media/*
 !research/systems/media/manifest.json
+
+# never commit credentials (the repository is public; tools/git-hooks and CI scan with gitleaks too)
+.dev.vars
+.dev.vars.*
+.wrangler/
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+*credentials*.json
+*.secret
+*.secrets
+rclone.conf
+
+# video masters live in R2, never in git (research/videos/catalog.* are committed)
+research/videos/raw/

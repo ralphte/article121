@@ -16,7 +16,9 @@ import hashlib, json, sys, urllib.request
 tok = sys.argv[1]
 req = lambda p: json.load(urllib.request.urlopen(urllib.request.Request("https://api.cloudflare.com/client/v4" + p, headers={"Authorization": "Bearer " + tok})))
 tid = req("/user/tokens/verify")["result"]["id"]
-acct = [a["id"] for a in req("/accounts")["result"] if a["name"] == "Ralph@mwgroup.io's Account"][0]
+accts = req("/accounts")["result"]           # the token is scoped to the one Article 121 account
+assert len(accts) == 1, "expected a token scoped to exactly one Cloudflare account"
+acct = accts[0]["id"]
 print(f"export RCLONE_CONFIG_R2_ACCESS_KEY_ID={tid}")
 print(f"export RCLONE_CONFIG_R2_SECRET_ACCESS_KEY={hashlib.sha256(tok.encode()).hexdigest()}")
 print(f"export RCLONE_CONFIG_R2_ENDPOINT=https://{acct}.r2.cloudflarestorage.com")

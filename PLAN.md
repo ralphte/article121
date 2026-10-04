@@ -12,6 +12,8 @@ Article 121 documents the Lockheed A-12, YF-12, M-21/D-21 and SR-71 in the highe
 4. **Originals stay original.** No AI upscaling, colourising or restoration of historical photographs. If a cleaned copy is ever shown, the original sits beside it and the change is labelled.
 5. **Preserve what is fading.** Every source URL is captured to the Wayback Machine. Legacy fan and veteran sites are credited, and mirrored only with written permission.
 6. **Corrections in the open.** Each page links to a GitHub issue form. Fixes land as public commits.
+7. **Our own copy of everything shown.** Every image, video, model and document the site displays is served from Article 121's own hosting (the site or files.article121.com), never hotlinked or embedded from another host; the content security policy enforces it. Sources are linked, with their Wayback copy, not embedded.
+8. **No secrets in the repository.** The repository is public. Credentials live in 1Password and are read at run time; gitleaks checks every commit, push and CI run, and GitHub push protection is on.
 
 ## 2. Site map
 
@@ -122,7 +124,7 @@ Performance and access budgets: Largest Contentful Paint under 2.5 s on a mid-ra
 
 3D is used only where it adds information or atmosphere a photograph cannot: the opening folder, the register globe, the inlet explainer. No 3D aircraft appears until a model matches the photographs beside it. No museum or agency has released an open 3D scan of any Blackbird (Smithsonian 3D, NASA 3D Resources and Sketchfab CC0 all checked). If a model is wanted later: ask the author of the photogrammetry scan of the Smithsonian SR-71A for permission, ask the Smithsonian Digitization Program Office whether 61-7972 is on their list, or build one in Blender from the published three-view drawings.
 
-Status, 4 October 2026: the model is being built in Blender from NASA Dryden's three-view (EG-0075-02), scaled to NASA's fuselage stations, with cross-sections from the Lockheed section sheet (`model/`). v0.3 adds the canopy; outline scores against the drawing are 97.6 percent (plan) and 95.4 percent (side). It stays off the public site until it matches the photographs beside it; files are at files.article121.com/models/.
+Status, 4 October 2026: the owner asked for the high-quality 3D render, so the model is now on The Machine page as "Exhibit 3D": an interactive three.js viewer (orbit, six set views, labels linking to the systems sections) with a Cycles render from the same camera as its poster. It is built in Blender from NASA Dryden's three-view (EG-0075-02), scaled to NASA's fuselage stations, with cross-sections from the Lockheed section sheet (`model/`). v0.4 has the canopy glass, ejector metal and inlet ducts; outline overlap with the drawing is 97.6 percent (plan) and 95.4 percent (side). It is labelled a reconstruction, not a scan. Files: files.article121.com/models/ (web copy meshopt-compressed, 1.1 MB). Still to come: markings, panel lines, landing gear, cockpit interiors.
 
 ## 9. Roadmap
 

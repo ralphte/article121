@@ -1,0 +1,4 @@
+studio-small-01.hdr: "Studio Small 01" by Greg Zaal, Poly Haven (https://polyhaven.com/a/studio_small_01),
+released under CC0 1.0. This 1024 x 512 copy is the one bundled with Blender 5.2
+(datafiles/studiolights/world/studio.exr), converted to Radiance HDR. It lights the 3D model on
+The Machine page and the Cycles renders of the same model.

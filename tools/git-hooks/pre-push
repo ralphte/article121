@@ -1,0 +1,23 @@
+#!/bin/sh
+# Second guard before anything reaches the public remote: scan every commit being pushed with
+# gitleaks, and refuse commits that carry local-only MEX memory files.
+zero=0000000000000000000000000000000000000000
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "pre-push: gitleaks is not installed (brew install gitleaks); refusing to push unscanned commits." >&2
+  exit 1
+fi
+while read local_ref local_sha remote_ref remote_sha; do
+  [ "$local_sha" = "$zero" ] && continue
+  if [ "$remote_sha" = "$zero" ]; then range="$local_sha"; else range="$remote_sha..$local_sha"; fi
+  if ! gitleaks git --log-opts="$range" --redact --no-banner --log-level warn .; then
+    echo "pre-push: possible secret in $range. Nothing was pushed." >&2
+    exit 1
+  fi
+  hit=$(git log --name-only --format= $range | grep -E '^(\.mex/|CLAUDE\.md$|\.claude/skills/mex-)' | sort -u || true)
+  if [ -n "$hit" ]; then
+    echo "pre-push: refusing to push MEX memory files to the remote:" >&2
+    echo "$hit" | sed 's/^/  /' >&2
+    exit 1
+  fi
+done
+exit 0

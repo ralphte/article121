@@ -1,0 +1,240 @@
+---
+// The 3D SR-71A: Article 121's model, rebuilt from NASA's three-view and a Lockheed section drawing,
+// rendered live with three.js. A Cycles render from the same opening camera stands in while it
+// loads, and stays if WebGL is unavailable. Materials are dressed by the names the builder gives.
+import { Picture } from 'astro:assets';
+import poster from '../assets/model/sr71a-hero.jpg';
+interface Props { src: string; env: string; }
+const { src, env } = Astro.props;
+const VIEWS: [string, string][] = [['hero', 'Three-quarter'], ['nose', 'Nose on'], ['side', 'Side'], ['top', 'Plan'], ['rear', 'Rear'], ['cockpit', 'Cockpit']];
+const HOTSPOTS: [string, string, string][] = [['inlet', 'Inlet spike', '#inlet'], ['cockpit', 'Cockpits', '#cockpits'], ['exhaust', 'J58 and ejector', '#j58'], ['skin', 'Titanium skin', '#heat']];
+---
+<figure class="mv" data-mv data-src={src} data-env={env}>
+  <div class="mv-stage">
+    <Picture class="mv-poster" src={poster} alt="Render of the Article 121 SR-71A model from the front left, against black" widths={[800, 1200, 1600, 2400]} sizes="(max-width: 1240px) 100vw, 1240px" formats={['avif', 'webp']} loading="eager" />
+    <canvas class="mv-canvas" role="img" aria-label="Interactive 3D model of the SR-71A. Drag to turn it, scroll or pinch to zoom."></canvas>
+    <div class="mv-hots" aria-hidden="false">
+      {HOTSPOTS.map(([id, label, href]) => <a class="mv-hot" data-hot={id} href={href} hidden><i></i><span>{label}</span></a>)}
+    </div>
+    <p class="mv-status label" data-status>Loading the 3D model (1.1 MB)</p>
+  </div>
+  <div class="mv-bar">
+    <div class="mv-views" role="group" aria-label="Views">
+      {VIEWS.map(([id, label], i) => <button type="button" class="chip" data-view={id} aria-pressed={i === 0 ? 'true' : 'false'}>{label}</button>)}
+    </div>
+    <div class="mv-toggles">
+      <button type="button" class="chip" data-labels aria-pressed="true">Labels</button>
+      <button type="button" class="chip" data-spin aria-pressed="false">Turntable</button>
+    </div>
+  </div>
+  <figcaption>
+    <slot />
+  </figcaption>
+</figure>
+
+<style>
+  .mv { margin: 0; border: 1px solid var(--seam-2); background: var(--void); }
+  .mv-stage { position: relative; aspect-ratio: 16 / 9; overflow: hidden; touch-action: none; }
+  .mv-stage :global(.mv-poster), .mv-stage :global(.mv-poster img) { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.8s ease; }
+  .mv-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; opacity: 0; transition: opacity 0.8s ease; cursor: grab; }
+  .mv-canvas:active { cursor: grabbing; }
+  [data-mv][data-ready] .mv-canvas { opacity: 1; }
+  [data-mv][data-ready] :global(.mv-poster) { opacity: 0; }
+  .mv-status { position: absolute; left: 14px; bottom: 10px; margin: 0; color: var(--ink-3); }
+  [data-mv][data-ready] .mv-status { display: none; }
+  .mv-hots { position: absolute; inset: 0; pointer-events: none; }
+  .mv-hot {
+    position: absolute; left: 0; top: 0; pointer-events: auto; display: inline-flex; align-items: center; gap: 8px;
+    font: 700 0.62rem/1 var(--f-data); letter-spacing: 0.14em; text-transform: uppercase; color: var(--stencil);
+    text-decoration: none; transition: opacity 0.25s; white-space: nowrap;
+  }
+  .mv-hot i { width: 9px; height: 9px; border-radius: 50%; background: var(--marking); box-shadow: 0 0 0 3px rgba(212, 67, 47, 0.28); flex: none; }
+  .mv-hot span { background: rgba(5, 7, 10, 0.72); border: 1px solid var(--seam-2); padding: 5px 7px; }
+  .mv-hot:hover span, .mv-hot:focus-visible span { border-color: var(--marking); }
+  .mv-hot.behind { opacity: 0; pointer-events: none; }
+  .mv-bar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; padding: 12px 14px; border-top: 1px solid var(--seam); }
+  .mv-views, .mv-toggles { display: flex; flex-wrap: wrap; gap: 6px; }
+  figcaption { padding: 0 14px 14px; font-size: 0.86rem; line-height: 1.55; color: var(--ink-2); }
+  figcaption :global(p) { margin: 0 0 8px; max-width: 78ch; }
+  @media (max-width: 640px) {
+    .mv-stage { aspect-ratio: 4 / 3; }
+    .mv-hot span { display: none; }
+  }
+</style>
+
+<script>
+  import * as THREE from 'three';
+  import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+  import { HDRLoader } from 'three/examples/jsm/loaders/HDRLoader.js';
+  import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+  import { RectAreaLightUniformsLib } from 'three/examples/jsm/lights/RectAreaLightUniformsLib.js';
+  import { MeshoptDecoder } from 'three/examples/jsm/libs/meshopt_decoder.module.js';
+
+  // Cameras in the model's frame (x aft is negative, y up, z to the left wing), with the horizontal
+  // field of view of the lens each Cycles still was rendered with, so "hero" matches the poster.
+  const hfov = (mm: number) => 2 * Math.atan(18 / mm);
+  const VIEWS: Record<string, { pos: [number, number, number]; target: [number, number, number]; hfov: number }> = {
+    hero: { pos: [13, 6.5, 21], target: [-16, 0.5, 0], hfov: hfov(42) },
+    nose: { pos: [22, 2.6, 0.001], target: [-14, 0.6, 0], hfov: hfov(85) },
+    side: { pos: [-15.6, 0.9, 62], target: [-15.6, 0.9, 0], hfov: hfov(55) },
+    top: { pos: [-15.6, 70, 0.01], target: [-15.6, 0, 0], hfov: hfov(45) },
+    rear: { pos: [-50, 4.5, -15], target: [-17, 0.6, 0], hfov: hfov(50) },
+    cockpit: { pos: [1.5, 2.9, 5.2], target: [-6, 0.9, 0], hfov: hfov(50) },
+  };
+  // Hotspot anchors on the airframe (left side, facing the opening view): spike tip, canopy, ejector, a chine panel
+  const HOTS: Record<string, [number, number, number]> = {
+    inlet: [-15.97, 0.1, 4.03], cockpit: [-5.0, 1.38, 0], exhaust: [-29.3, 0.3, 4.2], skin: [-9.5, 0.55, 1.25],
+  };
+  const lin = (r: number, g: number, b: number) => new THREE.Color().setRGB(r, g, b, THREE.LinearSRGBColorSpace);
+  const MATERIALS: Record<string, () => THREE.Material> = {
+    'Blackbird skin': () => new THREE.MeshPhysicalMaterial({ color: lin(0.0105, 0.0118, 0.0155), roughness: 0.34, metalness: 0, clearcoat: 0.25, clearcoatRoughness: 0.18 }),
+    'Canopy glass': () => new THREE.MeshPhysicalMaterial({ color: lin(0.012, 0.016, 0.02), roughness: 0.03, metalness: 0, clearcoat: 1, clearcoatRoughness: 0 }),
+    'Ejector metal': () => new THREE.MeshPhysicalMaterial({ color: lin(0.26, 0.22, 0.18), roughness: 0.4, metalness: 1 }),
+    'Inlet duct': () => new THREE.MeshStandardMaterial({ color: lin(0.006, 0.006, 0.007), roughness: 0.75, side: THREE.DoubleSide }),
+    'Intake and nozzle': () => new THREE.MeshStandardMaterial({ color: lin(0.006, 0.006, 0.007), roughness: 0.75, side: THREE.DoubleSide }),
+  };
+
+  for (const fig of document.querySelectorAll<HTMLElement>('[data-mv]')) {
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting)) { io.disconnect(); start(fig).catch((err) => fail(fig, err)); }
+    }, { rootMargin: '300px' });
+    io.observe(fig);
+  }
+
+  function fail(fig: HTMLElement, err: unknown) {
+    console.error(err);
+    const s = fig.querySelector('[data-status]');
+    if (s) s.textContent = 'The 3D view could not start here; this is a render of the same model.';
+    fig.dataset.error = '1';
+  }
+
+  async function start(fig: HTMLElement) {
+    const canvas = fig.querySelector<HTMLCanvasElement>('.mv-canvas')!;
+    const stage = fig.querySelector<HTMLElement>('.mv-stage')!;
+    const status = fig.querySelector('[data-status]')!;
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let dirty = true, visible = true;   // redraw needed; viewer on screen
+
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+    renderer.toneMapping = THREE.AgXToneMapping;
+    renderer.toneMappingExposure = 0.9;
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    renderer.setClearColor(0x000000, 0);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(30, 16 / 9, 0.1, 400);
+    const controls = new OrbitControls(camera, canvas);
+    controls.enableDamping = !reduce; controls.dampingFactor = 0.08;
+    controls.enablePan = false; controls.minDistance = 6; controls.maxDistance = 95;
+    controls.autoRotateSpeed = 0.6;
+
+    // light: the same CC0 studio map as the stills (environment only, never seen), plus area lights
+    // standing in for the stills' softbox and rim strips
+    RectAreaLightUniformsLib.init();
+    const pmrem = new THREE.PMREMGenerator(renderer);
+    const hdr = await new HDRLoader().loadAsync(fig.dataset.env!);
+    scene.environment = pmrem.fromEquirectangular(hdr).texture;
+    hdr.dispose(); pmrem.dispose();
+    scene.environmentIntensity = 0.2;
+    scene.environmentRotation.set(0, THREE.MathUtils.degToRad(35), 0);
+    const area = (w: number, h: number, intensity: number, pos: [number, number, number], color = 0xffffff) => {
+      const l = new THREE.RectAreaLight(color, intensity, w, h); l.position.set(...pos); l.lookAt(-15, 0, 0); scene.add(l);
+    };
+    area(22, 9, 4, [-14, 22, 0]);
+    area(36, 2.5, 9, [-34, 7, -24], 0xd1e6ff);
+    area(36, 2.5, 9, [-34, 7, 24], 0xd1e6ff);
+    area(10, 4, 0.6, [26, 2, 10], 0xffeed9);
+
+    const loader = new GLTFLoader();
+    loader.setMeshoptDecoder(MeshoptDecoder);
+    status.textContent = 'Loading the 3D model (1.1 MB)';
+    const gltf = await loader.loadAsync(fig.dataset.src!);
+    const meshes: THREE.Mesh[] = [];
+    gltf.scene.traverse((o) => {
+      const m = o as THREE.Mesh;
+      if (!m.isMesh) return;
+      // double-sided as the file declares: mirrored parts carry flipped winding, which three.js
+      // shades correctly only with both sides drawn
+      const swap = (mat: THREE.Material) => { const m = MATERIALS[mat.name] ? MATERIALS[mat.name]() : mat; m.side = THREE.DoubleSide; return m; };
+      m.material = Array.isArray(m.material) ? m.material.map(swap) : swap(m.material);
+      meshes.push(m);
+    });
+    scene.add(gltf.scene);
+
+    // camera moves between views; the field of view keeps the still's horizontal coverage
+    let view = 'hero', hf = VIEWS.hero.hfov;
+    const setFov = () => { camera.fov = THREE.MathUtils.radToDeg(2 * Math.atan(Math.tan(hf / 2) / camera.aspect)); camera.updateProjectionMatrix(); };
+    const place = (v: typeof VIEWS[string]) => { camera.position.set(...v.pos); controls.target.set(...v.target); hf = v.hfov; setFov(); controls.update(); };
+    place(VIEWS.hero);
+    let anim: null | { t0: number; from: { p: THREE.Vector3; t: THREE.Vector3; h: number }; to: typeof VIEWS[string] } = null;
+    const go = (name: string) => {
+      view = name;
+      fig.querySelectorAll<HTMLButtonElement>('[data-view]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === name)));
+      if (reduce) { place(VIEWS[name]); dirty = true; return; }
+      anim = { t0: performance.now(), from: { p: camera.position.clone(), t: controls.target.clone(), h: hf }, to: VIEWS[name] };
+    };
+    fig.querySelectorAll<HTMLButtonElement>('[data-view]').forEach((b) => b.addEventListener('click', () => go(b.dataset.view!)));
+    const labelsBtn = fig.querySelector<HTMLButtonElement>('[data-labels]')!;
+    let labels = true;
+    labelsBtn.addEventListener('click', () => { labels = !labels; labelsBtn.setAttribute('aria-pressed', String(labels)); dirty = true; });
+    const spinBtn = fig.querySelector<HTMLButtonElement>('[data-spin]')!;
+    if (reduce) spinBtn.hidden = true;
+    spinBtn.addEventListener('click', () => { controls.autoRotate = !controls.autoRotate; spinBtn.setAttribute('aria-pressed', String(controls.autoRotate)); });
+
+    const resize = () => {
+      const w = stage.clientWidth, h = stage.clientHeight;
+      renderer.setSize(w, h, false); camera.aspect = w / h; setFov(); dirty = true;
+    };
+    new ResizeObserver(resize).observe(stage);
+    resize();
+
+    // hotspots: projected each frame; hidden when the airframe is between them and the camera
+    const hots = [...fig.querySelectorAll<HTMLElement>('[data-hot]')];
+    const ray = new THREE.Raycaster();
+    const v3 = new THREE.Vector3();
+    let lastCheck = 0;
+    function placeHots(now: number) {
+      const w = stage.clientWidth, h = stage.clientHeight;
+      const occlusion = now - lastCheck > 120;
+      if (occlusion) lastCheck = now;
+      for (const el of hots) {
+        el.hidden = !labels;
+        if (!labels) continue;
+        const p = new THREE.Vector3(...HOTS[el.dataset.hot!]);
+        v3.copy(p).project(camera);
+        const onScreen = v3.z < 1 && Math.abs(v3.x) < 1.02 && Math.abs(v3.y) < 1.02;
+        el.style.transform = `translate(${((v3.x + 1) / 2 * w - 4).toFixed(1)}px, ${((1 - v3.y) / 2 * h - 4).toFixed(1)}px)`;
+        if (occlusion) {
+          const dir = p.clone().sub(camera.position); const dist = dir.length();
+          ray.set(camera.position, dir.normalize()); ray.far = dist - 0.25;
+          el.classList.toggle('behind', !onScreen || ray.intersectObjects(meshes, false).length > 0);
+        }
+      }
+    }
+
+    new IntersectionObserver((e) => { visible = e.some((x) => x.isIntersecting); }).observe(fig);
+    controls.addEventListener('change', () => { dirty = true; });
+    const ease = (t: number) => 1 - Math.pow(1 - t, 3);
+    function frame(now: number) {
+      requestAnimationFrame(frame);
+      if (!visible) return;
+      if (anim) {
+        const k = Math.min(1, (now - anim.t0) / 1100), e = ease(k);
+        camera.position.lerpVectors(anim.from.p, new THREE.Vector3(...anim.to.pos), e);
+        controls.target.lerpVectors(anim.from.t, new THREE.Vector3(...anim.to.target), e);
+        hf = anim.from.h + (anim.to.hfov - anim.from.h) * e; setFov();
+        if (k >= 1) anim = null;
+        dirty = true;
+      }
+      if (controls.update() || controls.autoRotate) dirty = true;
+      if (!dirty) return;
+      dirty = false;
+      renderer.render(scene, camera);
+      placeHots(now);
+    }
+    requestAnimationFrame(frame);
+    (fig as HTMLElement & { mv?: unknown }).mv = { camera, controls, renderer };   // for tests and the console
+    fig.dataset.ready = '1';
+  }
+</script>

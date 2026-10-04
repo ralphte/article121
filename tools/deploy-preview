@@ -11,7 +11,9 @@ export CLOUDFLARE_API_TOKEN=$(op read "op://DarkClouds-Secrets/Cloudflare articl
 export CLOUDFLARE_ACCOUNT_ID=$(python3 - <<'PY'
 import json, os, urllib.request
 req = urllib.request.Request("https://api.cloudflare.com/client/v4/accounts", headers={"Authorization": "Bearer " + os.environ["CLOUDFLARE_API_TOKEN"]})
-print([a["id"] for a in json.load(urllib.request.urlopen(req))["result"] if a["name"] == "Ralph@mwgroup.io's Account"][0])
+accts = json.load(urllib.request.urlopen(req))["result"]   # the token is scoped to the one Article 121 account
+assert len(accts) == 1, "expected a token scoped to exactly one Cloudflare account"
+print(accts[0]["id"])
 PY
 )
 npx -y wrangler@4 deploy -c wrangler.preview.jsonc

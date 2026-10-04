@@ -65,6 +65,16 @@
    "title": "Deactivation of the SR-71 Program at Beale Air Force Base, California (environmental assessment, October 1990)",
    "publisher": "U.S. Air Force",
    "url": "https://archive.org/details/DTIC_ADA270896"
+  },
+  "EG0075": {
+   "title": "SR-71A three-view, graphic EG-0075-02 (vector original, 1998)",
+   "publisher": "NASA Dryden Flight Research Center",
+   "url": "https://web.archive.org/web/20041117202822/https://www.dfrc.nasa.gov/Gallery/Graphics/SR-71/EPS/EG-0075-02.eps"
+  },
+  "TM4749": {
+   "title": "Wind-Tunnel Development of an SR-71 Aerospike Rocket Flight Test Configuration (NASA TM-4749, 1996)",
+   "publisher": "NASA",
+   "url": "https://ntrs.nasa.gov/api/citations/19960038443/downloads/19960038443.pdf"
   }
  },
  "intro": {
@@ -951,5 +961,18 @@
     ]
    }
   }
+ },
+ "model": {
+  "text": "Article 121 built this model in Blender from NASA Dryden's vector three-view of the SR-71A, put on true scale with the fuselage stations in a NASA wind-tunnel report (nose at station 102, tail cone at 1355). The cross-sections are measured from a Lockheed lines drawing whose original has not yet been traced to a government archive. Its outline overlaps NASA's drawing by 97.6 percent in plan view and 95.4 percent in side view. It is a reconstruction, not a scan: markings, panel lines, landing gear and the cockpit interiors are not modelled yet.",
+  "cite": [
+   [
+    "EG0075",
+    "plan, side and front views"
+   ],
+   [
+    "TM4749",
+    "figures 4 and 5"
+   ]
+  ]
  }
 }

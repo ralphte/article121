@@ -543,6 +543,19 @@
    }
   ]
  },
+ "model": {
+  "text": "Article 121 built this model in Blender from NASA Dryden's vector three-view of the SR-71A, put on true scale with the fuselage stations in a NASA wind-tunnel report (nose at station 102, tail cone at 1355). The cross-sections are measured from a Lockheed lines drawing whose original has not yet been traced to a government archive. Its outline overlaps NASA's drawing by 97.6 percent in plan view and 95.4 percent in side view. It is a reconstruction, not a scan: markings, panel lines, landing gear and the cockpit interiors are not modelled yet.",
+  "citations": [
+   {
+    "source": "nasa-dryden-flight-research-center-6228a9",
+    "detail": "plan, side and front views"
+   },
+   {
+    "source": "nasa-d6f724",
+    "detail": "figures 4 and 5"
+   }
+  ]
+ },
  "panel": {
   "figure": "diagram_SR-71A-1_fig1-12_front-cockpit-center-instrument-panel_p1-23",
   "width": 2142,

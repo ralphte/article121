@@ -1849,5 +1849,19 @@
   "uses": 1,
   "archive": "https://web.archive.org/web/20240805042127/https://ntrs.nasa.gov/api/citations/20120014266/downloads/20120014266.pdf",
   "archived": "2024-08-05"
+ },
+ {
+  "id": "nasa-dryden-flight-research-center-6228a9",
+  "title": "SR-71A three-view, graphic EG-0075-02 (vector original, 1998)",
+  "publisher": "NASA Dryden Flight Research Center",
+  "url": "https://web.archive.org/web/20041117202822/https://www.dfrc.nasa.gov/Gallery/Graphics/SR-71/EPS/EG-0075-02.eps",
+  "uses": 1
+ },
+ {
+  "id": "nasa-d6f724",
+  "title": "Wind-Tunnel Development of an SR-71 Aerospike Rocket Flight Test Configuration (NASA TM-4749, 1996)",
+  "publisher": "NASA",
+  "url": "https://ntrs.nasa.gov/api/citations/19960038443/downloads/19960038443.pdf",
+  "uses": 1
  }
 ]

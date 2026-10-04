@@ -39,7 +39,8 @@ def main():
     xs = [float(t) for t in a[a.index("--x") + 1].split(",")] if "--x" in a else STATIONS
     m = load(src); r = load(ref) if ref else None
     if "--overlay" in a:
-        return overlay(m, xs, out)
+        zoom = float(a[a.index("--zoom") + 1]) if "--zoom" in a else 1.0
+        return overlay(m, xs, out, ppm=int(150 * zoom), half_w=5.4 / zoom, top=1.6, bot=0.9)
     ppm, half_w, half_h = 110, 4.6, 2.4
     cols = 3
     pw, ph = int(2 * half_w * ppm), int(2 * half_h * ppm)
@@ -61,8 +62,7 @@ def main():
     print("wrote", out)
 
 
-def overlay(m, xs, out, ppm=150):
-    half_w, top, bot = 5.4, 1.6, 0.9
+def overlay(m, xs, out, ppm=150, half_w=5.4, top=1.6, bot=0.9):
     W, H = int(2 * half_w * ppm), int((top + bot) * ppm) + 60
     img = np.full((H, W, 3), 18, np.uint8)
     oy = int(top * ppm) + 30

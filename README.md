@@ -32,6 +32,16 @@ To view them locally: `cd design && python3 -m http.server 8121`, then open http
 
 Found an error or a better source? Open an issue. Please include the source.
 
+## Secrets
+
+This repository is public, so no credential is ever written into it. Keys and tokens live in 1Password and scripts read them at run time (`tools/r2` and `tools/deploy-preview` call `op read`). Three guards back that up:
+
+- `tools/git-hooks/pre-commit` and `pre-push` scan every commit with [gitleaks](https://github.com/gitleaks/gitleaks) before it leaves your machine. Enable them once per clone: `brew install gitleaks && git config core.hooksPath tools/git-hooks`.
+- The `Secrets` workflow scans the full history on every push and pull request.
+- GitHub secret scanning with push protection is switched on for the repository.
+
+If a secret is ever committed, rotate it first; removing it from history does not make it safe again.
+
 ## Licences
 
 - Code: MIT, see [LICENSE](LICENSE).

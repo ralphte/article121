@@ -181,6 +181,7 @@ const machine = {
   inlet: { ...machineIn.inlet_explainer, citations: machineCites(machineIn.inlet_explainer.cite, 'inlet explainer') },
 };
 delete machine.inlet.cite;
+if (machineIn.model) machine.model = { text: machineIn.model.text, citations: machineCites(machineIn.model.cite, 'model') };
 // Panel explorer: positions of the keyed items on the pilot's panel drawing (research/systems/panel_fig1-12.json)
 const panelIn = machineIn.panel;
 if (panelIn && existsSync(join(root, panelIn.positions))) {

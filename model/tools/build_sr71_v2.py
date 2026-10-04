@@ -45,15 +45,25 @@ def smooth(v, k=7):
     return np.convolve(pad, np.ones(k) / k, mode="valid")
 
 
-def obj(name, verts, faces, mat, angle=None):
+def obj(name, verts, faces, mat, angle=None, extra=None, face_mat=None):
+    """extra: further materials; face_mat: per-face material index (0 = mat, 1.. = extra)."""
     me = bpy.data.meshes.new(name)
     me.from_pydata([Vector((-x, y, z)) for x, y, z in verts], [], faces)
+    if face_mat is not None:
+        for poly, k in zip(me.polygons, face_mat):
+            poly.material_index = k
     me.validate(); me.update()
     ob = bpy.data.objects.new(name, me)
     bpy.context.collection.objects.link(ob)
     ob.data.materials.append(mat)
+    for m in extra or []:
+        ob.data.materials.append(m)
     bpy.context.view_layer.objects.active = ob
     ob.select_set(True)
+    # consistent normals: outward for skins, inward for the duct liners (mirrored parts arrive flipped)
+    bpy.ops.object.mode_set(mode="EDIT"); bpy.ops.mesh.select_all(action="SELECT")
+    bpy.ops.mesh.normals_make_consistent(inside=("liner" in name.lower() or "duct" in name.lower()))
+    bpy.ops.object.mode_set(mode="OBJECT")
     if angle is None:
         bpy.ops.object.shade_flat()
     else:
@@ -112,8 +122,8 @@ def fuselage(c, mat):
     HW_X = [3.5, 3.65, 3.9, 4.4, 5.2, 5.8, 6.4, 7.0, 7.6, 8.1, 8.5]
     HW_Y = [0.02, 0.2, 0.34, 0.5, 0.536, 0.5, 0.465, 0.44, 0.36, 0.2, 0.03]
     # how far out from the centreline the upper fillet reaches (m), by station
-    FIL_X = [15.9, 17.7, 21.0, 22.6, 27.5, 29.5, 30.4]
-    FIL_R = [float(env(15.9)), 3.0, 3.0, 1.6, 1.3, 1.1, 0.0]
+    FIL_X = [15.9, 17.7, 21.0, 22.6, 27.5, 29.4, 30.6]
+    FIL_R = [float(env(15.9)), 3.0, 3.0, 1.6, 1.3, 1.0, 0.0]
     for x in xs:
         # body half-width: traced line, tapered into the radome tip and the tail cone tip
         b = float(bw(x, left=np.nan, right=np.nan))
@@ -180,29 +190,43 @@ def fuselage(c, mat):
         def round_lo(y):
             u = min(1.0, y / max(b, 1e-6))
             return zc - (zc - zb) * max(0.0, 1 - u ** 2.3) ** (1 / 2.3)
+        # behind the junction the wing-level parts of the section sit 1.5 cm under the wing's mid
+        # plane, so the wing skin always covers them (coincident skins render as a crumpled patch)
+        zw = z0 - 0.015 if x >= 15.9 else z0
         def body_up(y):
             ys_ = 0.74 * b
             if y <= ys_ or Rf <= ys_ + 1e-3:
-                return round_up(min(y, b)) if y <= b else z0
+                return round_up(min(y, b)) if y <= b else zw
             if y >= Rf:
-                return z0
+                return zw
             za, h = round_up(ys_), Rf - ys_
             dy = min(0.01, ys_ / 2)
             m0 = (round_up(ys_) - round_up(ys_ - dy)) / max(dy, 1e-6)
-            lim = 3 * abs(za - z0) / h
-            m0 = max(-lim, min(lim, m0)) if (z0 - za) * m0 >= 0 else 0.0
+            lim = 3 * abs(za - zw) / h
+            m0 = max(-lim, min(lim, m0)) if (zw - za) * m0 >= 0 else 0.0
             t = (y - ys_) / h
-            return (2*t**3 - 3*t**2 + 1) * za + (t**3 - 2*t**2 + t) * h * m0 + (-2*t**3 + 3*t**2) * z0
+            return (2*t**3 - 3*t**2 + 1) * za + (t**3 - 2*t**2 + t) * h * m0 + (-2*t**3 + 3*t**2) * zw
         # underside: the lower body curve and its tangent line out to (W, z0)
         q = np.linspace(0, b, 40)
         zq = np.array([round_lo(v) for v in q])
-        sl = (z0 - zq) / np.maximum(W - q, 1e-6)
+        sl = (zw - zq) / np.maximum(W - q, 1e-6)
         k_t = int(np.argmax(sl)) if W > b + 1e-3 else len(q) - 1
         y_t, s_t = float(q[k_t]), float(sl[k_t])
         def body_lo(y):
             if y <= y_t:
                 return round_lo(y)
-            return z0 - s_t * (W - y) if W > b + 1e-3 else round_lo(min(y, b))
+            return zw - s_t * (W - y) if W > b + 1e-3 else round_lo(min(y, b))
+        # Behind the inboard trailing edge only the tail cone remains: a rounded section centred on the
+        # side-view outline. Blend to it over 29.4 to 30.6 m as the wing-body section closes.
+        tail = min(1.0, max(0.0, (x - 29.4) / 1.2)) ** 1.5
+        zm, hh = (zt + zb) / 2, (zt - zb) / 2
+        def tail_up(y):
+            u = min(1.0, y / max(b, 1e-6))
+            return zm + hh * max(0.0, 1 - u ** 2.3) ** (1 / 2.3)
+        def tail_lo(y):
+            u = min(1.0, y / max(b, 1e-6))
+            return zm - hh * max(0.0, 1 - u ** 2.3) ** (1 / 2.3)
+        W = (1 - tail) * W + tail * b
         if x < 0.05:
             zt = zb = zc = 0.0
         WW = max(w if s_tent > 0 else 0.0, W)
@@ -210,10 +234,10 @@ def fuselage(c, mat):
         half = []
         for t in np.linspace(0, 1, N_U):                   # spine out to the chine or wing edge
             y = WW * (1 - math.cos(t * math.pi / 2)) ** 0.85 if t < 1 else WW
-            half.append((y, s_tent * tent_up(min(y, w)) + (1 - s_tent) * body_up(min(y, W))))
+            half.append((y, s_tent * tent_up(min(y, w)) + (1 - s_tent) * ((1 - tail) * body_up(min(y, W)) + tail * tail_up(y))))
         for t in np.linspace(0, 1, N_L + 1)[1:]:           # back to the keel
             y = WW * (1 - t)
-            half.append((y, s_tent * tent_lo(min(y, w)) + (1 - s_tent) * body_lo(min(y, W))))
+            half.append((y, s_tent * tent_lo(min(y, w)) + (1 - s_tent) * ((1 - tail) * body_lo(min(y, W)) + tail * tail_lo(y))))
         if CAN_X0 <= x <= CAN_X1:
             hw = float(np.interp(x, HW_X, HW_Y))
             zs = tent_up(hw)
@@ -232,7 +256,28 @@ def fuselage(c, mat):
     v, f = loft(rings)
     body = obj("Fuselage", v, f, mat, angle=50)
     v, f = loft(canopy_rings, cap_start=True, cap_end=True)
-    return [body, obj("Canopy", v, f, mat, angle=35)]
+    # Glass, by face: the roof arc has 28 faces from the right sill (u = 1) over the top (u = 0) to
+    # the left sill (u = -1). Windshield panes 3.62 to 4.12 m with posts where the front pane meets
+    # the side panes; the pilot's canopy has large side windows under a metal top, 4.28 to 5.40 m;
+    # the RSO's canopy small side windows, 5.95 to 6.45 m. Frames and sills stay painted.
+    n_ring, n_roof = len(canopy_rings[0]), 28
+    cxs = [float(r[0, 0]) for r in canopy_rings]
+    fm = []
+    for i in range(len(canopy_rings) - 1):
+        xm = (cxs[i] + cxs[i + 1]) / 2
+        for j in range(n_ring):
+            k = 0
+            if j < n_roof:
+                u = abs(math.cos((j + 0.5) / n_roof * math.pi))
+                if 3.62 < xm < 4.12 and u < 0.95 and not 0.40 < u < 0.48:
+                    k = 1
+                elif 4.28 < xm < 5.40 and 0.47 < u < 0.93:
+                    k = 1
+                elif 5.95 < xm < 6.45 and 0.55 < u < 0.90:
+                    k = 1
+            fm.append(k)
+    fm += [0, 0]                                            # end caps
+    return [body, obj("Canopy", v, f, mat, angle=35, extra=[GLASS], face_mat=fm)]
 
 
 # ------------------------------------------------------------ wing
@@ -338,6 +383,9 @@ def nacelle_rings(c):
     return xs, smooth(np.array(ys)), smooth(np.array(zs)), smooth(np.array(aa)), smooth(np.array(bbv)), x_lip
 
 
+EJECTOR_X = 28.75
+
+
 def nacelles(c, mat, dark):
     xs, ys, zs, aa, bbv, x_lip = nacelle_rings(c)
     seg = 56
@@ -348,7 +396,16 @@ def nacelles(c, mat, dark):
     for side in (1, -1):
         rings = [np.column_stack([np.full(seg, x), side * y + a * np.cos(ang), z + b * np.sin(ang)]) for x, y, z, a, b in zip(xs, ys, zs, aa, bbv)]
         v, f = loft(rings)
-        objs.append(obj(f"Nacelle {'R' if side > 0 else 'L'}", v, f, mat, angle=60))
+        # the last 0.7 m is the bare-metal ejector, heat-stained in service
+        fm = [1 if xs[i] > EJECTOR_X else 0 for i in range(len(rings) - 1) for _ in range(seg)]
+        tag = 'R' if side > 0 else 'L'
+        objs.append(obj(f"Nacelle {tag}", v, f, mat, angle=60, extra=[EJECTOR], face_mat=fm))
+        # liners facing inward, so looking into an inlet or an exhaust shows a duct, not the far wall
+        for label, lo, hi, k, lm in (("Inlet duct", xs[0] + 0.02, 19.3, 0.965, DUCT), ("Ejector liner", EJECTOR_X - 0.3, xs[-1] - 0.01, 0.955, EJECTOR)):
+            sel = [i for i, x in enumerate(xs) if lo <= x <= hi]
+            lr = [np.column_stack([np.full(seg, xs[i]), side * ys[i] + k * aa[i] * np.cos(ang), zs[i] + k * bbv[i] * np.sin(ang)])[::-1] for i in sel]
+            v, f = loft(lr)
+            objs.append(obj(f"{label} {tag}", v, f, lm, angle=60))
         # spike: traced tip and lip-plane radius, then a cylinder back inside the inlet
         tip_x, tip_y = float(tip[0]), float(tip[1])
         base_x, base_y, base_r = 17.40, 4.205, 0.448
@@ -433,6 +490,16 @@ def main():
     p.inputs["Base Color"].default_value = (0.018, 0.02, 0.026, 1); p.inputs["Metallic"].default_value = 0.35; p.inputs["Roughness"].default_value = 0.5
     dark = bpy.data.materials.new("Intake and nozzle"); dark.use_nodes = True
     dark.node_tree.nodes["Principled BSDF"].inputs["Base Color"].default_value = (0.002, 0.002, 0.003, 1)
+    # named materials; render_beauty.py and the web viewer dress them by name
+    global GLASS, EJECTOR, DUCT
+    def named(name, rgba, metal, rough):
+        m = bpy.data.materials.new(name); m.use_nodes = True
+        b = m.node_tree.nodes["Principled BSDF"]
+        b.inputs["Base Color"].default_value = rgba; b.inputs["Metallic"].default_value = metal; b.inputs["Roughness"].default_value = rough
+        return m
+    GLASS = named("Canopy glass", (0.02, 0.03, 0.035, 1), 0.0, 0.05)
+    EJECTOR = named("Ejector metal", (0.33, 0.30, 0.27, 1), 1.0, 0.45)
+    DUCT = named("Inlet duct", (0.01, 0.011, 0.013, 1), 0.2, 0.6)
     parts = fuselage(c, skin) + [wing(c, skin), probe(skin)] + nacelles(c, skin, dark) + fins(c, skin)
     root = bpy.data.objects.new("SR-71A", None); bpy.context.collection.objects.link(root)
     for o in parts:

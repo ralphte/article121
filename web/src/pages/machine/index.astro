@@ -6,6 +6,7 @@ import Photo from '../../components/Photo.astro';
 import Lightbox from '../../components/Lightbox.astro';
 import InletExplainer from '../../components/InletExplainer.astro';
 import PanelExplorer from '../../components/PanelExplorer.astro';
+import ModelViewer from '../../components/ModelViewer.astro';
 import { getEntry } from 'astro:content';
 import { resolveCitations, sourceHref, type Citation } from '../../lib/data';
 import machine from '../../data/machine.json';
@@ -27,6 +28,8 @@ type Mark = Awaited<ReturnType<typeof marks>>[number];
 const supHtml = (ms: Mark[]) => `<sup class="cite">${ms.map((m) => `<a href="#src-${m.n}" title="${m.title.replace(/"/g, '&quot;')}">${m.n}</a>`).join(',')}</sup>`;
 
 const intro = { text: machine.intro.text, marks: await marks(machine.intro.citations) };
+const modelIn = (machine as any).model as undefined | { text: string; citations: Raw[] };
+const model = modelIn ? { text: modelIn.text, marks: await marks(modelIn.citations) } : null;
 const plate = [];
 for (const r of machine.plate) plate.push({ ...r, marks: await marks(r.citations) });
 const hero = (await getEntry('photos', machine.hero))!;
@@ -63,6 +66,16 @@ const isDiagram = (id: string) => id.startsWith('diagram_');
         {sections.map((s, i) => <a class="chip" href={`#${s.id}`}><span>§{i + 1}</span> {s.title}</a>)}
       </nav>
     </header>
+
+    {model && (
+      <section class="model3d" aria-labelledby="model-h">
+        <div class="file-head"><b id="model-h">Exhibit 3D</b><span>SR-71A, Article 121 model v0.4</span><span>Reconstruction, not a scan</span></div>
+        <ModelViewer src="https://files.article121.com/models/sr71a-v0.4-web.glb" env="/env/studio-small-01.hdr">
+          <p>{model.text}<Fragment set:html={supHtml(model.marks)} /></p>
+          <p class="label">Lit with the CC0 "Studio Small 01" environment by Greg Zaal (Poly Haven). <a href="https://github.com/ralphte/article121/tree/main/model">How it was built</a> · <a href="https://files.article121.com/models/sr71a-v0.4.glb">The model file (glTF, 4.7 MB)</a></p>
+        </ModelViewer>
+      </section>
+    )}
 
     <section class="plate panel" aria-labelledby="plate-h">
       <div class="file-head"><b id="plate-h">Data plate</b><span>SR-71A, from the flight manual unless marked</span></div>
@@ -118,6 +131,8 @@ const isDiagram = (id: string) => id.startsWith('diagram_');
   .toc .chip { text-decoration: none; display: inline-flex; gap: 8px; align-items: baseline; }
   .toc .chip span { color: var(--marking); }
 
+  .model3d { margin-top: 14px; }
+  .model3d .file-head { margin-bottom: 10px; }
   .plate { margin-top: 14px; padding: clamp(16px, 3vw, 28px); }
   .plate .file-head { margin-bottom: 0; }
   .plate-grid { margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 1px; background: var(--seam); border-bottom: 1px solid var(--seam); }
