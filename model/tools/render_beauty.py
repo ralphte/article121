@@ -48,7 +48,7 @@ def main():
         if not m.use_nodes: continue
         p = m.node_tree.nodes.get("Principled BSDF")
         if not p: continue
-        if "skin" in m.name.lower():
+        if "skin" in m.name.lower() or m.name == "ref":
             p.inputs["Base Color"].default_value = (0.012, 0.014, 0.02, 1)
             p.inputs["Roughness"].default_value = 0.42
             p.inputs["Metallic"].default_value = 0.0
@@ -69,6 +69,7 @@ def main():
 
     views = {
         "nose_on": ((30.0, 0.0, 1.45), (-14.0, 0.0, 0.75), 105),
+        "nose_on_high": ((5.0, 0.0, 0.9), (-16.0, 0.0, 1.5), 30),
         "three_quarter": ((14.0, -26.0, 17.0), (-15.0, 0.0, 0.3), 38),
         "side": ((-15.0, -48.0, 1.0), (-15.0, 0.0, 0.8), 45),
     }

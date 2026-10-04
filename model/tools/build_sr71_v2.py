@@ -103,7 +103,9 @@ def fuselage(c, mat):
         return h00 * za + h10 * (xb - xa) * slope_a + h01 * zb + h11 * (xb - xa) * slope_b
 
     rings = []
-    N_UP, N_SHELF, N_LO = 18, 10, 14
+    # how far out from the centreline the upper fillet reaches (m), by station
+    FIL_X = [15.9, 17.7, 21.0, 22.6, 27.5, 29.5, 30.4]
+    FIL_R = [float(env(15.9)), 3.0, 3.0, 1.6, 1.3, 1.1, 0.0]
     for x in xs:
         # body half-width: traced line, tapered into the radome tip and the tail cone tip
         b = float(bw(x, left=np.nan, right=np.nan))
@@ -129,26 +131,78 @@ def fuselage(c, mat):
             zt = zb = 0.0
         zc = float(chz(x)) if x < 16.3 else float(chz(16.3))
         zc = min(max(zc, zb + 0.02), zt - 0.02) if zt - zb > 0.05 else (zt + zb) / 2
-        # chine edge: outline forward of the wing junction, body width behind it
-        w = float(env(x)) if x < 15.9 else b
+        # chine edge: the traced outline forward of the wing junction (sections 1 to 9)
+        w = float(env(min(x, 15.9)))
         w = max(w, b)
-        # SR-71 forebody section: the upper chine surface rises from the sharp edge in an S-curve into
-        # the round top of the body; the belly is broad and nearly flat out to the chine edge.
-        shelf = w - b
-        hs = 0.16 * (zt - zc) * min(1.0, shelf / 0.35) if shelf > 0 else 0.0   # fitted to NASM2016-00596 (nose-on)
+        z0 = float(chz(x))
+        # Forebody section (sections 1 to 9): a tent with concave flanks rising from the sharp chine edge
+        # to a rounded spine, over a shallow V belly about half as deep. Measured off the section
+        # drawing: height falls as (1 - u)^1.3 from the spine (u = 0) to the chine edge (u = 1).
+        # Sections 1 to 3 carry a narrower hump on a flat chine shelf (uh is the hump's share of w).
+        s_tent = 1.0 if x < 15.9 else max(0.0, 1.0 - (x - 15.9) / 1.6)
+        uh = min(1.0, max(0.5, 0.5 + 0.5 * (x - 0.8) / 2.3))
+        R_TOP, R_BOT = 0.14, 0.18
+        d1t, d1b = math.hypot(1, R_TOP) - R_TOP, math.hypot(1, R_BOT) - R_BOT
+        def tent_up(y):
+            u = min(1.0, y / w / uh)
+            return zc + (zt - zc) * max(0.0, 1 - (math.hypot(u, R_TOP) - R_TOP) / d1t) ** 1.3
+        def tent_lo(y):
+            u = min(1.0, y / w)
+            return zc - (zc - zb) * max(0.0, 1 - (math.hypot(u, R_BOT) - R_BOT) / d1b) ** 1.05
+        # Wing-body section behind the inlets (sections 10 to 16): a round body; between it and the
+        # nacelle the underside runs straight from the body to the nacelle (a shallow V), and on top a
+        # concave fillet descends from high on the body side to the wing, reaching all the way to the
+        # nacelle at sections 10 to 13 and about 1.3 m out at 14 to 16. The section closes at W: the
+        # inboard leading edge ahead of the cowl, inside the nacelle along it, the planform behind it.
+        if x >= 15.9:
+            if x < 29.4:
+                W = min(float(env(15.92)) + 0.505 * (x - 15.92), 3.337 + 0.25) - 0.01
+            else:
+                W = float(env(x)) - 0.01
+            W = max(W, b)
+            Rf = min(W, max(b, float(np.interp(x, FIL_X, FIL_R))))
+        else:
+            W, Rf = w, w
+        def round_up(y):
+            u = min(1.0, y / max(b, 1e-6))
+            return zc + (zt - zc) * max(0.0, 1 - u ** 2.3) ** (1 / 2.3)
+        def round_lo(y):
+            u = min(1.0, y / max(b, 1e-6))
+            return zc - (zc - zb) * max(0.0, 1 - u ** 2.3) ** (1 / 2.3)
+        def body_up(y):
+            ys_ = 0.74 * b
+            if y <= ys_ or Rf <= ys_ + 1e-3:
+                return round_up(min(y, b)) if y <= b else z0
+            if y >= Rf:
+                return z0
+            za, h = round_up(ys_), Rf - ys_
+            dy = min(0.01, ys_ / 2)
+            m0 = (round_up(ys_) - round_up(ys_ - dy)) / max(dy, 1e-6)
+            lim = 3 * abs(za - z0) / h
+            m0 = max(-lim, min(lim, m0)) if (z0 - za) * m0 >= 0 else 0.0
+            t = (y - ys_) / h
+            return (2*t**3 - 3*t**2 + 1) * za + (t**3 - 2*t**2 + t) * h * m0 + (-2*t**3 + 3*t**2) * z0
+        # underside: the lower body curve and its tangent line out to (W, z0)
+        q = np.linspace(0, b, 40)
+        zq = np.array([round_lo(v) for v in q])
+        sl = (z0 - zq) / np.maximum(W - q, 1e-6)
+        k_t = int(np.argmax(sl)) if W > b + 1e-3 else len(q) - 1
+        y_t, s_t = float(q[k_t]), float(sl[k_t])
+        def body_lo(y):
+            if y <= y_t:
+                return round_lo(y)
+            return z0 - s_t * (W - y) if W > b + 1e-3 else round_lo(min(y, b))
+        if x < 0.05:
+            zt = zb = zc = 0.0
+        WW = max(w if s_tent > 0 else 0.0, W)
+        N_U, N_L = 34, 26
         half = []
-        for t in np.linspace(0, 1, N_UP):                 # upper body: top centre to the shoulder
-            a = t * math.pi / 2
-            half.append((b * math.sin(a) ** (2 / 3.0), zc + hs + (zt - zc - hs) * math.cos(a) ** (2 / 1.8)))   # steep-sided hump
-        for t in np.linspace(0, 1, N_SHELF)[1:]:           # upper chine: shoulder down to the edge, S-curve
-            y = b + shelf * t
-            u = 1 - t
-            half.append((y, zc + hs * u ** 1.6))                      # flat, slightly concave chine
-        n_lo = N_SHELF - 2 + N_LO
-        for t in np.linspace(0, 1, n_lo + 1)[1:]:          # belly: from the edge to the bottom centre, wide and flat
-            y = w * (1 - t)
-            depth = (zc - zb) * (1 - (1 - t) ** 3.2) ** 0.8          # shallow, broad belly
-            half.append((y, zc - depth))
+        for t in np.linspace(0, 1, N_U):                   # spine out to the chine or wing edge
+            y = WW * (1 - math.cos(t * math.pi / 2)) ** 0.85 if t < 1 else WW
+            half.append((y, s_tent * tent_up(min(y, w)) + (1 - s_tent) * body_up(min(y, W))))
+        for t in np.linspace(0, 1, N_L + 1)[1:]:           # back to the keel
+            y = WW * (1 - t)
+            half.append((y, s_tent * tent_lo(min(y, w)) + (1 - s_tent) * body_lo(min(y, W))))
         right = np.array(half)
         left = right[1:-1][::-1] * [-1, 1]
         sec = np.vstack([right, left])
@@ -187,6 +241,11 @@ def wing(c, mat):
         return float(dd.min())
 
     T_MAX, REACH = 0.11, 1.9
+    # leading edge station for a given span position on the outer wing (first x where the outline reaches y)
+    _xs_le, _ys_le = xs[xs > 17.5], ys_out[xs > 17.5]
+    def le_x(y):
+        hit = np.where(_ys_le >= y)[0]
+        return float(_xs_le[hit[0]]) if len(hit) else float(_xs_le[-1])
     span_n = 46
     upper, lower = [], []
     for x, Y in zip(xs, ys_out):
@@ -196,7 +255,13 @@ def wing(c, mat):
         u, l = [], []
         for y in ys:
             t = T_MAX * min(1.0, edge_dist(x, y) / REACH) ** 0.62
-            u.append((x, y, z0 + t)); l.append((x, y, z0 - t * 0.85))
+            # conical camber on the outer wing (Lockheed section drawing): the leading edge droops
+            # toward the tip; up to about 0.16 m at the tip, fading 1.8 m aft of the edge
+            droop = 0.0
+            if y > 5.3:
+                d_le = x - le_x(y)
+                droop = 0.16 * ((y - 5.3) / (8.48 - 5.3)) * max(0.0, 1 - d_le / 1.8) ** 2
+            u.append((x, y, z0 + t - droop)); l.append((x, y, z0 - t * 0.85 - droop))
         upper.append(u); lower.append(l)
 
     def mirror(rows):

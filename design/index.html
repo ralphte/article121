@@ -136,25 +136,33 @@ footer { margin-top: 56px; font: 400 0.76rem/1.6 var(--f-mono); color: var(--mut
     </header>
 
     <section id="model">
-      <h2><span class="n">3D MODEL · FIRST PASS</span>Built from NASA's drawings</h2>
-      <p>The model is lofted from NASA Dryden's vector three-view of the SR-71A (EG-0075-02), put on true scale with NASA's own fuselage stations (nose FS 102, tail cone FS 1355, NASA TM-4749). Calibrated that way, the drawing's span comes out at 16.959 m against the published 16.947 m, an error of 0.07 percent. The script, the traced data and every source are in the repository, so anyone can rebuild it or check it.</p>
+      <h2><span class="n">3D MODEL · SECOND PASS</span>Built from NASA's drawings and Lockheed's sections</h2>
+      <p>The outline is lofted from NASA Dryden's vector three-view of the SR-71A (EG-0075-02), put on true scale with NASA's own fuselage stations (nose FS 102, tail cone FS 1355, NASA TM-4749). Calibrated that way, the drawing's span comes out at 16.959 m against the published 16.947 m, an error of 0.07 percent. The script, the traced data and every source are in the repository, so anyone can rebuild it or check it.</p>
       <div class="table-wrap"><table>
         <thead><tr><th>View</th><th>Overlap with NASA's drawing</th><th>Average gap</th><th>95% of the outline within</th></tr></thead>
         <tbody>
-          <tr><td>Plan</td><td class="num">97.6%</td><td class="num">6.8 cm</td><td class="num">39 cm</td></tr>
+          <tr><td>Plan</td><td class="num">97.6%</td><td class="num">6.7 cm</td><td class="num">38 cm</td></tr>
           <tr><td>Side</td><td class="num">95.4%</td><td class="num">5.9 cm</td><td class="num">17 cm</td></tr>
-          <tr><td>Front</td><td class="num">56%</td><td class="num">19 cm</td><td class="num">46 cm</td></tr>
+          <tr><td>Front</td><td class="num">56%</td><td class="num">17 cm</td><td class="num">41 cm</td></tr>
         </tbody>
       </table></div>
+      <h3 style="margin-top:24px">What changed in the second pass: the cross-sections</h3>
+      <p>The first pass had the outline right but guessed the shape in between. This pass takes the sections from a Lockheed section sheet (published as "Figure 71" on sr71.us, which is not its origin; the government original it came from is being traced). What it shows, and what the model now does:</p>
+      <ul class="rules">
+        <li><b>Forebody, stations 1 to 9:</b> a tent. Concave flanks rise from the sharp chine edge to a rounded spine, over a shallow V belly about half as deep. The first three stations carry a narrower hump on a flat chine shelf.</li>
+        <li><b>Behind the inlets, stations 10 to 16:</b> the fuselage turns round again. On top, a broad concave fillet runs from high on the body side down to the wing, all the way to the nacelle at stations 10 to 13 and about 1.3 m out further aft. Underneath, the skin runs in a straight line from the keel to the nacelle, a shallow V. The first pass wrongly kept the chine flaring past the inlets.</li>
+        <li><b>Outer wing:</b> conical camber, the leading edge drooping toward the tip, as the sheet notes.</li>
+      </ul>
+      <figure style="margin:16px 0 0"><img src="img/model/sections-v2.jpg" alt="Cross-sections of the model, forebody stations overlaid above and wing-body stations overlaid below, drawn looking forward" style="width:100%;border:1px solid var(--rule);border-radius:4px" loading="lazy"><figcaption class="muted" style="font-size:.85rem;margin-top:6px">The model's sections, grouped the way the Lockheed sheet groups them. Top: forebody. Bottom: behind the inlets, with the nacelles either side.</figcaption></figure>
+      <figure style="margin:16px 0 0"><img src="img/model/photo-compare-v2.jpg" alt="Smithsonian photograph of 61-7972 nose-on beside a render of the model, and a three-quarter render below" style="width:100%;border:1px solid var(--rule);border-radius:4px" loading="lazy"><figcaption class="muted" style="font-size:.85rem;margin-top:6px">Top left: Smithsonian NASM2016-00596, CC0. Top right and below: the model, second pass. The photograph is taken from much closer, so the forebody looks larger in it.</figcaption></figure>
       <div class="dirs two" style="margin-top:16px">
         <article class="dir"><img src="img/model/overlay-plan.jpg" alt="Plan view of the model (grey) with NASA's outline (red) on top" loading="lazy"><div class="body"><div class="label">Plan</div><p>Model in grey, NASA outline in red. The only visible gap is the aft end of the nacelles.</p></div></article>
         <article class="dir"><img src="img/model/overlay-side.jpg" alt="Side view of the model (grey) with NASA's outline (red) on top" loading="lazy"><div class="body"><div class="label">Side</div><p>The red line past the nose is the drawing's pitot probe, drawn 1.44 m long; the real one is 0.91 m.</p></div></article>
       </div>
       <ul class="rules" style="margin-top:16px">
         <li><b>Where the drawings disagree, published numbers win.</b> Every drawing checked is 5 to 10 percent off in heights. The fins follow NASA's specification table instead: 3.302 m span at a 15 degree cant, which reproduces the published 6.92 m tip separation. That is why the front view scores lower: the drawing's own front view draws the fins about 0.8 m shorter than its side view.</li>
-        <li><b>What is not right yet: the cross-sections.</b> No public drawing gives the chine sections; the search confirmed there is no offsets table anywhere. The comparison with the Smithsonian photograph of 61-7972 below shows the gap: the real chines rise in a pronounced V toward the nacelles. Next pass: solve the photo's exact camera position from known points and fit the sections to its edges, then repeat with other photographs.</li>
+        <li><b>Not done yet:</b> the canopy, the cockpit, panel lines and the inlet interiors. The model file is at <a href="https://files.article121.com/models/sr71a-v0.2.glb">files.article121.com/models/sr71a-v0.2.glb</a> (4.5 MB). It stays off the public site until it matches the photographs beside it.</li>
       </ul>
-      <figure style="margin:16px 0 0"><img src="img/model/photo-compare.jpg" alt="Smithsonian photograph of 61-7972 nose-on beside a render of the model from a similar viewpoint, and a three-quarter render" style="width:100%;border:1px solid var(--rule);border-radius:4px" loading="lazy"><figcaption class="muted" style="font-size:.85rem;margin-top:6px">Left: Smithsonian NASM2016-00596, CC0. Right and below: the model, first pass.</figcaption></figure>
     </section>
 
     <section id="round2">

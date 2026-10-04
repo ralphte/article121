@@ -36,7 +36,8 @@ Next in line: the inlet pair TM X-3144 (absolute cowl-lip radius) and Lockheed C
 - TM-104317 fig 31: a true structural section at FS 1130 through fuselage, inboard wing, nacelle and outboard wing (YF-12A).
 - CP-2054 p.240 fig 4: aft fuselage (boattail) top, side and rear sections for the YF-12A and for the SR-71 shape (YF-12C).
 - Flight manual fig 1-21: nacelle longitudinal sections, schematic.
-- **Not found anywhere:** an offsets table, chine section coordinates, forebody or cockpit sections for the SR-71A, or any Lockheed loft data. The chine and forebody sections will have to come from photographs (front and three-quarter views of museum aircraft) fitted to the plan and side outlines above.
+- **"Figure 71" sheets a to h (sr71.us, `raw/sr71us/`, tier D, private reference):** Lockheed-style lines drawings of the SR-71 with numbered stations. Sheet g groups the sections looking forward: forebody stations 1 to 9 as tents with concave flanks over a shallow V belly (1 to 3 a narrower hump on a flat chine shelf), stations 10 to 16 as a round body with a broad upper fillet to the wing and a straight underside from keel to nacelle. It also notes outer wing incidence (minus 1 deg 30 min), inner wing incidence (minus 1 deg) and conical camber on the outer leading edge. Model v0.2 takes its section shapes from this sheet; only shapes are measured, no image is reused. sr71.us is a fan site and not the origin: the government original is being traced (see `research/drawing-provenance.md` once written).
+- **Not found anywhere:** an offsets table, chine section coordinates in numbers, or any Lockheed loft data.
 
 ### Inlet and spike
 - Absolute scale: TM X-3144 fig 8, cowl-lip radius 74.62 cm (29.38 in).

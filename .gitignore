@@ -15,3 +15,6 @@ model/plans/pages/
 model/build/
 model/trace/**/*.png
 model/tools/.venv/
+
+# third-party reference models (FlightGear SR-71, GPL v2): compared against, never shipped; copy in R2 archive
+model/reference/
