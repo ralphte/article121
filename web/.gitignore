@@ -3,3 +3,4 @@ dist/
 .astro/
 .wrangler/
 src/assets/photos/
+src/assets/media/

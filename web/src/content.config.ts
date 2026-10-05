@@ -85,5 +85,30 @@ const photos = defineCollection({
   }),
 });
 
-export const collections = { sources, events, airframes, photos };
+// Media on the Chronology: a photograph, a page of a document, a film or a recording for an
+// event, each with its own credit and licence. Only tiers A and B are hosted.
+const media = defineCollection({
+  loader: file('src/data/media.json'),
+  schema: ({ image }) => z.object({
+    event: reference('events'),
+    kind: z.enum(['image', 'document', 'video', 'audio']),
+    file: image().nullable(),           // the still: photograph, document page or video poster
+    src: z.url().nullable(),            // video or audio on the files bucket
+    master: z.url().nullable(),         // the full original on the files bucket
+    duration: z.string().nullable(),
+    page: z.number().int().nullable(),
+    title: z.string().min(1),
+    description: z.string().min(1),
+    relation: z.enum(['exact', 'same-aircraft', 'same-program', 'representative']),
+    creator: z.string().min(1),
+    credit: z.string().min(1),
+    date: z.string().nullable(),
+    license: z.string().min(1),
+    license_url: z.url().nullable(),
+    tier: z.enum(['A', 'B']),
+    source_page: z.url(),
+  }),   // stills for images, documents and videos, and a src for video and audio, are checked by the import
+});
+
+export const collections = { sources, events, airframes, photos, media };
 export { PROGRAMS };

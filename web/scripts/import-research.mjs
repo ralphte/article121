@@ -219,6 +219,33 @@ if (panelIn && existsSync(join(root, panelIn.positions))) {
   };
 }
 
+// ---------- Chronology media (research/timeline-media.json, prepared by tools/timeline_media.py)
+const mediaDir = join(web, 'src/assets/media');
+mkdirSync(mediaDir, { recursive: true });
+const eventIds = new Set(events.map((e) => e.id));
+const RELATIONS = ['exact', 'same-aircraft', 'same-program', 'representative'];
+const tlMedia = [];
+for (const m of read('research/timeline-media.json').items) {
+  if (m.kind !== 'audio' && !m.file) continue;                   // not fetched yet, or failed
+  if (!eventIds.has(m.event)) throw new Error(`timeline-media ${m.id}: unknown event ${m.event}`);
+  if (!['A', 'B'].includes(m.tier)) throw new Error(`timeline-media ${m.id}: tier ${m.tier} is not hosted`);
+  for (const f of ['creator', 'credit', 'license', 'source_page', 'title']) if (!m[f]) throw new Error(`timeline-media ${m.id} lacks ${f}`);
+  if (['video', 'audio'].includes(m.kind) && !m.src) throw new Error(`timeline-media ${m.id}: ${m.kind} without a src`);
+  let file = null;
+  if (m.file) {
+    const name = basename(m.file);
+    copyFileSync(join(root, 'design', m.file), join(mediaDir, name));
+    file = `../assets/media/${name}`;
+  }
+  tlMedia.push({
+    id: m.id, event: m.event, kind: m.kind, file, src: m.src ?? null, master: m.master ?? null,
+    duration: m.duration ?? null, page: m.kind === 'document' ? m.page ?? 1 : null,
+    title: m.title, description: m.description || m.title, relation: RELATIONS.includes(m.relation) ? m.relation : 'representative',
+    creator: m.creator, credit: m.credit, date: m.date ?? null, license: m.license, license_url: m.license_url ?? null,
+    tier: m.tier, source_page: m.source_page,
+  });
+}
+
 // ---------- write
 const out = join(web, 'src/data');
 mkdirSync(out, { recursive: true });
@@ -228,4 +255,5 @@ writeFileSync(join(out, 'events.json'), JSON.stringify(events, null, 1));
 writeFileSync(join(out, 'airframes.json'), JSON.stringify(afOut, null, 1));
 writeFileSync(join(out, 'photos.json'), JSON.stringify(photos, null, 1));
 writeFileSync(join(out, 'machine.json'), JSON.stringify(machine, null, 1));
-console.log(`imported ${events.length} events, ${afOut.length} airframes, ${photos.length} photos, ${srcList.length} sources`);
+writeFileSync(join(out, 'media.json'), JSON.stringify(tlMedia, null, 1));
+console.log(`imported ${events.length} events, ${afOut.length} airframes, ${photos.length} photos, ${tlMedia.length} media, ${srcList.length} sources`);

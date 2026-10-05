@@ -40,3 +40,5 @@ rclone.conf
 
 # video masters live in R2, never in git (research/videos/catalog.* are committed)
 research/videos/raw/
+research/timeline-media/raw/
+research/timeline-media/web/

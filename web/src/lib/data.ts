@@ -3,6 +3,7 @@ import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
 export type Airframe = CollectionEntry<'airframes'>;
 export type Event = CollectionEntry<'events'>;
 export type Photo = CollectionEntry<'photos'>;
+export type Media = CollectionEntry<'media'>;
 export type Citation = { source: { id: string; collection: 'sources' }; detail?: string };
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -67,3 +68,14 @@ export const sourceHref = (d: { url: string; archive?: string; offline?: string 
 
 /** Short label for a source: the work's title without parenthetical detail. */
 export const shortTitle = (t: string) => t.replace(/\s*\([^)]*\)\s*$/, '').replace(/\s*\([^)]*\)/g, '').trim();
+
+/** Chronology media grouped by event, in manifest order (photograph, document, film, recording). */
+export async function mediaByEvent() {
+  const byEvent = new Map<string, Media[]>();
+  for (const m of await getCollection('media')) {
+    const list = byEvent.get(m.data.event.id) ?? [];
+    list.push(m);
+    byEvent.set(m.data.event.id, list);
+  }
+  return byEvent;
+}

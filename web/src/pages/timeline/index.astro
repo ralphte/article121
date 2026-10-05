@@ -1,19 +1,23 @@
 ---
 import Base from '../../layouts/Base.astro';
 import SourceLinks from '../../components/SourceLinks.astro';
-import { eventsInOrder, fmtDate, PROGRAM_LABEL } from '../../lib/data';
+import EventMedia from '../../components/EventMedia.astro';
+import Lightbox from '../../components/Lightbox.astro';
+import { eventsInOrder, fmtDate, mediaByEvent, PROGRAM_LABEL } from '../../lib/data';
 import { getCollection } from 'astro:content';
 const events = await eventsInOrder();
 const airframeIds = new Set((await getCollection('airframes')).map((a) => a.id));
 const programs = [...new Set(events.map((e) => e.data.program))];
 const decades = [...new Set(events.map((e) => e.data.date.slice(0, 3) + '0s'))];
+const media = await mediaByEvent();
+const mediaCount = [...media.values()].reduce((n, l) => n + l.length, 0);
 ---
-<Base title="Chronology" description="Every dated event in the Blackbird story, from the U-2 years to the museums, each with its sources.">
-  <div class="wrap">
+<Base wide title="Chronology" description="Every dated event in the Blackbird story, from the U-2 years to the museums, each with its sources and the photographs, documents and films of the day.">
+  <div class="wrap fluid">
     <header class="page-head panel ticks">
-      <div class="file-head"><b>File A121-0002</b><span>Chronology</span><span>{events.length} entries</span></div>
+      <div class="file-head"><b>File A121-0002</b><span>Chronology</span><span>{events.length} entries · {mediaCount} exhibits</span></div>
       <h1 class="display">Chronology</h1>
-      <p>Every dated event in the record, from the U-2's first overflight of the Soviet Union to the museums. Each entry names its sources, and where reliable sources disagree, the entry says so.</p>
+      <p>Every dated event in the record, from the U-2's first overflight of the Soviet Union to the museums. Each entry names its sources, and where reliable sources disagree, the entry says so. Beside it are the photographs, declassified documents, films and recordings of the day, each marked for whether it shows that event, the same aircraft or the same program, with its credit and a copy of the original.</p>
       <div class="filters" role="group" aria-label="Filter by program">
         <button class="chip" aria-pressed="true" data-f="all">All</button>
         {programs.map((p) => <button class="chip" aria-pressed="false" data-f={p}>{PROGRAM_LABEL[p]}</button>)}
@@ -34,11 +38,17 @@ const decades = [...new Set(events.map((e) => e.data.date.slice(0, 3) + '0s'))];
               {e.data.notes && <p class="note"><b>Where sources differ:</b> {e.data.notes}</p>}
               <SourceLinks citations={e.data.citations} />
             </div>
+            {media.has(e.id) && (
+              <div class="media">
+                {media.get(e.id)!.map((m) => <EventMedia item={m} />)}
+              </div>
+            )}
           </li>
         );
       })}
     </ol>
   </div>
+  <Lightbox />
 </Base>
 <style>
   .filters { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
@@ -56,9 +66,16 @@ const decades = [...new Set(events.map((e) => e.data.date.slice(0, 3) + '0s'))];
   .afs a, .afs span { font: 700 0.66rem/1 var(--f-data); letter-spacing: 0.08em; padding: 5px 7px; border: 1px solid var(--seam-2); text-decoration: none; color: var(--ink); }
   .afs a:hover { border-color: var(--stencil); }
   .note { font-size: 0.86rem; color: var(--ink-2) !important; border-left: 2px solid var(--marking); padding-left: 10px; }
+  /* exhibits: under the text, or in their own column on wide screens */
+  .media { grid-column: 2; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); gap: 10px; margin-top: 12px; max-width: 980px; align-items: start; }
+  @media (min-width: 1600px) {
+    .tl li { grid-template-columns: 9.5rem minmax(0, 72ch) minmax(0, 1fr); }
+    .media { grid-column: 3; margin-top: 0; max-width: none; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  }
   @media (max-width: 680px) {
     .tl::before, .tl li::before { display: none; }
     .tl li { grid-template-columns: minmax(0, 1fr); }
+    .media { grid-column: 1; grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .when { text-align: left; padding: 0 0 4px; }
   }
 </style>

@@ -1,0 +1,69 @@
+---
+// One item of media on the Chronology: a photograph, a page of a document, a film or a recording,
+// with its credit, licence, source and a link to the full original. Photographs and pages open in
+// the Lightbox; a film shows its poster until played, so nothing streams until it is asked for.
+import { Picture } from 'astro:assets';
+import type { Media } from '../lib/data';
+interface Props { item: Media; sizes?: string }
+const { item, sizes = '(max-width: 700px) 100vw, 340px' } = Astro.props;
+const m = item.data;
+const KIND = { image: 'Photograph', document: 'Document', video: 'Film', audio: 'Recording' } as const;
+const RELATION = { exact: 'Of this event', 'same-aircraft': 'Same aircraft', 'same-program': 'Same program', representative: 'For illustration' } as const;
+const tag = `${KIND[m.kind]}${m.kind === 'document' && m.page && m.page > 1 ? `, page ${m.page}` : ''} · ${RELATION[m.relation]}`;
+---
+<figure class:list={['photo', 'em', `em-${m.kind}`]} data-caption={m.description} data-credit={`${m.credit}${m.date ? ' · ' + m.date : ''} · ${m.license}`} data-source={m.source_page}>
+  {m.file && (
+    <div class="shot">
+      <Picture src={m.file} alt={m.description} widths={[360, 720, 1200, 1600]} sizes={sizes} formats={['avif', 'webp']} loading="lazy" />
+      {m.kind === 'video'
+        ? <button class="play" type="button" data-play={m.src} aria-label={`Play the film: ${m.title}`}><i aria-hidden="true"></i>{m.duration}</button>
+        : <button class="open" type="button" aria-label={`View full screen: ${m.title}`}></button>}
+    </div>
+  )}
+  {m.kind === 'audio' && <audio controls preload="none" src={m.src}></audio>}
+  <figcaption>
+    <span class="tag">{tag}{m.kind === 'audio' && m.duration && ` · ${m.duration}`}</span>
+    <span class="title">{m.title}</span>
+    <span class="credit">{m.credit}{m.date && ` · ${m.date}`} · {m.license_url ? <a href={m.license_url}>{m.license}</a> : m.license} · <a href={m.source_page}>Source</a>{m.master && <> · <a href={m.master}>Full file</a></>}</span>
+  </figcaption>
+</figure>
+
+<style>
+  .em { margin: 0; background: var(--hull); border: 1px solid var(--seam); display: grid; grid-template-rows: auto 1fr; min-width: 0; }
+  .shot { position: relative; overflow: hidden; background: var(--void); }
+  .shot :global(img) { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+  .em-document .shot { background: #e8e5dc; padding: 8px; }
+  .em-document .shot :global(img) { object-fit: contain; object-position: top; }
+  .open { all: unset; position: absolute; inset: 0; cursor: zoom-in; }
+  .open:focus-visible, .play:focus-visible { outline: 2px solid var(--marking); outline-offset: -2px; }
+  .play {
+    all: unset; position: absolute; inset: 0; cursor: pointer; display: flex; align-items: flex-end; gap: 8px; padding: 10px;
+    font: 700 0.66rem/1 var(--f-data); letter-spacing: 0.12em; color: var(--stencil);
+    background: linear-gradient(180deg, transparent 55%, rgba(5, 7, 10, 0.75));
+  }
+  .play i { width: 34px; height: 34px; border-radius: 50%; background: var(--marking); position: relative; flex: none; }
+  .play i::after { content: ""; position: absolute; left: 13px; top: 10px; border-style: solid; border-width: 7px 0 7px 11px; border-color: transparent transparent transparent var(--stencil); }
+  .play:hover i { background: var(--stencil); }
+  .play:hover i::after { border-left-color: var(--marking); }
+  .shot :global(video) { display: block; width: 100%; aspect-ratio: 4 / 3; background: #000; }
+  audio { width: 100%; display: block; margin: 12px 0 0; padding: 0 12px; box-sizing: border-box; }
+  figcaption { padding: 10px 12px 12px; display: grid; gap: 5px; align-content: start; }
+  .tag { font: 400 0.58rem/1.3 var(--f-data); letter-spacing: 0.14em; text-transform: uppercase; color: var(--marking); }
+  .title { font-size: 0.84rem; line-height: 1.4; color: var(--ink); }
+  .credit { font: 400 0.58rem/1.5 var(--f-data); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); overflow-wrap: anywhere; }
+  .credit a { color: var(--ink-2); }
+</style>
+
+<script>
+  // a film's poster turns into the player when selected
+  document.addEventListener('click', (e) => {
+    const b = (e.target as HTMLElement).closest<HTMLButtonElement>('.em .play');
+    if (!b) return;
+    const shot = b.parentElement!;
+    const v = document.createElement('video');
+    v.src = b.dataset.play!; v.controls = true; v.autoplay = true; v.playsInline = true; v.preload = 'auto';
+    v.poster = shot.querySelector('img')?.currentSrc ?? '';
+    shot.replaceChildren(v);
+    v.focus();
+  });
+</script>
