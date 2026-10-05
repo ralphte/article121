@@ -1,0 +1,3412 @@
+[
+ {
+  "id": "buick-start-cart",
+  "title": "Two Buicks to start a Blackbird",
+  "dek": "The J58 could not turn itself over, so for years the Skunk Works spun a Mach 3 engine to life with a pair of Buick V8s on a trailer, and the CIA bought the spare engines.",
+  "date": "1964-05-01",
+  "precision": "day",
+  "programs": [
+   "oxcart",
+   "senior-crown"
+  ],
+  "airframes": [
+   "60-6925",
+   "60-6929"
+  ],
+  "people": [
+   "Kelly Johnson",
+   "William H. Brown"
+  ],
+  "kind": "story",
+  "verdict": null,
+  "body": [
+   {
+    "text": "The J58 had no way to start itself. Both the A-12 and SR-71 flight manuals say a ground starting unit was needed, its output gear meshing with a starter gear on the gearbox under the engine, and that the cockpit had no controls for it: the ground crew switched it on and off at the pilot's signal. Kelly Johnson wrote in 1981 that the engine \"often required over 600 horsepower\" to reach starting rpm.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-bb8d0e",
+      "detail": "p.1-17 (PDF p.29)"
+     },
+     {
+      "source": "u-s-air-force-323b8c",
+      "detail": "p.1-22"
+     },
+     {
+      "source": "central-intelligence-agency-dd9228",
+      "detail": "typed p.9 (PDF p.12)"
+     }
+    ]
+   },
+   {
+    "text": "Starting was a headache from the first engine runs. A CIA review of the engine effort in September 1962 listed the \"marginal output\" of the airframe maker's starter cart, and the output of an AiResearch TMD-105 cart, among the problems in the field. On 10 January 1963, as Article 122 (60-6925) neared its first flight, a \"Ham Standard\" starter cart quit and the crew had to fall back on \"the old P and W AiResearch air turbines\". Pratt & Whitney's William Brown later recalled that at first the engine simply would not start: at starting airflows the pressure in the inlet fell so low that air ran backwards through the compressor bleed ducts, and Lockheed took off an inlet access panel for ground starts until suck-in doors were fitted.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-internet-arc-5218b7",
+      "detail": "PDF p.5, items (6) and (7)"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-cf2e28",
+      "detail": "page two, para. 4"
+     },
+     {
+      "source": "central-intelligence-agency-dd9228",
+      "detail": "Brown p.3 (PDF p.24)"
+     }
+    ]
+   },
+   {
+    "text": "On 4 March 1963 a CIA status summary reported that the starter cart situation, \"a responsibility of Lockheed\", had reached an impasse between Lockheed and Pratt & Whitney because the engine's starting requirements had changed from those first agreed, and it described Johnson as \"rather unilateral\". Johnson's own account of the way out is brief: \"we took two Buick racing car engines and developed a gear box to connect them both to the J-58 starter drive.\" The caption to his photograph calls it a provisional starter cart, its engines \"geared to a common shaft drive\". The CIA's history describes unmuffled big-block engines, \"Buick (later, Chevrolet)\", that made a deafening roar.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-internet-arc-36b794",
+      "detail": "PDF p.3, para. (2)"
+     },
+     {
+      "source": "central-intelligence-agency-dd9228",
+      "detail": "typed p.9 (PDF p.12); figure 4 title, PDF p.20"
+     },
+     {
+      "source": "central-intelligence-agency-sanitized-co-a1566d",
+      "detail": "PDF p.180 (article p.8)"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p.13"
+     }
+    ]
+   },
+   {
+    "text": "The paperwork shows how permanent the provisional fix became. On 1 May 1964 a cable to CIA headquarters passed on a request to buy 11 more engine assemblies at about $500 each. Of 9 spare engines bought \"to support the Buick start cart\", 2 had been used and 2 more soon would be, leaving 5 for \"12 EA BUICK CARTS\"; and \"the 1963 model engine is now out of production\", though Buick still had stock. Headquarters approved on 4 May. The contractor's purchase exhibits that spring name the cart by part number, \"START CARTS P/N AG330\", with AG331-100 engine assemblies at $753.93 each. AG330, the name on museum labels and stencilled on at least one surviving cart, is therefore in the 1964 record.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-internet-arc-a0b2b6",
+      "detail": "PDF p.150 (cable IN 76576, 1 May 1964) and PDF p.149 (reply, 4 May 1964)"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-7e4d7c",
+      "detail": "PDF p.45 (exhibit 8408, 1 June 1964), p.93 (exhibit 8368, 10 April 1964), p.98 (exhibit 8374, 5 May 1964), p.281 (exhibit 8267, 19 May 1964)"
+     }
+    ]
+   },
+   {
+    "text": "The drill outlived the A-12. The SR-71 manual of 1986, as changed in 1989, still allowed a gas engine cart alongside a \"3AG1100 air turbine starter\", MA-1A carts and a \"shelter airstart system\". The crew chief called the pilot once the unit was connected; the pilot confirmed fuel was draining from each engine and asked for rotation, moved the throttle to IDLE at the first rise in rpm, and looked for ignition within 15 seconds on the gas engine cart or 20 on the air turbine. Fuel pressure fired the chemical ignition, the starting unit was signalled to disconnect at 3,200 rpm, and the engine settled at about 3,975 rpm. The A-12 manual gives the same rhythm, with the starter off at 3,200 to 3,300 rpm.",
+    "citations": [
+     {
+      "source": "u-s-air-force-323b8c",
+      "detail": "p.1-9, p.2-20, p.2-21"
+     },
+     {
+      "source": "central-intelligence-agency-bb8d0e",
+      "detail": "p.2-7 (PDF p.111)"
+     }
+    ]
+   },
+   {
+    "text": "Carts did not always cooperate. The pilot's statement after Article 126 (60-6929) crashed on take-off on 28 December 1965, from crossed gyro wiring, records that the left engine's start cart quit during the start, so the right engine was started first.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-internet-arc-e4d402",
+      "detail": "PDF p.1"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p.23"
+     }
+    ]
+   },
+   {
+    "text": "Johnson wrote that the carts served \"for several years\" until air starting systems were built into the hangars. Hot Rod magazine reported in 2014, on the word of Arlen Kurtis, that his father's Glendale race-car firm, the Frank Kurtis Company, built 30 carts to Lockheed's design from Buick engines and Dynaflow transmissions that Lockheed supplied, and that when the Buicks ran out Arlen re-engined carts with 454 cubic inch Chevrolets. One survivor at the Air Zoo in Michigan still wears the stencil \"U.S. AIR FORCE 6513 AG330 DET. 1, 9TH SRW\".",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-dd9228",
+      "detail": "typed p.9 (PDF p.12)"
+     },
+     {
+      "source": "hot-rod-petersen-publishing-ten-lending--2171cd",
+      "detail": "feature 'How Buick, the CIA, and Frank Kurtis Started the SR-71' (page not verified)"
+     },
+     {
+      "source": "wikimedia-commons-de16db",
+      "detail": "stencil on the cart's side"
+     }
+    ]
+   }
+  ],
+  "differ": {
+   "text": "The details of the engines vary by source. Johnson and the CIA's history give over 600 horsepower for the pair; the Air Zoo label gives about 325 horsepower for each engine, and Hot Rod 330 horsepower for each replacement Chevrolet. The Hill Aerospace Museum label, as quoted on Wikimedia Commons, says two 425 cubic inch Buick Wildcat engines with automatic transmissions, while the 1964 CIA cable says only that they were 1963-model Buick engines. Johnson calls them racing car engines; the cable describes production engines, still in stock at Buick, costed at about $500 each including modifications. The Hill label also says the J58 was brought up to 4,500 rpm for ignition, whereas both flight manuals have the starter cut off at 3,200 rpm (A-12: 3,200 to 3,300 rpm), and the SR-71 manual gives an idle of about 3,975 rpm, below the label's figure. The Air Zoo label says the engine carts were phased out in the mid-1980s for a pneumatic starter, yet the 1989 change to the SR-71 manual still lists the gas engine cart. Hot Rod's 30 carts and the cable's 12 are not in conflict: the cable counts the carts in service in May 1964.",
+   "citations": [
+    {
+     "source": "central-intelligence-agency-dd9228",
+     "detail": "typed p.9 (PDF p.12)"
+    },
+    {
+     "source": "central-intelligence-agency-center-for-t-70081b",
+     "detail": "p.13"
+    },
+    {
+     "source": "wikimedia-commons-bd94d6",
+     "detail": "museum label in photograph"
+    },
+    {
+     "source": "hot-rod-petersen-publishing-ten-lending--2171cd",
+     "detail": "feature (page not verified)"
+    },
+    {
+     "source": "wikimedia-commons-412d4f",
+     "detail": "file description quoting the museum label"
+    },
+    {
+     "source": "central-intelligence-agency-internet-arc-a0b2b6",
+     "detail": "PDF p.150"
+    },
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.1-9, p.2-21"
+    },
+    {
+     "source": "central-intelligence-agency-bb8d0e",
+     "detail": "p.2-7 (PDF p.111)"
+    }
+   ]
+  }
+ },
+ {
+  "id": "coast-to-coast-1990",
+  "title": "Sixty-four minutes to Washington",
+  "dek": "Retired weeks earlier, SR-71 61-7972 made one last run for the Smithsonian and crossed the United States in just over an hour, setting four speed records on the way.",
+  "date": "1990-03-06",
+  "precision": "day",
+  "programs": [
+   "senior-crown",
+   "legacy"
+  ],
+  "airframes": [
+   "61-7972"
+  ],
+  "people": [
+   "Ed Yeilding",
+   "J.T. Vida",
+   "Ben Rich"
+  ],
+  "kind": "story",
+  "verdict": null,
+  "body": [
+   {
+    "text": "Less than six weeks after the Air Force retired its SR-71s at Beale Air Force Base on 26 January 1990, one Blackbird still had a delivery to make. SR-71A 61-7972 was bound for the Smithsonian's National Air and Space Museum, and on 6 March 1990 it waited in a Lockheed hangar at Palmdale, California, while physiological support technicians from Edwards Air Force Base checked the flight suits of its crew: Lt. Col. Raymond E. \"Ed\" Yeilding, the pilot, and Lt. Col. Joseph T. \"J.T.\" Vida, the reconnaissance systems officer, both of Detachment 6, 2762nd Logistics Squadron.",
+    "citations": [
+     {
+      "source": "dvids-70a023",
+      "detail": "paragraph beginning \"Despite the aircraft's abilities\""
+     },
+     {
+      "source": "national-archives-rg-330-naid-6461575-e14546",
+      "detail": "item title (photo caption) and finding-aid note: Palmdale, 6 March 1990"
+     },
+     {
+      "source": "national-archives-rg-330-naid-6461578-9aaa97",
+      "detail": "item title (photo caption)"
+     },
+     {
+      "source": "smithsonian-national-air-and-space-museu-2583e3",
+      "detail": "Long Description, final paragraphs"
+     }
+    ]
+   },
+   {
+    "text": "The airframe already had records to its name. In September 1974 it had flown from New York to London in 1 hour 54 minutes 56.4 seconds, then from London to Los Angeles in 3 hours 47 minutes 39 seconds. Yeilding later recalled that the Smithsonian had written to the Secretary of the Air Force asking that the pilot who delivered its Blackbird set an official coast-to-coast speed record, to remind the public what the aircraft had done for the country over 25 years. In his words, \"that was an order\", and he was happy to oblige.",
+    "citations": [
+     {
+      "source": "this-day-in-aviation-bryan-r-swopes-ad691e",
+      "detail": "1 September 1974 entry"
+     },
+     {
+      "source": "roadrunners-internationale-2c60a8",
+      "detail": "entries for 1 and 13 September 1974"
+     },
+     {
+      "source": "dvids-f4535a",
+      "detail": "0:41 to 1:13"
+     }
+    ]
+   },
+   {
+    "text": "Yeilding and Vida took off from Air Force Plant 42 at Palmdale and flew out over the Pacific to fill their tanks from a KC-135Q tanker, so that the timed run could begin at speed and with full fuel. The course started at a \"west gate\" on the coast near Oxnard. Lockheed's timing sheet, prepared by its Advanced Development Projects office and witnessed for the National Aeronautic Association, records the aircraft crossing that gate at 14:00:52.85 GMT, just after six in the morning in California, and the east coast gate near Salisbury, Maryland, at 15:08:46.54 GMT, a little after ten in the morning there. Between the two it passed timing gates over Los Angeles, Kansas City, St. Louis, Cincinnati and Washington. A 2024 Air Force video says most of the run was flown at Mach 3.3 and 83,000 ft.",
+    "citations": [
+     {
+      "source": "this-day-in-aviation-cba4f7",
+      "detail": "narrative, and the reproduced Lockheed sheet \"Aircraft 972 Flight 902 Course Data, 6 March 1990\" (gate table)"
+     },
+     {
+      "source": "nasa-johnson-space-center-national-archi-3d78b0",
+      "detail": "p. 4, \"Blackbird jets\""
+     },
+     {
+      "source": "dvids-f4535a",
+      "detail": "1:13 to 1:21"
+     }
+    ]
+   },
+   {
+    "text": "The sheet gives four point-to-point results. Coast to coast, 2,404.05 statute miles took 1 hour 7 minutes 53.69 seconds, an average of 2,124.51 mph. Los Angeles to Washington, D.C., 2,299.67 miles, took 1 hour 4 minutes 19.89 seconds at 2,144.83 mph. Kansas City to Washington, 942.08 miles, took 25 minutes 58.53 seconds at 2,176.08 mph, and St. Louis to Cincinnati, 311.44 miles, took 8 minutes 31.97 seconds at 2,189.94 mph. The National Aeronautic Association lists all four as U.S. national records, and the three city-to-city runs also as FAI world records for speed over a recognised course.",
+    "citations": [
+     {
+      "source": "this-day-in-aviation-cba4f7",
+      "detail": "reproduced Lockheed sheet (point-to-point table) and NAA record-detail screenshots"
+     },
+     {
+      "source": "roadrunners-internationale-2c60a8",
+      "detail": "6 March 1990 entry"
+     },
+     {
+      "source": "sr-71-online-sr-71-org-via-internet-arch-7d62ef",
+      "detail": "6 March 1990 entries"
+     }
+    ]
+   },
+   {
+    "text": "Past the east coast gate the Blackbird slowed, refuelled once more and turned for Washington Dulles International Airport. Yeilding recalled a first pass at 800 ft, then a circuit and a single low pass at 200 ft, on which he lit the afterburners as he passed the crowd so that \"those orange plumes\" would show behind the black aircraft. NASA's Johnson Space Center newsletter reported hundreds of onlookers cheering at Dulles. After landing, 61-7972 taxied into the custody of the National Air and Space Museum with 2,801.1 hours on its airframe, and Vida's 1,392.7 hours in Blackbirds were more than any other crew member's.",
+    "citations": [
+     {
+      "source": "nasa-johnson-space-center-national-archi-3d78b0",
+      "detail": "p. 4, \"Blackbird jets\""
+     },
+     {
+      "source": "dvids-f4535a",
+      "detail": "1:21 to 1:57"
+     },
+     {
+      "source": "smithsonian-national-air-and-space-museu-2583e3",
+      "detail": "Long Description, final paragraphs"
+     }
+    ]
+   },
+   {
+    "text": "The flight was the lead story on NBC's evening news, according to the White House news summary prepared for President George H. W. Bush the next morning. The summary quotes Ben Rich of Lockheed bidding farewell to \"this magnificent, sophisticated flying machine\" and ending: \"Bye-bye, Blackbird.\" The aircraft now stands in the Boeing Aviation Hangar of the Steven F. Udvar-Hazy Center at Chantilly, Virginia, and a small American flag carried on the flight is in the museum's archives, its certificate giving the serial wrongly as 64-17972.",
+    "citations": [
+     {
+      "source": "george-h-w-bush-presidential-library-nat-02b655",
+      "detail": "PDF pp. 27 to 28 (news summary pp. B-3 and B-4, \"SR-71 Blackbird Plane\")"
+     },
+     {
+      "source": "smithsonian-national-air-and-space-museu-2583e3",
+      "detail": "display location"
+     },
+     {
+      "source": "smithsonian-national-air-and-space-museu-104008",
+      "detail": "Summary and Scope and Contents"
+     }
+    ]
+   }
+  ],
+  "differ": {
+   "text": "Sources round the times and pair the averages differently. The Smithsonian gives Los Angeles to Washington as 1 hour 4 minutes 20 seconds but pairs it with 2,124 mph, which Lockheed's timing sheet gives as the coast-to-coast average; the sheet's Los Angeles to Washington average is 2,144.83 mph. The official photograph captions and the NBC report (as summarised for the White House) round the coast-to-coast time to 68 minutes, NASA's Johnson Space Center newsletter gives 68 minutes 17 seconds, and the 2024 Air Force video says 67 minutes; the sheet's figure is 1 hour 7 minutes 53.69 seconds. The same NASA newsletter calls this the last Air Force flight of a Blackbird, but the Roadrunners timeline lists later delivery flights, of 61-7964 to Offutt Air Force Base on 20 March and 61-7976 to Wright-Patterson Air Force Base on 27 March 1990.",
+   "citations": [
+    {
+     "source": "smithsonian-national-air-and-space-museu-2583e3",
+     "detail": "Long Description"
+    },
+    {
+     "source": "this-day-in-aviation-cba4f7",
+     "detail": "reproduced Lockheed sheet"
+    },
+    {
+     "source": "national-archives-rg-330-naid-6461575-e14546",
+     "detail": "item title"
+    },
+    {
+     "source": "george-h-w-bush-presidential-library-nat-02b655",
+     "detail": "PDF p. 27"
+    },
+    {
+     "source": "nasa-johnson-space-center-national-archi-3d78b0",
+     "detail": "p. 4"
+    },
+    {
+     "source": "dvids-f4535a",
+     "detail": "0:00 to 0:12"
+    },
+    {
+     "source": "roadrunners-internationale-2c60a8",
+     "detail": "entries for 20 and 27 March 1990"
+    }
+   ]
+  }
+ },
+ {
+  "id": "drone-in-kazakhstan",
+  "title": "The drone that kept going",
+  "dek": "The first SENIOR BOWL drone vanished over China in 1969. Within two months the NRO had worked out where it probably fell, and then recalled the paper that said so.",
+  "date": "1969-11-10",
+  "precision": "day",
+  "programs": [
+   "senior-bowl"
+  ],
+  "airframes": [
+   "D-21 (summary)"
+  ],
+  "people": [
+   "James A. Cunningham Jr.",
+   "Ben Rich",
+   "Frank W. Hartley Jr.",
+   "David Packard"
+  ],
+  "kind": "story",
+  "verdict": null,
+  "body": [
+   {
+    "text": "After the M-21 accident the D-21 was reworked to be dropped from under the wing of a B-52H and boosted past Mach 3 by a solid rocket. It would then cruise at about Mach 3.3 and 95,000 ft, photograph its targets and eject its camera hatch for an aircraft to catch in mid-air. The Air Force flew the operational missions over China under the name SENIOR BOWL.",
+    "citations": [
+     {
+      "source": "national-reconnaissance-office-declassif-1d97d6",
+      "detail": "memo pp.4 to 5"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p.52"
+     },
+     {
+      "source": "national-reconnaissance-office-declassif-4d4fbe",
+      "detail": "entry for 20 February 1970"
+     }
+    ]
+   },
+   {
+    "text": "The first went on 10 November 1969. Drone 517 was launched successfully, climbed to its programmed 84,000 ft and held Mach 3.27. Telemetry showed it flying normally 350 miles and 12 minutes from the launch point; 14 seconds later the telemetry was switched off, as planned, so that nothing would be transmitted over denied territory. The last fix put it 50 miles off Hainan Island and 80 miles from the Chinese mainland. After that it was never seen or tracked again, its hatch never came down, and no intercepted signal could be matched to it.",
+    "citations": [
+     {
+      "source": "national-reconnaissance-office-declassif-ab3bc8",
+      "detail": "memo p.1"
+     },
+     {
+      "source": "national-reconnaissance-office-declassif-a61eca",
+      "detail": "p.1"
+     },
+     {
+      "source": "national-reconnaissance-office-declassif-4d4fbe",
+      "detail": "entry for 10 November 1969"
+     }
+    ]
+   },
+   {
+    "text": "The NRO's investigation blamed arithmetic. The drone's small navigation computer used approximate sines and cosines to decide when it had reached each waypoint, and at the third, 363 miles out, its error was 11.6 miles, more than the 10 miles it needed to count the point as reached. Each waypoint had to be satisfied in order, so the drone never made its programmed turns and \"should have continued on basically a straight course until fuel exhaustion\". A software change widened the limit to 17 miles, and on 20 February 1970 a test drone flew 2,969 miles at Mach 3.32.",
+    "citations": [
+     {
+      "source": "national-reconnaissance-office-declassif-ab3bc8",
+      "detail": "memo pp.2 to 3"
+     },
+     {
+      "source": "national-reconnaissance-office-declassif-a61eca",
+      "detail": "p.2"
+     }
+    ]
+   },
+   {
+    "text": "The first version of that analysis, written for the Deputy Secretary of Defense, David Packard, and dated 9 January 1970, said where the course led: the drone would have destroyed itself on descending to 52,500 ft, with debris \"impacting in an isolated region approximately 75 miles East of the Aral Sea in the Soviet Union\". Its covering sheet carries a typed note: \"All copies of this paper retrieved and destroyed per General Allen.\" The version dated 23 January keeps the analysis but drops the place, and the summary sent in March to the White House, the Attorney General and the Director of Central Intelligence says only that self-destruction probably came after the fuel ran out.",
+    "citations": [
+     {
+      "source": "national-reconnaissance-office-declassif-ab3bc8",
+      "detail": "covering sheet; memo p.2"
+     },
+     {
+      "source": "national-reconnaissance-office-declassif-c3edc4",
+      "detail": "memo p.2"
+     },
+     {
+      "source": "national-reconnaissance-office-declassif-a61eca",
+      "detail": "pp.1 to 2"
+     }
+    ]
+   },
+   {
+    "text": "The Soviet end of the story reached the CIA years later. In an Agency oral history interview on 4 October 1983, James A. Cunningham Jr., a veteran of the U-2 and OXCART programs, recalled that within the previous two years a report out of Russia had reached the Agency: the drone had ended up \"in Kazakhstan, or some bloody place\", reasonably intact despite its self-destruct system, and the Soviets were impressed by its metallurgy and plastic laminates. Asked whether it could be TAGBOARD, he said it \"sounds like the only thing it could be\".",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-internet-arc-b5097a",
+      "detail": "pp.36 to 37"
+     }
+    ]
+   },
+   {
+    "text": "Russian accounts add detail that no released American document confirms. One, a history of the Tupolev bureau's Voron project compiled from Russian aviation journals, says military counter-intelligence seized an unmarked drone late in 1969 a few hundred kilometres from the Tyura-Tam (Baikonur) range, where it had come down largely intact when its fuel ran out. Its Marquardt ramjet, still in working order, went to M. M. Bondaryuk's engine bureau, and after a government decision of 19 March 1971 Tupolev's design office drew up a Soviet analogue called Voron (Raven) that went no further than a preliminary design. In the American telling, which Curtis Peebles draws from Ben Rich's memoir, a CIA official handed Rich a panel from the drone in February 1986, saying it had been a Christmas gift from a Soviet KGB agent.",
+    "citations": [
+     {
+      "source": "testpilot-ru-russian-aviation-history-si-5eb23d",
+      "detail": "Voron page, first and second paragraphs"
+     },
+     {
+      "source": "presidio-press-2a2bd5",
+      "detail": "p.134"
+     }
+    ]
+   },
+   {
+    "text": "So the claim holds in outline. Within two months the NRO's own analysts put the likely end of the flight east of the Aral Sea, a CIA veteran later heard that the Soviets had found the drone in Kazakhstan, and a Russian history of the Voron project describes studying it. The most repeated details are weaker: Peebles has it self-destructing over Siberia and a shepherd finding a panel, but no released document puts it in Siberia, and the Russian account describes a drone found nearly whole. Even the target is uncertain: secondary accounts name the Lop Nur nuclear test site, while the NRO's papers say only that the mission flew over South China.",
+    "citations": [
+     {
+      "source": "national-reconnaissance-office-declassif-ab3bc8",
+      "detail": "memo p.2"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-b5097a",
+      "detail": "p.37"
+     },
+     {
+      "source": "testpilot-ru-russian-aviation-history-si-5eb23d",
+      "detail": "Voron page"
+     },
+     {
+      "source": "presidio-press-2a2bd5",
+      "detail": "pp.131, 134"
+     },
+     {
+      "source": "national-reconnaissance-office-declassif-a61eca",
+      "detail": "p.1"
+     }
+    ]
+   }
+  ],
+  "differ": {
+   "text": "The NRO papers and the flight table of AIAA 2007-5761 date the mission 10 November 1969; Peebles and the same paper's text give 9 November. The 9 January version gives the self-destruct height as 52,500 ft, the later NRO papers 52,000 ft. On where the drone came down, the withdrawn 9 January version says about 75 miles east of the Aral Sea, Cunningham's recollection says Kazakhstan, the Russian account a few hundred kilometres from Tyura-Tam, and Peebles Siberia. Peebles says the drone self-destructed and its debris rained down; Cunningham's report and the Russian account say it was found reasonably intact.",
+   "citations": [
+    {
+     "source": "national-reconnaissance-office-declassif-ab3bc8",
+     "detail": "memo p.2"
+    },
+    {
+     "source": "national-reconnaissance-office-declassif-c3edc4",
+     "detail": "memo p.2"
+    },
+    {
+     "source": "national-reconnaissance-office-declassif-a61eca",
+     "detail": "p.1"
+    },
+    {
+     "source": "american-institute-of-aeronautics-and-as-b032d7",
+     "detail": "p.12 and Table 2"
+    },
+    {
+     "source": "presidio-press-2a2bd5",
+     "detail": "pp.130, 134"
+    },
+    {
+     "source": "central-intelligence-agency-internet-arc-b5097a",
+     "detail": "p.37"
+    },
+    {
+     "source": "testpilot-ru-russian-aviation-history-si-5eb23d",
+     "detail": "Voron page"
+    }
+   ]
+  }
+ },
+ {
+  "id": "f-105-cover-story",
+  "title": "The F-105 that never crashed",
+  "dek": "When an A-12 fell out of the clouds near Wendover in May 1963, the CIA cleared the desert in two days, bought a newsman's film for $60 and let the papers report the loss of a fighter that was never there.",
+  "date": "1963-05-24",
+  "precision": "day",
+  "programs": [
+   "oxcart"
+  ],
+  "airframes": [
+   "60-6926"
+  ],
+  "people": [
+   "Ken Collins",
+   "Kelly Johnson",
+   "Art Kent"
+  ],
+  "kind": "story",
+  "verdict": null,
+  "body": [
+   {
+    "text": "On 24 May 1963 CIA pilot Ken Collins took Article 123 (60-6926), one of the A-12s being fitted out for operations, on a subsonic flight to test its inertial navigation system. In heavy cloud above 30,000 feet he saw airspeed and altitude readings that made no sense; the aircraft pitched up, stalled and fell into an inverted spin. Collins ejected at about 25,000 feet, a little after noon, and the A-12 went into the desert about 14 miles south of Wendover, Utah.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "pp. 17, 22 to 23"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-87cf53",
+      "detail": "pp. 1 to 2"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-1658d1",
+      "detail": "p. 2"
+     },
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF p. 16"
+     }
+    ]
+   },
+   {
+    "text": "His chase pilot, flying an F-101, had lost him in a turn in cloud over Wendover and heard only a garbled call about airspeed trouble. The project's command post learned where the aircraft was at about 1305 local time, when a Utah Highway Patrol dispatcher reported a crash near Highway 50 and a pilot who was safe. A passing motorist in a pickup had picked Collins up about half a mile from the wreck, and an Elko County deputy sheriff drove him to Wendover Auxiliary Air Force Base. There he waited under guard, having given nobody his name, until a Lockheed JetStar landed at 1620 with the site commander, a flight surgeon and security officers.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-internet-arc-87cf53",
+      "detail": "pp. 1 to 2"
+     }
+    ]
+   },
+   {
+    "text": "The cover story went out the same day. General Hubbard at Nellis Air Force Base announced that an F-105 flying out of Nellis had crashed and that its pilot had ejected safely; the name was withheld. Project and Lockheed security staff monitored and clipped the news in Salt Lake City, Las Vegas and Los Angeles. On Sunday 26 May the Las Vegas Review-Journal's front page reported \"a cloud of tight-lipped secrecy\" around the crash of a $2.5 million F-105 near the Nevada-Utah line, and a Las Vegas television newscaster pointed out that Wright-Patterson Air Force Base, the fighter's supposed home, denied any knowledge of it.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-internet-arc-87cf53",
+      "detail": "p. 5"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-3b5d2e",
+      "detail": "pp. 1 to 3"
+     }
+    ]
+   },
+   {
+    "text": "One newsman came close. Art Kent of a Salt Lake City television station heard about the crash on the Utah Highway Patrol radio, hired a light aircraft and flew over the wreck with a photographer that afternoon, five miles inside a restricted area by his own account. When he telephoned General Hubbard for details, Hubbard asked him to hold the story. At 0200 on 25 May the project's two security officers, using Air Force OSI credentials, met Kent in Salt Lake City. He agreed to surrender the film if the frames of other subjects were returned, and he was paid $60 for the aircraft hire and film. The prints, the CIA noted later, were so poor that it was doubtful they had any news value.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-internet-arc-87cf53",
+      "detail": "pp. 3 to 4, 8"
+     }
+    ]
+   },
+   {
+    "text": "The desert was cleared just as fast. Trucks, heavy equipment and drivers from Hill Air Force Base reached Wendover on the morning of 25 May, a Lockheed team began collecting wreckage at about 0700, and by 2000 that evening every piece was under guard in an empty hangar at the Wendover base. Plywood boxes were built for the jagged fragments, and C-124 transports flew the last of them away on 27 May. Everyone who had visited the site or seen the wreckage was given a security briefing, and the whole A-12 fleet was grounded for a week.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-internet-arc-87cf53",
+      "detail": "pp. 5 to 6, 8"
+     },
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF p. 16"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 23"
+     }
+    ]
+   },
+   {
+    "text": "One loose end took longer. Collins had carried an emergency packet, holding two letters and $1,000.30 in cash, in an unzipped leg pocket of his flight suit, and it was gone. Searchers in four-wheel-drive trucks, on foot and in a low-flying Cessna found nothing, so a party went out on horseback. After Kelly Johnson weighed a duplicate packet and used a computer to work out where it could have fallen, the mounted party found it intact, a mile and a quarter north-east of where the pilot had landed. The hired wrangler was given a security caution and dismissed.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-internet-arc-1658d1",
+      "detail": "pp. 1 to 2"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-87cf53",
+      "detail": "pp. 6 to 8"
+     }
+    ]
+   },
+   {
+    "text": "The cover held. Headquarters let Hubbard release the pilot's name on 27 May as press speculation mounted, the last news item ran on 28 May, and by 4 June no reporter had approached Collins or his family. Investigators blamed a pitot-static tube blocked by ice, and Collins, the CIA says, willingly took truth serum to help reconstruct the flight. Writing in 1970-71, CIA historian Thomas McIninch noted that the loss was \"still listed\" as an F-105 on official records. Collins told the Salt Lake Tribune in 2011 that he had used the cover on the men who picked him up, telling them the aircraft was an F-105 with a nuclear weapon on board, after which they no longer wanted to see it.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-internet-arc-87cf53",
+      "detail": "pp. 7, 9"
+     },
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF p. 16"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 23"
+     },
+     {
+      "source": "the-salt-lake-tribune-37e935",
+      "detail": "paragraphs under 'Nuclear cover story'"
+     }
+    ]
+   }
+  ],
+  "differ": {
+   "text": "Accounts differ in detail. McIninch calls it a routine training flight; Archangel calls it a low-altitude subsonic test of an inertial navigation system, yet also puts the aircraft in cloud above 30,000 feet. The 4 June memo has one motorist, L. A. Hewitt of Salt Lake City, driving north on 'Highway 51', who picked up the seat and drogue chute and then the pilot, and a deputy who took him to Wendover Auxiliary Air Force Base; in 2011 Collins recalled three men coming from U.S. 93 with the A-12's canopy in their truck, who left him at the state police post in Wendover, and a flight to an Air Force hospital in Arizona, where the memo has him flown to Albuquerque, New Mexico, for his examination. The memo puts the main wreckage 14 miles south of Wendover and about 3 miles west of Highway 50, some 17 miles in all; historian Peter Merlin, who found the site in October 2003, narrowed his search to an area about 11 miles south of Wendover in Nevada, just west of the Utah line. The Las Vegas Sun's agency story called the aircraft a jet trainer, not a fighter. On cause, the accident board blamed the blocked pitot-static system, but in August 1963 a reviewing officer in the CIA's Office of Special Activities dissented, naming pilot error (failing to correct a falling airspeed and flying in cloud on a visual clearance) as the primary cause and the blocked total-pressure port as secondary.",
+   "citations": [
+    {
+     "source": "central-intelligence-agency-80c044",
+     "detail": "PDF p. 16"
+    },
+    {
+     "source": "central-intelligence-agency-center-for-t-70081b",
+     "detail": "pp. 22 to 23"
+    },
+    {
+     "source": "central-intelligence-agency-internet-arc-87cf53",
+     "detail": "pp. 2 to 3"
+    },
+    {
+     "source": "the-salt-lake-tribune-37e935",
+     "detail": "whole article"
+    },
+    {
+     "source": "central-intelligence-agency-internet-arc-3b5d2e",
+     "detail": "p. 2"
+    },
+    {
+     "source": "central-intelligence-agency-internet-arc-ba7fd4",
+     "detail": "p. 1"
+    }
+   ]
+  }
+ },
+ {
+  "id": "finding-the-pueblo",
+  "title": "Finding the Pueblo",
+  "dek": "Three days after North Korea seized a US spy ship, an A-12 found it at anchor off Wonsan; for years the wrong pilot got the credit.",
+  "date": "1968-01-26",
+  "precision": "day",
+  "programs": [
+   "oxcart"
+  ],
+  "airframes": [
+   "60-6937",
+   "60-6930"
+  ],
+  "people": [
+   "Jack Weeks",
+   "Frank Murray",
+   "Lyndon B. Johnson",
+   "Robert McNamara",
+   "Richard Helms",
+   "Earle Wheeler",
+   "Jack Layton"
+  ],
+  "kind": "story",
+  "verdict": null,
+  "body": [
+   {
+    "text": "On 23 January 1968 North Korea seized the USS Pueblo, a US Navy ship gathering signals intelligence. The CIA's A-12s at Kadena, Okinawa, had never been sent over North Korea: the State Department opposed it, and the 303 Committee had recently turned down a request from the Commander-in-Chief, Pacific, to use them there.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 37"
+     },
+     {
+      "source": "central-intelligence-agency-foia-electro-88213f",
+      "detail": "p. 7"
+     }
+    ]
+   },
+   {
+    "text": "Washington changed its mind within a day. At a meeting on the evening of 24 January, the Chairman of the Joint Chiefs, General Earle Wheeler, said reconnaissance should include \"drones plus Black Shield\"; Richard Helms wanted it done at once (\"Seventeen minutes for Black Shield on one flight\"), and Robert McNamara favoured a three-pass mission. At the President's meeting that followed, McNamara asked to \"send Oxcart flight over North Korea tomorrow\", and the notes record: \"The President approved this action.\"",
+    "citations": [
+     {
+      "source": "u-s-department-of-state-office-of-the-hi-c2b1f2",
+      "detail": "Document 220, p. 491"
+     },
+     {
+      "source": "u-s-department-of-state-office-of-the-hi-59e60d",
+      "detail": "Document 221, p. 494"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "pp. 37-38"
+     }
+    ]
+   },
+   {
+    "text": "Jack Weeks took off from Kadena in Article 131 (60-6937) at 0111 GMT on 26 January, which was still the evening of the 25th in Washington. Planned for Mach 3.1 to 3.2, his mission, BX6847, crossed North Korea three times and spent about thirteen and a half minutes over its territory. On the third pass the right engine inlet unstarted, and both engines were pulled for inspection after their long over-temperature running, yet the critique graded the mission \"Successful\". A typed page of the pilot's in-flight remarks, filed with the mission papers, records at 0427 \"HOLY MACKERAL\" and ends: \"Well I thought up a few pieces of adrenlin that time!\"",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-foia-electro-6a5efe",
+      "detail": "pp. 1-3"
+     },
+     {
+      "source": "central-intelligence-agency-foia-electro-88162e",
+      "detail": "p. 1"
+     },
+     {
+      "source": "central-intelligence-agency-foia-electro-8f74b7",
+      "detail": "p. 8"
+     },
+     {
+      "source": "central-intelligence-agency-foia-electro-ae3306",
+      "detail": "data block"
+     },
+     {
+      "source": "central-intelligence-agency-foia-electro-890855",
+      "detail": "p. 2 of the file"
+     }
+    ]
+   },
+   {
+    "text": "On the morning of 26 January in Washington, Helms told the President, \"We did get photographs,\" and expected a report from Japan later that day. The photographs showed the Pueblo at anchor in a bay north of Wonsan with a patrol boat moored alongside; the same mission caught three new Komar guided-missile boats. A first assessment found \"no unusual air or naval deployments\", and no missile was fired at the A-12. On 29 January the President was told the coverage had been \"excellent\" and that no more flights were needed for the moment.",
+    "citations": [
+     {
+      "source": "u-s-department-of-state-office-of-the-hi-d6ba18",
+      "detail": "Document 228, p. 522 and note 3"
+     },
+     {
+      "source": "central-intelligence-agency-foia-electro-8f74b7",
+      "detail": "pp. 1, 8, 15"
+     },
+     {
+      "source": "central-intelligence-agency-foia-electro-0a6e7a",
+      "detail": "p. 124 and readout"
+     },
+     {
+      "source": "u-s-department-of-state-office-of-the-hi-cbfbe1",
+      "detail": "Document 244, p. 565"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 38"
+     },
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF p. 30"
+     }
+    ]
+   },
+   {
+    "text": "Frank Murray flew the next North Korean mission, BX6853, in Article 127 (60-6930) on 19 February. Scattered cloud covered the bay where the Pueblo had been photographed, and by then the ship had been moved. Writing years later, Murray explained how the credit went astray: until the CIA's 2007 releases \"it was believed that Weeks had aborted his mission, thus crediting me with flying the mission that located the USS Pueblo.\" The released critique settles it: under \"Pilot's Name\" it reads \"Weeks\", aircraft 131.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-foia-electro-8f74b7",
+      "detail": "p. 11"
+     },
+     {
+      "source": "central-intelligence-agency-foia-electro-150816",
+      "detail": "p. 1"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "pp. 38, 51"
+     },
+     {
+      "source": "roadrunners-internationale-2ee4b8",
+      "detail": "section \"The Pueblo Incident A-12 Mission\""
+     },
+     {
+      "source": "central-intelligence-agency-foia-electro-6a5efe",
+      "detail": "p. 1"
+     }
+    ]
+   },
+   {
+    "text": "One more mission over North Korea, flown by Jack Layton in May, found no sign of a military build-up, and the Pueblo's surviving crew were released 11 months after the seizure. Weeks did not live to see it. He was lost in Article 129 over the Pacific on 4 June 1968.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "pp. 38, 42"
+     }
+    ]
+   }
+  ],
+  "differ": {
+   "text": "Who flew BX6847: the CIA's 5 February 1968 critique and Archangel's mission table and narrative name Jack Weeks in Article 131. The credit to Frank Murray appears on a Wikimedia Commons copy of the photograph taken from GlobalSecurity.org, and GlobalSecurity says a first mission on 25 January aborted; the CIA's list of missions alerted in January to March 1968 enters BX6847 under 25 January (the Washington date) as \"Flown (3 Passes)\" and shows no aborted North Korean sortie. Murray himself wrote that Weeks \"encountered engine problems on the last leg\" and was thought to have aborted; the critique records the third-pass unstart but rates the mission successful. Murray recalls BX6853 as three passes; the CIA report says two. Tracking: Helms told the President on 26 January that Soviet and North Korean radar picked up the flight, McIninch and Archangel say Chinese radar, and the CIA's April 1968 report puts the first evidence of North Korean tracking on BX6853. Escorts: Archangel says two patrol boats, a footnote in the State Department history says three Komar boats, and NPIC saw one P-6 boat alongside and a probable service craft.",
+   "citations": [
+    {
+     "source": "central-intelligence-agency-foia-electro-6a5efe",
+     "detail": "p. 1"
+    },
+    {
+     "source": "central-intelligence-agency-center-for-t-70081b",
+     "detail": "pp. 37-38, 51"
+    },
+    {
+     "source": "wikimedia-commons-db6c38",
+     "detail": "file description"
+    },
+    {
+     "source": "globalsecurity-org-35692d",
+     "detail": "web page"
+    },
+    {
+     "source": "central-intelligence-agency-foia-electro-8f74b7",
+     "detail": "pp. 1-2, 8, 11, 19"
+    },
+    {
+     "source": "roadrunners-internationale-2ee4b8",
+     "detail": "section \"The Pueblo Incident A-12 Mission\""
+    },
+    {
+     "source": "u-s-department-of-state-office-of-the-hi-d6ba18",
+     "detail": "Document 228, p. 522 and note 3"
+    },
+    {
+     "source": "central-intelligence-agency-80c044",
+     "detail": "PDF p. 30"
+    },
+    {
+     "source": "central-intelligence-agency-foia-electro-0a6e7a",
+     "detail": "readout"
+    }
+   ]
+  }
+ },
+ {
+  "id": "fuel-that-would-not-burn",
+  "title": "The fuel a match could not light",
+  "dek": "JP-7 is famous for putting out a lit match. It probably does, but the only test on record is a historian's footnote, and the trick is less special than it sounds.",
+  "date": "1962",
+  "precision": "year",
+  "programs": [
+   "oxcart",
+   "senior-crown",
+   "nasa"
+  ],
+  "airframes": [],
+  "people": [
+   "Kelly Johnson",
+   "Peter Merlin",
+   "Richard Graham",
+   "William Brown"
+  ],
+  "kind": "legend",
+  "verdict": {
+   "text": "Probably true, but not proven and not special. No 1960s test or primary statement has been found: the CIA's history states the match claim without a source, and the only first-hand evidence is Peter Merlin's footnote citing his own experience. It is physically plausible. JP-7's specification, MIL-T-38219, requires a flash point of at least 60 C (140 F), and a liquid below its flash point does not give off enough vapour to form an ignitable mixture with the air above it. By that measure JP-7 is not exceptional: a 1984 report for the U.S. Army lists ordinary Chevron Pearl kerosene at 146 F. What the flight manual asks of JP-7 is thermal stability, not resistance to matches.",
+   "citations": [
+    {
+     "source": "central-intelligence-agency-center-for-t-70081b",
+     "detail": "p.12"
+    },
+    {
+     "source": "nasa-history-division-d3ceea",
+     "detail": "p.4 and note 6"
+    },
+    {
+     "source": "defense-technical-information-center-int-2144b2",
+     "detail": "Table 1"
+    },
+    {
+     "source": "electronic-code-of-federal-regulations-97abc9",
+     "detail": "29 CFR 1910.106(a)(14)"
+    },
+    {
+     "source": "defense-technical-information-center-int-956176",
+     "detail": "Tables 5-1 and 5-2"
+    },
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.1-4"
+    }
+   ]
+  },
+  "body": [
+   {
+    "text": "The SR-71 needed a new fuel because its fuel did more than burn. The flight manual explains that it also worked the engine's hydraulic system and served as a heat sink for the aircraft and engine accessories, so it had to be stable enough not to break down into coke and varnish in the fuel passages. Kelly Johnson wrote that it had to cope with minus 90 F while refuelling and more than 350 F at cruise, before working the afterburner flaps at 600 F. Pratt & Whitney developed it, and a new lubricant, with the Ashland, Shell and Monsanto companies.",
+    "citations": [
+     {
+      "source": "u-s-air-force-323b8c",
+      "detail": "p.1-4"
+     },
+     {
+      "source": "central-intelligence-agency-dd9228",
+      "detail": "Johnson, typed p.3"
+     },
+     {
+      "source": "central-intelligence-agency-dd9228",
+      "detail": "Brown, p.2"
+     }
+    ]
+   },
+   {
+    "text": "Its fame rests on a single claim. The CIA's history of the A-12 says the fuel had a low vapour pressure and a high flash point, and that \"a lighted match would not ignite it\". NASA historian Peter Merlin went further: a lit match thrown into a puddle of JP-7, he wrote, is extinguished. His footnote gives the source as \"Author's personal experience.\"",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p.12"
+     },
+     {
+      "source": "nasa-history-division-d3ceea",
+      "detail": "p.4 and note 6"
+     },
+     {
+      "source": "nasa-technical-reports-server-707153",
+      "detail": "p.22"
+     }
+    ]
+   },
+   {
+    "text": "Something still had to light it. The J58 used triethylborane, TEB, a liquid that, in the flight manual's words, \"will burn spontaneously with exposure to air above -5°C\". Each engine carried a 600 cc nitrogen-pressurised tank of it, enough for at least 16 metered shots, and moving a throttle from OFF to IDLE, or from Military into afterburner, fired one. A counter behind each throttle, set to 16 before engine start, showed the pilot how many were left.",
+    "citations": [
+     {
+      "source": "u-s-air-force-323b8c",
+      "detail": "p.1-22"
+     },
+     {
+      "source": "u-s-air-force-323b8c",
+      "detail": "p.1-9"
+     }
+    ]
+   },
+   {
+    "text": "Cold JP-7 might smother a match, but hot it was dangerous. NASA engineers preparing to heat a YF-12A in a laboratory noted that its JP-7 \"can autoignite at temperatures slightly over 400 °F\". In flight the SR-71 pressurised its tanks with nitrogen boiled off from liquid in three Dewar flasks, which the manual says inerts the space above the heated fuel to prevent autogenous ignition; without it the aircraft was limited to Mach 2.6.",
+    "citations": [
+     {
+      "source": "nasa-00ba9f",
+      "detail": "p.6"
+     },
+     {
+      "source": "u-s-air-force-323b8c",
+      "detail": "p.1-58"
+     },
+     {
+      "source": "u-s-air-force-323b8c",
+      "detail": "p.5-8"
+     }
+    ]
+   },
+   {
+    "text": "And the tanks leaked. When the first A-12 reached the Nevada test site and was fuelled, the sealants broke down and the tanks had to be stripped and relined; even afterwards, a leak rate of 5 to 60 drops a minute was considered acceptable. Merlin counts 10,000 linear feet of sealant in the Blackbird's tanks, which still leaked a considerable amount of fuel because the structure had to grow and shrink with temperature. The Smithsonian adds that the skin panels over the tanks contracted so much while the aircraft slowed to refuel that fuel leaked out as a vapour trail.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p.12"
+     },
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF p.13"
+     },
+     {
+      "source": "nasa-history-division-d3ceea",
+      "detail": "p.5"
+     },
+     {
+      "source": "smithsonian-national-air-and-space-museu-2583e3",
+      "detail": "object description"
+     }
+    ]
+   },
+   {
+    "text": "The CIA's history goes on to say that the A-12 took off with only enough fuel to get airborne, filled up from a KC-135 and climbed until the metal expanded and the leaks stopped. For the SR-71, former pilot Richard Graham rejects the idea that leaks were why it refuelled straight after take-off: the aircraft did leak, he is quoted as saying, but not enough to need fuel that soon. In his account the reason was the nitrogen: filling the tanks completely in flight drove the air out, so that nitrogen would fill the space above the fuel as it burned.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p.12"
+     },
+     {
+      "source": "the-sr-71-blackbird-thesr71blackbird-com-5a2300",
+      "detail": "whole page"
+     }
+    ]
+   }
+  ],
+  "differ": {
+   "text": "Why the J58 needed chemical ignition is told two ways. Merlin and the CIA's history tie it to the fuel's reluctance to ignite, while Pratt & Whitney's William Brown wrote that the chemical system was adopted \"to keep cooling requirements to a minimum\", because the hot fuel had little capacity left to cool the engine. Brown calls the chemical tetraethyl borane; the flight manual names it triethylborane. The number of shots also varies: at least 16 in the SR-71 manual, while the A-12's counters were set to 12.",
+   "citations": [
+    {
+     "source": "nasa-history-division-d3ceea",
+     "detail": "p.4"
+    },
+    {
+     "source": "central-intelligence-agency-center-for-t-70081b",
+     "detail": "p.12"
+    },
+    {
+     "source": "central-intelligence-agency-dd9228",
+     "detail": "Brown, p.2"
+    },
+    {
+     "source": "u-s-air-force-323b8c",
+     "detail": "p.1-22"
+    },
+    {
+     "source": "central-intelligence-agency-lockheed-pre-fa7f54",
+     "detail": "p.1-17"
+    }
+   ]
+  }
+ },
+ {
+  "id": "habu",
+  "title": "Why the crews were Habus",
+  "dek": "On Okinawa the SR-71 took the name of the island's pit viper within weeks of arriving; the patch that went with it is well documented, but who first said the word is a matter of memory, not record.",
+  "date": "1968",
+  "precision": "year",
+  "programs": [
+   "senior-crown",
+   "legacy"
+  ],
+  "airframes": [
+   "61-7974"
+  ],
+  "people": [
+   "Bill Gornik",
+   "Don Person",
+   "William R. Hayes",
+   "Jerome F. O'Malley",
+   "Duane W. Deal",
+   "Richard H. Graham",
+   "Ben Rich"
+  ],
+  "kind": "story",
+  "verdict": null,
+  "body": [
+   {
+    "text": "The habu is a real snake, and it is not black. Protobothrops flavoviridis is a venomous pit viper of the Okinawa and Amami islands, listed by the Reptile Database under the common name Habu; its Latin name means yellow and green. Americans on Okinawa knew it well: a Marine Corps magazine in 1961 called it one of the most deadly poisonous snakes in the world, and American children living round the remains of Sugar Loaf Hill, the 1945 battlefield, already called that hill \"Habu Hill\".",
+    "citations": [
+     {
+      "source": "the-reptile-database-385cdb",
+      "detail": "species account: common name, distribution, etymology"
+     },
+     {
+      "source": "marine-corps-association-internet-archiv-511da3",
+      "detail": "p.72"
+     }
+    ]
+   },
+   {
+    "text": "The first SR-71s reached Kadena Air Base in March 1968 to take over from the CIA's A-12s: 61-7978 on 8 March, then 61-7976 and 61-7974. Jerome O'Malley and Edward Payne flew the first operational sortie on 21 March. O'Malley's biographers, writing for Air University Press, say that local Ryukyuan islanders named the aircraft Habu after a dark, poisonous pit viper, and that by the time other crews took over the operational flights that spring, they \"were called 'Habu' missions\".",
+    "citations": [
+     {
+      "source": "roadrunners-internationale-2c60a8",
+      "detail": "p.11"
+     },
+     {
+      "source": "air-university-press-maxwell-afb-dtic-ad-7a3fd8",
+      "detail": "p.96, p.115"
+     }
+    ]
+   },
+   {
+    "text": "No document from 1968 that uses the name has been found for this story. Every account of its birth was written later. Don Hildebrant, a navigation-system technician who made four trips to Okinawa, dates it to winter 1968 and credits \"the Japanese on Okinawa\". habu.org says local people likened the A-12s, and later the SR-71s, to the snake. Ben Rich's 1994 memoir says the islanders named it after \"a black, extremely deadly pit viper\", which the habu is not. Bill Gornik, a senior maintenance NCO at Kadena, admitted that the snake legend \"was somewhat embellished\" to suit the aircraft's secret, striking mission.",
+    "citations": [
+     {
+      "source": "roadrunners-internationale-258a6c",
+      "detail": "p.1, p.14"
+     },
+     {
+      "source": "habu-org-the-online-blackbird-museum-dav-a3cdad",
+      "detail": "whole page"
+     },
+     {
+      "source": "little-brown-internet-archive-lending-co-e95b39",
+      "detail": "p.246"
+     },
+     {
+      "source": "blackbirds-net-5f7f1e",
+      "detail": "chapter 4"
+     }
+    ]
+   },
+   {
+    "text": "The patch is on firmer ground. In February 1985 Strategic Air Command's own magazine, Combat Crew, described it in an article by SR-71 pilot Capt. Duane W. Deal: awarded to SR-71 aircrews after their first operational mission, red, white and blue for the flag, two stars for the two-man crew, an \"SR-71\" caption and a head-on silhouette of the aircraft. The same page credits the nickname to Okinawans who saw a likeness between the SR-71 and the deadly snake. A separate \"3+\" patch went to crew members who had flown the SR-71 beyond Mach 3.",
+    "citations": [
+     {
+      "source": "strategic-air-command-u-s-air-force-inte-98f627",
+      "detail": "p.4, p.5"
+     }
+    ]
+   },
+   {
+    "text": "That rule is why the word still matters to the people who wear it. As habu.org quotes SR-71 pilot Richard Graham, you had to fly an SR-71 on an operational sortie to earn the Habu patch. Over time the name came to cover all Blackbird pilots and crews, but in the strict sense a Habu is someone who flew a mission. O'Malley's biographers add that insiders preferred \"Habu\" to the public name Blackbird, as a sign of knowing more than had been released.",
+    "citations": [
+     {
+      "source": "habu-org-the-online-blackbird-museum-dav-a3cdad",
+      "detail": "quoting Richard H. Graham"
+     },
+     {
+      "source": "air-university-press-maxwell-afb-dtic-ad-7a3fd8",
+      "detail": "p.96"
+     }
+    ]
+   },
+   {
+    "text": "The snake went onto the aircraft too. According to habu.org, 61-7974 had flown the most habu missions of the first three SR-71s by the end of their first rotation, and it was given new tail art, \"Ichi Ban\" (number one): a large figure 1 with a habu coiled round it, photographed as crew chief Don Person put on the finishing touches. Each operational sortie earned a small habu mark, and a crew with five was counted an ace. Hildebrant also knew 61-7974 as Ichi Ban; it was lost off Luzon on 21 April 1989 after an engine explosion, and both crew ejected safely.",
+    "citations": [
+     {
+      "source": "habu-org-54846f",
+      "detail": "captions"
+     },
+     {
+      "source": "roadrunners-internationale-258a6c",
+      "detail": "p.17"
+     },
+     {
+      "source": "roadrunners-internationale-2c60a8",
+      "detail": "p.22"
+     }
+    ]
+   },
+   {
+    "text": "The second ritual began as a prank, in Gornik's telling. One Friday night in 1966 he cut off the tie of Technical Sergeant Don Person at the Beale NCO club; early in the 1968 Kadena deployment he cut the tie of wing commander Col. William Hayes, and every other tie at the table, at Hayes's farewell in the officers' club, where Hayes had been given a green jacket embroidered \"#1 HABU\". A pilot then proposed that crews lose their ties after a first combat mission, so they flew with a tie under the pressure suit. A timeline by Buz Carpenter, citing Paul Crickmore, dates the custom to 29 May 1968. habu.org shows George Bull and Red McNeer losing theirs on 8 September 1968, after their first habu mission in 61-7974. The cut ties, embroidered with their owners' names, hung on a pole kept by the 9th Organizational Maintenance Squadron, and the ceremony lasted until the SR-71 retired in January 1990.",
+    "citations": [
+     {
+      "source": "blackbirds-net-5f7f1e",
+      "detail": "chapter 4"
+     },
+     {
+      "source": "roadrunners-internationale-2c60a8",
+      "detail": "p.11"
+     },
+     {
+      "source": "habu-org-54846f",
+      "detail": "captions"
+     }
+    ]
+   }
+  ],
+  "differ": {
+   "text": "Who named the aircraft is told four ways: Okinawans (Combat Crew, 1985; Casey and Casey), \"the Japanese on Okinawa\" (Hildebrant), local people who named the A-12s first (habu.org; this research found no CIA OXCART record using the name for the A-12), and the islanders in Rich's memoir. When is also unsettled: Hildebrant says winter 1968, while Gornik's jacket story (early in the 1968 deployment) and the Air University Press biography (spring 1968) put the name in use within weeks of the first SR-71 arriving in March. Rich calls the habu black and Casey and Casey call it dark; the species is mottled yellow, olive and brown, and its Latin name means yellow-green. The tie-cutting founder is spelled Gornik (his own memoir and habu.org), Gornick (Carpenter) and Gormick (Hildebrant); Carpenter's 29 May 1968 date comes from Crickmore, while Gornik gives no date for the Kadena night and places the first cut tie at Beale in 1966. habu.org's own captions disagree on whether Gornik or Don Person cut Bull's and McNeer's ties. \"Habu Hill\", the viewing knoll beside Kadena's runway, is often said to be named for the SR-71, but in 1961 children on Okinawa were already calling a different hill, the remains of Sugar Loaf Hill, \"Habu Hill\", so the name was not new to the island.",
+   "citations": [
+    {
+     "source": "strategic-air-command-u-s-air-force-inte-98f627",
+     "detail": "p.5"
+    },
+    {
+     "source": "air-university-press-maxwell-afb-dtic-ad-7a3fd8",
+     "detail": "p.96"
+    },
+    {
+     "source": "roadrunners-internationale-258a6c",
+     "detail": "p.13, p.14"
+    },
+    {
+     "source": "habu-org-the-online-blackbird-museum-dav-a3cdad",
+     "detail": "whole page"
+    },
+    {
+     "source": "little-brown-internet-archive-lending-co-e95b39",
+     "detail": "p.246"
+    },
+    {
+     "source": "the-reptile-database-385cdb",
+     "detail": "etymology"
+    },
+    {
+     "source": "roadrunners-internationale-2c60a8",
+     "detail": "p.11"
+    },
+    {
+     "source": "blackbirds-net-5f7f1e",
+     "detail": "chapters 1 and 4"
+    },
+    {
+     "source": "habu-org-54846f",
+     "detail": "captions"
+    },
+    {
+     "source": "marine-corps-association-internet-archiv-511da3",
+     "detail": "p.72"
+    }
+   ]
+  }
+ },
+ {
+  "id": "jack-weeks-lost",
+  "title": "The last flight of Article 129",
+  "dek": "Two weeks before the last A-12s went into storage, Jack Weeks took a freshly re-engined Article 129 up for a routine check flight over the Pacific; three warnings in thirty seconds were all anyone heard.",
+  "date": "1968-06-04",
+  "precision": "day",
+  "programs": [
+   "oxcart"
+  ],
+  "airframes": [
+   "60-6932"
+  ],
+  "people": [
+   "Jack Weeks",
+   "Clark Clifford",
+   "Lyndon B. Johnson",
+   "Walter Ray",
+   "Michael Hayden"
+  ],
+  "kind": "story",
+  "verdict": null,
+  "body": [
+   {
+    "text": "By the end of May 1968 the A-12's fate was settled. Defense Secretary Clark Clifford had reaffirmed the decision to retire it on 16 May, President Johnson had agreed on 21 May, and the detachment at Kadena, Okinawa, was told to prepare to go home. Flying was cut to what safety and pilot proficiency required, and 8 June was set as the earliest date for the aircraft to start back.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF p. 35"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 42"
+     }
+    ]
+   },
+   {
+    "text": "Article 129 (60-6932) needed work first. On 2 June its pilot reported a late bleed-valve shift during acceleration and erratic running of the right engine on the way down. That engine, number 205, was removed and replaced with number 208, a spare that had made ten good flights in Article 131 before being pulled in April for starting problems and repaired. An engine change meant a check flight before the long trip home, and the maintenance log for 3 June noted it was \"scheduled for tomorrow\".",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-foia-electro-bad622",
+      "detail": "pp. 1-2"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 42"
+     }
+    ]
+   },
+   {
+    "text": "Jack Weeks took off at 0450 GMT on 4 June, early afternoon on Okinawa. He finished refuelling at 0523 and turned south toward the Philippines for a planned run at 74,900 feet and Mach 3.10. At 0542:18 the A-12's BIRDWATCHER telemetry signalled a high exhaust gas temperature on the right engine. At 0542:40 it reported low fuel flow on the same engine, and at 0542:48 that the aircraft was descending. Then it fell silent. The accident board's chart marks the spot 520 nautical miles from Clark Air Base in the Philippines; the CIA's histories say 520 miles east of Manila.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-foia-electro-71d298",
+      "detail": "chart \"Aircraft 129 Mishap\""
+     },
+     {
+      "source": "roadrunners-internationale-0a8ea2",
+      "detail": "flight narrative"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 42"
+     },
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF p. 35"
+     }
+    ]
+   },
+   {
+    "text": "The Navy ship USS Serrano was on the scene by 1200 GMT on 5 June, and aircraft flew 91 search sorties totalling 869 hours 35 minutes. They found no wreckage, no pilot and no trace of either. The accident board put the primary cause as \"undetermined\" and the most probable as \"catastrophic failure of right engine\", and made no recommendations. Reviewing its report on 20 June, the research deputy of the CIA's Office of Special Activities wondered whether a nacelle fire near the engine's temperature-sensor wiring had started it, while agreeing the cause remained undetermined.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-foia-electro-71d298",
+      "detail": "findings and chart \"Search and Rescue Effort\""
+     },
+     {
+      "source": "central-intelligence-agency-foia-electro-2fcfdb",
+      "detail": "para. 3"
+     },
+     {
+      "source": "central-intelligence-agency-foia-electro-6b453d",
+      "detail": "p. 1"
+     },
+     {
+      "source": "central-intelligence-agency-foia-electro-43048b",
+      "detail": "para. 5"
+     }
+    ]
+   },
+   {
+    "text": "Secrecy held to the end. As when Walter Ray was killed in January 1967, the official news release called the lost aircraft an SR-71. Weeks was the second and last A-12 pilot to die: Lockheed built 15 OXCART aircraft, five were lost in accidents, and two pilots were killed.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF pp. 35-36"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "pp. 33, 42"
+     }
+    ]
+   },
+   {
+    "text": "The other two A-12s left Okinawa that month, and on 21 June the last of the fleet went into storage at Palmdale, California. On 26 June the BLACK SHIELD pilots received the CIA Intelligence Star for valour; Weeks's widow accepted his. When the Agency put an A-12 on display at its headquarters in September 2007, its director, Michael Hayden, said that Walter Ray and Jack Weeks \"are remembered forever on our Memorial Wall\".",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "pp. 42-43"
+     },
+     {
+      "source": "central-intelligence-agency-foia-electro-43048b",
+      "detail": "paras. 1-2"
+     },
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF p. 36"
+     },
+     {
+      "source": "central-intelligence-agency-wayback-mach-3208f9",
+      "detail": "remarks"
+     }
+    ]
+   }
+  ],
+  "differ": {
+   "text": "Date: every CIA record found gives 4 June 1968: the accident board's chart (\"DATE: 4 JUNE 1968\", take-off 0450Z), the 30 June 1968 PFIAB submission, McIninch and Archangel, and the maintenance log for 3 June calls the check flight \"scheduled for tomorrow\". Roadrunners Internationale gives 5 June 1968 with a 1400 local take-off, but 0450 GMT is about 1350 on Okinawa on the same day, so a time-zone difference does not explain the later date. Timing: Archangel says the warning signals came about half an hour into the flight; the board's times put them 52 minutes after take-off, and Roadrunners says 42 minutes. Place: the CIA histories say 520 miles east of Manila, the board's chart measures 520 nautical miles from Clark Air Base, and the PFIAB submission says only east of the Philippines. Roadrunners gives the last altitude signal as below 68,500 feet; the chart reads \"descending below FL 70\".",
+   "citations": [
+    {
+     "source": "central-intelligence-agency-foia-electro-71d298",
+     "detail": "chart \"Aircraft 129 Mishap\""
+    },
+    {
+     "source": "central-intelligence-agency-foia-electro-43048b",
+     "detail": "para. 5"
+    },
+    {
+     "source": "central-intelligence-agency-80c044",
+     "detail": "PDF p. 35"
+    },
+    {
+     "source": "central-intelligence-agency-center-for-t-70081b",
+     "detail": "pp. 42, 49"
+    },
+    {
+     "source": "central-intelligence-agency-foia-electro-bad622",
+     "detail": "p. 1"
+    },
+    {
+     "source": "roadrunners-internationale-0a8ea2",
+     "detail": "flight narrative"
+    }
+   ]
+  }
+ },
+ {
+  "id": "la-speed-check",
+  "title": "The LA speed check",
+  "dek": "A Cessna, a Twin Beech and an F-18 asked Los Angeles Center how fast they were going; then, as Brian Shul told it, his SR-71 crew asked too.",
+  "date": "1984",
+  "precision": "year",
+  "programs": [
+   "senior-crown"
+  ],
+  "airframes": [],
+  "people": [
+   "Brian Shul",
+   "Walter Watson"
+  ],
+  "kind": "story",
+  "verdict": null,
+  "body": [
+   {
+    "text": "Brian Shul came to Beale Air Force Base, California, in 1983 to train on the SR-71, years after a crash in the Vietnam War had left him so badly burned that doctors expected him to die. He was paired with a reconnaissance systems officer, Walter Watson, and, as Blackbird crews normally did, the two flew together for the rest of their tour: four years, by Shul's count. A roll of everyone who flew the Blackbirds, kept by veterans, lists Shul from 10 July 1984 and Watson from 23 August 1984.",
+    "citations": [
+     {
+      "source": "mach-1-british-edition-midland-publishin-b4df6f",
+      "detail": "Introduction (from p.15); 'The Guy in Back', p.28"
+     },
+     {
+      "source": "the-new-york-times-85ba3f",
+      "detail": "paras. 3 and 22"
+     },
+     {
+      "source": "sr-71-blackbirds-leland-haynes-site-main-6235cc",
+      "detail": "entries 414 and 415"
+     }
+    ]
+   },
+   {
+    "text": "Their training sorties were long loops of the western United States. In his book Sled Driver, Shul describes meeting a tanker over Nevada, accelerating to Mach 3 over Wyoming and levelling off above 75,000 feet over Montana, then turning south through Colorado, New Mexico and Arizona, out over southern California and north towards Seattle before descending home: about two and a half hours in all.",
+    "citations": [
+     {
+      "source": "mach-1-british-edition-midland-publishin-b4df6f",
+      "detail": "ch. III, 'The Deep Blue', p.65"
+     }
+    ]
+   },
+   {
+    "text": "Shul tells the speed check this way. One day, crossing southern California about 13 miles up, he and Watson were listening to Los Angeles Center, which watched the Blackbird on its scopes without controlling it. A Cessna asked the controller for its ground speed and was told 90 knots; a Twin Beech asked next and was told 120. Then an F-18 with the call sign Dusty 52 asked the same question, in a tone Shul heard as smug, and was given 525 knots.",
+    "citations": [
+     {
+      "source": "mach-1-british-edition-midland-publishin-b4df6f",
+      "detail": "ch. III, 'The Deep Blue', pp.65 to 67"
+     }
+    ]
+   },
+   {
+    "text": "Shul writes that he was already weighing a reply when he heard the click of Watson's microphone in the back seat. Aspen 20, Watson asked, could Center give them a ground speed readout too? After a longer pause than usual the controller answered 1,742 knots, and, in Shul's telling, nobody else on the frequency asked again. What stayed with him was less the number than the timing: he and Watson had thought the same thing at the same instant, and he took it as the sign that they had become \"a real crew\".",
+    "citations": [
+     {
+      "source": "mach-1-british-edition-midland-publishin-b4df6f",
+      "detail": "ch. III, 'The Deep Blue', p.67"
+     }
+    ]
+   },
+   {
+    "text": "He went on telling the story for the rest of his life, and it changed in the telling. At the Hiller Aviation Museum in San Carlos, California, on 30 December 2016, he set it on the crew's last training sortie, on an autumn evening, made the fighter a Navy F/A-18 Hornet given 620 knots, and gave Watson a parting line: the crew, Watson told Center, was showing closer to 2,000. Shul told that audience he had first told the story in Seattle some 20 or 25 years earlier, that it had since become a kind of urban legend, and that it was all true. Texts quoted since as coming from Sled Driver give the Blackbird 1,942 knots.",
+    "citations": [
+     {
+      "source": "youtube-recorded-and-uploaded-by-jan-joh-2a1b4c",
+      "detail": "0:05 to 5:25"
+     },
+     {
+      "source": "the-aviation-geek-club-32dac5",
+      "detail": "quoted passage"
+     },
+     {
+      "source": "the-new-york-times-85ba3f",
+      "detail": "paras. 11 to 14"
+     }
+    ]
+   },
+   {
+    "text": "What can be checked is the crew, not the conversation. Shul and Watson certainly flew the SR-71 together: on 16 April 1986 they took 61-7960 on one of the sorties that photographed the damage in Libya after the El Dorado Canyon raid. But neither the book nor the talks give a date, an aircraft serial or the controller's name, and no tape, log or controller's account of the exchange has been published, so the speeds are Shul's remembered figures, not measurements. Because Shul places the flight in the crew's training, and their first Blackbird flights date from mid-1984, it probably happened in late 1984 or 1985; that is an inference, not a record.",
+    "citations": [
+     {
+      "source": "roadrunners-internationale-2c60a8",
+      "detail": "16 April 1986 entry, p.21"
+     },
+     {
+      "source": "mach-1-british-edition-midland-publishin-b4df6f",
+      "detail": "ch. III, pp.65 to 67"
+     },
+     {
+      "source": "youtube-recorded-and-uploaded-by-jan-joh-2a1b4c",
+      "detail": "0:44"
+     },
+     {
+      "source": "sr-71-blackbirds-leland-haynes-site-main-6235cc",
+      "detail": "entries 414 and 415"
+     }
+    ]
+   },
+   {
+    "text": "Shul retired from the Air Force in 1990 and made a second career as a photographer, author and speaker. He collapsed and died in Reno, Nevada, in May 2023, just after finishing one of his talks. The speed check still circulates, usually in one of its later versions; Article 121 retells it from his book, and as his story.",
+    "citations": [
+     {
+      "source": "the-new-york-times-85ba3f",
+      "detail": "paras. 1, 2, 5, 15 and 17"
+     },
+     {
+      "source": "the-aviation-geek-club-32dac5",
+      "detail": "quoted passage"
+     }
+    ]
+   }
+  ],
+  "differ": {
+   "text": "The details depend on the version. In Sled Driver as printed by Midland Publishing in 1992 (pp.65 to 67) the fighter is simply \"an F-18\", Dusty 52 is given 525 knots, the SR-71 is Aspen 20 at 1,742 knots, and Watson says nothing more. Passages quoted as from Sled Driver by The Aviation Geek Club (2017) and The New York Times (2023) give 620 knots and 1,942 knots with the same call signs, which suggests a later edition (perhaps the 2003 Gallery One edition, not seen) was revised. In the Hiller Aviation Museum talk of 30 December 2016 the fighter is a Navy Hornet at 620 knots, the flight is the crew's last training sortie, seen from near Tucson on an autumn evening, and Watson answers back that the crew shows closer to 2,000; a machine transcript of that recording, not yet checked by ear, hears the call sign as Aspen 30 and the readout as 1,942 knots. The book's route has the tanker over Nevada; the talk puts it over Idaho.",
+   "citations": [
+    {
+     "source": "mach-1-british-edition-midland-publishin-b4df6f",
+     "detail": "pp.65 to 67"
+    },
+    {
+     "source": "the-aviation-geek-club-32dac5",
+     "detail": "quoted passage"
+    },
+    {
+     "source": "the-new-york-times-85ba3f",
+     "detail": "paras. 11 to 14"
+    },
+    {
+     "source": "youtube-recorded-and-uploaded-by-jan-joh-2a1b4c",
+     "detail": "0:20 to 5:25"
+    }
+   ]
+  }
+ },
+ {
+  "id": "m21-collision",
+  "title": "The fourth launch",
+  "dek": "Off the California coast in July 1966, a Mach 3 drone rose a few feet off its mothership's back, rolled, and came down on it.",
+  "date": "1966-07-30",
+  "precision": "day",
+  "programs": [
+   "tagboard"
+  ],
+  "airframes": [
+   "60-6941",
+   "60-6940"
+  ],
+  "people": [
+   "Bill Park",
+   "Ray Torick",
+   "Kelly Johnson",
+   "Keith Beswick"
+  ],
+  "kind": "story",
+  "verdict": null,
+  "body": [
+   {
+    "text": "By the summer of 1966 Lockheed had launched three D-21 reconnaissance drones from the back of an M-21, an A-12-type aircraft built as a mothership, with a launch control officer in a second seat behind the pilot. Each launch, at about Mach 3.2 and 75,000 ft, had gone without incident, and each drone had flown better than the one before, although no film capsule had yet been recovered. Kelly Johnson, head of the Skunk Works, nonetheless called the launch \"the most dangerous maneuver\" of any aircraft he had worked on.",
+    "citations": [
+     {
+      "source": "national-reconnaissance-office-declassif-1d97d6",
+      "detail": "memo p.1"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p.52"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-b5097a",
+      "detail": "p.36"
+     },
+     {
+      "source": "nasa-history-division-d3ceea",
+      "detail": "pp.31 to 32"
+     }
+    ]
+   },
+   {
+    "text": "The fourth launch came on 30 July 1966, over the Pacific Missile Range off California. Lockheed test pilot Bill Park, who flew every M-21 flight, had Article 135, serial 60-6941, with Ray Torick as his launch control officer. This drone carried more fuel than any before it and was about 25 percent heavier. Curtis Peebles, in his history of secret aircraft, writes that the other M-21 flew alongside as chase, with Keith Beswick in its back seat filming the separation.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p.50, p.52"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-317463",
+      "detail": "p.3"
+     },
+     {
+      "source": "national-reconnaissance-office-declassif-1d97d6",
+      "detail": "memo p.2"
+     },
+     {
+      "source": "presidio-press-2a2bd5",
+      "detail": "p.126"
+     }
+    ]
+   },
+   {
+    "text": "An NRO memorandum written after the investigations describes what followed. The drone separated normally and rose about seven feet above the launch aircraft, yawed slightly to the left and began to roll left faster than its elevons could stabilise it. A few seconds later it struck the M-21 near the left fin, and both aircraft disintegrated. Telemetry and the chase film allowed a fairly complete reconstruction, but the investigators could not identify the cause: the heavy drone had separated more slowly than expected, and the airflow between two aircraft so close together was not well understood.",
+    "citations": [
+     {
+      "source": "national-reconnaissance-office-declassif-1d97d6",
+      "detail": "memo pp.1 to 3"
+     }
+    ]
+   },
+   {
+    "text": "Both men ejected over the sea. The CIA's accident summary of 11 January 1967 records that the pilot was picked up from his life raft by helicopter with minor injuries, that the launch control officer's death was due to drowning, and that the wreckage sank in deep water about 75 nautical miles offshore and was never recovered. Peebles writes that Torick, having survived the break-up and the ejection, drowned when sea water entered his pressure suit. At CIA headquarters, the Director's morning meeting on 1 August heard the loss reported in three short sentences, ending: \"The pilot survived. The other crew member did not.\"",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-internet-arc-317463",
+      "detail": "p.3"
+     },
+     {
+      "source": "presidio-press-2a2bd5",
+      "detail": "p.126"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-8156be",
+      "detail": "p.2"
+     }
+    ]
+   },
+   {
+    "text": "Johnson treated the loss as the end of launching drones from the M-21. In early August, after discussing the accident with the NRO, he put his subcontractors and vendors on a 90-day restricted work status, and Lockheed concluded, \"reluctantly\" in the NRO's word, that a launch from an A-12 at Mach 3.2 was \"a marginal operation\" in which slight deviations could cause another accident. The NRO's November memorandum proposed dropping the drone instead from a pylon under the wing of a B-52H and boosting it past Mach 3 with a solid rocket, the scheme that became SENIOR BOWL.",
+    "citations": [
+     {
+      "source": "national-reconnaissance-office-declassif-cbbf26",
+      "detail": "p.1"
+     },
+     {
+      "source": "national-reconnaissance-office-declassif-1d97d6",
+      "detail": "memo pp.3 to 4"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p.52"
+     }
+    ]
+   },
+   {
+    "text": "No further \"piggyback\" launches were attempted. The surviving mothership, 60-6940, is on display at the Museum of Flight in Seattle, the only D-21 anywhere still mounted on an M-21.",
+    "citations": [
+     {
+      "source": "national-museum-of-the-united-states-air-5c4050",
+      "detail": "photo caption 151009-F-DW547-003"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p.50"
+     },
+     {
+      "source": "american-institute-of-aeronautics-and-as-b032d7",
+      "detail": "p.12"
+     }
+    ]
+   }
+  ],
+  "differ": {
+   "text": "Peter Merlin's 2009 AIAA paper dates the accident 31 July 1966; the CIA's monograph, the NRO memorandum and the CIA accident summary give 30 July (the summary misprints the year as 1965). Merlin and Peebles attribute the collision to an unstart of the drone's ramjet, while the NRO memorandum of November 1966 says the cause was not precisely identified. The CIA summary places the wreck about 75 nautical miles off the coast; Peebles says the crew came down 150 miles offshore. James Cunningham, recalling the accident for a CIA interviewer in 1983, thought Torick had landed upside down in the water and become tangled in his parachute.",
+   "citations": [
+    {
+     "source": "nasa-technical-reports-server-707153",
+     "detail": "p.12"
+    },
+    {
+     "source": "central-intelligence-agency-center-for-t-70081b",
+     "detail": "p.52"
+    },
+    {
+     "source": "national-reconnaissance-office-declassif-1d97d6",
+     "detail": "memo pp.1 to 3"
+    },
+    {
+     "source": "central-intelligence-agency-internet-arc-317463",
+     "detail": "p.3"
+    },
+    {
+     "source": "presidio-press-2a2bd5",
+     "detail": "p.126"
+    },
+    {
+     "source": "central-intelligence-agency-internet-arc-b5097a",
+     "detail": "p.36"
+    }
+   ]
+  }
+ },
+ {
+  "id": "never-lost-to-a-missile",
+  "title": "The missiles that missed",
+  "dek": "Air Force writers say the SR-71 dodged 1,000 missiles, or 4,000, and was never hit; the record bears out the escape but not the count.",
+  "date": "1981-08-26",
+  "precision": "day",
+  "programs": [
+   "senior-crown",
+   "oxcart"
+  ],
+  "airframes": [
+   "61-7974",
+   "60-6932"
+  ],
+  "people": [
+   "Kelly Johnson",
+   "Buddy Brown",
+   "Charles Allen",
+   "Dennis Sullivan",
+   "Tony Bevacqua",
+   "Jerry Crew",
+   "James Schlesinger",
+   "Henry Kissinger",
+   "Fred Francis"
+  ],
+  "kind": "legend",
+  "verdict": {
+   "text": "Half true. \"Never shot down\" holds: all 12 SR-71 losses were accidents, and none of the sources checked for this story records a missile striking an SR-71, although an A-12 of the same family came home holed by a fragment in October 1967. The numbers do not hold up as facts. Official and semi-official writers give \"more than 1,000\" or \"4,000\" without saying how either was counted; the earliest dated version found is a 1981 statement attributed to Kelly Johnson in a veterans' timeline, and the firings documented one by one are few. Safe wording: fired on many times and never brought down. Give a number only with its source.",
+   "citations": [
+    {
+     "source": "nasa-technical-reports-server-707153",
+     "detail": "p. 14"
+    },
+    {
+     "source": "dvids-70a023",
+     "detail": "paragraph after the Bevacqua quotation"
+    },
+    {
+     "source": "central-intelligence-agency-center-for-t-70081b",
+     "detail": "pp. 36 to 37"
+    },
+    {
+     "source": "roadrunners-internationale-2c60a8",
+     "detail": "entry for 31 Aug 1981"
+    },
+    {
+     "source": "airman-magazine-u-s-air-force-756a7d",
+     "detail": "opening paragraph"
+    },
+    {
+     "source": "air-space-forces-magazine-air-space-forc-284cec",
+     "detail": "entry text"
+    }
+   ]
+  },
+  "body": [
+   {
+    "text": "Few Blackbird stories are told more often: the SR-71 was shot at again and again and never hit. Air Force writing repeats it, but not with one number. Airman, the service's own magazine, said in July 2017 that the aircraft \"evaded all 4,000 missiles fired at it\". A 9th Reconnaissance Wing article on DVIDS in March 2020 said it had been fired at \"over a recorded number of 1,000 times\", and the Air & Space Forces Association's This Day in Airpower entry says more than 1,000 surface-to-air missiles were fired at SR-71s and \"they all missed\". None of the three says who kept the count, or how.",
+    "citations": [
+     {
+      "source": "airman-magazine-u-s-air-force-756a7d",
+      "detail": "opening paragraph and fact list"
+     },
+     {
+      "source": "dvids-70a023",
+      "detail": "paragraph after the Bevacqua quotation"
+     },
+     {
+      "source": "air-space-forces-magazine-air-space-forc-284cec",
+      "detail": "entry text"
+     }
+    ]
+   },
+   {
+    "text": "The figure of 1,000 goes back at least to 1981. A timeline of events published in June 2010 by Roadrunners Internationale, a Blackbird veterans' group, records that on 31 August 1981 Kelly Johnson, who had led the aircraft's design at Lockheed, announced that more than 1,000 missiles had been launched at the SR-71 without success. The entry is credited to the SR-71 pilot Buddy Brown and names no publication, so the original statement has not been traced. Johnson's own history of the aircraft, reprinted in the CIA's Studies in Intelligence in summer 1982, gives no count at all. Later figures are memories rather than tallies: in 2015 Charles Allen, who had run the CIA's National Warning Staff, recalled that North Vietnam \"fired something like 800 SAMs\" at the SR-71 and \"never once touched it\".",
+    "citations": [
+     {
+      "source": "roadrunners-internationale-2c60a8",
+      "detail": "entry for 31 Aug 1981; source key BB (Buddy Brown)"
+     },
+     {
+      "source": "national-archives-records-of-the-central-741803",
+      "detail": "Studies in Intelligence, Summer 1982, whole article and author note"
+     },
+     {
+      "source": "breaking-defense-7a7b98",
+      "detail": "paragraphs on Allen's career and on GIANT SCALE"
+     }
+    ]
+   },
+   {
+    "text": "The firings documented in detail involve the SR-71's CIA forerunner, the A-12. North Vietnam fired surface-to-air missiles at A-12s on three BLACK SHIELD missions. On 28 October 1967 one missile, launched too late, was never a threat. Two days later at least six were fired at Dennis Sullivan, flying Article 129 (60-6932) at Mach 3.1 and 84,000 ft; he saw three detonations behind him. A CIA memorandum of 6 November 1967 records a single hole \"approximately the size\" of one made by a .30-06 round, in a fillet just aft of the starboard landing gear, where a pellet had pierced the skin and a support for one of the fuel tanks. A third missile, on 4 January 1968, burst well over a mile away. The Blackbird family was hit once, by a fragment.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "pp. 36 to 37; mission table pp. 50 to 51 (BX6734, Sullivan, 129)"
+     },
+     {
+      "source": "cia-office-of-special-activities-via-the-ab5d54",
+      "detail": "p. 1, paras 1 to 3"
+     }
+    ]
+   },
+   {
+    "text": "For the SR-71 itself, single firings are recorded but never totalled. The Roadrunners timeline, citing Paul Crickmore's book Lockheed SR-71: The Secret Missions Exposed, dates the first confirmed SA-2 launch at an SR-71 to 26 July 1968, against 61-7974 flown by Tony Bevacqua and Jerry Crew, and says the aircraft's own cameras photographed the missile. The best documented case came on 26 August 1981. The next day the State Department said that North Korea had \"fired a missile at a U.S. Air Force plane flying in South Korean and international air space\" and called it \"an act of lawlessness\". The Department of State Bulletin's chronology names the aircraft as an SR-71 near the Demilitarized Zone and adds that it was not hit.",
+    "citations": [
+     {
+      "source": "roadrunners-internationale-2c60a8",
+      "detail": "entry for 26 Jul 1968; source key SME (Crickmore)"
+     },
+     {
+      "source": "u-s-department-of-state-internet-archive-3eff32",
+      "detail": "p. 39 (Department statement, 27 Aug 1981) and p. 85 (chronology, 26 Aug)"
+     }
+    ]
+   },
+   {
+    "text": "The people who sent the aircraft did not treat it as untouchable. Asking Henry Kissinger in March 1973 to approve new flights over North Vietnam, the Director of Central Intelligence, James Schlesinger, called the SR-71 the only airborne platform that could cover the targets \"with reasonable safety\". The loss record, by contrast, is not in dispute. Lockheed built 32 SR-71s and 12 were lost, all in accidents; the 9th Reconnaissance Wing says none was lost to enemy fire. At least two came down on operational sorties. A CIA summary records that on 10 May 1970 a GIANT SCALE aircraft \"crashed after one successful pass over denied territory\", 25 km north-east of U-Tapao in Thailand, with both crew safe, and 61-7974 was lost off Luzon on 21 April 1989. Veterans' chronologies blame a centre-of-gravity problem and an engine explosion, not the enemy.",
+    "citations": [
+     {
+      "source": "cia-foia-reading-room-cia-rdp76b00734r00-3acdc2",
+      "detail": "memorandum of 15 March 1973, para. 4"
+     },
+     {
+      "source": "smithsonian-national-air-and-space-museu-2583e3",
+      "detail": "long description"
+     },
+     {
+      "source": "nasa-technical-reports-server-707153",
+      "detail": "p. 14"
+     },
+     {
+      "source": "dvids-70a023",
+      "detail": "paragraph after the Bevacqua quotation"
+     },
+     {
+      "source": "cia-foia-reading-room-cia-rdp75b00159r00-4b6a66",
+      "detail": "pp. 1 to 2 (mission S258)"
+     },
+     {
+      "source": "roadrunners-internationale-258a6c",
+      "detail": "entries for 10 May 1970 and 21 April 1989"
+     }
+    ]
+   },
+   {
+    "text": "By the time the SR-71 retired, the escape from missiles had become part of its farewell. The White House news summary for 7 March 1990 records NBC's Fred Francis telling viewers on 6 March that no aircraft had \"dodged more missiles than the Blackbird\", in a report that also had it photographing targets inside the Soviet Union, work the Smithsonian says satellites had already taken over by the time the SR-71 entered service. No count was given then either.",
+    "citations": [
+     {
+      "source": "george-h-w-bush-presidential-library-nat-02b655",
+      "detail": "PDF pp. 27 to 28 (\"SR-71 Blackbird Plane\")"
+     },
+     {
+      "source": "smithsonian-national-air-and-space-museu-2583e3",
+      "detail": "long description"
+     }
+    ]
+   }
+  ],
+  "differ": {
+   "text": "The counts disagree and none is tied to a published tally. Airman (10 July 2017) says 4,000; the 9th Reconnaissance Wing article on DVIDS (4 March 2020) says \"over a recorded number of 1,000\"; the Air & Space Forces Magazine entry says \"more than 1,000\"; the Roadrunners timeline attributes \"over 1000\" to Kelly Johnson on 31 August 1981; Charles Allen (2015) recalled about 800 over North Vietnam alone. Smaller details differ too: CIA's Archangel says the 1967 fragment penetrated the A-12's lower right wing and lodged near the fuel tank, while the 6 November 1967 memorandum places the hole in a fillet just aft of the starboard landing gear. The 10 May 1970 loss is put near Korat in the Roadrunners timeline and 25 km north-east of U-Tapao in the CIA summary.",
+   "citations": [
+    {
+     "source": "airman-magazine-u-s-air-force-756a7d",
+     "detail": "opening paragraph"
+    },
+    {
+     "source": "dvids-70a023",
+     "detail": "paragraph after the Bevacqua quotation"
+    },
+    {
+     "source": "air-space-forces-magazine-air-space-forc-284cec",
+     "detail": "entry text"
+    },
+    {
+     "source": "roadrunners-internationale-2c60a8",
+     "detail": "entries for 31 Aug 1981 and 10 May 1970"
+    },
+    {
+     "source": "breaking-defense-7a7b98",
+     "detail": "paragraph on GIANT SCALE"
+    },
+    {
+     "source": "central-intelligence-agency-center-for-t-70081b",
+     "detail": "p. 36"
+    },
+    {
+     "source": "cia-office-of-special-activities-via-the-ab5d54",
+     "detail": "p. 1"
+    },
+    {
+     "source": "cia-foia-reading-room-cia-rdp75b00159r00-4b6a66",
+     "detail": "p. 2"
+    }
+   ]
+  }
+ },
+ {
+  "id": "new-york-to-london-1974",
+  "title": "New York to London in under two hours",
+  "dek": "On 1 September 1974 an SR-71 crossed the Atlantic in 1 hour 54 minutes, and twelve days later a second crew raced the same aircraft home from London to Los Angeles.",
+  "date": "1974-09-01",
+  "precision": "day",
+  "programs": [
+   "senior-crown"
+  ],
+  "airframes": [
+   "61-7972"
+  ],
+  "people": [
+   "James V. Sullivan",
+   "Noel F. Widdifield",
+   "Harold B. Adams",
+   "William C. Machorek",
+   "Gerald R. Ford",
+   "Barry Goldwater",
+   "Kelly Johnson"
+  ],
+  "kind": "story",
+  "verdict": null,
+  "body": [
+   {
+    "text": "On 30 August 1974 the Pentagon told newsreel editors that an Air Force SR-71 would try for a speed record between New York and London on 1 September, \"as part of an overseas training mission\". The crew would be Maj. James V. Sullivan, 37, the pilot, and Maj. Noel F. Widdifield, 33, his reconnaissance systems officer, both of the 9th Strategic Reconnaissance Wing at Beale Air Force Base, California, with a second crew standing by. The time to beat was 4 hours 46 minutes, set by a Royal Navy F-4K Phantom in 1969, and the release predicted the SR-71 would take nearly three hours off it. The aircraft was bound for the Farnborough International 74 air show in England.",
+    "citations": [
+     {
+      "source": "office-of-the-assistant-secretary-of-def-12a25e",
+      "detail": "p.1 to 2"
+     }
+    ]
+   },
+   {
+    "text": "The run began on the far side of the continent. The Air Force film of the flight shows the crew boarding at Beale before midnight on 31 August, then the aircraft slowing and descending off the coast of North Carolina to take fuel from a tanker before lining up on the timing gate over New York and accelerating beyond Mach 3 towards 80,000 ft. Guinness World Records, which still lists the flight, says it crossed the New York radar gate at about 80,000 ft and slowed to refuel once from a KC-135. After a great-circle crossing the aircraft passed a second gate near London, flew over Farnborough and landed there.",
+    "citations": [
+     {
+      "source": "national-archives-naid-174689117-edb4ca",
+      "detail": "3:35 to 5:36"
+     },
+     {
+      "source": "guinness-world-records-6ce2ba",
+      "detail": "record entry"
+     },
+     {
+      "source": "national-archives-naid-72098-eb12ae",
+      "detail": "shot list"
+     }
+    ]
+   },
+   {
+    "text": "The time for the 3,461.53 statute miles (5,570.80 km) was 1 hour 54 minutes 56.4 seconds, an average of 1,806.96 mph (2,908.02 km/h), less than half the old record. The aircraft was 61-7972. That morning President Gerald Ford, at Camp David, spent four minutes on a conference line with Sullivan and Widdifield; his diary records that he called \"to congratulate the crew\".",
+    "citations": [
+     {
+      "source": "guinness-world-records-6ce2ba",
+      "detail": "record entry"
+     },
+     {
+      "source": "roadrunners-internationale-2c60a8",
+      "detail": "p.16"
+     },
+     {
+      "source": "this-day-in-aviation-bryan-r-swopes-ad691e",
+      "detail": "1 September 1974"
+     },
+     {
+      "source": "gerald-r-ford-presidential-library-natio-0730bc",
+      "detail": "p.1, 10:15 to 10:19 a.m."
+     }
+    ]
+   },
+   {
+    "text": "61-7972 stayed on static display at Farnborough until 8 September, the first time an SR-71 had been shown in public outside the United States. The film's narrator names Kelly Johnson, the aircraft's designer, among those who met it, and the film shows the crews answering visitors' questions and signing fact sheets beside the aircraft.",
+    "citations": [
+     {
+      "source": "office-of-the-assistant-secretary-of-def-12a25e",
+      "detail": "p.2"
+     },
+     {
+      "source": "guinness-world-records-6ce2ba",
+      "detail": "record entry"
+     },
+     {
+      "source": "beale-air-force-base-9th-reconnaissance--2f9ea1",
+      "detail": "para. 3"
+     },
+     {
+      "source": "national-archives-naid-174689117-edb4ca",
+      "detail": "6:24 and 8:45"
+     }
+    ]
+   },
+   {
+    "text": "For the journey home the aircraft was moved to RAF Mildenhall and handed to a second crew, Capt. Harold B. \"Buck\" Adams and Maj. William C. Machorek. Buz Carpenter's Blackbird timeline records a first attempt on 12 September that turned back with an oil warning light. On 13 September they crossed the London gate, slowed to refuel over Hudson Bay, and announced themselves over the Los Angeles gate with a sonic boom before turning north to land at Beale. The time was 3 hours 47 minutes 39 seconds for about 5,447 statute miles, close to 1,435.5 mph, and there was no earlier record to break.",
+    "citations": [
+     {
+      "source": "national-archives-naid-174689117-edb4ca",
+      "detail": "9:24 to 11:26"
+     },
+     {
+      "source": "roadrunners-internationale-2c60a8",
+      "detail": "p.16"
+     },
+     {
+      "source": "this-day-in-aviation-bryan-r-swopes-91b065",
+      "detail": "6 March 1990 entry"
+     },
+     {
+      "source": "national-archives-naid-62559-22b087",
+      "detail": "title"
+     },
+     {
+      "source": "office-of-the-white-house-press-secretar-a0440c",
+      "detail": "p.1"
+     }
+    ]
+   },
+   {
+    "text": "On 19 September Ford received both crews in the Oval Office, with Senator Barry Goldwater, the Secretary of the Air Force, John L. McLucas, and the Chief of Staff, Gen. David C. Jones, and posed with them for the press. The White House notice issued that day rounded the times to \"1 hour and 56 minutes\" and \"3 hours and 48 minutes\", and said the SR-71 had passed 2,000 mph and 80,000 ft on both flights.",
+    "citations": [
+     {
+      "source": "gerald-r-ford-presidential-library-natio-9ceb09",
+      "detail": "p.3 and p.8 (Appendix C)"
+     },
+     {
+      "source": "office-of-the-white-house-press-secretar-a0440c",
+      "detail": "p.1"
+     },
+     {
+      "source": "office-of-the-white-house-press-secretar-9e9cce",
+      "detail": "p.1"
+     }
+    ]
+   },
+   {
+    "text": "61-7972 flew on with the Air Force until 6 March 1990, when it set one more record on its last flight, Los Angeles to Washington, and was handed to the Smithsonian. It is on display in the Boeing Aviation Hangar of the Steven F. Udvar-Hazy Center in Chantilly, Virginia.",
+    "citations": [
+     {
+      "source": "smithsonian-national-air-and-space-museu-2583e3",
+      "detail": "object record A19920072000"
+     }
+    ]
+   }
+  ],
+  "differ": {
+   "text": "The figures change with the source. For New York to London, Guinness, This Day in Aviation and Carpenter give 1 hour 54 minutes 56.4 seconds over 3,461.5 statute miles; the White House notice of 19 September rounds the time to 1 hour 56 minutes; the Air Force film's narrator gives \"1 hour, 55 minutes, 32 seconds\" for a \"3,470 statute mile trip\"; and a 2014 Beale AFB history piece pairs the film's 3,470 miles with the 1:54:56.4 time. For London to Los Angeles, Carpenter gives 5,447 miles at 1,435.59 mph, This Day in Aviation 5,446.87 miles at 1,435.49 mph, the film 5,463 statute miles and Hildebrant's timeline 5,645 miles; Carpenter, This Day in Aviation and the film agree on 3 hours 47 minutes 39 seconds. The White House notice dates the return 11 September, against 13 September in Carpenter and in the National Archives title of the Air Force's film of the arrival at Beale. On refuelling, the Pentagon's release planned \"aerial refuelings\" (plural), the film shows one off North Carolina before the New York gate, and Guinness says the aircraft slowed to refuel once. And where it first landed: the National Archives shot list has 61-7972 landing at Farnborough on 1 September, while Hildebrant's timeline says the first SR-71 to come to Britain landed at RAF Mildenhall.",
+   "citations": [
+    {
+     "source": "guinness-world-records-6ce2ba",
+     "detail": "record entry"
+    },
+    {
+     "source": "this-day-in-aviation-bryan-r-swopes-ad691e",
+     "detail": "1 September 1974"
+    },
+    {
+     "source": "roadrunners-internationale-2c60a8",
+     "detail": "p.16"
+    },
+    {
+     "source": "office-of-the-white-house-press-secretar-a0440c",
+     "detail": "p.1"
+    },
+    {
+     "source": "national-archives-naid-174689117-edb4ca",
+     "detail": "6:06 to 6:20 and 11:20 to 11:30"
+    },
+    {
+     "source": "beale-air-force-base-9th-reconnaissance--2f9ea1",
+     "detail": "para. 2"
+    },
+    {
+     "source": "this-day-in-aviation-bryan-r-swopes-91b065",
+     "detail": "6 March 1990 entry"
+    },
+    {
+     "source": "roadrunners-internationale-258a6c",
+     "detail": "p.15"
+    },
+    {
+     "source": "national-archives-naid-62559-22b087",
+     "detail": "title"
+    },
+    {
+     "source": "office-of-the-assistant-secretary-of-def-12a25e",
+     "detail": "p.1"
+    },
+    {
+     "source": "national-archives-naid-72098-eb12ae",
+     "detail": "shot list"
+    }
+   ]
+  }
+ },
+ {
+  "id": "nice-girl",
+  "title": "NICE GIRL: the fly-off that settled nothing",
+  "dek": "In the autumn of 1967 the CIA's A-12 and the Air Force's SR-71 flew the same tracks an hour apart to decide which to keep; the cameras gave one answer and the budget another.",
+  "date": "1967-10-20",
+  "precision": "day",
+  "programs": [
+   "oxcart",
+   "senior-crown"
+  ],
+  "airframes": [],
+  "people": [
+   "Richard Helms",
+   "Carl Duckett",
+   "Paul Nitze",
+   "Clark Clifford",
+   "Lyndon B. Johnson",
+   "Cyrus Vance",
+   "Charles Schultze",
+   "Donald Hornig",
+   "Kelly Johnson"
+  ],
+  "kind": "story",
+  "verdict": null,
+  "body": [
+   {
+    "text": "The CIA's A-12 was condemned before it flew a single mission. On 12 December 1966 Cyrus Vance, Charles Schultze and Donald Hornig outvoted Richard Helms on how to cut the cost of two Mach 3 reconnaissance fleets, and on 28 December President Johnson ordered the CIA program ended by 1 January 1968, leaving the work to the Air Force's SR-71. Then the A-12s went to war over North Vietnam from May 1967, the SR-71 was not ready, and senior officials began to have doubts.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF pp. 33-34"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "pp. 41-42"
+     }
+    ]
+   },
+   {
+    "text": "On paper the two aircraft were close. The National Reconnaissance Office told the intelligence community in September 1967 that there was little difference in range, that the lighter A-12 flew 2,000 to 5,000 feet higher at the same Mach number, and that the SR-71 carried photographic, radar, infrared and electronic sensors where the A-12 carried one main package. For the hunt for missiles in North Vietnam, it judged both adequate. Heat limits on its wing-tank sealant then held the SR-71 to Mach 3.0.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-foia-electro-5a1c38",
+      "detail": "pp. 1-3"
+     }
+    ]
+   },
+   {
+    "text": "So they were made to race. A meeting on 16 October gave the exercise its name, NICE GIRL, and a cable the next day set the rules: tracks and camera legs \"identical within limits of respective navigation systems\", each aircraft launching from its own base, Mach 3.1 on the sensor legs, no more than an hour between the two, and a go only if cloud covered half the legs or less. \"For security purposes,\" it added, \"both aircraft are to be considered SR-71's.\" Between 20 October and 3 November they flew three routes along the Mississippi River.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-foia-electro-95df3c",
+      "detail": "p. 1"
+     },
+     {
+      "source": "central-intelligence-agency-foia-electro-0c1f55",
+      "detail": "cable of 17 October 1967, paras. A-B and pp. 3-6, 10"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 42"
+     }
+    ]
+   },
+   {
+    "text": "Photo-interpreters from NPIC and the Defense Intelligence Agency picked the targets: on the first route, 86 within reach of the A-12's Type I camera and 21 that only an SR-71 sensor could cover. The verdict, in Archangel's words, was \"inconclusive\". The A-12's camera had a wider swath and better resolution; the SR-71 gathered kinds of intelligence the A-12 could not, though not yet of very good quality, and some of its sensors would have to come out to make room for jammers.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-foia-electro-e8fed1",
+      "detail": "part I"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 42"
+     }
+    ]
+   },
+   {
+    "text": "The CIA argued harder than that. Before a review meeting on 20 December, its science chief, Carl Duckett, wrote to Helms that the SR-71's technical camera \"clearly does not even come close to performing up to specifications\", and that of two cameras of similar resolution the A-12's covered \"almost three times as much area per flight\". Matching it, he reckoned, would take six or more SR-71s at Kadena instead of three A-12s.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-foia-electro-88213f",
+      "detail": "pp. 1, 3"
+     }
+    ]
+   },
+   {
+    "text": "The A-12 won time, not the argument. On 29 December Deputy Defense Secretary Paul Nitze extended its operations through 30 June 1968 with five aircraft, while the SR-71 was readied for North Vietnam \"as rapidly as ECM implementation and other program considerations will permit\". SR-71s arrived at Kadena in March and flew their first mission over North Vietnam on 21 March. In April Helms pointed to 28 overflights, an \"unusually high reliability\" and \"valuable intelligence\", and asked to keep the fleet under CIA management.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-foia-electro-ae8a53",
+      "detail": "pp. 1-2"
+     },
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF p. 35"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "pp. 42, 49"
+     },
+     {
+      "source": "central-intelligence-agency-foia-electro-c688b3",
+      "detail": "p. 3"
+     }
+    ]
+   },
+   {
+    "text": "It made no difference. Defense Secretary Clark Clifford reaffirmed the termination on 16 May 1968, and Johnson confirmed it at his weekly lunch on 21 May. Four days later the NRO ordered every A-12 into storage and that the contractors be told the program was ending; the last went into storage at Palmdale, California, on 21 June. Kelly Johnson wrote in his project log that it was \"a bleak end for a program that has been overall as successful as this.\"",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF p. 35"
+     },
+     {
+      "source": "central-intelligence-agency-foia-electro-2cf265",
+      "detail": "paras. 1-5, 11"
+     },
+     {
+      "source": "central-intelligence-agency-foia-electro-43048b",
+      "detail": "paras. 1-2"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 43"
+     }
+    ]
+   }
+  ],
+  "differ": {
+   "text": "Archangel says the aircraft flew \"three identical routes\"; the planning cables of 17 and 31 October name two routes, planned two missions for each aircraft on 20 and 25 October with 27 October in reserve, and the released cables number the A-12 sorties NX7521 (flown 25 October) and NX7522. Archangel credits the A-12 with \"higher resolution\"; Duckett called the two cameras of \"approximately similar resolution\". McIninch and Archangel's timeline date Johnson's original decision to 28 December 1966; the CIA's June 1968 submission to the President's Foreign Intelligence Advisory Board says 29 December.",
+   "citations": [
+    {
+     "source": "central-intelligence-agency-center-for-t-70081b",
+     "detail": "pp. 42, 49, 51"
+    },
+    {
+     "source": "central-intelligence-agency-foia-electro-0c1f55",
+     "detail": "cable of 17 October 1967"
+    },
+    {
+     "source": "central-intelligence-agency-foia-electro-e8fed1",
+     "detail": "part I"
+    },
+    {
+     "source": "central-intelligence-agency-foia-electro-0c1f55",
+     "detail": "cable of 25 October 1967"
+    },
+    {
+     "source": "central-intelligence-agency-foia-electro-89e6cf",
+     "detail": "cable of 28 November 1967"
+    },
+    {
+     "source": "central-intelligence-agency-foia-electro-88213f",
+     "detail": "p. 3"
+    },
+    {
+     "source": "central-intelligence-agency-80c044",
+     "detail": "PDF p. 33"
+    },
+    {
+     "source": "central-intelligence-agency-foia-electro-43048b",
+     "detail": "para. 1"
+    }
+   ]
+  }
+ },
+ {
+  "id": "rescued-by-viggens",
+  "title": "Rescued by Viggens",
+  "dek": "When an engine exploded at Mach 3 over the Baltic in 1987, a crippled SR-71 found its escort in four Swedish fighter pilots, whose part stayed secret for thirty years.",
+  "date": "1987-06-29",
+  "precision": "day",
+  "programs": [
+   "senior-crown",
+   "legacy"
+  ],
+  "airframes": [
+   "61-7964"
+  ],
+  "people": [
+   "Duane Noll",
+   "Tom Veltri",
+   "Roger Möller",
+   "Krister Sjöberg",
+   "Lars-Erik Blad",
+   "Bo Ignell",
+   "Per-Olof Eldh",
+   "John Williams"
+  ],
+  "kind": "story",
+  "verdict": null,
+  "body": [
+   {
+    "text": "In the 1980s the U.S. Air Force flew regular SR-71 reconnaissance missions over the international waters of the Baltic Sea, known as \"Baltic Express\" missions. Sweden watched them closely. Briefing guests at a ceremony in 2018, retired Swedish colonel Per-Olof Eldh said Swedish records count 322 such missions between 1977 and 1988, entering south of Copenhagen, running east at Mach 3 and returning south through the narrow international corridor between Öland and Gotland, where JA 37 Viggen pilots practised intercepts against them. On 29 June 1987 one SR-71 left RAF Mildenhall in England with two tasks, the Barents Sea first and then the Baltic.",
+    "citations": [
+     {
+      "source": "dvids-c21782",
+      "detail": "paragraph 2"
+     },
+     {
+      "source": "dvids-ssgt-kelly-o-connor-100th-air-refu-eb3158",
+      "detail": "17:20 to 20:20 (Eldh's briefing)"
+     },
+     {
+      "source": "fo-rsvarsmakten-swedish-armed-forces-807212",
+      "detail": "paragraph 2"
+     }
+    ]
+   },
+   {
+    "text": "Its crew were the pilot, Duane Noll, and the reconnaissance systems officer, Tom Veltri. Off the Baltic states, heading north at about 22,000 m and Mach 3, the right engine exploded. Veltri recalled that it went as he counted down to a turn point, and that the aircraft then fell about 40,000 ft in less than a minute. He set the emergency code on the transponder, and they turned south towards Gotland, levelling at about 25,000 ft and 380 knots. They knew, he said, that they were now an easy target. Försvarsmakten, the Swedish Armed Forces, has the aircraft down to 7,500 m within a minute or so and crossing into Swedish airspace level with Gotland.",
+    "citations": [
+     {
+      "source": "dvids-ssgt-kelly-o-connor-100th-air-refu-84dfac",
+      "detail": "0:00 to 1:05"
+     },
+     {
+      "source": "dvids-ssgt-kelly-o-connor-100th-air-refu-eb3158",
+      "detail": "29:10 to 31:58 (Veltri's remarks)"
+     },
+     {
+      "source": "fo-rsvarsmakten-swedish-armed-forces-807212",
+      "detail": "paragraphs 2 and 6"
+     },
+     {
+      "source": "dvids-c21782",
+      "detail": "paragraphs 2 and 3"
+     }
+    ]
+   },
+   {
+    "text": "Swedish air defence saw it at once. Eldh, then a squadron commander at F 13 at Norrköping, said his notes record a call from the sector operations centre at about 14:56 asking for every fighter available. The only ones near were two unarmed JA 37s of F 13 on an exercise near Västervik, flown by Roger Möller and Krister Sjöberg. Möller recalled being asked to identify \"a certain interest\" and guessing at once that it was an SR-71. Told it was already over Gotland, he went supersonic and found it in cloud at about 25,000 ft. The pair stayed with it for about five minutes, at times only 30 m away; Möller saw that it was flying on one engine and read the number 117964. Short of fuel, they turned for home as a second pair arrived.",
+    "citations": [
+     {
+      "source": "dvids-ssgt-kelly-o-connor-100th-air-refu-eb3158",
+      "detail": "25:10 to 26:20 (Eldh) and 41:47 to 44:25 (Möller)"
+     },
+     {
+      "source": "dvids-ssgt-kelly-o-connor-100th-air-refu-e2ffaa",
+      "detail": "0:00 to 0:46"
+     },
+     {
+      "source": "dvids-ssgt-kelly-o-connor-100th-air-refu-7bac01",
+      "detail": "0:00 to 1:30"
+     },
+     {
+      "source": "dvids-ssgt-kelly-o-connor-100th-air-refu-1854e5",
+      "detail": "0:00 to 0:48"
+     },
+     {
+      "source": "dvids-c21782",
+      "detail": "paragraph 4"
+     },
+     {
+      "source": "fo-rsvarsmakten-swedish-armed-forces-807212",
+      "detail": "paragraphs 3 and 4"
+     }
+    ]
+   },
+   {
+    "text": "That pair was the armed quick-reaction alert of F 6, normally based at Karlsborg but standing alert at Ängelholm on the west coast: Lars-Erik Blad and his wingman, Bo Ignell. Blad recalled scrambling in fog and drizzle so thick that he doubted they could land again. They reached the SR-71 about 70 km east of Bornholm, in international airspace. So as not to startle the crew, Blad flew a gentle pass along its right side, then turned a full circle to settle behind and above it, while Ignell held close on the right and photographed the crippled aircraft. It kept losing height. The Viggens stayed with it until it reached Danish airspace, by which time, Blad said, they were down to about 4,000 m and had seen no other aircraft.",
+    "citations": [
+     {
+      "source": "fo-rsvarsmakten-swedish-armed-forces-807212",
+      "detail": "paragraphs 5 to 7 and photo credit"
+     },
+     {
+      "source": "dvids-ssgt-kelly-o-connor-100th-air-refu-ade1ca",
+      "detail": "0:00 to 2:10"
+     },
+     {
+      "source": "dvids-ssgt-kelly-o-connor-100th-air-refu-eb3158",
+      "detail": "45:30 to 49:00 (Blad)"
+     }
+    ]
+   },
+   {
+    "text": "Veltri said he first saw two fighters closing from the east, from the direction of the Soviet Union, and thought this could be the end until he made out Swedish markings. In 2018 he said that a MiG-25 came within a few miles soon after the Viggens joined, and that he later learned from the National Security Agency that Soviet fighters had orders to force the SR-71 down or shoot it down. He recalled that fog had closed Denmark, that F-15s from West Germany took over the escort, and that they landed at Nordholz with the auxiliary hydraulics gone, stopping in the overrun. Försvarsmakten confirms the landing at Nordholz.",
+    "citations": [
+     {
+      "source": "dvids-ssgt-kelly-o-connor-100th-air-refu-84dfac",
+      "detail": "1:08 to 3:38"
+     },
+     {
+      "source": "dvids-ssgt-kelly-o-connor-100th-air-refu-eb3158",
+      "detail": "32:03 to 35:20 (Veltri's remarks)"
+     },
+     {
+      "source": "fo-rsvarsmakten-swedish-armed-forces-807212",
+      "detail": "paragraph 9"
+     }
+    ]
+   },
+   {
+    "text": "The U.S. Air Force says the details stayed classified until 2017. Veltri said he had spent 31 years trying to find the Swedish pilots until a Saab representative he met at an Air Force Association event put him in touch, and that he then worked with the Air Staff to have them recognised. On 28 November 2018, at the U.S. ambassador's residence in Stockholm, Maj. Gen. John Williams of U.S. Air Forces in Europe and Air Forces Africa presented the Air Medal, before Sweden's Supreme Commander, Air Force chief and defence minister. Blad, Möller and Sjöberg received theirs in person; Ignell could not attend. The citation credits them with shielding the SR-71 from any third-party aircraft and escorting it beyond Swedish territory. Noll, unable to travel, sent a recorded message: \"because of you, there was no international incident.\"",
+    "citations": [
+     {
+      "source": "dvids-c21782",
+      "detail": "paragraphs 1, 4, 6 to 8"
+     },
+     {
+      "source": "u-s-air-force-fc6a04",
+      "detail": "same text as DVIDS"
+     },
+     {
+      "source": "dvids-ssgt-kelly-o-connor-100th-air-refu-eb3158",
+      "detail": "36:15 to 37:10 (Veltri) and 56:40 to 58:06 (citation)"
+     },
+     {
+      "source": "fo-rsvarsmakten-swedish-armed-forces-807212",
+      "detail": "paragraphs 10 and 11"
+     },
+     {
+      "source": "dvids-ssgt-kelly-o-connor-100th-air-refu-ade1ca",
+      "detail": "0:09 to 0:18"
+     }
+    ]
+   }
+  ],
+  "differ": {
+   "text": "Accounts differ in detail. Height when the engine failed: about 22,000 m (Försvarsmakten), over 80,000 ft (Veltri) or 70,000 ft (Eldh). Place: the U.S. Air Force story has the Viggens intercepting \"over Swedish airspace\", the Air Medal citation says international waters, and Försvarsmakten puts the first meeting east of Öland after the SR-71 had crossed Gotland and the second in international airspace east of Bornholm. Units: the citation and the U.S. Embassy place all four pilots at F 13 Bråvalla, but Försvarsmakten and Blad put Blad and Ignell in the F 6 alert pair at Ängelholm. Landing: the citation as read at the ceremony names a NATO base in Denmark; the embassy says Germany, and Försvarsmakten and Veltri name Nordholz. Soviet fighters: only Veltri reports a MiG-25 and Soviet orders, from later intelligence he has not published; Blad told Försvarsmakten he saw no other aircraft. Försvarsmakten calls Veltri one of the pilots; he was the reconnaissance systems officer. Names are spelt Lars-Erik or Lars-Eric Blad, Möller or Moller, Sjöberg or Sjoberg. The serial 61-7964 rests on Möller's reading of \"117964\" as Försvarsmakten reports it; no U.S. source found names the aircraft.",
+   "citations": [
+    {
+     "source": "fo-rsvarsmakten-swedish-armed-forces-807212",
+     "detail": "paragraphs 2 to 9"
+    },
+    {
+     "source": "dvids-ssgt-kelly-o-connor-100th-air-refu-84dfac",
+     "detail": "0:30 to 0:37 and 2:08 to 2:24"
+    },
+    {
+     "source": "dvids-ssgt-kelly-o-connor-100th-air-refu-e2ffaa",
+     "detail": "2:07 to 2:25"
+    },
+    {
+     "source": "dvids-c21782",
+     "detail": "paragraphs 3 and 5"
+    },
+    {
+     "source": "wikimedia-commons-from-the-u-s-embassy-s-92da73",
+     "detail": "file description"
+    },
+    {
+     "source": "dvids-ssgt-kelly-o-connor-100th-air-refu-eb3158",
+     "detail": "56:40 to 58:06 (citation)"
+    }
+   ]
+  }
+ },
+ {
+  "id": "road-trip-to-area-51",
+  "title": "The A-12 that went by road",
+  "dek": "Too secret to fly and too big for any cargo plane, the first A-12 left Burbank in a crate 105 feet long on a February night in 1962, and nine weeks later it was in the air.",
+  "date": "1962-02-26",
+  "precision": "day",
+  "programs": [
+   "oxcart"
+  ],
+  "airframes": [
+   "60-6924",
+   "60-6925"
+  ],
+  "people": [
+   "Lou Schalk",
+   "Kelly Johnson",
+   "Herbert Scoville",
+   "Richard Bissell",
+   "John McCone"
+  ],
+  "kind": "story",
+  "verdict": null,
+  "body": [
+   {
+    "text": "The first A-12, Article 121 (60-6924), was finished at Lockheed's Skunk Works in Burbank and spent January and February 1962 in final ground tests. It was badly late. The CIA had been promised a first aircraft at the end of May 1961, and trouble with titanium and with the J58 engine had pushed the date back again and again. On 1 February 1962 the CIA's Special Projects Branch still listed Aircraft 1 for delivery on 21 February and a first flight on 21 March.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 16"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 11"
+     },
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF p. 11"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-5ccca6",
+      "detail": "p. 1"
+     }
+    ]
+   },
+   {
+    "text": "Flying it to Nevada was never an option. The aircraft was too secret to fly to the test site, too large for a cargo aircraft, and the runway at Burbank was not adequate. Lockheed had done it once already, in November 1959, when it trucked a full-scale radar model from Burbank to the test area on a specially designed trailer. A survey of the route in June 1961 showed that a package 35 feet wide and 105 feet long could make the journey if road signs were taken down, trees trimmed and some roadsides levelled, and police and local officials were brought into the plan.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 16"
+     },
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF pp. 8, 13"
+     }
+    ]
+   },
+   {
+    "text": "For the trip Article 121 was partly taken apart. The whole fuselage, without its wings, was crated, covered and loaded on a purpose-built trailer that cost about $100,000; the wings went separately, to be fitted at the site. On the night of 26 February 1962 the load left the Skunk Works, escorted by the California and Nevada highway patrols and CIA security officers. According to the CIA's 1992 history of the programme, it reached the Nevada base, known as Area 51, two days later.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 16"
+     },
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF p. 13"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-cfdca3",
+      "detail": "printed p. 286"
+     }
+    ]
+   },
+   {
+    "text": "The road was the most exposed part of a secret project. When Article 122 made the same journey in June 1962, a Greyhound bus coming the other way grazed its 35-foot-wide crate, and project managers paid for the damage at once so that no insurance claim or court case would ask why the load was so wide. In November 1962 the CIA's Office of Security kept a loose watch on another A-12 convoy, and afterwards the security branch reported that public guesses about the cargo still varied, \"however, people are starting to count.\"",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 17"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-cfdca3",
+      "detail": "printed p. 289"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-8f47bc",
+      "detail": "p. 1"
+     }
+    ]
+   },
+   {
+    "text": "At the base, reassembly and the fitting of two interim Pratt & Whitney J75 engines began, and so did a new delay. When fuel first went into the tanks, the sealing compound came away from the metal; the CIA's 1992 history counts 68 leaks. The tanks were stripped and resealed, a slow job because the sealant needed four curing cycles at different temperatures, each lasting 30 to 54 hours.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF p. 13"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-cfdca3",
+      "detail": "printed p. 286"
+     }
+    ]
+   },
+   {
+    "text": "On 25 April 1962 Lockheed test pilot Lou Schalk made the unannounced first hop that Lockheed custom called for. Wrongly connected controls set up what Kelly Johnson called \"lateral oscillations which were horrible to see\", and after less than two miles at about 20 feet Schalk put the aircraft down on the lakebed beyond the runway. The next day he flew for about 40 minutes with the landing gear down, and the A-12 shed titanium fillets from its chines; technicians spent four days finding and refitting them.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 16"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-cfdca3",
+      "detail": "printed pp. 288 to 289"
+     },
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF p. 13"
+     }
+    ]
+   },
+   {
+    "text": "The official first flight followed on 30 April 1962, with Herbert Scoville, Richard Bissell and senior Air Force officers watching. Schalk flew for 59 minutes and climbed to 30,000 feet. The cable to headquarters began \"FIRST FLIGHT GREAT SUCCESS\" and quoted Johnson calling it the \"SMOOTHEST FIRST FLIGHT IN HIS EXPERIENCE.\" On 4 May Article 121 went supersonic, reaching Mach 1.1 at 40,000 feet, and John McCone, the Director of Central Intelligence, telegraphed his congratulations to Johnson. The aircraft that had travelled to Nevada in a box went on to make 332 flights totalling 418.2 hours, and it is now on display at the Blackbird Airpark in Palmdale, California.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 17"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-cbf1cb",
+      "detail": "p. 1"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-3d4d11",
+      "detail": "pp. 1 to 2"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 50"
+     }
+    ]
+   }
+  ],
+  "differ": {
+   "text": "Sources disagree on several dates. Arrival: the CIA histories have Article 121 leaving Burbank on 26 February 1962 (McIninch says only that it arrived according to plan; Pedlow and Welzenbach say two days later), and NASA historian Peter Merlin says the first airframe was delivered in February 1962, but the National Security Archive's 2013 briefing book says the first A-12 arrived at Area 51 in late December 1961. First flight: Robarge and Pedlow and Welzenbach give a short hop on 25 April and a 40-minute flight on 26 April, which Pedlow and Welzenbach also call the 'official' maiden flight before naming 30 April as the official first flight; McIninch and Kelly Johnson's 1981 paper give 26 April as the first flight and do not mention the hop; Archangel's own timeline lists 26 April. First supersonic flight: 4 May 1962 in the day-of cable, Archangel and McIninch, but 2 May in Pedlow and Welzenbach. The bus payment: 'nearly $5,000' (Archangel) or $4,890 (Pedlow and Welzenbach).",
+   "citations": [
+    {
+     "source": "central-intelligence-agency-80c044",
+     "detail": "PDF p. 13"
+    },
+    {
+     "source": "central-intelligence-agency-internet-arc-cfdca3",
+     "detail": "printed pp. 286, 288 to 289"
+    },
+    {
+     "source": "nasa-technical-reports-server-707153",
+     "detail": "p. 2"
+    },
+    {
+     "source": "national-security-archive-george-washing-6293e6",
+     "detail": "text at note 5"
+    },
+    {
+     "source": "central-intelligence-agency-center-for-t-70081b",
+     "detail": "pp. 16 to 17, 48"
+    },
+    {
+     "source": "central-intelligence-agency-dd9228",
+     "detail": "typed p. 14 (PDF p. 17)"
+    },
+    {
+     "source": "central-intelligence-agency-internet-arc-3d4d11",
+     "detail": "pp. 1 to 2"
+    }
+   ]
+  }
+ },
+ {
+  "id": "rs-71-or-sr-71",
+  "title": "RS-71 or SR-71?",
+  "dek": "The best-known story about the Blackbird's name says a president fumbled two letters; his own recording says otherwise.",
+  "date": "1964-07-24",
+  "precision": "day",
+  "programs": [
+   "senior-crown"
+  ],
+  "airframes": [],
+  "people": [
+   "Lyndon B. Johnson",
+   "Curtis LeMay",
+   "Gordon Allott",
+   "John P. McConnell",
+   "William H. Bates"
+  ],
+  "kind": "legend",
+  "verdict": {
+   "text": "Johnson did not garble the name. The official transcript and the White House recording have him say \"SR-71\" every time he names the aircraft, and a printed copy of the statement from August 1964 agrees. \"RS-71\" was a real name in Washington that summer: a senator used it on the Senate floor five days later, and a congressman was still using it in 1965. The claim that the President swapped the letters first appears, in the earliest dated source this project has found, in the CIA's Archangel of 2007, which gives no source for it. The Air Force's own account says the designation was changed to SR before the speech and that press material still carried RS-71. No draft of the statement or press handout reading RS-71 has yet been found to settle which account is right.",
+   "citations": [
+    {
+     "source": "the-american-presidency-project-universi-f91ccc",
+     "detail": "item 1"
+    },
+    {
+     "source": "lbj-presidential-library-uva-miller-cent-1a9c0d",
+     "detail": "0:34, 0:58, 1:39"
+    },
+    {
+     "source": "unidentified-periodical-masthead-cut-off-df1d19",
+     "detail": "2nd Announcement"
+    },
+    {
+     "source": "u-s-congress-cia-foia-reading-room-via-t-f23111",
+     "detail": "pp. 16785 to 16786"
+    },
+    {
+     "source": "aviation-week-space-technology-cia-foia--f05df5",
+     "detail": "Relative Confusion"
+    },
+    {
+     "source": "central-intelligence-agency-wayback-mach-396a06",
+     "detail": "The OXCART Family"
+    },
+    {
+     "source": "central-intelligence-agency-center-for-t-70081b",
+     "detail": "p. 53"
+    },
+    {
+     "source": "beale-air-force-base-9th-reconnaissance--eb4e73",
+     "detail": "paras 1 to 4"
+    }
+   ]
+  },
+  "body": [
+   {
+    "text": "At half past three on the afternoon of Friday 24 July 1964, in the State Department Auditorium, Lyndon Johnson opened his twenty-third news conference with an aeroplane. He announced \"a major new strategic manned aircraft system\" for Strategic Air Command, built around \"the new SR-71 aircraft\", which would fly at more than three times the speed of sound and above 80,000 feet. The billion-dollar program, he said, had begun in February 1963. Then he turned to record farm exports.",
+    "citations": [
+     {
+      "source": "the-american-presidency-project-universi-f91ccc",
+      "detail": "item 1 and closing note"
+     }
+    ]
+   },
+   {
+    "text": "The story told about that moment ever since is that the Air Force had called the aircraft the RS-71, for reconnaissance and strike, and that Johnson read the letters backwards. Rather than correct the President, the story goes, the Air Force kept his version and created a strategic reconnaissance category to fit it. The CIA's own history of the A-12, David Robarge's Archangel, tells it in just those terms: Johnson \"mistakenly transposed the designator letters\", and \"Air Force officials let the error stand\".",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 53"
+     },
+     {
+      "source": "central-intelligence-agency-wayback-mach-396a06",
+      "detail": "The OXCART Family"
+     }
+    ]
+   },
+   {
+    "text": "The record of the day does not bear this out. The official transcript has Johnson say \"SR-71\" every time he names the aircraft, and in the same statement he speaks of the RS-70, a different aircraft reviewed by the Joint Chiefs, with its letters in their proper order. The White House Communications Agency recording of the conference, now at the LBJ Library, has \"SR-71\" about 34 seconds in, again at 58 seconds and once more at 1 minute 39 seconds. A printed copy of the statement that the CIA filed on 3 August 1964 reads \"SR-71\" as well, and the next morning's New York Herald Tribune glossed the letters for its readers as \"Strategic Reconnaissance\".",
+    "citations": [
+     {
+      "source": "the-american-presidency-project-universi-f91ccc",
+      "detail": "item 1"
+     },
+     {
+      "source": "lbj-presidential-library-uva-miller-cent-1a9c0d",
+      "detail": "0:34, 0:58, 1:39"
+     },
+     {
+      "source": "unidentified-periodical-masthead-cut-off-df1d19",
+      "detail": "2nd Announcement"
+     },
+     {
+      "source": "new-york-herald-tribune-cia-foia-reading-9d97b4",
+      "detail": "paragraph 2"
+     }
+    ]
+   },
+   {
+    "text": "Yet RS-71 was not invented later. On 29 July, five days after the announcement, Senator Gordon Allott of Colorado told the Senate that the President had announced a new plane \"which I believe is now designated as the RS-71\", and went on to object that a billion dollars for this \"new RS-71 plane, formerly known as the A-11\" had been hidden in the defence budget. The confusion lasted. In closed House Armed Services Committee hearings reported by Aviation Week in May 1965, the chairman asked about the \"SR-71\", the Air Force Chief of Staff, Gen. John P. McConnell, answered \"YF-12\", and Representative William H. Bates offered \"RS-71\".",
+    "citations": [
+     {
+      "source": "u-s-congress-cia-foia-reading-room-via-t-f23111",
+      "detail": "pp. 16785 to 16786"
+     },
+     {
+      "source": "aviation-week-space-technology-cia-foia--f05df5",
+      "detail": "Relative Confusion"
+     }
+    ]
+   },
+   {
+    "text": "Behind the secrecy the aircraft had already worn several names. Lockheed's two-seat development of the A-12 was the R-12, and Air Force officials were interested in a reconnaissance and strike variant, the RS-12, which, in NASA historian Peter Merlin's words, was \"eventually re-designated SR-71\". CIA memoranda called the Air Force aircraft the R-12 in December 1962 and still did so in August 1964, a month after the President had given it a public name. Archangel says the Air Force's first six were ordered as RS-71s.",
+    "citations": [
+     {
+      "source": "nasa-technical-reports-server-707153",
+      "detail": "p. 13"
+     },
+     {
+      "source": "central-intelligence-agency-foia-reading-9fba7e",
+      "detail": "para 1"
+     },
+     {
+      "source": "central-intelligence-agency-foia-reading-f6a7cb",
+      "detail": "para 1"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 53"
+     }
+    ]
+   },
+   {
+    "text": "The Air Force tells it differently. A 2014 history note from the 9th Reconnaissance Wing at Beale says that the Chief of Staff, Gen. Curtis LeMay, preferred SR for strategic reconnaissance, that the designation was changed before the speech, and that the media transcripts still carried RS-71, \"thus creating the rumor that the president misread\" it. That account fits the transcript and the recording, and it would explain why RS-71 lingered on Capitol Hill. But it cites no document, and it puts the announcement a day late, on 25 July.",
+    "citations": [
+     {
+      "source": "beale-air-force-base-9th-reconnaissance--eb4e73",
+      "detail": "paras 1 to 4"
+     },
+     {
+      "source": "the-american-presidency-project-universi-f91ccc",
+      "detail": "closing note"
+     }
+    ]
+   },
+   {
+    "text": "Each part of the story can be dated. \"SR-71\" is in the President's own words on the day and in the transcript published from them. \"RS-71\" is on the Senate floor within the week. The claim that joins them, that the President swapped the letters, is the one that travelled, yet the earliest dated telling this project has found is the CIA's web edition of Archangel, posted in October 2007 without a source and repeated unchanged in the 2012 edition.",
+    "citations": [
+     {
+      "source": "the-american-presidency-project-universi-f91ccc",
+      "detail": "item 1"
+     },
+     {
+      "source": "lbj-presidential-library-uva-miller-cent-1a9c0d",
+      "detail": "0:34"
+     },
+     {
+      "source": "u-s-congress-cia-foia-reading-room-via-t-f23111",
+      "detail": "p. 16785"
+     },
+     {
+      "source": "central-intelligence-agency-wayback-mach-396a06",
+      "detail": "The OXCART Family, posted 1 October 2007"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 53"
+     }
+    ]
+   }
+  ],
+  "differ": {
+   "text": "Two official accounts disagree. The CIA's Archangel (web edition 2007; second edition 2012, p. 53) says Johnson transposed the letters and the Air Force let the error stand. The 9th Reconnaissance Wing's 2014 history note says Gen. Curtis LeMay had the designation changed to SR-71 before the speech and that media transcripts still read RS-71. Neither cites a document. The same Air Force note dates the announcement 25 July 1964; the transcript places the news conference at 3:30 p.m. on Friday 24 July 1964. Internal names also differ: CIA memoranda use R-12, Merlin traces R-12 and RS-12 to SR-71, and Archangel says the first contract was for six RS-71s.",
+   "citations": [
+    {
+     "source": "central-intelligence-agency-center-for-t-70081b",
+     "detail": "p. 53"
+    },
+    {
+     "source": "central-intelligence-agency-wayback-mach-396a06",
+     "detail": "The OXCART Family"
+    },
+    {
+     "source": "beale-air-force-base-9th-reconnaissance--eb4e73",
+     "detail": "paras 1 to 4"
+    },
+    {
+     "source": "the-american-presidency-project-universi-f91ccc",
+     "detail": "closing note"
+    },
+    {
+     "source": "central-intelligence-agency-foia-reading-9fba7e",
+     "detail": "para 1"
+    },
+    {
+     "source": "nasa-technical-reports-server-707153",
+     "detail": "p. 13"
+    }
+   ]
+  }
+ },
+ {
+  "id": "sam-fragment",
+  "title": "Six missiles over Hanoi",
+  "dek": "On 30 October 1967 North Vietnam fired a salvo of SA-2s at Dennis Sullivan's A-12; he flew on through them, and a sliver of metal came home lodged beside a fuel tank.",
+  "date": "1967-10-30",
+  "precision": "day",
+  "programs": [
+   "oxcart"
+  ],
+  "airframes": [
+   "60-6932",
+   "60-6937"
+  ],
+  "people": [
+   "Dennis Sullivan",
+   "Richard Helms",
+   "Jack Weeks"
+  ],
+  "kind": "story",
+  "verdict": null,
+  "body": [
+   {
+    "text": "By the autumn of 1967 the CIA's A-12s had been flying BLACK SHIELD missions from Kadena, Okinawa, for five months, photographing North Vietnam for any sign of surface-to-surface missiles. They crossed it at Mach 3.1 to 3.2 and a little above 80,000 feet, and on the first fifteen missions nobody fired at them. That changed on 28 October, on the 16th mission, when a single SA-2 rose toward Dennis Sullivan in Article 131 (60-6937). It was launched too late, and the aircraft was already beyond its reach.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "pp. 35-36"
+     },
+     {
+      "source": "central-intelligence-agency-foia-electro-35ef38",
+      "detail": "memo pp. 1, 4-5"
+     },
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF pp. 29-30"
+     }
+    ]
+   },
+   {
+    "text": "Two days later Sullivan was back over the North in Article 129 (60-6932) on mission BX6734, the 18th of the operation. He left Kadena at 0219 GMT on 30 October to make two photographic passes. On the first, radar tracked him and two missile sites made ready but did not fire. On the second, heading for Hanoi from the west at Mach 3.1 and 84,000 feet, his jammers began answering FAN SONG guidance radars from at least six sites at once, as battalions of two North Vietnamese missile regiments tried to engage him.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-foia-electro-5e7d43",
+      "detail": "p. 1"
+     },
+     {
+      "source": "central-intelligence-agency-foia-electro-35ef38",
+      "detail": "memo pp. 2, 8-9"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 36"
+     },
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF p. 30"
+     }
+    ]
+   },
+   {
+    "text": "Sullivan raised his rear-view periscope. His report, quoted in the CIA's later analysis, described missiles \"in a steep climb through the aircraft altitude of approximately 83,500 feet\" that pushed over, levelled off and \"guided toward the stern of the aircraft to detonation.\" He counted at least six contrails and three detonations, all behind him, and saw one missile climbing 100 to 200 yards off his right side, abeam the cockpit. Fourteen seconds of mission photography caught six vapour trails.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-foia-electro-35ef38",
+      "detail": "memo pp. 10-11"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p. 36"
+     }
+    ]
+   },
+   {
+    "text": "He landed at Kadena at 0603 GMT, 3 hours 44 minutes after take-off, and the mission was graded a success. The ground crew then found a single hole, \"approximately the size which would have been made by a 30.06 shell\", in a fillet just aft of the right main landing gear. Whatever made it had passed through the skin and two metal supports, one of them for a fuel tank, and stopped in the structure around the number five tank. It went to Washington by courier, and the analysts judged it debris from a missile, not part of a warhead.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-foia-electro-5e7d43",
+      "detail": "p. 1"
+     },
+     {
+      "source": "cia-office-of-special-activities-via-the-ab5d54",
+      "detail": "p. 1"
+     },
+     {
+      "source": "central-intelligence-agency-foia-electro-35ef38",
+      "detail": "memo p. 2"
+     },
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF p. 30"
+     }
+    ]
+   },
+   {
+    "text": "The CIA's analysts later counted at least seven and possibly ten missiles launched during the mission, six to nine of them on the second pass. They suspected the North Vietnamese had moved missile battalions into the Hanoi area to mass fire on a route the A-12s had flown before, and had tried to spoof or saturate the jammers. Even so, they judged the SA-2's chance against an A-12 with its jammers working to be \"essentially zero\". Kadena saw it differently: one officer reported the pilots \"showing considerable anxiety about overflying this area\", and Richard Helms suspended the missions. None flew until 8 December, and that one went to the Cambodia-Laos border area; flights over North Vietnam resumed on 15 December, the first two on different routes.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-foia-electro-35ef38",
+      "detail": "memo pp. 2, 10, 12, 15"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "pp. 36-37"
+     }
+    ]
+   },
+   {
+    "text": "It was the only time enemy fire damaged an A-12. One more missile was fired at an A-12, on 4 January 1968, and burst well over a mile away. Article 129 itself was lost with Jack Weeks over the Pacific in June 1968. The fragments outlived it: in 2013 the CIA announced that it had acquired them, together with the damaged section of the aircraft, a hole torn through its centre, for display in its museum.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "pp. 36-37, 42"
+     },
+     {
+      "source": "central-intelligence-agency-wayback-mach-b1d7e6",
+      "detail": "web page"
+     }
+    ]
+   }
+  ],
+  "differ": {
+   "text": "The records do not agree on the details. The 6 November 1967 memo describes a single hole made by one \"pellet\"; McIninch and the 27 November analysis call it one piece of debris that was not a warhead pellet; the CIA's 2013 museum story speaks of two small pieces of metal and shows two fragments. Archangel and McIninch say at least six missiles were fired, while the 27 November analysis counts at least seven and possibly ten over the whole mission. The 2013 story says flights over North Vietnam stopped for two months; Archangel's dates (no mission until 8 December, none over the North until 15 December) make it about six weeks.",
+   "citations": [
+    {
+     "source": "cia-office-of-special-activities-via-the-ab5d54",
+     "detail": "p. 1"
+    },
+    {
+     "source": "central-intelligence-agency-80c044",
+     "detail": "PDF p. 30"
+    },
+    {
+     "source": "central-intelligence-agency-foia-electro-35ef38",
+     "detail": "memo pp. 2, 12"
+    },
+    {
+     "source": "central-intelligence-agency-wayback-mach-b1d7e6",
+     "detail": "web page"
+    },
+    {
+     "source": "central-intelligence-agency-center-for-t-70081b",
+     "detail": "pp. 36-37"
+    }
+   ]
+  }
+ },
+ {
+  "id": "titanium-from-the-enemy",
+  "title": "Titanium from the enemy?",
+  "dek": "The spy plane built to overfly the Soviet Union was supposedly made of Soviet metal bought through front companies; the CIA's own files from the time tell a plainer story.",
+  "date": "1961-04-19",
+  "precision": "day",
+  "programs": [
+   "oxcart",
+   "senior-crown",
+   "legacy"
+  ],
+  "airframes": [],
+  "people": [
+   "Ben Rich",
+   "Leo Janos",
+   "Kelly Johnson",
+   "John Parangosky",
+   "David Robarge",
+   "Richard Graham"
+  ],
+  "kind": "legend",
+  "verdict": {
+   "text": "Unproven, and unlikely for the A-12. The CIA's records from 1960 and 1961 name Titanium Metals Corporation as the supplier and describe a problem of quality, not of quantity. The United States had spare sponge capacity and large government stockpiles, while the Soviet Union was itself trying to buy titanium abroad. In the sources checked, the Soviet-metal story first appears in Ben Rich's memoir of 1994, three decades after the purchases; the CIA's 2007 history repeats it on Rich's word alone, and later versions add details, such as rutile ore and front companies for pizza ovens, that no document supports. Soviet sponge was sold in the West from the mid-1960s, so a purchase for later SR-71 production cannot be ruled out, but no record of one has been found. Say that Rich claimed it; never say that much, or all, of the Blackbirds' titanium was Soviet.",
+   "citations": [
+    {
+     "source": "central-intelligence-agency-internet-arc-6b0443",
+     "detail": "p.1"
+    },
+    {
+     "source": "central-intelligence-agency-internet-arc-e63c5f",
+     "detail": "p.1, paras 1 to 3"
+    },
+    {
+     "source": "u-s-department-of-the-interior-bureau-of-6a63c5",
+     "detail": "pp.1246 to 1248"
+    },
+    {
+     "source": "central-intelligence-agency-internet-arc-068e21",
+     "detail": "p.1 (PDF p.4) and p.3 (PDF p.6)"
+    },
+    {
+     "source": "little-brown-internet-archive-lending-co-e95b39",
+     "detail": "p.203"
+    },
+    {
+     "source": "central-intelligence-agency-center-for-t-70081b",
+     "detail": "p.11 and note 4"
+    },
+    {
+     "source": "central-intelligence-agency-internet-arc-ef762f",
+     "detail": "'Declining Exports', p.4 (PDF p.12)"
+    },
+    {
+     "source": "the-national-interest-wayback-machine-ca-51a9ba",
+     "detail": "paras 7 to 9"
+    }
+   ]
+  },
+  "body": [
+   {
+    "text": "One of the best Blackbird stories holds that the aircraft built to spy on the Soviet Union was made of Soviet metal. Ben Rich, Lockheed's lead propulsion engineer on the A-12, put it in print in 1994 in a memoir written with Leo Janos. He wrote that the supplier, Titanium Metals Corporation, had \"only limited reserves of the precious alloy\", so the CIA searched the world and, \"using third parties and dummy companies\", bought the base metal from one of the world's leading exporters, the Soviet Union, without the Russians ever suspecting what it was for.",
+    "citations": [
+     {
+      "source": "little-brown-internet-archive-lending-co-e95b39",
+      "detail": "p.203"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p.14"
+     }
+    ]
+   },
+   {
+    "text": "Titanium was the only practical answer to the heat. Most of the A-12's skin would run at 500 to 600 F, so Lockheed built over 90 percent of the airframe from a titanium alloy nearly as strong as stainless steel at half the weight; across the Blackbird family titanium alloys made up 93 percent of the structural weight, and Lockheed made more than 13 million titanium parts over 20 years. The early trouble was quality. The CIA's first in-house history (1970-71) records that some 80 percent of the early deliveries from Titanium Metals Corporation had to be rejected, and that supply became consistently satisfactory only in 1961, after a delegation from headquarters visited the company to explain the program's priority.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p.11"
+     },
+     {
+      "source": "nasa-technical-reports-server-707153",
+      "detail": "pp.15 to 16"
+     },
+     {
+      "source": "central-intelligence-agency-80c044",
+      "detail": "PDF p.6"
+     }
+    ]
+   },
+   {
+    "text": "The agency's files from those years are about quality and secrecy, not Moscow. On 13 January 1960 John Parangosky, deputy chief of the CIA's Development Branch, sent the project's cover officer a trade-press item putting 1959 titanium mill shipments at 3,100 tons, and asked whether Lockheed's planned titanium purchases raised \"any cover problems\", since production seemed to be closely watched. On 19 April 1961 CIA officers met an official of Titanium Metals Corporation about late deliveries. Their record blames strict quality control and high rejection rates, the time the company needed to learn to process titanium to OXCART specifications, and processing that shuttled metal between its plants. The company promised to fill every outstanding Lockheed order by 1 August 1961, and the memo notes that it was the only supplier Lockheed had found capable of the most complex titanium work.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-internet-arc-6b0443",
+      "detail": "p.1"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-e63c5f",
+      "detail": "p.1"
+     }
+    ]
+   },
+   {
+    "text": "Kelly Johnson told the same story in 1981. He wrote of working with \"our supplier, Titanium Metals Corporation\" when the first heat-treated parts came out so brittle that a piece knocked off a desk shattered on the floor, a problem cured by rebuilding Lockheed's acid-pickling line as a copy of the one at the company's mills. His only mention of the USSR in that section is that it had more and larger forging presses than America. Rich's sentence begins with Johnson's words, then goes where Johnson never did. The CIA's 1992 history of the U-2 and OXCART programs, written from the agency's records, also names Titanium Metals Corporation and says nothing of Soviet metal; nor does NASA historian Peter Merlin's 2009 paper.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-dd9228",
+      "detail": "typed pp.10 and 13 (PDF pp.13 and 16)"
+     },
+     {
+      "source": "little-brown-internet-archive-lending-co-e95b39",
+      "detail": "p.203"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-2f9e16",
+      "detail": "pp.279 to 280"
+     },
+     {
+      "source": "nasa-technical-reports-server-707153",
+      "detail": "pp.14 to 16"
+     }
+    ]
+   },
+   {
+    "text": "National figures leave little room for a shortage of raw metal. In 1961, the Bureau of Mines reported, three American firms, among them Titanium Metals Corporation at Henderson, Nevada, produced 6,700 tons of titanium sponge; imports of 2,490 tons came almost entirely from Japan, with small lots from Canada and Britain; and government stockpiles held another 31,007 tons of sponge. Australia produced 88 percent of the world's rutile. A CIA economic study of 1964 found that American sponge capacity had reached about 25,000 metric tons a year, while output had fallen below 4,000 tons in 1959 after bomber cancellations. A Soviet journal admitted in 1962 that production \"still lagged behind requirements\", and in April 1961 Moscow had made its first approach to buy Japanese titanium, having planned to buy from Britain.",
+    "citations": [
+     {
+      "source": "u-s-department-of-the-interior-bureau-of-6a63c5",
+      "detail": "pp.1241, 1246 to 1248 and 1250"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-068e21",
+      "detail": "p.1 (PDF p.4) and p.3 (PDF p.6)"
+     }
+    ]
+   },
+   {
+    "text": "Soviet titanium did reach Western buyers later. CIA analysts reported in 1985 that Soviet exports of sponge and scrap grew from several hundred tons a year in the mid-1960s to a peak of 7,700 tons in 1974, with the United States and West Germany the leading customers. The CIA's own history of the A-12, David Robarge's Archangel (2007, revised 2012), adopted Rich's version, saying some of the scarce base metal \"had to be obtained covertly\" from the Soviet Union, with Rich's memoir as its only citation. A 2023 National Interest article quotes former SR-71 pilot Col. Richard Graham as saying that America lacked rutile ore and got it from the USSR by \"working through Third World countries and bogus operations\", one of them, it reports him saying, a front for pizza ovens.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-internet-arc-ef762f",
+      "detail": "'Declining Exports', p.4 (PDF p.12)"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-70081b",
+      "detail": "p.11 and note 4"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-a9af1d",
+      "detail": "'Breaking Through Technological Barriers', note 4"
+     },
+     {
+      "source": "the-national-interest-wayback-machine-ca-51a9ba",
+      "detail": "paras 7 to 9"
+     }
+    ]
+   }
+  ],
+  "differ": {
+   "text": "Sources disagree on the early rejection rate: Archangel gives 95 percent, in a sentence footnoted to Rich, while McIninch says some 80 percent and Pedlow and Welzenbach up to 80 percent. They also disagree on what was supposedly bought. Rich says base metal from one of the world's leading exporters; Robarge turns this into the country with \"the largest known reserves\"; Graham, as quoted in 2023, says rutile ore, although Australia then produced 88 percent of the world's rutile and, by the CIA's account, the Soviet industry chose its own low-grade ilmenite over foreign rutile. Claims that Soviet titanium output dwarfed America's are true of the 1980s (the CIA estimated about 71,000 metric tons in 1984, more than five times US output) but not of the A-12 years, when it estimated that the USSR turned about 5,000 metric tons of sponge into mill products in 1963 against American sponge production of 7,200 tons.",
+   "citations": [
+    {
+     "source": "central-intelligence-agency-center-for-t-70081b",
+     "detail": "p.11 and note 4"
+    },
+    {
+     "source": "central-intelligence-agency-80c044",
+     "detail": "PDF p.6"
+    },
+    {
+     "source": "central-intelligence-agency-internet-arc-2f9e16",
+     "detail": "p.280"
+    },
+    {
+     "source": "little-brown-internet-archive-lending-co-e95b39",
+     "detail": "p.203"
+    },
+    {
+     "source": "the-national-interest-wayback-machine-ca-51a9ba",
+     "detail": "para 8"
+    },
+    {
+     "source": "u-s-department-of-the-interior-bureau-of-6a63c5",
+     "detail": "p.1250"
+    },
+    {
+     "source": "central-intelligence-agency-internet-arc-ef762f",
+     "detail": "summary, pp.iii to iv (PDF pp.5 to 6)"
+    },
+    {
+     "source": "central-intelligence-agency-internet-arc-068e21",
+     "detail": "p.1 (PDF p.4) and p.3 (PDF p.6)"
+    }
+   ]
+  }
+ },
+ {
+  "id": "weaver-breakup",
+  "title": "Thrown clear at Mach 3.18",
+  "dek": "Bill Weaver never pulled his ejection handle. His SR-71 came apart around him at 78,000 feet, and he woke up falling.",
+  "date": "1966-01-25",
+  "precision": "day",
+  "programs": [
+   "senior-crown"
+  ],
+  "airframes": [
+   "61-7952"
+  ],
+  "people": [
+   "Bill Weaver",
+   "Jim Zwayer",
+   "Albert Mitchell Jr."
+  ],
+  "kind": "story",
+  "verdict": null,
+  "body": [
+   {
+    "text": "On 25 January 1966 SR-71A 61-7952 took off from Edwards Air Force Base on a Lockheed test flight. Bill Weaver, a Lockheed test pilot, was in the front seat; behind him was Jim Zwayer, a Lockheed flight test specialist in reconnaissance and navigation systems. They were to evaluate those systems and to try flying with the centre of gravity further aft than normal, which cut trim drag at high Mach but made the aircraft less stable in pitch.",
+    "citations": [
+     {
+      "source": "roadrunners-internationale-0dfa2c",
+      "detail": "paras 2 to 3"
+     },
+     {
+      "source": "the-x-hunters-peter-merlin-tony-moore-c0c90e",
+      "detail": "opening paragraph"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-317463",
+      "detail": "p.2"
+     }
+    ]
+   },
+   {
+    "text": "Weaver's own account describes what happened after they refuelled and turned east. At Mach 3.2 and 78,000 ft the right inlet's automatic control failed and he switched it to manual. In a planned 35-degree bank to the right the right inlet unstarted; the aircraft rolled further right and pitched up, and full left and forward stick did nothing. He wrote that he did not think an ejection at Mach 3.18 and 78,800 ft was survivable, and tried to tell Zwayer to stay with the aircraft, but the g-forces garbled his words.",
+    "citations": [
+     {
+      "source": "roadrunners-internationale-0dfa2c",
+      "detail": "paras 3 to 7"
+     }
+    ]
+   },
+   {
+    "text": "He later learned that only two or three seconds passed between the unstart and the loss of control. He blacked out, and the SR-71 disintegrated around him. A reconstruction published by The X-Hunters, an aviation archaeology group, says the airframe failed at the main joint just ahead of the wings. The CIA's accident summary records that the pilot was \"forcibly ripped from seat through lap belt and shoulder harness by wind and pressure forces\" as the aircraft broke up.",
+    "citations": [
+     {
+      "source": "roadrunners-internationale-0dfa2c",
+      "detail": "para 9"
+     },
+     {
+      "source": "the-x-hunters-peter-merlin-tony-moore-c0c90e",
+      "detail": "passage beginning \"The airframe had failed\""
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-317463",
+      "detail": "p.3"
+     }
+    ]
+   },
+   {
+    "text": "Weaver wrote that he came to thinking he was dreaming, then that he must be dead, and that being dead did not seem so bad. He was falling, blind behind an iced-over face plate, his pressure suit inflated by the emergency oxygen in his seat kit. He was falling steadily rather than tumbling, so he reasoned that the small stabilising parachute had opened, and as he groped for the D-ring his main parachute opened by itself. Holding up the face plate, whose latch had broken, he saw a second parachute about a quarter of a mile away.",
+    "citations": [
+     {
+      "source": "roadrunners-internationale-0dfa2c",
+      "detail": "paras 10 to 13"
+     }
+    ]
+   },
+   {
+    "text": "He landed in northeastern New Mexico, about 1.5 miles from the ranch house of Albert Mitchell Jr., who had watched the parachutes come down and flew out in his helicopter. Weaver found his lap belt and shoulder harness, shredded but still latched, hanging around him: his ejection seat had never left the aircraft. Mitchell flew to the other parachute and came back with the news that Zwayer was dead, apparently from a broken neck suffered in the break-up, then flew Weaver about 60 miles to the hospital at Tucumcari.",
+    "citations": [
+     {
+      "source": "roadrunners-internationale-0dfa2c",
+      "detail": "paras 17 to 22"
+     },
+     {
+      "source": "the-x-hunters-peter-merlin-tony-moore-c0c90e",
+      "detail": "passage beginning \"The citizens of Buyeros and Albert\""
+     }
+    ]
+   },
+   {
+    "text": "The CIA's accident summary, prepared on 11 January 1967, puts the crash 107 nautical miles from Cannon Air Force Base on a bearing of 350 degrees, with wreckage strewn over an area about 16 miles long and 5 miles wide, and gives the primary cause as fuel distribution that left an unsafe centre of gravity. The accident board asked for the sharp edges on lap belt adjusters to be removed, for face plate heating during free fall and for a study of automatic ejection in a high-altitude break-up. Weaver wrote that the flight was repeated in the SR-71 simulator at Beale the next day with the same outcome, and that testing with an aft centre of gravity was stopped.",
+    "citations": [
+     {
+      "source": "central-intelligence-agency-internet-arc-317463",
+      "detail": "pp.2 to 3"
+     },
+     {
+      "source": "central-intelligence-agency-internet-arc-f7a9ed",
+      "detail": "p.1"
+     },
+     {
+      "source": "roadrunners-internationale-0dfa2c",
+      "detail": "para 25"
+     }
+    ]
+   },
+   {
+    "text": "Two weeks later Weaver was back in an SR-71, flying the first sortie of a new aircraft at Palmdale. Zwayer remains the only person killed in an SR-71.",
+    "citations": [
+     {
+      "source": "roadrunners-internationale-0dfa2c",
+      "detail": "para 26"
+     },
+     {
+      "source": "habu-org-08a1c9",
+      "detail": "61-7952 page"
+     }
+    ]
+   }
+  ],
+  "differ": {
+   "text": "Weaver gives Mach 3.18 and 78,800 ft at the moment of the unstart; The X-Hunters give Mach 3.17 and nearly 78,000 ft. The CIA summary puts the debris over about 16 by 5 miles, while Weaver and The X-Hunters say 15 by 10 miles. The CIA summary records Zwayer's death as a \"fatal ejection\" and says the manner in which his seat was fired is unknown, whereas Weaver wrote that both men were ripped out of the airplane. The summary names an unsafe centre of gravity as the primary cause; Weaver describes the cumulative effect of the inlet malfunction, reduced stability, the turn and the speed.",
+   "citations": [
+    {
+     "source": "roadrunners-internationale-0dfa2c",
+     "detail": "paras 7, 8, 25"
+    },
+    {
+     "source": "the-x-hunters-peter-merlin-tony-moore-c0c90e",
+     "detail": "passages beginning \"As the airplane approached Albert\" and \"The investigators faced\""
+    },
+    {
+     "source": "central-intelligence-agency-internet-arc-317463",
+     "detail": "pp.2 to 3"
+    }
+   ]
+  }
+ },
+ {
+  "id": "yom-kippur-1973",
+  "title": "New York to the Suez Canal and back",
+  "dek": "In October 1973 the White House wanted to see the war for itself, and the SR-71 it sent flew there and back from New York in eleven hours, refuelling six times on the way.",
+  "date": "1973-10-13",
+  "precision": "day",
+  "programs": [
+   "senior-crown"
+  ],
+  "airframes": [
+   "61-7979",
+   "61-7964"
+  ],
+  "people": [
+   "Henry Kissinger",
+   "James Schlesinger",
+   "Kenneth Rush",
+   "Thomas Moorer",
+   "William Colby",
+   "John Weinel",
+   "James Shelton",
+   "Gary Coleman",
+   "Eldon Joersz",
+   "John Fuller",
+   "Robert Helt",
+   "Larry Elliott"
+  ],
+  "kind": "story",
+  "verdict": null,
+  "body": [
+   {
+    "text": "On the morning of 9 October 1973, three days after Egyptian and Syrian forces attacked Israeli positions in Sinai and on the Golan Heights, Henry Kissinger held a principals-only meeting of the Washington Special Actions Group in the White House Situation Room, with Defense Secretary James Schlesinger, Deputy Secretary of State Kenneth Rush, Admiral Thomas Moorer of the Joint Chiefs and William Colby of the CIA. Israel had called all night for supplies. When Schlesinger said they needed to know about the bridges, Kissinger answered, in the words of the meeting record: \"We should fly the SR-71.\" Before the group broke up, Moorer asked whether the paperwork could be done.",
+    "citations": [
+     {
+      "source": "national-archives-gerald-r-ford-library--ddc386",
+      "detail": "pp. 1, 2, 4 and 8 of the PDF"
+     },
+     {
+      "source": "u-s-department-of-state-office-of-the-hi-37e4aa",
+      "detail": "Document 135"
+     },
+     {
+      "source": "u-s-department-of-state-office-of-the-hi-fbe35a",
+      "detail": "Preface, p. VI"
+     }
+    ]
+   },
+   {
+    "text": "On 11 October the Joint Chiefs ordered Strategic Air Command to send SR-71s to Griffiss Air Force Base, New York, and two SR-71As of the 9th Strategic Reconnaissance Wing came from Beale, California. A Middle East plan, GIANT REACH, already existed: the SR-71 would take off from Beale and land after the mission at a base whose name, like the reason it could not be used, is still blacked out in the declassified SAC chronology. Either way, SAC had to plan round trips from the United States, which doubled the tanker force. Two CIA U-2s, deployed on 7 and 8 October to be ready to cover the war, were never tasked.",
+    "citations": [
+     {
+      "source": "national-security-archive-george-washing-63e6f1",
+      "detail": "p. 1 (PDF p. 2), entry for 11 October"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-71139e",
+      "detail": "pp. 256 to 257"
+     }
+    ]
+   },
+   {
+    "text": "The first sortie left Griffiss at 0600 GMT on 13 October, flown by Lt. Col. James Shelton with Lt. Col. Gary Coleman as reconnaissance systems officer. Reaching the targets took three air refuellings, over the Gulf of Saint Lawrence, at a point still withheld and south of Crete; three more, south of Crete, off Portugal and over the Gulf of Saint Lawrence, brought the aircraft back to Griffiss at 1713 GMT. The flight lasted 11 hours 13 minutes, beating the SR-71's endurance record of 10 hours 30 minutes from April 1971, and needed 14 KC-135Q tankers. Shelton described the mission and its six refuellings in a talk at the Western Museum of Flight, posted in 2016.",
+    "citations": [
+     {
+      "source": "national-security-archive-george-washing-63e6f1",
+      "detail": "p. 1 (PDF p. 2), entry for 13 October"
+     },
+     {
+      "source": "peninsula-seniors-youtube-e3c3ab",
+      "detail": "video description"
+     }
+    ]
+   },
+   {
+    "text": "On 16 October Colby brought prints to the Situation Room. \"They flew right down the Canal,\" he said. Taken on Saturday 13 October, they showed the Egyptians across the canal to about 8 km, as the Israelis had claimed, and nothing to support claims of huge tank losses, though Moorer warned that a shell through an engine would not show. But when Colby asked about the next flight, Kissinger demurred: the Egyptians, he said, had \"been very restrained about it\". The meeting put the second mission on hold.",
+    "citations": [
+     {
+      "source": "u-s-department-of-state-office-of-the-hi-042620",
+      "detail": "Document 191, summary of conclusions and pp. 546 to 552, with footnote 4"
+     }
+    ]
+   },
+   {
+    "text": "Colby wanted another flight \"around ceasefire time\" as a baseline, and on 24 October the group agreed one should run down the canal and over Egypt; Kissinger asked only whether it could avoid Cairo. At lunch he remarked that if anyone complained about the next day's flight, Washington could say it was \"to fix the ceasefire lines\". On 25 October Capt. Eldon Joersz and Capt. John Fuller flew it, refuelling south of Nova Scotia, north of the Azores and south of Crete, and launched and landed at the same times as the first crew. On 31 October Moorer, citing evidence of Scud missiles in Egypt, asked for a third; after an overcast delay, on 4 November Capt. Robert Helt and Capt. Larry Elliott flew 11 hours 22 minutes, the longest SR-71 flight yet.",
+    "citations": [
+     {
+      "source": "u-s-department-of-state-office-of-the-hi-ea2eda",
+      "detail": "Document 208"
+     },
+     {
+      "source": "u-s-department-of-state-office-of-the-hi-191018",
+      "detail": "Document 259"
+     },
+     {
+      "source": "u-s-department-of-state-office-of-the-hi-c8bd84",
+      "detail": "Document 261"
+     },
+     {
+      "source": "national-security-archive-george-washing-63e6f1",
+      "detail": "pp. 2 to 3 (PDF pp. 3 to 4), entries for 25 October and 4 November"
+     },
+     {
+      "source": "national-archives-gerald-r-ford-library--646235",
+      "detail": "pp. 3 to 4 of the PDF"
+     },
+     {
+      "source": "u-s-department-of-state-office-of-the-hi-f25f5d",
+      "detail": "Document 308"
+     },
+     {
+      "source": "roadrunners-internationale-2c60a8",
+      "detail": "entries for 25 October and 4 November 1973"
+     }
+    ]
+   },
+   {
+    "text": "The round trips were costly: on 6 November Vice Admiral John Weinel, for the Joint Chiefs, put a flight from New York at about half a million dollars, against $175,000 to $200,000 from Europe; on 29 November Moorer added that each used 230,000 gallons of fuel. With fuel due to reach RAF Mildenhall in England on 1 January, the group agreed on one more flight from the United States and later ones from Britain. By then, according to a veterans' timeline published by Roadrunners Internationale, GIANT REACH had moved on 15 November to Seymour Johnson Air Force Base, North Carolina.",
+    "citations": [
+     {
+      "source": "u-s-department-of-state-office-of-the-hi-cc34ca",
+      "detail": "Document 322"
+     },
+     {
+      "source": "u-s-department-of-state-office-of-the-hi-3b9d92",
+      "detail": "Document 364, summary of conclusions and p. 1009"
+     },
+     {
+      "source": "roadrunners-internationale-2c60a8",
+      "detail": "entry for 15 November 1973"
+     }
+    ]
+   },
+   {
+    "text": "The flights outlasted the fighting. Under the Egyptian-Israeli disengagement of January 1974, the United States told both governments it would photograph the disengagement areas about every ten days to two weeks and give each side the pictures. When Colby asked on 22 January whether the U-2 would do, Kissinger replied: \"I told them SR-71.\" The Roadrunners timeline counts nine GIANT REACH sorties, the last on 6 April 1974. The CIA was then tasked to watch the disengagement areas with U-2s, and its detachment reached its still-redacted base on 21 April.",
+    "citations": [
+     {
+      "source": "u-s-department-of-state-office-of-the-hi-755ee5",
+      "detail": "Volume XXVI, Document 7"
+     },
+     {
+      "source": "national-archives-gerald-r-ford-library--4ff497",
+      "detail": "p. 2 of the PDF"
+     },
+     {
+      "source": "roadrunners-internationale-2c60a8",
+      "detail": "entries for 12 October 1973 and 6 April 1974"
+     },
+     {
+      "source": "central-intelligence-agency-center-for-t-71139e",
+      "detail": "pp. 256 to 257"
+     }
+    ]
+   }
+  ],
+  "differ": {
+   "text": "The SAC chronology dates the first sortie 13 October, and the editors of Foreign Relations date the photographs shown on 16 October to the same day, but on 1 November Kissinger told Golda Meir that the SR-71 had photographed only twice, on the 12th and the 25th. Written on 12 December 1973, the chronology records three sorties (13 and 25 October, 4 November). On 29 November Moorer told the group that the last flight had been on 18 November, whereas the Roadrunners timeline, which credits its entries to SR-71 veteran Buddy Brown, lists a sortie on 11 November and none on 18 November, and counts nine in all to April 1974. The airframe serials (61-7979 for the first three sorties, 61-7964 on 11 November and 2 December) come only from that timeline. The chronology spells the third RSO's name Elliot.",
+   "citations": [
+    {
+     "source": "national-security-archive-george-washing-63e6f1",
+     "detail": "pp. 1 to 3 (PDF pp. 2 to 4)"
+    },
+    {
+     "source": "u-s-department-of-state-office-of-the-hi-042620",
+     "detail": "footnote 4"
+    },
+    {
+     "source": "u-s-department-of-state-office-of-the-hi-b90b26",
+     "detail": "Document 305"
+    },
+    {
+     "source": "u-s-department-of-state-office-of-the-hi-3b9d92",
+     "detail": "p. 1010"
+    },
+    {
+     "source": "roadrunners-internationale-2c60a8",
+     "detail": "entries for 11 October 1973 to 6 April 1974"
+    }
+   ]
+  }
+ }
+]

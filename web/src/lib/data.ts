@@ -73,9 +73,41 @@ export const shortTitle = (t: string) => t.replace(/\s*\([^)]*\)\s*$/, '').repla
 export async function mediaByEvent() {
   const byEvent = new Map<string, Media[]>();
   for (const m of await getCollection('media')) {
+    if (!m.data.event) continue;
     const list = byEvent.get(m.data.event.id) ?? [];
     list.push(m);
     byEvent.set(m.data.event.id, list);
   }
   return byEvent;
+}
+
+// Media stills are imported directly rather than through the collection's image() helper, whose
+// resolution intermittently left the first entry a page rendered as a plain path (LocalImageUsedWrongly).
+const MEDIA_STILLS = import.meta.glob<{ default: ImageMetadata }>('../assets/media/*.{jpg,jpeg,png}', { eager: true });
+export function mediaImage(file: string | null): ImageMetadata | null {
+  if (!file) return null;
+  const hit = MEDIA_STILLS[`../assets/media/${file.split('/').pop()}`];
+  if (!hit) throw new Error(`media still not found: ${file}`);
+  return hit.default;
+}
+
+export type Story = CollectionEntry<'stories'>;
+/** Stories in date order, with their media (lead first). */
+export async function storiesInOrder() {
+  return (await getCollection('stories')).sort((a, b) => a.data.date.localeCompare(b.data.date));
+}
+/** The picture to lead a story with: a photograph or film before a document page, and the
+    closest to the story first (of this story, same aircraft, same program, for illustration). */
+export function leadOf(items: Media[]) {
+  const REL = ['exact', 'same-aircraft', 'same-program', 'representative'];
+  const rank = (m: Media) => (m.data.kind === 'document' ? 10 : 0) + REL.indexOf(m.data.relation);
+  return [...items].filter((m) => m.data.file).sort((a, b) => rank(a) - rank(b))[0] ?? null;
+}
+export async function mediaByStory() {
+  const byStory = new Map<string, Media[]>();
+  for (const m of await getCollection('media')) {
+    if (!m.data.story) continue;
+    byStory.set(m.data.story, [...(byStory.get(m.data.story) ?? []), m]);
+  }
+  return byStory;
 }

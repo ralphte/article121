@@ -42,3 +42,5 @@ rclone.conf
 research/videos/raw/
 research/timeline-media/raw/
 research/timeline-media/web/
+research/stories-media/raw/
+research/stories-media/web/

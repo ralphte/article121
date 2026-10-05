@@ -28,3 +28,15 @@ Captioning cautions from the same research:
 - The altitude-record photo of 61-7962 may be the wrong airframe; habu.org says the record was flown in 61-7963.
 - The CIA "Piece of Metal from A-12" photo is from Walter Ray's January 1967 crash, not the 1967 SAM fragment.
 - Commons "YF-12 takeoff 2.jpg" is captioned 60-6935 but the tail reads 06934.
+
+## Raised by the Stories research (5 October 2026)
+
+| Entry | What the site says | What the record shows | Source found |
+|---|---|---|---|
+| jack-weeks-lost (event) and 60-6932 in research/airframes.json | lost 5 June 1968 (local time on Okinawa) | every CIA record gives 4 June 1968; take-off was 0450 GMT, about 1350 the same day on Okinawa, so 5 June is not a time-zone effect | CIA accident board charts and summary (see research/stories.json, jack-weeks-lost) |
+| pueblo-overflight | pilot given as Weeks; some secondary sources say Frank Murray | the CIA mission critique of 5 February 1968 reads "Pilot's Name: Weeks", aircraft 131; Murray himself wrote he was credited by mistake | CIA critique; Roadrunners (Murray) |
+| d-21 in research/airframes.json | the first SENIOR BOWL drone came down in Siberia | an NRO paper of 9 January 1970 puts the debris "approximately 75 miles East of the Aral Sea in the Soviet Union" (Kazakhstan) | NRO D-21 collection (see research/stories.json, drone-in-kazakhstan) |
+| giant-reach-yom-kippur | endurance record 10 h 33 min; National Security Archive document | the scan reads 10 h 30 min; Joersz and Fuller were captains; the study is by the SAC History Office, hosted by the National Security Archive | SAC History Office study |
+| research/machine.json, fuel paragraph | stated that a lit match will not ignite JP-7 | changed on 5 October 2026 to attribute the claim to the CIA history: no test is on record | stories: fuel-that-would-not-burn |
+| research/systems/systems.md, start cart | "AG330" not found in any primary source | 1964 contractor purchase forms in a CIA release read "START CARTS P/N AG330" | CIA release (see research/stories.json, buick-start-cart) |
+| research/fact_notes.md, myth 9 (Soviet titanium) | "Partly true" | the claim's earliest source is Ben Rich's 1994 memoir; 1960 and 1961 CIA memos name Titanium Metals Corporation and a quality problem, not supply; unproven and unlikely for the A-12 | stories: titanium-from-the-enemy |

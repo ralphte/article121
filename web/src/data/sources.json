@@ -1,46 +1,46 @@
 [
  {
-  "id": "u-s-air-force-323b8c",
-  "title": "SR-71A-1 Flight Manual (T.O. SR-71A-1), Issue E, Change 2, 31 July 1989",
-  "publisher": "U.S. Air Force",
-  "url": "https://archive.org/details/0003756-lockheed-sr-71-03",
-  "uses": 130
- },
- {
   "id": "central-intelligence-agency-center-for-t-70081b",
   "title": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft (David Robarge, 2nd ed. 2012), p. 1",
   "publisher": "Central Intelligence Agency, Center for the Study of Intelligence",
   "url": "https://www.cia.gov/resources/csi/static/b45f5f8f5e4937963d9e9931313d84a4/Archangel-CIAs-Supersonic-A-12-Reconnaissance-Aircraft.pdf",
-  "uses": 89,
+  "uses": 153,
   "archive": "https://web.archive.org/web/20260825092923/https://www.cia.gov/resources/csi/static/b45f5f8f5e4937963d9e9931313d84a4/Archangel-CIAs-Supersonic-A-12-Reconnaissance-Aircraft.pdf",
   "archived": "2026-08-25"
  },
  {
-  "id": "nasa-technical-reports-server-707153",
-  "title": "Design and Development of the Blackbird: Challenges and Lessons Learned (Peter W. Merlin, AIAA 2009-1522)",
-  "publisher": "NASA Technical Reports Server",
-  "url": "https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf",
-  "uses": 40,
-  "archive": "https://web.archive.org/web/20260928231313/https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf",
-  "archived": "2026-09-28"
- },
- {
-  "id": "roadrunners-internationale-2c60a8",
-  "title": "A-12, YF-12A, & SR-71 Timeline of Events (June 2010)",
-  "publisher": "Roadrunners Internationale",
-  "url": "https://roadrunnersinternationale.com/carpenter/bb_timeline_c10.pdf",
-  "uses": 40,
-  "archive": "https://web.archive.org/web/20260105125403/https://roadrunnersinternationale.com/carpenter/bb_timeline_c10.pdf",
-  "archived": "2026-01-05"
+  "id": "u-s-air-force-323b8c",
+  "title": "SR-71A-1 Flight Manual (T.O. SR-71A-1), Issue E, Change 2, 31 July 1989",
+  "publisher": "U.S. Air Force",
+  "url": "https://archive.org/details/0003756-lockheed-sr-71-03",
+  "uses": 140
  },
  {
   "id": "central-intelligence-agency-80c044",
   "title": "The Oxcart Story (Thomas P. McIninch, Studies in Intelligence, Winter 1970-71; released 1994)",
   "publisher": "Central Intelligence Agency",
   "url": "https://www.cia.gov/resources/csi/static/The-Oxcart-Story.pdf",
-  "uses": 36,
+  "uses": 64,
   "archive": "https://web.archive.org/web/20260908145717/https://www.cia.gov/resources/csi/static/The-Oxcart-Story.pdf",
   "archived": "2026-09-08"
+ },
+ {
+  "id": "roadrunners-internationale-2c60a8",
+  "title": "A-12, YF-12A, & SR-71 Timeline of Events (June 2010)",
+  "publisher": "Roadrunners Internationale",
+  "url": "https://roadrunnersinternationale.com/carpenter/bb_timeline_c10.pdf",
+  "uses": 59,
+  "archive": "https://web.archive.org/web/20260105125403/https://roadrunnersinternationale.com/carpenter/bb_timeline_c10.pdf",
+  "archived": "2026-01-05"
+ },
+ {
+  "id": "nasa-technical-reports-server-707153",
+  "title": "Design and Development of the Blackbird: Challenges and Lessons Learned (Peter W. Merlin, AIAA 2009-1522)",
+  "publisher": "NASA Technical Reports Server",
+  "url": "https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf",
+  "uses": 49,
+  "archive": "https://web.archive.org/web/20260928231313/https://ntrs.nasa.gov/api/citations/20090007797/downloads/20090007797.pdf",
+  "archived": "2026-09-28"
  },
  {
   "id": "joe-baugher-bc942a",
@@ -50,6 +50,31 @@
   "uses": 21,
   "archive": "https://web.archive.org/web/20260623100035/http://www.joebaugher.com/usaf_serials/1961.html",
   "archived": "2026-06-23"
+ },
+ {
+  "id": "roadrunners-internationale-258a6c",
+  "title": "Time Line of the SR-71 (compiled by Don Hildebrant)",
+  "publisher": "Roadrunners Internationale",
+  "url": "https://roadrunnersinternationale.com/sr-71timeline.pdf",
+  "uses": 19,
+  "archive": "https://web.archive.org/web/20260316163839/https://www.roadrunnersinternationale.com/sr-71timeline.pdf",
+  "archived": "2026-03-16"
+ },
+ {
+  "id": "smithsonian-national-air-and-space-museu-2583e3",
+  "title": "Lockheed SR-71 Blackbird (object A19920072000)",
+  "publisher": "Smithsonian National Air and Space Museum",
+  "url": "https://airandspace.si.edu/collection-objects/lockheed-sr-71-blackbird/nasm_A19920072000",
+  "uses": 16,
+  "archive": "https://web.archive.org/web/20260923222523/https://airandspace.si.edu/collection-objects/lockheed-sr-71-blackbird/nasm_A19920072000",
+  "archived": "2026-09-23"
+ },
+ {
+  "id": "central-intelligence-agency-dd9228",
+  "title": "Development of the Lockheed SR-71 Blackbird (Clarence L. Johnson, 1981), with J58/SR-71 Propulsion Integration (William R. Brown)",
+  "publisher": "Central Intelligence Agency",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp90b00170r000100080001-5",
+  "uses": 16
  },
  {
   "id": "sr-71-online-sr-71-org-via-internet-arch-3d2bc7",
@@ -68,13 +93,13 @@
   "archived": "2023-04-07"
  },
  {
-  "id": "roadrunners-internationale-258a6c",
-  "title": "Time Line of the SR-71 (compiled by Don Hildebrant)",
-  "publisher": "Roadrunners Internationale",
-  "url": "https://roadrunnersinternationale.com/sr-71timeline.pdf",
+  "id": "nasa-history-division-d3ceea",
+  "title": "Mach 3+: NASA/USAF YF-12 Flight Research, 1969-1979 (Peter W. Merlin, Monographs in Aerospace History No. 25, NASA SP-2001-4525)",
+  "publisher": "NASA History Division",
+  "url": "https://www.nasa.gov/wp-content/uploads/2021/04/88796main_yf-12.pdf",
   "uses": 14,
-  "archive": "https://web.archive.org/web/20260316163839/https://www.roadrunnersinternationale.com/sr-71timeline.pdf",
-  "archived": "2026-03-16"
+  "archive": "https://web.archive.org/web/20260428071055/https://www.nasa.gov/wp-content/uploads/2021/04/88796main_yf-12.pdf",
+  "archived": "2026-04-28"
  },
  {
   "id": "roadrunners-internationale-df04a3",
@@ -96,6 +121,13 @@
   "offline": "site returns 503 to every request (checked 2026-10-04)"
  },
  {
+  "id": "american-institute-of-aeronautics-and-as-b032d7",
+  "title": "Unlocking the Mystery of the D-21B Solid Rocket Boosted Air-Launched Mach-3 UAV (Geisler, Moore, Rohrbaugh, Pignoli; AIAA 2007-5761)",
+  "publisher": "American Institute of Aeronautics and Astronautics (copy hosted by Nevada Aerospace Hall of Fame)",
+  "url": "https://www.nvahof.org/wp-content/uploads/aiaa-2007-5761d-21booster.pdf",
+  "uses": 12
+ },
+ {
   "id": "nasa-dryden-flight-research-center-c5099a",
   "title": "NASA Facts FS-2008-6-030-DFRC: SR-71 Blackbird",
   "publisher": "NASA Dryden Flight Research Center",
@@ -114,11 +146,13 @@
   "archived": "2026-08-21"
  },
  {
-  "id": "american-institute-of-aeronautics-and-as-b032d7",
-  "title": "Unlocking the Mystery of the D-21B Solid Rocket Boosted Air-Launched Mach-3 UAV (Geisler, Moore, Rohrbaugh, Pignoli; AIAA 2007-5761)",
-  "publisher": "American Institute of Aeronautics and Astronautics (copy hosted by Nevada Aerospace Hall of Fame)",
-  "url": "https://www.nvahof.org/wp-content/uploads/aiaa-2007-5761d-21booster.pdf",
-  "uses": 10
+  "id": "dvids-70a023",
+  "title": "Legendary SR-71 Blackbird (9th Reconnaissance Wing, 4 March 2020)",
+  "publisher": "DVIDS",
+  "url": "https://www.dvidshub.net/news/364510/legendary-sr-71-blackbird",
+  "uses": 10,
+  "archive": "https://web.archive.org/web/20250418211428/https://www.dvidshub.net/news/364510/legendary-sr-71-blackbird",
+  "archived": "2025-04-18"
  },
  {
   "id": "nasa-6f48e2",
@@ -128,13 +162,13 @@
   "uses": 10
  },
  {
-  "id": "nasa-history-division-d3ceea",
-  "title": "Mach 3+: NASA/USAF YF-12 Flight Research, 1969-1979 (Peter W. Merlin, Monographs in Aerospace History No. 25, NASA SP-2001-4525)",
-  "publisher": "NASA History Division",
-  "url": "https://www.nasa.gov/wp-content/uploads/2021/04/88796main_yf-12.pdf",
+  "id": "roadrunners-internationale-0dfa2c",
+  "title": "Bill Weaver SR-71 Blackbird Breakup",
+  "publisher": "Roadrunners Internationale",
+  "url": "https://roadrunnersinternationale.com/weaver_sr71_bailout.html",
   "uses": 9,
-  "archive": "https://web.archive.org/web/20260428071055/https://www.nasa.gov/wp-content/uploads/2021/04/88796main_yf-12.pdf",
-  "archived": "2026-04-28"
+  "archive": "https://web.archive.org/web/20260927040600/https://roadrunnersinternationale.com/weaver_sr71_bailout.html",
+  "archived": "2026-09-27"
  },
  {
   "id": "nasa-5512ae",
@@ -144,13 +178,11 @@
   "uses": 9
  },
  {
-  "id": "smithsonian-national-air-and-space-museu-2583e3",
-  "title": "Lockheed SR-71 Blackbird (object A19920072000)",
-  "publisher": "Smithsonian National Air and Space Museum",
-  "url": "https://airandspace.si.edu/collection-objects/lockheed-sr-71-blackbird/nasm_A19920072000",
-  "uses": 8,
-  "archive": "https://web.archive.org/web/20260923222523/https://airandspace.si.edu/collection-objects/lockheed-sr-71-blackbird/nasm_A19920072000",
-  "archived": "2026-09-23"
+  "id": "central-intelligence-agency-internet-arc-87cf53",
+  "title": "Memorandum for the Record, 'Crash of A-12 - 123/926', 4 June 1963 (9 pp.), CIA-RDP71B00590R000200040010-0",
+  "publisher": "Central Intelligence Agency (Internet Archive mirror of the CIA reading room)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp71b00590r000200040010-0",
+  "uses": 8
  },
  {
   "id": "national-museum-of-the-united-states-air-ef079b",
@@ -171,6 +203,27 @@
   "archived": "2026-03-16"
  },
  {
+  "id": "central-intelligence-agency-internet-arc-317463",
+  "title": "Summary of A-12/SR-71 Accidents (CIA Office of Special Activities, January 1967), CIA-RDP71B00590R000100050025-4",
+  "publisher": "Central Intelligence Agency (Internet Archive mirror of the CIA Reading Room)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp71b00590r000100050025-4",
+  "uses": 7
+ },
+ {
+  "id": "dvids-ssgt-kelly-o-connor-100th-air-refu-eb3158",
+  "title": "Swedish pilots presented with U.S. Air Medal Full Ceremony (video 644209, 1:07:05)",
+  "publisher": "DVIDS (SSgt Kelly O'Connor, 100th Air Refueling Wing)",
+  "url": "https://www.dvidshub.net/video/644209/swedish-pilots-presented-with-us-air-medal-full-ceremony",
+  "uses": 7
+ },
+ {
+  "id": "fo-rsvarsmakten-swedish-armed-forces-807212",
+  "title": "Svenskt stridsflyg identifierade hemligt amerikanskt spaningsflygplan (Högkvarteret, 28 November 2018)",
+  "publisher": "Försvarsmakten (Swedish Armed Forces)",
+  "url": "https://web.archive.org/web/20181129165730/https://www.forsvarsmakten.se/sv/aktuellt/2018/11/svenskt-stridsflyg-identifierade-hemligt-amerikanskt-spaningsflygplan/",
+  "uses": 7
+ },
+ {
   "id": "national-museum-of-the-united-states-air-0f15b5",
   "title": "Lockheed SR-71A fact sheet",
   "publisher": "National Museum of the United States Air Force",
@@ -178,6 +231,16 @@
   "uses": 6,
   "archive": "https://web.archive.org/web/20260702220742/https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/198054/lockheed-sr-71a/",
   "archived": "2026-07-02"
+ },
+ {
+  "id": "habu-org-54846f",
+  "title": "Blackbird Photo Archive: 61-7974",
+  "publisher": "Habu.org",
+  "url": "http://www.habu.org/sr-71/17974.html",
+  "uses": 6,
+  "archive": "https://web.archive.org/web/20251026114658/https://www.habu.org/sr-71/17974.html",
+  "archived": "2025-10-26",
+  "offline": "TLS certificate expired (checked 2026-10-04)"
  },
  {
   "id": "nasa-dryden-flight-research-center-9398ad",
@@ -206,20 +269,64 @@
   "uses": 6
  },
  {
-  "id": "central-intelligence-agency-dd9228",
-  "title": "Development of the Lockheed SR-71 Blackbird (Clarence L. Johnson, 1981), with J58/SR-71 Propulsion Integration (William R. Brown)",
-  "publisher": "Central Intelligence Agency",
-  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp90b00170r000100080001-5",
+  "id": "national-reconnaissance-office-declassif-1d97d6",
+  "title": "Reorientation of the TAGBOARD Program (memorandum for the NRP Executive Committee, November 1966), document C05115203",
+  "publisher": "National Reconnaissance Office, Declassified D-21 Drones Program Records",
+  "url": "https://web.archive.org/web/20240901034752id_/https://www.nro.gov/Portals/135/documents/foia/declass/D-21/SC-2018-00037_C05115203.pdf",
   "uses": 6
  },
  {
-  "id": "dvids-70a023",
-  "title": "Legendary SR-71 Blackbird (9th Reconnaissance Wing, 4 March 2020)",
-  "publisher": "DVIDS",
-  "url": "https://www.dvidshub.net/news/364510/legendary-sr-71-blackbird",
+  "id": "presidio-press-2a2bd5",
+  "title": "Dark Eagles: A History of Top Secret U.S. Aircraft Programs (Curtis Peebles, revised edition, 1999)",
+  "publisher": "Presidio Press",
+  "url": "https://openlibrary.org/works/OL2653141W",
+  "uses": 6
+ },
+ {
+  "id": "little-brown-internet-archive-lending-co-e95b39",
+  "title": "Skunk Works: A Personal Memoir of My Years at Lockheed (Ben R. Rich and Leo Janos, Little, Brown, 1994), chapter \"Remembering Habu\"",
+  "publisher": "Little, Brown (Internet Archive lending copy)",
+  "url": "https://archive.org/details/skunkworks00benr",
+  "uses": 6
+ },
+ {
+  "id": "mach-1-british-edition-midland-publishin-b4df6f",
+  "title": "Sled Driver: Flying the World's Fastest Jet (Brian Shul with Sheila Kathleen O'Grady; Chico, California: Mach 1, 1991; 151 pp.; LCCN 91062709)",
+  "publisher": "Mach 1 (British edition: Midland Publishing, Earl Shilton, 1992)",
+  "url": "https://lccn.loc.gov/91062709",
+  "uses": 6
+ },
+ {
+  "id": "the-american-presidency-project-universi-f91ccc",
+  "title": "The President's News Conference, July 24, 1964 (Public Papers of the Presidents text)",
+  "publisher": "The American Presidency Project, University of California, Santa Barbara",
+  "url": "https://www.presidency.ucsb.edu/documents/the-presidents-news-conference-1053",
+  "uses": 6
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-35ef38",
+  "title": "Memorandum for the Deputy Director for Science and Technology, \"Analysis of Surface to Air Missile Engagements for OXCART Missions BX6732 and BX6734\" (Acting Director of Special Activities, BYE-2687-67, November 1967)",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, document 0001473841; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-0001473841",
+  "uses": 6
+ },
+ {
+  "id": "national-security-archive-george-washing-63e6f1",
+  "title": "Chronology: Middle East Crisis (U), Office of the Historian, Headquarters Strategic Air Command, 12 December 1973 (declassified)",
+  "publisher": "National Security Archive, George Washington University",
+  "url": "https://nsarchive.gwu.edu/sites/default/files/documents/20589946/24.pdf",
   "uses": 5,
-  "archive": "https://web.archive.org/web/20250418211428/https://www.dvidshub.net/news/364510/legendary-sr-71-blackbird",
-  "archived": "2025-04-18"
+  "archive": "https://web.archive.org/web/20251210075833/https://nsarchive.gwu.edu/sites/default/files/documents/20589946/24.pdf",
+  "archived": "2025-12-10"
+ },
+ {
+  "id": "this-day-in-aviation-bryan-r-swopes-ad691e",
+  "title": "1 September 1974",
+  "publisher": "This Day in Aviation (Bryan R. Swopes)",
+  "url": "https://www.thisdayinaviation.com/1-september-1974/",
+  "uses": 5,
+  "archive": "https://web.archive.org/web/20250902070455/https://www.thisdayinaviation.com/1-september-1974/",
+  "archived": "2025-09-02"
  },
  {
   "id": "raf-fairford-raf-fairford-co-uk-f59b54",
@@ -236,6 +343,64 @@
   "publisher": "FAI (Federation Aeronautique Internationale)",
   "url": "https://www.fai.org/news/50-years-lockheed-blackbird-records",
   "uses": 5
+ },
+ {
+  "id": "the-x-hunters-peter-merlin-tony-moore-c0c90e",
+  "title": "Lockheed SR-71A (61-7952): At 78,000 feet without an Airplane",
+  "publisher": "The X-Hunters (Peter Merlin, Tony Moore)",
+  "url": "https://dlr.thexhunters.com/xpeditions/sr-71a_952_accident.html",
+  "uses": 5
+ },
+ {
+  "id": "national-reconnaissance-office-declassif-ab3bc8",
+  "title": "TAGBOARD (NRO Staff covering memorandum by Col. Frank W. Hartley Jr., 9 January 1970) with the first version of \"TAGBOARD Flight - Nov 10, 1969\" for the Deputy Secretary of Defense, document C05114883",
+  "publisher": "National Reconnaissance Office, Declassified D-21 Drones Program Records (approved for release 16 November 2018)",
+  "url": "https://web.archive.org/web/20240901034330id_/https://www.nro.gov/Portals/135/documents/foia/declass/D-21/SC-2018-00037_C05114883.pdf",
+  "uses": 5
+ },
+ {
+  "id": "national-reconnaissance-office-declassif-a61eca",
+  "title": "TAGBOARD Missions (Director, NRO, to the Assistant to the President for National Security Affairs, the Attorney General, the Deputy Secretary of Defense, the Under Secretary of State, the DCI and the 40 Committee, 20 March 1970), document C05115147",
+  "publisher": "National Reconnaissance Office, Declassified D-21 Drones Program Records",
+  "url": "https://web.archive.org/web/20240901034424id_/https://www.nro.gov/Portals/135/documents/foia/declass/D-21/SC-2018-00037_C05115147.pdf",
+  "uses": 5
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-b5097a",
+  "title": "Interview with James A. Cunningham, Jr., 4 October 1983 (CIA oral history working paper), CIA-RDP90B00170R000200240001-6",
+  "publisher": "Central Intelligence Agency (Internet Archive mirror of the CIA Reading Room)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp90b00170r000200240001-6",
+  "uses": 5
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-43048b",
+  "title": "\"PFIAB Submission for 30 June 1968: OXCART\"",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, CIA-RDP33-02415A000400400013-8; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp33-02415a000400400013-8",
+  "uses": 5
+ },
+ {
+  "id": "dvids-c21782",
+  "title": "Swedish pilots presented with U.S. Air Medal (Capt. Korey Fratini, U.S. Air Forces in Europe and Air Forces Africa, story 301506, 28 November 2018)",
+  "publisher": "DVIDS",
+  "url": "https://www.dvidshub.net/news/301506/swedish-pilots-presented-with-us-air-medal",
+  "uses": 5
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-cfdca3",
+  "title": "The Central Intelligence Agency and Overhead Reconnaissance: The U-2 and OXCART Programs, 1954-1974 (Gregory W. Pedlow and Donald E. Welzenbach, CIA History Staff, 1992; released 2013), chapter 6",
+  "publisher": "Central Intelligence Agency (Internet Archive mirror of CIA reading room document 0000190094)",
+  "url": "https://archive.org/details/cia-readingroom-document-0000190094",
+  "uses": 5
+ },
+ {
+  "id": "this-day-in-aviation-bryan-r-swopes-91b065",
+  "title": "Tag archive: 61-7972 (6 March 1990 entry)",
+  "publisher": "This Day in Aviation (Bryan R. Swopes)",
+  "url": "https://www.thisdayinaviation.com/tag/61-7972/",
+  "uses": 4,
+  "archive": "https://web.archive.org/web/20260417115039/https://www.thisdayinaviation.com/tag/61-7972/",
+  "archived": "2026-04-17"
  },
  {
   "id": "this-day-in-aviation-bryan-r-swopes-553685",
@@ -257,10 +422,77 @@
   "offline": "site returns 503 to every request (checked 2026-10-04)"
  },
  {
+  "id": "central-intelligence-agency-bb8d0e",
+  "title": "A-12 Utility Flight Manual, changed 15 June 1968 (document C01316457)",
+  "publisher": "Central Intelligence Agency",
+  "url": "https://www.cia.gov/readingroom/document/0001316457",
+  "uses": 4,
+  "archive": "https://web.archive.org/web/20260119042617/https://www.cia.gov/readingroom/document/0001316457",
+  "archived": "2026-01-19"
+ },
+ {
   "id": "nasa-a437f2",
   "title": "YF-12 Experiments Symposium, Volume 1 (NASA CP-2054, 1978)",
   "publisher": "NASA",
   "url": "https://ntrs.nasa.gov/api/citations/19780024112/downloads/19780024112.pdf",
+  "uses": 4
+ },
+ {
+  "id": "nasa-00ba9f",
+  "title": "A Historical Perspective of the YF-12A Thermal Loads and Structures Program (Jenkins and Quinn, NASA TM-104317, 1996)",
+  "publisher": "NASA",
+  "url": "https://ntrs.nasa.gov/api/citations/19960027893/downloads/19960027893.pdf",
+  "uses": 4,
+  "archive": "https://web.archive.org/web/20251207034920/https://ntrs.nasa.gov/api/citations/19960027893/downloads/19960027893.pdf",
+  "archived": "2025-12-07"
+ },
+ {
+  "id": "dvids-f4535a",
+  "title": "SR-71 Pilot Lt. Col. Ed Yeilding Visits AEDC (David Wright, Arnold Engineering Development Complex, video 938909, 30 July 2024)",
+  "publisher": "DVIDS",
+  "url": "https://www.dvidshub.net/video/938909/sr-71-pilot-lt-col-ed-yeilding-visits-aedc",
+  "uses": 4
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-8f74b7",
+  "title": "Directorate of Science and Technology, \"BLACK SHIELD Reconnaissance Missions, 1 January - 31 March 1968\", BYE-1330/68, 30 April 1968",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, document 0001472531; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-0001472531",
+  "uses": 4
+ },
+ {
+  "id": "the-new-york-times-85ba3f",
+  "title": "Brian Shul Dies at 75; Fighter Pilot Who Flew World's Fastest Plane (Sam Roberts, 30 May 2023)",
+  "publisher": "The New York Times",
+  "url": "https://www.nytimes.com/2023/05/30/us/brian-shul-dead.html",
+  "uses": 4
+ },
+ {
+  "id": "cia-office-of-special-activities-via-the-ab5d54",
+  "title": "Memorandum for the Record, BX6734 (Incident Concerning), OXC-1112-67, 6 November 1967",
+  "publisher": "CIA Office of Special Activities, via the CIA FOIA Reading Room (Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-0001474320",
+  "uses": 4
+ },
+ {
+  "id": "national-archives-naid-174689117-edb4ca",
+  "title": "The Record Breakers (film, 17 min 22 s; NARA 330-DIMOC-740901FZZ999001)",
+  "publisher": "National Archives, NAID 174689117",
+  "url": "https://catalog.archives.gov/id/174689117",
+  "uses": 4
+ },
+ {
+  "id": "guinness-world-records-6ce2ba",
+  "title": "Fastest flight across the Atlantic",
+  "publisher": "Guinness World Records",
+  "url": "https://www.guinnessworldrecords.com/world-records/fastest-flight-across-the-atlantic",
+  "uses": 4
+ },
+ {
+  "id": "central-intelligence-agency-wayback-mach-396a06",
+  "title": "Archangel: CIA's Supersonic A-12 Reconnaissance Aircraft, web edition, page \"The OXCART Family\" (posted 1 October 2007)",
+  "publisher": "Central Intelligence Agency (Wayback Machine capture of 9 October 2007)",
+  "url": "https://web.archive.org/web/20071009211409/https://www.cia.gov/library/center-for-the-study-of-intelligence/csi-publications/books-and-monographs/a-12/the-oxcart-family.html",
   "uses": 4
  },
  {
@@ -287,16 +519,6 @@
   "uses": 3,
   "archive": "https://web.archive.org/web/20260930053855/https://www.nationalmuseum.af.mil/Visit/Museum-Exhibits/Fact-Sheets/Display/Article/195777/lockheed-yf-12a/",
   "archived": "2026-09-30"
- },
- {
-  "id": "habu-org-54846f",
-  "title": "Blackbird Photo Archive: 61-7974",
-  "publisher": "Habu.org",
-  "url": "http://www.habu.org/sr-71/17974.html",
-  "uses": 3,
-  "archive": "https://web.archive.org/web/20251026114658/https://www.habu.org/sr-71/17974.html",
-  "archived": "2025-10-26",
-  "offline": "TLS certificate expired (checked 2026-10-04)"
  },
  {
   "id": "habu-org-183f12",
@@ -328,6 +550,15 @@
   "archived": "2026-06-20"
  },
  {
+  "id": "the-salt-lake-tribune-37e935",
+  "title": "Crash site of one of Area 51's mysteries lies near Wendover",
+  "publisher": "The Salt Lake Tribune",
+  "url": "https://archive.sltrib.com/article.php?id=51976355&itype=cmsid",
+  "uses": 3,
+  "archive": "https://web.archive.org/web/20260305235729/https://archive.sltrib.com/article.php?id=51976355&itype=cmsid",
+  "archived": "2026-03-05"
+ },
+ {
   "id": "central-intelligence-agency-65f7ba",
   "title": "A-12 OXCART (CIA Museum exhibit page, Article 128)",
   "publisher": "Central Intelligence Agency",
@@ -353,13 +584,179 @@
   "uses": 3
  },
  {
-  "id": "nasa-00ba9f",
-  "title": "A Historical Perspective of the YF-12A Thermal Loads and Structures Program (Jenkins and Quinn, NASA TM-104317, 1996)",
-  "publisher": "NASA",
-  "url": "https://ntrs.nasa.gov/api/citations/19960027893/downloads/19960027893.pdf",
-  "uses": 3,
-  "archive": "https://web.archive.org/web/20251207034920/https://ntrs.nasa.gov/api/citations/19960027893/downloads/19960027893.pdf",
-  "archived": "2025-12-07"
+  "id": "this-day-in-aviation-cba4f7",
+  "title": "6 March 1990 (Bryan R. Swopes)",
+  "publisher": "This Day in Aviation",
+  "url": "https://www.thisdayinaviation.com/6-march-1990/",
+  "uses": 3
+ },
+ {
+  "id": "nasa-johnson-space-center-national-archi-3d78b0",
+  "title": "Space News Roundup, 9 March 1990, p. 4: \"Blackbird jets\"",
+  "publisher": "NASA Johnson Space Center (National Archives, NAID 201697992)",
+  "url": "https://catalog.archives.gov/medialz/electronic-records/rg-255/SNR/90-03-09.pdf",
+  "uses": 3
+ },
+ {
+  "id": "george-h-w-bush-presidential-library-nat-02b655",
+  "title": "White House News Summary, Wednesday, March 7, 1990, in George H. W. Bush Presidential Daily Files",
+  "publisher": "George H. W. Bush Presidential Library (National Archives, NAID 470416625)",
+  "url": "https://catalog.archives.gov/id/470416625",
+  "uses": 3
+ },
+ {
+  "id": "testpilot-ru-russian-aviation-history-si-5eb23d",
+  "title": "\"Voron\": sverkhzvukovoy podvesnoy bespilotnyy samolet-razvedchik (Tupolev's Voron supersonic air-launched reconnaissance drone)",
+  "publisher": "testpilot.ru (Russian aviation history site)",
+  "url": "https://www.testpilot.ru/russia/tupolev/voron/",
+  "uses": 3
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-88213f",
+  "title": "Carl E. Duckett (DDS&T), memorandum for the DCI, \"OXCART/SR-71 Information for EXCOM Meeting\", 19 December 1967",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, CIA-RDP89B00980R000600060013-9; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp89b00980r000600060013-9",
+  "uses": 3
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-6a5efe",
+  "title": "Memorandum for the Record, \"Critique for OXCART Mission Number BX6847\", BYE 8709-68, 5 February 1968",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, document 0001474863; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-0001474863",
+  "uses": 3
+ },
+ {
+  "id": "air-university-press-maxwell-afb-dtic-ad-7a3fd8",
+  "title": "Velocity: Speed with Direction. The Professional Career of Gen Jerome F. O'Malley (Aloysius G. Casey and Patrick A. Casey, 2007), chapter 8, \"The Blackbird SR-71\"",
+  "publisher": "Air University Press, Maxwell AFB (DTIC ADA477281; Internet Archive copy)",
+  "url": "https://archive.org/details/DTIC_ADA477281",
+  "uses": 3
+ },
+ {
+  "id": "habu-org-the-online-blackbird-museum-dav-a3cdad",
+  "title": "What is a Habu?",
+  "publisher": "habu.org (The Online Blackbird Museum, David Allison)",
+  "url": "http://www.habu.org/what-is-habu.html",
+  "uses": 3
+ },
+ {
+  "id": "blackbirds-net-5f7f1e",
+  "title": "\"The Birth and Death of a Tradition\" by CMSgt Wm. M. (Bill) Gornik, USAF (Ret.), chapters 1 to 5 (posted 7 March 2000)",
+  "publisher": "blackbirds.net",
+  "url": "http://www.blackbirds.net/sr71/tiecutting/chap4.html",
+  "uses": 3
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-71d298",
+  "title": "\"Accident Investigation Board Findings\" (Aircraft 129), briefing charts: findings, \"Aircraft 129 Mishap\" route chart and \"Search and Rescue Effort\" chart, June 1968",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, CIA-RDP71B00590R000200020089-6; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp71b00590r000200020089-6",
+  "uses": 3
+ },
+ {
+  "id": "youtube-recorded-and-uploaded-by-jan-joh-2a1b4c",
+  "title": "Major Brian Shul, USAF (Ret.) SR-71 Blackbird 'Speed Check' (talk at the Hiller Aviation Museum, San Carlos, California, 30 December 2016)",
+  "publisher": "YouTube; recorded and uploaded by Jan Johnson, 1 January 2017",
+  "url": "https://www.youtube.com/watch?v=8AyHH9G9et0",
+  "uses": 3
+ },
+ {
+  "id": "the-aviation-geek-club-32dac5",
+  "title": "SR-71 Blackbird Pilot Tells the Story Behind His Famed Ground Speed Check (Dario Leone, 5 December 2017)",
+  "publisher": "The Aviation Geek Club",
+  "url": "https://theaviationgeekclub.com/sr-71-blackbird-pilot-tells-story-behind-famed-ground-speed-check/",
+  "uses": 3
+ },
+ {
+  "id": "airman-magazine-u-s-air-force-756a7d",
+  "title": "Airframe: The SR-71 Blackbird (Chris Desrocher, 10 July 2017)",
+  "publisher": "Airman magazine, U.S. Air Force",
+  "url": "https://web.archive.org/web/20170822164506/http://airman.dodlive.mil:80/2017/07/10/airframe-the-sr-71-blackbird/",
+  "uses": 3
+ },
+ {
+  "id": "air-space-forces-magazine-air-space-forc-284cec",
+  "title": "Hi, High-Flying Blackbird (This Day in Airpower, 21 December 1964 entry)",
+  "publisher": "Air & Space Forces Magazine (Air & Space Forces Association)",
+  "url": "https://www.airandspaceforces.com/this-day-in-airpower/hi-high-flying-blackbird/",
+  "uses": 3
+ },
+ {
+  "id": "office-of-the-assistant-secretary-of-def-12a25e",
+  "title": "Attempt of US Air Force SR-71 Aircraft at World Record Speed Run, Department of Defense Film Release #69-74, 30 August 1974 (release sheet for NARA film 111-DD-69-74)",
+  "publisher": "Office of the Assistant Secretary of Defense (Public Affairs); National Archives, NAID 102043690",
+  "url": "https://catalog.archives.gov/id/102043690",
+  "uses": 3
+ },
+ {
+  "id": "office-of-the-white-house-press-secretar-a0440c",
+  "title": "Notice to the Press: information about world speed record-setting crew of SAC SR-71, 19 September 1974",
+  "publisher": "Office of the White House Press Secretary; Gerald R. Ford Library; National Archives, NAID 7336184",
+  "url": "https://catalog.archives.gov/id/7336184",
+  "uses": 3
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-0c1f55",
+  "title": "Cable file \"Project NICE GIRL SR-71/A-12 Comparison\", October 1967, including the 17 October 1967 cable \"Proj NICE GIRL\" setting the ground rules",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, CIA-RDP69B00041R002100020001-3; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp69b00041r002100020001-3",
+  "uses": 3
+ },
+ {
+  "id": "dvids-ssgt-kelly-o-connor-100th-air-refu-84dfac",
+  "title": "Swedish pilots presented with U.S. Air Medal: Lt. Col. (Ret.) Tom Veltri interview (video 644294, 4:43)",
+  "publisher": "DVIDS (SSgt Kelly O'Connor, 100th Air Refueling Wing)",
+  "url": "https://www.dvidshub.net/video/644294/swedish-pilots-presented-with-us-air-medal-lt-col-ret-tom-vetri",
+  "uses": 3
+ },
+ {
+  "id": "lbj-presidential-library-uva-miller-cent-1a9c0d",
+  "title": "White House Communications Agency recording WHCA 107-1: the President's news conference, 24 July 1964 (LBJ Presidential Library), as presented by the Miller Center",
+  "publisher": "LBJ Presidential Library; UVA Miller Center",
+  "url": "https://millercenter.org/the-presidency/presidential-speeches/july-24-1964-press-conference-state-department",
+  "uses": 3
+ },
+ {
+  "id": "u-s-congress-cia-foia-reading-room-via-t-f23111",
+  "title": "Congressional Record (daily edition), Senate, 29 July 1964, pp. 16785 to 16788: remarks of Senator Gordon Allott (copy filed by CIA, CIA-RDP75-00149R000100090006-9)",
+  "publisher": "U.S. Congress; CIA FOIA Reading Room via the Internet Archive",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp75-00149r000100090006-9",
+  "uses": 3
+ },
+ {
+  "id": "beale-air-force-base-9th-reconnaissance--eb4e73",
+  "title": "This week in Beale History: SR-71 revealed (Staff Sgt. Robert M. Trujillo, 24 July 2014)",
+  "publisher": "Beale Air Force Base, 9th Reconnaissance Wing Public Affairs (Wayback Machine capture of 30 November 2024)",
+  "url": "https://web.archive.org/web/20241130160348/https://www.beale.af.mil/News/Article-Display/Article/667175/this-week-in-beale-history-sr-71-revealed/",
+  "uses": 3
+ },
+ {
+  "id": "u-s-department-of-the-interior-bureau-of-6a63c5",
+  "title": "Minerals Yearbook 1961, Vol. I, Metals and Minerals (except Fuels), chapter 'Titanium' (John W. Stamper), pp.1239 to 1257",
+  "publisher": "U.S. Department of the Interior, Bureau of Mines (Internet Archive copy of a Google scan)",
+  "url": "https://archive.org/details/pub_usgov-minerals-yearbook_1961_1",
+  "uses": 3
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-068e21",
+  "title": "Assignment of High Priority to the Soviet Titanium Industry (Economic Intelligence Report RR ER 64-14, Office of Research and Reports, April 1964), CIA document 0000309818",
+  "publisher": "Central Intelligence Agency (Internet Archive mirror of the CIA reading room)",
+  "url": "https://archive.org/details/cia-readingroom-document-0000309818",
+  "uses": 3
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-ef762f",
+  "title": "The Soviet Titanium Industry and Its Role in the Military Buildup (SOV 85-10052, Directorate of Intelligence, March 1985), CIA-RDP86T00591R000200170005-0",
+  "publisher": "Central Intelligence Agency (Internet Archive mirror of the CIA reading room)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp86t00591r000200170005-0",
+  "uses": 3
+ },
+ {
+  "id": "the-national-interest-wayback-machine-ca-51a9ba",
+  "title": "Titanium from Russia Was the Secret Ingredient in the SR-71 Blackbird (Maya Carlin, 3 December 2023)",
+  "publisher": "The National Interest (Wayback Machine capture of 6 December 2024)",
+  "url": "https://web.archive.org/web/20241206150401/https://nationalinterest.org/blog/buzz/titanium-russia-was-secret-ingredient-sr-71-blackbird-207691",
+  "uses": 3
  },
  {
   "id": "national-reconnaissance-office-center-fo-02095b",
@@ -389,6 +786,16 @@
   "archived": "2022-12-25"
  },
  {
+  "id": "habu-org-08a1c9",
+  "title": "Blackbird Photo Archive: 61-7952",
+  "publisher": "Habu.org",
+  "url": "http://www.habu.org/sr-71/17952.html",
+  "uses": 2,
+  "archive": "https://web.archive.org/web/20260301123723/http://www.habu.org/sr-71/17952.html",
+  "archived": "2026-03-01",
+  "offline": "TLS certificate expired (checked 2026-10-04)"
+ },
+ {
   "id": "photorecon-net-97e52e",
   "title": "YF-12A 60-6936 (Article 1003) profile (Dave Budd)",
   "publisher": "Photorecon.net",
@@ -416,24 +823,6 @@
   "archive": "https://web.archive.org/web/20260928184406/http://www.habu.org/sr-71/17978.html",
   "archived": "2026-09-28",
   "offline": "TLS certificate expired (checked 2026-10-04)"
- },
- {
-  "id": "this-day-in-aviation-bryan-r-swopes-ad691e",
-  "title": "1 September 1974",
-  "publisher": "This Day in Aviation (Bryan R. Swopes)",
-  "url": "https://www.thisdayinaviation.com/1-september-1974/",
-  "uses": 2,
-  "archive": "https://web.archive.org/web/20250902070455/https://www.thisdayinaviation.com/1-september-1974/",
-  "archived": "2025-09-02"
- },
- {
-  "id": "this-day-in-aviation-bryan-r-swopes-91b065",
-  "title": "Tag archive: 61-7972 (6 March 1990 entry)",
-  "publisher": "This Day in Aviation (Bryan R. Swopes)",
-  "url": "https://www.thisdayinaviation.com/tag/61-7972/",
-  "uses": 2,
-  "archive": "https://web.archive.org/web/20260417115039/https://www.thisdayinaviation.com/tag/61-7972/",
-  "archived": "2026-04-17"
  },
  {
   "id": "flight-international-f920a3",
@@ -468,6 +857,15 @@
   "uses": 2,
   "archive": "https://web.archive.org/web/20260106011645/https://roadrunnersinternationale.com/article128.html",
   "archived": "2026-01-06"
+ },
+ {
+  "id": "u-s-air-force-fc6a04",
+  "title": "Swedish pilots presented with U.S. Air Medal",
+  "publisher": "U.S. Air Force",
+  "url": "https://www.af.mil/News/Article-Display/Article/1700869/swedish-pilots-presented-with-us-air-medal/",
+  "uses": 2,
+  "archive": "https://web.archive.org/web/20260609215144/https://www.af.mil/News/Article-Display/Article/1700869/swedish-pilots-presented-with-us-air-medal/",
+  "archived": "2026-06-09"
  },
  {
   "id": "the-war-zone-63e5f2",
@@ -532,10 +930,278 @@
   "uses": 2
  },
  {
+  "id": "smithsonian-national-air-and-space-museu-104008",
+  "title": "Lockheed SR-71A (Blackbird) Record Flight Flag and Certificate, NASM.1990.0076",
+  "publisher": "Smithsonian National Air and Space Museum Archives",
+  "url": "https://sirismm.si.edu/EADpdfs/NASM.1990.0076.pdf",
+  "uses": 2,
+  "archive": "https://web.archive.org/web/20250525131222/https://sirismm.si.edu/EADpdfs/NASM.1990.0076.pdf",
+  "archived": "2025-05-25"
+ },
+ {
+  "id": "sr-71-online-sr-71-org-via-internet-arch-7d62ef",
+  "title": "Blackbird Records (archived copy)",
+  "publisher": "SR-71 Online (sr-71.org), via Internet Archive",
+  "url": "https://web.archive.org/web/20110425042622/http://www.sr-71.org/blackbird/records.php",
+  "uses": 2
+ },
+ {
   "id": "nasa-dryden-flight-research-center-6228a9",
   "title": "SR-71A three-view, graphic EG-0075-02 (vector original, 1998)",
   "publisher": "NASA Dryden Flight Research Center",
   "url": "https://web.archive.org/web/20041117202822/https://www.dfrc.nasa.gov/Gallery/Graphics/SR-71/EPS/EG-0075-02.eps",
+  "uses": 2
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-a0b2b6",
+  "title": "OXCART LOGS cables: IN 76576 (1 May 1964) requesting 11 AG331-100 engine assemblies, and headquarters reply 6360 (4 May 1964), in CIA-RDP69B00279R000100080001-6",
+  "publisher": "Central Intelligence Agency, Internet Archive mirror",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp69b00279r000100080001-6",
+  "uses": 2
+ },
+ {
+  "id": "hot-rod-petersen-publishing-ten-lending--2171cd",
+  "title": "'How Buick, the CIA, and Frank Kurtis Started the SR-71', Hot Rod, vol. 67 no. 9 (September 2014)",
+  "publisher": "Hot Rod (Petersen Publishing / TEN), lending copy on the Internet Archive",
+  "url": "https://archive.org/details/sim_hot-rod_2014-09_67_9",
+  "uses": 2
+ },
+ {
+  "id": "national-archives-rg-330-naid-6461575-e14546",
+  "title": "Physiological support personnel from Edwards Air Force Base check the flight suits of LCOL Joseph T. Vida, left, reconnaissance officer, and LCOL Raymond E. Yeilding, pilot ... (DoD photo DF-ST-91-05490, 6 March 1990)",
+  "publisher": "National Archives, RG 330 (NAID 6461575)",
+  "url": "https://catalog.archives.gov/id/6461575",
+  "uses": 2
+ },
+ {
+  "id": "national-reconnaissance-office-declassif-4d4fbe",
+  "title": "Summary of TAGBOARD B-52 Launches, document C05114880",
+  "publisher": "National Reconnaissance Office, Declassified D-21 Drones Program Records",
+  "url": "https://web.archive.org/web/20240901034321id_/https://www.nro.gov/Portals/135/documents/foia/declass/D-21/SC-2018-00037_C05114880.pdf",
+  "uses": 2
+ },
+ {
+  "id": "national-reconnaissance-office-declassif-c3edc4",
+  "title": "TAGBOARD (NRO Staff covering memorandum, 23 January 1970) with \"TAGBOARD Flight - Nov 10, 1969\" for the Deputy Secretary of Defense, document C05115207",
+  "publisher": "National Reconnaissance Office, Declassified D-21 Drones Program Records",
+  "url": "https://web.archive.org/web/20240901034806id_/https://www.nro.gov/Portals/135/documents/foia/declass/D-21/SC-2018-00037_C05115207.pdf",
+  "uses": 2
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-1658d1",
+  "title": "OXCART Pilot Emergency Packet, Loss of during 24 May Crash (memorandum for the Director of Security, 29 May 1963), CIA-RDP63-00313A000500080051-3",
+  "publisher": "Central Intelligence Agency (Internet Archive mirror)",
+  "url": "https://archive.org/details/CIA-RDP63-00313A000500080051-3",
+  "uses": 2
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-3b5d2e",
+  "title": "Cable IN 77733, OXCART SECUR, 26 May 1963: verbatim texts of the Las Vegas Review-Journal and Las Vegas Sun stories of 26 May and a KORK-TV newscast of 25 May, CIA-RDP71B00590R000200030031-8",
+  "publisher": "Central Intelligence Agency (Internet Archive mirror of the CIA reading room)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp71b00590r000200030031-8",
+  "uses": 2
+ },
+ {
+  "id": "u-s-department-of-state-office-of-the-hi-d6ba18",
+  "title": "Foreign Relations of the United States, 1964-1968, Volume XXIX, Part 1, Korea, Document 228: Notes of President's Friday Morning Meeting on the Pueblo Incident, 26 January 1968",
+  "publisher": "U.S. Department of State, Office of the Historian",
+  "url": "https://history.state.gov/historicaldocuments/frus1964-68v29p1/d228",
+  "uses": 2
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-0a6e7a",
+  "title": "National Photographic Interpretation Center, \"BLACK SHIELD Mission BX6847, 26 January 1968\", NPIC/R-63/68, May 1968",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, CIA-RDP69B00041R001600040006-2; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp69b00041r001600040006-2",
+  "uses": 2
+ },
+ {
+  "id": "roadrunners-internationale-2ee4b8",
+  "title": "Frank Murray, \"The Pueblo Incident A-12 Mission\" (on the Roadrunners Internationale page for Frank Murray)",
+  "publisher": "Roadrunners Internationale",
+  "url": "https://roadrunnersinternationale.com/murray.html",
+  "uses": 2
+ },
+ {
+  "id": "the-reptile-database-385cdb",
+  "title": "Protobothrops flavoviridis (Hallowell, 1861), species account",
+  "publisher": "The Reptile Database",
+  "url": "https://reptile-database.reptarium.cz/species?genus=Protobothrops&species=flavoviridis",
+  "uses": 2
+ },
+ {
+  "id": "marine-corps-association-internet-archiv-511da3",
+  "title": "Sugar Loaf Hill item (\"this is Habu Hill\"), Leatherneck, vol. 44 no. 7, July 1961",
+  "publisher": "Marine Corps Association (Internet Archive scan)",
+  "url": "https://archive.org/details/sim_leatherneck_1961-07_44_7",
+  "uses": 2
+ },
+ {
+  "id": "strategic-air-command-u-s-air-force-inte-98f627",
+  "title": "\"SAC's Mach III Squadron: the 1SRS\" by Capt. Duane W. Deal, SR-71 pilot, Combat Crew, vol. 35 no. 2, February 1985, pp. 4 to 5 (includes \"The Habu Patch\")",
+  "publisher": "Strategic Air Command, U.S. Air Force (Internet Archive scan, University of Florida Smathers Libraries)",
+  "url": "https://archive.org/details/combatcrewstrate3521offu/page/n5",
+  "uses": 2
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-bad622",
+  "title": "\"Aircraft 129 Maintenance History, 1 May to Date\" and \"Flight History, Article 129\", June 1968",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, CIA-RDP71B00590R000200020066-1; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp71b00590r000200020066-1",
+  "uses": 2
+ },
+ {
+  "id": "roadrunners-internationale-0a8ea2",
+  "title": "CIA Pilot Jack W. Weeks (\"CIA Pilot Jack Weeks remembered by family and members\")",
+  "publisher": "Roadrunners Internationale",
+  "url": "https://roadrunnersinternationale.com/weeks.html",
+  "uses": 2
+ },
+ {
+  "id": "sr-71-blackbirds-leland-haynes-site-main-6235cc",
+  "title": "Listing of All Personnel Who Flew the Blackbirds (the 'Buddy Brown Book', master list, last updated 27 January 2024), entries 414 (Shul) and 415 (Watson)",
+  "publisher": "SR-71 Blackbirds (Leland Haynes site, maintained by David Allison)",
+  "url": "http://www.sr71.us/Supp_BBook.htm",
+  "uses": 2
+ },
+ {
+  "id": "breaking-defense-7a7b98",
+  "title": "Bye Bye U-2: CIA Legend Allen Predicts End Of Manned Reconnaissance (Richard Whittle, 22 September 2015)",
+  "publisher": "Breaking Defense",
+  "url": "https://breakingdefense.com/2015/09/bye-bye-u-2-cia-legend-allen-predicts-end-of-manned-reconnaissance/",
+  "uses": 2
+ },
+ {
+  "id": "cia-foia-reading-room-cia-rdp75b00159r00-4b6a66",
+  "title": "Briefing note for the Deputy Director for Science and Technology, GIANT SCALE Operations During May 1970 (1 June 1970), with mission summary",
+  "publisher": "CIA FOIA Reading Room, CIA-RDP75B00159R000400180002-7 (Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp75b00159r000400180002-7",
+  "uses": 2
+ },
+ {
+  "id": "national-archives-naid-72098-eb12ae",
+  "title": "THE RECORD BREAKERS, BEALE AFB AND LOS ANGELES, CALIFORNIA, FARNBOROUGH, ENGLAND (342-USAF-49631), catalogue shot list",
+  "publisher": "National Archives, NAID 72098",
+  "url": "https://catalog.archives.gov/id/72098",
+  "uses": 2
+ },
+ {
+  "id": "beale-air-force-base-9th-reconnaissance--2f9ea1",
+  "title": "This week in Beale History: SR-71 sets speed record with New York to London flight (Staff Sgt. Robert M. Trujillo, 4 September 2014)",
+  "publisher": "Beale Air Force Base, 9th Reconnaissance Wing Public Affairs",
+  "url": "https://www.beale.af.mil/News/Article-Display/Article/667157/this-week-in-beale-history-sr-71-sets-speed-record-with-new-york-to-london-flig/",
+  "uses": 2
+ },
+ {
+  "id": "national-archives-naid-62559-22b087",
+  "title": "SR-71 SPEED RUN, BEALE AIR FORCE BASE, CALIFORNIA, 13 SEPTEMBER 1974 (342-CAM-335), catalogue record",
+  "publisher": "National Archives, NAID 62559",
+  "url": "https://catalog.archives.gov/id/62559",
+  "uses": 2
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-e8fed1",
+  "title": "NPIC cable \"NICE GIRL Targets\", 31 October 1967",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, CIA-RDP78B03817A000900030068-9; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp78b03817a000900030068-9",
+  "uses": 2
+ },
+ {
+  "id": "dvids-ssgt-kelly-o-connor-100th-air-refu-e2ffaa",
+  "title": "Swedish pilots presented with U.S. Air Medal: Colonel Per-Olof Eldh interview (video 644289, 2:55)",
+  "publisher": "DVIDS (SSgt Kelly O'Connor, 100th Air Refueling Wing)",
+  "url": "https://www.dvidshub.net/video/644289/swedish-pilots-presented-with-us-air-medal-colonel-per-olof-eldh-interview",
+  "uses": 2
+ },
+ {
+  "id": "dvids-ssgt-kelly-o-connor-100th-air-refu-ade1ca",
+  "title": "Swedish pilots presented with U.S. Air Medal: Colonel Lars-Erik Blad interview (video 644283, 2:30)",
+  "publisher": "DVIDS (SSgt Kelly O'Connor, 100th Air Refueling Wing)",
+  "url": "https://www.dvidshub.net/video/644283/swedish-pilots-presented-with-us-air-medal-colonel-lars-erik-blad-interview",
+  "uses": 2
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-3d4d11",
+  "title": "Cable IN 35943, OXCART OPS 26, 4 May 1962 ('Actual speed reached was Mach 1.1 at 40,000 feet')",
+  "publisher": "Central Intelligence Agency (Internet Archive mirror of CIA reading room document 0001474280)",
+  "url": "https://archive.org/details/cia-readingroom-document-0001474280",
+  "uses": 2
+ },
+ {
+  "id": "unidentified-periodical-masthead-cut-off-df1d19",
+  "title": "\"Text of President's A-11 Statements\" (reprint of the 29 February and 24 July 1964 statements, dated 3 August 1964; CIA-RDP75-00149R000400230031-2)",
+  "publisher": "Unidentified periodical (masthead cut off on the copy); CIA FOIA Reading Room via the Internet Archive",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp75-00149r000400230031-2",
+  "uses": 2
+ },
+ {
+  "id": "aviation-week-space-technology-cia-foia--f05df5",
+  "title": "\"Washington Roundup: Relative Confusion\", Aviation Week & Space Technology, 3 May 1965 (CIA clipping CIA-RDP75-00001R000400100047-2)",
+  "publisher": "Aviation Week & Space Technology; CIA FOIA Reading Room via the Internet Archive",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp75-00001r000400100047-2",
+  "uses": 2
+ },
+ {
+  "id": "central-intelligence-agency-foia-reading-9fba7e",
+  "title": "Memorandum for the Director of Central Intelligence, \"Surfacing the R-12\", 24 December 1962 (CIA-RDP66R00638R000100110025-4)",
+  "publisher": "Central Intelligence Agency; FOIA Reading Room via the Internet Archive",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp66r00638r000100110025-4",
+  "uses": 2
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-5e7d43",
+  "title": "Memorandum for the Record, \"Critique for OXCART Mission Number BX6734\", 14 November 1967",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, CIA-RDP69B00404R000100260019-7; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp69b00404r000100260019-7",
+  "uses": 2
+ },
+ {
+  "id": "central-intelligence-agency-wayback-mach-b1d7e6",
+  "title": "Pieces of History: Missile Debris from A-12 OXCART (featured story, posted 15 August 2013)",
+  "publisher": "Central Intelligence Agency (Wayback Machine copy)",
+  "url": "https://web.archive.org/web/20131028044550/https://www.cia.gov/news-information/featured-story-archive/2013-featured-story-archive/pieces-of-history-missile-debris-from-a-12-oxcart.html",
+  "uses": 2
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-6b0443",
+  "title": "Memorandum for Cover Officer, DPD, 'OXCART - Titanium' (OXC-0238, John Parangosky, 13 January 1960), CIA-RDP81B00879R001000010113-9",
+  "publisher": "Central Intelligence Agency (Internet Archive mirror of the CIA reading room)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp81b00879r001000010113-9",
+  "uses": 2
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-e63c5f",
+  "title": "Memorandum for the Record, 'OXCART - Titanium Status' (OXC-1628, Chief, Development Branch, DPD, 25 April 1961), CIA-RDP81B00879R001000050005-5",
+  "publisher": "Central Intelligence Agency (Internet Archive mirror of the CIA reading room)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp81b00879r001000050005-5",
+  "uses": 2
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-2f9e16",
+  "title": "The Central Intelligence Agency and Overhead Reconnaissance: The U-2 and OXCART Programs, 1954-1974 (Gregory W. Pedlow and Donald E. Welzenbach, CIA History Staff, 1992; released 2013), chapter 6",
+  "publisher": "Central Intelligence Agency (Internet Archive mirror of the 2013 release)",
+  "url": "https://archive.org/details/CentralIntelligenceAgencyAndOverheadReconnaissanceU2AndOXCARTPrograms19541974",
+  "uses": 2
+ },
+ {
+  "id": "central-intelligence-agency-center-for-t-71139e",
+  "title": "The CIA and the U-2 Program, 1954-1974 (Gregory W. Pedlow and Donald E. Welzenbach, 1998; 2013 release)",
+  "publisher": "Central Intelligence Agency, Center for the Study of Intelligence",
+  "url": "https://www.cia.gov/resources/csi/static/CIA-and-U2-Program.pdf",
+  "uses": 2
+ },
+ {
+  "id": "u-s-department-of-state-office-of-the-hi-042620",
+  "title": "FRUS 1969-1976, Volume XXV, Document 191: Minutes of Washington Special Actions Group Meeting, 16 October 1973",
+  "publisher": "U.S. Department of State, Office of the Historian",
+  "url": "https://history.state.gov/historicaldocuments/frus1969-76v25/d191",
+  "uses": 2
+ },
+ {
+  "id": "u-s-department-of-state-office-of-the-hi-3b9d92",
+  "title": "FRUS 1969-1976, Volume XXV, Document 364: Minutes of Washington Special Actions Group Meeting, 29 November 1973",
+  "publisher": "U.S. Department of State, Office of the Historian",
+  "url": "https://history.state.gov/historicaldocuments/frus1969-76v25/d364",
   "uses": 2
  },
  {
@@ -616,25 +1282,6 @@
   "archived": "2026-10-03"
  },
  {
-  "id": "habu-org-08a1c9",
-  "title": "Blackbird Photo Archive: 61-7952",
-  "publisher": "Habu.org",
-  "url": "http://www.habu.org/sr-71/17952.html",
-  "uses": 1,
-  "archive": "https://web.archive.org/web/20260301123723/http://www.habu.org/sr-71/17952.html",
-  "archived": "2026-03-01",
-  "offline": "TLS certificate expired (checked 2026-10-04)"
- },
- {
-  "id": "roadrunners-internationale-0dfa2c",
-  "title": "Bill Weaver SR-71 Blackbird Breakup",
-  "publisher": "Roadrunners Internationale",
-  "url": "https://roadrunnersinternationale.com/weaver_sr71_bailout.html",
-  "uses": 1,
-  "archive": "https://web.archive.org/web/20260927040600/https://roadrunnersinternationale.com/weaver_sr71_bailout.html",
-  "archived": "2026-09-27"
- },
- {
   "id": "directory-of-u-s-military-rockets-and-mi-4ff573",
   "title": "Hughes AIM-47 Falcon (Andreas Parsch)",
   "publisher": "Directory of U.S. Military Rockets and Missiles (designation-systems.net)",
@@ -642,15 +1289,6 @@
   "uses": 1,
   "archive": "https://web.archive.org/web/20260820213816/https://www.designation-systems.net/dusrm/m-47.html",
   "archived": "2026-08-20"
- },
- {
-  "id": "national-security-archive-george-washing-63e6f1",
-  "title": "Chronology: Middle East Crisis (U), Office of the Historian, Headquarters Strategic Air Command, 12 December 1973 (declassified)",
-  "publisher": "National Security Archive, George Washington University",
-  "url": "https://nsarchive.gwu.edu/sites/default/files/documents/20589946/24.pdf",
-  "uses": 1,
-  "archive": "https://web.archive.org/web/20251210075833/https://nsarchive.gwu.edu/sites/default/files/documents/20589946/24.pdf",
-  "archived": "2025-12-10"
  },
  {
   "id": "blackbirds-net-7263f9",
@@ -798,15 +1436,6 @@
   "archived": "2026-08-30"
  },
  {
-  "id": "u-s-air-force-fc6a04",
-  "title": "Swedish pilots presented with U.S. Air Medal",
-  "publisher": "U.S. Air Force",
-  "url": "https://www.af.mil/News/Article-Display/Article/1700869/swedish-pilots-presented-with-us-air-medal/",
-  "uses": 1,
-  "archive": "https://web.archive.org/web/20260609215144/https://www.af.mil/News/Article-Display/Article/1700869/swedish-pilots-presented-with-us-air-medal/",
-  "archived": "2026-06-09"
- },
- {
   "id": "u-s-air-forces-in-europe-and-air-forces--d8fb8a",
   "title": "Swedish pilots presented with U.S. Air Medal",
   "publisher": "U.S. Air Forces in Europe and Air Forces Africa",
@@ -846,15 +1475,6 @@
   "publisher": "Intrepid Museum",
   "url": "https://intrepidmuseum.org/aircraft-month-a12",
   "uses": 1
- },
- {
-  "id": "the-salt-lake-tribune-37e935",
-  "title": "Crash site of one of Area 51's mysteries lies near Wendover",
-  "publisher": "The Salt Lake Tribune",
-  "url": "https://archive.sltrib.com/article.php?id=51976355&itype=cmsid",
-  "uses": 1,
-  "archive": "https://web.archive.org/web/20260305235729/https://archive.sltrib.com/article.php?id=51976355&itype=cmsid",
-  "archived": "2026-03-05"
  },
  {
   "id": "california-science-center-482865",
@@ -1040,13 +1660,6 @@
   "title": "Lockheed SR-71A (61-7952): Blackbird Test",
   "publisher": "The X-Hunters (Peter Merlin, Tony Moore)",
   "url": "https://dlr.thexhunters.com/xpeditions/sr-71a_952_aircraft.html",
-  "uses": 1
- },
- {
-  "id": "the-x-hunters-peter-merlin-tony-moore-c0c90e",
-  "title": "Lockheed SR-71A (61-7952): At 78,000 feet without an Airplane",
-  "publisher": "The X-Hunters (Peter Merlin, Tony Moore)",
-  "url": "https://dlr.thexhunters.com/xpeditions/sr-71a_952_accident.html",
   "uses": 1
  },
  {
@@ -1581,22 +2194,6 @@
   "archived": "2026-09-10"
  },
  {
-  "id": "smithsonian-national-air-and-space-museu-104008",
-  "title": "Lockheed SR-71A (Blackbird) Record Flight Flag and Certificate, NASM.1990.0076",
-  "publisher": "Smithsonian National Air and Space Museum Archives",
-  "url": "https://sirismm.si.edu/EADpdfs/NASM.1990.0076.pdf",
-  "uses": 1,
-  "archive": "https://web.archive.org/web/20250525131222/https://sirismm.si.edu/EADpdfs/NASM.1990.0076.pdf",
-  "archived": "2025-05-25"
- },
- {
-  "id": "sr-71-online-sr-71-org-via-internet-arch-7d62ef",
-  "title": "Blackbird Records (archived copy)",
-  "publisher": "SR-71 Online (sr-71.org), via Internet Archive",
-  "url": "https://web.archive.org/web/20110425042622/http://www.sr-71.org/blackbird/records.php",
-  "uses": 1
- },
- {
   "id": "sr-71-online-sr-71-org-via-internet-arch-f13642",
   "title": "SR-71A #61-7972 gallery page (archived copy)",
   "publisher": "SR-71 Online (sr-71.org), via Internet Archive",
@@ -1854,15 +2451,6 @@
   "archived": "2026-01-31"
  },
  {
-  "id": "central-intelligence-agency-bb8d0e",
-  "title": "A-12 Utility Flight Manual, changed 15 June 1968 (document C01316457)",
-  "publisher": "Central Intelligence Agency",
-  "url": "https://www.cia.gov/readingroom/document/0001316457",
-  "uses": 1,
-  "archive": "https://web.archive.org/web/20260119042617/https://www.cia.gov/readingroom/document/0001316457",
-  "archived": "2026-01-19"
- },
- {
   "id": "nasa-f62692",
   "title": "Mach 3 Legend: Design and Development of the Lockheed Blackbird (Peter W. Merlin, 2012)",
   "publisher": "NASA",
@@ -1899,6 +2487,475 @@
   "title": "A-12 Support Manual, Ground Handling (document C06230171), released 25 July 2017",
   "publisher": "Central Intelligence Agency (prepared by Lockheed)",
   "url": "https://archive.org/download/cia-readingroom-document-06230171/06230171.pdf",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-5218b7",
+  "title": "Summary: OXCART Engine Program Review (memorandum, 20 September 1962), CIA-RDP63-00313A000500020055-5",
+  "publisher": "Central Intelligence Agency, Internet Archive mirror",
+  "url": "https://archive.org/details/CIA-RDP63-00313A000500020055-5",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-cf2e28",
+  "title": "OXCART flight cable IN 61989, 10 January 1963 (CIA document 0001472948)",
+  "publisher": "Central Intelligence Agency, Internet Archive mirror",
+  "url": "https://archive.org/details/cia-readingroom-document-0001472948",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-36b794",
+  "title": "OXCART Status Summary (memorandum for the record, 4 March 1963), CIA-RDP63-00313A000500050087-7",
+  "publisher": "Central Intelligence Agency, Internet Archive mirror",
+  "url": "https://archive.org/details/CIA-RDP63-00313A000500050087-7",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-sanitized-co-a1566d",
+  "title": "Readings in Intelligence (CIA compilation reprinting Johnson's 'SR-71 Blackbird' article with photographs), CIA-RDP87M01007R000400810001-4",
+  "publisher": "Central Intelligence Agency (sanitized copy approved 23 September 2011), Internet Archive mirror",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp87m01007r000400810001-4",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-7e4d7c",
+  "title": "Contractor's purchase exhibits under contract CT-22/FT-21 (10 April, 5 May, 19 May and 1 June 1964), in CIA-RDP69B00279R000100070001-7",
+  "publisher": "Central Intelligence Agency, Internet Archive mirror",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp69b00279r000100070001-7",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-e4d402",
+  "title": "Cable IN 79443, 'dust cloth message nbr 5', summary of pilot's statement, 28/29 December 1965 (CIA document 0001473842)",
+  "publisher": "Central Intelligence Agency, Internet Archive mirror",
+  "url": "https://archive.org/details/cia-readingroom-document-0001473842",
+  "uses": 1
+ },
+ {
+  "id": "wikimedia-commons-de16db",
+  "title": "File:Air Zoo December 2019 005 (AG330 start cart).jpg (photographed 27 December 2019 by Michael Barera)",
+  "publisher": "Wikimedia Commons",
+  "url": "https://commons.wikimedia.org/wiki/File:Air_Zoo_December_2019_005_(AG330_start_cart).jpg",
+  "uses": 1
+ },
+ {
+  "id": "wikimedia-commons-bd94d6",
+  "title": "File:AG330 starter cart.jpg (Air Zoo, photographed 21 February 2021 by Varnav)",
+  "publisher": "Wikimedia Commons",
+  "url": "https://commons.wikimedia.org/wiki/File:AG330_starter_cart.jpg",
+  "uses": 1
+ },
+ {
+  "id": "wikimedia-commons-412d4f",
+  "title": "File:AG330 start cart.JPG (Hill Aerospace Museum, photographed 8 March 2010 by Jaydec)",
+  "publisher": "Wikimedia Commons",
+  "url": "https://commons.wikimedia.org/wiki/File:AG330_start_cart.JPG",
+  "uses": 1
+ },
+ {
+  "id": "national-archives-rg-330-naid-6461578-9aaa97",
+  "title": "An SR-71 aircraft stands in the hangar at Lockheed Corporation headquarters prior to its recordbreaking, coast-to-coast flight (DoD photo DF-ST-91-05493, 6 March 1990)",
+  "publisher": "National Archives, RG 330 (NAID 6461578)",
+  "url": "https://catalog.archives.gov/id/6461578",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-ba7fd4",
+  "title": "Comments on A-12 Accident Report (memorandum OXC 5361 for the Assistant Director, OSA, 7 August 1963), CIA-RDP71B00590R000200040001-0",
+  "publisher": "Central Intelligence Agency (Internet Archive mirror of the CIA reading room)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp71b00590r000200040001-0",
+  "uses": 1
+ },
+ {
+  "id": "u-s-department-of-state-office-of-the-hi-c2b1f2",
+  "title": "Foreign Relations of the United States, 1964-1968, Volume XXIX, Part 1, Korea, Document 220: Minutes of Meeting, Washington, 24 January 1968, 6 p.m. (Meeting on Korean Crisis Without the President)",
+  "publisher": "U.S. Department of State, Office of the Historian",
+  "url": "https://history.state.gov/historicaldocuments/frus1964-68v29p1/d220",
+  "uses": 1
+ },
+ {
+  "id": "u-s-department-of-state-office-of-the-hi-59e60d",
+  "title": "Foreign Relations of the United States, 1964-1968, Volume XXIX, Part 1, Korea, Document 221: Notes of the President's Meeting, Washington, 24 January 1968, 7:50-8:25 p.m.",
+  "publisher": "U.S. Department of State, Office of the Historian",
+  "url": "https://history.state.gov/historicaldocuments/frus1964-68v29p1/d221",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-88162e",
+  "title": "Office of Special Activities, \"Air Activities, Week of 24-30 January 68\", 31 January 1968",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, CIA-RDP71B00529R000200050009-9; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp71b00529r000200050009-9",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-ae3306",
+  "title": "Mission plan map \"BX6847 26 January 1968\"",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, document 0001465788; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-0001465788",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-890855",
+  "title": "\"BX6847 Operational Mission Critique\" file, 29 January 1968, with a typed page of the pilot's in-flight remarks (annotated by hand \"FILE BX 6847 wrap up\")",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, CIA-RDP69B00404R000100360021-3; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp69b00404r000100360021-3",
+  "uses": 1
+ },
+ {
+  "id": "u-s-department-of-state-office-of-the-hi-cbfbe1",
+  "title": "Foreign Relations of the United States, 1964-1968, Volume XXIX, Part 1, Korea, Document 244: Notes of the President's Luncheon Meeting With Senior American Advisors, 29 January 1968",
+  "publisher": "U.S. Department of State, Office of the Historian",
+  "url": "https://history.state.gov/historicaldocuments/frus1964-68v29p1/d244",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-150816",
+  "title": "NPIC briefing-board notes, \"Naval Base Wonsan Munchon, North Korea\", 11 February 1968",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, CIA-RDP78T05929A003000070003-8; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp78t05929a003000070003-8",
+  "uses": 1
+ },
+ {
+  "id": "wikimedia-commons-db6c38",
+  "title": "File:Pueblo a12 26-jan-68 1.jpg (author line \"CIA-Pilot Frank Murray\")",
+  "publisher": "Wikimedia Commons",
+  "url": "https://commons.wikimedia.org/wiki/File:Pueblo_a12_26-jan-68_1.jpg",
+  "uses": 1
+ },
+ {
+  "id": "globalsecurity-org-35692d",
+  "title": "USS Pueblo in Wonsan Harbor",
+  "publisher": "GlobalSecurity.org",
+  "url": "https://www.globalsecurity.org/intell/library/imint/pueblo-imagery-1.htm",
+  "uses": 1
+ },
+ {
+  "id": "defense-technical-information-center-int-2144b2",
+  "title": "Fuel Component and Heteroatom Effects on Deposits and Wear (E. A. Frame, Belvoir Fuels and Lubricants Research Facility, Southwest Research Institute, for the U.S. Army, December 1985), DTIC ADA166839",
+  "publisher": "Defense Technical Information Center (Internet Archive copy)",
+  "url": "https://archive.org/details/DTIC_ADA166839",
+  "uses": 1
+ },
+ {
+  "id": "electronic-code-of-federal-regulations-97abc9",
+  "title": "29 CFR 1910.106(a)(14), definition of flashpoint (OSHA, Flammable liquids)",
+  "publisher": "Electronic Code of Federal Regulations",
+  "url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XVII/part-1910/subpart-H/section-1910.106",
+  "uses": 1
+ },
+ {
+  "id": "defense-technical-information-center-int-956176",
+  "title": "Hypergolic Combustion Demonstration in a Reciprocating Internal Combustion Engine (D. H. Scharnweber, Eaton Corporation, for the U.S. Army, May 1984), DTIC ADA150846",
+  "publisher": "Defense Technical Information Center (Internet Archive copy)",
+  "url": "https://archive.org/details/DTIC_ADA150846",
+  "uses": 1
+ },
+ {
+  "id": "the-sr-71-blackbird-thesr71blackbird-com-5a2300",
+  "title": "Why did the SR-71 Have to Refuel Right After Take-off? (quoting Col. Richard H. Graham), 24 March 2020",
+  "publisher": "The SR-71 Blackbird (thesr71blackbird.com)",
+  "url": "https://www.thesr71blackbird.com/Aircraft/JP-7-Fuel/why-did-the-sr-71-have-to-refuel-right-after-take-off",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-lockheed-pre-fa7f54",
+  "title": "A-12 Utility Flight Manual, changed 15 June 1968 (CIA document C01316457)",
+  "publisher": "Central Intelligence Agency (Lockheed-prepared manual; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-0001316457",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-2fcfdb",
+  "title": "Memorandum for the Deputy Director for Science and Technology, \"OXCART Redeployment\", 11 June 1968",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, CIA-RDP69B00041R002100050003-8; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp69b00041r002100050003-8",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-6b453d",
+  "title": "Memorandum for Chief, OXCART Division, OSA, \"Accident Report - Aircraft 129\", 20 June 1968 (Deputy for Research and Development)",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, CIA-RDP71B00590R000200020001-2; Internet Archive mirror)",
+  "url": "https://archive.org/details/CIA-RDP71B00590R000200020001-2",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-wayback-mach-3208f9",
+  "title": "General Hayden's Remarks at A-12 Presentation Ceremony, 19 September 2007",
+  "publisher": "Central Intelligence Agency (Wayback Machine copy)",
+  "url": "https://web.archive.org/web/20080109060125/https://www.cia.gov/news-information/speeches-testimony/2007/a12-presentation-ceremony.html",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-8156be",
+  "title": "Morning Meeting of 1 August 1966 (DCI staff meeting notes), CIA-RDP80B01676R001500070040-3",
+  "publisher": "Central Intelligence Agency (Internet Archive mirror of the CIA Reading Room)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp80b01676r001500070040-3",
+  "uses": 1
+ },
+ {
+  "id": "national-reconnaissance-office-declassif-cbbf26",
+  "title": "TAGBOARD (NRO Staff memorandum for Dr. Flax, 4 November 1966), document C05115162",
+  "publisher": "National Reconnaissance Office, Declassified D-21 Drones Program Records",
+  "url": "https://web.archive.org/web/20240901034523id_/https://www.nro.gov/Portals/135/documents/foia/declass/D-21/SC-2018-00037_C05115162.pdf",
+  "uses": 1
+ },
+ {
+  "id": "national-museum-of-the-united-states-air-5c4050",
+  "title": "Lockheed D-21 (photo 151009-F-DW547-003 and caption)",
+  "publisher": "National Museum of the United States Air Force",
+  "url": "https://web.archive.org/web/20250426073434/https://www.nationalmuseum.af.mil/Upcoming/Photos/igphoto/2001298984/",
+  "uses": 1
+ },
+ {
+  "id": "national-archives-records-of-the-central-741803",
+  "title": "Development of the Lockheed SR-71 Blackbird (Clarence L. Johnson), Studies in Intelligence, Summer 1982 (article 8-94-1)",
+  "publisher": "National Archives, Records of the Central Intelligence Agency (NAID 7283113)",
+  "url": "https://catalog.archives.gov/id/7283113",
+  "uses": 1
+ },
+ {
+  "id": "u-s-department-of-state-internet-archive-3eff32",
+  "title": "Department of State Bulletin, vol. 81, October 1981: \"North Korea Fires at U.S. Plane\" (Department statement, 27 August 1981), p. 39, and chronology for 26 August 1981, p. 85",
+  "publisher": "U.S. Department of State (Internet Archive scan of the 1981 volume, micro_IA41152628_0043)",
+  "url": "https://archive.org/details/micro_IA41152628_0043/page/n811/mode/1up",
+  "uses": 1
+ },
+ {
+  "id": "cia-foia-reading-room-cia-rdp76b00734r00-3acdc2",
+  "title": "Request for Authorization to Fly SR-71 Photographic Reconnaissance Missions over North Vietnam (James R. Schlesinger, Director of Central Intelligence, to Henry A. Kissinger, 15 March 1973)",
+  "publisher": "CIA FOIA Reading Room, CIA-RDP76B00734R000100250001-3 (Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp76b00734r000100250001-3",
+  "uses": 1
+ },
+ {
+  "id": "gerald-r-ford-presidential-library-natio-0730bc",
+  "title": "President Gerald R. Ford's Daily Diary, 1 September 1974",
+  "publisher": "Gerald R. Ford Presidential Library; National Archives, NAID 4684687",
+  "url": "https://catalog.archives.gov/id/4684687",
+  "uses": 1
+ },
+ {
+  "id": "gerald-r-ford-presidential-library-natio-9ceb09",
+  "title": "President Gerald R. Ford's Daily Diary, 19 September 1974, with Appendix C, \"Meeting with members of the crew of the SR-71 aircraft\"",
+  "publisher": "Gerald R. Ford Presidential Library; National Archives, NAID 4684705",
+  "url": "https://catalog.archives.gov/id/4684705",
+  "uses": 1
+ },
+ {
+  "id": "office-of-the-white-house-press-secretar-9e9cce",
+  "title": "Notice to the Press: \"Left to Right\" participants in SR-71 crew meeting with the President, 19 September 1974",
+  "publisher": "Office of the White House Press Secretary; Gerald R. Ford Library; National Archives, NAID 7336182",
+  "url": "https://catalog.archives.gov/id/7336182",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-5a1c38",
+  "title": "Committee on Imagery Requirements and Exploitation, memorandum \"Comparison of SR-71 and A-12 Aircraft\", COMIREX-D-12.1/1 (BYE-56580-67), 26 September 1967, with charts",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, document 0001471952; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-0001471952",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-95df3c",
+  "title": "NPIC notes, \"SR-71 Evaluation Group Meeting 16 October 1967\"",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, CIA-RDP78B05167A001800170018-9; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp78b05167a001800170018-9",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-ae8a53",
+  "title": "Cable \"OXCART and SR-71 Operations\", 30 December 1967, quoting Deputy Secretary of Defense Paul H. Nitze's memorandum of 29 December 1967 and NRO Director Alexander Flax's follow-up",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, CIA-RDP71B00399R000600100002-1; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp71b00399r000600100002-1",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-c688b3",
+  "title": "Richard Helms, memorandum \"Considerations Affecting OXCART Program Phaseout\", 18 April 1968",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, CIA-RDP89B00980R000600060009-4; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp89b00980r000600060009-4",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-2cf265",
+  "title": "NRO, Alexander H. Flax, memorandum \"OXCART Phase-Out\", 25 May 1968, with Scope Cotton Decision No. 20",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, CIA-RDP71B00399R000600060009-9; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp71b00399r000600060009-9",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-foia-electro-89e6cf",
+  "title": "Cable \"Evaluation of NICE GIRL Mission NX7522\", 28 November 1967",
+  "publisher": "Central Intelligence Agency (FOIA Electronic Reading Room, CIA-RDP78B03817A000100030051-5; Internet Archive mirror)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp78b03817a000100030051-5",
+  "uses": 1
+ },
+ {
+  "id": "dvids-ssgt-kelly-o-connor-100th-air-refu-7bac01",
+  "title": "Swedish pilots presented with U.S. Air Medal: Major Roger Moller interview (video 644280, 1:58)",
+  "publisher": "DVIDS (SSgt Kelly O'Connor, 100th Air Refueling Wing)",
+  "url": "https://www.dvidshub.net/video/644280/swedish-pilots-presented-with-us-air-medal-major-roger-moller-interview",
+  "uses": 1
+ },
+ {
+  "id": "dvids-ssgt-kelly-o-connor-100th-air-refu-1854e5",
+  "title": "Swedish pilots presented with U.S. Air Medal: Major Krister Sjoberg interview (video 644272, 1:07)",
+  "publisher": "DVIDS (SSgt Kelly O'Connor, 100th Air Refueling Wing)",
+  "url": "https://www.dvidshub.net/video/644272/swedish-pilots-presented-with-us-air-medal-major-krister-sjoberg-interview",
+  "uses": 1
+ },
+ {
+  "id": "wikimedia-commons-from-the-u-s-embassy-s-92da73",
+  "title": "SR-71 015 Swedish Air Force officers (U.S. Embassy Sweden Flickr photo of 28 November 2018, with the embassy's summary of the 1987 event)",
+  "publisher": "Wikimedia Commons, from the U.S. Embassy Sweden Flickr stream",
+  "url": "https://commons.wikimedia.org/wiki/File:SR-71_015_Swedish_Air_Force_officers.jpg",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-5ccca6",
+  "title": "OXCART Aircraft Delivery Slippages (memorandum OXC 2950, Chief, Special Projects Branch, DPD, 1 February 1962), CIA-RDP81B00879R001000070181-8",
+  "publisher": "Central Intelligence Agency (Internet Archive mirror of the CIA reading room)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp81b00879r001000070181-8",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-8f47bc",
+  "title": "Results of Surveillance on Convoy of A-12 (19 - 20 November 1962) (memorandum OXC-4235-62, Chief, Security Branch, OSA, 5 December 1962), CIA-RDP81B00879R001000100073-4",
+  "publisher": "Central Intelligence Agency (Internet Archive mirror of the CIA reading room)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp81b00879r001000100073-4",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-cbf1cb",
+  "title": "Cable IN 35479 (4377), Scoville to Cunningham, 30 April 1962: 'First flight great success'",
+  "publisher": "Central Intelligence Agency (Internet Archive mirror of CIA reading room document 0001474281)",
+  "url": "https://archive.org/details/cia-readingroom-document-0001474281",
+  "uses": 1
+ },
+ {
+  "id": "national-security-archive-george-washing-6293e6",
+  "title": "The Area 51 File: Secret Aircraft and Soviet MiGs (Jeffrey T. Richelson, ed., Electronic Briefing Book, 29 October 2013)",
+  "publisher": "National Security Archive, George Washington University",
+  "url": "https://nsarchive.gwu.edu/briefing-book/intelligence/2013-10-29/area-51-file-secret-aircraft-soviet-migs",
+  "uses": 1
+ },
+ {
+  "id": "new-york-herald-tribune-cia-foia-reading-9d97b4",
+  "title": "Laurence Barrett, \"Our New Jet Spy: 'Most Advanced'\", New York Herald Tribune, 25 July 1964 (CIA clipping CIA-RDP74-00297R000200200005-6)",
+  "publisher": "New York Herald Tribune; CIA FOIA Reading Room via the Internet Archive",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp74-00297r000200200005-6",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-foia-reading-f6a7cb",
+  "title": "Lt. Gen. Marshall S. Carter, Acting Director, memorandum for the Deputy Director (Science and Technology), 24 August 1964, on contractual and security responsibilities for the R-12 and AF-12 programs (CIA-RDP80B01676R001400050061-7)",
+  "publisher": "Central Intelligence Agency; FOIA Reading Room via the Internet Archive",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp80b01676r001400050061-7",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-center-for-t-a9af1d",
+  "title": "Archangel, first web edition (2007): 'Breaking Through Technological Barriers'",
+  "publisher": "Central Intelligence Agency, Center for the Study of Intelligence (Wayback Machine capture of 9 October 2007)",
+  "url": "https://web.archive.org/web/20071009211528/https://www.cia.gov/library/center-for-the-study-of-intelligence/csi-publications/books-and-monographs/a-12/breaking-through-technological-barriers.html",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-internet-arc-f7a9ed",
+  "title": "Review of SR-71 (Aircraft 2003) Accident - Life Support (CIA OSA memorandum, 24 February 1966), CIA-RDP71B00590R000100050070-4",
+  "publisher": "Central Intelligence Agency (Internet Archive mirror of the CIA Reading Room)",
+  "url": "https://archive.org/details/cia-readingroom-document-cia-rdp71b00590r000100050070-4",
+  "uses": 1
+ },
+ {
+  "id": "national-archives-gerald-r-ford-library--ddc386",
+  "title": "Memorandum of Conversation, Special WSAG, Principals Only, 9 October 1973 (catalogued as \"October 9, 1973 - WSAG Meeting\", NAID 1552618)",
+  "publisher": "National Archives, Gerald R. Ford Library, National Security Adviser's Memoranda of Conversation",
+  "url": "https://catalog.archives.gov/id/1552618",
+  "uses": 1
+ },
+ {
+  "id": "u-s-department-of-state-office-of-the-hi-37e4aa",
+  "title": "Foreign Relations of the United States, 1969-1976, Volume XXV, Arab-Israeli Crisis and War, 1973, Document 135: Memorandum of Conversation, Washington, 9 October 1973",
+  "publisher": "U.S. Department of State, Office of the Historian",
+  "url": "https://history.state.gov/historicaldocuments/frus1969-76v25/d135",
+  "uses": 1
+ },
+ {
+  "id": "u-s-department-of-state-office-of-the-hi-fbe35a",
+  "title": "Foreign Relations of the United States, 1969-1976, Volume XXV, Preface",
+  "publisher": "U.S. Department of State, Office of the Historian",
+  "url": "https://history.state.gov/historicaldocuments/frus1969-76v25/preface",
+  "uses": 1
+ },
+ {
+  "id": "peninsula-seniors-youtube-e3c3ab",
+  "title": "SR-71 Overview by Col. James H. Shelton, Jr., USAF (ret.), Western Museum of Flight (video, 58 min, posted 12 September 2016)",
+  "publisher": "Peninsula Seniors (YouTube)",
+  "url": "https://www.youtube.com/watch?v=ptPRi7R3Bfw",
+  "uses": 1
+ },
+ {
+  "id": "u-s-department-of-state-office-of-the-hi-ea2eda",
+  "title": "FRUS 1969-1976, Volume XXV, Document 208: Minutes of Washington Special Actions Group Meeting, 19 October 1973",
+  "publisher": "U.S. Department of State, Office of the Historian",
+  "url": "https://history.state.gov/historicaldocuments/frus1969-76v25/d208",
+  "uses": 1
+ },
+ {
+  "id": "u-s-department-of-state-office-of-the-hi-191018",
+  "title": "FRUS 1969-1976, Volume XXV, Document 259: Minutes of Washington Special Actions Group Meeting, 24 October 1973, 10:21 to 11:11 a.m.",
+  "publisher": "U.S. Department of State, Office of the Historian",
+  "url": "https://history.state.gov/historicaldocuments/frus1969-76v25/d259",
+  "uses": 1
+ },
+ {
+  "id": "u-s-department-of-state-office-of-the-hi-c8bd84",
+  "title": "FRUS 1969-1976, Volume XXV, Document 261: Memorandum of Conversation (Kissinger, Schlesinger, Moorer, Colby, Scowcroft), Map Room, 24 October 1973",
+  "publisher": "U.S. Department of State, Office of the Historian",
+  "url": "https://history.state.gov/historicaldocuments/frus1969-76v25/d261",
+  "uses": 1
+ },
+ {
+  "id": "national-archives-gerald-r-ford-library--646235",
+  "title": "Memorandum of Conversation, Kissinger, Schlesinger, Colby, Moorer, 31 October 1973 (NAID 1552627)",
+  "publisher": "National Archives, Gerald R. Ford Library, National Security Adviser's Memoranda of Conversation",
+  "url": "https://catalog.archives.gov/id/1552627",
+  "uses": 1
+ },
+ {
+  "id": "u-s-department-of-state-office-of-the-hi-f25f5d",
+  "title": "FRUS 1969-1976, Volume XXV, Document 308: Minutes of Washington Special Actions Group Meeting, 2 November 1973",
+  "publisher": "U.S. Department of State, Office of the Historian",
+  "url": "https://history.state.gov/historicaldocuments/frus1969-76v25/d308",
+  "uses": 1
+ },
+ {
+  "id": "u-s-department-of-state-office-of-the-hi-cc34ca",
+  "title": "FRUS 1969-1976, Volume XXV, Document 322: Minutes of Washington Special Actions Group Meeting, 6 November 1973",
+  "publisher": "U.S. Department of State, Office of the Historian",
+  "url": "https://history.state.gov/historicaldocuments/frus1969-76v25/d322",
+  "uses": 1
+ },
+ {
+  "id": "u-s-department-of-state-office-of-the-hi-755ee5",
+  "title": "FRUS 1969-1976, Volume XXVI, Arab-Israeli Dispute, 1974-1976, Document 7: Memorandum of Conversation, Jerusalem, 16 January 1974",
+  "publisher": "U.S. Department of State, Office of the Historian",
+  "url": "https://history.state.gov/historicaldocuments/frus1969-76v26/d7",
+  "uses": 1
+ },
+ {
+  "id": "national-archives-gerald-r-ford-library--4ff497",
+  "title": "Memorandum of Conversation, Kissinger, Schlesinger, Colby, Moorer, The Map Room, 22 January 1974 (NAID 1552654)",
+  "publisher": "National Archives, Gerald R. Ford Library, National Security Adviser's Memoranda of Conversation",
+  "url": "https://catalog.archives.gov/id/1552654",
+  "uses": 1
+ },
+ {
+  "id": "u-s-department-of-state-office-of-the-hi-b90b26",
+  "title": "FRUS 1969-1976, Volume XXV, Document 305: Memorandum of Conversation (Kissinger and Prime Minister Golda Meir), Blair House, 1 November 1973",
+  "publisher": "U.S. Department of State, Office of the Historian",
+  "url": "https://history.state.gov/historicaldocuments/frus1969-76v25/d305",
   "uses": 1
  }
 ]

@@ -780,6 +780,18 @@
    "source_page": "https://www.youtube.com/watch?v=w3CXhRotie0",
    "rights_evidence": "Catalog entry aviation-week-check-6-missing-blackbird: copyright presumed held by Aviation Week.",
    "notes": "Link only; not watched in this pass."
+  },
+  {
+   "event": "record-new-york-london",
+   "tier": "D",
+   "kind": "video",
+   "title": "The Record Breakers (USAF film)",
+   "shows": "Finished USAF film: Farnborough 1974, Maj. James Sullivan and Maj. Noel Widdifield after the New York to London record, a London to Los Angeles map card naming Capt. Harold B. Adams and Maj. William C. Machorek, plus the 1971 endurance flight. NARA shot list: \"Major James Sullivan and Major Noel F. Widdifield establish a speed record by flying from New York to London in slightly less than two hours Sept. 1, 1974\".",
+   "relation": "exact",
+   "creator": "U.S. Air Force / Department of Defense (NARA RG 330, DIMOC)",
+   "source_page": "https://catalog.archives.gov/id/174689117",
+   "rights_evidence": "Withdrawn from hosting on 5 October 2026: the producer is disputed (Retrofootage says Lockheed, footagefarm says a USAF film with a Lockheed chart; the narration speaks of Lockheed's Advanced Development Projects) and NARA flags it 'Restricted - Possibly' for copyright. Host again only if NARA or the Air Force confirms a government production.",
+   "notes": "Master kept locally (research/timeline-media/raw) and in the private archive."
   }
  ]
 }

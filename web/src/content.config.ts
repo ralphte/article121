@@ -85,14 +85,16 @@ const photos = defineCollection({
   }),
 });
 
-// Media on the Chronology: a photograph, a page of a document, a film or a recording for an
-// event, each with its own credit and licence. Only tiers A and B are hosted.
+// Media for the Chronology and the Stories: a photograph, a page of a document, a film or a
+// recording for an event or a story, each with its own credit and licence. Only tiers A and B
+// are hosted.
 const media = defineCollection({
   loader: file('src/data/media.json'),
-  schema: ({ image }) => z.object({
-    event: reference('events'),
+  schema: z.object({
+    event: reference('events').nullable(),
+    story: z.string().nullable(),
     kind: z.enum(['image', 'document', 'video', 'audio']),
-    file: image().nullable(),           // the still: photograph, document page or video poster
+    file: z.string().nullable(),        // the still (src/assets/media/...), resolved by mediaImage() in lib/data
     src: z.url().nullable(),            // video or audio on the files bucket
     master: z.url().nullable(),         // the full original on the files bucket
     duration: z.string().nullable(),
@@ -110,5 +112,25 @@ const media = defineCollection({
   }),   // stills for images, documents and videos, and a src for video and audio, are checked by the import
 });
 
-export const collections = { sources, events, airframes, photos, media };
+// Stories: the best of the program's stories, told in Article 121's words with every paragraph
+// cited. A legend is a famous claim checked against the record, with a verdict.
+const passage = z.object({ text: z.string().min(1), citations: z.array(citation).min(1, 'Every paragraph of a story needs a source') });
+const stories = defineCollection({
+  loader: file('src/data/stories.json'),
+  schema: z.object({
+    title: z.string().min(1),
+    dek: z.string().min(1),
+    date: z.string().regex(/^\d{4}(-\d{2}(-\d{2})?)?$/),
+    precision: z.enum(['day', 'month', 'year', 'approx']),
+    programs: z.array(z.enum(PROGRAMS)),
+    airframes: z.array(z.string()),
+    people: z.array(z.string()),
+    kind: z.enum(['story', 'legend']),
+    verdict: passage.nullable(),
+    body: z.array(passage).min(1),
+    differ: passage.nullable(),
+  }),
+});
+
+export const collections = { sources, events, airframes, photos, media, stories };
 export { PROGRAMS };

@@ -1,6 +1,7 @@
-"""Fetch and prepare the Chronology's media, listed in research/timeline-media.json.
+"""Fetch and prepare media for the Chronology (research/timeline-media.json) or the Stories
+(--set stories: research/stories-media.json, design/img/stories, research/stories-media).
 
-  uv run --with pillow python tools/timeline_media.py [--only id,id] [--force] [--local dir]
+  uv run --with pillow python tools/timeline_media.py [--set timeline|stories] [--only id,id] [--force] [--local dir]
 
 --local names a folder of files already downloaded during the research (matched by file name).
 
@@ -12,8 +13,8 @@ For each item the master is downloaded to research/timeline-media/raw/ (gitignor
   audio     128 kbps MP3                                               -> research/timeline-media/web/<id>.mp3
 The manifest gets each item's file, src (video and audio), master URL and duration. Items that
 fail are reported and left without a file, so the import skips them. Then upload:
-  tools/r2 copy research/timeline-media/web r2:article121-files/timeline
-  tools/r2 copy research/timeline-media/raw r2:article121-files/masters/timeline
+  tools/r2 copy research/<set>-media/web r2:article121-files/<set>
+  tools/r2 copy research/<set>-media/raw r2:article121-files/masters/<set>
 Needs curl, pdftoppm (poppler), ffmpeg, ffprobe and yt-dlp.
 """
 import json
@@ -27,10 +28,11 @@ from pathlib import Path
 from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
-MANIFEST = ROOT / "research/timeline-media.json"
-RAW = ROOT / "research/timeline-media/raw"
-WEB = ROOT / "research/timeline-media/web"
-STILLS = ROOT / "design/img/timeline"
+SET = sys.argv[sys.argv.index("--set") + 1] if "--set" in sys.argv else "timeline"
+MANIFEST = ROOT / f"research/{SET}-media.json"
+RAW = ROOT / f"research/{SET}-media/raw"
+WEB = ROOT / f"research/{SET}-media/web"
+STILLS = ROOT / f"design/img/{SET}"
 VIDEOS = ROOT / "research/videos"
 LOCAL = Path(sys.argv[sys.argv.index("--local") + 1]) if "--local" in sys.argv else Path("/nonexistent")
 FILES = "https://files.article121.com"
@@ -116,15 +118,21 @@ def process(it, force=False):
     sid = it["id"]
     dst = STILLS / f"{sid}.jpg"
     master = download(it)
-    it["master"] = f"{FILES}/masters/timeline/{master.name}"
+    it["master"] = f"{FILES}/masters/{SET}/{master.name}"
     kind = it["kind"]
-    if kind == "image" and master.suffix.lower() == ".pdf":
+    is_pdf = master.read_bytes()[:5] == b"%PDF-"     # by content: some links have no extension
+    if kind == "image" and is_pdf:
         kind = "document"                            # a photograph published only inside a PDF
-    if kind == "image" and (force or not dst.exists()):
+    if kind == "document" and not is_pdf and (force or not dst.exists()):
+        it["size"] = list(still(master, dst, grey=True))   # a page already supplied as an image
+    elif kind == "image" and (force or not dst.exists()):
         it["size"] = list(still(master, dst))
-    elif kind == "document" and (force or not dst.exists()):
+    elif kind == "document" and is_pdf and (force or not dst.exists()):
         pages = int(re.search(r"Pages:\s+(\d+)", run(["pdfinfo", str(master)]).stdout).group(1))
         p = it.get("page") or 1
+        if not isinstance(p, int):                   # "PDF p.26" and the like
+            m = re.search(r"\d+", str(p))
+            p = int(m.group()) if m else 1
         p = p if 1 <= p <= pages else 1
         it["page"] = p
         tmp = RAW / f"{sid}-page"
@@ -144,7 +152,7 @@ def process(it, force=False):
             secs = float(run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "default=nw=1:nk=1", str(out)]).stdout)
             at = it.get("poster_at", max(1.0, secs * 0.15))   # a frame chosen by eye, else 15 percent in
             run(["ffmpeg", "-y", "-v", "error", "-ss", f"{at:.1f}", "-i", str(out), "-frames:v", "1", "-q:v", "3", str(dst)])
-        it["src"] = f"{FILES}/timeline/{out.name}"
+        it["src"] = f"{FILES}/{SET}/{out.name}"
     elif kind == "audio":
         out = WEB / f"{sid}.mp3"
         if force or not out.exists():
@@ -152,9 +160,13 @@ def process(it, force=False):
             speech = ["-ac", "1", "-b:a", "64k"] if secs > 1200 else ["-b:a", "128k"]   # long talks: speech quality
             run(["ffmpeg", "-y", "-v", "error", "-i", str(master), "-vn", "-c:a", "libmp3lame", *speech, str(out)])
         it["duration"] = duration(out)
-        it["src"] = f"{FILES}/timeline/{out.name}"
+        it["src"] = f"{FILES}/{SET}/{out.name}"
+    if dst.exists() and it.get("rotate") and (force or it.get("rotated") != it["rotate"]):
+        im = Image.open(dst)                          # pages scanned sideways: degrees anticlockwise
+        im.rotate(it["rotate"], expand=True).save(dst, "JPEG", quality=86, optimize=True, progressive=True)
+        it["rotated"] = it["rotate"]
     if dst.exists():
-        it["file"] = f"img/timeline/{dst.name}"
+        it["file"] = f"img/{SET}/{dst.name}"
     it.pop("error", None)
     return sid
 
@@ -168,7 +180,7 @@ def main():
     data = json.loads(MANIFEST.read_text())
     global CATALOG
     CATALOG = {v["id"]: v for v in json.loads((VIDEOS / "catalog.json").read_text())}
-    items = [it for it in data["items"] if not only or it["id"] in only]
+    items = [it for it in data["items"] if "reuse" not in it and (not only or it["id"] in only)]   # reuse: already prepared
     for it in items:
         it.pop("error", None)                        # a fresh attempt
     # downloads in parallel, processing (ffmpeg) in order

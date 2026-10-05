@@ -10,7 +10,7 @@
 // Photos are copied into src/assets/photos so Astro can make responsive versions; the
 // full-resolution hero masters are served from the public R2 bucket at files.article121.com.
 import { createHash } from 'node:crypto';
-import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { basename, dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -219,18 +219,23 @@ if (panelIn && existsSync(join(root, panelIn.positions))) {
   };
 }
 
-// ---------- Chronology media (research/timeline-media.json, prepared by tools/timeline_media.py)
+// ---------- Chronology and Stories media (research/timeline-media.json and research/stories-media.json,
+// prepared by tools/timeline_media.py). A story item may reuse a Chronology item: { "story", "reuse": id }.
 const mediaDir = join(web, 'src/assets/media');
 mkdirSync(mediaDir, { recursive: true });
 const eventIds = new Set(events.map((e) => e.id));
 const RELATIONS = ['exact', 'same-aircraft', 'same-program', 'representative'];
+const storiesIn = existsSync(join(root, 'research/stories.json')) ? read('research/stories.json').stories : [];
+const storyIds = new Set(storiesIn.map((s) => s.id));
+const tlItems = read('research/timeline-media.json').items;
+const tlById = new Map(tlItems.map((m) => [m.id, m]));
+const storyItems = existsSync(join(root, 'research/stories-media.json')) ? read('research/stories-media.json').items : [];
 const tlMedia = [];
-for (const m of read('research/timeline-media.json').items) {
-  if (m.kind !== 'audio' && !m.file) continue;                   // not fetched yet, or failed
-  if (!eventIds.has(m.event)) throw new Error(`timeline-media ${m.id}: unknown event ${m.event}`);
-  if (!['A', 'B'].includes(m.tier)) throw new Error(`timeline-media ${m.id}: tier ${m.tier} is not hosted`);
-  for (const f of ['creator', 'credit', 'license', 'source_page', 'title']) if (!m[f]) throw new Error(`timeline-media ${m.id} lacks ${f}`);
-  if (['video', 'audio'].includes(m.kind) && !m.src) throw new Error(`timeline-media ${m.id}: ${m.kind} without a src`);
+function addMedia(m, owner) {
+  if (m.kind !== 'audio' && !m.file) return;                     // not fetched yet, or failed
+  if (!['A', 'B'].includes(m.tier)) throw new Error(`media ${m.id}: tier ${m.tier} is not hosted`);
+  for (const f of ['creator', 'credit', 'license', 'source_page', 'title']) if (!m[f]) throw new Error(`media ${m.id} lacks ${f}`);
+  if (['video', 'audio'].includes(m.kind) && !m.src) throw new Error(`media ${m.id}: ${m.kind} without a src`);
   let file = null;
   if (m.file) {
     const name = basename(m.file);
@@ -238,13 +243,40 @@ for (const m of read('research/timeline-media.json').items) {
     file = `../assets/media/${name}`;
   }
   tlMedia.push({
-    id: m.id, event: m.event, kind: m.kind, file, src: m.src ?? null, master: m.master ?? null,
-    duration: m.duration ?? null, page: m.kind === 'document' ? m.page ?? 1 : null,
-    title: m.title, description: m.description || m.title, relation: RELATIONS.includes(m.relation) ? m.relation : 'representative',
+    id: owner.id, event: owner.event ?? null, story: owner.story ?? null, kind: m.kind, file, src: m.src ?? null, master: m.master ?? null,
+    duration: m.duration ?? null, page: m.kind === 'document' ? (Number.isInteger(m.page) ? m.page : parseInt(String(m.page ?? '').match(/\d+/)?.[0] ?? '1', 10)) : null,
+    title: m.title, description: m.description || m.title, relation: RELATIONS.includes(owner.relation ?? m.relation) ? owner.relation ?? m.relation : 'representative',
     creator: m.creator, credit: m.credit, date: m.date ?? null, license: m.license, license_url: m.license_url ?? null,
     tier: m.tier, source_page: m.source_page,
   });
 }
+for (const m of tlItems) {
+  if (!eventIds.has(m.event)) throw new Error(`timeline-media ${m.id}: unknown event ${m.event}`);
+  addMedia(m, { id: m.id, event: m.event });
+}
+for (const m of storyItems) {
+  if (!storyIds.has(m.story)) throw new Error(`stories-media ${m.id}: unknown story ${m.story}`);
+  const base = m.reuse ? tlById.get(m.reuse) : m;
+  if (!base) throw new Error(`stories-media ${m.id}: reuses unknown item ${m.reuse}`);
+  addMedia(base, { id: m.id, story: m.story, relation: m.relation });
+}
+
+// ---------- Stories (research/stories.json): each paragraph cites keys from its story's own sources
+function storyCites(st, list, where) {
+  if (!list?.length) throw new Error(`stories.json ${st.id} ${where}: needs at least one source`);
+  return list.map(([key, at]) => {
+    const src = st.sources?.[key];
+    if (!src) throw new Error(`stories.json ${st.id} ${where}: unknown source ${key}`);
+    return { source: cite(src).source, detail: at || undefined };
+  });
+}
+const storiesOut = storiesIn.map((st) => ({
+  id: st.id, title: st.title, dek: st.dek, date: st.date, precision: st.precision || 'day',
+  programs: st.programs || [], airframes: st.airframes || [], people: st.people || [], kind: st.kind === 'legend' ? 'legend' : 'story',
+  verdict: st.verdict ? { text: st.verdict, citations: storyCites(st, st.verdict_cite, 'verdict') } : null,
+  body: st.body.map((p, i) => ({ text: p.text, citations: storyCites(st, p.cite, `paragraph ${i + 1}`) })),
+  differ: st.differ ? { text: st.differ.text, citations: storyCites(st, st.differ.cite, 'differ') } : null,
+}));
 
 // ---------- write
 const out = join(web, 'src/data');
@@ -256,4 +288,8 @@ writeFileSync(join(out, 'airframes.json'), JSON.stringify(afOut, null, 1));
 writeFileSync(join(out, 'photos.json'), JSON.stringify(photos, null, 1));
 writeFileSync(join(out, 'machine.json'), JSON.stringify(machine, null, 1));
 writeFileSync(join(out, 'media.json'), JSON.stringify(tlMedia, null, 1));
-console.log(`imported ${events.length} events, ${afOut.length} airframes, ${photos.length} photos, ${tlMedia.length} media, ${srcList.length} sources`);
+writeFileSync(join(out, 'stories.json'), JSON.stringify(storiesOut, null, 1));
+// The data changed: drop Astro's cached content store so it re-reads every entry (the image cache
+// in node_modules/.astro/assets is kept).
+for (const f of ['node_modules/.astro/data-store.json', '.astro/data-store.json']) rmSync(join(web, f), { force: true });
+console.log(`imported ${events.length} events, ${afOut.length} airframes, ${photos.length} photos, ${tlMedia.length} media, ${storiesOut.length} stories, ${srcList.length} sources`);

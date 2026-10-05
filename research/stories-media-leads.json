@@ -1,0 +1,240 @@
+{
+ "about": "Media found for the Stories that may not be hosted without permission (D) or may only be linked (C). Nothing has been requested.",
+ "leads": [
+  {
+   "story": "buick-start-cart",
+   "rights_tier": "C",
+   "kind": "document",
+   "title": "'Provisional engine starter cart', photographs from Kelly Johnson's SR-71 paper (CIA reprint, article p.8)",
+   "shows": "Two photographs: a boxy cart marked B7 with a control panel, and the open engine bay showing the two engines side by side, captioned 'Provisional engine starter cart (above) which used two Buick racing car engines (below) geared to a common shaft drive to rotate the J58 engine. This rig produced over 600 horsepower for starting.'",
+   "relation": "exact",
+   "creator": "Clarence L. Johnson (Lockheed), reprinted by the Central Intelligence Agency",
+   "source_page": "https://archive.org/details/cia-readingroom-document-cia-rdp87m01007r000400810001-4",
+   "rights_evidence": "Johnson's 1981 typescript lists them as 'FIGURE 4 Provisional Engine Starter Cart ...' (CIA-RDP90B00170R000100080001-5, PDF p.20); the project treats Johnson's figures as tier C (research/systems/systems.md, [KJ81]).",
+   "notes": "The only period photographs of a Buick cart found. Link only; for a hostable copy ask Lockheed Martin (Skunk Works history office) for Johnson's original Figure 4 print (tier D route). Mirror PDF HTTP 206 and page image (leaf 0179) viewed on 2026-10-05. Video leads, both tier C, link or embed only: Air Zoo, \"'We got every one and broke it' - The SR-71's Start Cart\" https://www.youtube.com/watch?v=KoD6kFb85co and Intrepid Museum, 'Aircraft Restoration Live - A12 Starter Cart' (17 March 2021) https://www.youtube.com/watch?v=8B8Ch_ojvDo (both oEmbed HTTP 200 on 2026-10-05)."
+  },
+  {
+   "story": "coast-to-coast-1990",
+   "rights_tier": "D",
+   "kind": "document",
+   "title": "Aircraft 972 Flight 902 Course Data, 6 March 1990 (Lockheed timing sheet)",
+   "shows": "Gate table (West Coast, Los Angeles, Kansas City, St. Louis, Cincinnati, Washington, East Coast) with latitudes, longitudes and GMT crossing times, and point-to-point elapsed times, distances and average speeds; \"Prepared By: V. A. Wright, ADP/LASC 3-13-90\", witnessed by R. E. Otoski (ADP/LASC) and R. D. Freeberg (NAA).",
+   "relation": "exact",
+   "creator": "V. A. Wright, Advanced Development Projects, Lockheed Aeronautical Systems Company",
+   "source_page": "https://www.thisdayinaviation.com/6-march-1990/",
+   "rights_evidence": "This Day in Aviation caption: \"Flight record data for 972's record-setting transcontinental flight, prepared by V.A. Wright, Advanced Development Projects, Lockheed Aeronautical Systems Company.\" The page is \"(c) 2016, Bryan R. Swopes\". Lockheed authorship means it is not a U.S. government work.",
+   "notes": "The best primary record of the timings. Ask Lockheed Martin (Skunk Works communications) for permission, or look for the original record file at the National Aeronautic Association (naa.aero records), which witnessed it. Only this small web copy was found. File URL answered HTTP 206 on 5 October 2026."
+  },
+  {
+   "story": "coast-to-coast-1990",
+   "rights_tier": "D",
+   "kind": "image",
+   "title": "SR-71 Blackbird landing at Dulles with drag chute deployed (SI Neg. 90-3299.20a)",
+   "shows": "Description: \"The SR-71 Blackbird with drag chute deployed just after touchdown on the runway at Dulles International Airport. The Blackbird had just set a new cross-country speed record on its way to be delivered to the Smithsonian Institution.\" Black and white, nose-on, chute open behind.",
+   "relation": "exact",
+   "creator": "Laurie Minor-Penland, Smithsonian Institution",
+   "source_page": "https://archive.org/details/propix.493848021",
+   "rights_evidence": "Internet Archive item (collection propix, uploader carl@media.org): description \"SI Neg. 90-3299.20a. Date: 1990 ... Credit: Laurie Minor-Penland (Smithsonian Institution)\", subject \"Probably Public Domain\", licenseurl CC0 1.0. Smithsonian staff photographs are not U.S. government works, and the watermark shows the copy came from the Smithsonian's own image service.",
+   "notes": "The best image of the arrival found. Companion Smithsonian frames in the same collection: SI 90-3328 (landing, Jeff Tinsley), 90-3333 (taxiing to the terminal, Jeff Tinsley), 90-3316.22 (head-on on the taxiway, Richard Strauss), 90-3317.13 (drag chute, Richard Strauss), 90-3318-7 (landing over the photographer, Richard Strauss). Check Smithsonian Open Access for these negative numbers first (the api.si.edu DEMO_KEY was rate-limited during this research); otherwise ask the Smithsonian (rights and reproductions) for a full-resolution scan and permission. File URL answered HTTP 206 on 5 October 2026."
+  },
+  {
+   "story": "drone-in-kazakhstan",
+   "rights_tier": "D",
+   "kind": "image",
+   "title": "D-21B under rocket boost after release from a B-52H",
+   "shows": "A D-21B with its solid rocket booster firing, trailing a long plume. Uncaptioned in the NRO release; AIAA 2007-5761 prints the same view as Figure 24, \"D-21B booster operation following launch from a B-52H\".",
+   "relation": "same-program",
+   "creator": "Lockheed (credited \"Lockheed Martin Corporation\" in AIAA 2007-5761); released by the NRO without credit",
+   "source_page": "https://web.archive.org/web/20260419233903/https://www.nro.gov/foia-home/foia-declassified-nro-programs-and-projects/Declassified-D-21-Drones-Program-Records/",
+   "rights_evidence": "The NRO's D21_Photos.pdf (scanned 11 January 2019) carries no captions or credits. AIAA 2007-5761, p.12, Figure 24 shows what appears to be the same frame with \"Credit: Lockheed Martin Corporation\".",
+   "notes": "Ask Lockheed Martin (or the NRO's Center for the Study of National Reconnaissance) whether the photo is a government or company image. The other five pages of D21_Photos.pdf show B-52Hs with D-21Bs on the ground and in flight, also uncredited. Wayback copy answered HTTP 206 on 5 October 2026; the frame match with Figure 24 was made by eye at low resolution."
+  },
+  {
+   "story": "f-105-cover-story",
+   "rights_tier": "C",
+   "kind": "image",
+   "title": "Remnants of the crashed A-12 near Wendover (National Geographic gallery, 2011)",
+   "shows": "NatGeo caption: \"Remnants of a crashed A-12 spy plane, including two engines and the shattered rear fuselage, litter the ground near Wendover, Utah, in a 1963 picture recently declassified by the CIA and published here for the first time.\" (original punctuation uses dashes)",
+   "relation": "exact",
+   "creator": "Central Intelligence Agency (as credited: \"Photograph from CIA via Pangloss Films\")",
+   "source_page": "https://web.archive.org/web/20110523230125/http://news.nationalgeographic.com/news/2011/05/pictures/110520-spy-plane-area-51-cover-up-crash-cia-conspiracy/",
+   "rights_evidence": "Credit on the gallery: \"Photograph from CIA via Pangloss Films\"; page footer \"(c) 1996-2011 National Geographic Society\". CIA historian David Robarge is quoted that the 1963 crash photos were declassified and released.",
+   "notes": "Best-quality view of the wreck, in continuous tone, but link only. The CIA file copies above are the tier A route; for good prints, ask the CIA Office of Public Affairs or FOIA office for the 2011 releases. Other frames in the gallery: aerial view of the recovery camp (35800), heavy equipment (35807), crane loading debris (35802), wreckage under tarps (35806). Image verified HTTP 200 via Wayback on 5 October 2026."
+  },
+  {
+   "story": "habu",
+   "rights_tier": "D",
+   "kind": "image",
+   "title": "Crew chief Don Person with 61-7974's \"Ichi Ban\" tail art, 1968",
+   "shows": "habu.org caption: \"Crew Chief Don Person, shown here just after putting the finishing touches on 974's new tail art (the famous 'Ichi Ban' design)\"; a large white figure 1 with a snake coiled round it on the black fin.",
+   "relation": "exact",
+   "creator": "U.S. Air Force (watermark \"USAF PHOTO\"); photo via Don Person, scan by Dennis Doner",
+   "source_page": "http://www.habu.org/sr-71/17974.html",
+   "rights_evidence": "habu.org footer: \"Copyright (c) 1998-2013 Habu.Org\"; About page: \"No part of any document within the www.habu.org domain may be reproduced without written permission from Habu.Org.\" Image watermarks: \"USAF PHOTO\" and \"SCAN BY DENNIS DONER\".",
+   "notes": "Ask David Allison (webmaster@habu.org), who can also reach the Person family and Dennis Doner. The watermark says USAF photo, so an official original (NARA RG 342) would be tier A. The same page has the tie-cutting photos of George Bull and Red McNeer, 8 September 1968 (bull-mcneer1.JPG, bull-mcneer2.JPG), same rights. habu.org answers intermittently with HTTP 500; file fetched 200 on retry 2026-10-05; Wayback holds the image from 2002."
+  },
+  {
+   "story": "la-speed-check",
+   "rights_tier": "D",
+   "kind": "video",
+   "title": "Brian Shul tells the speed check story, Hiller Aviation Museum, 30 December 2016",
+   "shows": "Shul on stage telling the LA Center speed check story in full (about 6 minutes), ending with his remarks on the crew's operational work.",
+   "relation": "exact",
+   "creator": "Brian Shul (speaker); audience recording by Jan Johnson",
+   "source_page": "https://www.youtube.com/watch?v=8AyHH9G9et0",
+   "rights_evidence": "Project catalogue entry ia-brian-shul-speed-check-2016: \"None stated; recording of a talk, rights with the speaker and the recording organisation (standard YouTube licence).\" IA mirror metadata: licenseurl none, collection mirrortube.",
+   "notes": "Link or embed only; to host, ask Jan Johnson and the Shul estate (SledDriver@SledDriver.com per research/sources.md). Stitch's Loft 'LA SPEED STORY' (youtube ILop3Kn3JO8) is probably the same recording. Other catalogued talks: LeWeb Paris 2012 (leweb-brian-shul-2012, tier C), LLNL 15 November 2016 (llnl-yt-brian-shul-sr-71-talk-2016, tier D), and Shul with Walter Watson at the Harris Center, Folsom, 5 November 2022 (youtube BY3nRtRsdKg, on Shul's own 'Sled Driver' channel), the only one found where Watson appears beside him; not checked for the story. URL check 5 October 2026: source_page 200, file_url 206."
+  },
+  {
+   "story": "la-speed-check",
+   "rights_tier": "C",
+   "kind": "image",
+   "title": "Brian Shul's self-portrait in the SR-71 cockpit",
+   "shows": "\"A self-portrait of Brian Shul in full flight suit gear within the cockpit of the SR-71 Blackbird.\" (Commons description), in pressure suit and helmet at altitude.",
+   "relation": "representative",
+   "creator": "Brian Shul",
+   "source_page": "https://commons.wikimedia.org/wiki/File:Brian_Shul,_self-portrait,_SR-71_Blackbird.jpg",
+   "rights_evidence": "Commons tags it {{PD-USAF}} with author \"USAF/Brian Shul\" but gives the source as \"Shul, Brian (1994). The Untouchables. Mach One. p. 113\", a commercial book; Shul published and sold his SR-71 photographs privately. research/sources.md and research/systems/systems.md already list Shul's cockpit self-portraits as mislabelled public domain, tier C.",
+   "notes": "Link only unless the estate gives permission (then tier D). Shows what the crew saw and wore, not the speed check flight. Companion files on Commons: 'Brian Shul in the cockpit of the SR-71 Blackbird.jpg' and 'View from the SR-71 Blackbird.jpg', same source and same problem. URL check 5 October 2026: source_page 200, file_url 206."
+  },
+  {
+   "story": "la-speed-check",
+   "rights_tier": "C",
+   "kind": "document",
+   "title": "Sled Driver: Flying the World's Fastest Jet (Brian Shul, 1991), chapter III, 'The Deep Blue'",
+   "shows": "Shul's first published account of the speed check, within his description of the crew's training sorties.",
+   "relation": "exact",
+   "creator": "Brian Shul with Sheila Kathleen O'Grady (Mach 1)",
+   "source_page": "https://lccn.loc.gov/91062709",
+   "rights_evidence": "Library of Congress catalogue: \"Sled driver : flying the world's fastest jet\", Chico, Calif. : Mach 1, c1991, 151 p. : col. ill.; 32 cm. Copyright notice c1991.",
+   "notes": "Cite and link the catalogue record only. Do not link the Internet Archive item sled-driver-shul_202311: it is an unauthorised upload of the 1992 Midland edition. URL check 5 October 2026: lccn.loc.gov 200 (www.loc.gov/item/91062709/ returns 403 to scripts)."
+  },
+  {
+   "story": "m21-collision",
+   "rights_tier": "D",
+   "kind": "video",
+   "title": "MD-21 Accident (film of the 30 July 1966 collision)",
+   "shows": "Chase-camera film of the D-21 striking M-21 Article 135 on separation and the mothership breaking up.",
+   "relation": "exact",
+   "creator": "Producer not stated (Lockheed or government test film); hosted by Roadrunners Internationale",
+   "source_page": "https://roadrunnersinternationale.com/videos.html",
+   "rights_evidence": "Roadrunners Internationale page footer: \"(c) Copyright 2001-, Dreamland Resort . All rights reserved.\" No licence is given for the video files (research/videos/catalog.json, rr-md21-accident).",
+   "notes": "The only footage of the accident found. Ask the Roadrunners Internationale webmaster where the film came from, then Lockheed Martin or the NRO for a master; a government original would be tier A. Peebles says Keith Beswick filmed the separation from the chase M-21. File URL answered HTTP 206 (video/mpeg) on 5 October 2026. YouTube re-upload \"SR-71 Blackbird Midair Crash\" (https://www.youtube.com/watch?v=Gy0QUwxY5mQ) is tier C."
+  },
+  {
+   "story": "new-york-to-london-1974",
+   "rights_tier": "D",
+   "kind": "video",
+   "title": "The Record Breakers (film)",
+   "shows": "Mission planning, suit-up and boarding at Beale on 31 August 1974; refuelling; the Farnborough flypast and arrival, with Sullivan and Widdifield greeted on the apron; the show; Adams and Machorek boarding at Mildenhall; arrival at Beale; narration gives the times and distances quoted in the story. The NARA copy opens mid-sentence and ends with an unrelated U-2 training segment (from 12:49).",
+   "relation": "exact",
+   "creator": "Unconfirmed: catalogued by NARA as a USAF/DoD reel; narration suggests Lockheed",
+   "source_page": "https://catalog.archives.gov/id/174689117",
+   "rights_evidence": "NARA NAID 174689117 use restriction \"Restricted - Possibly\" with note \"Some or all of this material may be restricted by copyright\". The narration (transcribed 2026-10-05) speaks of \"Lockheed's advanced development projects working closely with its customer\", points out \"several other current Lockheed family members\" at Farnborough, ends \"A tradition for the Blackbird family, the record breakers\", and names Lockheed's SR-71 general manager among the greeters. The project catalogue already records a stock house calling it a Lockheed production and a copy that opens with a Lockheed focus chart.",
+   "notes": "The project lists this as tier A; on the narration evidence it should be treated as D until the producer is confirmed. Ask the NARA Motion Picture, Sound and Video Branch (mopix@nara.gov) for the production record of 342-USAF-49631 (NAID 72098), and Lockheed Martin if it proves to be a Lockheed film. Useful stills if cleared: about 6:05 (crew stepping down at Farnborough with an Air Force general) and 6:24 (crew greeted on the apron). The 13 September arrival is also on NARA 342-CAM-335 (NAID 62559), USAF documentary footage, not digitised."
+  },
+  {
+   "story": "rescued-by-viggens",
+   "rights_tier": "D",
+   "kind": "image",
+   "title": "The crippled SR-71 photographed from a Swedish Viggen, 29 June 1987",
+   "shows": "Försvarsmakten caption: \"Foto från de svenska Viggenpiloterna på det skadade amerikanska flygplanet av typen SR-71 Blackbird\" (photo from the Swedish Viggen pilots of the damaged American SR-71). The SR-71 is seen from below and to the side against a clear sky.",
+   "relation": "exact",
+   "creator": "Bo Ignell (Swedish Air Force)",
+   "source_page": "https://web.archive.org/web/20181129165730/https://www.forsvarsmakten.se/sv/aktuellt/2018/11/svenskt-stridsflyg-identifierade-hemligt-amerikanskt-spaningsflygplan/",
+   "rights_evidence": "Caption credit on the Försvarsmakten article of 28 November 2018: \"Foto: Bo Ignell/Försvarsmakten\". No Creative Commons or public-domain statement on the page. A Swedish military photograph is not a U.S. government work.",
+   "notes": "The defining image of the incident; Blad says his wingman took the pictures (DVIDS 644209 at about 48:30). Ask Försvarsmakten Högkvarteret communications (general address exp-hkv@mil.se, as given on the article; press contacts via forsvarsmakten.se) and, as a courtesy, Bo Ignell for permission to host. The live imagevault URL now returns 404; the Wayback rendition resolves (HTTP 200, checked 5 October 2026). A copy also circulates on The Aviationist (Bild-SR71.jpg), which is not a licence. It appears on the screen behind the 2018 ceremony in DVIDS 4933392."
+  },
+  {
+   "story": "road-trip-to-area-51",
+   "rights_tier": "D",
+   "kind": "image",
+   "title": "A-12 - K1 - 924 Moving the very first A-12 to Area 51",
+   "shows": "Burned-in caption: \"A-12 - K1 - 924 Moving the very first A-12 to Area 51\". Two long box-shaped loads on low trailers pulled over on a divided highway in a brush-covered canyon, with escort cars and a black-and-white patrol car in the foreground.",
+   "relation": "exact",
+   "creator": "Lockheed (gallery headed 'A-12 Planes Photos Contributed by Lockheed'); photographer not named",
+   "source_page": "https://roadrunnersinternationale.com/photos_a12_planes.html",
+   "rights_evidence": "Gallery header \"A-12 Planes Photos Contributed by Lockheed\"; page footer \"Copyright 2001- [year], Dreamland Resort. All rights reserved.\" (roadrunnersinternationale.com, checked 5 October 2026)",
+   "notes": "The only image found that is captioned as Article 121 itself on the road; already recorded as a lead in research/timeline-media-leads.json (file name now identified as a-12_93.jpg). Ask Lockheed Martin for the master and Roadrunners Internationale for their scan. The same gallery has a-12_74.jpg, 'A-12 Articles #939 & 938 plus transporter at ADP', showing an empty crate transporter at the Skunk Works (also tier D). File verified HTTP 206 on 5 October 2026."
+  },
+  {
+   "story": "rs-71-or-sr-71",
+   "rights_tier": "C",
+   "kind": "document",
+   "title": "\"Text of President's A-11 Statements\", reprint dated 3 August 1964 (CIA-RDP75-00149R000400230031-2)",
+   "shows": "The 29 February and 24 July 1964 statements printed side by side under \"1st Announcement\" and \"2nd Announcement\"; the second reads \"SR-71\" at each mention and \"RS-70\" once.",
+   "relation": "exact",
+   "creator": "Unidentified periodical (masthead cut off on the CIA copy)",
+   "source_page": "https://archive.org/details/cia-readingroom-document-cia-rdp75-00149r000400230031-2",
+   "rights_evidence": "CIA date stamp \"AUG 3 1964\" and release stamp \"Approved For Release 2000/04/14 : CIA-RDP75-00149R000400230031-2\"; the publication's name is not legible. A CIA release does not make a periodical's typeset page public domain.",
+   "notes": "Link only. Useful as period evidence that printed copies of the statement read SR-71. Already noted in research/timeline-media-leads.json under the Herald Tribune lead. PDF checked 2026-10-05 (206)."
+  },
+  {
+   "story": "rs-71-or-sr-71",
+   "rights_tier": "D",
+   "kind": "video",
+   "title": "President Lyndon Johnson's Press Conference at the State Department, July 24, 1964 (Miller Center film)",
+   "shows": "Moving image of the whole conference, Johnson at the lectern reading the SR-71 statement; black and white, kinescope look, Miller Center logo burned in.",
+   "relation": "exact",
+   "creator": "Probably network pool television coverage; source credited to the LBJ Library; presented by the UVA Miller Center",
+   "source_page": "https://millercenter.org/the-presidency/presidential-speeches/july-24-1964-press-conference-state-department",
+   "rights_evidence": "Project catalogue (lbj-1964-07-24-news-conference-millercenter-film): no rights statement for the film; the LBJ Library says network films are mostly copyrighted, except CBS pool coverage of live presidential addresses.",
+   "notes": "The only moving image of the announcement found. Ask the LBJ Library audiovisual archives which element this is, whether it is CBS pool coverage, and for a clean transfer. Not downloaded. Vimeo page checked 2026-10-05 (200)."
+  },
+  {
+   "story": "weaver-breakup",
+   "rights_tier": "D",
+   "kind": "video",
+   "title": "BD-0066 Oral History, Bill Weaver and Maury Rosenberg, Lockheed SR-71 Pilots",
+   "shows": "Bill Weaver, the surviving pilot of 61-7952, in a recorded oral history with Maury Rosenberg (1 h 52 min 40 s).",
+   "relation": "same-aircraft",
+   "creator": "San Diego Air & Space Museum Archives",
+   "source_page": "https://www.youtube.com/watch?v=vGA8Jej_JtI",
+   "rights_evidence": "YouTube description: \"Please do not use for commercial purposes without permission.\" Calisphere record (https://calisphere.org/item/9fd799963f587ee175730f487117a290/): \"Please contact the contributing institution for more information regarding the copyright status of this object.\"",
+   "notes": "Weaver in his own voice. Ask the SDASM Library and Archives for a licence to excerpt the break-up passage (find the timecode first). The page answered HTTP 200 on 5 October 2026; the content was not watched for this draft."
+  },
+  {
+   "story": "weaver-breakup",
+   "rights_tier": "C",
+   "kind": "video",
+   "title": "This SR-71 Pilot Free Fell from the Edge of Space (Smithsonian Channel)",
+   "shows": "A 3-minute excerpt from the Smithsonian Channel's \"Planes That Changed the World: SR-71 Blackbird\" about Weaver's break-up and fall.",
+   "relation": "same-aircraft",
+   "creator": "Smithsonian Channel (Smithsonian Networks)",
+   "source_page": "https://www.youtube.com/watch?v=mnEgS3buPb8",
+   "rights_evidence": "No licence stated on the YouTube page; a commercial television documentary excerpt (research/videos/catalog.json, smithsonian-channel-weaver-free-fell).",
+   "notes": "Link or embed only. Not watched for this draft; check any reconstruction footage before describing it."
+  },
+  {
+   "story": "yom-kippur-1973",
+   "rights_tier": "C",
+   "kind": "video",
+   "title": "SR-71 Overview by Col. James H. Shelton, Jr., USAF (ret.)",
+   "shows": "A talk at the Western Museum of Flight by the pilot of the first GIANT REACH sortie; the description says he \"discusses one of his operational missions to the Middle East that lasted 11.13 hours with 6 refuelings\".",
+   "relation": "exact",
+   "creator": "Jarel and Betty Wheaton for Peninsula Seniors",
+   "source_page": "https://www.youtube.com/watch?v=ptPRi7R3Bfw",
+   "rights_evidence": "No licence stated on the YouTube watch page; project catalog entry peninsula-seniors-jim-shelton-overview (\"third-party recording; link or embed only\").",
+   "notes": "Link or embed only. The timestamp where Shelton discusses the 13 October 1973 sortie was not found because the player is blocked to scripts; find it by hand before linking to a point in the talk. Watch page checked 2026-10-05: HTTP 200."
+  },
+  {
+   "story": "never-lost-to-a-missile",
+   "rights_tier": "C",
+   "title": "never-lost-to-a-missile-4",
+   "notes": "Not hosted: reprints 1990 news coverage (copyrighted) in a White House news summary. Cited as a source only."
+  },
+  {
+   "story": "titanium-from-the-enemy",
+   "rights_tier": "C",
+   "title": "titanium-from-the-enemy-2",
+   "notes": "Not hosted: the memo page quotes a copyrighted news item. Cited as a source only."
+  },
+  {
+   "story": "f-105-cover-story",
+   "rights_tier": "C",
+   "title": "Cable IN 77733, 26 May 1963: newspaper and television coverage of the 'F-105' crash",
+   "source_page": "https://www.cia.gov/readingroom/document/cia-rdp71b00590r000200030031-8",
+   "notes": "Not hosted: the cable reproduces 1963 newspaper and television text verbatim. Cited as a source only."
+  }
+ ]
+}
