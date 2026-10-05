@@ -118,14 +118,16 @@ const HOTSPOTS: [string, string, string][] = [['inlet', 'Inlet spike', '#inlet']
     rear: { pos: [-50, 4.5, -15], target: [-17, 0.6, 0], hfov: hfov(50) },
     cockpit: { pos: [1.5, 2.9, 5.2], target: [-6, 0.9, 0], hfov: hfov(50) },
   };
-  // Hotspot anchors on the airframe (left side, facing the opening view): spike tip, canopy, ejector, a chine panel
+  // Hotspot anchors on the airframe (right side, facing the opening view): spike tip, canopy, ejector, a chine panel
   const HOTS: Record<string, [number, number, number]> = {
-    inlet: [-15.97, 0.1, 4.03], cockpit: [-5.0, 1.38, 0], exhaust: [-29.3, 0.3, 4.2], skin: [-9.5, 0.55, 1.25],
+    inlet: [-15.17, 0.07, 3.99], cockpit: [-5.0, 1.38, 0], exhaust: [-28.6, 0.65, 4.22], skin: [-9.5, 0.55, 1.25],
   };
   const lin = (r: number, g: number, b: number) => new THREE.Color().setRGB(r, g, b, THREE.LinearSRGBColorSpace);
   const MATERIALS: Record<string, () => THREE.MeshStandardMaterial> = {
     'Blackbird skin': () => new THREE.MeshPhysicalMaterial({ color: lin(0.0105, 0.0118, 0.0155), roughness: 0.34, metalness: 0, clearcoat: 0.25, clearcoatRoughness: 0.18 }),
-    'Canopy glass': () => new THREE.MeshPhysicalMaterial({ color: lin(0.012, 0.016, 0.02), roughness: 0.03, metalness: 0, clearcoat: 1, clearcoatRoughness: 0 }),
+    'Canopy glass': () => new THREE.MeshPhysicalMaterial({ color: lin(0.012, 0.016, 0.02), roughness: 0.03, metalness: 0, clearcoat: 1, clearcoatRoughness: 0, transparent: true, opacity: 0.55, depthWrite: false }),
+    // panel lines: rougher and darker than the paint, so they show where the skin catches the light
+    'Panel line': () => new THREE.MeshPhysicalMaterial({ color: lin(0.004, 0.0045, 0.006), roughness: 0.75, metalness: 0, polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -2 }),
     'Ejector metal': () => new THREE.MeshPhysicalMaterial({ color: lin(0.26, 0.22, 0.18), roughness: 0.4, metalness: 1 }),
     'Inlet duct': () => new THREE.MeshStandardMaterial({ color: lin(0.006, 0.006, 0.007), roughness: 0.75 }),
     'Intake and nozzle': () => new THREE.MeshStandardMaterial({ color: lin(0.006, 0.006, 0.007), roughness: 0.75 }),
@@ -135,6 +137,7 @@ const HOTSPOTS: [string, string, string][] = [['inlet', 'Inlet spike', '#inlet']
     'Fuel tank': () => new THREE.MeshStandardMaterial({ color: lin(0.85, 0.5, 0.1), roughness: 0.35, metalness: 0, transparent: true, opacity: 0.55, depthWrite: false }),
     'Bay': () => new THREE.MeshStandardMaterial({ color: lin(0.12, 0.45, 0.7), roughness: 0.4, metalness: 0, transparent: true, opacity: 0.5, depthWrite: false }),
     'Seat': () => new THREE.MeshStandardMaterial({ color: lin(0.09, 0.1, 0.08), roughness: 0.7 }),
+    'Cockpit': () => new THREE.MeshStandardMaterial({ color: lin(0.028, 0.03, 0.032), roughness: 0.7 }),
     'Panel': () => new THREE.MeshStandardMaterial({ color: lin(0.02, 0.02, 0.025), roughness: 0.5 }),
     'Tyre': () => new THREE.MeshStandardMaterial({ color: lin(0.03, 0.03, 0.03), roughness: 0.85 }),
     'Marker': () => new THREE.MeshStandardMaterial({ color: lin(0.83, 0.26, 0.18), roughness: 0.5, emissive: lin(0.2, 0.04, 0.02) }),
@@ -146,9 +149,9 @@ const HOTSPOTS: [string, string, string][] = [['inlet', 'Inlet spike', '#inlet']
       #include <clipping_planes_pars_vertex>
       varying vec3 vN; varying vec3 vV;
       void main() {
-        vec4 mv = modelViewMatrix * vec4(position, 1.0);
-        vN = normalize(normalMatrix * normal); vV = normalize(-mv.xyz);
-        gl_Position = projectionMatrix * mv;
+        vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);   // the name the clipping chunk reads
+        vN = normalize(normalMatrix * normal); vV = normalize(-mvPosition.xyz);
+        gl_Position = projectionMatrix * mvPosition;
         #include <clipping_planes_vertex>
       }`,
     fragmentShader: `
@@ -213,7 +216,19 @@ const HOTSPOTS: [string, string, string][] = [['inlet', 'Inlet spike', '#inlet']
     const area = (w: number, h: number, intensity: number, pos: [number, number, number], color = 0xffffff) => {
       const l = new THREE.RectAreaLight(color, intensity, w, h); l.position.set(...pos); l.lookAt(-15, 0, 0); scene.add(l);
     };
-    area(22, 9, 4, [-14, 22, 0]);
+    area(22, 9, 2.6, [-14, 22, 0]);
+    // soft shadows: a key light where the softbox hangs casts filtered shadow maps, so the wings
+    // shade the nacelles, the fins the tail cone, and the cutaway and exploded views show depth
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFShadowMap;
+    const key = new THREE.DirectionalLight(0xffffff, 1.3);
+    key.position.set(-10, 30, 9); key.target.position.set(-16, 0, 0);
+    key.castShadow = true;
+    key.shadow.mapSize.set(2048, 2048);
+    Object.assign(key.shadow.camera, { left: -32, right: 32, top: 32, bottom: -32, near: 1, far: 90 });
+    key.shadow.camera.updateProjectionMatrix();
+    key.shadow.radius = 5; key.shadow.bias = -0.0004; key.shadow.normalBias = 0.03;
+    scene.add(key, key.target);
     area(36, 2.5, 9, [-34, 7, -24], 0xd1e6ff);
     area(36, 2.5, 9, [-34, 7, 24], 0xd1e6ff);
     area(10, 4, 0.6, [26, 2, 10], 0xffeed9);
@@ -222,12 +237,14 @@ const HOTSPOTS: [string, string, string][] = [['inlet', 'Inlet spike', '#inlet']
     loader.setMeshoptDecoder(MeshoptDecoder);
     const gltf = await loader.loadAsync(fig.dataset.src!);
 
-    // the cutaway removes the near (left) half of the skin: keep z < 0
+    // the cutaway removes the near (right) half of the skin: keep z < 0
     const cutPlane = new THREE.Plane(new THREE.Vector3(0, 0, -1), 0);
     const noClip: THREE.Plane[] = [];
     const clipList: THREE.Plane[] = [];          // shared array: holds cutPlane while the cutaway is on
     const xray = xrayMaterial(clipList);
 
+    // the cutaway cuts the skin and the cockpit tubs (shells), never the parts inside them
+    const clipped = (p: Part) => p.layer === 'skin' || p.id.startsWith('cockpit-');
     // parts: the node that carries a121_part, with every mesh under it
     const parts: Part[] = [];
     const partOf = new Map<THREE.Object3D, Part>();
@@ -245,11 +262,15 @@ const HOTSPOTS: [string, string, string][] = [['inlet', 'Inlet spike', '#inlet']
         const swap = (mat: THREE.Material) => {
           const nm = MATERIALS[mat.name] ? MATERIALS[mat.name]() : (mat as THREE.MeshStandardMaterial);
           nm.side = THREE.DoubleSide;   // mirrored parts carry flipped winding
-          nm.clippingPlanes = p.layer === 'skin' ? clipList : noClip;
+          if (mat.name.startsWith('Marking')) { nm.polygonOffset = true; nm.polygonOffsetFactor = -3; nm.polygonOffsetUnits = -3; }
+          if (nm.emissive) nm.userData.emissive = { color: nm.emissive.clone(), intensity: nm.emissiveIntensity };
+          nm.clippingPlanes = clipped(p) ? clipList : noClip;
           return nm;
         };
         m.material = Array.isArray(m.material) ? m.material.map(swap) : swap(m.material);
         m.userData.solid = m.material;
+        m.castShadow = ![m.material].flat().some((x) => x.transparent);
+        m.receiveShadow = true;
         p.meshes.push(m);
         partOf.set(m, p);
       });
@@ -281,6 +302,7 @@ const HOTSPOTS: [string, string, string][] = [['inlet', 'Inlet spike', '#inlet']
       for (const p of parts) for (const m of p.meshes) {
         m.material = xrayOn && p.layer === 'skin' ? xray : m.userData.solid;
         m.renderOrder = xrayOn && p.layer === 'skin' ? 2 : 0;
+        m.castShadow = !(xrayOn && p.layer === 'skin') && ![m.userData.solid].flat().some((x: THREE.Material) => x.transparent);
       }
       dirty = true;
     };
@@ -310,7 +332,8 @@ const HOTSPOTS: [string, string, string][] = [['inlet', 'Inlet spike', '#inlet']
       if (!p) return;
       for (const m of p.meshes) for (const mt of [m.userData.solid as THREE.Material].flat()) {
         const s = mt as THREE.MeshStandardMaterial;
-        if (s.emissive) { s.emissive.set(on ? 0xd4432f : 0x000000); s.emissiveIntensity = on ? 0.35 : 1; }
+        const e0 = s.userData.emissive as { color: THREE.Color; intensity: number } | undefined;
+        if (s.emissive) { if (on) { s.emissive.set(0xd4432f); s.emissiveIntensity = 0.35; } else if (e0) { s.emissive.copy(e0.color); s.emissiveIntensity = e0.intensity; } }
       }
     };
     const select = (p: Part | null) => {
@@ -335,7 +358,7 @@ const HOTSPOTS: [string, string, string][] = [['inlet', 'Inlet spike', '#inlet']
       const r = canvas.getBoundingClientRect();
       ray.setFromCamera(new THREE.Vector2(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1), camera);
       const hits = ray.intersectObjects(parts.filter((p) => p.obj.visible).flatMap((p) => p.meshes), false)
-        .filter((h) => !(clipList.length && partOf.get(h.object as THREE.Mesh)?.layer === 'skin' && cutPlane.distanceToPoint(h.point) < 0))
+        .filter((h) => { const q = partOf.get(h.object as THREE.Mesh); return !(clipList.length && q && clipped(q) && cutPlane.distanceToPoint(h.point) < 0); })
         .filter((h) => !(xrayOn && partOf.get(h.object as THREE.Mesh)?.layer === 'skin' && parts.some((p) => p.layer !== 'skin' && p.obj.visible)));
       select(hits.length ? partOf.get(hits[0].object as THREE.Mesh) ?? null : null);
     });

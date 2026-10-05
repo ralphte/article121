@@ -4,7 +4,7 @@
   "title": "SR-71A-1 Flight Manual (T.O. SR-71A-1), Issue E, Change 2, 31 July 1989",
   "publisher": "U.S. Air Force",
   "url": "https://archive.org/details/0003756-lockheed-sr-71-03",
-  "uses": 107
+  "uses": 130
  },
  {
   "id": "central-intelligence-agency-center-for-t-70081b",
@@ -121,6 +121,13 @@
   "uses": 10
  },
  {
+  "id": "nasa-6f48e2",
+  "title": "YF-12 inlet suppression of compressor-face pressure transients (Lockheed, NASA CR-163106)",
+  "publisher": "NASA",
+  "url": "https://ntrs.nasa.gov/api/citations/19810012550/downloads/19810012550.pdf",
+  "uses": 10
+ },
+ {
   "id": "nasa-history-division-d3ceea",
   "title": "Mach 3+: NASA/USAF YF-12 Flight Research, 1969-1979 (Peter W. Merlin, Monographs in Aerospace History No. 25, NASA SP-2001-4525)",
   "publisher": "NASA History Division",
@@ -130,6 +137,13 @@
   "archived": "2026-04-28"
  },
  {
+  "id": "nasa-5512ae",
+  "title": "Wilson, Cazier and Larson, Results of Ground Vibration Tests on a YF-12 Airplane, NASA TM X-2880, 1973",
+  "publisher": "NASA",
+  "url": "https://ntrs.nasa.gov/api/citations/19730021212/downloads/19730021212.pdf",
+  "uses": 9
+ },
+ {
   "id": "smithsonian-national-air-and-space-museu-2583e3",
   "title": "Lockheed SR-71 Blackbird (object A19920072000)",
   "publisher": "Smithsonian National Air and Space Museum",
@@ -137,13 +151,6 @@
   "uses": 8,
   "archive": "https://web.archive.org/web/20260923222523/https://airandspace.si.edu/collection-objects/lockheed-sr-71-blackbird/nasm_A19920072000",
   "archived": "2026-09-23"
- },
- {
-  "id": "nasa-5512ae",
-  "title": "Wilson, Cazier and Larson, Results of Ground Vibration Tests on a YF-12 Airplane, NASA TM X-2880, 1973",
-  "publisher": "NASA",
-  "url": "https://ntrs.nasa.gov/api/citations/19730021212/downloads/19730021212.pdf",
-  "uses": 8
  },
  {
   "id": "national-museum-of-the-united-states-air-ef079b",
@@ -250,6 +257,13 @@
   "offline": "site returns 503 to every request (checked 2026-10-04)"
  },
  {
+  "id": "nasa-a437f2",
+  "title": "YF-12 Experiments Symposium, Volume 1 (NASA CP-2054, 1978)",
+  "publisher": "NASA",
+  "url": "https://ntrs.nasa.gov/api/citations/19780024112/downloads/19780024112.pdf",
+  "uses": 4
+ },
+ {
   "id": "this-day-in-aviation-7789ed",
   "title": "Tag archive: 60-6934",
   "publisher": "This Day in Aviation",
@@ -336,13 +350,6 @@
   "title": "Dynamic Response of a YF-12 Inlet (Dustin, Cole and Neiner, NASA TM X-3144, 1974)",
   "publisher": "NASA",
   "url": "https://ntrs.nasa.gov/api/citations/19750003899/downloads/19750003899.pdf",
-  "uses": 3
- },
- {
-  "id": "nasa-6f48e2",
-  "title": "YF-12 inlet suppression of compressor-face pressure transients (Lockheed, NASA CR-163106)",
-  "publisher": "NASA",
-  "url": "https://ntrs.nasa.gov/api/citations/19810012550/downloads/19810012550.pdf",
   "uses": 3
  },
  {
@@ -1856,13 +1863,6 @@
   "archived": "2026-01-19"
  },
  {
-  "id": "nasa-a437f2",
-  "title": "YF-12 Experiments Symposium, Volume 1 (NASA CP-2054, 1978)",
-  "publisher": "NASA",
-  "url": "https://ntrs.nasa.gov/api/citations/19780024112/downloads/19780024112.pdf",
-  "uses": 1
- },
- {
   "id": "nasa-f62692",
   "title": "Mach 3 Legend: Design and Development of the Lockheed Blackbird (Peter W. Merlin, 2012)",
   "publisher": "NASA",
@@ -1892,6 +1892,13 @@
   "title": "Wind-Tunnel Development of an SR-71 Aerospike Rocket Flight Test Configuration (NASA TM-4749, 1996)",
   "publisher": "NASA",
   "url": "https://ntrs.nasa.gov/api/citations/19960038443/downloads/19960038443.pdf",
+  "uses": 1
+ },
+ {
+  "id": "central-intelligence-agency-prepared-by--141320",
+  "title": "A-12 Support Manual, Ground Handling (document C06230171), released 25 July 2017",
+  "publisher": "Central Intelligence Agency (prepared by Lockheed)",
+  "url": "https://archive.org/download/cia-readingroom-document-06230171/06230171.pdf",
   "uses": 1
  }
 ]

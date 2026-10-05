@@ -95,6 +95,11 @@
    "title": "Corda, Moes, Mizukami et al., The SR-71 Test Bed Aircraft: A Facility for High-Speed Flight Research, NASA/TP-2000-209023, June 2000",
    "publisher": "NASA",
    "url": "https://ntrs.nasa.gov/api/citations/20000064011/downloads/20000064011.pdf"
+  },
+  "A12GH": {
+   "title": "A-12 Support Manual, Ground Handling (document C06230171), released 25 July 2017",
+   "publisher": "Central Intelligence Agency (prepared by Lockheed)",
+   "url": "https://archive.org/download/cia-readingroom-document-06230171/06230171.pdf"
   }
  },
  "intro": {
@@ -983,7 +988,7 @@
   }
  },
  "model": {
-  "text": "Article 121 built this model in Blender from NASA Dryden's vector three-view of the SR-71A, put on true scale with the fuselage stations in a NASA wind-tunnel report (nose at station 102, tail cone at 1355). The cross-sections are measured from a Lockheed lines drawing whose original has not yet been traced to a government archive. Its outline overlaps NASA's drawing by 97.6 percent in plan view and 95.4 percent in side view. It is a reconstruction, not a scan: markings, panel lines, landing gear and the cockpit interiors are not modelled yet.",
+  "text": "Article 121 built this model in Blender from NASA Dryden's vector three-view of the SR-71A, put on true scale with the fuselage stations in a NASA wind-tunnel report (nose at station 102, tail cone at 1355). The cross-sections are measured from a Lockheed lines drawing whose original has not yet been traced to a government archive; the inlet and spike come from Lockheed's YF-12 inlet report, and the nacelle exit, the chine to wing junction and the panel lines from the flight manual and NASA's YF-12 structure report. It is a reconstruction, not a scan: the engine internals, cockpits and markings are representative.",
   "cite": [
    [
     "EG0075",
@@ -992,6 +997,18 @@
    [
     "TM4749",
     "figures 4 and 5"
+   ],
+   [
+    "CR163106",
+    "Figure 4"
+   ],
+   [
+    "FM",
+    "Figure 4-37"
+   ],
+   [
+    "TMX2880",
+    "p.2 to 3, table 3"
    ]
   ]
  },
@@ -1022,11 +1039,15 @@
   },
   "forward-fuselage": {
    "title": "Forward fuselage and cockpits",
-   "text": "Two cockpits in tandem, the pilot forward and the reconnaissance systems officer behind, each under its own canopy. The cockpits held a 26,000 ft or 10,000 ft pressure schedule.",
+   "text": "Two cockpits in tandem, the pilot forward and the reconnaissance systems officer behind, each under its own canopy. The cockpits held a 26,000 ft or 10,000 ft pressure schedule. The red RESCUE arrows and ejection seat triangles are the A-12 ground handling manual's crash rescue markings, drawn from its figure; their places on the SR-71A and their colour are placeholders, since the manual gives neither.",
    "cite": [
     [
      "FM",
      "p.1-186 to 1-187; Figures 1-12 and 1-17"
+    ],
+    [
+     "A12GH",
+     "Figure 2-6, sheet 1"
     ]
    ]
   },
@@ -1172,8 +1193,12 @@
   },
   "spike": {
    "title": "Inlet spike",
-   "text": "Locked forward below 30,000 feet; from Mach 1.6 it moves aft about 1-5/8 inches per 0.1 Mach, to about 26 inches, closing the throat to 54 percent of its Mach 1.6 area.",
+   "text": "Shown forward, as it is parked: a cone whose tip stands 3.35 cowl radii (about 98 in) ahead of the cowl lip, its widest point at the lip. Locked forward below 30,000 feet; from Mach 1.6 it moves aft about 1-5/8 inches per 0.1 Mach, to about 26 inches, closing the throat to 54 percent of its Mach 1.6 area.",
    "cite": [
+    [
+     "CR163106",
+     "Figure 4 (spike forward)"
+    ],
     [
      "FM",
      "p.1-31, p.1-43"
@@ -1188,17 +1213,9 @@
    "title": "Pratt & Whitney J58",
    "alias": "j58"
   },
-  "engine-face-l": {
-   "title": "Pratt & Whitney J58",
-   "alias": "j58"
-  },
-  "engine-face-r": {
-   "title": "Pratt & Whitney J58",
-   "alias": "j58"
-  },
   "j58": {
    "title": "Pratt & Whitney J58",
-   "text": "JT11D-20 bleed-bypass turbojet with afterburner, 34,000 lbf in maximum afterburner. A nine-stage compressor with a pressure ratio of only 8.8 to 1, eight burner cans and a two-stage turbine. Shape here is representative, after the flight manual cutaway.",
+   "text": "JT11D-20 bleed-bypass turbojet with afterburner, 34,000 lbf in maximum afterburner. Drawn here with its casing cut open, as the flight manual draws it, so the stages show: inlet guide vanes, compressor, burner cans, turbine and afterburner. Shapes are representative, after the manual's cutaway.",
    "cite": [
     [
      "FM",
@@ -1438,7 +1455,7 @@
   },
   "panel-pilot": {
    "title": "Pilot's instrument panel",
-   "text": "50 numbered items in the flight manual, from the attitude director indicator in the middle to the inlet controls at lower left. See the panel explorer below.",
+   "text": "The flight manual's drawing of the panel, on the panel: 50 numbered items, from the attitude director indicator in the middle to the inlet controls at lower left. See the panel explorer below.",
    "cite": [
     [
      "FM",
@@ -1448,7 +1465,7 @@
   },
   "panel-rso": {
    "title": "RSO's instrument panel",
-   "text": "The reconnaissance systems officer's panel: viewsight at the top, radar display below, no flight controls.",
+   "text": "The flight manual's drawing of the reconnaissance systems officer's panel, on the panel: viewsight at the top, radar display below, no flight controls.",
    "cite": [
     [
      "FM",
@@ -1597,6 +1614,158 @@
      "p.1-89; Figure 2-3, p.2-30"
     ]
    ]
+  },
+  "spike-struts": {
+   "title": "Centrebody struts",
+   "text": "Four struts hold the spike's centrebody in the duct, between the forward bypass and the engine face.",
+   "cite": [
+    [
+     "FM",
+     "Figure 1-20"
+    ],
+    [
+     "CP2054",
+     "p.24"
+    ],
+    [
+     "CR163106",
+     "Figure 4"
+    ]
+   ]
+  },
+  "spike-struts-l": {
+   "title": "Centrebody struts",
+   "alias": "spike-struts"
+  },
+  "spike-struts-r": {
+   "title": "Centrebody struts",
+   "alias": "spike-struts"
+  },
+  "j58-compressor": {
+   "title": "J58 compressor",
+   "text": "Two-position inlet guide vanes (axial for takeoff and acceleration, cambered from about Mach 1.9), then a single-rotor nine-stage compressor with a pressure ratio of 8.8 to 1. Above about Mach 1.8 to 2.0, air bleeds from the fourth stage into the six bypass tubes.",
+   "cite": [
+    [
+     "FM",
+     "p.1-4 to 1-7, p.1-19 to 1-21, Figure 1-2"
+    ]
+   ]
+  },
+  "j58-compressor-l": {
+   "title": "J58 compressor",
+   "alias": "j58-compressor"
+  },
+  "j58-compressor-r": {
+   "title": "J58 compressor",
+   "alias": "j58-compressor"
+  },
+  "j58-burner": {
+   "title": "J58 burner",
+   "text": "Eight burner cans with 48 dual-orifice fuel nozzles, six to a can. Ignition is chemical: triethylborane (TEB), which burns on contact with air, from a 600 cc tank on each engine good for at least 16 shots.",
+   "cite": [
+    [
+     "FM",
+     "p.1-9, p.1-11, p.1-22, Figure 1-2"
+    ]
+   ]
+  },
+  "j58-burner-l": {
+   "title": "J58 burner",
+   "alias": "j58-burner"
+  },
+  "j58-burner-r": {
+   "title": "J58 burner",
+   "alias": "j58-burner"
+  },
+  "j58-turbine": {
+   "title": "J58 turbine",
+   "text": "A two-stage turbine drives the compressor.",
+   "cite": [
+    [
+     "FM",
+     "p.1-7, Figure 1-2"
+    ]
+   ]
+  },
+  "j58-turbine-l": {
+   "title": "J58 turbine",
+   "alias": "j58-turbine"
+  },
+  "j58-turbine-r": {
+   "title": "J58 turbine",
+   "alias": "j58-turbine"
+  },
+  "j58-afterburner": {
+   "title": "J58 afterburner",
+   "text": "Four spray bar rings and four flame holders; fully modulating. The afterburner fuel pump is driven by an air turbine running on compressor discharge air.",
+   "cite": [
+    [
+     "FM",
+     "Figure 1-2 (p.1-6), p.1-12 to 1-19"
+    ]
+   ]
+  },
+  "j58-afterburner-l": {
+   "title": "J58 afterburner",
+   "alias": "j58-afterburner"
+  },
+  "j58-afterburner-r": {
+   "title": "J58 afterburner",
+   "alias": "j58-afterburner"
+  },
+  "j58-nozzle": {
+   "title": "Exhaust nozzle",
+   "text": "The engine's own variable-area nozzle, moved by four actuators using engine fuel as hydraulic fluid; the cockpit gauge reads 0 (closed) to 10 (open). The airframe's ejector nozzle surrounds it.",
+   "cite": [
+    [
+     "FM",
+     "Figure 1-2, p.1-19, p.1-21"
+    ]
+   ]
+  },
+  "j58-nozzle-l": {
+   "title": "Exhaust nozzle",
+   "alias": "j58-nozzle"
+  },
+  "j58-nozzle-r": {
+   "title": "Exhaust nozzle",
+   "alias": "j58-nozzle"
+  },
+  "j58-gearbox": {
+   "title": "Gearbox and accessories",
+   "text": "The main gearbox at the bottom of the engine, with the main fuel pump and fuel control. Ground starts turned a starter gear on this gearbox from an external cart. The small tank on the side stands for the TEB tank.",
+   "cite": [
+    [
+     "FM",
+     "Figure 1-2, p.1-22"
+    ]
+   ]
+  },
+  "j58-gearbox-l": {
+   "title": "Gearbox and accessories",
+   "alias": "j58-gearbox"
+  },
+  "j58-gearbox-r": {
+   "title": "Gearbox and accessories",
+   "alias": "j58-gearbox"
+  },
+  "cockpit": {
+   "title": "Cockpit",
+   "text": "The sealed crew compartment: the pilot's cockpit from the instrument panel at about station 258 to the bulkhead at 316, the reconnaissance systems officer's from about 318 to 382. The tub shape here is representative.",
+   "cite": [
+    [
+     "FM",
+     "Figure 4-24, p.4-80"
+    ]
+   ]
+  },
+  "cockpit-pilot": {
+   "title": "Cockpit",
+   "alias": "cockpit"
+  },
+  "cockpit-rso": {
+   "title": "Cockpit",
+   "alias": "cockpit"
   }
  },
  "layers": [

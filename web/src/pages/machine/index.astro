@@ -74,11 +74,11 @@ const isDiagram = (id: string) => id.startsWith('diagram_');
 
     {model && (
       <section class="model3d" aria-labelledby="model-h">
-        <div class="file-head"><b id="model-h">Exhibit 3D</b><span>SR-71A, Article 121 model v0.7</span><span>Reconstruction, not a scan</span></div>
-        <ModelViewer src="https://files.article121.com/models/sr71a-v0.7-web.glb" env="/env/studio-small-01.hdr" size="1.7 MB" parts={viewerParts} layers={viewerLayers}>
+        <div class="file-head"><b id="model-h">Exhibit 3D</b><span>SR-71A, Article 121 model v0.8</span><span>Reconstruction, not a scan</span></div>
+        <ModelViewer src="https://files.article121.com/models/sr71a-v0.8-web.glb" env="/env/studio-small-01.hdr" size="2.8 MB" parts={viewerParts} layers={viewerLayers}>
           <p>{model.text}<Fragment set:html={supHtml(model.marks)} /></p>
           <p>Select any part to read what it is. X-ray shows the engines through the skin, Cutaway removes the near half, and Explode pulls the aircraft apart along its joints. Layers add the internal structure, fuel tanks, cockpits, equipment bays and landing gear, placed from the flight manual and NASA's YF-12A structure drawings; each part says whether it is measured or representative.</p>
-          <p class="label">Lit with the CC0 "Studio Small 01" environment by Greg Zaal (Poly Haven). <a href="https://github.com/ralphte/article121/tree/main/model">How it was built</a> · <a href="https://files.article121.com/models/sr71a-v0.7.glb">The model file (glTF, 7.0 MB)</a></p>
+          <p class="label">Lit with the CC0 "Studio Small 01" environment by Greg Zaal (Poly Haven). <a href="https://github.com/ralphte/article121/tree/main/model">How it was built</a> · <a href="https://files.article121.com/models/sr71a-v0.8.glb">The model file (glTF, 9.8 MB)</a></p>
         </ModelViewer>
       </section>
     )}

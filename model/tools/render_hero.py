@@ -80,6 +80,7 @@ def dress(m):
         p.inputs["Roughness"].default_value = 0.02
         p.inputs["Coat Weight"].default_value = 1.0
         p.inputs["Coat Roughness"].default_value = 0.0
+        p.inputs["Alpha"].default_value = 0.45          # the cockpits show through, darkly
     elif name == "Ejector metal":
         # bare metal stained by heat: bronze to blue-grey in patches
         noise = node(nt, "ShaderNodeTexNoise", Scale=6.0, Detail=8.0, Roughness=0.6)
@@ -120,6 +121,13 @@ def main():
     for m in bpy.data.materials:
         if m.use_nodes:
             dress(m)
+    # stills show the aircraft as it stands: skin, engines and cockpits; the structure, tanks, bays
+    # and stowed gear inside it are for the interactive viewer's x-ray and exploded views
+    for o in bpy.data.objects:
+        if o.get("a121_layer") in ("structure", "fuel", "bays", "gear"):
+            o.hide_render = True
+            for ch in o.children_recursive:
+                ch.hide_render = True
 
     # world: the studio map lights and reflects; camera rays see the site's ground instead
     world = bpy.data.worlds.new("World"); sc.world = world; world.use_nodes = True

@@ -160,7 +160,18 @@ A useful self-check: with nacelle centrelines at 14.17 ft, a 15 deg cant and fin
 
 Stations for frames, wing beams and ribs, fuel tanks, bays, cockpits and gear are in `research/structure/structure.json` (93 cited items, with the WL to model z conversion z = (WL - 82.0) x 0.0254 m). No public document gives the SR-71A's own frame, longeron or tank bulkhead stations: the wing beams (16 in pitch) and ribs come from the labelled YF-12A drawings in NASA TM X-2880 and TM-104317, which share the SR-71's stations from the wing aft; tanks, bays, cockpits and gear are scaled from flight manual figures 1-40, 4-24, 4-37 and 2-3 (about plus or minus 25 in). The viewer marks these parts "representative".
 
-Known discrepancies between the traced outline and the flight manual, still to resolve:
-- Spike tip: the model's tip (FS 731) matches a retracted spike; a parked aircraft has it forward, at about FS 690.
-- Nacelle exit: model FS 1261 against about FS 1234 in the manual.
-- Chine to wing junction: model FS 730, 20 to 30 in aft of the manual and TM-4749.
+## Model v0.8: outline corrections and detail
+
+The three discrepancies v0.7 left open are resolved in `build_sr71_v2.py`:
+- **Spike.** Rebuilt from CR-163106 fig. 4 (spike forward), digitised at 175 px per cowl radius: a 12.7 deg half-angle cone (the text gives 26 deg included) whose tip stands 3.35 Rc ahead of the lip, 0.77 Rc at the lip, tapering to 0.27 Rc at the engine face; the duct's outer wall from the same figure. With the traced lip at FS 797.6 the tip lands at FS 699, inside the 689 to 702 the flight manual figures give. Axis canted 5.3 deg down and toed in 3.25 deg (TN D-6987 fig. 2). Four centrebody struts at 340, 70, 160 and 250 deg (fig. 4 lower chart).
+- **Nacelle exit.** FS 1234 (flight manual fig. 4-37), so the nacelle is 0.7 m shorter than the trace. The fins overhang the exit by about 0.3 m, as the YF-12A three-view shows. Aft of the side-view trace (x 26.8) the nacelle now holds the trace's last section; before, it fell back to the inlet formula and climbed, which put the v0.7 exit about 0.18 m high and, because the fins are sized from the nacelle axis, made them about 0.13 m too tall.
+- **Chine to wing junction.** The trace already kinks at x 15.50 (FS 712, the flight manual's value); the builder had started the wing-body section 0.4 m later, at 15.9. It now starts at the kink (`JX`).
+
+Silhouette scores against NASA's three-view after the corrections (render_views.py, compare.py, run v12): plan IoU 0.973 (mean 7.7 cm), side IoU 0.944 (mean 4.9 cm), against 0.976 and 0.955 for v0.7. The drop is the corrections themselves: the drawing shows the spike aft, the nacelle long and the fins about 0.27 m taller than the published span.
+
+Also new in v0.8:
+- **Handedness.** `obj()` used to map the model frame to Blender as (-x, y, z), a mirror, so every exported model so far was the mirror image of the aircraft (invisible on a symmetric airframe, wrong for lettering and the left and right bays). It is now (-x, -y, z), a half turn; explode vectors follow.
+- **J58** after the flight manual cutaway (fig. 1-2), as separate parts: cut-open casing, inlet guide vanes and nine-stage compressor, eight burner cans, two-stage turbine, four spray bar rings and four flame holders, sixteen nozzle flaps, six bypass tubes, gearbox and TEB tank. Representative.
+- **Cockpits.** Window openings under the canopy glass, which is now translucent; tubs; the flight manual drawings of the two instrument panels (figs. 1-12 and 1-17) on the panels, cut by `textures.py`.
+- **Panel lines** from cited stations: nose joint FS 235, forebody joint FS 715, the refuelling receptacle and drag chute doors, the suck-in and tertiary door bands, the elevon hinge lines (TM X-2880 table 3), the stub fin split. Wing corrugations are left out: no source gives their pitch.
+- **Markings.** The A-12 ground handling manual's crash rescue markings (fig. 2-6 sheet 1), cut from the figure. Their places on the SR-71A and their red are placeholders: the manual gives neither.
