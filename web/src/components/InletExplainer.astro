@@ -138,6 +138,15 @@ const ROWS: [keyof State, string][] = [
   .ix-table td.changed { animation: ix-flash 0.8s ease-out; }
   @keyframes ix-flash { from { background: var(--marking-soft); } to { background: transparent; } }
   .ix-note { margin: 0; font-size: 0.8rem; color: var(--ink-3); line-height: 1.5; }
+  /* wide screens: the readouts stand beside the diagram they describe */
+  @media (min-width: 1500px) {
+    .inlet { grid-template-columns: minmax(0, 1.7fr) minmax(300px, 1fr); grid-template-areas: "top read" "svg read" "table read" "note note"; column-gap: clamp(20px, 2.4vw, 40px); }
+    .ix-top { grid-area: top; }
+    .ix-svg-wrap { grid-area: svg; }
+    .ix-readouts { grid-area: read; grid-template-columns: minmax(0, 1fr); align-self: start; }
+    .ix-table-wrap { grid-area: table; }
+    .ix-note { grid-area: note; }
+  }
   @media (max-width: 760px) {
     .ix-top { grid-template-columns: auto minmax(0, 1fr); }
     .ix-top .btn { grid-column: 1 / -1; justify-content: center; }

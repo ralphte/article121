@@ -61,8 +61,8 @@ const used = await resolveCitations(toCites([...order.keys()].map((source) => ({
 const pageSources = used.map(({ entry }) => ({ entry, n: order.get(entry.id)!, pages: [...(pages.get(entry.id) ?? [])] })).sort((a, b) => a.n - b.n);
 const isDiagram = (id: string) => id.startsWith('diagram_');
 ---
-<Base title="The Machine" description="What made the SR-71 special, system by system: the inlet, the J58, the cockpits, the heat, the fuel and the escape system, from the flight manual and NASA's reports.">
-  <div class="wrap">
+<Base wide title="The Machine" description="What made the SR-71 special, system by system: the inlet, the J58, the cockpits, the heat, the fuel and the escape system, from the flight manual and NASA's reports.">
+  <div class="wrap fluid">
     <header class="page-head panel ticks">
       <div class="file-head"><b>File A121-0005</b><span>The machine</span><span>SR-71A systems</span></div>
       <h1 class="display">The Machine</h1>
@@ -95,7 +95,7 @@ const isDiagram = (id: string) => id.startsWith('diagram_');
       </dl>
     </section>
 
-    <div class="hero-photo"><Photo photo={hero} sizes="(max-width: 1240px) 100vw, 1240px" eager /></div>
+    <div class="hero-photo"><Photo photo={hero} sizes="(max-width: 2240px) 100vw, 2240px" eager /></div>
 
     {sections.map((s, i) => (
       <section class="sys panel ticks" id={s.id} aria-labelledby={`${s.id}-h`}>
@@ -169,6 +169,30 @@ const isDiagram = (id: string) => id.startsWith('diagram_');
 
   @media (max-width: 900px) {
     .sys-body { grid-template-columns: minmax(0, 1fr); }
+  }
+  /* Wide screens: the header splits into the lede and an index column, the text keeps its
+     reading measure while the exhibits take the rest, and the source list runs in columns. */
+  @media (min-width: 1200px) {
+    .page-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 0.5fr); column-gap: clamp(28px, 4vw, 80px); align-items: start; }
+    .page-head > .file-head, .page-head > h1 { grid-column: 1 / -1; }
+    .toc { margin-top: 0; display: grid; grid-template-columns: minmax(0, 1fr); align-content: start; }
+    .plate-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }   /* the 12 plate rows in two full rows */
+    .srcs ol { display: block; columns: 2; column-gap: clamp(32px, 4vw, 72px); }
+    .srcs li { break-inside: avoid; margin-bottom: 10px; }
+  }
+  @media (min-width: 1400px) {
+    .sys-body { grid-template-columns: minmax(0, 66ch) minmax(0, 1fr); gap: clamp(32px, 3.4vw, 72px); }
+    .sys-figs { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+    .sys-figs.single { grid-template-columns: minmax(0, 760px); }
+  }
+  @media (min-width: 1600px) {
+    .hero-photo :global(.shot img) { aspect-ratio: 3 / 1; }
+  }
+  @media (min-width: 1700px) {
+    .toc { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (min-width: 2000px) {
+    .srcs ol { columns: 3; }
   }
   @media (max-width: 520px) {
     .sys-figs { grid-template-columns: minmax(0, 1fr); }

@@ -140,6 +140,10 @@ footer.site p { margin: 0; max-width: 72ch; }
 /* Site layout additions */
 .wrap { max-width: 1240px; margin: 0 auto; padding-inline: 16px; }
 .wrap.wide { max-width: 1320px; }
+/* fluid: a page that uses wide screens; gutters grow with the window */
+.wrap.fluid { max-width: 2240px; padding-inline: clamp(16px, 2.4vw, 48px); }
+body.wide footer.site { padding-inline: clamp(16px, 2.4vw, 48px); }
+body.wide footer.site .inner { max-width: 2144px; }   /* the fluid wrap less its widest gutters */
 main { display: block; }
 .skip { position: absolute; left: -9999px; top: 0; z-index: 100; background: var(--stencil); color: var(--void); padding: 10px 14px; }
 .skip:focus { left: 16px; top: 16px; }

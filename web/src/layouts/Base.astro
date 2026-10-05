@@ -6,11 +6,14 @@ interface Props {
   description?: string;
   image?: string;
   path?: string;
+  /** a page laid out across wide screens; the footer follows its width */
+  wide?: boolean;
 }
 const {
   title,
   description = 'A documented history of the Lockheed A-12, YF-12, M-21 and SR-71, with every photograph, date and figure credited and linked to its source.',
   image = '/og.jpg',
+  wide = false,
 } = Astro.props;
 const full = title === 'Article 121' ? 'Article 121 · The Blackbird archive' : `${title} · Article 121`;
 const here = Astro.url.pathname;
@@ -39,7 +42,7 @@ const noindex = import.meta.env.PUBLIC_NOINDEX === '1';
   <link rel="preload" href="/fonts/archivo-300-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>
-<body>
+<body class:list={[{ wide }]}>
   <a class="skip" href="#main">Skip to content</a>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <filter id="ink"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="4" /><feDisplacementMap in="SourceGraphic" scale="2.2" /></filter>

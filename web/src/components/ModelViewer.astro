@@ -17,25 +17,26 @@ const HOTSPOTS: [string, string, string][] = [['inlet', 'Inlet spike', '#inlet']
 <figure class="mv" data-mv data-src={src} data-env={env}>
   <script type="application/json" data-mv-parts set:html={JSON.stringify({ parts, layers })} />
   <div class="mv-stage">
-    <Picture class="mv-poster" src={poster} alt="Render of the Article 121 SR-71A model from the front left, against black" widths={[800, 1200, 1600, 2400]} sizes="(max-width: 1240px) 100vw, 1240px" formats={['avif', 'webp']} loading="eager" />
+    <Picture class="mv-poster" src={poster} alt="Render of the Article 121 SR-71A model from the front left, against black" widths={[800, 1200, 1600, 2400]} sizes="(max-width: 1199px) 100vw, 78vw" formats={['avif', 'webp']} loading="eager" />
     <canvas class="mv-canvas" role="img" aria-label="Interactive 3D model of the SR-71A. Drag to turn it, scroll or pinch to zoom, select a part to read about it."></canvas>
     <div class="mv-hots" aria-hidden="false">
       {HOTSPOTS.map(([id, label, href]) => <a class="mv-hot" data-hot={id} href={href} hidden><i></i><span>{label}</span></a>)}
     </div>
-    <aside class="mv-info" data-info hidden aria-live="polite">
-      <div class="mv-info-head"><span class="label" data-info-layer></span><button type="button" class="mv-x" data-info-close aria-label="Close">×</button></div>
-      <h3 data-info-title></h3>
-      <p data-info-text></p>
-      <p class="mv-acc" data-info-acc></p>
-    </aside>
     <p class="mv-status label" data-status>Loading the 3D model ({size})</p>
   </div>
+  <aside class="mv-info" data-info hidden aria-live="polite">
+    <div class="mv-info-head"><span class="label" data-info-layer></span><button type="button" class="mv-x" data-info-close aria-label="Close">×</button></div>
+    <h3 data-info-title></h3>
+    <p data-info-text></p>
+    <p class="mv-acc" data-info-acc></p>
+  </aside>
+  <p class="mv-hint">Select any part of the aircraft to read what it is and where it comes from.</p>
   <div class="mv-bar">
     <div class="mv-row">
       <div class="mv-group" role="group" aria-label="Views">
         {VIEWS.map(([id, label], i) => <button type="button" class="chip" data-view={id} aria-pressed={i === 0 ? 'true' : 'false'}>{label}</button>)}
       </div>
-      <div class="mv-group">
+      <div class="mv-group" role="group" aria-label="Display">
         <button type="button" class="chip" data-labels aria-pressed="true">Labels</button>
         <button type="button" class="chip" data-spin aria-pressed="false">Turntable</button>
       </div>
@@ -55,9 +56,12 @@ const HOTSPOTS: [string, string, string][] = [['inlet', 'Inlet spike', '#inlet']
 </figure>
 
 <style>
-  .mv { margin: 0; border: 1px solid var(--seam-2); background: var(--void); }
-  .mv-stage { position: relative; aspect-ratio: 16 / 9; overflow: hidden; touch-action: none; }
-  .mv-stage :global(.mv-poster), .mv-stage :global(.mv-poster img) { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 0.8s ease; }
+  /* One grid: on narrow screens the stage, the controls and the caption stack, and a selected
+     part's card lies over the stage; from 1200 px the controls and the card move to a rail. */
+  .mv { margin: 0; border: 1px solid var(--seam-2); background: var(--void); display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "stage" "bar" "cap"; }
+  .mv-stage { grid-area: stage; position: relative; aspect-ratio: 16 / 9; overflow: hidden; touch-action: none; }
+  /* contain, not cover: on the taller wide-screen stage the render keeps the whole aircraft, as the live view does */
+  .mv-stage :global(.mv-poster), .mv-stage :global(.mv-poster img) { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; transition: opacity 0.8s ease; }
   .mv-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; opacity: 0; transition: opacity 0.8s ease; cursor: grab; }
   .mv-canvas:active { cursor: grabbing; }
   [data-mv][data-ready] .mv-canvas { opacity: 1; }
@@ -75,27 +79,49 @@ const HOTSPOTS: [string, string, string][] = [['inlet', 'Inlet spike', '#inlet']
   .mv-hot:hover span, .mv-hot:focus-visible span { border-color: var(--marking); }
   .mv-hot.behind { opacity: 0; pointer-events: none; }
   .mv-info {
-    position: absolute; right: 12px; top: 12px; width: min(340px, calc(100% - 24px)); max-height: calc(100% - 24px); overflow: auto;
+    grid-area: stage; justify-self: end; align-self: start; z-index: 2; margin: 12px;
+    width: min(340px, calc(100% - 24px)); max-height: calc(100% - 24px); overflow: auto;
     background: rgba(8, 11, 16, 0.9); border: 1px solid var(--seam-2); border-left: 3px solid var(--marking); padding: 12px 14px; backdrop-filter: blur(4px);
   }
+  .mv-hint { display: none; }
   .mv-info-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
   .mv-x { all: unset; cursor: pointer; font: 400 1.2rem/1 var(--f-body); color: var(--ink-2); padding: 0 4px; }
   .mv-x:hover, .mv-x:focus-visible { color: var(--stencil); }
   .mv-info h3 { font: 700 1.05rem/1.25 var(--f-display); font-stretch: 110%; color: var(--stencil); margin: 6px 0 6px; text-transform: uppercase; letter-spacing: 0.02em; }
   .mv-info p { margin: 0 0 8px; font-size: 0.86rem; line-height: 1.5; color: var(--ink); }
   .mv-info .mv-acc { font: 400 0.64rem/1.4 var(--f-data); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin: 0; }
-  .mv-bar { display: grid; gap: 8px; padding: 12px 14px; border-top: 1px solid var(--seam); }
+  .mv-bar { grid-area: bar; display: grid; gap: 8px; padding: 12px 14px; border-top: 1px solid var(--seam); }
   .mv-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 14px; }
   .mv-group { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
   .mv-slider { display: inline-flex; align-items: center; gap: 8px; padding: 0 4px; }
   .mv-slider input { width: 130px; accent-color: var(--marking); }
   .chip[disabled] { opacity: 0.35; cursor: not-allowed; }
-  figcaption { padding: 0 14px 14px; font-size: 0.86rem; line-height: 1.55; color: var(--ink-2); }
+  figcaption { grid-area: cap; padding: 0 14px 14px; font-size: 0.86rem; line-height: 1.55; color: var(--ink-2); }
   figcaption :global(p) { margin: 0 0 8px; max-width: 78ch; }
   @media (max-width: 640px) {
     .mv-stage { aspect-ratio: 4 / 3; }
     .mv-hot span { display: none; }
-    .mv-info { left: 8px; right: 8px; top: auto; bottom: 8px; width: auto; max-height: 55%; }
+    .mv-info { justify-self: stretch; align-self: end; margin: 8px; width: auto; max-height: 55%; }
+  }
+  @media (min-width: 1200px) {
+    .mv {
+      grid-template-columns: minmax(0, 1fr) clamp(280px, 21vw, 380px);
+      grid-template-rows: auto minmax(0, 1fr) auto;
+      grid-template-areas: "stage bar" "stage info" "cap info";
+    }
+    .mv-stage { aspect-ratio: auto; height: clamp(520px, calc(100vh - 120px), 1150px); }
+    .mv-bar { border-top: 0; border-left: 1px solid var(--seam); padding: 16px 18px; gap: 18px; align-content: start; }
+    .mv-row { display: grid; gap: 18px; }
+    .mv-group { gap: 6px; }
+    .mv-group::before { content: attr(aria-label); flex-basis: 100%; font: 400 0.6rem/1.3 var(--f-data); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3); }
+    .mv-slider { flex: 1 1 100%; padding: 4px 0 0; }
+    .mv-slider input { flex: 1; width: auto; }
+    .mv-info, .mv-hint { grid-area: info; align-self: start; margin: 0; border-left: 1px solid var(--seam); border-top: 1px solid var(--seam); }
+    .mv-info { justify-self: stretch; width: auto; max-height: none; background: var(--hull); backdrop-filter: none; box-shadow: inset 3px 0 0 var(--marking); padding: 16px 18px; }
+    .mv-hint { display: block; padding: 16px 18px; font-size: 0.84rem; line-height: 1.5; color: var(--ink-3); }
+    .mv-info:not([hidden]) ~ .mv-hint { display: none; }
+    figcaption { padding: 16px 18px; }
+    figcaption :global(p) { max-width: 92ch; }
   }
 </style>
 
