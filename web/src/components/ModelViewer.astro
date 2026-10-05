@@ -60,6 +60,8 @@ const HOTSPOTS: [string, string, string][] = [['inlet', 'Inlet spike', '#inlet']
      part's card lies over the stage; from 1200 px the controls and the card move to a rail. */
   .mv { margin: 0; border: 1px solid var(--seam-2); background: var(--void); display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "stage" "bar" "cap"; }
   .mv-stage { grid-area: stage; position: relative; aspect-ratio: 16 / 9; overflow: hidden; touch-action: none; }
+  /* touch screens: a vertical swipe over the model scrolls the page; a sideways drag turns it and a pinch zooms */
+  @media (pointer: coarse) { .mv-stage { touch-action: pan-y; } }
   /* contain, not cover: on the taller wide-screen stage the render keeps the whole aircraft, as the live view does */
   .mv-stage :global(.mv-poster), .mv-stage :global(.mv-poster img) { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; transition: opacity 0.8s ease; }
   .mv-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; opacity: 0; transition: opacity 0.8s ease; cursor: grab; }
@@ -71,7 +73,7 @@ const HOTSPOTS: [string, string, string][] = [['inlet', 'Inlet spike', '#inlet']
   .mv-hots { position: absolute; inset: 0; pointer-events: none; }
   .mv-hot {
     position: absolute; left: 0; top: 0; pointer-events: auto; display: inline-flex; align-items: center; gap: 8px;
-    font: 700 0.62rem/1 var(--f-data); letter-spacing: 0.14em; text-transform: uppercase; color: var(--stencil);
+    font: 700 max(0.62rem, var(--floor))/1 var(--f-data); letter-spacing: 0.14em; text-transform: uppercase; color: var(--stencil);
     text-decoration: none; transition: opacity 0.25s; white-space: nowrap;
   }
   .mv-hot i { width: 9px; height: 9px; border-radius: 50%; background: var(--marking); box-shadow: 0 0 0 3px rgba(212, 67, 47, 0.28); flex: none; }
@@ -81,7 +83,7 @@ const HOTSPOTS: [string, string, string][] = [['inlet', 'Inlet spike', '#inlet']
   .mv-info {
     grid-area: stage; justify-self: end; align-self: start; z-index: 2; margin: 12px;
     width: min(340px, calc(100% - 24px)); max-height: calc(100% - 24px); overflow: auto;
-    background: rgba(8, 11, 16, 0.9); border: 1px solid var(--seam-2); border-left: 3px solid var(--marking); padding: 12px 14px; backdrop-filter: blur(4px);
+    background: rgba(8, 11, 16, 0.9); border: 1px solid var(--seam-2); border-left: 3px solid var(--marking); padding: 12px 14px; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
   }
   .mv-hint { display: none; }
   .mv-info-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
@@ -89,7 +91,7 @@ const HOTSPOTS: [string, string, string][] = [['inlet', 'Inlet spike', '#inlet']
   .mv-x:hover, .mv-x:focus-visible { color: var(--stencil); }
   .mv-info h3 { font: 700 1.05rem/1.25 var(--f-display); font-stretch: 110%; color: var(--stencil); margin: 6px 0 6px; text-transform: uppercase; letter-spacing: 0.02em; }
   .mv-info p { margin: 0 0 8px; font-size: 0.86rem; line-height: 1.5; color: var(--ink); }
-  .mv-info .mv-acc { font: 400 0.64rem/1.4 var(--f-data); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin: 0; }
+  .mv-info .mv-acc { font: 400 max(0.64rem, var(--floor))/1.4 var(--f-data); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin: 0; }
   .mv-bar { grid-area: bar; display: grid; gap: 8px; padding: 12px 14px; border-top: 1px solid var(--seam); }
   .mv-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 14px; }
   .mv-group { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
@@ -109,15 +111,15 @@ const HOTSPOTS: [string, string, string][] = [['inlet', 'Inlet spike', '#inlet']
       grid-template-rows: auto minmax(0, 1fr) auto;
       grid-template-areas: "stage bar" "stage info" "cap info";
     }
-    .mv-stage { aspect-ratio: auto; height: clamp(520px, calc(100vh - 120px), 1150px); }
+    .mv-stage { aspect-ratio: auto; height: clamp(520px, calc(100vh - 120px), 1150px); height: clamp(520px, calc(100dvh - 120px), 1150px); }
     .mv-bar { border-top: 0; border-left: 1px solid var(--seam); padding: 16px 18px; gap: 18px; align-content: start; }
     .mv-row { display: grid; gap: 18px; }
     .mv-group { gap: 6px; }
-    .mv-group::before { content: attr(aria-label); flex-basis: 100%; font: 400 0.6rem/1.3 var(--f-data); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3); }
+    .mv-group::before { content: attr(aria-label); flex-basis: 100%; font: 400 max(0.6rem, var(--floor))/1.3 var(--f-data); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3); }
     .mv-slider { flex: 1 1 100%; padding: 4px 0 0; }
     .mv-slider input { flex: 1; width: auto; }
     .mv-info, .mv-hint { grid-area: info; align-self: start; margin: 0; border-left: 1px solid var(--seam); border-top: 1px solid var(--seam); }
-    .mv-info { justify-self: stretch; width: auto; max-height: none; background: var(--hull); backdrop-filter: none; box-shadow: inset 3px 0 0 var(--marking); padding: 16px 18px; }
+    .mv-info { justify-self: stretch; width: auto; max-height: none; background: var(--hull); -webkit-backdrop-filter: none; backdrop-filter: none; box-shadow: inset 3px 0 0 var(--marking); padding: 16px 18px; }
     .mv-hint { display: block; padding: 16px 18px; font-size: 0.84rem; line-height: 1.5; color: var(--ink-3); }
     .mv-info:not([hidden]) ~ .mv-hint { display: none; }
     figcaption { padding: 16px 18px; }

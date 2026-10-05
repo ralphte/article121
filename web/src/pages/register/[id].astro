@@ -58,13 +58,13 @@ const og = hero ? (await getImage({ src: hero.data.file, width: 1200, format: 'j
 
       <h2>Record</h2>
       <div class="rec">
-        <div><label>Serial</label><span class="v">{d.serial}</span></div>
-        <div><label>Article</label><span class="v">{d.article ?? 'n/a'}</span></div>
-        <div><label>Type</label><span class="v">{d.type}</span></div>
-        <div><label>Flight hours</label><span class="v">{d.total_hours != null ? d.total_hours.toLocaleString('en-US') : 'Not published'}</span></div>
-        <div class="w2"><label>First flight</label><span class="v">{fmtDate(d.first_flight) || 'Not confirmed'}</span></div>
-        <div class="w2"><label>Status</label><span class="v">{{ preserved: 'Preserved, on display', lost: 'Lost', other: 'See fate' }[d.fate]}</span></div>
-        <div class="w4"><label>{d.fate === 'lost' && d.location ? 'Remains' : 'Where it is now'}</label><span class="v">{d.location ? [d.location.museum, d.location.city, d.location.state_or_country].filter(Boolean).join(', ') : isD21 ? 'See survivors below' : 'Destroyed'}</span></div>
+        <div><span class="k">Serial</span><span class="v">{d.serial}</span></div>
+        <div><span class="k">Article</span><span class="v">{d.article ?? 'n/a'}</span></div>
+        <div><span class="k">Type</span><span class="v">{d.type}</span></div>
+        <div><span class="k">Flight hours</span><span class="v">{d.total_hours != null ? d.total_hours.toLocaleString('en-US') : 'Not published'}</span></div>
+        <div class="w2"><span class="k">First flight</span><span class="v">{fmtDate(d.first_flight) || 'Not confirmed'}</span></div>
+        <div class="w2"><span class="k">Status</span><span class="v">{{ preserved: 'Preserved, on display', lost: 'Lost', other: 'See fate' }[d.fate]}</span></div>
+        <div class="w4"><span class="k">{d.fate === 'lost' && d.location ? 'Remains' : 'Where it is now'}</span><span class="v">{d.location ? [d.location.museum, d.location.city, d.location.state_or_country].filter(Boolean).join(', ') : isD21 ? 'See survivors below' : 'Destroyed'}</span></div>
       </div>
 
       {d.notable.length > 0 && <><h2>Career</h2><ul class="notable">{d.notable.map((n) => <li>{n}</li>)}</ul></>}
@@ -86,25 +86,25 @@ const og = hero ? (await getImage({ src: hero.data.file, width: 1200, format: 'j
 <style>
   .reg { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 20px; margin-top: 24px; align-items: start; }
   .file { padding: clamp(18px, 3.4vw, 44px); min-width: 0; }
-  .sheet-head { display: flex; justify-content: space-between; gap: 6px 18px; flex-wrap: wrap; border-bottom: 1px solid var(--seam-2); padding-bottom: 10px; margin-bottom: 22px; font: 400 0.66rem/1.4 var(--f-data); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
+  .sheet-head { display: flex; justify-content: space-between; gap: 6px 18px; flex-wrap: wrap; border-bottom: 1px solid var(--seam-2); padding-bottom: 10px; margin-bottom: 22px; font: 400 max(0.66rem, var(--floor))/1.4 var(--f-data); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
   .sheet-head b { color: var(--ink); }
   .ident { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 300px); gap: 24px; align-items: start; }
   .serial { font: 800 clamp(2.8rem, 1.6rem + 4vw, 5.2rem)/0.92 var(--f-display); font-stretch: 125%; color: var(--stencil); font-variant-numeric: tabular-nums; margin: 0; }
   .sub { margin-top: 12px; font: 400 0.74rem/1.4 var(--f-data); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-2); }
   .nick { margin-top: 6px; font: italic 400 1rem/1.4 var(--f-typed); color: var(--ink-2); }
   .ident .stamp { margin-top: 20px; }
-  .globe-cap { margin-top: 8px; font: 400 0.66rem/1.5 var(--f-data); letter-spacing: 0.06em; color: var(--ink-3); text-align: center; text-transform: uppercase; }
+  .globe-cap { margin-top: 8px; font: 400 max(0.66rem, var(--floor))/1.5 var(--f-data); letter-spacing: 0.06em; color: var(--ink-3); text-align: center; text-transform: uppercase; }
   .globe-cap b { color: var(--ink); }
   .prints { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 14px; margin: 30px 0 6px; }
   .prints.single { grid-template-columns: minmax(0, 640px); }
   .nophoto { aspect-ratio: 3 / 2; display: grid; place-items: center; text-align: center; padding: 18px; background: repeating-linear-gradient(-45deg, transparent 0 9px, var(--seam) 9px 10px), var(--void); font-size: 0.82rem; color: var(--ink-2); border: 1px solid var(--seam); max-width: 420px; }
   .nophoto b { display: block; font: 800 0.8rem/1.1 var(--f-display); font-stretch: 112%; letter-spacing: 0.16em; text-transform: uppercase; color: var(--marking); border: 2px solid currentColor; padding: 7px 10px 6px; transform: rotate(-3deg); margin: 0 auto 12px; width: max-content; max-width: 100%; }
-  .file h2 { font: 400 0.68rem/1.2 var(--f-data); letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); margin: 34px 0 12px; padding-top: 14px; border-top: 1px solid var(--seam); }
+  .file h2 { font: 400 max(0.68rem, var(--floor))/1.2 var(--f-data); letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); margin: 34px 0 12px; padding-top: 14px; border-top: 1px solid var(--seam); }
   .rec { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--seam); border: 1px solid var(--seam); }
   .rec > div { background: var(--hull); padding: 9px 12px 11px; min-width: 0; }
   .rec .w2 { grid-column: span 2; }
   .rec .w4 { grid-column: span 4; }
-  .rec label { display: block; font: 400 0.56rem/1.3 var(--f-data); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 3px; }
+  .rec .k { display: block; font: 400 max(0.56rem, var(--floor))/1.3 var(--f-data); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 3px; }
   .rec .v { font: 700 0.9rem/1.35 var(--f-data); color: var(--stencil); overflow-wrap: anywhere; }
   ul.notable { margin: 0; padding-left: 1.2rem; display: grid; gap: 7px; font: 400 0.95rem/1.55 var(--f-typed); max-width: 76ch; }
   ul.notable li::marker { color: var(--marking); }
@@ -114,7 +114,7 @@ const og = hero ? (await getImage({ src: hero.data.file, width: 1200, format: 'j
   .mini td { border-bottom: 1px solid var(--seam); padding: 9px 6px; vertical-align: top; color: var(--ink-2); }
   .mini td b { color: var(--ink); }
   .mini td.d { white-space: nowrap; width: 8em; font: 700 0.8rem/1.5 var(--f-data); color: var(--stencil); }
-  .prog { font: 400 0.6rem/1 var(--f-data); letter-spacing: 0.14em; color: var(--marking); text-transform: uppercase; margin-left: 6px; }
+  .prog { font: 400 max(0.6rem, var(--floor))/1 var(--f-data); letter-spacing: 0.14em; color: var(--marking); text-transform: uppercase; margin-left: 6px; }
   ol.src { margin: 0; padding-left: 1.4rem; display: grid; gap: 7px; font-size: 0.84rem; color: var(--ink-2); overflow-wrap: anywhere; }
   .pager { display: flex; justify-content: space-between; gap: 12px; margin-top: 34px; padding-top: 16px; border-top: 1px solid var(--seam-2); flex-wrap: wrap; }
   @media (max-width: 960px) { .reg { grid-template-columns: minmax(0, 1fr); } .ident { grid-template-columns: minmax(0, 1fr); } }

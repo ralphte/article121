@@ -42,7 +42,7 @@ for (const p of photos) lic.set(p.data.license, (lic.get(p.data.license) ?? 0) +
   .pub ol { margin: 0; padding-left: 1.4rem; display: grid; gap: 6px; font-size: 0.9rem; }
   .pub li { scroll-margin-top: 70px; overflow-wrap: anywhere; }
   .pub li:target { background: var(--marking-soft); outline: 1px solid var(--marking); outline-offset: 4px; }
-  .uses { font: 700 0.62rem/1 var(--f-data); color: var(--ink-3); margin-left: 6px; }
-  .arc { display: block; font: 400 0.68rem/1.5 var(--f-data); letter-spacing: 0.04em; color: var(--ink-3); }
+  .uses { font: 700 max(0.62rem, var(--floor))/1 var(--f-data); color: var(--ink-3); margin-left: 6px; }
+  .arc { display: block; font: 400 max(0.68rem, var(--floor))/1.5 var(--f-data); letter-spacing: 0.04em; color: var(--ink-3); }
   .arc a { color: var(--ink-2); text-decoration-color: var(--seam-2); }
 </style>

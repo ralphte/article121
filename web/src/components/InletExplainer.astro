@@ -96,7 +96,7 @@ const ROWS: [keyof State, string][] = [
   .ix-mach output { font: 700 clamp(2.2rem, 1.6rem + 2.4vw, 3.4rem)/1 var(--f-data); color: var(--stencil); font-variant-numeric: tabular-nums; min-width: 3.2ch; }
   .ix-control { display: grid; gap: 6px; min-width: 0; }
   .ix-control input { width: 100%; accent-color: var(--marking); }
-  .ix-scale { display: flex; justify-content: space-between; font: 400 0.62rem/1 var(--f-data); color: var(--ink-3); letter-spacing: 0.08em; }
+  .ix-scale { display: flex; justify-content: space-between; font: 400 max(0.62rem, var(--floor))/1 var(--f-data); color: var(--ink-3); letter-spacing: 0.08em; }
   .ix-svg-wrap { overflow-x: auto; }
   .ix-svg { width: 100%; min-width: 620px; height: auto; display: block; color: var(--seam-2); }
   .ix-axis { stroke: var(--seam-2); stroke-dasharray: 8 6; }

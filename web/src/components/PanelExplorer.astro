@@ -57,9 +57,9 @@ const p = photo.data;
   .hot:focus-visible { outline: 2px solid var(--marking); outline-offset: 2px; }
   .hot.zone-on, .hot.peek { background: rgba(212, 67, 47, 0.12); box-shadow: 0 0 0 1.5px rgba(212, 67, 47, 0.55); }
   .hot[aria-pressed="true"] { background: rgba(212, 67, 47, 0.28); box-shadow: 0 0 0 3px var(--marking), 0 0 0 9px rgba(212, 67, 47, 0.22); }
-  .px-credit { margin: 8px 0 0; font: 400 0.6rem/1.5 var(--f-data); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); overflow-wrap: anywhere; }
+  .px-credit { margin: 8px 0 0; font: 400 max(0.6rem, var(--floor))/1.5 var(--f-data); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); overflow-wrap: anywhere; }
   .px-credit a { color: var(--ink-2); }
-  .px-side { display: grid; gap: 14px; min-width: 0; position: sticky; top: 56px; max-height: calc(100vh - 72px); grid-template-rows: auto auto minmax(0, 1fr) auto; }
+  .px-side { display: grid; gap: 14px; min-width: 0; position: sticky; top: 56px; max-height: calc(100vh - 72px); max-height: calc(100dvh - 72px); grid-template-rows: auto auto minmax(0, 1fr) auto; }
   .px-readout { border: 1px solid var(--seam-2); background: var(--hull); padding: 14px 16px; display: grid; gap: 6px; min-height: 8.5rem; align-content: start; }
   .px-readout b { font: 700 1.15rem/1.25 var(--f-data); color: var(--stencil); }
   .px-note { margin: 0; font-size: 0.9rem; line-height: 1.5; color: var(--ink); }

@@ -29,10 +29,15 @@
   --f-data: "B612 Mono", "SFMono-Regular", Menlo, monospace;     /* cockpit display face */
   --f-typed: "Courier Prime", "Courier New", Courier, monospace; /* the documents themselves */ /* the documents themselves */
   color-scheme: dark;
+  --floor: 0px;             /* smallest text size; raised on phones and touch screens below */
+}
+/* Phones and touch screens: no text under 11 px, and controls large enough for a finger */
+@media (max-width: 760px), (pointer: coarse) {
+  :root { --floor: 11px; }
 }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
-html { background: var(--void); }
+html { background: var(--void); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 body {
   margin: 0; background: var(--void); color: var(--ink);
   font: 400 1rem/1.62 var(--f-body); font-stretch: 100%;
@@ -41,6 +46,9 @@ body {
 a { color: var(--ink); text-decoration-color: var(--marking); text-decoration-thickness: 1px; text-underline-offset: 3px; }
 a:hover { color: var(--stencil); }
 :focus-visible { outline: 2px solid var(--marking); outline-offset: 3px; }
+a, button, summary, label { -webkit-tap-highlight-color: rgba(212, 67, 47, 0.18); }
+/* a long identifier or address in running text breaks rather than widening a phone's page */
+p, li, dd, dt, td, th, figcaption, blockquote, h1, h2, h3 { overflow-wrap: break-word; }
 ::selection { background: var(--marking); color: var(--stencil); }
 
 /* Classification banner and routing bar */
@@ -48,7 +56,7 @@ a:hover { color: var(--stencil); }
   position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30;
   display: flex; justify-content: center; align-items: center; gap: 6px 20px; flex-wrap: wrap;
   padding: 7px 16px; background: var(--void); border-top: 3px solid var(--marking); border-bottom: 1px solid var(--seam);
-  font: 700 0.66rem/1.3 var(--f-data); letter-spacing: 0.24em; text-transform: uppercase; color: var(--ink-2);
+  font: 700 max(0.66rem, var(--floor))/1.3 var(--f-data); letter-spacing: 0.24em; text-transform: uppercase; color: var(--ink-2);
 }
 .banner s { color: var(--marking); text-decoration-thickness: 1.5px; }
 .banner b { color: var(--stencil); font-weight: 700; }
@@ -62,12 +70,12 @@ a:hover { color: var(--stencil); }
   letter-spacing: 0.01em; line-height: 0.92; text-wrap: balance; color: var(--stencil); margin: 0;
 }
 .label {
-  font: 400 0.68rem/1.35 var(--f-data); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3);
+  font: 400 max(0.68rem, var(--floor))/1.35 var(--f-data); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3);
 }
 .typed { font-family: var(--f-typed); }
 h2.section {
   font-family: var(--f-display); font-stretch: 125%; font-weight: 700; text-transform: uppercase;
-  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.4rem); line-height: 1; letter-spacing: 0.01em; margin: 0 0 0.5rem; text-wrap: balance; color: var(--stencil);
+  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.4rem); line-height: 1; letter-spacing: 0.01em; margin: 0 0 max(0.5rem, var(--floor)); text-wrap: balance; color: var(--stencil);
 }
 
 /* Panels: the hull with panel lines and registration ticks at the corners */
@@ -81,7 +89,7 @@ h2.section {
 .file-head {
   display: flex; justify-content: space-between; gap: 6px 18px; flex-wrap: wrap;
   border-bottom: 1px solid var(--seam-2); padding-bottom: 10px; margin-bottom: 20px;
-  font: 400 0.68rem/1.4 var(--f-data); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3);
+  font: 400 max(0.68rem, var(--floor))/1.4 var(--f-data); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3);
 }
 .file-head b { color: var(--ink); font-weight: 700; }
 
@@ -94,6 +102,7 @@ h2.section {
   transform-origin: right center; transition: transform 0.9s cubic-bezier(.7, 0, .2, 1); transition-delay: var(--d, 0s);
 }
 .revealed .redact::after { transform: scaleX(0); }
+@media (max-width: 420px) { .redact { white-space: normal; } }   /* the narrowest phones: let a redacted phrase wrap */
 
 /* Rubber stamps in marking red */
 .stamp {
@@ -101,7 +110,7 @@ h2.section {
   color: var(--marking); border: 2.5px solid currentColor; padding: 8px 12px 6px; border-radius: 3px;
   transform: rotate(-5deg); opacity: 0.9; filter: url(#ink); pointer-events: none;
 }
-.stamp small { display: block; font: 700 0.6rem/1.3 var(--f-data); letter-spacing: 0.12em; margin-top: 4px; }
+.stamp small { display: block; font: 700 max(0.6rem, var(--floor))/1.3 var(--f-data); letter-spacing: 0.12em; margin-top: 4px; }
 .stamp.white { color: var(--stencil); opacity: 0.8; }
 .stamp.land { animation: stamp-land 0.42s cubic-bezier(.3, 1.6, .5, 1) both; }
 @keyframes stamp-land { from { transform: rotate(-5deg) scale(1.7); opacity: 0; } to { transform: rotate(-5deg) scale(1); opacity: 0.9; } }
@@ -117,13 +126,13 @@ h2.section {
 .btn.solid { background: var(--stencil); color: var(--void); border-color: var(--stencil); }
 .btn.solid:hover { background: var(--marking); border-color: var(--marking); color: var(--stencil); }
 .chip {
-  font: 700 0.62rem/1 var(--f-data); letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer;
+  font: 700 max(0.62rem, var(--floor))/1 var(--f-data); letter-spacing: 0.14em; text-transform: uppercase; cursor: pointer;
   padding: 8px 9px; color: var(--ink-2); background: transparent; border: 1px solid var(--seam-2);
 }
 .chip[aria-pressed="true"] { color: var(--void); background: var(--stencil); border-color: var(--stencil); }
 
 /* Data strip: the photo's real catalogue data set like a film annotation */
-.datastrip { display: flex; flex-wrap: wrap; font: 400 0.64rem/1.3 var(--f-data); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); border-top: 1px solid var(--seam-2); }
+.datastrip { display: flex; flex-wrap: wrap; font: 400 max(0.64rem, var(--floor))/1.3 var(--f-data); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); border-top: 1px solid var(--seam-2); }
 .datastrip span { padding: 8px 12px 7px; border-right: 1px solid var(--seam); }
 .datastrip span:last-child { border-right: 0; }
 .datastrip .hot { color: var(--marking); }
@@ -138,20 +147,48 @@ footer.site p { margin: 0; max-width: 72ch; }
 }
 
 /* Site layout additions */
-.wrap { max-width: 1240px; margin: 0 auto; padding-inline: 16px; }
+/* gutters clear the notch and rounded corners in landscape (viewport-fit=cover) */
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px)); }
 .wrap.wide { max-width: 1320px; }
 /* fluid: a page that uses wide screens; gutters grow with the window */
-.wrap.fluid { max-width: 2240px; padding-inline: clamp(16px, 2.4vw, 48px); }
-body.wide footer.site { padding-inline: clamp(16px, 2.4vw, 48px); }
+.wrap.fluid { max-width: 2240px; padding-inline: max(clamp(16px, 2.4vw, 48px), env(safe-area-inset-left, 0px)) max(clamp(16px, 2.4vw, 48px), env(safe-area-inset-right, 0px)); }
+footer.site { padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px)); }
+body.wide footer.site { padding-inline: max(clamp(16px, 2.4vw, 48px), env(safe-area-inset-left, 0px)) max(clamp(16px, 2.4vw, 48px), env(safe-area-inset-right, 0px)); }
 body.wide footer.site .inner { max-width: 2144px; }   /* the fluid wrap less its widest gutters */
 main { display: block; }
 .skip { position: absolute; left: -9999px; top: 0; z-index: 100; background: var(--stencil); color: var(--void); padding: 10px 14px; }
 .skip:focus { left: 16px; top: 16px; }
 .nw { white-space: nowrap; }
-sup.cite { font: 700 0.62rem/1 var(--f-data); margin-left: 1px; }
+sup.cite { font: 700 max(0.62rem, var(--floor))/1 var(--f-data); margin-left: 1px; }
 sup.cite a { text-decoration: none; color: var(--marking); }
 .page-head { margin-top: 40px; padding: clamp(20px, 4vw, 44px); }
-.page-head h1 { font-size: clamp(2.4rem, 1.2rem + 5vw, 5.6rem); margin-bottom: 18px; }
+/* page titles: never wider than a phone, sized so the longest single word ("Chronology", 9.6 em) fits */
+.page-head h1 { font-size: min(clamp(2.4rem, 1.2rem + 5vw, 5.6rem), calc((100vw - 80px) / 9.8)); margin-bottom: 18px; overflow-wrap: break-word; }
 .page-head p { max-width: 64ch; color: var(--ink-2); margin: 0 0 1rem; }
 
 @view-transition { navigation: auto; }
+
+/* Phones and tablets: the routing bar is one line that scrolls sideways, with links a finger can hit */
+@media (max-width: 760px), (pointer: coarse) and (max-width: 1100px) {
+  .banner {
+    flex-wrap: nowrap; justify-content: flex-start; gap: 0; overflow-x: auto; overscroll-behavior-x: contain;
+    scrollbar-width: none; scroll-snap-type: x proximity; letter-spacing: 0.16em;
+    padding: 0 max(6px, env(safe-area-inset-right, 0px)) 0 max(6px, env(safe-area-inset-left, 0px));
+    -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent); mask-image: linear-gradient(90deg, #000 calc(100% - 28px), transparent);
+  }
+  .banner[data-end] { -webkit-mask-image: none; mask-image: none; }
+  .banner::-webkit-scrollbar { display: none; }
+  .banner s, .banner b, .banner .sep { display: none; }
+  .banner a { flex: none; display: inline-flex; align-items: center; min-height: 44px; padding: 0 11px; scroll-snap-align: start; }
+}
+/* Touch screens: controls at least 40 to 44 px tall, citation numbers with a larger hit area,
+   and form fields at 16 px so iOS does not zoom the page when one is focused */
+@media (pointer: coarse) {
+  .chip { min-height: 40px; padding: 10px 12px; display: inline-flex; align-items: center; }
+  .banner a { display: inline-flex; align-items: center; min-height: 44px; }
+  .btn { min-height: 44px; }
+  sup.cite a { position: relative; }
+  sup.cite a::after { content: ""; position: absolute; inset: -12px -6px; }
+  input, select, textarea { font-size: max(16px, 1em); }
+  input[type="range"] { min-height: 36px; }
+}

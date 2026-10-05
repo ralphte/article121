@@ -31,7 +31,7 @@ const points = all.flatMap((a) => [
 </Base>
 <style>
   .reg-head { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 30px; align-items: center; }
-  .tally { display: flex; flex-wrap: wrap; gap: 10px 26px; font: 400 0.66rem/1.4 var(--f-data); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
+  .tally { display: flex; flex-wrap: wrap; gap: 10px 26px; font: 400 max(0.66rem, var(--floor))/1.4 var(--f-data); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
   .tally b { font: 800 1.5rem/1 var(--f-display); font-stretch: 112%; color: var(--stencil); margin-right: 8px; letter-spacing: 0; vertical-align: -3px; }
   .cap { text-align: center; margin-top: 10px; }
   .index { margin-top: 20px; }

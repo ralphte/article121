@@ -59,6 +59,15 @@ const noindex = import.meta.env.PUBLIC_NOINDEX === '1';
     </div>
   </footer>
   <script>
+    // Phones: the routing bar scrolls sideways; start with the current section in view and drop
+    // the fade at its end once the last link is showing.
+    const bar = document.querySelector<HTMLElement>('.banner');
+    if (bar) {
+      const cur = bar.querySelector<HTMLElement>('a[aria-current]');
+      if (cur && bar.scrollWidth > bar.clientWidth) bar.scrollLeft = cur.offsetLeft - (bar.clientWidth - cur.offsetWidth) / 2;
+      const end = () => bar.toggleAttribute('data-end', bar.scrollLeft + bar.clientWidth >= bar.scrollWidth - 4);
+      end(); bar.addEventListener('scroll', end, { passive: true });
+    }
     // Redactions lift when their panel comes into view; reduced motion shows them lifted.
     const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
     const targets = document.querySelectorAll('[data-reveal]');

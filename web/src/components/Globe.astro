@@ -10,6 +10,7 @@ const { points, focus = null } = Astro.props;
 <style>
   .globe { position: relative; aspect-ratio: 1; width: 100%; max-width: 340px; margin: 0 auto; }
   canvas { width: 100%; height: 100%; display: block; cursor: grab; touch-action: none; }
+  @media (pointer: coarse) { canvas { touch-action: pan-y; } }   /* swipe up and down scrolls the page; sideways turns the globe */
 </style>
 <script>
   import { geoOrthographic, geoPath, geoGraticule10, geoDistance } from 'd3-geo';

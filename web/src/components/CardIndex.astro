@@ -48,22 +48,23 @@ const hay = (a: (typeof all)[number]) => [a.data.serial, a.data.serial.replace('
 </aside>
 <style>
   .drawer { display: grid; grid-template-rows: auto minmax(0, 1fr); gap: 1px; background: var(--seam); border: 1px solid var(--seam); }
-  .drawer.compact { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 44px); max-height: calc(100vh - 60px); }
+  .drawer.compact { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 44px); max-height: calc(100vh - 60px); max-height: calc(100dvh - 60px); }
   .controls { display: grid; gap: 8px; background: var(--hull); padding: 12px; }
-  input { width: 100%; font: 400 0.92rem/1.2 var(--f-body); padding: 11px 12px; border: 1px solid var(--seam-2); background: var(--void); color: var(--ink); border-radius: 0; }
+  input { width: 100%; font: 400 1rem/1.2 var(--f-body); padding: 11px 12px; border: 1px solid var(--seam-2); background: var(--void); color: var(--ink); border-radius: 0; }
   input::placeholder { color: var(--ink-3); }
+  @media (pointer: coarse) { button { min-height: 40px; } }
   .seg { display: flex; flex-wrap: wrap; gap: 4px; }
-  .seg button { font: 700 0.6rem/1 var(--f-data); letter-spacing: 0.12em; text-transform: uppercase; padding: 8px; background: transparent; color: var(--ink-2); border: 1px solid var(--seam-2); cursor: pointer; }
+  .seg button { font: 700 max(0.6rem, var(--floor))/1 var(--f-data); letter-spacing: 0.12em; text-transform: uppercase; padding: 8px; background: transparent; color: var(--ink-2); border: 1px solid var(--seam-2); cursor: pointer; }
   .seg button[aria-pressed="true"] { background: var(--stencil); color: var(--void); border-color: var(--stencil); }
   .cards { list-style: none; margin: 0; padding: 0; overflow-y: auto; display: grid; gap: 1px; align-content: start; background: var(--void); overscroll-behavior: contain; scrollbar-color: var(--seam-2) transparent; }
   .drawer:not(.compact) .cards { grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 8px; padding: 8px; }
   .drawer:not(.compact) .group-h { grid-column: 1 / -1; }
-  .group-h { font: 400 0.6rem/1.2 var(--f-data); letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); padding: 16px 14px 8px; background: var(--void); }
+  .group-h { font: 400 max(0.6rem, var(--floor))/1.2 var(--f-data); letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); padding: 16px 14px 8px; background: var(--void); }
   .icard { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1px 8px; align-items: baseline; text-decoration: none; background: var(--hull); color: var(--ink); border-left: 3px solid transparent; padding: 10px 12px 11px; transition: background 0.15s, border-color 0.15s; }
   .icard:hover { background: var(--hull-2); }
   .icard[aria-current="page"] { background: var(--hull-3); border-left-color: var(--marking); }
   .ic-serial { font: 800 1.02rem/1.2 var(--f-display); font-stretch: 112%; color: var(--stencil); font-variant-numeric: tabular-nums; }
-  .ic-tag { font: 700 0.56rem/1 var(--f-data); letter-spacing: 0.14em; text-transform: uppercase; padding: 4px 5px 3px; border: 1px solid currentColor; color: var(--ink-2); white-space: nowrap; }
+  .ic-tag { font: 700 max(0.56rem, var(--floor))/1 var(--f-data); letter-spacing: 0.14em; text-transform: uppercase; padding: 4px 5px 3px; border: 1px solid currentColor; color: var(--ink-2); white-space: nowrap; }
   .ic-tag.lost { color: var(--marking); }
   .ic-tag.other { color: var(--ink-3); }
   .ic-line { grid-column: 1 / -1; font-size: 0.74rem; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

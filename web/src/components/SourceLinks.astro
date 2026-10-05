@@ -8,7 +8,8 @@ const list = await resolveCitations(Astro.props.citations);
   <>{i > 0 && ' · '}<a href={`/sources/#${entry.id}`} title={`${entry.data.publisher}: ${entry.data.title}`}>{shortTitle(entry.data.title).slice(0, 48)}</a></>
 ))}</span>
 <style>
-  .srcs { font: 400 0.68rem/1.5 var(--f-data); letter-spacing: 0.04em; color: var(--ink-3); }
+  .srcs { font: 400 max(0.68rem, var(--floor))/1.5 var(--f-data); letter-spacing: 0.04em; color: var(--ink-3); }
   .srcs a { color: var(--ink-2); text-decoration-color: var(--seam-2); }
   .srcs a:hover { color: var(--stencil); text-decoration-color: var(--marking); }
+  @media (pointer: coarse) { .srcs { line-height: 2.4; } .srcs a { padding-block: 8px; } }
 </style>
